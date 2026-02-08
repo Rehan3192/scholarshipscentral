@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Scholarships Central is an SEO-first, information-only scholarship directory (external links only — no accounts, no forms).
 
 ## Getting Started
 
@@ -6,31 +6,47 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/app/page.tsx`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Windows note (PowerShell)
+If `npm run ...` fails with an execution policy error (`npm.ps1 cannot be loaded because running scripts is disabled`), use:
 
-## Learn More
+```bash
+npm.cmd run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Import scholarships from CSV
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Use the CSV importer to scale the dataset in `src/data/scholarships.ts`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### CSV columns
+Required columns:
+- `title,overview,country,degree,funding,deadline,duration,applyUrl,officialSource`
 
-## Deploy on Vercel
+Optional columns:
+- `slug,lastUpdated,eligibility,benefits,applicationProcess,documents`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+List fields (`eligibility`, `benefits`, `applicationProcess`, `documents`) can be separated by `|` or `;`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Commands
+Dry run (no changes):
+
+```bash
+npm.cmd run import:csv -- --file=examples/scholarships.csv --dry-run=true
+```
+
+Append to the dataset:
+
+```bash
+npm.cmd run import:csv -- --file=PATH_TO.csv --append=true
+```
+
+Validate the dataset after importing:
+
+```bash
+npm.cmd run validate:data
+```

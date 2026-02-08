@@ -4,23 +4,31 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:clean": "node scripts/clean-next.js && next dev",
+    "dev:turbo": "next dev --turbopack",
+    "dev:clean:turbo": "node scripts/clean-next.js && next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "validate:data": "node scripts/validate-data.js",
+    "new:scholarship": "node scripts/new-scholarship.js",
+    "import:csv": "node scripts/import-scholarships.js"
   },
   "dependencies": {
-    "next": "16.1.4",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "autoprefixer": "^10.4.23",
+    "next": "^15.5.12",
+    "postcss": "^8.5.6",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "eslint": "^9",
-    "eslint-config-next": "16.1.4",
-    "tailwindcss": "^4",
+    "eslint-config-next": "15.5.12",
+    "tailwindcss": "^4.1.18",
     "typescript": "^5"
   }
 }
