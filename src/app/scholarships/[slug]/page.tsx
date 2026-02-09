@@ -11,6 +11,11 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+type KeyValueItem = {
+  key: string;
+  value: string;
+};
+
 function SectionCard({
   title,
   children,
@@ -23,6 +28,60 @@ function SectionCard({
       <h2 className="mt-0 text-xl font-semibold text-gray-900">{title}</h2>
       <div className="mt-4">{children}</div>
     </section>
+  );
+}
+
+function parseKeyValue(item: string): KeyValueItem | null {
+  const idx = item.indexOf(":");
+  if (idx < 0) return null;
+
+  const key = item.slice(0, idx).trim();
+  const value = item.slice(idx + 1).trim();
+  if (!key || !value) return null;
+  if (key.length > 40) return null;
+
+  return { key, value };
+}
+
+function renderKeyValueOrList(items: string[]) {
+  const keyValues: KeyValueItem[] = [];
+  const rest: string[] = [];
+
+  for (const item of items) {
+    const kv = parseKeyValue(item);
+    if (kv) keyValues.push(kv);
+    else rest.push(item);
+  }
+
+  if (keyValues.length >= 2) {
+    return (
+      <div className="space-y-4">
+        <dl className="grid gap-3 text-sm text-gray-700 sm:grid-cols-2">
+          {keyValues.map((kv) => (
+            <div key={`${kv.key}:${kv.value}`} className="space-y-1">
+              <dt className="font-medium text-gray-600">{kv.key}</dt>
+              <dd className="font-semibold text-gray-900">{kv.value}</dd>
+            </div>
+          ))}
+        </dl>
+
+        {rest.length > 0 ? (
+          <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700">
+            {rest.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
+    );
+  }
+
+  return (
+    <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700">
+      {items.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
+    </ul>
   );
 }
 
@@ -77,8 +136,8 @@ export default async function ScholarshipPage({ params }: Props) {
     .slice(0, 4)
     .map((x) => x.s);
 
-  const withoutPlaceholders = (items: string[]) =>
-    items
+  const withoutPlaceholders = (items?: string[]) =>
+    (items ?? [])
       .map((x) => x.trim())
       .filter((x) => x.length > 0 && x.toUpperCase() !== "TODO");
 
@@ -86,6 +145,15 @@ export default async function ScholarshipPage({ params }: Props) {
   const benefits = withoutPlaceholders(scholarship.benefits);
   const applicationProcess = withoutPlaceholders(scholarship.applicationProcess);
   const documents = withoutPlaceholders(scholarship.documents);
+  const goodToKnow = withoutPlaceholders(scholarship.goodToKnow);
+  const faqs = (scholarship.faqs ?? []).filter((f) => {
+    if (!f) return false;
+    const q = String(f.question ?? "").trim();
+    const a = String(f.answer ?? "").trim();
+    if (!q || !a) return false;
+    if (q.toUpperCase() === "TODO" || a.toUpperCase() === "TODO") return false;
+    return true;
+  });
 
   return (
     <div className="space-y-6">
@@ -117,11 +185,7 @@ export default async function ScholarshipPage({ params }: Props) {
         <div className="space-y-6">
           <SectionCard title="Eligibility">
             {eligibility.length > 0 ? (
-              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700">
-                {eligibility.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              renderKeyValueOrList(eligibility)
             ) : (
               <p className="mb-0 text-sm text-gray-700">
                 See the official website for eligibility requirements.
@@ -131,11 +195,7 @@ export default async function ScholarshipPage({ params }: Props) {
 
           <SectionCard title="Benefits">
             {benefits.length > 0 ? (
-              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700">
-                {benefits.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              renderKeyValueOrList(benefits)
             ) : (
               <p className="mb-0 text-sm text-gray-700">
                 See the official website for funding and benefits details.
@@ -170,6 +230,36 @@ export default async function ScholarshipPage({ params }: Props) {
               </p>
             )}
           </SectionCard>
+
+          {goodToKnow.length > 0 ? (
+            <SectionCard title="Good to know">
+              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700">
+                {goodToKnow.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </SectionCard>
+          ) : null}
+
+          {faqs.length > 0 ? (
+            <SectionCard title="FAQ">
+              <div className="rounded-xl border border-gray-200 divide-y divide-gray-200">
+                {faqs.map((f) => (
+                  <details
+                    key={`${f.question}::${f.answer}`}
+                    className="group bg-white p-4 open:bg-gray-50"
+                  >
+                    <summary className="cursor-pointer list-none text-sm font-semibold text-gray-900">
+                      {f.question}
+                    </summary>
+                    <p className="mt-3 mb-0 text-sm text-gray-700">
+                      {f.answer}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </SectionCard>
+          ) : null}
 
           {related.length > 0 ? (
             <section className="space-y-4">

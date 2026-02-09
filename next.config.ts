@@ -6,6 +6,12 @@ const nextConfig: NextConfig = {
     // (This does not affect production builds.)
     devtoolSegmentExplorer: false,
   },
+  webpack: (config, { dev }) => {
+    if (dev) {
+      config.cache = false;
+    }
+    return config;
+  },
 };
 
 export default nextConfig;

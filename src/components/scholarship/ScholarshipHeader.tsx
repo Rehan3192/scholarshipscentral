@@ -16,6 +16,11 @@ function fundingPath(fundingType: Scholarship["fundingType"]) {
 }
 
 export default function ScholarshipHeader({ scholarship }: Props) {
+  const summary =
+    typeof scholarship.summary === "string" && scholarship.summary.trim() !== ""
+      ? scholarship.summary.trim()
+      : scholarship.overview;
+
   return (
     <header className="space-y-4">
       <Breadcrumbs
@@ -43,7 +48,7 @@ export default function ScholarshipHeader({ scholarship }: Props) {
         </h1>
 
         <p className="mt-4 mb-0 max-w-3xl text-sm text-gray-700 sm:text-base">
-          {scholarship.overview}
+          {summary}
         </p>
 
         <div className="mt-6 flex flex-wrap gap-2 text-sm">

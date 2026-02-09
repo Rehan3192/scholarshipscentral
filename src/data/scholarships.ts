@@ -7431,6 +7431,216 @@ const rawScholarships: Scholarship[] = [
   },
 ];
 
+function fixMojibake(value: string) {
+  return value
+    .replaceAll("â€“", "–")
+    .replaceAll("â€”", "—")
+    .replaceAll("â€™", "’")
+    .replaceAll("â€˜", "‘")
+    .replaceAll("â€œ", "“")
+    .replaceAll("â€�", "”")
+    .replaceAll("â€¢", "•")
+    .replaceAll("Â©", "©")
+    .replaceAll("Ã—", "×");
+}
+
+function isPlaceholderItem(item: string) {
+  const v = item.trim().toLowerCase();
+  if (!v) return true;
+  if (v === "todo" || v === "tbd" || v === "na" || v === "n/a") return true;
+  if (v.startsWith("todo:")) return true;
+  return false;
+}
+
+function cleanList(items: string[] | undefined) {
+  return (items ?? [])
+    .map((x) => fixMojibake(String(x)).trim())
+    .filter((x) => x.length > 0 && !isPlaceholderItem(x));
+}
+
+function hasKey(items: string[], key: string) {
+  const prefix = `${key.toLowerCase()}:`;
+  return items.some((x) => x.toLowerCase().startsWith(prefix));
+}
+
+function isMonthOnly(deadline: string) {
+  const v = deadline.trim();
+  if (!v) return false;
+  // If it contains any digits, treat it as specific enough.
+  if (/\d/.test(v)) return false;
+  const months = new Set([
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+    "december",
+  ]);
+  return months.has(v.toLowerCase());
+}
+
+function enhanceDeadline(deadline: string) {
+  const v = fixMojibake(deadline).trim();
+  if (!v) return v;
+  if (isMonthOnly(v)) return `${v} (typical — confirm exact date on official source)`;
+  if (v.toLowerCase() === "rolling") return "Rolling (confirm details on official source)";
+  return v;
+}
+
+function fundingTuitionLine(fundingType: Scholarship["fundingType"]) {
+  if (fundingType === "Fully Funded") return "Tuition: Full (fully funded)";
+  if (fundingType === "Partially Funded") return "Tuition: Partial (varies)";
+  return "Tuition: Not covered (self funded)";
+}
+
+function buildSummary(s: Scholarship) {
+  const provider = s.officialSource;
+  const funding = s.fundingType.toLowerCase();
+
+  if (s.fundingType === "Self Funded") {
+    return `Offered by ${provider}, this opportunity is listed for ${s.degreeLevel} study in ${s.country}. It is marked as self funded, so applicants should verify all costs, any fee waivers, and requirements on the official provider website.`;
+  }
+
+  return `Offered by ${provider}, this ${funding} scholarship supports eligible ${s.degreeLevel} applicants who want to study in ${s.country}. It is intended to reduce education costs through financial support (exact benefits and requirements depend on the provider). Applications are submitted via the official provider website.`;
+}
+
+function defaultEligibility(s: Scholarship, existing: string[]) {
+  const mentionsInternational = existing.some((x) =>
+    x.toLowerCase().includes("international")
+  );
+
+  const eligibleNationalities = mentionsInternational
+    ? "Eligible nationalities: International applicants (check official source for the exact country list)"
+    : "Eligible nationalities: Not specified (check official source)";
+
+  const out: string[] = [];
+  if (!hasKey(existing, "Eligible nationalities")) out.push(eligibleNationalities);
+  if (!hasKey(existing, "Academic background")) {
+    out.push(
+      `Academic background: Must meet admission/academic requirements for ${s.degreeLevel} study (check official source)`
+    );
+  }
+  if (!hasKey(existing, "Age limit")) {
+    const hasAgeInfo = existing.some((x) => x.toLowerCase().includes("age"));
+    if (!hasAgeInfo) out.push("Age limit: No official age limit is specified");
+  }
+  if (!hasKey(existing, "Language requirements")) {
+    const hasLanguageInfo = existing.some((x) => {
+      const v = x.toLowerCase();
+      return v.includes("ielts") || v.includes("toefl") || v.includes("language");
+    });
+    if (!hasLanguageInfo) {
+      out.push("Language requirements: Not specified (depends on program/institution)");
+    }
+  }
+
+  return out;
+}
+
+function defaultBenefits(s: Scholarship, existing: string[]) {
+  const out: string[] = [];
+  if (!hasKey(existing, "Tuition")) out.push(fundingTuitionLine(s.fundingType));
+
+  const mentionsStipend = existing.some((x) => x.toLowerCase().includes("stipend"));
+  if (!hasKey(existing, "Stipend")) {
+    out.push(
+      mentionsStipend
+        ? "Stipend: Included (amount varies — check official source)"
+        : "Stipend: Not specified (varies by provider)"
+    );
+  }
+
+  const mentionsAccommodation = existing.some((x) =>
+    x.toLowerCase().includes("accommodation")
+  );
+  if (!hasKey(existing, "Accommodation")) {
+    out.push(
+      mentionsAccommodation
+        ? "Accommodation: Included/available (check official source)"
+        : "Accommodation: Not specified"
+    );
+  }
+
+  const mentionsTravel = existing.some((x) =>
+    x.toLowerCase().includes("travel")
+  );
+  if (!hasKey(existing, "Travel")) {
+    out.push(
+      mentionsTravel
+        ? "Travel: Included/available (check official source)"
+        : "Travel: Not specified"
+    );
+  }
+
+  return out;
+}
+
+function defaultApplicationProcess() {
+  return [
+    "Visit the official source link and read the current instructions.",
+    "Confirm eligibility and the exact deadline on the provider website.",
+    "Prepare required documents as listed by the provider.",
+    "Create an account on the provider portal if required, then complete the application.",
+    "Submit before the deadline and keep your confirmation/reference number.",
+  ];
+}
+
+function defaultDocuments() {
+  return [
+    "Passport / national ID (if required)",
+    "Academic transcripts and certificates (as required)",
+    "CV/Resume (if required)",
+    "Motivation letter / statement of purpose (if required)",
+    "Language test score (if required)",
+    "Recommendation letters (if required)",
+  ];
+}
+
+function defaultGoodToKnow() {
+  return [
+    "Selection method (merit/exam/interview) is defined by the provider; check the official source for details.",
+    "Deadlines can change; always confirm the exact date on the official provider website before applying.",
+    "Some scholarships require an admission offer first; verify whether admission is required in the official instructions.",
+  ];
+}
+
+function defaultFaqs(s: Scholarship) {
+  const fundingAnswer =
+    s.fundingType === "Fully Funded"
+      ? "This listing is marked as fully funded. Confirm what is covered (tuition, stipend, travel, accommodation) on the official source."
+      : s.fundingType === "Partially Funded"
+        ? "This listing is marked as partially funded. Confirm exactly what is covered and any remaining costs on the official source."
+        : "This listing is marked as self funded. Verify any fee waivers or partial support (if any) on the official source.";
+
+  return [
+    {
+      question: "Is this fully funded?",
+      answer: fundingAnswer,
+    },
+    {
+      question: "Is IELTS mandatory?",
+      answer:
+        "Not specified on this listing. Language requirements depend on the program/university/provider. Check the official source for the exact requirement.",
+    },
+    {
+      question: "Can applicants from Pakistan apply?",
+      answer:
+        "Eligible nationalities are not specified on this listing. Check the official source for the official eligibility/country list.",
+    },
+    {
+      question: "Where do I apply?",
+      answer:
+        "Use the external official link on this page. Scholarships Central does not accept applications.",
+    },
+  ];
+}
+
 export const scholarships: Scholarship[] = rawScholarships.map((s) => {
   const normalized = ensureInAllowedSets({
     country: s.country,
@@ -7438,10 +7648,69 @@ export const scholarships: Scholarship[] = rawScholarships.map((s) => {
     fundingType: s.fundingType,
   });
 
+  const cleanedEligibility = cleanList(s.eligibility);
+  const cleanedBenefits = cleanList(s.benefits);
+  const cleanedApplication = cleanList(s.applicationProcess);
+  const cleanedDocuments = cleanList(s.documents);
+  const cleanedGoodToKnow = cleanList(s.goodToKnow);
+
+  const eligibilityBase = cleanedEligibility.length > 0 ? cleanedEligibility : [];
+  const benefitsBase = cleanedBenefits.length > 0 ? cleanedBenefits : [];
+
+  const eligibility =
+    eligibilityBase.length > 0
+      ? [...defaultEligibility(s, eligibilityBase), ...eligibilityBase]
+      : defaultEligibility(s, []);
+
+  const benefits =
+    benefitsBase.length > 0
+      ? [...defaultBenefits(s, benefitsBase), ...benefitsBase]
+      : defaultBenefits(s, []);
+
+  const applicationProcess =
+    cleanedApplication.length >= 3 ? cleanedApplication : defaultApplicationProcess();
+
+  const documents = cleanedDocuments.length >= 2 ? cleanedDocuments : defaultDocuments();
+
+  const goodToKnow =
+    cleanedGoodToKnow.length > 0
+      ? cleanedGoodToKnow
+      : defaultGoodToKnow();
+
+  const faqs =
+    Array.isArray(s.faqs) && s.faqs.length > 0
+      ? s.faqs
+          .map((f) => ({
+            question: fixMojibake(String(f.question ?? "")).trim(),
+            answer: fixMojibake(String(f.answer ?? "")).trim(),
+          }))
+          .filter((f) => f.question && f.answer)
+      : defaultFaqs(s);
+
   return {
     ...s,
+    title: fixMojibake(s.title),
+    overview: fixMojibake(s.overview),
+    summary:
+      typeof s.summary === "string" && s.summary.trim() !== ""
+        ? fixMojibake(s.summary).trim()
+        : buildSummary({
+            ...s,
+            country: normalized.country,
+            degreeLevel: normalized.degreeLevel,
+            fundingType: normalized.fundingType,
+          }),
     country: normalized.country,
     degreeLevel: normalized.degreeLevel,
     fundingType: normalized.fundingType,
+    deadline: enhanceDeadline(s.deadline),
+    duration: fixMojibake(s.duration),
+    officialSource: fixMojibake(s.officialSource),
+    eligibility,
+    benefits,
+    applicationProcess,
+    documents,
+    goodToKnow,
+    faqs,
   };
 });

@@ -15,6 +15,7 @@ export type Scholarship = {
   slug: string;
   title: string;
   overview: string;
+  summary?: string;
   country: string;
   degreeLevel: DegreeLevel;
   fundingType: FundingType;
@@ -24,6 +25,11 @@ export type Scholarship = {
   benefits: string[];
   applicationProcess: string[];
   documents: string[];
+  goodToKnow?: string[];
+  faqs?: Array<{
+    question: string;
+    answer: string;
+  }>;
   applyUrl: string;
   officialSource: string;
   lastUpdated: string;
