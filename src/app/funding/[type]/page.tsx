@@ -6,7 +6,6 @@ import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { scholarships } from "@/data/scholarships";
 import ScholarshipFilters from "@/components/scholarship/ScholarshipFilters";
-import type { Scholarship } from "@/data/types";
 import {
   BreadcrumbJsonLd,
   ItemListJsonLd,
@@ -50,9 +49,7 @@ export default async function FundingPage({ params }: PageProps) {
     notFound();
   }
 
-  const filtered: Scholarship[] = scholarships.filter(
-    (s) => s.fundingType === funding
-  );
+  const filtered = scholarships.filter((s) => s.fundingType === funding);
 
   if (filtered.length === 0) {
     notFound();
@@ -64,6 +61,20 @@ export default async function FundingPage({ params }: PageProps) {
     .sort((a, b) => (b.lastUpdated ?? "").localeCompare(a.lastUpdated ?? ""))
     .slice(0, 10)
     .map((s) => ({ name: s.title, href: `/scholarships/${s.slug}` }));
+
+  const listing = filtered.map((s) => ({
+    slug: s.slug,
+    title: s.title,
+    overview: s.overview,
+    country: s.country,
+    degreeLevel: s.degreeLevel,
+    fundingType: s.fundingType,
+    deadline: s.deadline,
+    duration: s.duration,
+    applyUrl: s.applyUrl,
+    officialSource: s.officialSource,
+    lastUpdated: s.lastUpdated,
+  }));
 
   return (
     <div className="space-y-6">
@@ -104,7 +115,7 @@ export default async function FundingPage({ params }: PageProps) {
       <Suspense
         fallback={<p className="text-sm text-gray-600">Loading scholarships...</p>}
       >
-        <ScholarshipFilters scholarships={filtered} />
+        <ScholarshipFilters scholarships={listing} />
       </Suspense>
     </div>
   );

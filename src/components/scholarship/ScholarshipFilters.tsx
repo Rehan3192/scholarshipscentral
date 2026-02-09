@@ -3,11 +3,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import ScholarshipCard from "./ScholarshipCard";
-import type { Scholarship } from "@/data/types";
+import type { ScholarshipListItem } from "@/data/types";
 import { COUNTRIES, DEGREE_LEVELS, FUNDING_TYPES } from "@/data/values";
 
 type Props = {
-  scholarships: Scholarship[];
+  scholarships: ScholarshipListItem[];
 };
 
 type SortKey = "updated" | "deadline" | "title";

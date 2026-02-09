@@ -6,6 +6,11 @@ const nextConfig: NextConfig = {
     // (This does not affect production builds.)
     devtoolSegmentExplorer: false,
   },
+  eslint: {
+    // Running ESLint during `next build` can be memory-heavy on low-RAM machines.
+    // Use `npm run lint` instead (same rules, but runs as a separate step).
+    ignoreDuringBuilds: true,
+  },
   webpack: (config, { dev }) => {
     if (dev) {
       config.cache = false;

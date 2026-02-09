@@ -1,12 +1,12 @@
 import Link from "next/link";
-import type { Scholarship } from "@/data/types";
+import type { ScholarshipListItem } from "@/data/types";
 import { toSegment } from "@/lib/helpers";
 
 type Props = {
-  scholarship: Scholarship;
+  scholarship: ScholarshipListItem;
 };
 
-function fundingPath(fundingType: Scholarship["fundingType"]) {
+function fundingPath(fundingType: ScholarshipListItem["fundingType"]) {
   if (fundingType === "Fully Funded") return "/funding/fully-funded";
   if (fundingType === "Partially Funded") return "/funding/partially-funded";
   return "/funding/self-funded";

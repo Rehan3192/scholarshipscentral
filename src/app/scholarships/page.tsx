@@ -20,6 +20,20 @@ export default function ScholarshipsPage() {
     .slice(0, 10)
     .map((s) => ({ name: s.title, href: `/scholarships/${s.slug}` }));
 
+  const listing = scholarships.map((s) => ({
+    slug: s.slug,
+    title: s.title,
+    overview: s.overview,
+    country: s.country,
+    degreeLevel: s.degreeLevel,
+    fundingType: s.fundingType,
+    deadline: s.deadline,
+    duration: s.duration,
+    applyUrl: s.applyUrl,
+    officialSource: s.officialSource,
+    lastUpdated: s.lastUpdated,
+  }));
+
   return (
     <div className="space-y-6">
       <BreadcrumbJsonLd
@@ -53,7 +67,7 @@ export default function ScholarshipsPage() {
           <p className="text-sm text-gray-600">Loading scholarships...</p>
         }
       >
-        <ScholarshipFilters scholarships={scholarships} />
+        <ScholarshipFilters scholarships={listing} />
       </Suspense>
     </div>
   );

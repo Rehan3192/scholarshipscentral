@@ -34,3 +34,18 @@ export type Scholarship = {
   officialSource: string;
   lastUpdated: string;
 };
+
+export type ScholarshipListItem = Pick<
+  Scholarship,
+  | "slug"
+  | "title"
+  | "overview"
+  | "country"
+  | "degreeLevel"
+  | "fundingType"
+  | "deadline"
+  | "duration"
+  | "applyUrl"
+  | "officialSource"
+  | "lastUpdated"
+>;

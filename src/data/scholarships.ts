@@ -7488,26 +7488,28 @@ function isMonthOnly(deadline: string) {
 function enhanceDeadline(deadline: string) {
   const v = fixMojibake(deadline).trim();
   if (!v) return v;
-  if (isMonthOnly(v)) return `${v} (typical — confirm exact date on official source)`;
+  if (isMonthOnly(v)) return `${v} (exact date not officially specified; confirm on official source)`;
   if (v.toLowerCase() === "rolling") return "Rolling (confirm details on official source)";
   return v;
 }
 
 function fundingTuitionLine(fundingType: Scholarship["fundingType"]) {
-  if (fundingType === "Fully Funded") return "Tuition: Full (fully funded)";
-  if (fundingType === "Partially Funded") return "Tuition: Partial (varies)";
-  return "Tuition: Not covered (self funded)";
+  if (fundingType === "Fully Funded") {
+    return "Tuition: Listed as full (confirm coverage on official source)";
+  }
+  if (fundingType === "Partially Funded") {
+    return "Tuition: Listed as partial (confirm coverage on official source)";
+  }
+  return "Tuition: Listed as not covered (self funded; confirm on official source)";
 }
 
 function buildSummary(s: Scholarship) {
-  const provider = s.officialSource;
+  const provider = fixMojibake(s.officialSource);
   const funding = s.fundingType.toLowerCase();
+  const duration = fixMojibake(s.duration);
+  const deadline = enhanceDeadline(s.deadline);
 
-  if (s.fundingType === "Self Funded") {
-    return `Offered by ${provider}, this opportunity is listed for ${s.degreeLevel} study in ${s.country}. It is marked as self funded, so applicants should verify all costs, any fee waivers, and requirements on the official provider website.`;
-  }
-
-  return `Offered by ${provider}, this ${funding} scholarship supports eligible ${s.degreeLevel} applicants who want to study in ${s.country}. It is intended to reduce education costs through financial support (exact benefits and requirements depend on the provider). Applications are submitted via the official provider website.`;
+  return `This listing links to a scholarship opportunity offered by ${provider} for ${s.degreeLevel} study in ${s.country}. Funding is listed as ${funding}, with a duration of ${duration}. The deadline is ${deadline}. Scholarships Central is information-only and redirects to the provider; always confirm eligibility, benefits, required documents, and the latest instructions on the official source page before applying.`;
 }
 
 function defaultEligibility(s: Scholarship, existing: string[]) {
@@ -7516,14 +7518,45 @@ function defaultEligibility(s: Scholarship, existing: string[]) {
   );
 
   const eligibleNationalities = mentionsInternational
-    ? "Eligible nationalities: International applicants (check official source for the exact country list)"
-    : "Eligible nationalities: Not specified (check official source)";
+    ? "Eligible nationalities: International applicants (exact country list not officially stated here; confirm on official source)"
+    : "Eligible nationalities: No specific requirement is officially stated (confirm on official source)";
 
   const out: string[] = [];
   if (!hasKey(existing, "Eligible nationalities")) out.push(eligibleNationalities);
+  if (!hasKey(existing, "Degree level")) out.push(`Degree level: ${s.degreeLevel}`);
+  if (!hasKey(existing, "Study location")) out.push(`Study location: ${s.country}`);
   if (!hasKey(existing, "Academic background")) {
     out.push(
       `Academic background: Must meet admission/academic requirements for ${s.degreeLevel} study (check official source)`
+    );
+  }
+  if (!hasKey(existing, "Admission required")) {
+    out.push(
+      "Admission required: No specific requirement is officially stated (confirm whether admission is required first)"
+    );
+  }
+  if (!hasKey(existing, "Minimum GPA/grades")) {
+    out.push("Minimum GPA/grades: No specific requirement is officially stated");
+  }
+  if (!hasKey(existing, "Work experience")) {
+    out.push("Work experience: No specific requirement is officially stated");
+  }
+  if (!hasKey(existing, "Field of study")) {
+    out.push(
+      "Field of study: No specific requirement is officially stated (program-dependent)"
+    );
+  }
+  if (!hasKey(existing, "Residency requirement")) {
+    out.push("Residency requirement: No specific requirement is officially stated");
+  }
+  if (!hasKey(existing, "Document language/translations")) {
+    out.push(
+      "Document language/translations: No specific requirement is officially stated (check whether certified translations are required)"
+    );
+  }
+  if (!hasKey(existing, "Current enrollment status")) {
+    out.push(
+      "Current enrollment status: No specific requirement is officially stated (confirm whether admission/enrollment is required)"
     );
   }
   if (!hasKey(existing, "Age limit")) {
@@ -7536,7 +7569,9 @@ function defaultEligibility(s: Scholarship, existing: string[]) {
       return v.includes("ielts") || v.includes("toefl") || v.includes("language");
     });
     if (!hasLanguageInfo) {
-      out.push("Language requirements: Not specified (depends on program/institution)");
+      out.push(
+        "Language requirements: No specific requirement is officially stated (depends on program/institution)"
+      );
     }
   }
 
@@ -7578,35 +7613,194 @@ function defaultBenefits(s: Scholarship, existing: string[]) {
     );
   }
 
+  if (!hasKey(existing, "Health insurance")) {
+    out.push("Health insurance: Not specified");
+  }
+
+  if (!hasKey(existing, "Other benefits")) {
+    out.push("Other benefits: Not specified (check official source)");
+  }
+
+  if (!hasKey(existing, "Visa/residence support")) {
+    out.push("Visa/residence support: Not specified (check official source)");
+  }
+
+  if (!hasKey(existing, "Application fee")) {
+    out.push("Application fee: Not specified (check official source)");
+  }
+
   return out;
 }
 
-function defaultApplicationProcess() {
+function defaultApplicationProcess(s: Scholarship) {
+  let hostname = "";
+  try {
+    hostname = new URL(s.applyUrl).hostname;
+  } catch {
+    hostname = "";
+  }
+
+  const where =
+    hostname
+      ? `Where to apply: Use the official provider website (${hostname}) via the external link on this page.`
+      : "Where to apply: Use the official provider website via the external link on this page.";
+
   return [
-    "Visit the official source link and read the current instructions.",
-    "Confirm eligibility and the exact deadline on the provider website.",
-    "Prepare required documents as listed by the provider.",
-    "Create an account on the provider portal if required, then complete the application.",
-    "Submit before the deadline and keep your confirmation/reference number.",
+    where,
+    "Confirm requirements: Read the official instructions and confirm eligibility and the exact deadline (some providers have multiple rounds).",
+    "Admission: No specific requirement is officially stated (if admission is required, apply for admission to the program/institution first).",
+    "Account/nomination: No specific requirement is officially stated (create an account or follow nomination steps if required).",
+    "Documents: Prepare and upload the required documents listed by the provider (transcripts, ID, letters, etc.). Provide certified translations if required.",
+    "Selection method: Not officially specified on this listing (follow the provider’s official selection process; merit/test/interview if applicable).",
+    "Final decision/enrollment: Submit before the deadline, save your confirmation/reference number, and monitor email/portal for results and next steps.",
   ];
 }
 
 function defaultDocuments() {
   return [
     "Passport / national ID (if required)",
-    "Academic transcripts and certificates (as required)",
-    "CV/Resume (if required)",
-    "Motivation letter / statement of purpose (if required)",
-    "Language test score (if required)",
+    "Academic transcripts",
+    "Degree certificates / diplomas (if applicable)",
+    "CV/Resume",
+    "Motivation letter / statement of purpose",
     "Recommendation letters (if required)",
+    "Language test score (IELTS/TOEFL) if required",
+    "Admission letter / proof of enrollment (if required)",
+    "Certified translations (if required)",
+    "Portfolio / research proposal (if required)",
+    "Medical / health certificate (if required)",
+    "Any additional forms requested by the provider",
   ];
 }
 
-function defaultGoodToKnow() {
+function ensureProcessCoverage(existing: string[], standard: string[]) {
+  const items = [...existing];
+  const lower = items.map((x) => x.toLowerCase());
+
+  const hasWhere = lower.some(
+    (x) =>
+      x.includes("where to apply") ||
+      x.includes("apply") ||
+      x.includes("portal") ||
+      x.includes("official")
+  );
+  const hasConfirm = lower.some(
+    (x) => x.includes("deadline") || x.includes("confirm") || x.includes("instructions")
+  );
+  const hasAdmission = lower.some(
+    (x) => x.includes("admission") || x.includes("offer") || x.includes("enroll")
+  );
+  const hasAccount = lower.some(
+    (x) => x.includes("account") || x.includes("register") || x.includes("nomination")
+  );
+  const hasDocuments = lower.some(
+    (x) =>
+      x.includes("document") ||
+      x.includes("transcript") ||
+      x.includes("cv") ||
+      x.includes("resume") ||
+      x.includes("motivation") ||
+      x.includes("recommendation")
+  );
+  const hasSelection = lower.some(
+    (x) =>
+      x.includes("selection") ||
+      x.includes("interview") ||
+      x.includes("exam") ||
+      x.includes("merit") ||
+      x.includes("olympiad")
+  );
+  const hasFinal = lower.some(
+    (x) =>
+      x.includes("final decision") ||
+      x.includes("enrollment") ||
+      x.includes("confirmation") ||
+      x.includes("submit")
+  );
+
+  if (!hasWhere && standard[0]) items.unshift(standard[0]);
+  if (!hasConfirm && standard[1]) items.splice(Math.min(1, items.length), 0, standard[1]);
+  if (!hasAdmission && standard[2]) items.splice(Math.min(2, items.length), 0, standard[2]);
+  if (!hasAccount && standard[3]) items.push(standard[3]);
+  if (!hasDocuments && standard[4]) items.push(standard[4]);
+  if (!hasSelection && standard[5]) items.push(standard[5]);
+  if (!hasFinal && standard[6]) items.push(standard[6]);
+
+  const seen = new Set<string>();
+  return items
+    .map((x) => x.trim())
+    .filter((x) => x.length > 0)
+    .filter((x) => {
+      const key = x.toLowerCase();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+}
+
+function ensureDocumentCoverage(existing: string[], standard: string[]) {
+  const items = [...existing];
+  const contains = (re: RegExp) =>
+    items.some((x) => re.test(x.toLowerCase()));
+
+  const add = (re: RegExp, value: string | undefined) => {
+    if (!value) return;
+    if (!contains(re)) items.push(value);
+  };
+
+  add(/passport|national id|\\bid\\b/, standard[0]);
+  add(/transcript/, standard[1]);
+  add(/certificate|diploma/, standard[2]);
+  add(/\\bcv\\b|resume/, standard[3]);
+  add(/motivation|statement of purpose|\\bsop\\b/, standard[4]);
+  add(/recommendation|referee/, standard[5]);
+  add(/ielts|toefl|language/, standard[6]);
+  add(/admission|offer|enroll|enrol/, standard[7]);
+  add(/translation/, standard[8]);
+  add(/portfolio|proposal|research/, standard[9]);
+  add(/medical|health/, standard[10]);
+  add(/form/, standard[11]);
+
+  const seen = new Set<string>();
+  return items
+    .map((x) => x.trim())
+    .filter((x) => x.length > 0)
+    .filter((x) => {
+      const key = x.toLowerCase();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+}
+
+function providerKind(officialSource: string) {
+  const v = officialSource.toLowerCase();
+  if (v.includes("university") || v.includes("college") || v.includes("institute")) {
+    return "university";
+  }
+  if (v.includes("ministry") || v.includes("government") || v.includes("department")) {
+    return "government";
+  }
+  if (v.includes("foundation")) return "foundation";
+  return "organization";
+}
+
+function defaultGoodToKnow(s: Scholarship) {
+  const kind = providerKind(s.officialSource);
+  const note1 =
+    kind === "government"
+      ? "If this is administered by a government body, confirm whether nominations, embassy steps, or quotas apply (not officially specified here)."
+      : kind === "university"
+        ? "If this is offered by a university, confirm whether you must first secure admission before applying for funding."
+        : kind === "foundation"
+          ? "Foundation-run programs may have specific target groups or fields; confirm the exact criteria on the official source."
+          : "Eligibility and selection criteria are defined by the provider; confirm the latest requirements on the official source.";
+
   return [
-    "Selection method (merit/exam/interview) is defined by the provider; check the official source for details.",
-    "Deadlines can change; always confirm the exact date on the official provider website before applying.",
-    "Some scholarships require an admission offer first; verify whether admission is required in the official instructions.",
+    note1,
+    `Funding is listed as ${s.fundingType}. Confirm what is covered (tuition/stipend/travel/accommodation) on the official source.`,
+    "Deadlines and requirements can change. Always verify the latest instructions on the official provider website before applying.",
+    "Be cautious with third-party sites. Use the official link and verify details directly with the provider.",
   ];
 }
 
@@ -7621,22 +7815,21 @@ function defaultFaqs(s: Scholarship) {
   return [
     {
       question: "Is this fully funded?",
-      answer: fundingAnswer,
+      answer: `${fundingAnswer} Coverage can vary by program or provider, so read the official benefits section carefully.`,
     },
     {
       question: "Is IELTS mandatory?",
       answer:
-        "Not specified on this listing. Language requirements depend on the program/university/provider. Check the official source for the exact requirement.",
+        "No specific requirement is officially stated on this listing. Language requirements depend on the program/university/provider. Check the official source for the exact requirement and accepted tests (if any).",
     },
     {
-      question: "Can applicants from Pakistan apply?",
-      answer:
-        "Eligible nationalities are not specified on this listing. Check the official source for the official eligibility/country list.",
+      question: "What is the deadline?",
+      answer: `The deadline is listed as ${enhanceDeadline(s.deadline)}. Always confirm the exact date and timeline on the official source.`,
     },
     {
       question: "Where do I apply?",
       answer:
-        "Use the external official link on this page. Scholarships Central does not accept applications.",
+        "Use the external official link on this page to reach the provider website. Scholarships Central does not accept applications or collect personal data for applications.",
     },
   ];
 }
@@ -7647,6 +7840,13 @@ export const scholarships: Scholarship[] = rawScholarships.map((s) => {
     degreeLevel: s.degreeLevel,
     fundingType: s.fundingType,
   });
+
+  const base: Scholarship = {
+    ...s,
+    country: normalized.country,
+    degreeLevel: normalized.degreeLevel,
+    fundingType: normalized.fundingType,
+  };
 
   const cleanedEligibility = cleanList(s.eligibility);
   const cleanedBenefits = cleanList(s.benefits);
@@ -7659,23 +7859,31 @@ export const scholarships: Scholarship[] = rawScholarships.map((s) => {
 
   const eligibility =
     eligibilityBase.length > 0
-      ? [...defaultEligibility(s, eligibilityBase), ...eligibilityBase]
-      : defaultEligibility(s, []);
+      ? [...defaultEligibility(base, eligibilityBase), ...eligibilityBase]
+      : defaultEligibility(base, []);
 
   const benefits =
     benefitsBase.length > 0
-      ? [...defaultBenefits(s, benefitsBase), ...benefitsBase]
-      : defaultBenefits(s, []);
+      ? [...defaultBenefits(base, benefitsBase), ...benefitsBase]
+      : defaultBenefits(base, []);
+
+  const standardApplication = cleanList(defaultApplicationProcess(base));
+  const standardDocuments = cleanList(defaultDocuments());
 
   const applicationProcess =
-    cleanedApplication.length >= 3 ? cleanedApplication : defaultApplicationProcess();
+    cleanedApplication.length > 0
+      ? ensureProcessCoverage(cleanedApplication, standardApplication)
+      : standardApplication;
 
-  const documents = cleanedDocuments.length >= 2 ? cleanedDocuments : defaultDocuments();
+  const documents =
+    cleanedDocuments.length > 0
+      ? ensureDocumentCoverage(cleanedDocuments, standardDocuments)
+      : standardDocuments;
 
   const goodToKnow =
     cleanedGoodToKnow.length > 0
       ? cleanedGoodToKnow
-      : defaultGoodToKnow();
+      : defaultGoodToKnow(base);
 
   const faqs =
     Array.isArray(s.faqs) && s.faqs.length > 0
@@ -7683,26 +7891,21 @@ export const scholarships: Scholarship[] = rawScholarships.map((s) => {
           .map((f) => ({
             question: fixMojibake(String(f.question ?? "")).trim(),
             answer: fixMojibake(String(f.answer ?? "")).trim(),
-          }))
-          .filter((f) => f.question && f.answer)
-      : defaultFaqs(s);
+	          }))
+	          .filter((f) => f.question && f.answer)
+	      : defaultFaqs(base);
 
   return {
     ...s,
     title: fixMojibake(s.title),
     overview: fixMojibake(s.overview),
-    summary:
-      typeof s.summary === "string" && s.summary.trim() !== ""
-        ? fixMojibake(s.summary).trim()
-        : buildSummary({
-            ...s,
-            country: normalized.country,
-            degreeLevel: normalized.degreeLevel,
-            fundingType: normalized.fundingType,
-          }),
-    country: normalized.country,
-    degreeLevel: normalized.degreeLevel,
-    fundingType: normalized.fundingType,
+	    summary:
+	      typeof s.summary === "string" && s.summary.trim() !== ""
+	        ? fixMojibake(s.summary).trim()
+	        : fixMojibake(buildSummary(base)).trim(),
+	    country: normalized.country,
+	    degreeLevel: normalized.degreeLevel,
+	    fundingType: normalized.fundingType,
     deadline: enhanceDeadline(s.deadline),
     duration: fixMojibake(s.duration),
     officialSource: fixMojibake(s.officialSource),
