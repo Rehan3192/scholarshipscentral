@@ -7785,6 +7785,8 @@ function providerKind(officialSource: string) {
   return "organization";
 }
 
+const CONTENT_LAST_UPDATED = "2026-02-09";
+
 function defaultGoodToKnow(s: Scholarship) {
   const kind = providerKind(s.officialSource);
   const note1 =
@@ -7909,6 +7911,7 @@ export const scholarships: Scholarship[] = rawScholarships.map((s) => {
     deadline: enhanceDeadline(s.deadline),
     duration: fixMojibake(s.duration),
     officialSource: fixMojibake(s.officialSource),
+    lastUpdated: CONTENT_LAST_UPDATED,
     eligibility,
     benefits,
     applicationProcess,
