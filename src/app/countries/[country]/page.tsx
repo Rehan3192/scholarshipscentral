@@ -9,10 +9,21 @@ import ScholarshipFilterBar from "@/components/scholarship/ScholarshipFilterBar"
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/seo/StructuredData";
 import { scholarships } from "@/data/scholarships";
 import { normalizeCountry } from "@/data/values";
+import { toSegment } from "@/lib/helpers";
 
 type Props = {
   params: Promise<{ country: string }>;
 };
+
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const reserved = new Set(["germany", "united-kingdom", "usa"]);
+  const uniqueSegments = Array.from(new Set(scholarships.map((s) => toSegment(s.country))));
+  return uniqueSegments
+    .filter((segment) => !reserved.has(segment))
+    .map((country) => ({ country }));
+}
 
 function getCountryLabel(countryParam: string): string | null {
   try {
