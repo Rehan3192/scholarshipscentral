@@ -89,7 +89,12 @@ function NavDropdown({
         />
       </button>
 
-      <div className="absolute left-0 top-full z-50 mt-2 w-64 max-w-[calc(100vw-2rem)]">
+      <div
+        className={[
+          "absolute left-0 top-full z-50 mt-2 w-64 max-w-[calc(100vw-2rem)]",
+          isOpen ? "pointer-events-auto" : "pointer-events-none",
+        ].join(" ")}
+      >
         <div
           role="menu"
           aria-label={`${label} menu`}
