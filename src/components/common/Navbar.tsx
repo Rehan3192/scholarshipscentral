@@ -1,10 +1,17 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+
+type MenuId = "countries" | "degrees" | "funding";
 
 type DropdownItem = {
   label: string;
   href: string;
   description?: string;
 };
+
+const CLOSE_DELAY_MS = 500;
 
 function ChevronDownIcon({ className }: { className?: string }) {
   return (
@@ -27,30 +34,79 @@ const pillClassName =
   "inline-flex items-center rounded-full border border-gray-300 bg-white px-3 py-1.5 font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2";
 
 function NavDropdown({
+  id,
   label,
   items,
+  openMenu,
+  setOpenMenu,
+  canHoverOpen,
+  cancelClose,
+  scheduleClose,
 }: {
+  id: MenuId;
   label: string;
   items: DropdownItem[];
+  openMenu: MenuId | null;
+  setOpenMenu: (value: MenuId | null) => void;
+  canHoverOpen: boolean;
+  cancelClose: () => void;
+  scheduleClose: () => void;
 }) {
+  const isOpen = openMenu === id;
+
   return (
-    <details className="relative group">
-      <summary
+    <div
+      className="relative"
+      onMouseEnter={() => {
+        if (!canHoverOpen) return;
+        cancelClose();
+        setOpenMenu(id);
+      }}
+      onMouseLeave={() => {
+        if (!canHoverOpen) return;
+        scheduleClose();
+      }}
+    >
+      <button
+        type="button"
+        aria-haspopup="menu"
+        aria-expanded={isOpen}
         className={[
           pillClassName,
-          "cursor-pointer list-none select-none gap-1.5 [&::-webkit-details-marker]:hidden",
+          "cursor-pointer select-none gap-1.5",
         ].join(" ")}
+        onClick={() => {
+          cancelClose();
+          setOpenMenu(isOpen ? null : id);
+        }}
       >
         <span>{label}</span>
-        <ChevronDownIcon className="size-4 text-gray-500 transition-transform duration-200 motion-reduce:transition-none group-open:rotate-180" />
-      </summary>
+        <ChevronDownIcon
+          className={[
+            "size-4 text-gray-500 transition-transform duration-200 motion-reduce:transition-none",
+            isOpen ? "rotate-180" : "rotate-0",
+          ].join(" ")}
+        />
+      </button>
 
       <div className="absolute left-0 top-full z-50 mt-2 w-64 max-w-[calc(100vw-2rem)]">
-        <div className="invisible origin-top rounded-xl border border-gray-200 bg-white p-2 shadow-lg opacity-0 scale-95 translate-y-1 transition duration-200 motion-reduce:transition-none group-open:visible group-open:opacity-100 group-open:scale-100 group-open:translate-y-0">
+        <div
+          role="menu"
+          aria-label={`${label} menu`}
+          aria-hidden={!isOpen}
+          className={[
+            "origin-top rounded-xl border border-gray-200 bg-white p-2 shadow-lg transition duration-200 motion-reduce:transition-none",
+            isOpen
+              ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
+              : "opacity-0 scale-95 translate-y-1 pointer-events-none",
+          ].join(" ")}
+        >
           {items.map((item) => (
             <Link
-              key={`${label}:${item.href}`}
+              key={`${id}:${item.href}`}
               href={item.href}
+              role="menuitem"
+              onClick={() => setOpenMenu(null)}
               className="block rounded-lg px-3 py-2 text-sm text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
             >
               <span className="font-semibold">{item.label}</span>
@@ -63,13 +119,127 @@ function NavDropdown({
           ))}
         </div>
       </div>
-    </details>
+    </div>
   );
 }
 
 export default function Navbar() {
+  const [openMenu, setOpenMenu] = useState<MenuId | null>(null);
+  const openMenuRef = useRef<MenuId | null>(null);
+  const closeTimerRef = useRef<number | null>(null);
+  const navRef = useRef<HTMLElement | null>(null);
+
+  const [canHoverOpen, setCanHoverOpen] = useState(false);
+
+  const [isHidden, setIsHidden] = useState(false);
+  const lastScrollYRef = useRef(0);
+  const rafPendingRef = useRef(false);
+
+  useEffect(() => {
+    openMenuRef.current = openMenu;
+  }, [openMenu]);
+
+  const cancelClose = () => {
+    if (closeTimerRef.current) {
+      window.clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  };
+
+  const scheduleClose = () => {
+    cancelClose();
+    closeTimerRef.current = window.setTimeout(() => {
+      setOpenMenu(null);
+      closeTimerRef.current = null;
+    }, CLOSE_DELAY_MS);
+  };
+
+  // Enable hover-to-open only on devices with a fine pointer + hover capability.
+  useEffect(() => {
+    const mql = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const update = () => setCanHoverOpen(mql.matches);
+    update();
+
+    // Safari < 14 fallback.
+    if (typeof mql.addEventListener === "function") {
+      mql.addEventListener("change", update);
+      return () => mql.removeEventListener("change", update);
+    }
+    // Deprecated, but required for Safari < 14.
+    mql.addListener(update);
+    return () => mql.removeListener(update);
+  }, []);
+
+  // Close when clicking outside.
+  useEffect(() => {
+    if (!openMenu) return;
+
+    const onPointerDown = (event: PointerEvent) => {
+      const root = navRef.current;
+      if (!root) return;
+      const target = event.target as Node | null;
+      if (target && root.contains(target)) return;
+      setOpenMenu(null);
+    };
+
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [openMenu]);
+
+  // Close on Escape.
+  useEffect(() => {
+    if (!openMenu) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpenMenu(null);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [openMenu]);
+
+  // Hide on scroll down, show on scroll up.
+  useEffect(() => {
+    lastScrollYRef.current = window.scrollY;
+
+    const onScroll = () => {
+      if (rafPendingRef.current) return;
+      rafPendingRef.current = true;
+
+      window.requestAnimationFrame(() => {
+        const y = window.scrollY;
+        const last = lastScrollYRef.current;
+        const delta = y - last;
+
+        const threshold = 12;
+        const atTop = y <= 8;
+
+        if (atTop) {
+          setIsHidden(false);
+        } else if (delta > threshold) {
+          setIsHidden(true);
+          if (openMenuRef.current) setOpenMenu(null);
+        } else if (delta < -threshold) {
+          setIsHidden(false);
+        }
+
+        lastScrollYRef.current = y;
+        rafPendingRef.current = false;
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70">
+    <header
+      ref={navRef}
+      className={[
+        "sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70",
+        "transition-transform duration-200 motion-reduce:transition-none",
+        isHidden ? "-translate-y-full pointer-events-none" : "translate-y-0",
+      ].join(" ")}
+    >
       <nav
         className="mx-auto max-w-6xl px-4 py-3"
         aria-label="Primary"
@@ -113,6 +283,7 @@ export default function Navbar() {
             Scholarships
           </Link>
           <NavDropdown
+            id="countries"
             label="Countries"
             items={[
               {
@@ -124,8 +295,14 @@ export default function Navbar() {
               { label: "USA", href: "/countries/usa" },
               { label: "United Kingdom", href: "/countries/united-kingdom" },
             ]}
+            openMenu={openMenu}
+            setOpenMenu={setOpenMenu}
+            canHoverOpen={canHoverOpen}
+            cancelClose={cancelClose}
+            scheduleClose={scheduleClose}
           />
           <NavDropdown
+            id="degrees"
             label="Degrees"
             items={[
               {
@@ -137,8 +314,14 @@ export default function Navbar() {
               { label: "Masters", href: "/degrees/masters" },
               { label: "PhD", href: "/degrees/phd" },
             ]}
+            openMenu={openMenu}
+            setOpenMenu={setOpenMenu}
+            canHoverOpen={canHoverOpen}
+            cancelClose={cancelClose}
+            scheduleClose={scheduleClose}
           />
           <NavDropdown
+            id="funding"
             label="Funding"
             items={[
               {
@@ -149,6 +332,11 @@ export default function Navbar() {
               { label: "Fully funded", href: "/funding/fully-funded" },
               { label: "Partially funded", href: "/funding/partially-funded" },
             ]}
+            openMenu={openMenu}
+            setOpenMenu={setOpenMenu}
+            canHoverOpen={canHoverOpen}
+            cancelClose={cancelClose}
+            scheduleClose={scheduleClose}
           />
           <Link
             href="/contact"
