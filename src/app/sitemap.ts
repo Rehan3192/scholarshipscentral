@@ -4,6 +4,10 @@ import type { MetadataRoute } from "next";
 import { scholarships } from "@/data/scholarships";
 import { toSegment } from "@/lib/helpers";
 import { getSiteUrl, isVercelProduction } from "@/lib/site";
+import {
+  getWordPressAllPostSlugs,
+  isWordPressConfigured,
+} from "@/lib/wordpress";
 
 function isoDateOrNow(value: string | undefined) {
   if (!value) return new Date();
@@ -20,7 +24,7 @@ function toFundingSlug(fundingType: string) {
   return "";
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   if (!isVercelProduction()) {
     return [];
   }
@@ -61,12 +65,40 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (!prevFunding || updated > prevFunding) lastUpdatedByFunding.set(s.fundingType, updated);
   }
 
+  const blogEntries: MetadataRoute.Sitemap = [];
+  if (isWordPressConfigured()) {
+    blogEntries.push({
+      url: `${siteUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    });
+
+    try {
+      const posts = await getWordPressAllPostSlugs({
+        maxPosts: 500,
+        revalidateSeconds: 60 * 60,
+      });
+      blogEntries.push(
+        ...posts.map((p) => ({
+          url: `${siteUrl}/blog/${p.slug}`,
+          lastModified: isoDateOrNow(p.modified),
+          changeFrequency: "weekly" as const,
+          priority: 0.5,
+        })),
+      );
+    } catch {
+      // If WordPress is temporarily unavailable, keep sitemap stable.
+    }
+  }
+
   return [
     {
       url: siteUrl,
       lastModified: new Date(),
       priority: 1,
     },
+    ...blogEntries,
     {
       url: `${siteUrl}/contact`,
       lastModified: new Date(),
