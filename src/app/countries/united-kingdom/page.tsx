@@ -54,6 +54,23 @@ export default function UnitedKingdomScholarshipsPage() {
         </div>
       </header>
 
+      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          Featured application guide
+        </h2>
+        <p className="mt-2 mb-0 text-sm text-gray-700">
+          Complete application guide for the Loughborough Global Impact Scholarship 2026. Eligibility, benefits, deadlines, documents, and step-by-step process explained.
+        </p>
+        <div className="mt-4">
+          <Link
+            href="/loughborough-global-impact-scholarship-application-guide"
+            className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+          >
+            Read the guide
+          </Link>
+        </div>
+      </section>
+
       {filtered.length === 0 ? (
         <div className="rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-700">
           <p className="mb-3">No scholarships listed here yet.</p>
