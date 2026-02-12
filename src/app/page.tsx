@@ -1,8 +1,19 @@
 import Link from "next/link";
 import { scholarships } from "@/data/scholarships";
 import { toSegment } from "@/lib/helpers";
+import {
+  getWordPressPosts,
+  isWordPressConfigured,
+  stripHtmlToText,
+  type WordPressPostListItem,
+} from "@/lib/wordpress";
 
-export default function HomePage() {
+function formatDate(value: string) {
+  const iso = value.split("T")[0];
+  return iso || value;
+}
+
+export default async function HomePage() {
   const latest = [...scholarships]
     .sort((a, b) => (b.lastUpdated ?? "").localeCompare(a.lastUpdated ?? ""))
     .slice(0, 6);
@@ -20,6 +31,15 @@ export default function HomePage() {
       count,
       href: `/countries/${toSegment(country)}`,
     }));
+
+  let blogPosts: WordPressPostListItem[] = [];
+  if (isWordPressConfigured()) {
+    try {
+      blogPosts = await getWordPressPosts({ perPage: 3, revalidateSeconds: 60 * 60 });
+    } catch {
+      blogPosts = [];
+    }
+  }
 
   return (
     <div className="py-10 space-y-12">
@@ -261,6 +281,55 @@ export default function HomePage() {
             </div>
           </div>
         ) : null}
+      </section>
+
+      <section className="space-y-4">
+        <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+          <h2 className="text-2xl font-semibold text-gray-900">
+            From the blog
+          </h2>
+          <Link href="/blog" className="text-sm font-medium text-blue-700 hover:underline">
+            View all posts
+          </Link>
+        </div>
+
+        {blogPosts.length === 0 ? (
+          <div className="rounded-2xl border border-gray-200 bg-white p-5 text-sm text-gray-700 shadow-sm">
+            <p className="m-0">
+              New guides and updates will appear here.
+            </p>
+          </div>
+        ) : (
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {blogPosts.map((post) => {
+              const title = stripHtmlToText(post.title.rendered);
+              const excerpt =
+                stripHtmlToText(post.excerpt.rendered) ||
+                "Read the full post for details.";
+
+              return (
+                <Link
+                  key={post.id}
+                  href={`/blog/${post.slug}`}
+                  className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-gray-300 hover:bg-gray-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                >
+                  <div className="text-xs font-semibold text-gray-500">
+                    {formatDate(post.date)}
+                  </div>
+                  <div className="mt-2 text-base font-semibold text-gray-900">
+                    {title}
+                  </div>
+                  <div className="mt-2 text-sm text-gray-700">
+                    {excerpt}
+                  </div>
+                  <div className="mt-3 text-sm font-semibold text-blue-700">
+                    Read more &rarr;
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        )}
       </section>
 
       <section className="space-y-4">
