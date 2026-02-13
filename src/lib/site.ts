@@ -12,7 +12,8 @@ export function getSiteUrl(): string {
     return `https://${stripTrailingSlash(vercelUrl.trim())}`;
   }
 
-  return "https://scholarshipscentral.com";
+  // Production canonical (also used as sitemap/metadata base fallback).
+  return "https://www.scholarshipscentral.com";
 }
 
 export function isVercelProduction(): boolean {
