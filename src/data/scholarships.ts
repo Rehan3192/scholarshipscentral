@@ -5598,35 +5598,87 @@ const rawScholarships: Scholarship[] = [
 
     title: "Germany Heinrich Böll Scholarship",
     overview:
-      "Scholarships for international postgraduate students with strong academic records.",
+      "Funded scholarship by the Heinrich Böll Foundation for international master's students in Germany, with monthly stipend and support.",
+
+    summary:
+      "The Heinrich Böll Foundation Scholarship is a funded program offered by the Heinrich Böll Foundation for international students planning to pursue a master's degree at a recognized university in Germany. It supports applicants who combine strong academics with social or political engagement and provides a monthly stipend, possible allowances, and community support. The program aligns with the foundation's focus on environmental sustainability, democracy, human rights, and social justice.",
 
     country: "Germany",
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
 
-    deadline: "March",
-    duration: "2 years",
+    deadline: "March 1 and September 1 (annual)",
+    duration: "Up to the standard master's duration (varies by program)",
 
     eligibility: [
-      "TODO",
+      "Eligible nationalities: International applicants can apply; the exact rules depend on your applicant category.",
+      "Degree level: Master's (postgraduate) study at a recognized German university.",
+      "Academic requirement: A bachelor's degree and meeting the admission requirements for your chosen program (no fixed GPA cutoff is officially stated).",
+      "Language requirement: Proof of German proficiency is required by the foundation (at least B2 or equivalent, per official requirements).",
+      "Engagement: Demonstrated social/political engagement and motivation aligned with the foundation's values.",
+      "Age limit: No official age limit is specified.",
     ],
 
     benefits: [
-      "TODO",
+      "Monthly stipend: Typically €992/month for international students (rates/allowances vary by applicant category).",
+      "Tuition fees: Tuition-fee funding is not possible in Germany under this program.",
+      "Allowances: Possible individual allowances (e.g., health insurance), if applicable.",
+      "Mobility: Additional funding may be available for limited periods abroad (study/internship), for scholarship holders.",
+      "Community support: Seminars, mentoring, and networking through the foundation.",
     ],
 
     applicationProcess: [
-      "TODO",
+      "Check the official eligibility rules for your applicant category and confirm the German language requirement.",
+      "Choose your master's program and apply to a recognized German university (admission requirements are set by the university).",
+      "Prepare your documents (transcripts, CV, motivation, engagement proof, and language certificates where required).",
+      "When the application portal opens (about 6 weeks before each deadline), register and complete the online application.",
+      "Upload all required forms and supporting documents, then submit before March 1 or September 1.",
+      "Wait for the foundation's selection process and final decision (exact steps and timelines are not officially specified for every case).",
     ],
 
     documents: [
-      "TODO",
+      "Valid passport/ID",
+      "Academic transcripts and degree certificate(s)",
+      "CV / résumé",
+      "Motivation letter / statement of purpose",
+      "Proof of German language proficiency (if required for your applicant category)",
+      "Evidence of social/political engagement (references, certificates, or portfolio)",
+      "Any required foundation forms (as listed on the official application page)",
     ],
 
-    applyUrl: "https://www.boell.de",
+    goodToKnow: [
+      "This scholarship is highly competitive and strongly weighs social/political engagement alongside academic performance.",
+      "It is not a tuition-fee scholarship in Germany; plan for living costs and any university semester fees beyond what your stipend/allowances cover.",
+      "Because German proficiency is required for international applicants, confirm language requirements early even if your degree program is taught in English.",
+    ],
+
+    faqs: [
+      {
+        question: "Is this scholarship fully funded?",
+        answer:
+          "It is a funded scholarship that typically provides a monthly stipend and may include allowances and non-financial support. Tuition-fee funding is not possible in Germany under this program, so always verify the current terms on the official site.",
+      },
+      {
+        question: "Can international students apply for the master's scholarship?",
+        answer:
+          "Yes. International applicants can apply for funding for master's study in Germany, provided they meet the official eligibility rules for their applicant category.",
+      },
+      {
+        question: "Is IELTS/TOEFL required?",
+        answer:
+          "The foundation focuses on German-language proof (at least B2 or equivalent) for international applicants. English tests depend on the university program you apply to and are not always required by the scholarship itself.",
+      },
+      {
+        question: "When is the deadline?",
+        answer:
+          "The annual deadlines are March 1 and September 1. The online portal usually opens about 6 weeks before each deadline.",
+      },
+    ],
+
+    applyUrl: "https://www.boell.de/en/application",
     officialSource: "Heinrich Böll Foundation",
 
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-02-14",
   },
 
   {
