@@ -188,6 +188,209 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "skoltech-university-scholarship-masters",
+
+    title: "Skoltech University Scholarship",
+    overview:
+      "Skoltech offers scholarship-backed admission for international MSc applicants in Russia, including tuition coverage, monthly stipend, and medical insurance for selected students.",
+    summary:
+      "The Skoltech University Scholarship for Master's study is administered through Skoltech Admissions for international applicants to graduate programs in Russia. The process is merit-based and typically includes profile review, online testing, and a final-stage evaluation. Official admissions information states that selected MSc students receive tuition coverage, a monthly stipend, and medical insurance, while applicants should verify any track-specific conditions directly on the official admissions portal.",
+
+    country: "Russia",
+    degreeLevel: "Masters",
+    fundingType: "Fully Funded",
+
+    deadline:
+      "March 16, 2026 (MSc first-wave deadline; check official portal for additional rounds)",
+    duration: "2 years",
+
+    eligibility: [
+      "Eligible nationalities: International applicants can apply",
+      "Degree level: Master's programs only",
+      "Academic background: Bachelor's degree in a relevant field, or final-year status before enrollment",
+      "Language requirements: English proficiency evidence is required under official admissions rules",
+      "Language test policy: IELTS/TOEFL may be accepted but are not the only routes if the official portal allows alternative proof",
+      "Entrance assessment: Applicants complete Skoltech's online testing and shortlisted candidates continue to final selection stages",
+      "Admission basis: Selection is merit-based and program-fit based",
+      "Age limit: No official age limit is specified",
+    ],
+
+    benefits: [
+      "Tuition: No tuition fee for applicants who pass the competitive selection process",
+      "Stipend: Monthly scholarship starts from 40,000 RUB for MSc students (higher amount may apply for top-scoring candidates on program pages)",
+      "Health insurance: Medical insurance is provided for international students",
+      "Accommodation: Not officially specified as a guaranteed scholarship line on the main 2026 admissions page",
+      "Travel support: No specific travel grant is officially stated on the main admissions page",
+      "Application fee: No application fee",
+      "Other benefits: Program-level support opportunities may exist and should be verified on the official source",
+    ],
+
+    applicationProcess: [
+      "Where to apply: Use the official Skoltech Admissions portal",
+      "Account setup: Create an applicant account and complete all mandatory profile fields",
+      "Program selection: Choose your MSc track and confirm that your academic background matches the track prerequisites",
+      "Documents: Upload required academic, language, and recommendation documents before deadline",
+      "Selection method: Complete online testing and continue to final-stage selection steps if shortlisted",
+      "Decision timeline: Monitor email and admissions dashboard for updates and additional requests",
+      "Final enrollment: Follow visa, enrollment, and registration instructions issued by Skoltech after admission",
+    ],
+
+    documents: [
+      "Valid passport",
+      "Bachelor's diploma or expected graduation proof",
+      "Academic transcripts",
+      "CV/Resume",
+      "Motivation letter",
+      "English proficiency proof or English-medium instruction evidence",
+      "Two recommendation letters uploaded through the admissions system",
+      "Additional program-specific files if requested by the selected MSc track",
+      "Certified translations when original documents are not in accepted languages",
+      "Recent passport-style photo if requested in the portal",
+    ],
+
+    goodToKnow: [
+      "Official admissions information lists March 16, 2026 as the MSc first-wave deadline for the 2026 cycle.",
+      "GRE and SAT are not listed as mandatory submission documents on the main 2026 Skoltech admissions pages.",
+      "This scholarship is competitive, so a strong academic profile and clear program fit materially improve ranking outcomes.",
+      "Always verify exact scholarship terms, intake rounds, and document rules on official Skoltech sources before submitting.",
+    ],
+
+    faqs: [
+      {
+        question: "Is IELTS mandatory for Skoltech Master's admission?",
+        answer:
+          "Not in every case. Skoltech accepts approved English proficiency evidence listed in official admissions guidance, which may include test scores or accepted alternatives.",
+      },
+      {
+        question: "Is GRE required for the 2026 MSc application?",
+        answer:
+          "GRE is not listed as a mandatory application document on Skoltech's main 2026 admissions pages.",
+      },
+      {
+        question: "Is this scholarship fully funded?",
+        answer:
+          "Official pages describe tuition coverage, monthly stipend, and medical insurance for selected students. Confirm final scholarship conditions on the official source before submission.",
+      },
+      {
+        question: "Can international students apply to Skoltech Master's programs?",
+        answer:
+          "Yes. Official admissions guidance is aimed at international applicants for the 2026 intake.",
+      },
+      {
+        question: "Does Skoltech charge an MSc application fee?",
+        answer:
+          "The official admissions portal states that there is no application fee.",
+      },
+    ],
+
+    applyUrl: "https://admissions.skoltech.ru",
+    officialSource: "Skoltech Admissions",
+
+    lastUpdated: "2026-02-16",
+  },
+
+  {
+    slug: "skoltech-university-scholarship-phd",
+
+    title: "Skoltech University Scholarship",
+    overview:
+      "Skoltech provides scholarship-backed PhD admission for international researchers in Russia, including tuition coverage, monthly stipend, and medical insurance for admitted students.",
+    summary:
+      "The Skoltech University Scholarship for PhD study is offered via Skoltech Admissions for international applicants targeting research tracks in Russia. PhD selection is competitive and combines profile screening with formal evaluation stages defined by Skoltech. Official admissions information for 2026 states that admitted PhD students receive tuition coverage, a monthly stipend, and medical insurance, with final conditions governed by current official call rules.",
+
+    country: "Russia",
+    degreeLevel: "PhD",
+    fundingType: "Fully Funded",
+
+    deadline: "April 27, 2026 (PhD first-wave deadline)",
+    duration: "Program duration varies by PhD track (confirm official program page)",
+
+    eligibility: [
+      "Eligible nationalities: International applicants can apply",
+      "Degree level: PhD programs only",
+      "Academic background: Master's or Specialist-level qualification in a relevant field is expected",
+      "Language requirements: English proficiency proof is required under official admissions guidance",
+      "Research alignment: Applicants should match the selected track and demonstrate fit with the research area",
+      "Research fit: Match your background with an available Skoltech research track and supervisor area",
+      "Selection criteria: Official ranking criteria include testing, GPA, university profile, and interview components",
+      "Age limit: No official age limit is specified",
+    ],
+
+    benefits: [
+      "Tuition: Tuition is covered for admitted international PhD students under the scholarship terms",
+      "Stipend: Monthly scholarship starts from 75,000 RUB for PhD students",
+      "Health insurance: Medical insurance is provided for international students",
+      "Accommodation: Not officially specified as a guaranteed scholarship line on the main 2026 admissions page",
+      "Travel support: No specific travel grant is officially stated on the main admissions page",
+      "Application fee: No application fee",
+      "Other benefits: Track-level research support may vary and should be confirmed through official channels",
+    ],
+
+    applicationProcess: [
+      "Where to apply: Use the official Skoltech Admissions portal",
+      "Account setup: Register an account and complete all required profile sections",
+      "Track selection: Select the PhD research track that matches your academic and research background",
+      "Documents: Upload required academic, language, and recommendation files before the deadline",
+      "Selection method: Skoltech evaluates applications through formal ranking criteria and interview-based assessment",
+      "Decision timeline: Monitor the admissions portal and email for updates, interviews, and outcomes",
+      "Final enrollment: Complete post-admission enrollment and migration steps according to official instructions",
+    ],
+
+    documents: [
+      "Valid passport",
+      "Master's or Specialist diploma (or expected graduation proof)",
+      "Academic transcripts",
+      "CV/Resume",
+      "Motivation letter",
+      "English proficiency proof or accepted equivalent evidence",
+      "Two recommendation letters submitted via the admissions system",
+      "Research statement or additional research documents if requested by track",
+      "Published work list or portfolio if relevant to your PhD area",
+      "Certified translations where required",
+    ],
+
+    goodToKnow: [
+      "Official admissions information lists April 27, 2026 as the PhD first-wave deadline for the 2026 cycle.",
+      "Published ranking criteria for PhD include test score, GPA, university ranking, and interview score.",
+      "Strong research alignment and clear motivation are critical because PhD admissions are highly selective.",
+      "Always confirm track-specific requirements and supervisor expectations on official Skoltech sources before applying.",
+    ],
+
+    faqs: [
+      {
+        question: "Is GRE required for Skoltech PhD admission?",
+        answer:
+          "GRE is not listed as a mandatory document on Skoltech's main 2026 admissions pages. Selection criteria are defined by Skoltech's own process.",
+      },
+      {
+        question: "Is the PhD scholarship fully funded?",
+        answer:
+          "Official admissions pages state tuition coverage, monthly stipend, and medical insurance for admitted PhD students.",
+      },
+      {
+        question: "Can international students apply for Skoltech PhD?",
+        answer:
+          "Yes. The 2026 admissions campaign explicitly includes international applicants.",
+      },
+      {
+        question: "Do I need an English certificate?",
+        answer:
+          "You must provide accepted English proficiency evidence according to current admissions requirements.",
+      },
+      {
+        question: "Is there an application fee for PhD admission?",
+        answer:
+          "The official admissions portal states that there is no application fee.",
+      },
+    ],
+
+    applyUrl: "https://admissions.skoltech.ru",
+    officialSource: "Skoltech Admissions",
+
+    lastUpdated: "2026-02-16",
+  },
+
+  {
     slug: "erasmus-mundus-joint-master-degrees",
 
     title: "Erasmus Mundus Joint Master Degrees (EMJM)",
