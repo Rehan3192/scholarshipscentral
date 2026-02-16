@@ -195,6 +195,9 @@ const rawScholarships: Scholarship[] = [
       "Skoltech offers scholarship-backed admission for international MSc applicants in Russia, including tuition coverage, monthly stipend, and medical insurance for selected students.",
     summary:
       "The Skoltech University Scholarship for Master's study is administered through Skoltech Admissions for international applicants to graduate programs in Russia. The process is merit-based and typically includes profile review, online testing, and a final-stage evaluation. Official admissions information states that selected MSc students receive tuition coverage, a monthly stipend, and medical insurance, while applicants should verify any track-specific conditions directly on the official admissions portal.",
+    guideUrl:
+      "https://scholarshipscentral.com/skoltech-university-russia-scholarship-2026-application-guide/",
+    guideLabel: "Skoltech 2026 application guide",
 
     country: "Russia",
     degreeLevel: "Masters",
@@ -297,6 +300,9 @@ const rawScholarships: Scholarship[] = [
       "Skoltech provides scholarship-backed PhD admission for international researchers in Russia, including tuition coverage, monthly stipend, and medical insurance for admitted students.",
     summary:
       "The Skoltech University Scholarship for PhD study is offered via Skoltech Admissions for international applicants targeting research tracks in Russia. PhD selection is competitive and combines profile screening with formal evaluation stages defined by Skoltech. Official admissions information for 2026 states that admitted PhD students receive tuition coverage, a monthly stipend, and medical insurance, with final conditions governed by current official call rules.",
+    guideUrl:
+      "https://scholarshipscentral.com/skoltech-university-russia-scholarship-2026-application-guide/",
+    guideLabel: "Skoltech 2026 application guide",
 
     country: "Russia",
     degreeLevel: "PhD",

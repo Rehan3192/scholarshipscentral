@@ -16,6 +16,8 @@ export type Scholarship = {
   title: string;
   overview: string;
   summary?: string;
+  guideUrl?: string;
+  guideLabel?: string;
   country: string;
   degreeLevel: DegreeLevel;
   fundingType: FundingType;

@@ -308,6 +308,15 @@ export default async function ScholarshipPage({ params }: Props) {
               Apply on official website &rarr;
             </a>
 
+            {scholarship.guideUrl ? (
+              <a
+                href={scholarship.guideUrl}
+                className="mt-3 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+              >
+                Read: {scholarship.guideLabel ?? "Application guide"}
+              </a>
+            ) : null}
+
             <a
               href={scholarship.applyUrl}
               target="_blank"
