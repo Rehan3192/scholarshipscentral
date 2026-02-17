@@ -2453,6 +2453,305 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "khalifa-university-scholarship-bachelors",
+
+    title: "Khalifa University Scholarship",
+    overview:
+      "Khalifa University offers tier-based undergraduate scholarship support in the UAE for eligible local and international applicants, with benefits that can include tuition coverage, textbooks, and selected student support services.",
+    summary:
+      "The Khalifa University Scholarship for Bachelor's study is offered by Khalifa University in Abu Dhabi, United Arab Emirates. It is a merit-based scholarship framework integrated into undergraduate admission, where eligible applicants are mapped to scholarship tiers. Depending on tier and student status, benefits can include full or partial tuition support and additional services, and final benefits are stated in the official admission offer.",
+
+    country: "United Arab Emirates",
+    degreeLevel: "Bachelors",
+    fundingType: "Partially Funded",
+
+    deadline: "March 2, 2026 (Fall 2026 intake)",
+    duration: "4 years (typical; program-dependent)",
+
+    eligibility: [
+      "Eligible nationalities: UAE nationals, children of Emirati mothers, expatriates, and international applicants can apply through official pathways",
+      "Degree level: Bachelor's",
+      "Study location: United Arab Emirates",
+      "Academic background: Grade 12 or equivalent with program-specific subject requirements",
+      "Admission required: Yes, scholarship consideration is tied to admission",
+      "Minimum GPA/grades: High-school minimum percentages/grades depend on curriculum and selected major",
+      "Work experience: No specific requirement is officially stated",
+      "Field of study: Must meet subject prerequisites for the chosen undergraduate program",
+      "Residency requirement: No universal residency requirement; applicant pathways vary by status category",
+      "Document language/translations: Equivalency and attestation requirements apply for foreign/private-school certificates",
+      "Current enrollment status: Final-year school students and recent graduates can apply under published timeline rules",
+      "Age limit: No official age limit is specified",
+      "Language requirements: IELTS Academic 6.0 or TOEFL iBT 79, or accepted equivalent/exemption rules",
+    ],
+
+    benefits: [
+      "Tuition: Tier-based coverage ranging from partial to full, depending on scholarship tier",
+      "Stipend: No stipend is offered to Emirati and international bachelor's students under the published scholarship FAQ",
+      "Accommodation: Free accommodation may be available for eligible students according to KU policy",
+      "Travel: Free transportation may be available for eligible students according to KU policy",
+      "Health insurance: Not specified as a universal undergraduate scholarship line in the published FAQ",
+      "Other benefits: Textbooks are included in listed scholarship tiers; additional financial aid may be available in approved cases",
+      "Visa/residence support: Not specified as a universal undergraduate scholarship line",
+      "Application fee: Not clearly listed on the main undergraduate admissions page; confirm in the live portal at submission",
+    ],
+
+    applicationProcess: [
+      "Where to apply: Use the official Khalifa University undergraduate admissions portal",
+      "Program selection: Choose an eligible bachelor's program and confirm subject prerequisites",
+      "Account and profile: Complete all application sections and upload required records before deadline",
+      "Assessments: Shortlisted applicants may be asked to complete KU admission tests and a recorded video interview",
+      "Offer and acceptance: If admitted, accept the offer within the stated response window and complete any required steps",
+      "Final compliance: Submit final school documents by KU's official timeline to keep the offer active",
+    ],
+
+    documents: [
+      "High-school certificates/transcripts (including current-year records where applicable)",
+      "MOE equivalency/attestation documents for applicable curricula",
+      "English test certificate (IELTS/TOEFL) when required",
+      "Passport copy",
+      "Passport-size photograph",
+      "UAE visa and Emirates ID for UAE residents (if applicable)",
+      "Family book for UAE nationals (if applicable)",
+      "Predicted grades confirmation letter when final certificate is not yet issued",
+    ],
+
+    goodToKnow: [
+      "Official undergraduate admissions information lists March 2, 2026 as the Fall 2026 application close date.",
+      "Scholarship benefits are tier-based and not identical for all admitted students.",
+      "There is no separate scholarship form; awarded tier details are included in the admission offer.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the Khalifa University bachelor's scholarship fully funded for all students?",
+        answer:
+          "No. Undergraduate scholarships are tier-based, and coverage can be full or partial depending on your assigned tier.",
+      },
+      {
+        question: "Do I need a separate scholarship application for undergraduate study?",
+        answer:
+          "No. Scholarship assessment is included in the undergraduate admission process.",
+      },
+      {
+        question: "Is IELTS required for undergraduate admission?",
+        answer:
+          "KU lists IELTS/TOEFL requirements and accepted alternatives or exemptions; check the current admissions page for exact rules.",
+      },
+      {
+        question: "Does the bachelor's scholarship include a monthly stipend?",
+        answer:
+          "The scholarship FAQ states that no stipend is offered to Emirati and international bachelor's students under the listed scheme.",
+      },
+    ],
+
+    applyUrl: "https://www.ku.ac.ae/undergraduate-admissions",
+    officialSource:
+      "Khalifa University Undergraduate Admissions and Scholarship FAQs",
+
+    lastUpdated: "2026-02-17",
+  },
+
+  {
+    slug: "khalifa-university-scholarship-masters",
+
+    title: "Khalifa University Scholarship",
+    overview:
+      "Khalifa University offers graduate scholarship tiers for master's applicants in the UAE, with potential tuition waiver benefits and selected support for eligible full-time international students.",
+    summary:
+      "The Khalifa University Scholarship for master's study is offered through Khalifa University postgraduate admissions in Abu Dhabi, UAE. Scholarship decisions are made during admission and applicants are mapped to tiers based on academic merit and other factors. Published KU scholarship details state that benefits may include tuition waiver up to 100 percent and other support for eligible full-time international students, while availability is limited.",
+
+    country: "United Arab Emirates",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline: "March 2, 2026 (Fall 2026 intake)",
+    duration: "1-2 years (program-dependent)",
+
+    eligibility: [
+      "Eligible nationalities: UAE nationals and international applicants can apply",
+      "Degree level: Master's",
+      "Study location: United Arab Emirates",
+      "Academic background: Bachelor's degree in a relevant discipline",
+      "Admission required: Yes, scholarship is considered as part of admission",
+      "Minimum GPA/grades: Minimum CGPA 3.0/4.0 (or equivalent) for master's admission",
+      "Work experience: No universal work-experience requirement is officially stated",
+      "Field of study: Must satisfy prerequisites for the selected master's program",
+      "Residency requirement: No universal residency requirement is officially stated",
+      "Document language/translations: UAE equivalency/recognition process may apply for degrees from outside the UAE",
+      "Current enrollment status: Final-year undergraduate applicants can apply with current transcripts and expected graduation evidence",
+      "Age limit: No official age limit is specified",
+      "Language requirements: TOEFL iBT 91 or IELTS Academic 6.5, with published exemption pathways subject to approval",
+    ],
+
+    benefits: [
+      "Tuition: Scholarship tiers may include waiver up to 100 percent",
+      "Stipend: Master's scholarship FAQ states no standard monthly stipend; compensation opportunities may exist for university service duties",
+      "Accommodation: Free university accommodation may be provided for full-time eligible students",
+      "Travel: Mobilization and demobilization flights may be provided for full-time overseas international students",
+      "Health insurance: Available for full-time international students sponsored by Khalifa University",
+      "Other benefits: Textbooks are provided by the university under listed scholarship tiers",
+      "Visa/residence support: Coverage of UAE visa application fees may be provided for full-time international students",
+      "Application fee: 200 AED including VAT for postgraduate admissions (as listed on KU postgraduate admissions page)",
+    ],
+
+    applicationProcess: [
+      "Where to apply: Submit via Khalifa University postgraduate admissions portal",
+      "Program choice: Select one graduate program per semester and confirm entry requirements",
+      "Profile and referees: Complete application sections and add two referees in the online system",
+      "Documents and fee: Upload required files and complete application fee payment",
+      "Assessment: Complete interview and other evaluation steps if shortlisted",
+      "Decision: Monitor portal/email for final decision; KU states admitted applicants are normally notified within about eight weeks after deadline",
+    ],
+
+    documents: [
+      "Bachelor's degree certificate and transcript",
+      "Equivalency/recognition documents for qualifications from outside the UAE (as applicable)",
+      "English proficiency certificate (TOEFL/IELTS/EmSAT as applicable)",
+      "Detailed CV",
+      "Statement of purpose (500-1000 words)",
+      "Passport-style photo",
+      "Valid passport copy",
+      "UAE visa and Emirates ID for current UAE residents (if applicable)",
+      "Two recommendation letters submitted via KU's online reference process",
+    ],
+
+    goodToKnow: [
+      "KU states postgraduate scholarship slots are limited and scholarship tiering is competitive.",
+      "There is no separate scholarship application for master's; scholarship assessment is integrated with admission.",
+      "Meeting minimum admission criteria does not guarantee scholarship award.",
+    ],
+
+    faqs: [
+      {
+        question: "Is Khalifa University master's scholarship fully funded for everyone?",
+        answer:
+          "No. The master's scholarship model is tier-based, and coverage may range from partial to full tuition waiver depending on assigned tier.",
+      },
+      {
+        question: "Do I submit a separate scholarship form for master's study?",
+        answer:
+          "No. KU states scholarship eligibility is assessed within the admission application.",
+      },
+      {
+        question: "Is GRE mandatory for master's admission at KU?",
+        answer:
+          "KU's graduate FAQ specifies GRE is mandatory for Direct PhD applicants; master's requirements should be confirmed on the current program/admissions pages.",
+      },
+      {
+        question: "Is there a monthly stipend for master's students?",
+        answer:
+          "KU's scholarship FAQ states no standard monthly stipend for master's, though service-based compensation opportunities may exist.",
+      },
+    ],
+
+    applyUrl: "https://www.ku.ac.ae/postgraduate-admissions",
+    officialSource: "Khalifa University Postgraduate Admissions and Scholarship FAQs",
+
+    lastUpdated: "2026-02-17",
+  },
+
+  {
+    slug: "khalifa-university-scholarship-phd",
+
+    title: "Khalifa University Scholarship",
+    overview:
+      "Khalifa University offers PhD scholarship tiers in the UAE with potential tuition waiver, competitive stipend, and full-time international student support based on scholarship tier and path.",
+    summary:
+      "The Khalifa University Scholarship for PhD study is managed through Khalifa University postgraduate admissions in Abu Dhabi, UAE. Applicants are evaluated for admission and scholarship tier as part of one process, with scholarship availability limited. Official KU scholarship information states that benefits may include tuition waiver up to 100 percent, competitive monthly stipend for high-caliber candidates, and additional support for eligible full-time international students.",
+
+    country: "United Arab Emirates",
+    degreeLevel: "PhD",
+    fundingType: "Partially Funded",
+
+    deadline: "March 2, 2026 (Fall 2026 intake)",
+    duration: "3-4 years (program-dependent)",
+
+    eligibility: [
+      "Eligible nationalities: UAE nationals and international applicants can apply",
+      "Degree level: PhD",
+      "Study location: United Arab Emirates",
+      "Academic background: Regular PhD requires a relevant bachelor's and master's degree",
+      "Admission required: Yes, scholarship is assessed as part of admission",
+      "Minimum GPA/grades: Regular PhD requires master's CGPA 3.25/4.0; Direct PhD requires bachelor's CGPA 3.5/4.0",
+      "Work experience: No universal work-experience requirement is officially stated",
+      "Field of study: Must satisfy requirements of the selected PhD discipline",
+      "Residency requirement: No universal residency requirement is officially stated",
+      "Document language/translations: UAE equivalency/recognition process may apply for international degrees",
+      "Current enrollment status: Final-year postgraduate applicants can apply with current transcripts and expected graduation evidence",
+      "Age limit: No official age limit is specified",
+      "Language requirements: TOEFL iBT 91 or IELTS Academic 6.5, with published exemption pathways subject to approval",
+    ],
+
+    benefits: [
+      "Tuition: Tier-based waiver can be up to 100 percent, with different tuition obligations by tier and study/work-commitment path",
+      "Stipend: Competitive monthly stipend may be provided for high-caliber UAE national and international PhD students",
+      "Accommodation: Free university accommodation may be provided for full-time eligible students",
+      "Travel: Mobilization and demobilization flights may be provided for full-time overseas international students",
+      "Health insurance: Available for full-time international students sponsored by Khalifa University",
+      "Other benefits: Textbooks are provided by the university under listed scholarship tiers",
+      "Visa/residence support: Coverage of UAE visa application fees may be provided for full-time international students",
+      "Application fee: 200 AED including VAT for postgraduate admissions (as listed on KU postgraduate admissions page)",
+    ],
+
+    applicationProcess: [
+      "Where to apply: Submit via Khalifa University postgraduate admissions portal",
+      "Track selection: Choose the appropriate PhD route (regular PhD or Direct PhD, where eligible)",
+      "Profile and referees: Complete the online application and provide referee details for two recommendations",
+      "Documents and fee: Upload required files, including research statement for PhD, and pay the postgraduate application fee",
+      "Selection: Shortlisted applicants are invited for interview before final decisions",
+      "Decision: KU states admitted applicants are normally notified within about eight weeks after deadline",
+    ],
+
+    documents: [
+      "Bachelor's and master's degree certificates/transcripts (as applicable)",
+      "Equivalency/recognition documents for qualifications from outside the UAE (as applicable)",
+      "English proficiency certificate (TOEFL/IELTS/EmSAT as applicable)",
+      "GRE General score report for Direct PhD applicants (minimum quantitative score 150, all sections attempted)",
+      "Detailed CV",
+      "Statement of purpose (500-1000 words)",
+      "Research statement (500-1000 words)",
+      "Passport-style photo",
+      "Valid passport copy",
+      "UAE visa and Emirates ID for current UAE residents (if applicable)",
+      "Two recommendation letters submitted via KU's online reference process",
+    ],
+
+    goodToKnow: [
+      "KU scholarship FAQ indicates PhD scholarship tiers differ by work-commitment path and can change tuition liability.",
+      "Scholarship slots are limited, and meeting minimum admission criteria does not guarantee scholarship award.",
+      "There is no separate scholarship form; your scholarship tier is communicated in the admission offer.",
+    ],
+
+    faqs: [
+      {
+        question: "Is Khalifa University PhD scholarship always fully funded?",
+        answer:
+          "Not always. KU applies tier-based scholarship models, and tuition obligations vary by tier and selected path.",
+      },
+      {
+        question: "Do I need GRE for KU PhD applications?",
+        answer:
+          "KU states GRE (minimum quantitative 150, with all sections attempted) is required for Direct PhD applicants.",
+      },
+      {
+        question: "Is there a stipend for PhD students?",
+        answer:
+          "KU states competitive monthly stipend may be available for high-caliber PhD students, depending on scholarship tier and conditions.",
+      },
+      {
+        question: "Is a separate scholarship application required for PhD?",
+        answer:
+          "No. KU scholarship consideration is integrated into the admission application process.",
+      },
+    ],
+
+    applyUrl: "https://www.ku.ac.ae/postgraduate-admissions",
+    officialSource: "Khalifa University Postgraduate Admissions and Scholarship FAQs",
+
+    lastUpdated: "2026-02-17",
+  },
+
+  {
     slug: "uae-government-scholarship",
 
     title: "UAE Government Scholarship",
