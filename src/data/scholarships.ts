@@ -2461,7 +2461,7 @@ const rawScholarships: Scholarship[] = [
     summary:
       "The Khalifa University Scholarship for Bachelor's study is offered by Khalifa University in Abu Dhabi, United Arab Emirates. It is a merit-based scholarship framework integrated into undergraduate admission, where eligible applicants are mapped to scholarship tiers. Depending on tier and student status, benefits can include full or partial tuition support and additional services, and final benefits are stated in the official admission offer.",
     guideUrl:
-      "https://scholarshipscentral.com/khalifa-university-scholarship-2026-uae-application-guide/",
+      "https://www.scholarshipscentral.com/blog/khalifa-university-scholarship-2026-uae-application-guide",
     guideLabel: "Khalifa University Scholarship 2026 application guide",
 
     country: "United Arab Emirates",
@@ -2563,7 +2563,7 @@ const rawScholarships: Scholarship[] = [
     summary:
       "The Khalifa University Scholarship for master's study is offered through Khalifa University postgraduate admissions in Abu Dhabi, UAE. Scholarship decisions are made during admission and applicants are mapped to tiers based on academic merit and other factors. Published KU scholarship details state that benefits may include tuition waiver up to 100 percent and other support for eligible full-time international students, while availability is limited.",
     guideUrl:
-      "https://scholarshipscentral.com/khalifa-university-scholarship-2026-uae-application-guide/",
+      "https://www.scholarshipscentral.com/blog/khalifa-university-scholarship-2026-uae-application-guide",
     guideLabel: "Khalifa University Scholarship 2026 application guide",
 
     country: "United Arab Emirates",
@@ -2665,7 +2665,7 @@ const rawScholarships: Scholarship[] = [
     summary:
       "The Khalifa University Scholarship for PhD study is managed through Khalifa University postgraduate admissions in Abu Dhabi, UAE. Applicants are evaluated for admission and scholarship tier as part of one process, with scholarship availability limited. Official KU scholarship information states that benefits may include tuition waiver up to 100 percent, competitive monthly stipend for high-caliber candidates, and additional support for eligible full-time international students.",
     guideUrl:
-      "https://scholarshipscentral.com/khalifa-university-scholarship-2026-uae-application-guide/",
+      "https://www.scholarshipscentral.com/blog/khalifa-university-scholarship-2026-uae-application-guide",
     guideLabel: "Khalifa University Scholarship 2026 application guide",
 
     country: "United Arab Emirates",
