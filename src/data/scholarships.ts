@@ -6120,6 +6120,10 @@ const rawScholarships: Scholarship[] = [
     summary:
       "The Heinrich Böll Foundation Scholarship is a funded program offered by the Heinrich Böll Foundation for international students planning to pursue a master's degree at a recognized university in Germany. It supports applicants who combine strong academics with social or political engagement and provides a monthly stipend, possible allowances, and community support. The program aligns with the foundation's focus on environmental sustainability, democracy, human rights, and social justice.",
 
+    guideUrl:
+      "https://www.scholarshipscentral.com/blog/heinrich-boll-foundation-scholarship-2026-guide",
+    guideLabel: "Heinrich BÃ¶ll Foundation Scholarship 2026 guide",
+
     country: "Germany",
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
@@ -6448,6 +6452,208 @@ const rawScholarships: Scholarship[] = [
     officialSource: "Politecnico di Milano",
 
     lastUpdated: "2026-02-06",
+  },
+
+  {
+    slug: "italy-university-of-insubria-scholarship-bachelors",
+
+    title: "University of Insubria Scholarship",
+    overview:
+      "University of Insubria offers right-to-study and scholarship support pathways for bachelor's applicants in Italy, with benefits that can include fee relief and regional financial aid depending on eligibility.",
+    summary:
+      "The University of Insubria Scholarship is an Italy study-support opportunity linked to admission and right-to-study frameworks at the University of Insubria. For bachelor's applicants, scholarship outcomes depend on official calls, eligibility rules, and merit/economic criteria where applicable. Published benefits can vary by scheme and year, so applicants should confirm the latest call details on official university pages before submitting.",
+    guideUrl:
+      "https://www.scholarshipscentral.com/blog/university-of-insubria-scholarship-italy-2026",
+    guideLabel: "University of Insubria Scholarship 2026 guide",
+
+    country: "Italy",
+    degreeLevel: "Bachelors",
+    fundingType: "Partially Funded",
+
+    deadline: "May-June (varies by call each year; confirm official source)",
+    duration: "3 years",
+
+    eligibility: [
+      "Eligible nationalities: International and domestic applicants can apply under the relevant call rules",
+      "Degree level: Bachelor's",
+      "Study location: Italy",
+      "Academic background: Secondary school qualification accepted for admission to the selected program",
+      "Admission required: Scholarship consideration is tied to valid program admission/enrollment status",
+      "Minimum GPA/grades: No universal cutoff is officially stated on this listing; requirements vary by scholarship call",
+      "Work experience: No specific requirement is officially stated",
+      "Field of study: Depends on the selected bachelor's program and active scholarship scheme",
+      "Residency requirement: May vary by call (for example, regional right-to-study rules)",
+      "Document language/translations: Certified translations may be required for non-Italian documents",
+      "Current enrollment status: Applicants must follow the call timeline for first-year or continuing-student status where applicable",
+      "Age limit: No official age limit is specified",
+      "Language requirements: Program language requirements apply (Italian and/or English depending on program)",
+    ],
+
+    benefits: [
+      "Tuition: Partial fee relief or reduction may be available depending on scholarship type and eligibility",
+      "Stipend: Regional or merit-based financial aid may be available; amount varies by call",
+      "Accommodation: Student housing support may be available in selected schemes and is not universally guaranteed",
+      "Travel: No universal travel allowance is officially specified on this listing",
+      "Health insurance: No universal health-insurance scholarship line is officially specified on this listing",
+      "Other benefits: Right-to-study support may include additional services depending on annual rules",
+      "Visa/residence support: No universal visa-fee coverage is officially stated",
+      "Application fee: Not officially specified as a scholarship fee waiver on this listing",
+    ],
+
+    applicationProcess: [
+      "Where to apply: Apply through official University of Insubria admission and scholarship/right-to-study pages",
+      "Program admission: Complete admission steps for the selected bachelor's program",
+      "Call review: Read the active scholarship call and confirm eligibility, deadlines, and document checklist",
+      "Documents: Submit required academic/financial/supporting documents in the format requested by the call",
+      "Selection method: Evaluation method depends on the active scheme (merit, economic criteria, or mixed criteria)",
+      "Final decision/enrollment: Check official publication channels for results and complete any required enrollment confirmations",
+    ],
+
+    documents: [
+      "Valid passport/ID",
+      "Secondary school certificate and transcript",
+      "Program admission/enrollment evidence where required",
+      "Language proficiency evidence if required by program",
+      "Motivation letter or supporting statement if requested",
+      "Financial documents for need-based schemes when applicable",
+      "Certified translations and legalization documents where required",
+    ],
+
+    goodToKnow: [
+      "University scholarship outcomes at Insubria are call-based and can change year to year.",
+      "Applicants should treat third-party summaries as preliminary and rely on official annual call documents for final terms.",
+      "Applying early helps because some support channels require both admission and scholarship deadlines to be met.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the University of Insubria bachelor's scholarship fully funded?",
+        answer:
+          "Not universally. Most support is partial and depends on the active scholarship/right-to-study call and eligibility criteria.",
+      },
+      {
+        question: "Can international students apply?",
+        answer:
+          "Yes, international applicants can apply under the relevant university and scholarship call rules.",
+      },
+      {
+        question: "Is IELTS mandatory?",
+        answer:
+          "Not always. Language proof depends on the chosen degree program and its official admission requirements.",
+      },
+      {
+        question: "Is there one fixed annual deadline?",
+        answer:
+          "Deadlines typically fall around May-June but vary by call and year, so always confirm on official pages.",
+      },
+    ],
+
+    applyUrl:
+      "https://www.uninsubria.it/course-catalogue/opportunities-students/right-study-and-support",
+    officialSource: "University of Insubria - Right to Study and Student Support",
+
+    lastUpdated: "2026-02-17",
+  },
+
+  {
+    slug: "italy-university-of-insubria-scholarship-masters",
+
+    title: "University of Insubria Scholarship",
+    overview:
+      "University of Insubria provides scholarship and right-to-study support routes for master's students in Italy, with benefits depending on annual calls and applicant eligibility.",
+    summary:
+      "The University of Insubria Scholarship for master's study is an admission-linked funding opportunity at the University of Insubria in Italy. The university and related right-to-study frameworks may offer tuition relief and financial support, but packages vary by annual call and applicant profile. Applicants should verify current eligibility, benefit details, and document requirements directly on official pages before applying.",
+    guideUrl:
+      "https://www.scholarshipscentral.com/blog/university-of-insubria-scholarship-italy-2026",
+    guideLabel: "University of Insubria Scholarship 2026 guide",
+
+    country: "Italy",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline: "May-June (varies by call each year; confirm official source)",
+    duration: "2 years",
+
+    eligibility: [
+      "Eligible nationalities: International and domestic applicants can apply under the relevant call rules",
+      "Degree level: Master's",
+      "Study location: Italy",
+      "Academic background: Bachelor's degree (or equivalent) relevant to the selected master's program",
+      "Admission required: Scholarship consideration is tied to valid program admission/enrollment status",
+      "Minimum GPA/grades: No universal cutoff is officially stated on this listing; requirements vary by scholarship call",
+      "Work experience: No universal requirement is officially stated",
+      "Field of study: Depends on selected master's program and active scholarship scheme",
+      "Residency requirement: May vary by call (for example, regional right-to-study rules)",
+      "Document language/translations: Certified translations may be required for non-Italian documents",
+      "Current enrollment status: Call rules define whether first-year and continuing students are eligible",
+      "Age limit: No official age limit is specified",
+      "Language requirements: Program language requirements apply (Italian and/or English depending on program)",
+    ],
+
+    benefits: [
+      "Tuition: Partial fee relief or reduction may be available depending on scholarship type and eligibility",
+      "Stipend: Regional or merit-based financial aid may be available; amount varies by call",
+      "Accommodation: Student housing support may be available in selected schemes and is not universally guaranteed",
+      "Travel: No universal travel allowance is officially specified on this listing",
+      "Health insurance: No universal health-insurance scholarship line is officially specified on this listing",
+      "Other benefits: Right-to-study support may include additional services depending on annual rules",
+      "Visa/residence support: No universal visa-fee coverage is officially stated",
+      "Application fee: Not officially specified as a scholarship fee waiver on this listing",
+    ],
+
+    applicationProcess: [
+      "Where to apply: Apply through official University of Insubria admission and scholarship/right-to-study pages",
+      "Program admission: Complete admission steps for the selected master's program",
+      "Call review: Read the active scholarship call and confirm eligibility, deadlines, and document checklist",
+      "Documents: Submit required academic/financial/supporting documents in the format requested by the call",
+      "Selection method: Evaluation method depends on the active scheme (merit, economic criteria, or mixed criteria)",
+      "Final decision/enrollment: Check official publication channels for results and complete any required enrollment confirmations",
+    ],
+
+    documents: [
+      "Valid passport/ID",
+      "Bachelor's degree certificate and transcript",
+      "Program admission/enrollment evidence where required",
+      "Language proficiency evidence if required by program",
+      "Motivation letter or supporting statement if requested",
+      "Financial documents for need-based schemes when applicable",
+      "Certified translations and legalization documents where required",
+    ],
+
+    goodToKnow: [
+      "University scholarship outcomes at Insubria are call-based and can change year to year.",
+      "Applicants should rely on official call documents for exact terms, amounts, and deadlines.",
+      "Master's applicants should align program admission timing with scholarship deadlines to avoid missing eligibility windows.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the University of Insubria master's scholarship fully funded?",
+        answer:
+          "Usually it is partial support, and the exact funding package depends on the active call and eligibility assessment.",
+      },
+      {
+        question: "Can international students apply?",
+        answer:
+          "Yes, international applicants can apply under the relevant university and scholarship call rules.",
+      },
+      {
+        question: "Is IELTS mandatory?",
+        answer:
+          "Not always. Language proof requirements depend on the specific master's program.",
+      },
+      {
+        question: "When should I apply?",
+        answer:
+          "Many calls are published around May-June, but deadlines vary; always verify exact dates on official pages.",
+      },
+    ],
+
+    applyUrl:
+      "https://www.uninsubria.it/course-catalogue/opportunities-students/right-study-and-support",
+    officialSource: "University of Insubria - Right to Study and Student Support",
+
+    lastUpdated: "2026-02-17",
   },
 
   {
