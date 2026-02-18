@@ -6657,6 +6657,105 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "italy-university-of-tuscia-scholarship-masters",
+
+    title: "University of Tuscia Scholarship",
+    overview:
+      "University of Tuscia provides call-based scholarship opportunities for international master's students in Italy, with benefits and eligibility varying by official annual notices.",
+    summary:
+      "The University of Tuscia Scholarship is an Italy master's funding opportunity linked to official University of Tuscia calls and admission rules. It is not a single guaranteed package for every applicant, and scholarship terms vary by year, program, and eligibility criteria. Applicants should use the official university scholarship and program pages to confirm deadlines, required documents, language requirements, and exact funding coverage before submission.",
+
+    country: "Italy",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline: "Varies by annual call (often in late spring/summer; confirm official source)",
+    duration: "2 years",
+
+    eligibility: [
+      "Eligible nationalities: International and domestic applicants can apply under published call rules",
+      "Degree level: Master's",
+      "Study location: Italy",
+      "Academic background: Bachelor's degree (or equivalent) relevant to the selected master's program",
+      "Admission required: Scholarship assessment is linked to valid admission/enrollment status",
+      "Minimum GPA/grades: No universal minimum is officially stated on this listing; requirements vary by call",
+      "Work experience: No specific requirement is officially stated as a universal rule",
+      "Field of study: Must match an active master's program covered by the relevant call",
+      "Residency requirement: May vary by scholarship type and call conditions",
+      "Document language/translations: Certified translations/legalization may be required for non-Italian documents",
+      "Current enrollment status: Determined by the active call (first-year or continuing status where applicable)",
+      "Age limit: No official age limit is specified",
+      "Language requirements: Program-level Italian/English requirements apply; always confirm on official program pages",
+    ],
+
+    benefits: [
+      "Tuition: Fee reduction/waiver may be available depending on the scholarship call and eligibility",
+      "Stipend: Financial support may be available in selected calls; amount varies by call",
+      "Accommodation: Housing support may be available in selected schemes and is not universally guaranteed",
+      "Travel: No universal travel-ticket benefit is officially stated as a standard package",
+      "Health insurance: No universal health-insurance scholarship package is officially stated on this listing",
+      "Other benefits: Additional right-to-study or student-support services may apply depending on annual rules",
+      "Visa/residence support: No universal visa-fee coverage is officially stated",
+      "Application fee: No universal scholarship application-fee waiver is officially stated; verify in current call",
+    ],
+
+    applicationProcess: [
+      "Where to apply: Use official University of Tuscia scholarship and admission pages",
+      "Program selection: Choose an eligible master's program and confirm admission criteria",
+      "Call review: Read the latest scholarship call notice and confirm eligibility and deadlines",
+      "Document preparation: Prepare academic, language, and supporting documents exactly as requested",
+      "Submission: Complete application steps through official university/portal channels before the call deadline",
+      "Results and enrollment: Follow official publication channels for ranking/results and complete enrollment actions on time",
+    ],
+
+    documents: [
+      "Valid passport/ID",
+      "Bachelor's degree certificate and academic transcripts",
+      "CV (Europass format where requested)",
+      "Statement of purpose/motivation letter (if requested)",
+      "Recommendation letter(s) if required by the call",
+      "Language proficiency evidence required by the selected program",
+      "Certified translations/legalization documents where required",
+    ],
+
+    goodToKnow: [
+      "University of Tuscia scholarship conditions are call-based, so funding details can change each intake.",
+      "Avoid blanket claims such as guaranteed fully funded packages unless the current official call explicitly states them.",
+      "Always match scholarship timelines with program admission timelines to avoid missing eligibility windows.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the University of Tuscia scholarship fully funded for all students?",
+        answer:
+          "Not universally. Funding is call-based and often partial, with benefits varying by call and eligibility profile.",
+      },
+      {
+        question: "Do I need IELTS to apply?",
+        answer:
+          "Not in every case. Language requirements depend on the selected program and official admission rules.",
+      },
+      {
+        question: "Is there one fixed annual deadline such as 12 June?",
+        answer:
+          "There is no single permanent deadline for all calls. Check the latest official notice for exact dates.",
+      },
+      {
+        question: "Can international students apply for University of Tuscia scholarships?",
+        answer:
+          "Yes. International applicants can apply when they meet the relevant call and admission requirements.",
+      },
+    ],
+
+    applyUrl:
+      "https://www.unitus.it/en/international/borse-di-studio-international-students/",
+    officialSource:
+      "University of Tuscia - International Scholarships and Second-Cycle Programs",
+
+    lastUpdated: "2026-02-18",
+  },
+
+  {
     slug: "spain-la-caixa-foundation-scholarship",
 
     title: "Spain La Caixa Foundation Scholarship",
