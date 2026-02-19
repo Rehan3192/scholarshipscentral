@@ -6664,6 +6664,9 @@ const rawScholarships: Scholarship[] = [
       "University of Tuscia provides call-based scholarship opportunities for international master's students in Italy, with benefits and eligibility varying by official annual notices.",
     summary:
       "The University of Tuscia Scholarship is an Italy master's funding opportunity linked to official University of Tuscia calls and admission rules. It is not a single guaranteed package for every applicant, and scholarship terms vary by year, program, and eligibility criteria. Applicants should use the official university scholarship and program pages to confirm deadlines, required documents, language requirements, and exact funding coverage before submission.",
+    guideUrl:
+      "https://www.scholarshipscentral.com/blog/university-of-tuscia-scholarship-italy",
+    guideLabel: "University of Tuscia Scholarship Italy guide",
 
     country: "Italy",
     degreeLevel: "Masters",
@@ -6752,7 +6755,7 @@ const rawScholarships: Scholarship[] = [
     officialSource:
       "University of Tuscia - International Scholarships and Second-Cycle Programs",
 
-    lastUpdated: "2026-02-18",
+    lastUpdated: "2026-02-19",
   },
 
   {
