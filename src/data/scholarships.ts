@@ -1520,35 +1520,96 @@ const rawScholarships: Scholarship[] = [
 
     title: "Australia Awards Scholarship",
     overview:
-      "Australian government scholarship for developing countries.",
+      "Long-term Australian Government scholarship for eligible applicants from participating countries to study in Australia.",
+    summary:
+      "Australia Awards Scholarships are funded by the Australian Government Department of Foreign Affairs and Trade (DFAT) to support applicants from participating countries. For this listing, the scholarship is presented for master's-level study in Australia, while the overall program can include other long-term study levels depending on country profiles. The award is designed to build development-relevant skills and typically covers major study costs for selected candidates.",
 
     country: "Australia",
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
 
-    deadline: "April",
-    duration: "2 years",
+    deadline:
+      "30 April 2026, 2:00 PM AEST (for most 2027 intake awards; always confirm your country profile)",
+    duration:
+      "For the minimum period needed to complete the academic program (including preparatory training where applicable)",
 
     eligibility: [
-      "TODO",
+      "Eligible nationalities: Citizens of participating countries only (check your country profile)",
+      "Degree level: Postgraduate eligibility for this listing (master's), subject to country-specific rules",
+      "Citizenship/residency: You must apply from your country of citizenship unless an approved exception applies",
+      "Age requirement: At least 18 years old on 1 February of the year you start the scholarship",
+      "Academic requirement: Must meet admission requirements for the chosen Australian institution and program",
+      "Visa requirement: Must satisfy Australian student visa requirements",
+      "Relationship restriction: Must not be married, engaged, or in a de facto relationship with a person who holds or is eligible to hold Australian or New Zealand citizenship/permanent residency during key award stages",
+      "Military restriction: Must not be current serving military personnel",
+      "Country criteria: Must meet any additional requirements published in your country profile",
+      "Language requirement: English requirements are set by institutions/country profiles; no single universal waiver is officially stated",
     ],
 
     benefits: [
-      "TODO",
+      "Full tuition fees",
+      "Return air travel",
+      "Establishment allowance on arrival",
+      "Contribution to Living Expenses (CLE)",
+      "Introductory Academic Program (IAP)",
+      "Overseas Student Health Cover (OSHC) for the award duration",
+      "Pre-course English (PCE), where required",
+      "Additional academic support where required",
     ],
 
     applicationProcess: [
-      "TODO",
+      "Check your participating-country profile and confirm opening/closing dates and eligibility",
+      "Choose an eligible program and confirm admission requirements at Australian institutions",
+      "Submit the scholarship application via OASIS or the method listed for your country profile",
+      "Upload all required supporting documents before the deadline",
+      "Complete interview/selection steps if shortlisted",
+      "If selected, complete institution admission and visa requirements before mobilization",
     ],
 
     documents: [
-      "TODO",
+      "Passport or national ID (proof of citizenship)",
+      "Academic transcripts and graduation certificates",
+      "Curriculum vitae (CV)",
+      "Referee/recommendation documents as requested",
+      "English language evidence where required",
+      "Any country-profile-specific forms or declarations",
+      "Other supporting documents requested in the official application guidance",
     ],
 
-    applyUrl: "https://www.dfat.gov.au",
-    officialSource: "Australian Government",
+    goodToKnow: [
+      "Australia Awards is not open to all international applicants; eligibility is limited to participating countries.",
+      "Award conditions and application routes can vary by country profile, so always follow your country page first.",
+      "The 2027 intake page lists 1 February 2026 opening and 30 April 2026 closing for most countries.",
+    ],
 
-    lastUpdated: "2026-02-06",
+    faqs: [
+      {
+        question: "Is Australia Awards Scholarship fully funded?",
+        answer:
+          "It is generally treated as fully funded because key costs like tuition, travel, and living support are included for selected awardees.",
+      },
+      {
+        question: "Can any international student apply?",
+        answer:
+          "No. You must be from a participating country and meet all country-specific and program requirements.",
+      },
+      {
+        question: "Is IELTS mandatory?",
+        answer:
+          "English requirements depend on institution and country-profile rules. There is no single universal exemption for all applicants.",
+      },
+      {
+        question: "What is the latest deadline for the 2027 intake?",
+        answer:
+          "For most participating countries, applications close on 30 April 2026 at 2:00 PM AEST. Always verify on your country profile.",
+      },
+    ],
+
+    applyUrl: "https://www.australiaawards.gov.au/scholarships/apply",
+    officialSource:
+      "Australian Government Department of Foreign Affairs and Trade (Australia Awards)",
+
+    lastUpdated: "2026-02-20",
   },
 
   {
