@@ -7540,6 +7540,183 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "canada-university-of-winnipeg-president-scholarship-bachelors",
+
+    title: "University of Winnipeg President's Scholarship for World Leaders",
+    overview:
+      "Entrance scholarship for international students starting undergraduate study at the University of Winnipeg.",
+    summary:
+      "The University of Winnipeg President's Scholarship for World Leaders is an application-based entrance scholarship for international students entering UWinnipeg for the first time. For undergraduate applicants, the 2026-27 awards table lists a C$5,000 value with multiple term-based deadlines and a leadership-focused selection process. Applicants must complete admission first and then submit the scholarship web application with required supporting documents.",
+
+    country: "Canada",
+    degreeLevel: "Bachelors",
+    fundingType: "Partially Funded",
+
+    deadline:
+      "June 1, 2026 (Fall 2026 undergraduate intake; Winter 2027 deadline is October 1, 2026)",
+    duration: "One-time entrance scholarship",
+
+    eligibility: [
+      "Eligible nationalities: International applicants only",
+      "Degree level: Undergraduate (first program at UWinnipeg)",
+      "Study location: Canada",
+      "Academic background: Equivalent of Canadian 80% average based on Grade 12 admission courses",
+      "Admission required: Yes, a complete UWinnipeg admission application is required by scholarship deadline",
+      "Leadership profile: Must demonstrate exceptional leadership qualities through extracurricular/community involvement",
+      "Enrollment status: Must be entering the first program at UWinnipeg and maintain full-time course load",
+      "Language requirements: Must meet UWinnipeg admission language requirements for the selected program",
+    ],
+
+    benefits: [
+      "Tuition support: C$5,000 entrance award (undergraduate division value in 2026-27 table)",
+      "Stipend: No monthly stipend is listed for this award",
+      "Accommodation: No automatic housing benefit is listed for this award",
+      "Travel: No airfare benefit is listed for this award",
+      "Other benefits: Leadership-focused recognition award for first-time international entrants",
+    ],
+
+    applicationProcess: [
+      "Where to apply: Use UWinnipeg Awards and Financial Aid international students scholarship page",
+      "Admission first: Submit complete UWinnipeg admission application and obtain valid student ID number",
+      "Scholarship form: Complete the President's Scholarship web application form",
+      "Documents: Upload personal statement, CV/resume, and two reference letters",
+      "Submission: Submit before the active term deadline (June 1, 2026 for Fall 2026)",
+      "Final decision: Monitor official university communication for results and next steps",
+    ],
+
+    documents: [
+      "Personal statement",
+      "CV/Resume",
+      "Two reference letters",
+      "Admission application materials required by UWinnipeg",
+      "Certified English translations when source documents are in another language",
+    ],
+
+    goodToKnow: [
+      "The President's Scholarship for World Leaders cannot be held together with UWinnipeg's International Special Entrance Scholarship.",
+      "Deadlines are term-based and may be adjusted to align with International Admissions timelines.",
+      "Only complete admission and scholarship packages are reviewed.",
+    ],
+
+    faqs: [
+      {
+        question: "Is this a fully funded scholarship?",
+        answer:
+          "No. It is a one-time C$5,000 entrance scholarship and is best treated as partially funded support.",
+      },
+      {
+        question: "Can domestic Canadian students apply?",
+        answer:
+          "This specific scholarship is for international students entering UWinnipeg for the first time.",
+      },
+      {
+        question: "Do I need a separate scholarship form?",
+        answer:
+          "Yes. UWinnipeg requires the President's Scholarship web application in addition to admission.",
+      },
+      {
+        question: "What is the current open deadline?",
+        answer:
+          "For the undergraduate Fall 2026 cycle, the published deadline is June 1, 2026.",
+      },
+    ],
+
+    applyUrl:
+      "https://www.uwinnipeg.ca/awards/awards-bursaries-and-scholarships/international-students.html",
+    officialSource: "University of Winnipeg Awards and Financial Aid",
+
+    lastUpdated: "2026-02-21",
+  },
+
+  {
+    slug: "canada-university-of-winnipeg-president-scholarship-masters",
+
+    title: "University of Winnipeg President's Scholarship for World Leaders",
+    overview:
+      "Graduate entrance scholarship for international students beginning a University of Winnipeg graduate program.",
+    summary:
+      "The University of Winnipeg President's Scholarship for World Leaders (Graduate) supports international students entering a UWinnipeg graduate program for the first time. The official graduate scholarship page lists a C$5,000 value, leadership-based selection criteria, and a June 1 annual deadline. Qualifying year and Pre-Masters applicants are explicitly excluded on the official graduate scholarship page.",
+
+    country: "Canada",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline: "June 1, 2026 (graduate Fall/Winter intake cycle)",
+    duration: "One-time entrance scholarship",
+
+    eligibility: [
+      "Eligible nationalities: International applicants only",
+      "Degree level: Graduate entry (master's-level listing)",
+      "Study location: Canada",
+      "Academic background: Minimum 80% admission average (or equivalent) for graduate entry",
+      "Admission required: Must complete UWinnipeg graduate admission application by scholarship deadline",
+      "Program entry status: Entering first year of a graduate program",
+      "Leadership profile: Must demonstrate exceptional leadership qualities",
+      "Exclusion rule: Qualifying year and Pre-Masters students do not qualify",
+    ],
+
+    benefits: [
+      "Tuition support: C$5,000 scholarship value for graduate students",
+      "Stipend: No monthly stipend is listed on the official graduate scholarship page",
+      "Accommodation: No automatic housing benefit is listed for this scholarship",
+      "Travel: No airfare benefit is listed for this scholarship",
+      "Other benefits: Merit and leadership-based entrance recognition at graduate level",
+    ],
+
+    applicationProcess: [
+      "Where to apply: Use the UWinnipeg graduate scholarship page and Awards Office application link",
+      "Admission first: Complete application for admission to a UWinnipeg graduate program",
+      "Scholarship package: Submit completed application form plus required supporting files",
+      "Documents: Include a 250-500 word personal statement, CV, and two references on leadership/extracurricular activity",
+      "Submission deadline: Submit by June 1",
+      "Final decision: Track official updates from the university after submission",
+    ],
+
+    documents: [
+      "Completed scholarship application form",
+      "Personal statement (250-500 words)",
+      "CV/Resume",
+      "Two references addressing extracurricular/volunteer leadership",
+      "Complete UWinnipeg graduate admission application materials",
+    ],
+
+    goodToKnow: [
+      "This scholarship is separate from program admission and requires its own application package.",
+      "Only international students entering a graduate program for the first time are eligible.",
+      "The official graduate page uses a single annual June 1 deadline for this scholarship.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the UWinnipeg President's Scholarship fully funded for graduate students?",
+        answer:
+          "No. The published value is C$5,000, so it is partial funding rather than full-cost coverage.",
+      },
+      {
+        question: "Who is not eligible under the graduate rules?",
+        answer:
+          "Qualifying year and Pre-Masters students are explicitly listed as not eligible.",
+      },
+      {
+        question: "Do I need leadership evidence?",
+        answer:
+          "Yes. The scholarship criteria require demonstrated exceptional leadership qualities.",
+      },
+      {
+        question: "What is the deadline?",
+        answer:
+          "The official graduate scholarship page lists June 1 as the deadline.",
+      },
+    ],
+
+    applyUrl:
+      "https://www.uwinnipeg.ca/graduate-studies/funding/presidents-scholarship-for-world-leaders-international.html",
+    officialSource: "University of Winnipeg Graduate Studies",
+
+    lastUpdated: "2026-02-21",
+  },
+
+  {
     slug: "usa-knight-hennessy-scholars",
 
     title: "USA Knight-Hennessy Scholars",
