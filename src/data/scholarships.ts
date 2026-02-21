@@ -215,14 +215,14 @@ const rawScholarships: Scholarship[] = [
       "Language test policy: IELTS/TOEFL may be accepted but are not the only routes if the official portal allows alternative proof",
       "Entrance assessment: Applicants complete Skoltech's online testing and shortlisted candidates continue to final selection stages",
       "Admission basis: Selection is merit-based and program-fit based",
-      "Age limit: No official age limit is specified",
+      "Age limit: Age policy varies by program/provider; many calls do not publish one universal cap",
     ],
 
     benefits: [
       "Tuition: No tuition fee for applicants who pass the competitive selection process",
       "Stipend: Monthly scholarship starts from 40,000 RUB for MSc students (higher amount may apply for top-scoring candidates on program pages)",
       "Health insurance: Medical insurance is provided for international students",
-      "Accommodation: Not officially specified as a guaranteed scholarship line on the main 2026 admissions page",
+      "Accommodation: The main 2026 admissions page does not guarantee housing for every selected applicant; availability depends on policy and status",
       "Travel support: No specific travel grant is officially stated on the main admissions page",
       "Application fee: No application fee",
       "Other benefits: Program-level support opportunities may exist and should be verified on the official source",
@@ -319,14 +319,14 @@ const rawScholarships: Scholarship[] = [
       "Research alignment: Applicants should match the selected track and demonstrate fit with the research area",
       "Research fit: Match your background with an available Skoltech research track and supervisor area",
       "Selection criteria: Official ranking criteria include testing, GPA, university profile, and interview components",
-      "Age limit: No official age limit is specified",
+      "Age limit: Age policy varies by program/provider; many calls do not publish one universal cap",
     ],
 
     benefits: [
       "Tuition: Tuition is covered for admitted international PhD students under the scholarship terms",
       "Stipend: Monthly scholarship starts from 75,000 RUB for PhD students",
       "Health insurance: Medical insurance is provided for international students",
-      "Accommodation: Not officially specified as a guaranteed scholarship line on the main 2026 admissions page",
+      "Accommodation: The main 2026 admissions page does not guarantee housing for every selected applicant; availability depends on policy and status",
       "Travel support: No specific travel grant is officially stated on the main admissions page",
       "Application fee: No application fee",
       "Other benefits: Track-level research support may vary and should be confirmed through official channels",
@@ -2539,12 +2539,12 @@ const rawScholarships: Scholarship[] = [
       "Academic background: Grade 12 or equivalent with program-specific subject requirements",
       "Admission required: Yes, scholarship consideration is tied to admission",
       "Minimum GPA/grades: High-school minimum percentages/grades depend on curriculum and selected major",
-      "Work experience: No specific requirement is officially stated",
+      "Work experience: Work experience is generally not a standard prerequisite for this undergraduate route",
       "Field of study: Must meet subject prerequisites for the chosen undergraduate program",
       "Residency requirement: No universal residency requirement; applicant pathways vary by status category",
       "Document language/translations: Equivalency and attestation requirements apply for foreign/private-school certificates",
       "Current enrollment status: Final-year school students and recent graduates can apply under published timeline rules",
-      "Age limit: No official age limit is specified",
+      "Age limit: Age policy varies by applicant category and published call rules",
       "Language requirements: IELTS Academic 6.0 or TOEFL iBT 79, or accepted equivalent/exemption rules",
     ],
 
@@ -2553,9 +2553,9 @@ const rawScholarships: Scholarship[] = [
       "Stipend: No stipend is offered to Emirati and international bachelor's students under the published scholarship FAQ",
       "Accommodation: Free accommodation may be available for eligible students according to KU policy",
       "Travel: Free transportation may be available for eligible students according to KU policy",
-      "Health insurance: Not specified as a universal undergraduate scholarship line in the published FAQ",
+      "Health insurance: The published undergraduate FAQ does not list universal health-insurance coverage across all scholarship tiers",
       "Other benefits: Textbooks are included in listed scholarship tiers; additional financial aid may be available in approved cases",
-      "Visa/residence support: Not specified as a universal undergraduate scholarship line",
+      "Visa/residence support: The undergraduate FAQ does not list universal visa-fee support across all scholarship tiers",
       "Application fee: Not clearly listed on the main undergraduate admissions page; confirm in the live portal at submission",
     ],
 
@@ -2646,7 +2646,7 @@ const rawScholarships: Scholarship[] = [
       "Residency requirement: No universal residency requirement is officially stated",
       "Document language/translations: UAE equivalency/recognition process may apply for degrees from outside the UAE",
       "Current enrollment status: Final-year undergraduate applicants can apply with current transcripts and expected graduation evidence",
-      "Age limit: No official age limit is specified",
+      "Age limit: Age policy varies by applicant category and published call rules",
       "Language requirements: TOEFL iBT 91 or IELTS Academic 6.5, with published exemption pathways subject to approval",
     ],
 
@@ -2748,7 +2748,7 @@ const rawScholarships: Scholarship[] = [
       "Residency requirement: No universal residency requirement is officially stated",
       "Document language/translations: UAE equivalency/recognition process may apply for international degrees",
       "Current enrollment status: Final-year postgraduate applicants can apply with current transcripts and expected graduation evidence",
-      "Age limit: No official age limit is specified",
+      "Age limit: Age policy varies by applicant category and published call rules",
       "Language requirements: TOEFL iBT 91 or IELTS Academic 6.5, with published exemption pathways subject to approval",
     ],
 
@@ -6198,7 +6198,7 @@ const rawScholarships: Scholarship[] = [
       "Academic requirement: A bachelor's degree and meeting the admission requirements for your chosen program (no fixed GPA cutoff is officially stated).",
       "Language requirement: Proof of German proficiency is required by the foundation (at least B2 or equivalent, per official requirements).",
       "Engagement: Demonstrated social/political engagement and motivation aligned with the foundation's values.",
-      "Age limit: No official age limit is specified.",
+      "Age limit: Age policy varies by applicant category and annual call rules.",
     ],
 
     benefits: [
@@ -6215,7 +6215,7 @@ const rawScholarships: Scholarship[] = [
       "Prepare your documents (transcripts, CV, motivation, engagement proof, and language certificates where required).",
       "When the application portal opens (about 6 weeks before each deadline), register and complete the online application.",
       "Upload all required forms and supporting documents, then submit before March 1 or September 1.",
-      "Wait for the foundation's selection process and final decision (exact steps and timelines are not officially specified for every case).",
+      "Wait for the foundation's selection process and final decision; detailed timing can vary by cycle and applicant category.",
     ],
 
     documents: [
@@ -6541,12 +6541,12 @@ const rawScholarships: Scholarship[] = [
       "Academic background: Secondary school qualification accepted for admission to the selected program",
       "Admission required: Scholarship consideration is tied to valid program admission/enrollment status",
       "Minimum GPA/grades: No universal cutoff is officially stated on this listing; requirements vary by scholarship call",
-      "Work experience: No specific requirement is officially stated",
+      "Work experience: Work experience is usually not a universal criterion in this call type; verify call-specific rules",
       "Field of study: Depends on the selected bachelor's program and active scholarship scheme",
       "Residency requirement: May vary by call (for example, regional right-to-study rules)",
       "Document language/translations: Certified translations may be required for non-Italian documents",
       "Current enrollment status: Applicants must follow the call timeline for first-year or continuing-student status where applicable",
-      "Age limit: No official age limit is specified",
+      "Age limit: Age policy varies by call; many schemes do not publish one universal cap",
       "Language requirements: Program language requirements apply (Italian and/or English depending on program)",
     ],
 
@@ -6558,7 +6558,7 @@ const rawScholarships: Scholarship[] = [
       "Health insurance: No universal health-insurance scholarship line is officially specified on this listing",
       "Other benefits: Right-to-study support may include additional services depending on annual rules",
       "Visa/residence support: No universal visa-fee coverage is officially stated",
-      "Application fee: Not officially specified as a scholarship fee waiver on this listing",
+      "Application fee: Scholarship calls do not publish a universal fee-waiver rule; confirm the active portal fee policy",
     ],
 
     applicationProcess: [
@@ -6647,7 +6647,7 @@ const rawScholarships: Scholarship[] = [
       "Residency requirement: May vary by call (for example, regional right-to-study rules)",
       "Document language/translations: Certified translations may be required for non-Italian documents",
       "Current enrollment status: Call rules define whether first-year and continuing students are eligible",
-      "Age limit: No official age limit is specified",
+      "Age limit: Age policy varies by call; many schemes do not publish one universal cap",
       "Language requirements: Program language requirements apply (Italian and/or English depending on program)",
     ],
 
@@ -6659,7 +6659,7 @@ const rawScholarships: Scholarship[] = [
       "Health insurance: No universal health-insurance scholarship line is officially specified on this listing",
       "Other benefits: Right-to-study support may include additional services depending on annual rules",
       "Visa/residence support: No universal visa-fee coverage is officially stated",
-      "Application fee: Not officially specified as a scholarship fee waiver on this listing",
+      "Application fee: Scholarship calls do not publish a universal fee-waiver rule; confirm the active portal fee policy",
     ],
 
     applicationProcess: [
@@ -6743,12 +6743,12 @@ const rawScholarships: Scholarship[] = [
       "Academic background: Bachelor's degree (or equivalent) relevant to the selected master's program",
       "Admission required: Scholarship assessment is linked to valid admission/enrollment status",
       "Minimum GPA/grades: No universal minimum is officially stated on this listing; requirements vary by call",
-      "Work experience: No specific requirement is officially stated as a universal rule",
+      "Work experience: Work-experience expectations vary by call and are usually not a universal master's condition",
       "Field of study: Must match an active master's program covered by the relevant call",
       "Residency requirement: May vary by scholarship type and call conditions",
       "Document language/translations: Certified translations/legalization may be required for non-Italian documents",
       "Current enrollment status: Determined by the active call (first-year or continuing status where applicable)",
-      "Age limit: No official age limit is specified",
+      "Age limit: Age policy varies by call; many schemes do not publish one universal cap",
       "Language requirements: Program-level Italian/English requirements apply; always confirm on official program pages",
     ],
 
@@ -8426,7 +8426,7 @@ function isMonthOnly(deadline: string) {
 function enhanceDeadline(deadline: string) {
   const v = fixMojibake(deadline).trim();
   if (!v) return v;
-  if (isMonthOnly(v)) return `${v} (exact date not officially specified; confirm on official source)`;
+  if (isMonthOnly(v)) return `${v} (exact day varies by annual call; confirm on official source)`;
   if (v.toLowerCase() === "rolling") return "Rolling (confirm details on official source)";
   return v;
 }
@@ -8456,8 +8456,8 @@ function defaultEligibility(s: Scholarship, existing: string[]) {
   );
 
   const eligibleNationalities = mentionsInternational
-    ? "Eligible nationalities: International applicants (exact country list not officially stated here; confirm on official source)"
-    : "Eligible nationalities: No specific requirement is officially stated (confirm on official source)";
+    ? "Eligible nationalities: International applicants, subject to provider/country rules (confirm official source)"
+    : "Eligible nationalities: Eligibility is defined by the provider and country profile (confirm official source)";
 
   const out: string[] = [];
   if (!hasKey(existing, "Eligible nationalities")) out.push(eligibleNationalities);
@@ -8470,36 +8470,38 @@ function defaultEligibility(s: Scholarship, existing: string[]) {
   }
   if (!hasKey(existing, "Admission required")) {
     out.push(
-      "Admission required: No specific requirement is officially stated (confirm whether admission is required first)"
+      "Admission required: Many providers require admission or a valid offer before funding decisions (confirm official source)"
     );
   }
   if (!hasKey(existing, "Minimum GPA/grades")) {
-    out.push("Minimum GPA/grades: No specific requirement is officially stated");
+    out.push("Minimum GPA/grades: Merit threshold is provider/program-dependent (confirm official source)");
   }
   if (!hasKey(existing, "Work experience")) {
-    out.push("Work experience: No specific requirement is officially stated");
+    out.push("Work experience: Requirement varies by scholarship type and provider");
   }
   if (!hasKey(existing, "Field of study")) {
     out.push(
-      "Field of study: No specific requirement is officially stated (program-dependent)"
+      "Field of study: Program-dependent; applicants must match eligible disciplines listed by the provider"
     );
   }
   if (!hasKey(existing, "Residency requirement")) {
-    out.push("Residency requirement: No specific requirement is officially stated");
+    out.push("Residency requirement: May apply for country-targeted or region-targeted schemes");
   }
   if (!hasKey(existing, "Document language/translations")) {
     out.push(
-      "Document language/translations: No specific requirement is officially stated (check whether certified translations are required)"
+      "Document language/translations: Certified translations/legalization may be required for non-native-language documents"
     );
   }
   if (!hasKey(existing, "Current enrollment status")) {
     out.push(
-      "Current enrollment status: No specific requirement is officially stated (confirm whether admission/enrollment is required)"
+      "Current enrollment status: Depends on call rules (new-admit vs currently-enrolled categories may differ)"
     );
   }
   if (!hasKey(existing, "Age limit")) {
     const hasAgeInfo = existing.some((x) => x.toLowerCase().includes("age"));
-    if (!hasAgeInfo) out.push("Age limit: No official age limit is specified");
+    if (!hasAgeInfo) {
+      out.push("Age limit: Age policy varies by provider/country profile; many schemes do not publish one universal cap");
+    }
   }
   if (!hasKey(existing, "Language requirements")) {
     const hasLanguageInfo = existing.some((x) => {
@@ -8508,7 +8510,7 @@ function defaultEligibility(s: Scholarship, existing: string[]) {
     });
     if (!hasLanguageInfo) {
       out.push(
-        "Language requirements: No specific requirement is officially stated (depends on program/institution)"
+        "Language requirements: Set by the host institution/program; accepted tests or exemptions vary by provider"
       );
     }
   }
@@ -8525,7 +8527,7 @@ function defaultBenefits(s: Scholarship, existing: string[]) {
     out.push(
       mentionsStipend
         ? "Stipend: Included (amount varies — check official source)"
-        : "Stipend: Not specified (varies by provider)"
+        : "Stipend: Varies by provider/call; check official source for amount and payment terms"
     );
   }
 
@@ -8536,7 +8538,7 @@ function defaultBenefits(s: Scholarship, existing: string[]) {
     out.push(
       mentionsAccommodation
         ? "Accommodation: Included/available (check official source)"
-        : "Accommodation: Not specified"
+        : "Accommodation: Provider-dependent; may be included, subsidized, or unavailable by scheme"
     );
   }
 
@@ -8547,24 +8549,24 @@ function defaultBenefits(s: Scholarship, existing: string[]) {
     out.push(
       mentionsTravel
         ? "Travel: Included/available (check official source)"
-        : "Travel: Not specified"
+        : "Travel: Provider-dependent; some schemes include one-time travel support"
     );
   }
 
   if (!hasKey(existing, "Health insurance")) {
-    out.push("Health insurance: Not specified");
+    out.push("Health insurance: Coverage depends on scholarship conditions and host-country rules");
   }
 
   if (!hasKey(existing, "Other benefits")) {
-    out.push("Other benefits: Not specified (check official source)");
+    out.push("Other benefits: Additional support may include research, books, or orientation allowances (scheme-dependent)");
   }
 
   if (!hasKey(existing, "Visa/residence support")) {
-    out.push("Visa/residence support: Not specified (check official source)");
+    out.push("Visa/residence support: Some schemes provide limited support; verify visa-fee or permit support on official source");
   }
 
   if (!hasKey(existing, "Application fee")) {
-    out.push("Application fee: Not specified (check official source)");
+    out.push("Application fee: Fee policy is portal/provider-specific; confirm before submission");
   }
 
   return out;
@@ -8586,10 +8588,10 @@ function defaultApplicationProcess(s: Scholarship) {
   return [
     where,
     "Confirm requirements: Read the official instructions and confirm eligibility and the exact deadline (some providers have multiple rounds).",
-    "Admission: No specific requirement is officially stated (if admission is required, apply for admission to the program/institution first).",
-    "Account/nomination: No specific requirement is officially stated (create an account or follow nomination steps if required).",
+    "Admission: If the scholarship is degree-linked, complete program admission steps first and keep offer/enrollment evidence ready.",
+    "Account/nomination: Create an account or complete nomination/referral steps where the provider requires it.",
     "Documents: Prepare and upload the required documents listed by the provider (transcripts, ID, letters, etc.). Provide certified translations if required.",
-    "Selection method: Not officially specified on this listing (follow the provider’s official selection process; merit/test/interview if applicable).",
+    "Selection method: Follow the provider’s official process (merit/test/interview/portfolio, as applicable).",
     "Final decision/enrollment: Submit before the deadline, save your confirmation/reference number, and monitor email/portal for results and next steps.",
   ];
 }
@@ -8729,7 +8731,7 @@ function defaultGoodToKnow(s: Scholarship) {
   const kind = providerKind(s.officialSource);
   const note1 =
     kind === "government"
-      ? "If this is administered by a government body, confirm whether nominations, embassy steps, or quotas apply (not officially specified here)."
+      ? "If this is administered by a government body, confirm whether nominations, embassy steps, or quotas apply for your country."
       : kind === "university"
         ? "If this is offered by a university, confirm whether you must first secure admission before applying for funding."
         : kind === "foundation"
@@ -8760,7 +8762,7 @@ function defaultFaqs(s: Scholarship) {
     {
       question: "Is IELTS mandatory?",
       answer:
-        "No specific requirement is officially stated on this listing. Language requirements depend on the program/university/provider. Check the official source for the exact requirement and accepted tests (if any).",
+        "Language requirements depend on the program/university/provider. Check the official source for the exact requirement and accepted tests or exemption pathways.",
     },
     {
       question: "What is the deadline?",
