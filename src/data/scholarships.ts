@@ -7717,6 +7717,98 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "usa-karsh-international-scholarship",
+
+    title: "Karsh International Scholarship at Duke University",
+    overview:
+      "Duke University's Karsh International Scholars Program supports selected international first-year undergraduate students with comprehensive funding.",
+    summary:
+      "The Karsh International Scholarship at Duke University is a merit-and-need based undergraduate award for international students entering Duke as first-year applicants. It is administered through Duke's admissions and financial aid processes rather than a separate external portal. For selected scholars, Duke publishes full tuition, room and board, mandatory fees, and additional support based on demonstrated need, plus funding opportunities for approved summer experiences.",
+
+    country: "USA",
+    degreeLevel: "Bachelors",
+    fundingType: "Fully Funded",
+
+    deadline:
+      "November 3, 2026 (Early Decision) or January 5, 2027 (Regular Decision); aid deadlines: November 3, 2026 (ED) and February 1, 2027 (RD)",
+    duration:
+      "Up to 4 years (standard bachelor's duration at Duke, subject to scholarship conditions)",
+
+    eligibility: [
+      "Eligible nationalities: International first-year applicants to Duke undergraduate admission",
+      "Degree level: Bachelor's (first undergraduate degree)",
+      "Study location: United States",
+      "Academic background: Strong secondary-school profile that meets Duke admission standards",
+      "Admission required: Yes, scholarship consideration is tied to Duke admission and financial aid review",
+      "Financial profile: Demonstrated financial need is required under the published Karsh framework",
+      "Citizenship condition: Applicants with dual U.S./other-country citizenship are not eligible under Karsh FAQ guidance",
+      "Prior degree rule: Applicants who already hold a BA/BS are not eligible",
+      "Language requirements: Must satisfy Duke undergraduate English requirements under admissions policy",
+    ],
+
+    benefits: [
+      "Tuition: Full tuition coverage for selected scholars",
+      "Accommodation: Room and board coverage for selected scholars",
+      "Mandatory fees: Covered under scholarship terms for selected scholars",
+      "Need-based support: Demonstrated financial need beyond base costs can be covered under Duke's published program terms",
+      "Summer funding: Three summers of funding for research, unpaid internships, and other approved opportunities",
+    ],
+
+    applicationProcess: [
+      "Where to apply: Apply through Duke first-year undergraduate admissions and financial aid channels",
+      "Admission route: Submit Duke application by Early Decision or Regular Decision deadline",
+      "Aid submission: Complete CSS Profile and other required aid documents by the matching aid deadline",
+      "Checklist completion: Submit all admission and aid checklist items requested in your applicant portal",
+      "Selection method: Duke evaluates admission merit and financial need under official scholarship criteria",
+      "Final decision: Track admissions and aid communications for offer and scholarship-related outcomes",
+    ],
+
+    documents: [
+      "Duke first-year admission application materials",
+      "Secondary-school transcripts and required school reports",
+      "Teacher/counselor recommendations required by admissions",
+      "CSS Profile and required financial aid documents",
+      "Additional financial verification files requested in the portal (if applicable)",
+      "Passport/identity details needed for international admission processing",
+    ],
+
+    goodToKnow: [
+      "Karsh does not use a standalone external application portal; it is integrated with Duke admission and aid review.",
+      "Meeting minimum admission standards does not guarantee Karsh selection because awards are highly competitive.",
+      "Use Duke's live admissions and aid checklist pages each cycle because deadline dates can shift.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the Karsh scholarship fully funded?",
+        answer:
+          "For selected scholars, Duke lists tuition, room and board, mandatory fees, demonstrated-need coverage, and summer funding support.",
+      },
+      {
+        question: "Can any international student apply?",
+        answer:
+          "International first-year applicants can be considered if they meet Duke admission and financial aid requirements.",
+      },
+      {
+        question: "Is there a separate Karsh application form?",
+        answer:
+          "No separate public Karsh form is listed. Applicants apply to Duke and complete required financial aid steps.",
+      },
+      {
+        question: "Which deadline should I follow?",
+        answer:
+          "Follow Duke's first-year admission timeline (Early Decision or Regular Decision) and the matching financial aid deadline.",
+      },
+    ],
+
+    applyUrl:
+      "https://ousf.duke.edu/merit-scholarships/karsh-international-scholars-program/",
+    officialSource: "Duke University Office of University Scholars and Fellows",
+
+    lastUpdated: "2026-02-22",
+  },
+
+  {
     slug: "usa-knight-hennessy-scholars",
 
     title: "USA Knight-Hennessy Scholars",
