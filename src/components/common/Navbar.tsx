@@ -240,7 +240,7 @@ export default function Navbar() {
     <header
       ref={navRef}
       className={[
-        "sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70",
+        "sticky top-0 z-50 border-b border-gray-200 bg-white",
         "transition-transform duration-200 motion-reduce:transition-none",
         isHidden ? "-translate-y-full pointer-events-none" : "translate-y-0",
       ].join(" ")}
@@ -263,7 +263,7 @@ export default function Navbar() {
             <label htmlFor="nav-search" className="sr-only">
               Search scholarships
             </label>
-            <div className="flex w-full items-center gap-1.5 rounded-xl border border-gray-300 bg-white p-0.5 shadow-sm focus-within:ring-2 focus-within:ring-blue-600 focus-within:ring-offset-2 sm:w-auto sm:gap-2 sm:p-1">
+            <div className="flex w-full items-center gap-1.5 rounded-xl border border-gray-300 bg-white p-0.5 focus-within:ring-2 focus-within:ring-blue-600 focus-within:ring-offset-2 sm:w-auto sm:gap-2 sm:p-1">
               <input
                 id="nav-search"
                 name="q"

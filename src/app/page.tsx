@@ -8,9 +8,31 @@ import {
   type WordPressPostListItem,
 } from "@/lib/wordpress";
 
+const BLOG_FETCH_TIMEOUT_MS = 900;
+const BLOG_REVALIDATE_SECONDS = 60 * 60 * 6;
+
 function formatDate(value: string) {
   const iso = value.split("T")[0];
   return iso || value;
+}
+
+async function getHomepageBlogPosts(): Promise<WordPressPostListItem[]> {
+  if (!isWordPressConfigured()) return [];
+
+  try {
+    const postsPromise = getWordPressPosts({
+      perPage: 3,
+      revalidateSeconds: BLOG_REVALIDATE_SECONDS,
+    }).catch(() => []);
+
+    const timeoutPromise = new Promise<WordPressPostListItem[]>((resolve) => {
+      setTimeout(() => resolve([]), BLOG_FETCH_TIMEOUT_MS);
+    });
+
+    return await Promise.race([postsPromise, timeoutPromise]);
+  } catch {
+    return [];
+  }
 }
 
 export default async function HomePage() {
@@ -32,14 +54,7 @@ export default async function HomePage() {
       href: `/countries/${toSegment(country)}`,
     }));
 
-  let blogPosts: WordPressPostListItem[] = [];
-  if (isWordPressConfigured()) {
-    try {
-      blogPosts = await getWordPressPosts({ perPage: 3, revalidateSeconds: 60 * 60 });
-    } catch {
-      blogPosts = [];
-    }
-  }
+  const blogPosts = await getHomepageBlogPosts();
 
   return (
     <div className="py-10 space-y-12">
