@@ -16,17 +16,17 @@ export default function Breadcrumbs({ items }: Props) {
 
   return (
     <nav aria-label="Breadcrumb">
-      <ol className="flex flex-wrap gap-1 text-sm text-gray-600">
+      <ol className="flex min-w-0 flex-wrap gap-1 text-sm text-gray-600">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
 
           return (
-            <li key={item.href} className="flex items-center gap-1">
+            <li key={item.href} className="flex min-w-0 items-center gap-1">
               {!isLast ? (
                 <>
                   <Link
                     href={item.href}
-                    className="hover:underline text-blue-600"
+                    className="min-w-0 break-words text-blue-600 hover:underline"
                   >
                     {item.label}
                   </Link>
@@ -35,7 +35,7 @@ export default function Breadcrumbs({ items }: Props) {
               ) : (
                 <span
                   aria-current="page"
-                  className="font-medium text-gray-800"
+                  className="min-w-0 break-words font-medium text-gray-800"
                 >
                   {item.label}
                 </span>

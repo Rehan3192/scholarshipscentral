@@ -74,7 +74,7 @@ export default function RootLayout({
         ) : null}
       </head>
 
-      <body className="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
+      <body className="min-h-screen bg-gray-50 text-gray-900 flex flex-col overflow-x-clip">
         <OrganizationJsonLd />
         <WebSiteJsonLd />
 
@@ -84,7 +84,7 @@ export default function RootLayout({
         <Navbar />
 
         {/* PAGE CONTENT */}
-        <main className="max-w-6xl mx-auto px-4 py-6 flex-1 w-full">
+        <main className="max-w-6xl mx-auto px-4 py-6 flex-1 w-full min-w-0">
           {children}
         </main>
 

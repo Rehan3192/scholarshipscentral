@@ -47,38 +47,38 @@ export default function ScholarshipHeader({ scholarship }: Props) {
           {scholarship.title}
         </h1>
 
-        <p className="mt-4 mb-0 max-w-3xl text-sm text-gray-700 sm:text-base">
+        <p className="mt-4 mb-0 max-w-3xl break-words text-sm text-gray-700 sm:text-base">
           {summary}
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-2 text-sm">
+        <div className="mt-6 flex min-w-0 flex-wrap gap-2 text-sm">
           <Link
             href={`/countries/${toSegment(scholarship.country)}`}
-            className="rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            className="max-w-full rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
           >
             {scholarship.country}
           </Link>
 
           <Link
             href={`/degrees/${toSegment(scholarship.degreeLevel)}`}
-            className="rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            className="max-w-full rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
           >
             {scholarship.degreeLevel}
           </Link>
 
           <Link
             href={fundingPath(scholarship.fundingType)}
-            className="rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            className="max-w-full rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
           >
             {scholarship.fundingType}
           </Link>
 
-          <span className="rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 font-semibold text-gray-700">
+          <span className="max-w-full break-words rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 font-semibold text-gray-700">
             Deadline: {scholarship.deadline}
           </span>
         </div>
 
-        <p className="mt-4 mb-0 text-xs text-gray-500">
+        <p className="mt-4 mb-0 break-words text-xs text-gray-500">
           Official source:{" "}
           <span className="font-medium text-gray-700">
             {scholarship.officialSource}

@@ -211,7 +211,7 @@ export default async function ScholarshipPage({ params }: Props) {
 
           <SectionCard title="Application process">
             {applicationProcess.length > 0 ? (
-              <ol className="ml-0 list-decimal space-y-2 pl-5 text-sm text-gray-700">
+              <ol className="ml-0 list-decimal space-y-2 pl-5 text-sm text-gray-700 break-words">
                 {applicationProcess.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -225,7 +225,7 @@ export default async function ScholarshipPage({ params }: Props) {
 
           <SectionCard title="Required documents">
             {documents.length > 0 ? (
-              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700">
+              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700 break-words">
                 {documents.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -239,7 +239,7 @@ export default async function ScholarshipPage({ params }: Props) {
 
           {goodToKnow.length > 0 ? (
             <SectionCard title="Good to know">
-              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700">
+              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700 break-words">
                 {goodToKnow.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -258,7 +258,7 @@ export default async function ScholarshipPage({ params }: Props) {
                     <summary className="cursor-pointer list-none text-sm font-semibold text-gray-900">
                       {f.question}
                     </summary>
-                    <p className="mt-3 mb-0 text-sm text-gray-700">
+                    <p className="mt-3 mb-0 break-words text-sm text-gray-700">
                       {f.answer}
                     </p>
                   </details>
@@ -294,7 +294,7 @@ export default async function ScholarshipPage({ params }: Props) {
             <h2 className="mt-0 text-base font-semibold text-gray-900">
               Apply safely
             </h2>
-            <p className="mt-2 text-sm text-gray-700">
+            <p className="mt-2 break-words text-sm text-gray-700">
               Scholarships Central does not accept applications. Apply only on the
               official provider website.
             </p>
@@ -311,7 +311,7 @@ export default async function ScholarshipPage({ params }: Props) {
             {scholarship.guideUrl ? (
               <a
                 href={scholarship.guideUrl}
-                className="mt-3 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                className="mt-3 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-center text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 break-words"
               >
                 Read: {scholarship.guideLabel ?? "Application guide"}
               </a>
@@ -321,7 +321,7 @@ export default async function ScholarshipPage({ params }: Props) {
               href={scholarship.applyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+              className="mt-3 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-center text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 break-words"
             >
               Official source: {scholarship.officialSource}
             </a>
@@ -338,7 +338,7 @@ export default async function ScholarshipPage({ params }: Props) {
             <dl className="mt-4 grid gap-3 text-sm text-gray-700">
               <div className="flex items-start justify-between gap-3">
                 <dt className="font-medium text-gray-600">Country</dt>
-                <dd className="text-right font-semibold text-gray-900">
+                <dd className="break-words text-right font-semibold text-gray-900">
                   <Link
                     href={`/countries/${toSegment(scholarship.country)}`}
                     className="text-blue-700 hover:underline"
@@ -349,7 +349,7 @@ export default async function ScholarshipPage({ params }: Props) {
               </div>
               <div className="flex items-start justify-between gap-3">
                 <dt className="font-medium text-gray-600">Degree</dt>
-                <dd className="text-right font-semibold text-gray-900">
+                <dd className="break-words text-right font-semibold text-gray-900">
                   <Link
                     href={`/degrees/${toSegment(scholarship.degreeLevel)}`}
                     className="text-blue-700 hover:underline"
@@ -360,19 +360,19 @@ export default async function ScholarshipPage({ params }: Props) {
               </div>
               <div className="flex items-start justify-between gap-3">
                 <dt className="font-medium text-gray-600">Funding</dt>
-                <dd className="text-right font-semibold text-gray-900">
+                <dd className="break-words text-right font-semibold text-gray-900">
                   {scholarship.fundingType}
                 </dd>
               </div>
               <div className="flex items-start justify-between gap-3">
                 <dt className="font-medium text-gray-600">Deadline</dt>
-                <dd className="text-right font-semibold text-gray-900">
+                <dd className="break-words text-right font-semibold text-gray-900">
                   {scholarship.deadline}
                 </dd>
               </div>
               <div className="flex items-start justify-between gap-3">
                 <dt className="font-medium text-gray-600">Duration</dt>
-                <dd className="text-right font-semibold text-gray-900">
+                <dd className="break-words text-right font-semibold text-gray-900">
                   {scholarship.duration}
                 </dd>
               </div>
