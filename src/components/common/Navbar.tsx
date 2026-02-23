@@ -31,7 +31,7 @@ function ChevronDownIcon({ className }: { className?: string }) {
 }
 
 const pillClassName =
-  "inline-flex items-center rounded-full border border-gray-300 bg-white px-3 py-1.5 font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2";
+  "inline-flex items-center rounded-full border border-gray-300 bg-white px-2.5 py-1 text-[0.95rem] font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:px-3 sm:py-1.5";
 
 function NavDropdown({
   id,
@@ -246,11 +246,11 @@ export default function Navbar() {
       ].join(" ")}
     >
       <nav
-        className="mx-auto max-w-6xl px-4 py-3"
+        className="mx-auto max-w-6xl px-4 py-2 sm:py-3"
         aria-label="Primary"
       >
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <Link href="/" className="text-lg font-extrabold tracking-tight text-gray-900">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
+          <Link href="/" className="text-base font-extrabold tracking-tight text-gray-900 sm:text-lg">
             Scholarships Central
           </Link>
 
@@ -263,16 +263,16 @@ export default function Navbar() {
             <label htmlFor="nav-search" className="sr-only">
               Search scholarships
             </label>
-            <div className="flex w-full items-center gap-2 rounded-xl border border-gray-300 bg-white p-1 shadow-sm focus-within:ring-2 focus-within:ring-blue-600 focus-within:ring-offset-2 sm:w-auto">
+            <div className="flex w-full items-center gap-1.5 rounded-xl border border-gray-300 bg-white p-0.5 shadow-sm focus-within:ring-2 focus-within:ring-blue-600 focus-within:ring-offset-2 sm:w-auto sm:gap-2 sm:p-1">
               <input
                 id="nav-search"
                 name="q"
                 placeholder="Search scholarships..."
-                className="w-full bg-transparent px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none sm:w-72"
+                className="w-full bg-transparent px-2.5 py-1.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none sm:w-72 sm:px-3 sm:py-2"
               />
               <button
                 type="submit"
-                className="inline-flex shrink-0 items-center rounded-lg bg-gray-900 px-3 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+                className="inline-flex shrink-0 items-center rounded-lg bg-gray-900 px-3 py-1.5 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 sm:py-2"
               >
                 Search
               </button>
@@ -280,7 +280,7 @@ export default function Navbar() {
           </form>
         </div>
 
-        <div className="mt-3 flex flex-wrap items-center gap-2 text-sm text-gray-700">
+        <div className="mt-2 flex flex-wrap items-center gap-1.5 text-sm text-gray-700 sm:mt-3 sm:gap-2">
           <Link
             href="/scholarships"
             className={pillClassName}
