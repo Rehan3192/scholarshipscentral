@@ -8726,6 +8726,91 @@ const rawScholarships: Scholarship[] = [
 
     lastUpdated: "2026-02-06",
   },
+
+  {
+    slug: "diya-pakistan-scholarship",
+
+    title: "DIYA Pakistan Scholarship",
+    overview:
+      "DIYA Pakistan Scholarship is a need-based support program for Pakistani students. Applications are submitted online and reviewed by DIYA Pakistan under Ihsan Trust rules.",
+    summary:
+      "The DIYA Pakistan Scholarship supports eligible Pakistani students with annual financial assistance routed through their institutes. It is offered by DIYA Pakistan (Ihsan Trust) and generally targets students who meet academic merit and need-based criteria. The process includes an online form, document email submission, and verification before yearly disbursement.",
+
+    country: "Pakistan",
+    degreeLevel: "Bachelors",
+    fundingType: "Partially Funded",
+
+    deadline:
+      "Rolling (official final date not publicly announced; apply as early as possible)",
+    duration:
+      "Renewable yearly (1 July to 30 June) until course completion, subject to renewal requirements",
+
+    eligibility: [
+      "Eligible nationalities: Pakistani students",
+      "Academic background: At least 60% marks at all academic levels",
+      "Funding conflict rule: Students receiving more than PKR 25,000 per year from another organization are not eligible",
+      "Identity requirement: Valid CNIC details required for tracking and payment process",
+      "Program continuity: Continued support depends on yearly result and fee proof submission",
+    ],
+
+    benefits: [
+      "Tuition support: Annual scholarship cheque issued to the applicant's institute after approval",
+      "Disbursement mode: Institute may hand over cheque to student or adjust it against fee",
+      "Bank processing: Cheque can be cashed at Meezan Bank branch with original CNIC and CNIC copy",
+      "Renewal support: Scholarship can continue yearly until course completion if renewal conditions are met",
+    ],
+
+    applicationProcess: [
+      "Where to apply: Complete the official online form at diyapak.org/apply-scholarship",
+      "Documents email: Send scanned required documents to apply@diyapak.org with CNIC number in email subject",
+      "Review timeline: Wait for application review (usually 20-30 days)",
+      "Status tracking: Check application status weekly on official website",
+      "Approval and payment: After approval, cheque is sent to institute (usually within 20-30 days), then processed by institute/student",
+      "Renewal: For next year, email updated result and fee receipt with CNIC in subject",
+    ],
+
+    documents: [
+      "CNIC / Smart Card details",
+      "Academic transcripts / result cards",
+      "Current institute fee receipt",
+      "Student and institute details as required in official form",
+      "Any additional documents requested by DIYA Pakistan during verification",
+    ],
+
+    goodToKnow: [
+      "DIYA's public instructions state no fixed final deadline; applications are effectively rolling.",
+      "Incorrect information or 'Not Accepted' status can lead to ineligibility for future applications.",
+      "Keep CNIC format consistent across form and email subject to avoid tracking delays.",
+    ],
+
+    faqs: [
+      {
+        question: "Is DIYA Pakistan Scholarship fully funded?",
+        answer:
+          "It is generally need-based partial financial support and not a universal full-cost scholarship.",
+      },
+      {
+        question: "Who is not eligible under funding rules?",
+        answer:
+          "Students already receiving more than PKR 25,000 per year from another organization are not eligible.",
+      },
+      {
+        question: "Is there a fixed final deadline?",
+        answer:
+          "A single final date is not publicly announced on official instructions; apply as early as possible.",
+      },
+      {
+        question: "How long does review usually take?",
+        answer:
+          "DIYA states the review process usually takes around 20-30 days.",
+      },
+    ],
+
+    applyUrl: "https://diyapak.org/apply-scholarship/",
+    officialSource: "DIYA Pakistan (Ihsan Trust)",
+
+    lastUpdated: "2026-02-23",
+  },
 ];
 
 function fixMojibake(value: string) {

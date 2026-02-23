@@ -58,6 +58,7 @@ export const COUNTRIES = [
   "Norway",
   "Oman",
   "Panama",
+  "Pakistan",
   "Papua New Guinea",
   "Paraguay",
   "Peru",
@@ -199,6 +200,7 @@ export function normalizeCountry(input: string): Country {
   if (v === "norway") return "Norway";
   if (v === "oman") return "Oman";
   if (v === "panama") return "Panama";
+  if (v === "pakistan") return "Pakistan";
   if (v === "papua new guinea" || v === "png") return "Papua New Guinea";
   if (v === "paraguay") return "Paraguay";
   if (v === "peru") return "Peru";
@@ -319,6 +321,7 @@ export function ensureInAllowedSets(args: {
     case "New Zealand":
     case "Oman":
     case "Panama":
+    case "Pakistan":
     case "Paraguay":
     case "Peru":
     case "Portugal":
