@@ -8314,6 +8314,96 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "france-universite-paris-saclay-international-masters-scholarship-idex",
+
+    title: "Université Paris-Saclay International Master's Scholarships (IDEX)",
+    overview:
+      "IDEX-funded scholarships for outstanding international students admitted to eligible Université Paris-Saclay master's programs.",
+    summary:
+      "Université Paris-Saclay International Master's Scholarships (IDEX) support high-level international students admitted to eligible master's programs delivered by Paris-Saclay member institutions. The scholarship is aimed at facilitating access to master's studies in France and can renew from M1 to M2 under progression rules. Selection is coordinated through the master's program team and the official Paris-Saclay scholarship workflow.",
+
+    country: "France",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline:
+      "March 25, 2026 (program coordinator pre-selection) and March 31, 2026 at 23:59 Paris time (candidate scholarship form and references, if applicable)",
+    duration:
+      "1 academic year (renewable for a second year when an M1 laureate is admitted to M2 and fulfills progression requirements)",
+
+    eligibility: [
+      "Eligible nationalities: Students of foreign nationality",
+      "Degree level: Master's (M1 and M2 are both eligible)",
+      "Admission required: Must be admitted to an eligible Université Paris-Saclay master's program operated by listed member institutions",
+      "First-enrollment rule: Intended for students entering French higher education for the first time, with limited exceptions stated by Paris-Saclay",
+      "Age requirement: Under 30 during the application year",
+      "Program scope: All academic fields are eligible except apprenticeship-based master's tracks",
+      "Funding compatibility: Ineligible if receiving other funding above €600/month",
+      "Non-cumulative rule: Cannot be combined with France Excellence Eiffel, France Excellence Europa, or Erasmus Mundus scholarships",
+    ],
+
+    benefits: [
+      "Scholarship amount: €10,000 per year",
+      "Travel/visa support: Annual flat support up to €900 (country-dependent)",
+      "Payment schedule: Paid monthly during the academic year (September to June)",
+      "Renewal route: M1 laureates can continue to M2 scholarship year when admitted and academically eligible",
+      "Administrative support: Laureates receive support for administrative procedures and housing search guidance",
+    ],
+
+    applicationProcess: [
+      "Where to apply: First apply for admission to an eligible Université Paris-Saclay master's program",
+      "Program pre-selection: The program coordinator selects candidates for scholarship nomination before the published coordinator deadline",
+      "Scholarship invitation: Pre-selected candidates receive an official email link to the scholarship application form",
+      "Form and references: Candidate submits the scholarship form and references (if applicable) before the final scholarship deadline",
+      "Jury review: Applications are assessed under official program regulations",
+      "Result publication: Scholarship decisions are announced around mid-May",
+    ],
+
+    documents: [
+      "Master's admission application materials required by the selected Paris-Saclay program",
+      "Academic transcripts and degree records required by the admissions process",
+      "Scholarship application form received via official invitation link",
+      "Reference/recommendation submissions where requested in the scholarship workflow",
+      "Passport/identity and visa-related documents required for enrollment in France",
+    ],
+
+    goodToKnow: [
+      "You cannot directly apply to the scholarship without first being pre-selected by the master's program coordinator.",
+      "Scholarship and travel support are disbursed after arrival in France and registration in the admitted program.",
+      "Coordinator and scholarship-form deadlines are separate; missing either deadline ends eligibility for that cycle.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the Paris-Saclay IDEX master's scholarship fully funded?",
+        answer:
+          "It is usually treated as partially funded because the award is €10,000/year plus up to €900 travel/visa support, rather than full-cost institutional funding.",
+      },
+      {
+        question: "Can I apply directly to the scholarship portal first?",
+        answer:
+          "No. You must first apply to an eligible master's program and be pre-selected by the program coordinator.",
+      },
+      {
+        question: "Can I combine this scholarship with Eiffel or Erasmus Mundus?",
+        answer:
+          "No. The official rules state that this scholarship cannot be combined with Eiffel, Europa, or Erasmus Mundus funding.",
+      },
+      {
+        question: "What are the 2026 key deadlines?",
+        answer:
+          "Coordinator pre-selection closes March 25, 2026, and scholarship form/reference submission closes March 31, 2026 at 23:59 (Paris time).",
+      },
+    ],
+
+    applyUrl:
+      "https://www.universite-paris-saclay.fr/en/admission/bourses-et-aides-financieres/international-masters-scholarships-program-idex",
+    officialSource: "Université Paris-Saclay",
+
+    lastUpdated: "2026-02-23",
+  },
+
+  {
     slug: "italy-university-of-padua-excellence-scholarship",
 
     title: "Italy University of Padua Excellence Scholarship",
