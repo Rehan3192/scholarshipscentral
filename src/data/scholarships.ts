@@ -8728,6 +8728,91 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "king-fahd-university-scholarship-masters",
+
+    title: "King Fahd University Scholarship (KFUPM) - Masters",
+    overview:
+      "KFUPM's project-based Master's admission route in Saudi Arabia includes merit-linked tuition discount support for selected applicants. This track is separate from full-time thesis scholarship cycles.",
+    summary:
+      "The King Fahd University Scholarship listing refers to KFUPM's project-based Master's admission pathway for Fall 2026 open programs. Applicants apply through the official KFUPM Master's portal, where tuition discount categories are published for eligible admitted students. This route is primarily tuition-support based and should not be treated as a guaranteed full-stipend scholarship for every applicant.",
+
+    country: "Saudi Arabia",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline: "February 28, 2026 (Project-Based MS Fall 2026 open-program cycle)",
+    duration: "Program duration varies by major (typically around 2 years)",
+
+    eligibility: [
+      "Eligible nationalities: International and domestic applicants can apply (program-specific rules apply)",
+      "Degree level: Bachelor's degree in a relevant discipline is required",
+      "Academic background: Applicants must satisfy major-specific admission prerequisites",
+      "Language requirements: English proficiency evidence is required under current KFUPM admissions rules",
+      "Fee requirement: Application processing fee of SAR 100 + VAT is listed on the official portal",
+    ],
+
+    benefits: [
+      "Tuition support: KFUPM portal lists published tuition discount categories for eligible admitted students",
+      "Discount examples: Listed discount categories include 25% references (subject to current official terms)",
+      "Coverage type: This route is generally tuition-support focused, not a guaranteed full-stipend package for all applicants",
+      "Academic value: Access to graduate study at KFUPM with program-specific funding support options",
+    ],
+
+    applicationProcess: [
+      "Where to apply: Submit through the official KFUPM Master's portal",
+      "Program selection: Choose from currently open project-based Master's programs",
+      "Account setup: Create an application account and complete all required profile fields",
+      "Documents: Upload required files, including the mandatory short motivation video listed by the portal",
+      "Fee payment: Pay the non-refundable processing fee (SAR 100 + VAT) before final submission",
+      "Decision tracking: Monitor the admissions dashboard/email for status updates and next steps",
+    ],
+
+    documents: [
+      "Passport / national ID",
+      "Bachelor's degree certificate",
+      "Official academic transcripts",
+      "CV/Resume",
+      "English proficiency test score report (as required)",
+      "Short motivation video (mandatory on current portal checklist)",
+      "Any additional program-specific documents requested by KFUPM",
+    ],
+
+    goodToKnow: [
+      "The full-time thesis-based MS/PhD cycle listed on KFUPM CGIS closed on January 10, 2026; this entry tracks the currently open project-based MS route.",
+      "Only programs marked open on the official master's portal are available for the current cycle.",
+      "Funding terms can change by category and cycle, so verify the latest official conditions before submission.",
+    ],
+
+    faqs: [
+      {
+        question: "Is this KFUPM listing fully funded for all applicants?",
+        answer:
+          "No. The currently open project-based Master's route is primarily tuition-support/discount based and is not a universal full-stipend award for every applicant.",
+      },
+      {
+        question: "What is the current deadline shown on the official portal?",
+        answer:
+          "The portal lists February 28, 2026 for the Fall 2026 project-based MS open-program cycle.",
+      },
+      {
+        question: "Is there an application fee?",
+        answer:
+          "Yes. The official portal lists a non-refundable processing fee of SAR 100 plus VAT.",
+      },
+      {
+        question: "Can I still apply for the full-time thesis MS/PhD scholarship cycle?",
+        answer:
+          "The KFUPM CGIS page shows that the thesis MS/PhD cycle deadline was January 10, 2026, so applicants should verify if any new cycle has opened.",
+      },
+    ],
+
+    applyUrl: "https://ms.kfupm.edu.sa/",
+    officialSource: "KFUPM Master Programs Portal",
+
+    lastUpdated: "2026-02-24",
+  },
+
+  {
     slug: "diya-pakistan-scholarship",
 
     title: "DIYA Pakistan Scholarship",
