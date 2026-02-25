@@ -4336,37 +4336,211 @@ const rawScholarships: Scholarship[] = [
   {
     slug: "azerbaijan-government-scholarship",
 
-    title: "Azerbaijan Government Scholarship",
+    title: "Azerbaijan Government Scholarship (Heydar Aliyev Grant)",
     overview:
-      "Scholarships for international master’s students.",
+      "The Heydar Aliyev International Education Grant Program is a fully funded Azerbaijan government scholarship for eligible international students nominated by their home-country authorities.",
+    summary:
+      "The Azerbaijan Government Scholarship (Heydar Aliyev International Education Grant Program) is offered by the Ministry of Foreign Affairs and the Ministry of Science and Education for selected international students in Azerbaijani universities. For 2026-2027, candidates must complete a two-stage process: first-stage nomination by relevant authorities in their own country, then second-stage submission in SIACAS. For Master's level, the scholarship is fully funded with tuition, annual flights, monthly allowance, medical insurance, and visa/registration support.",
 
     country: "Azerbaijan",
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
 
-    deadline: "August",
-    duration: "2 years",
+    deadline:
+      "April 15, 2026 at 6 PM Baku time (first-stage nomination); June 1, 2026 at 6 PM Baku time (SIACAS second stage)",
+    duration: "1.5-2 years",
 
     eligibility: [
-      "TODO",
+      "Eligible nationalities: Citizens of eligible countries listed in the official call (OIC, NAM, SIDS, and countries with historical/cultural ties)",
+      "Nationality restriction: Azerbaijani citizens or former Azerbaijani citizens are not eligible",
+      "Degree level: Master's (including medical residency track under graduate-level rules)",
+      "Age limit: Below 40 years as of September 15, 2026",
+      "Academic requirement: Previous GPA/marks must be at least 70/100 (or equivalent)",
+      "Nomination requirement: Candidates must be officially nominated by relevant government authorities in their own country",
+      "Language requirement: Proficiency in language of study is required (English/Russian/Turkish/Azerbaijani routes per call rules)",
     ],
 
     benefits: [
-      "TODO",
+      "Tuition: Full tuition and language preparatory study (where applicable)",
+      "Flights: One annual round-trip international economy-class ticket",
+      "Monthly stipend: 800 AZN for accommodation/living/study materials (10 months per year, excluding July and August)",
+      "Medical insurance: 200 AZN yearly allowance",
+      "Visa and registration: Single-entry visa and temporary residence permit support for each academic year",
     ],
 
     applicationProcess: [
-      "TODO",
+      "First stage: Submit required documents to relevant state authorities in your country (ministries/embassy etc.) between February 16 and April 15, 2026",
+      "Nomination: Wait for official nomination decision by your country authorities (April 16 to May 16, 2026)",
+      "Second stage: If nominated, register and submit through SIACAS (portal.edu.az) between May 18 and June 1, 2026",
+      "Program selection: Choose up to three specialties in Azerbaijani higher education institutions within the scholarship channel",
+      "Evaluation and results: Final evaluation runs June 1 to July 1, with notifications expected July 1 to August 1, 2026",
+      "Enrollment: Arrive in Azerbaijan by September 30, 2026 and complete university registration steps",
     ],
 
     documents: [
-      "TODO",
+      "Completed nomination form (first stage)",
+      "Diploma(s) and academic transcript(s)",
+      "Medical certificate including HIV/AIDS and Hepatitis B/C tests",
+      "Valid passport copy",
+      "CV/Resume",
+      "Language proficiency proof (as required by language/program track)",
+      "Motivation letter",
+      "Local/international awards (if available)",
     ],
 
-    applyUrl: "https://www.edu.gov.az",
-    officialSource: "Azerbaijan Ministry of Education",
+    goodToKnow: [
+      "Official nomination by your country's authority is mandatory and does not automatically guarantee final scholarship award.",
+      "The selected applicant is confirmed only after completing final documentation and registration requirements in Azerbaijan.",
+      "Any expense not listed in the official scholarship benefits section is not reimbursed.",
+    ],
 
-    lastUpdated: "2026-02-06",
+    faqs: [
+      {
+        question: "Is this scholarship fully funded?",
+        answer:
+          "Yes. The official call lists full tuition, annual international flights, monthly allowance, medical insurance allowance, and visa/registration support.",
+      },
+      {
+        question: "Can I apply directly without nomination?",
+        answer:
+          "No. Only applicants nominated in the first stage by relevant authorities in their country can proceed to SIACAS second-stage submission.",
+      },
+      {
+        question: "What is the age limit for Master's applicants?",
+        answer:
+          "For graduate-level programs, applicants must be below 40 years of age as of September 15, 2026.",
+      },
+      {
+        question: "What is the latest first-stage deadline?",
+        answer:
+          "The first-stage submission deadline is April 15, 2026 at 6 PM Baku time.",
+      },
+    ],
+
+    applyUrl: "https://studyinazerbaijan.edu.az/financial-support",
+    officialSource: "Study in Azerbaijan (MFA + Ministry of Science and Education)",
+
+    lastUpdated: "2026-02-25",
+  },
+
+  {
+    slug: "azerbaijan-government-scholarship-bachelors",
+
+    title: "Azerbaijan Government Scholarship (Heydar Aliyev Grant)",
+    overview:
+      "Fully funded Azerbaijan government scholarship for eligible international undergraduate applicants through a nomination-first process.",
+    summary:
+      "The Azerbaijan Government Scholarship under the Heydar Aliyev International Education Grant Program supports nominated international students for undergraduate study in Azerbaijan. The process is two-stage: first-stage nomination by relevant authorities in the candidate's country, then SIACAS submission. For bachelor's level, coverage includes tuition, annual flights, monthly allowance, medical insurance, and visa/registration support under official call rules.",
+
+    country: "Azerbaijan",
+    degreeLevel: "Bachelors",
+    fundingType: "Fully Funded",
+
+    deadline:
+      "April 15, 2026 at 6 PM Baku time (first-stage nomination); June 1, 2026 at 6 PM Baku time (SIACAS second stage)",
+    duration: "4-5 years (program-dependent)",
+
+    eligibility: [
+      "Eligible nationalities: Citizens of eligible countries listed in the official call",
+      "Nationality restriction: Azerbaijani citizens or former Azerbaijani citizens are not eligible",
+      "Age limit: Below 35 years as of September 15, 2026",
+      "Academic requirement: Minimum previous GPA/marks of 70/100 (or equivalent)",
+      "Nomination requirement: Mandatory official nomination by relevant government authorities in applicant's country",
+      "Language requirement: Program-language proficiency is required according to official call conditions",
+    ],
+
+    benefits: [
+      "Full tuition fee coverage",
+      "Language preparatory coverage where applicable",
+      "Annual round-trip economy international flight",
+      "800 AZN monthly stipend (10 months each year)",
+      "200 AZN annual medical insurance allowance",
+      "Visa and temporary registration support",
+    ],
+
+    applicationProcess: [
+      "Submit first-stage documents to your country's authorized authorities before April 15, 2026",
+      "Wait for nomination decision by authorities (April 16 to May 16, 2026)",
+      "If nominated, apply in SIACAS between May 18 and June 1, 2026",
+      "Select up to three specialties in participating Azerbaijani institutions",
+      "Track status and notifications in SIACAS until final selection window closes",
+      "Complete admission and arrive in Azerbaijan by September 30, 2026",
+    ],
+
+    documents: [
+      "Nomination form",
+      "School/college diploma and transcripts",
+      "Medical certificate (HIV/AIDS and Hepatitis B/C tests included)",
+      "Valid passport",
+      "CV/Resume",
+      "Language proof (if required by track)",
+      "Motivation letter",
+    ],
+
+    applyUrl: "https://studyinazerbaijan.edu.az/financial-support",
+    officialSource: "Study in Azerbaijan (MFA + Ministry of Science and Education)",
+
+    lastUpdated: "2026-02-25",
+  },
+
+  {
+    slug: "azerbaijan-government-scholarship-phd",
+
+    title: "Azerbaijan Government Scholarship (Heydar Aliyev Grant)",
+    overview:
+      "Fully funded doctoral opportunity in Azerbaijan for nominated international candidates under the Heydar Aliyev grant program.",
+    summary:
+      "The Azerbaijan Government Scholarship for doctoral study is offered through the Heydar Aliyev International Education Grant Program. Applicants must first secure official nomination from state authorities in their own country, then complete SIACAS second-stage registration within the official window. For PhD level, benefits include tuition, annual flights, monthly stipend, medical insurance, and visa/registration support under the 2026-2027 call.",
+
+    country: "Azerbaijan",
+    degreeLevel: "PhD",
+    fundingType: "Fully Funded",
+
+    deadline:
+      "April 15, 2026 at 6 PM Baku time (first-stage nomination); June 1, 2026 at 6 PM Baku time (SIACAS second stage)",
+    duration: "3 years",
+
+    eligibility: [
+      "Eligible nationalities: Citizens of eligible countries listed in the official call",
+      "Nationality restriction: Azerbaijani citizens or former Azerbaijani citizens are not eligible",
+      "Age limit: Below 45 years as of September 15, 2026",
+      "Academic requirement: Previous GPA/marks at least 70/100 (or equivalent)",
+      "Nomination requirement: Official nomination by relevant authorities is required before SIACAS stage",
+      "Language requirement: Language proficiency must match doctoral program instruction language requirements",
+    ],
+
+    benefits: [
+      "Full tuition fee coverage for doctoral study",
+      "Annual round-trip international flight ticket",
+      "800 AZN monthly stipend (10 months each year)",
+      "200 AZN annual medical insurance allowance",
+      "Visa and temporary residence/registration support",
+    ],
+
+    applicationProcess: [
+      "Complete first-stage submission to your country's authorized nomination authority by April 15, 2026",
+      "Receive nomination outcome from relevant authority before SIACAS stage",
+      "Register and submit scholarship application in SIACAS from May 18 to June 1, 2026",
+      "Select available doctoral options in participating Azerbaijani institutions",
+      "Follow SIACAS updates and respond to requests during evaluation period",
+      "Complete acceptance and arrival procedures by the official arrival deadline",
+    ],
+
+    documents: [
+      "Nomination form",
+      "Previous degree diplomas and transcripts",
+      "Medical certificate including HIV/AIDS and Hepatitis B/C tests",
+      "Valid passport",
+      "CV/Resume",
+      "Language proficiency proof (as applicable)",
+      "Motivation letter",
+      "Academic/research achievements (if available)",
+    ],
+
+    applyUrl: "https://studyinazerbaijan.edu.az/financial-support",
+    officialSource: "Study in Azerbaijan (MFA + Ministry of Science and Education)",
+
+    lastUpdated: "2026-02-25",
   },
 
   {
