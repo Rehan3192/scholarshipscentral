@@ -8987,6 +8987,96 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "university-of-luxembourg-guillaume-dupaix-scholarship",
+
+    title: "University of Luxembourg Guillaume Dupaix International Scholarship",
+    overview:
+      "The Guillaume Dupaix International Scholarship supports high-achieving international candidates admitted to selected Master's programs at the University of Luxembourg.",
+    summary:
+      "The Guillaume Dupaix International Scholarship is administered by the University of Luxembourg for students applying to eligible Master's degrees. It is a selective merit-based award for the 2026-2027 intake and follows the university's admission cycle. The scholarship provides a semester stipend plus accommodation support in university housing, while tuition fees are not covered under this award.",
+
+    country: "Luxembourg",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline:
+      "March 24, 2026 (Master application + scholarship form); March 31, 2026 (supporting documents, where applicable)",
+    duration: "Up to 2 years",
+
+    eligibility: [
+      "Eligible nationalities: EU and non-EU international applicants can be considered",
+      "Degree level: Master's only (in selected eligible Master's programs)",
+      "Admission requirement: Candidate must first apply to and be admitted to an eligible University of Luxembourg Master's program",
+      "Academic background: Strong academic record and merit profile required",
+      "Program rule: Scholarship is not available for Master's programs with a mandatory semester/year abroad",
+      "Funding conflict rule: Beneficiaries of Luxembourg state student aid (CEDIES) are not eligible",
+      "Language requirement: Applicants must satisfy language requirements of their selected Master's program",
+    ],
+
+    benefits: [
+      "Stipend: EUR 5,763 per semester (EUR 11,526 per academic year) for up to 2 years",
+      "Accommodation support: Up to EUR 650 per month in a university residence",
+      "Payment mode: Scholarship is paid in installments by semester according to university rules",
+      "Performance condition: Continuation depends on academic progress and conduct requirements",
+      "Tuition note: Tuition fees are not covered by this scholarship",
+    ],
+
+    applicationProcess: [
+      "Choose an eligible University of Luxembourg Master's program",
+      "Submit Master's admission application by March 24, 2026",
+      "Complete scholarship application requirements via the university process for eligible candidates",
+      "Submit all supporting scholarship documents by March 31, 2026 where required",
+      "Wait for evaluation and official selection communication from the university",
+      "Accept the scholarship offer within the stated confirmation window if selected",
+    ],
+
+    documents: [
+      "Passport / national ID",
+      "Bachelor's diploma or expected graduation proof",
+      "Official academic transcripts",
+      "CV/Resume",
+      "Motivation statement / personal statement",
+      "Two recommendation letters (where required by the scholarship call)",
+      "Any additional documents requested by the eligible Master's program",
+    ],
+
+    goodToKnow: [
+      "This scholarship is highly competitive and limited in number each intake.",
+      "Admission to an eligible Master's program is required before or alongside scholarship consideration in the official process.",
+      "Always verify latest eligibility, program list, and exact submission requirements on the official university page.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the Guillaume Dupaix Scholarship fully funded?",
+        answer:
+          "No. It is a high-value partial scholarship with stipend and residence support, but tuition is not covered under this award.",
+      },
+      {
+        question: "Who can apply for this scholarship?",
+        answer:
+          "It targets high-achieving EU and non-EU international applicants admitted to eligible University of Luxembourg Master's programs.",
+      },
+      {
+        question: "What is the main deadline for the 2026-2027 intake?",
+        answer:
+          "The main deadline is March 24, 2026, with March 31, 2026 listed for supporting documents in applicable cases.",
+      },
+      {
+        question: "Does this scholarship include accommodation?",
+        answer:
+          "Yes. It includes accommodation support up to EUR 650/month in university residence, subject to official conditions.",
+      },
+    ],
+
+    applyUrl:
+      "https://www.uni.lu/life-en/financial-support/scholarships/guillaume-dupaix-international-scholarship/",
+    officialSource: "University of Luxembourg",
+
+    lastUpdated: "2026-02-26",
+  },
+
+  {
     slug: "diya-pakistan-scholarship",
 
     title: "DIYA Pakistan Scholarship",

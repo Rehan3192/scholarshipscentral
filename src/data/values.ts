@@ -43,6 +43,7 @@ export const COUNTRIES = [
   "Kuwait",
   "Kyrgyzstan",
   "Laos",
+  "Luxembourg",
   "Macau",
   "Ireland",
   "Japan",
@@ -177,6 +178,7 @@ export function normalizeCountry(input: string): Country {
   if (v === "kuwait") return "Kuwait";
   if (v === "kyrgyzstan" || v === "kyrgyz republic") return "Kyrgyzstan";
   if (v === "laos" || v === "lao people's democratic republic") return "Laos";
+  if (v === "luxembourg") return "Luxembourg";
   if (v === "macau" || v === "macao") return "Macau";
   if (v === "malaysia") return "Malaysia";
   if (v === "maldives") return "Maldives";
@@ -353,6 +355,7 @@ export function ensureInAllowedSets(args: {
     case "Ghana":
     case "Kenya":
     case "Laos":
+    case "Luxembourg":
     case "Maldives":
     case "Myanmar":
     case "Papua New Guinea":
