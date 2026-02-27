@@ -22,10 +22,12 @@ export const metadata: Metadata = {
   description: "Find fully funded scholarships worldwide.",
   icons: {
     icon: [
-      { url: "/logo-mark.svg", type: "image/svg+xml" },
       { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/logo-mark.svg", type: "image/svg+xml" },
     ],
     shortcut: ["/favicon.ico"],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
     type: "website",
