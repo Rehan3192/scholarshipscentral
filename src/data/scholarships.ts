@@ -9160,6 +9160,95 @@ const rawScholarships: Scholarship[] = [
 
     lastUpdated: "2026-02-23",
   },
+
+  {
+    slug: "iowa-state-university-international-merit-scholarship",
+
+    title: "Iowa State University International Merit Scholarship",
+    overview:
+      "Merit-based undergraduate scholarship support for international first-year and transfer students admitted to Iowa State University in the USA.",
+    summary:
+      "The Iowa State University International Merit Scholarship is offered by Iowa State University Admissions for international undergraduate applicants in the United States. It supports Bachelor's study through competitive merit awards for both first-year and transfer students. The program is designed to reduce tuition cost through annual awards, with continuation based on GPA, enrollment, and international student status under official renewal rules.",
+
+    country: "USA",
+    degreeLevel: "Bachelors",
+    fundingType: "Partially Funded",
+
+    deadline:
+      "May 1, 2026 (Fall first-year final deadline); June 30, 2026 (Fall transfer final deadline)",
+    duration:
+      "Up to 8 semesters (first-year) or up to 5 semesters (transfer), subject to renewal conditions",
+
+    eligibility: [
+      "Eligible nationalities: International students",
+      "Degree level: Undergraduate/Bachelor's applicants (first-year or transfer)",
+      "Admission requirement: Must be offered admission to Iowa State University as an international first-year or transfer student",
+      "Tuition status: Must be assessed international tuition rates",
+      "Offer acceptance: Must accept admission offer by May 1 (fall) or December 15 (spring)",
+      "Transfer GPA rule: Transfer applicants need cumulative GPA equivalent to 3.0/4.0 (B average)",
+      "Application requirement: Must submit the OneApp General Application plus the International Student Admissions Scholarship Application for the entry term",
+    ],
+
+    benefits: [
+      "First-year Award of Achievement: USD 5,000-10,000 per year (up to USD 40,000 total)",
+      "First-year Award of Distinction: USD 2,000-4,000 per year (up to USD 16,000 total)",
+      "Transfer Award of Achievement: USD 5,000-8,000 per year (up to USD 20,000 total)",
+      "Transfer Award of Distinction: USD 2,000-4,000 per year (up to USD 10,000 total)",
+      "Coverage scope: Applied toward undergraduate tuition and fees under official scholarship rules",
+    ],
+
+    applicationProcess: [
+      "Apply for undergraduate admission to Iowa State University as an international first-year or transfer student",
+      "Accept admission offer by the official term deadline (May 1 for fall or December 15 for spring)",
+      "Log in to OneApp and complete the General Application",
+      "In OneApp, go to Opportunities > Recommended and select International Student Admissions Scholarship Application for your term",
+      "Submit before the relevant scholarship deadline (first-year or transfer timeline)",
+      "Wait for merit review and official scholarship decision from Iowa State University",
+    ],
+
+    documents: [
+      "Passport/ID as required for international admission",
+      "Academic transcripts (high school for first-year, prior college records for transfer)",
+      "Test scores (SAT/ACT if submitted for profile review)",
+      "Admission-related records requested by Iowa State University",
+      "Any additional materials requested in OneApp scholarship workflow",
+    ],
+
+    goodToKnow: [
+      "Selection is competitive and based on academic profile plus accomplishments under a holistic review process.",
+      "Renewal requires minimum 2.5 cumulative GPA, at least 12 credits per semester (excluding summer), and continued international student classification.",
+      "Use the official scholarship page to confirm latest deadlines and term-specific requirements before submission.",
+    ],
+
+    faqs: [
+      {
+        question: "Is this scholarship fully funded?",
+        answer:
+          "No. It is a partial merit scholarship with fixed annual award ranges that reduce undergraduate tuition and fee costs.",
+      },
+      {
+        question: "Can transfer students apply?",
+        answer:
+          "Yes. Iowa State lists a separate international transfer scholarship track with its own award ranges and deadlines.",
+      },
+      {
+        question: "What is the current Fall 2026 final deadline?",
+        answer:
+          "For first-year applicants it is May 1, 2026, and for transfer applicants it is June 30, 2026.",
+      },
+      {
+        question: "Where is the scholarship application submitted?",
+        answer:
+          "Through Iowa State's OneApp portal after admission, by completing the General Application and the International Student Admissions Scholarship Application.",
+      },
+    ],
+
+    applyUrl:
+      "https://www.iastate.edu/admission-and-aid/admissions/international-admissions/international-merit-scholarships",
+    officialSource: "Iowa State University Admissions",
+
+    lastUpdated: "2026-02-27",
+  },
 ];
 
 function fixMojibake(value: string) {
