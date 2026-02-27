@@ -127,6 +127,8 @@ export function OrganizationJsonLd() {
     "@type": "Organization",
     name: "Scholarships Central",
     url: siteUrl,
+    logo: `${siteUrl}/logo-mark.svg`,
+    image: `${siteUrl}/logo-mark.svg`,
   };
 
   return <JsonLd data={data} />;

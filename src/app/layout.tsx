@@ -20,6 +20,13 @@ export const metadata: Metadata = {
     template: "%s | Scholarships Central",
   },
   description: "Find fully funded scholarships worldwide.",
+  icons: {
+    icon: [
+      { url: "/logo-mark.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: ["/favicon.ico"],
+  },
   openGraph: {
     type: "website",
     siteName: "Scholarships Central",

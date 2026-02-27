@@ -250,8 +250,19 @@ export default function Navbar() {
         aria-label="Primary"
       >
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
-          <Link href="/" className="text-base font-extrabold tracking-tight text-gray-900 sm:text-lg">
-            Scholarships Central
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-base font-extrabold tracking-tight text-gray-900 sm:text-lg"
+          >
+            <img
+              src="/logo-mark.svg"
+              alt=""
+              aria-hidden="true"
+              width={24}
+              height={24}
+              className="h-6 w-6 rounded-md"
+            />
+            <span>Scholarships Central</span>
           </Link>
 
           <form
