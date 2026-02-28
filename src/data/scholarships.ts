@@ -9169,6 +9169,10 @@ const rawScholarships: Scholarship[] = [
       "Merit-based undergraduate scholarship support for international first-year and transfer students admitted to Iowa State University in the USA.",
     summary:
       "The Iowa State University International Merit Scholarship is offered by Iowa State University Admissions for international undergraduate applicants in the United States. It supports Bachelor's study through competitive merit awards for both first-year and transfer students. The program is designed to reduce tuition cost through annual awards, with continuation based on GPA, enrollment, and international student status under official renewal rules.",
+    guideUrl:
+      "https://www.scholarshipscentral.com/blog/iowa-state-university-international-merit-scholarship-2026-application-guide",
+    guideLabel:
+      "Iowa State University International Merit Scholarship 2026 application guide",
 
     country: "USA",
     degreeLevel: "Bachelors",
