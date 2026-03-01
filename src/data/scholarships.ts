@@ -9253,6 +9253,97 @@ const rawScholarships: Scholarship[] = [
 
     lastUpdated: "2026-02-27",
   },
+
+  {
+    slug: "hbku-masters-scholarship-qatar",
+
+    title: "HBKU Master's Scholarship in Qatar",
+    overview:
+      "Hamad Bin Khalifa University (HBKU) offers graduate scholarships for Master's students in Qatar, combining tuition waivers and stipend support for selected international applicants.",
+    summary:
+      "The HBKU Master's Scholarship supports international students admitted to Master's programs at Hamad Bin Khalifa University in Qatar. Scholarship consideration happens during graduate admissions without a separate scholarship application. Funding includes program-based tuition waivers and, for selected international Master's students, a monthly stipend for up to 21 months, tied to full-time study and RA/TA commitments under HBKU scholarship guidelines.",
+
+    country: "Qatar",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline:
+      "February 1, 2026 (international graduate admissions deadline; program-specific deadlines may vary)",
+    duration: "Up to 21 months (typical stipend duration for Master's)",
+
+    eligibility: [
+      "Eligible nationalities: International students admitted to HBKU Master's programs",
+      "Degree level: Master's programs only",
+      "Admissions basis: Scholarship consideration is part of graduate admissions (no separate application)",
+      "Enrollment status: Full-time enrollment required for stipend eligibility",
+      "Work requirement: Stipends depend on RA/TA availability and approval (typically 10 hours per week as RA, up to 20 hours total work)",
+      "Professional status: Full-time professionals working more than 40% are not eligible for stipend",
+      "Continuation: Scholarships are reviewed annually and require good academic standing",
+    ],
+
+    benefits: [
+      "Tuition waivers: STEM MS (CSE/CHLS) typically 75% waiver; SHAPE MS/MA (CIS/CHSS/CPP) typically 60% waiver",
+      "No tuition waiver: LL.M programs and MS Economics listed at 0% waiver under HBKU guidelines",
+      "International Master's stipend: 7,000 QAR per month for up to 21 months (subject to availability)",
+      "Travel benefit: One inbound ticket at program start and one outbound ticket at graduation for international stipend recipients",
+      "Housing is not provided directly; students cover housing from stipend or personal funds",
+      "Scholarship coverage and terms are listed in the official HBKU scholarship table and confirmed in the admission offer letter",
+    ],
+
+    applicationProcess: [
+      "Apply to an eligible HBKU Master's program through the official graduate admissions portal",
+      "Submit all required admissions documents and pay any application fees",
+      "Scholarship consideration is automatic during admissions; no separate scholarship application is required",
+      "If awarded, review the scholarship terms in your offer letter and confirm acceptance",
+      "Complete enrollment and any visa/residency steps required for international students",
+    ],
+
+    documents: [
+      "Passport",
+      "Bachelor's degree certificate or expected graduation proof",
+      "Academic transcripts",
+      "CV/Resume",
+      "Statement of purpose",
+      "Letters of recommendation",
+      "English language proficiency results (if required by the program)",
+      "Any program-specific documents listed in the admissions call",
+    ],
+
+    goodToKnow: [
+      "Tuition waiver rates depend on program type and college; confirm the exact waiver for your program.",
+      "Stipend awards are subject to funding availability and require RA/TA work.",
+      "International applicants should verify if their program has an earlier or additional deadline.",
+      "HBKU lists separate waiver rules for LL.M and MS Economics; these programs show 0% waiver in the scholarship table.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the HBKU Master's Scholarship fully funded?",
+        answer:
+          "No. HBKU Master's scholarships typically combine a partial tuition waiver with a stipend for selected students, but coverage varies by program.",
+      },
+      {
+        question: "Do I need a separate scholarship application?",
+        answer:
+          "No. Scholarship consideration is part of the graduate admissions process at HBKU.",
+      },
+      {
+        question: "What is the international deadline for 2026?",
+        answer:
+          "HBKU lists February 1, 2026 as the international graduate admissions deadline, but program pages may have specific dates.",
+      },
+      {
+        question: "Does the scholarship include housing?",
+        answer:
+          "HBKU states housing is not paid directly; students cover housing using their stipend or personal funds.",
+      },
+    ],
+
+    applyUrl: "https://www.hbku.edu.qa/en/graduate-admissions",
+    officialSource: "Hamad Bin Khalifa University (HBKU)",
+
+    lastUpdated: "2026-03-01",
+  },
 ];
 
 function fixMojibake(value: string) {
