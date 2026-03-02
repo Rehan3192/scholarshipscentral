@@ -3018,7 +3018,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Oman Government Scholarship",
     overview:
-      "Postgraduate scholarships for international students.",
+      "Master's funding pathway linked to Oman's public higher-education system for eligible international postgraduate applicants.",
 
     country: "Oman",
     degreeLevel: "Masters",
@@ -3414,7 +3414,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Macau Government Scholarship",
     overview:
-      "Scholarships for international undergraduate students.",
+      "Macau government-linked undergraduate scholarship route for international students entering bachelor's programs.",
 
     country: "Macau",
     degreeLevel: "Bachelors",
@@ -3450,7 +3450,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Macau Government Scholarship",
     overview:
-      "Postgraduate scholarships for international students.",
+      "Postgraduate support route connected to Macau's official education framework for international Master's candidates.",
 
     country: "Macau",
     degreeLevel: "Masters",
@@ -3702,7 +3702,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Peru Government Scholarship",
     overview:
-      "Scholarships for international undergraduate students.",
+      "Peru's official undergraduate scholarship pathway for international applicants in eligible degree programs.",
 
     country: "Peru",
     degreeLevel: "Bachelors",
@@ -3738,7 +3738,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Peru Government Scholarship",
     overview:
-      "Postgraduate funding for international students.",
+      "Peru government-linked Master's funding pathway for international applicants in eligible postgraduate programs.",
 
     country: "Peru",
     degreeLevel: "Masters",
@@ -3990,7 +3990,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Bolivia Government Scholarship",
     overview:
-      "Scholarships for international undergraduate students.",
+      "Bolivia government-backed scholarship option for international undergraduate students in approved study tracks.",
 
     country: "Bolivia",
     degreeLevel: "Bachelors",
@@ -4026,7 +4026,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Uruguay Government Scholarship",
     overview:
-      "Postgraduate scholarships for international students.",
+      "Government-backed postgraduate opportunity in Uruguay for international students pursuing Master's-level study.",
 
     country: "Uruguay",
     degreeLevel: "Masters",
@@ -4098,7 +4098,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Venezuela Government Scholarship",
     overview:
-      "Scholarships for international undergraduate students.",
+      "Venezuela's government scholarship channel for international candidates pursuing bachelor's-level education.",
 
     country: "Venezuela",
     degreeLevel: "Bachelors",
@@ -4206,7 +4206,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Jordan Government Scholarship",
     overview:
-      "Scholarships for international undergraduate students.",
+      "Jordan government undergraduate scholarship route for international students under national education programs.",
 
     country: "Jordan",
     degreeLevel: "Bachelors",
@@ -4242,7 +4242,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Jordan Government Scholarship",
     overview:
-      "Postgraduate funding for international students.",
+      "Jordan's official postgraduate scholarship route for international students pursuing Master's-level study.",
 
     country: "Jordan",
     degreeLevel: "Masters",
@@ -4278,7 +4278,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Iran Government Scholarship",
     overview:
-      "Scholarships for international undergraduate students.",
+      "Iran government-linked undergraduate scholarship pathway for international applicants in bachelor's study.",
 
     country: "Iran",
     degreeLevel: "Bachelors",
@@ -4314,7 +4314,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Iran Government Scholarship",
     overview:
-      "Postgraduate scholarships for international students.",
+      "Master's scholarship track under Iran's national higher-education framework for selected international applicants.",
 
     country: "Iran",
     degreeLevel: "Masters",
@@ -4386,7 +4386,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Georgia Government Scholarship",
     overview:
-      "Funding for international undergraduate students.",
+      "Georgia government-linked scholarship pathway for international students applying to undergraduate study.",
 
     country: "Georgia",
     degreeLevel: "Bachelors",
@@ -4632,7 +4632,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Uzbekistan Government Scholarship",
     overview:
-      "Scholarships for international undergraduate students.",
+      "Uzbekistan's official scholarship stream for international undergraduate students in designated programs.",
 
     country: "Uzbekistan",
     degreeLevel: "Bachelors",
@@ -4668,7 +4668,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Uzbekistan Government Scholarship",
     overview:
-      "Postgraduate funding for international students.",
+      "Uzbekistan government Master's scholarship stream for international candidates through national education authorities.",
 
     country: "Uzbekistan",
     degreeLevel: "Masters",
@@ -4704,7 +4704,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Kyrgyzstan Government Scholarship",
     overview:
-      "Scholarships for international undergraduate students.",
+      "Kyrgyzstan government scholarship option for international students applying to undergraduate education.",
 
     country: "Kyrgyzstan",
     degreeLevel: "Bachelors",
@@ -4740,7 +4740,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Tajikistan Government Scholarship",
     overview:
-      "Postgraduate scholarships for international students.",
+      "Tajikistan government scholarship route for international postgraduate students seeking Master's study support.",
 
     country: "Tajikistan",
     degreeLevel: "Masters",
@@ -4776,7 +4776,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Mongolia Government Scholarship",
     overview:
-      "Scholarships for international undergraduate students.",
+      "Mongolia government-supported undergraduate scholarship path for international bachelor's applicants.",
 
     country: "Mongolia",
     degreeLevel: "Bachelors",
@@ -4812,7 +4812,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Mongolia Government Scholarship",
     overview:
-      "Postgraduate funding for international students.",
+      "Mongolia's postgraduate funding channel for international Master's applicants under government scholarship policy.",
 
     country: "Mongolia",
     degreeLevel: "Masters",
@@ -4885,7 +4885,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Algeria Government Scholarship",
     overview:
-      "Postgraduate funding for international students.",
+      "Algeria government-supported Master's scholarship option for international postgraduate students.",
 
     country: "Algeria",
     degreeLevel: "Masters",
@@ -4957,7 +4957,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Tunisia Government Scholarship",
     overview:
-      "Postgraduate scholarships for international students.",
+      "Tunisia's postgraduate scholarship channel for international Master's applicants through official education authorities.",
 
     country: "Tunisia",
     degreeLevel: "Masters",
@@ -4993,7 +4993,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Ethiopia Government Scholarship",
     overview:
-      "Funding for international undergraduate students.",
+      "Ethiopia's national scholarship route for international undergraduate applicants in eligible programs.",
 
     country: "Ethiopia",
     degreeLevel: "Bachelors",
@@ -5029,7 +5029,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Ethiopia Government Scholarship",
     overview:
-      "Postgraduate funding for international students.",
+      "Ethiopia's official postgraduate scholarship pathway for international candidates entering Master's study.",
 
     country: "Ethiopia",
     degreeLevel: "Masters",
@@ -5101,7 +5101,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Kenya Government Scholarship",
     overview:
-      "Postgraduate scholarships for international students.",
+      "Kenya government postgraduate funding option for international students applying to eligible Master's programs.",
 
     country: "Kenya",
     degreeLevel: "Masters",
@@ -5173,7 +5173,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Uganda Government Scholarship",
     overview:
-      "Postgraduate funding for international students.",
+      "Uganda government Master's funding route for international postgraduate applicants in approved programs.",
 
     country: "Uganda",
     degreeLevel: "Masters",
@@ -5209,7 +5209,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Tanzania Government Scholarship",
     overview:
-      "Scholarships for international undergraduate students.",
+      "Tanzania government scholarship route for international undergraduate students through official channels.",
 
     country: "Tanzania",
     degreeLevel: "Bachelors",
@@ -5245,7 +5245,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Tanzania Government Scholarship",
     overview:
-      "Postgraduate scholarships for international students.",
+      "Master's-level scholarship support associated with Tanzania's official education system for international candidates.",
 
     country: "Tanzania",
     degreeLevel: "Masters",
@@ -5281,7 +5281,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Rwanda Government Scholarship",
     overview:
-      "Funding for international undergraduate students.",
+      "Rwanda government-supported undergraduate scholarship option for international candidates.",
 
     country: "Rwanda",
     degreeLevel: "Bachelors",
@@ -5317,7 +5317,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Rwanda Government Scholarship",
     overview:
-      "Postgraduate scholarships for international students.",
+      "Rwanda government postgraduate scholarship pathway for international applicants pursuing Master's education.",
 
     country: "Rwanda",
     degreeLevel: "Masters",
@@ -5389,7 +5389,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Senegal Government Scholarship",
     overview:
-      "Postgraduate funding for international students.",
+      "Senegal government postgraduate scholarship track for international students at Master's level.",
 
     country: "Senegal",
     degreeLevel: "Masters",
@@ -5461,7 +5461,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Ghana Government Scholarship",
     overview:
-      "Postgraduate scholarships for international students.",
+      "Ghana's government scholarship route for international Master's students under national higher-education programs.",
 
     country: "Ghana",
     degreeLevel: "Masters",
@@ -5533,7 +5533,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Zambia Government Scholarship",
     overview:
-      "Postgraduate funding for international students.",
+      "Zambia's national scholarship channel for international Master's applicants in postgraduate education.",
 
     country: "Zambia",
     degreeLevel: "Masters",
@@ -5569,7 +5569,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Zimbabwe Government Scholarship",
     overview:
-      "Funding for international undergraduate students.",
+      "Zimbabwe government scholarship channel for international students entering bachelor's programs.",
 
     country: "Zimbabwe",
     degreeLevel: "Bachelors",
@@ -5605,7 +5605,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Zimbabwe Government Scholarship",
     overview:
-      "Postgraduate scholarships for international students.",
+      "Zimbabwe government postgraduate funding channel for international candidates seeking Master's study opportunities.",
 
     country: "Zimbabwe",
     degreeLevel: "Masters",
@@ -5641,7 +5641,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Cambodia Government Scholarship",
     overview:
-      "Scholarships for international undergraduate students.",
+      "Cambodia's public scholarship pathway for international students pursuing undergraduate study.",
 
     country: "Cambodia",
     degreeLevel: "Bachelors",
@@ -5677,7 +5677,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Cambodia Government Scholarship",
     overview:
-      "Postgraduate funding for international students.",
+      "Cambodia government-linked Master's scholarship opportunity for international postgraduate candidates.",
 
     country: "Cambodia",
     degreeLevel: "Masters",
@@ -5749,7 +5749,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Laos Government Scholarship",
     overview:
-      "Postgraduate scholarships for international students.",
+      "Laos government Master's scholarship stream for international postgraduate applicants through official education bodies.",
 
     country: "Laos",
     degreeLevel: "Masters",
@@ -5785,7 +5785,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Myanmar Government Scholarship",
     overview:
-      "Scholarships for international undergraduate students.",
+      "Myanmar government undergraduate scholarship stream for international candidates in bachelor's programs.",
 
     country: "Myanmar",
     degreeLevel: "Bachelors",
@@ -5821,7 +5821,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Myanmar Government Scholarship",
     overview:
-      "Postgraduate funding for international students.",
+      "Myanmar's official postgraduate funding route for international students pursuing Master's programs.",
 
     country: "Myanmar",
     degreeLevel: "Masters",
@@ -5857,7 +5857,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Bhutan Government Scholarship",
     overview:
-      "Funding for international undergraduate students.",
+      "Bhutan's official scholarship pathway for international undergraduate students in approved study fields.",
 
     country: "Bhutan",
     degreeLevel: "Bachelors",
@@ -5893,7 +5893,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Bhutan Government Scholarship",
     overview:
-      "Postgraduate scholarships for international students.",
+      "Bhutan government-backed Master's scholarship route for international students in approved postgraduate programs.",
 
     country: "Bhutan",
     degreeLevel: "Masters",
@@ -5965,7 +5965,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Maldives Government Scholarship",
     overview:
-      "Postgraduate funding for international students.",
+      "Maldives government postgraduate scholarship pathway for international Master's-level applicants.",
 
     country: "Maldives",
     degreeLevel: "Masters",
@@ -6001,7 +6001,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Papua New Guinea Government Scholarship",
     overview:
-      "Funding for international undergraduate students.",
+      "Papua New Guinea government-backed scholarship route for international undergraduate applicants.",
 
     country: "Papua New Guinea",
     degreeLevel: "Bachelors",
@@ -6037,7 +6037,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Papua New Guinea Government Scholarship",
     overview:
-      "Postgraduate scholarships for international students.",
+      "Papua New Guinea's postgraduate scholarship path for international Master's applicants via official government channels.",
 
     country: "Papua New Guinea",
     degreeLevel: "Masters",
@@ -6109,7 +6109,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Fiji Government Scholarship",
     overview:
-      "Postgraduate funding for international students.",
+      "Fiji's government-backed Master's funding stream for international postgraduate students.",
 
     country: "Fiji",
     degreeLevel: "Masters",
@@ -6145,7 +6145,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Solomon Islands Government Scholarship",
     overview:
-      "Funding for international undergraduate students.",
+      "Solomon Islands government scholarship path for international students pursuing undergraduate education.",
 
     country: "Solomon Islands",
     degreeLevel: "Bachelors",
@@ -6181,7 +6181,7 @@ const rawScholarships: Scholarship[] = [
 
     title: "Solomon Islands Government Scholarship",
     overview:
-      "Postgraduate scholarships for international students.",
+      "Solomon Islands government postgraduate funding option for international students entering Master's-level study.",
 
     country: "Solomon Islands",
     degreeLevel: "Masters",
