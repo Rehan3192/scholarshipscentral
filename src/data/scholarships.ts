@@ -1134,19 +1134,40 @@ const rawScholarships: Scholarship[] = [
     duration: "3–4 years",
 
     eligibility: [
-      "TODO",
+      "Eligible nationalities: Citizens of partner countries listed on the official Manaaki eligibility list",
+      "Age: Must be at least 18 years old at the start of study; preference is given to applicants under 40",
+      "Residency: Must have lived in the home country for at least the last 2 years before applying (exceptions are defined in the official criteria)",
+      "Work experience: Postgraduate applicants usually need 1 year full-time or 2 years part-time relevant work experience",
+      "Return commitment: Must return to the home country for at least 2 years after completing study",
+      "Academic and English: Must meet the academic and English requirements of the chosen university/program (test scores are typically requested if shortlisted)",
     ],
 
     benefits: [
-      "TODO",
+      "Full tuition fees (100% of approved academic fees)",
+      "Living allowance: Approximately NZ$615 per week (paid fortnightly; amount can change by year)",
+      "Establishment allowance: One-time NZ$3,000 on arrival to help with setup costs",
+      "Travel: Return economy airfare and travel-related insurance",
+      "Medical insurance coverage while in New Zealand",
+      "Postgraduate support: Additional funding available for research and thesis costs (where applicable)",
+      "Reintegration allowance: NZ$1,000 upon return to the home country (as listed in official university guidance)",
+      "Tutoring support: Up to NZ$1,000 available if required (as listed in official university guidance)",
     ],
 
     applicationProcess: [
-      "TODO",
+      "Check your country eligibility and priority sectors on the official Manaaki website",
+      "Review eligibility criteria and complete the online eligibility questionnaire",
+      "Apply online through the Manaaki scholarship application portal during the official window",
+      "Upload academic transcripts including grading scale information",
+      "If shortlisted, provide verified English translations of transcripts and completion certificates",
+      "Wait for selection results and follow the preferred-candidate steps for university placement",
     ],
 
     documents: [
-      "TODO",
+      "Academic transcripts with grading scale information",
+      "Completion certificates or degree documents (if completed)",
+      "Verified English translations (if shortlisted and originals are not in English)",
+      "English language test results (if shortlisted and required by the institution)",
+      "Any additional documents requested in your country-specific application guidance",
     ],
 
     applyUrl: "https://www.daad.de",
@@ -1170,19 +1191,40 @@ const rawScholarships: Scholarship[] = [
     duration: "1 year",
 
     eligibility: [
-      "TODO",
+      "Manaaki New Zealand Scholarship eligible countries: Citizens of partner countries listed on the official Manaaki eligibility list",
+      "Age: Must be at least 18 years old at the start of study; preference is given to applicants under 40",
+      "Residency: Must have lived in the home country for at least the last 2 years before applying (exceptions are defined in the official criteria)",
+      "Manaaki New Zealand Scholarship requirements: Postgraduate applicants usually need 1 year full-time or 2 years part-time relevant work experience",
+      "Return commitment: Must return to the home country for at least 2 years after completing study",
+      "Academic and English: Must meet the academic and English requirements of the chosen university/program (test scores are typically requested if shortlisted)",
     ],
 
     benefits: [
-      "TODO",
+      "Full tuition fees (100% of approved academic fees)",
+      "Living allowance: Approximately NZ$615 per week (paid fortnightly; amount can change by year)",
+      "Establishment allowance: One-time NZ$3,000 on arrival to help with setup costs",
+      "Travel: Return economy airfare and travel-related insurance",
+      "Medical insurance coverage while in New Zealand",
+      "Postgraduate support: Additional funding available for research and thesis costs (where applicable)",
+      "Reintegration allowance: NZ$1,000 upon return to the home country (as listed in official university guidance)",
+      "Tutoring support: Up to NZ$1,000 available if required (as listed in official university guidance)",
     ],
 
     applicationProcess: [
-      "TODO",
+      "Check your country eligibility and priority sectors on the official Manaaki website",
+      "Review eligibility criteria and complete the online eligibility questionnaire",
+      "Apply online through the Manaaki scholarship application portal during the official window",
+      "Upload academic transcripts including grading scale information",
+      "If shortlisted, provide verified English translations of transcripts and completion certificates",
+      "Wait for selection results and follow the preferred-candidate steps for university placement",
     ],
 
     documents: [
-      "TODO",
+      "Academic transcripts with grading scale information",
+      "Completion certificates or degree documents (if completed)",
+      "Verified English translations (if shortlisted and originals are not in English)",
+      "English language test results (if shortlisted and required by the institution)",
+      "Any additional documents requested in your country-specific application guidance",
     ],
 
     applyUrl: "https://cscuk.fcdo.gov.uk",
@@ -1238,8 +1280,8 @@ const rawScholarships: Scholarship[] = [
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
 
-    deadline: "February",
-    duration: "1–2 years",
+    deadline: "March 31, 2026 (applications close at 12:00 PM NZT)",
+    duration: "1-2 years (typical Master's duration; varies by program)",
 
     eligibility: [
       "TODO",
@@ -1617,14 +1659,16 @@ const rawScholarships: Scholarship[] = [
 
     title: "New Zealand Manaaki Scholarship",
     overview:
-      "Government-funded scholarships for postgraduate study in New Zealand.",
+      "The Manaaki New Zealand Scholarship 2026 is a New Zealand Government program supporting international postgraduate study for citizens of partner countries, aimed at building future leaders for sustainable development.",
+    summary:
+      "The Manaaki New Zealand Scholarship is a fully funded program run by the New Zealand Government to build leadership and technical capacity in partner countries. It is one of the fully funded scholarships in New Zealand for international students and sits within the wider landscape of New Zealand scholarships for international students. Manaaki New Zealand Scholarships for international students cover full tuition, living allowance, establishment support, travel, and insurance. Eligibility depends on country and program alignment, and applications are submitted through the official Manaaki scholarship portal during the annual intake window.",
 
     country: "New Zealand",
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
 
-    deadline: "February",
-    duration: "1–2 years",
+    deadline: "March 31, 2026 (applications close at 12:00 PM NZT)",
+    duration: "1-2 years (typical Master's duration; varies by program)",
 
     eligibility: [
       "TODO",
@@ -1642,10 +1686,50 @@ const rawScholarships: Scholarship[] = [
       "TODO",
     ],
 
-    applyUrl: "https://www.nzscholarships.govt.nz",
-    officialSource: "New Zealand Government",
+    goodToKnow: [
+      "You do not need to apply to a New Zealand institution until you are a preferred candidate.",
+      "The online application system can close early for some countries if a high volume of applications is received.",
+      "Priority study sectors and eligible levels vary by country; always check your country profile first.",
+      "Manaaki New Zealand Scholarships for international students are separate from New Zealand Commonwealth Scholarships and have their own eligibility rules.",
+    ],
 
-    lastUpdated: "2026-02-06",
+    faqs: [
+      {
+        question: "Is the Manaaki New Zealand Scholarship fully funded?",
+        answer:
+          "Yes. It typically covers tuition, living allowance, establishment support, travel, and insurance, with additional postgraduate support where applicable.",
+      },
+      {
+        question: "Who can apply?",
+        answer:
+          "Only citizens of eligible partner countries who meet the official eligibility criteria and country priorities can apply.",
+      },
+      {
+        question: "Do I need IELTS/TOEFL before applying?",
+        answer:
+          "English test scores are usually requested only if you are shortlisted, but you must still meet your chosen program’s English requirements.",
+      },
+      {
+        question: "Is Pakistan eligible for Manaaki New Zealand Scholarship?",
+        answer:
+          "Eligibility depends on the official partner country list. Check the Manaaki eligibility list to confirm if Pakistan is included for the current intake.",
+      },
+      {
+        question: "Are these the same as New Zealand Commonwealth Scholarships?",
+        answer:
+          "No. Manaaki New Zealand Scholarships are a separate program with its own eligibility rules and application process.",
+      },
+      {
+        question: "When do applications close for the 2026 intake?",
+        answer:
+          "Applications close on March 31, 2026 at 12:00 PM NZT.",
+      },
+    ],
+
+    applyUrl: "https://www.nzscholarships.govt.nz/apply-online/",
+    officialSource: "New Zealand Government (Manaaki New Zealand Scholarships)",
+
+    lastUpdated: "2026-03-02",
   },
 
   {
