@@ -9428,6 +9428,147 @@ const rawScholarships: Scholarship[] = [
 
     lastUpdated: "2026-03-01",
   },
+
+  {
+    slug: "nycu-international-student-scholarship-masters",
+
+    title: "NYCU International Student Scholarship",
+    overview:
+      "National Yang Ming Chiao Tung University (NYCU) offers scholarship support for international Master's students through tuition awards and monthly stipends in Taiwan.",
+    summary:
+      "The NYCU International Student Scholarship for Master's study is handled through NYCU's international admissions process. Incoming students apply for scholarship consideration together with their degree application. NYCU states that monthly stipends and tuition awards may be granted together or separately, and scholarship continuation depends on academic performance and annual review.",
+
+    country: "Taiwan",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline:
+      "March 15, 2026 (Fall 2026 international degree-seeking application window closes; spring cycle is typically August-September)",
+    duration: "Generally 1 year per award; Master's maximum scholarship duration is 2 years",
+
+    eligibility: [
+      "Eligible nationalities: International students admitted to NYCU degree programs",
+      "Degree level: Master's applicants can apply through the international degree-seeking route",
+      "Incoming student route: Scholarship is requested together with admission application",
+      "Current student renewal benchmark: Graduate GPA 3.5 for renewal applications",
+      "Funding rule: Applicants receiving Taiwan government scholarships/grants are not eligible for this internal scholarship category",
+    ],
+
+    benefits: [
+      "Tuition award options include tuition waiver or tuition charged at local-student rate",
+      "Monthly stipend support is available under NYCU scholarship rules",
+      "Stipend and tuition award can be granted together or separately",
+      "Award is normally valid for 1 year and may be renewed based on review and policy limits",
+    ],
+
+    applicationProcess: [
+      "Open the NYCU international degree-seeking application system during the official cycle",
+      "Submit the full admission application for the chosen Master's program",
+      "Select scholarship consideration within the admission process",
+      "Upload required admissions documents and submit before the deadline",
+      "Check admission/scholarship result notices and complete enrollment steps if admitted",
+    ],
+
+    documents: [
+      "Passport copy",
+      "Highest degree certificate",
+      "Academic transcripts",
+      "Study plan or statement of purpose",
+      "Recommendation letters",
+      "Language proficiency evidence required by the selected program",
+    ],
+
+    goodToKnow: [
+      "The published January-March and July-September scholarship periods on the scholarship page are for current-student applications/renewals.",
+      "For new international applicants, scholarship request is embedded in the admissions application and follows the admissions cycle.",
+      "Final funding package details are confirmed in official admission/scholarship notifications.",
+    ],
+
+    faqs: [
+      {
+        question: "Is NYCU scholarship application separate for new Master's applicants?",
+        answer:
+          "No. NYCU states incoming students apply for scholarship together with their admission application.",
+      },
+      {
+        question: "Is this always fully funded?",
+        answer:
+          "Not always. NYCU indicates tuition award and monthly stipend may be offered together or separately.",
+      },
+      {
+        question: "What is the key Fall 2026 deadline?",
+        answer:
+          "The official NYCU international degree-seeking Fall 2026 window shown on OIA is 12/20/2025 to 3/15/2026.",
+      },
+      {
+        question: "What GPA is used for graduate renewal applications?",
+        answer:
+          "NYCU scholarship FAQ lists a graduate benchmark of GPA 3.5 for renewal applications.",
+      },
+    ],
+
+    applyUrl:
+      "https://oia.nycu.edu.tw/oia/en/app/artwebsite/view?id=791&module=artwebsite&serno=a5c630b6-8faf-4062-96cc-d305a2ff7a7d",
+    officialSource: "NYCU Office of International Affairs",
+
+    lastUpdated: "2026-03-03",
+  },
+
+  {
+    slug: "nycu-international-student-scholarship-phd",
+
+    title: "NYCU International Student Scholarship",
+    overview:
+      "NYCU provides scholarship support for international PhD students through tuition awards and stipend pathways, with award terms defined by university scholarship regulations.",
+    summary:
+      "The NYCU International Student Scholarship for PhD study is offered via NYCU's international admissions route in Taiwan. Incoming PhD applicants request scholarship consideration inside the admission application. NYCU notes that monthly stipend and tuition award can be awarded together or separately, and also publishes an Elite PhD Scholarship track with specific committee-based selection.",
+
+    country: "Taiwan",
+    degreeLevel: "PhD",
+    fundingType: "Partially Funded",
+
+    deadline:
+      "March 15, 2026 (Fall 2026 international degree-seeking cycle closing date; check department-specific spring availability)",
+    duration: "Generally 1 year per award; PhD maximum scholarship duration is 5 years",
+
+    eligibility: [
+      "Eligible nationalities: International students admitted to NYCU doctoral programs",
+      "Degree level: PhD applicants can request scholarship through admission application",
+      "Current student renewal benchmark: Graduate GPA 3.5 for scholarship renewal applications",
+      "Funding rule: NYCU scholarship category excludes recipients of Taiwan government scholarships/grants",
+      "Elite PhD track: NYCU states elite doctoral awards are recommended by colleges and reviewed by committee",
+    ],
+
+    benefits: [
+      "Tuition award options include tuition waiver or tuition charged at local-student rate",
+      "Monthly stipend support is available under NYCU scholarship mechanisms",
+      "Scholarship components may be combined or granted separately",
+      "NYCU scholarship page lists an Elite PhD Scholarship example with NT$33,000 monthly stipend and tuition waiver for 2 years",
+    ],
+
+    applicationProcess: [
+      "Apply for an NYCU PhD program through the international degree-seeking admissions system",
+      "Request scholarship consideration as part of the same admission application",
+      "Submit required academic and supporting documents before the cycle deadline",
+      "Wait for admission and scholarship review results from NYCU",
+      "After acceptance, complete enrollment/visa procedures and follow scholarship reporting requirements",
+    ],
+
+    documents: [
+      "Passport copy",
+      "Master's degree certificate (or equivalent)",
+      "Academic transcripts",
+      "Research plan or statement of purpose",
+      "Recommendation letters",
+      "Language proficiency evidence required by the selected doctoral program",
+    ],
+
+    applyUrl:
+      "https://oia.nycu.edu.tw/oia/en/app/artwebsite/view?id=791&module=artwebsite&serno=a5c630b6-8faf-4062-96cc-d305a2ff7a7d",
+    officialSource: "NYCU Office of International Affairs",
+
+    lastUpdated: "2026-03-03",
+  },
 ];
 
 function fixMojibake(value: string) {
