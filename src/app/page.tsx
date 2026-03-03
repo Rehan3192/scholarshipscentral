@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { scholarships } from "@/data/scholarships";
 import { toSegment } from "@/lib/helpers";
 import {
@@ -8,8 +9,26 @@ import {
   type WordPressPostListItem,
 } from "@/lib/wordpress";
 
-const BLOG_FETCH_TIMEOUT_MS = 900;
+const BLOG_FETCH_TIMEOUT_MS = 450;
 const BLOG_REVALIDATE_SECONDS = 60 * 60 * 6;
+const LATEST_SCHOLARSHIPS = [...scholarships]
+  .sort((a, b) => (b.lastUpdated ?? "").localeCompare(a.lastUpdated ?? ""))
+  .slice(0, 6);
+
+const COUNTRY_COUNTS = new Map<string, number>();
+for (const s of scholarships) {
+  COUNTRY_COUNTS.set(s.country, (COUNTRY_COUNTS.get(s.country) ?? 0) + 1);
+}
+
+const DEGREE_COUNT = new Set(scholarships.map((s) => s.degreeLevel)).size;
+const TOP_COUNTRIES = Array.from(COUNTRY_COUNTS.entries())
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  .slice(0, 9)
+  .map(([country, count]) => ({
+    country,
+    count,
+    href: `/countries/${toSegment(country)}`,
+  }));
 
 function formatDate(value: string) {
   const iso = value.split("T")[0];
@@ -35,27 +54,55 @@ async function getHomepageBlogPosts(): Promise<WordPressPostListItem[]> {
   }
 }
 
-export default async function HomePage() {
-  const latest = [...scholarships]
-    .sort((a, b) => (b.lastUpdated ?? "").localeCompare(a.lastUpdated ?? ""))
-    .slice(0, 6);
+function BlogSectionFallback() {
+  return (
+    <div className="rounded-2xl border border-gray-200 bg-white p-5 text-sm text-gray-700 shadow-sm">
+      <p className="m-0">New guides and updates will appear here.</p>
+    </div>
+  );
+}
 
-  const countryCounts = new Map<string, number>();
-  for (const s of scholarships) {
-    countryCounts.set(s.country, (countryCounts.get(s.country) ?? 0) + 1);
-  }
-  const degreeCount = new Set(scholarships.map((s) => s.degreeLevel)).size;
-  const topCountries = Array.from(countryCounts.entries())
-    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-    .slice(0, 9)
-    .map(([country, count]) => ({
-      country,
-      count,
-      href: `/countries/${toSegment(country)}`,
-    }));
-
+async function HomepageBlogSection() {
   const blogPosts = await getHomepageBlogPosts();
 
+  if (blogPosts.length === 0) {
+    return <BlogSectionFallback />;
+  }
+
+  return (
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {blogPosts.map((post) => {
+        const title = stripHtmlToText(post.title.rendered);
+        const excerpt =
+          stripHtmlToText(post.excerpt.rendered) ||
+          "Read the full post for details.";
+
+        return (
+          <Link
+            key={post.id}
+            href={`/blog/${post.slug}`}
+            className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-gray-300 hover:bg-gray-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+          >
+            <div className="text-xs font-semibold text-gray-500">
+              {formatDate(post.date)}
+            </div>
+            <div className="mt-2 text-base font-semibold text-gray-900">
+              {title}
+            </div>
+            <div className="mt-2 text-sm text-gray-700">
+              {excerpt}
+            </div>
+            <div className="mt-3 text-sm font-semibold text-blue-700">
+              Read more &rarr;
+            </div>
+          </Link>
+        );
+      })}
+    </div>
+  );
+}
+
+export default function HomePage() {
   return (
     <div className="py-10 space-y-12">
       <header className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-10">
@@ -120,11 +167,11 @@ export default async function HomePage() {
           </span>{" "}
           scholarships across{" "}
           <span className="font-semibold text-gray-900">
-            {countryCounts.size}
+            {COUNTRY_COUNTS.size}
           </span>{" "}
           countries and{" "}
           <span className="font-semibold text-gray-900">
-            {degreeCount}
+            {DEGREE_COUNT}
           </span>{" "}
           degree levels.
         </p>
@@ -141,7 +188,7 @@ export default async function HomePage() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {latest.map((s) => (
+          {LATEST_SCHOLARSHIPS.map((s) => (
             <Link
               key={s.slug}
               href={`/scholarships/${s.slug}`}
@@ -269,7 +316,7 @@ export default async function HomePage() {
           </Link>
         </div>
 
-        {topCountries.length > 0 ? (
+        {TOP_COUNTRIES.length > 0 ? (
           <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <h3 className="m-0 text-base font-semibold text-gray-900">
@@ -281,7 +328,7 @@ export default async function HomePage() {
             </div>
 
             <div className="mt-4 flex flex-wrap gap-2">
-              {topCountries.map((c) => (
+              {TOP_COUNTRIES.map((c) => (
                 <Link
                   key={c.country}
                   href={c.href}
@@ -308,43 +355,9 @@ export default async function HomePage() {
           </Link>
         </div>
 
-        {blogPosts.length === 0 ? (
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 text-sm text-gray-700 shadow-sm">
-            <p className="m-0">
-              New guides and updates will appear here.
-            </p>
-          </div>
-        ) : (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {blogPosts.map((post) => {
-              const title = stripHtmlToText(post.title.rendered);
-              const excerpt =
-                stripHtmlToText(post.excerpt.rendered) ||
-                "Read the full post for details.";
-
-              return (
-                <Link
-                  key={post.id}
-                  href={`/blog/${post.slug}`}
-                  className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-gray-300 hover:bg-gray-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-                >
-                  <div className="text-xs font-semibold text-gray-500">
-                    {formatDate(post.date)}
-                  </div>
-                  <div className="mt-2 text-base font-semibold text-gray-900">
-                    {title}
-                  </div>
-                  <div className="mt-2 text-sm text-gray-700">
-                    {excerpt}
-                  </div>
-                  <div className="mt-3 text-sm font-semibold text-blue-700">
-                    Read more &rarr;
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        )}
+        <Suspense fallback={<BlogSectionFallback />}>
+          <HomepageBlogSection />
+        </Suspense>
       </section>
 
       <section className="space-y-4">
