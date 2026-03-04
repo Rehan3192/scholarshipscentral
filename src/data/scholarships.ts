@@ -9346,6 +9346,9 @@ const rawScholarships: Scholarship[] = [
       "The KNB Scholarship is an Indonesian Government program for students from developing countries, supporting international Bachelor's study at selected Indonesian universities.",
     summary:
       "The Kemitraan Negara Berkembang (KNB) Scholarship is administered by the Indonesian Government for students from developing countries. At Bachelor's level, applicants are placed at participating universities in Indonesia and receive scholarship support based on official KNB rules, including academic funding and living support components. Final award terms depend on the official call and placement outcome.",
+    guideUrl:
+      "https://www.scholarshipscentral.com/blog/knb-indonesian-government-scholarship",
+    guideLabel: "KNB Indonesian Government Scholarship guide",
 
     country: "Indonesia",
     degreeLevel: "Bachelors",
@@ -9434,6 +9437,9 @@ const rawScholarships: Scholarship[] = [
       "The Indonesian Government KNB Scholarship supports international Master's study for applicants from developing countries at selected Indonesian universities.",
     summary:
       "At Master's level, the KNB Scholarship funds international students from developing countries to study at participating Indonesian universities. The program is administered through the national KNB system with embassy-linked recommendation steps, online application, and university-level selection. Award scope follows official scholarship component rules and may include tuition, living support, and other approved benefits.",
+    guideUrl:
+      "https://www.scholarshipscentral.com/blog/knb-indonesian-government-scholarship",
+    guideLabel: "KNB Indonesian Government Scholarship guide",
 
     country: "Indonesia",
     degreeLevel: "Masters",
@@ -9492,6 +9498,9 @@ const rawScholarships: Scholarship[] = [
       "The Indonesian Government KNB Scholarship funds doctoral study for eligible international applicants from developing countries at selected universities in Indonesia.",
     summary:
       "The KNB Scholarship doctoral track supports international PhD candidates from developing countries through Indonesia's national scholarship scheme. Applicants complete embassy-linked recommendation steps and submit through the official KNB portal, then pass administrative and academic selection stages. Scholarship components are defined by official KNB policy and confirmed at award stage.",
+    guideUrl:
+      "https://www.scholarshipscentral.com/blog/knb-indonesian-government-scholarship",
+    guideLabel: "KNB Indonesian Government Scholarship guide",
 
     country: "Indonesia",
     degreeLevel: "PhD",
