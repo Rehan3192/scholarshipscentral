@@ -9339,6 +9339,210 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "indonesian-government-knb-scholarship-bachelors",
+
+    title: "Indonesian Government KNB Scholarship",
+    overview:
+      "The KNB Scholarship is an Indonesian Government program for students from developing countries, supporting international Bachelor's study at selected Indonesian universities.",
+    summary:
+      "The Kemitraan Negara Berkembang (KNB) Scholarship is administered by the Indonesian Government for students from developing countries. At Bachelor's level, applicants are placed at participating universities in Indonesia and receive scholarship support based on official KNB rules, including academic funding and living support components. Final award terms depend on the official call and placement outcome.",
+
+    country: "Indonesia",
+    degreeLevel: "Bachelors",
+    fundingType: "Fully Funded",
+
+    deadline:
+      "March 31, 2026 (widely published KNB 2026 registration close date; confirm exact closing time on the official portal)",
+    duration:
+      "Up to 12 months Indonesian language preparation (BIPA) + up to 48 months Bachelor's program",
+
+    eligibility: [
+      "Eligible nationalities: Citizens of developing countries listed in the official KNB call",
+      "Degree level: Bachelor's applicants only",
+      "Education background: Secondary/high-school completion required under KNB admission rules",
+      "Embassy process: Recommendation route via Indonesian Embassy/Consulate is part of the application flow",
+      "Language requirement: English proficiency evidence is required according to official KNB requirements",
+      "Age requirement: Degree-specific age limits are defined in the official KNB requirements page",
+    ],
+
+    benefits: [
+      "Tuition fee support for language preparation and regular academic program (as defined by KNB)",
+      "Monthly living allowance during scholarship period",
+      "Research/book support components as listed in KNB scholarship components",
+      "Health insurance coverage under provider policy terms",
+      "Economy-class arrival and return airfare under KNB travel rules",
+    ],
+
+    applicationProcess: [
+      "Download and review the official KNB offering letter and requirements",
+      "Prepare documents and process required recommendation channel through Indonesian Embassy/Consulate",
+      "Create account and submit complete online application on the official KNB portal",
+      "Complete administrative and academic selection stages assigned by KNB and host universities",
+      "Accept award and complete visa/enrollment procedures if selected",
+    ],
+
+    documents: [
+      "Passport",
+      "Academic certificates and transcripts",
+      "Curriculum Vitae (CV)",
+      "Motivation letter or study statement",
+      "English proficiency evidence required by KNB",
+      "Embassy recommendation-related documents required by official process",
+    ],
+
+    goodToKnow: [
+      "The claim of '222 seats' is not consistently published in crawlable official text; verify the current quota directly in the official KNB announcement materials.",
+      "KNB benefits are program-regulated; read the current call for exact allowances and exclusions.",
+      "Do not rely on third-party social posts alone for dates; confirm on official KNB channels before submission.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the KNB Scholarship available for Bachelor's study?",
+        answer:
+          "Yes. KNB includes Bachelor's programs at selected Indonesian universities under the official call.",
+      },
+      {
+        question: "Is IELTS always mandatory for KNB?",
+        answer:
+          "KNB requires language proficiency evidence, but accepted proof routes are defined by the official requirements page for the cycle.",
+      },
+      {
+        question: "What is the 2026 application deadline?",
+        answer:
+          "Public KNB 2026 notices widely list March 31, 2026; verify exact deadline timing on the official KNB portal before applying.",
+      },
+      {
+        question: "Does the scholarship include airfare and health insurance?",
+        answer:
+          "Yes, KNB scholarship components include travel and health-insurance support under official policy terms.",
+      },
+    ],
+
+    applyUrl: "https://knb.kemdiktisaintek.go.id/",
+    officialSource:
+      "Indonesian Government KNB Scholarship Portal (Kemdiktisaintek)",
+
+    lastUpdated: "2026-03-04",
+  },
+
+  {
+    slug: "indonesian-government-knb-scholarship-masters",
+
+    title: "Indonesian Government KNB Scholarship",
+    overview:
+      "The Indonesian Government KNB Scholarship supports international Master's study for applicants from developing countries at selected Indonesian universities.",
+    summary:
+      "At Master's level, the KNB Scholarship funds international students from developing countries to study at participating Indonesian universities. The program is administered through the national KNB system with embassy-linked recommendation steps, online application, and university-level selection. Award scope follows official scholarship component rules and may include tuition, living support, and other approved benefits.",
+
+    country: "Indonesia",
+    degreeLevel: "Masters",
+    fundingType: "Fully Funded",
+
+    deadline:
+      "March 31, 2026 (commonly published KNB 2026 close date; verify final time on official portal)",
+    duration:
+      "Up to 12 months Indonesian language preparation (BIPA) + up to 24 months Master's program",
+
+    eligibility: [
+      "Eligible nationalities: Applicants from developing countries listed in the KNB eligibility scope",
+      "Degree level: Master's applicants with relevant prior degree background",
+      "Application route: Embassy/Consulate recommendation channel and online portal submission are required",
+      "Language requirement: Must meet KNB language proof requirements for the cycle",
+      "Age requirement: Degree-specific age rule is set in official KNB requirements",
+    ],
+
+    benefits: [
+      "Tuition support for preparatory language stage and academic stage under KNB policy",
+      "Monthly living allowance during scholarship period",
+      "Book/research-related allowance components under official scholarship rules",
+      "Health insurance based on provider coverage terms",
+      "Economy-class arrival and return airfare support",
+    ],
+
+    applicationProcess: [
+      "Read the current official KNB call and requirements",
+      "Collect documents and complete Indonesian Embassy/Consulate recommendation process",
+      "Submit full online application through official KNB portal before deadline",
+      "Complete administrative and substantive selection stages",
+      "Confirm acceptance and proceed with immigration and enrollment steps",
+    ],
+
+    documents: [
+      "Passport",
+      "Bachelor's degree certificate and transcripts",
+      "CV",
+      "Motivation letter or study objective statement",
+      "Recommendation documents required by KNB/Embassy process",
+      "Language proficiency evidence required by the official call",
+    ],
+
+    applyUrl: "https://knb.kemdiktisaintek.go.id/",
+    officialSource:
+      "Indonesian Government KNB Scholarship Portal (Kemdiktisaintek)",
+
+    lastUpdated: "2026-03-04",
+  },
+
+  {
+    slug: "indonesian-government-knb-scholarship-phd",
+
+    title: "Indonesian Government KNB Scholarship",
+    overview:
+      "The Indonesian Government KNB Scholarship funds doctoral study for eligible international applicants from developing countries at selected universities in Indonesia.",
+    summary:
+      "The KNB Scholarship doctoral track supports international PhD candidates from developing countries through Indonesia's national scholarship scheme. Applicants complete embassy-linked recommendation steps and submit through the official KNB portal, then pass administrative and academic selection stages. Scholarship components are defined by official KNB policy and confirmed at award stage.",
+
+    country: "Indonesia",
+    degreeLevel: "PhD",
+    fundingType: "Fully Funded",
+
+    deadline:
+      "March 31, 2026 (published KNB 2026 registration close date; confirm final deadline on official portal)",
+    duration:
+      "Up to 12 months Indonesian language preparation (BIPA) + up to 48 months doctoral program",
+
+    eligibility: [
+      "Eligible nationalities: Developing-country applicants under KNB eligibility rules",
+      "Degree level: PhD applicants with relevant Master's-level academic background",
+      "Application route: Indonesian Embassy/Consulate recommendation path plus online KNB submission",
+      "Language requirement: Must provide accepted language evidence as required in official call",
+      "Age requirement: Official degree-specific age cap applies",
+    ],
+
+    benefits: [
+      "Tuition support during preparatory and doctoral academic stages",
+      "Monthly living allowance throughout funded period",
+      "Research/book support components under KNB scholarship policy",
+      "Health insurance support according to provider terms",
+      "Arrival and return economy airfare support",
+    ],
+
+    applicationProcess: [
+      "Review official KNB doctoral requirements and scholarship components",
+      "Prepare required academic/recommendation documents through embassy process",
+      "Submit online application on the KNB portal before deadline",
+      "Follow administrative and substantive selection stages by KNB and host institutions",
+      "If selected, complete acceptance, visa, and university enrollment procedures",
+    ],
+
+    documents: [
+      "Passport",
+      "Master's degree certificate and academic transcripts",
+      "CV",
+      "Research proposal or study plan",
+      "Recommendation documents required by KNB process",
+      "Language proficiency evidence required by official rules",
+    ],
+
+    applyUrl: "https://knb.kemdiktisaintek.go.id/",
+    officialSource:
+      "Indonesian Government KNB Scholarship Portal (Kemdiktisaintek)",
+
+    lastUpdated: "2026-03-04",
+  },
+
+  {
     slug: "hbku-masters-scholarship-qatar",
 
     title: "HBKU Master's Scholarship in Qatar",
