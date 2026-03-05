@@ -177,7 +177,7 @@ export default function HomePage() {
         </p>
       </header>
 
-      <section className="space-y-4">
+      <section className="space-y-4 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="text-2xl font-semibold text-gray-900">
             Latest updates
@@ -219,7 +219,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="space-y-4">
+      <section className="space-y-4 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="text-2xl font-semibold text-gray-900">
             Browse by degree
@@ -268,7 +268,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="space-y-4">
+      <section className="space-y-4 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="text-2xl font-semibold text-gray-900">
             Browse by country
@@ -345,7 +345,7 @@ export default function HomePage() {
         ) : null}
       </section>
 
-      <section className="space-y-4">
+      <section className="space-y-4 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="text-2xl font-semibold text-gray-900">
             From the blog
@@ -360,7 +360,7 @@ export default function HomePage() {
         </Suspense>
       </section>
 
-      <section className="space-y-4">
+      <section className="space-y-4 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="text-2xl font-semibold text-gray-900">
             Browse by funding type
@@ -397,7 +397,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8 content-visibility-auto">
         <h2 className="mt-0 text-xl font-semibold text-gray-900">
           Explore more
         </h2>
