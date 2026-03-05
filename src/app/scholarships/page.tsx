@@ -33,6 +33,51 @@ const LISTING = scholarships.map((s) => ({
   lastUpdated: s.lastUpdated,
 }));
 
+function QuickFiltersFallback() {
+  return (
+    <div
+      aria-hidden="true"
+      className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5"
+    >
+      <div className="flex flex-wrap gap-2">
+        {Array.from({ length: 6 }).map((_, index) => (
+          <div
+            key={`quick-filter-skeleton-${index}`}
+            className="h-8 w-24 rounded-full bg-gray-100 animate-pulse"
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function FiltersFallback() {
+  return (
+    <div aria-hidden="true" className="space-y-4">
+      <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
+        <div className="h-10 w-48 rounded-lg bg-gray-100 animate-pulse" />
+      </div>
+      <div className="space-y-4">
+        {Array.from({ length: 10 }).map((_, index) => (
+          <div
+            key={`scholarship-card-skeleton-${index}`}
+            className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
+          >
+            <div className="h-5 w-3/4 rounded bg-gray-100 animate-pulse" />
+            <div className="mt-3 h-4 w-full rounded bg-gray-100 animate-pulse" />
+            <div className="mt-2 h-4 w-5/6 rounded bg-gray-100 animate-pulse" />
+            <div className="mt-4 flex gap-2">
+              <div className="h-6 w-20 rounded-full bg-gray-100 animate-pulse" />
+              <div className="h-6 w-20 rounded-full bg-gray-100 animate-pulse" />
+              <div className="h-6 w-24 rounded-full bg-gray-100 animate-pulse" />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function ScholarshipsPage() {
   return (
     <div className="space-y-6">
@@ -57,7 +102,7 @@ export default function ScholarshipsPage() {
       <div className="content-visibility-auto">
         <Suspense
           fallback={
-            <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5" />
+            <QuickFiltersFallback />
           }
         >
           <QuickFilters />
@@ -67,7 +112,7 @@ export default function ScholarshipsPage() {
       <div className="content-visibility-auto">
         <Suspense
           fallback={
-            <p className="text-sm text-gray-600">Loading scholarships...</p>
+            <FiltersFallback />
           }
         >
           <ScholarshipFilters scholarships={LISTING} />
