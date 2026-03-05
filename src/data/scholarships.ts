@@ -7078,6 +7078,92 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "italy-university-of-camerino-scholarship-masters",
+
+    title: "University of Camerino (UNICAM) Scholarship",
+    overview:
+      "UNICAM supports international Master's applicants in Italy through university admission and the ERDIS Marche regional scholarship system.",
+    summary:
+      "The University of Camerino (UNICAM) scholarship path for international Master's students combines UNICAM pre-admission with a separate ERDIS Marche regional scholarship application. The pre-admission step is required for admission eligibility, while ERDIS awards are based on merit and family income and can include tuition waiver and support for food and lodging. Applicants should follow the official UNICAM and ERDIS timelines and requirements for the 2026/27 intake.",
+
+    country: "Italy",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline:
+      "March 31, 2026 (UNICAM pre-admission deadline for 2026/27; ERDIS call opens in the second half of July)",
+    duration: "Up to 2 years (typical Master's duration)",
+
+    eligibility: [
+      "Eligible nationalities: International applicants to UNICAM Master's programs",
+      "Degree level: Master's only",
+      "Pre-admission: UNICAM pre-admission is required before scholarship steps",
+      "Language requirement: English certificates are not mandatory for pre-admission, and MOI certificates are not accepted at pre-admission stage",
+      "Program match: Must apply to an eligible English-taught Master's program at UNICAM",
+      "ERDIS criteria: Scholarship eligibility depends on merit and family income rules in the ERDIS call",
+    ],
+
+    benefits: [
+      "UNICAM pre-admission: Admission evaluation only (scholarship is separate)",
+      "ERDIS benefits may include tuition waiver, food and lodging support (Oct to Jul), and possible cash assistance",
+      "Coverage depends on ERDIS ranking and eligibility rules; not all admitted students receive full support",
+    ],
+
+    applicationProcess: [
+      "Submit UNICAM pre-admission through the official international portal",
+      "Pay the non-refundable pre-admission fee (EUR 20) if required by the portal",
+      "Obtain pre-admission outcome for your Master's program",
+      "Apply to ERDIS Marche when the annual call opens (usually in the second half of July)",
+      "Provide financial documents required by ERDIS and complete the regional application",
+      "Follow ERDIS ranking results and complete enrollment steps if awarded",
+    ],
+
+    documents: [
+      "Valid passport/ID",
+      "Bachelor's degree certificate and academic transcripts",
+      "CV",
+      "Motivation letter or study plan",
+      "Program-specific documents required by UNICAM",
+      "Financial documentation required by ERDIS (per official call)",
+    ],
+
+    goodToKnow: [
+      "UNICAM pre-admission and ERDIS scholarship are separate steps; pre-admission does not include scholarships.",
+      "English certificates are listed as optional for pre-admission, but program enrollment may still require language proof.",
+      "ERDIS benefits and rules are updated annually; always read the current call.",
+    ],
+
+    faqs: [
+      {
+        question: "Is UNICAM scholarship fully funded for everyone?",
+        answer:
+          "No. ERDIS awards depend on ranking and eligibility; benefits vary by call and student profile.",
+      },
+      {
+        question: "Is IELTS mandatory for UNICAM pre-admission?",
+        answer:
+          "UNICAM pre-admission states English certificates are not mandatory, and MOI certificates are not accepted at the pre-admission stage.",
+      },
+      {
+        question: "What is the 2026/27 pre-admission deadline?",
+        answer:
+          "UNICAM lists March 31, 2026 as the pre-admission deadline for 2026/27.",
+      },
+      {
+        question: "When does ERDIS application open?",
+        answer:
+          "ERDIS calls are announced yearly in the second half of July; check the official ERDIS portal.",
+      },
+    ],
+
+    applyUrl:
+      "https://international.unicam.it/admissions/pre-admissions-2026-2027",
+    officialSource: "University of Camerino (UNICAM) - International Students",
+
+    lastUpdated: "2026-03-05",
+  },
+
+  {
     slug: "spain-la-caixa-foundation-scholarship",
 
     title: "Spain La Caixa Foundation Scholarship",
