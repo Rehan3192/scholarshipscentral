@@ -8489,6 +8489,90 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "uk-ucl-global-masters-scholarship",
+
+    title: "UCL Global Masters Scholarship",
+    overview:
+      "Need-based scholarship for overseas students from lower-income backgrounds pursuing a full-time Master's degree at University College London (UCL).",
+    summary:
+      "The UCL Global Masters Scholarship supports international students with overseas fee status who demonstrate financial need for taught Master's study at UCL. For 2026/27, UCL states the award is GBP 15,000 for one year, with up to 85 scholarships available. The application is completed through UCL's Portico funding section after submitting an eligible Master's application.",
+
+    country: "United Kingdom",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline: "May 7, 2026 at 5:00 PM BST",
+    duration:
+      "1 year (for 2-year programs, 50% of the award is paid in each year)",
+
+    eligibility: [
+      "Fee status: Must be assessed as an overseas fee payer",
+      "Financial need: Must be from a lower-income background under UCL household income guidance",
+      "Admission status: Must submit a complete UCL Master's application, including references, for 2026/27",
+      "Study mode: Eligible course must be full-time and in-person (distance learning is not eligible)",
+      "Level: Master's only",
+    ],
+
+    benefits: [
+      "Award value: GBP 15,000",
+      "Scale: Up to 85 scholarships for 2026/27",
+      "Specific allocations include 5 awards for students from India and 1 award for a student from Japan",
+      "Payment model: Award is applied to tuition first; any remaining amount is paid in three maintenance installments",
+    ],
+
+    applicationProcess: [
+      "Apply for an eligible UCL taught Master's program through the UCL graduate admissions portal",
+      "Log in to Portico using your application credentials",
+      "Open your active application and go to the Funding tab",
+      "Select UCL Global Masters Scholarship under funds available",
+      "Complete and submit the scholarship form before the deadline",
+    ],
+
+    documents: [
+      "Valid passport/ID",
+      "Academic degree and transcript documents required for UCL Master's admission",
+      "References required to complete the UCL admissions application",
+      "Financial information/evidence requested in the scholarship form",
+      "Any additional supporting information requested by UCL funding instructions",
+    ],
+
+    goodToKnow: [
+      "This is a need-based scholarship and is not an automatic merit-only award.",
+      "Submitting a course application alone does not complete scholarship submission; you must apply in Portico funding.",
+      "For two-year programs, the award is split equally across both years.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the UCL Global Masters Scholarship fully funded?",
+        answer:
+          "No. It is a GBP 15,000 award and is categorized as partial funding relative to full program and living costs.",
+      },
+      {
+        question: "How many awards are available for 2026/27?",
+        answer:
+          "UCL publishes up to 85 awards for 2026/27, including specific allocations for India and Japan.",
+      },
+      {
+        question: "Can I apply before submitting my Master's application?",
+        answer:
+          "No. You must first submit a complete eligible UCL Master's application before applying in Portico.",
+      },
+      {
+        question: "What is the exact deadline?",
+        answer:
+          "UCL lists Thursday, 7 May 2026 at 5:00 PM BST as the scholarship application deadline.",
+      },
+    ],
+
+    applyUrl:
+      "https://www.ucl.ac.uk/scholarships/ucl-global-masters-scholarship",
+    officialSource: "University College London (UCL)",
+
+    lastUpdated: "2026-03-08",
+  },
+
+  {
     slug: "ireland-trinity-global-excellence-scholarship",
 
     title: "Ireland Trinity Global Excellence Scholarship",
