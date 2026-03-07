@@ -8405,6 +8405,90 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "uk-ual-international-postgraduate-10000-scholarship",
+
+    title: "UAL International Postgraduate GBP 10,000 Scholarship",
+    overview:
+      "University of the Arts London (UAL) offers GBP 10,000 tuition-waiver scholarships for eligible international taught Master's applicants.",
+    summary:
+      "The UAL International Postgraduate GBP 10,000 Scholarship supports overseas students from low-income economies who are applying to taught Master's courses at the University of the Arts London. For 2026/27, UAL publishes multiple rounds and states that up to 288 awards are available. This scholarship is a tuition-fee reduction award, while a separate UAL/ISH scholarship may include accommodation support for eligible applicants.",
+
+    country: "United Kingdom",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline:
+      "Round 1: March 27, 2026; Round 2: June 26, 2026; January 2027 intake: October 30, 2026",
+    duration: "1 year (for taught Master's intake cycle)",
+
+    eligibility: [
+      "Offer status: Must hold an offer for a full-time or part-time taught Master's course at UAL",
+      "Fee status: Must be classified as an overseas fee payer",
+      "Country/economy: Must be ordinarily resident in one of the low-income economy countries listed by UAL",
+      "Household income: Annual household income must be GBP 50,000 or less (or equivalent exchange value)",
+      "Academic profile: UAL lists expected standard around UK upper second-class degree level (2:1) or equivalent",
+      "Exclusion: Applicants who already hold a UK postgraduate qualification are not eligible",
+    ],
+
+    benefits: [
+      "Award value: GBP 10,000 tuition fee waiver",
+      "Scale: UAL publishes up to 288 awards for the 2026/27 academic year",
+      "Related scheme: Separate UAL/ISH International Postgraduate Scholarship may include accommodation for eligible students",
+    ],
+
+    applicationProcess: [
+      "Apply to an eligible UAL taught Master's program and secure an offer",
+      "Log into the UAL Applicant Portal and open the My Funding section",
+      "Complete scholarship questions, including required personal statements",
+      "Submit the scholarship form before the relevant round deadline",
+      "Track outcome updates via official UAL scholarship communications",
+    ],
+
+    documents: [
+      "Valid passport/ID",
+      "Academic degree records/transcripts for Master's admission",
+      "Evidence supporting overseas fee status and country residency criteria",
+      "Household income evidence required by UAL scholarship rules",
+      "Scholarship statement responses in the portal (per UAL word limits/instructions)",
+    ],
+
+    goodToKnow: [
+      "This GBP 10,000 award is a tuition-fee scholarship, not a full-cost package.",
+      "Accommodation-inclusive support is under a separate UAL/ISH scholarship route.",
+      "You can apply only after receiving a UAL course offer and accessing the My Funding portal.",
+    ],
+
+    faqs: [
+      {
+        question: "Is this UAL scholarship fully funded?",
+        answer:
+          "No. The UAL International Postgraduate Scholarship is a GBP 10,000 tuition-fee waiver. Full-cost support is not the default for this scheme.",
+      },
+      {
+        question: "How many awards are available for 2026/27?",
+        answer:
+          "UAL publishes up to 288 awards for the 2026/27 cycle on its official scholarship page.",
+      },
+      {
+        question: "Can I apply before receiving a UAL offer?",
+        answer:
+          "No. UAL states the scholarship form appears in the Applicant Portal My Funding section after you hold an eligible course offer.",
+      },
+      {
+        question: "Does UAL accept only IELTS for language evidence?",
+        answer:
+          "No. Language requirements are course-level admission requirements and accepted proofs are listed by UAL admissions for each program.",
+      },
+    ],
+
+    applyUrl:
+      "https://www.arts.ac.uk/study-at-ual/fees-and-funding/scholarships-search/ual-international-postgraduate-10000-scholarships-and-accommodation-awards",
+    officialSource: "University of the Arts London (UAL)",
+
+    lastUpdated: "2026-03-07",
+  },
+
+  {
     slug: "ireland-trinity-global-excellence-scholarship",
 
     title: "Ireland Trinity Global Excellence Scholarship",
