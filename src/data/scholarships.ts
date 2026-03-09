@@ -8573,6 +8573,157 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "uk-sussex-chancellors-international-scholarship-masters",
+
+    title: "University of Sussex Chancellor's International Scholarship",
+    overview:
+      "Competitive tuition-fee reduction for overseas students starting a full-time taught Master's degree at the University of Sussex.",
+    summary:
+      "The University of Sussex Chancellor's International Scholarship is a merit-competitive award for international students with overseas fee status who have accepted an offer for an eligible full-time Master's course. For the 2026/27 intake, Sussex publishes a GBP 5,000 value and a separate scholarship application window, with applications opening in April and closing at the end of April.",
+
+    country: "United Kingdom",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline: "April 30, 2026",
+    duration: "1 year tuition-fee reduction",
+
+    eligibility: [
+      "Fee status: Must be classified as overseas for fee purposes",
+      "Admission status: Must hold and accept an offer for an eligible full-time taught Master's course at Sussex",
+      "Application route: Separate scholarship application is required",
+      "Intake: For students starting in September 2026 under published call terms",
+      "Financial status: Typically for self-financing students under scholarship rules",
+    ],
+
+    benefits: [
+      "Award value: GBP 5,000 tuition fee reduction",
+      "Application timing: Scholarship application opens April 15, 2026",
+      "Selection: Competitive review based on scholarship criteria and submitted materials",
+    ],
+
+    applicationProcess: [
+      "Apply for an eligible Sussex Master's course and receive an offer",
+      "Accept your offer as required by scholarship conditions",
+      "Open the official Chancellor's International Scholarship application form from April 15, 2026",
+      "Complete and submit the scholarship application before April 30, 2026",
+      "Track decision updates through official Sussex communication channels",
+    ],
+
+    documents: [
+      "Valid passport/ID",
+      "Offer/admission details for the eligible Sussex Master's course",
+      "Scholarship statement responses required by Sussex",
+      "Any additional supporting information requested on the scholarship form",
+    ],
+
+    applyUrl:
+      "https://www.sussex.ac.uk/study/fees-funding/masters-scholarships/view/1285-Chancellors-International-Scholarship-2026",
+    officialSource: "University of Sussex",
+
+    lastUpdated: "2026-03-09",
+  },
+
+  {
+    slug: "uk-sussex-pakistan-scholarship-masters",
+
+    title: "University of Sussex Pakistan Scholarship (Masters)",
+    overview:
+      "Tuition-fee reduction for Pakistani nationals classified as overseas students applying to eligible Master's programs at Sussex.",
+    summary:
+      "The University of Sussex Pakistan Scholarship (Masters) is a country-specific tuition award for Pakistani nationals with overseas fee status who are admitted to eligible taught Master's courses. Sussex publishes this as an automatic award route for eligible offer holders, with no separate scholarship application required under the 2026 call terms.",
+
+    country: "United Kingdom",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline: "September 1, 2026",
+    duration: "1 year tuition-fee reduction",
+
+    eligibility: [
+      "Nationality: Must be a Pakistani national",
+      "Fee status: Must be classified as an overseas fee-paying student",
+      "Admission status: Must receive an offer for an eligible Sussex taught Master's course",
+      "Application route: Award is automatic for eligible candidates; no separate scholarship application is required",
+      "Exclusions: Ineligible course categories follow Sussex scholarship exclusion rules",
+    ],
+
+    benefits: [
+      "Award value: GBP 4,000 tuition-fee reduction",
+      "Application burden: No separate scholarship application for eligible offer holders",
+      "Targeting: Country-specific funding support for Pakistan",
+    ],
+
+    applicationProcess: [
+      "Apply for an eligible Sussex Master's course",
+      "Receive an offer and confirm eligibility criteria, including fee status and nationality",
+      "Sussex automatically assesses eligibility under the Pakistan Scholarship route",
+      "Complete admissions and enrollment requirements by Sussex deadlines",
+    ],
+
+    documents: [
+      "Valid passport showing Pakistani nationality",
+      "Master's admissions documents required by Sussex",
+      "Any fee-status or residency evidence required by Sussex",
+    ],
+
+    applyUrl:
+      "https://www.sussex.ac.uk/study/fees-funding/masters-scholarships/view/1038-Pakistan-Scholarship-Masters",
+    officialSource: "University of Sussex",
+
+    lastUpdated: "2026-03-09",
+  },
+
+  {
+    slug: "uk-sussex-great-scholarship-masters",
+
+    title: "University of Sussex GREAT Scholarship",
+    overview:
+      "Country-targeted Master's scholarship under the GREAT Scholarships campaign for selected Sussex taught Master's courses.",
+    summary:
+      "The University of Sussex GREAT Scholarship is part of the GREAT Scholarships campaign and supports selected international applicants from eligible countries for taught Master's study at Sussex. For the 2026 call, Sussex lists a GBP 10,000 scholarship value and a late-April deadline, with eligibility linked to nationality and course participation under official GREAT terms.",
+
+    country: "United Kingdom",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline: "April 30, 2026",
+    duration: "1 year tuition-fee reduction",
+
+    eligibility: [
+      "Nationality: Must be from a country listed in the Sussex GREAT scholarship call for the cycle",
+      "Admission status: Must apply to and meet offer conditions for an eligible taught Master's course",
+      "Fee status: Must meet Sussex international/overseas funding conditions where applicable",
+      "Course scope: Scholarship applies only to participating GREAT-eligible courses",
+    ],
+
+    benefits: [
+      "Award value: GBP 10,000 tuition fee reduction",
+      "Campaign type: GREAT Scholarships partner award at Sussex",
+      "Coverage: Partial funding that reduces tuition cost for eligible students",
+    ],
+
+    applicationProcess: [
+      "Check eligibility on Sussex GREAT scholarship page, including country and course list",
+      "Apply for an eligible Sussex taught Master's program",
+      "Complete scholarship application steps required on the official Sussex GREAT page",
+      "Submit before April 30, 2026 and monitor official decision updates",
+    ],
+
+    documents: [
+      "Valid passport/ID matching eligible country requirements",
+      "Master's admissions documents required by Sussex",
+      "Scholarship statements and any supporting materials requested in GREAT application steps",
+    ],
+
+    applyUrl:
+      "https://www.sussex.ac.uk/study/fees-funding/masters-scholarships/view/1847-GREAT-scholarship-2026",
+    officialSource: "University of Sussex",
+
+    lastUpdated: "2026-03-09",
+  },
+
+  {
     slug: "ireland-trinity-global-excellence-scholarship",
 
     title: "Ireland Trinity Global Excellence Scholarship",
