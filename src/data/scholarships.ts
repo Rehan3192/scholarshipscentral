@@ -7164,6 +7164,94 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "italy-unicore-8-scholarship-masters",
+
+    title: "UNICORE 8.0 Scholarship (University Corridors for Refugees)",
+    overview:
+      "UNICORE 8.0 supports recognized refugees in selected countries to access taught Master's programs at participating Italian universities.",
+    summary:
+      "UNICORE 8.0 (University Corridors for Refugees) is a coordinated scholarship pathway run by Italian universities and partners to admit refugee students into two-year Master's programs in Italy. For the 2026/2027 call, candidates create one profile and can submit up to two university applications. Selection is based on eligibility screening and university-level assessment, with scholarship support designed to cover major study and relocation costs under each university's call.",
+
+    country: "Italy",
+    degreeLevel: "Masters",
+    fundingType: "Fully Funded",
+
+    deadline: "April 17, 2026 at 12:00 PM (UTC+2)",
+    duration: "2-year Master's pathway (scholarship support can extend up to 30 months in some calls)",
+
+    eligibility: [
+      "Status: Must be recognized refugee in a country listed in the UNICORE 8.0 call",
+      "Application cap: A candidate can apply to a maximum of two participating universities",
+      "Academic record: Minimum GPA of 3.0/4.0 (or equivalent, including 24/30 in Italian grading equivalence)",
+      "Degree recency: Bachelor's degree obtained in or after 2021 and no later than April 18, 2025 under FAQ rules",
+      "Language: Good command of English is expected for interviews and course readiness; individual universities may set additional language proof requirements",
+      "Scholarship overlap: Candidates cannot hold more than one scholarship at the same time under published rules",
+      "Application fee: No fee is required to apply through the UNICORE portal",
+    ],
+
+    benefits: [
+      "Tuition: Participating universities provide tuition waiver under the call terms",
+      "Accommodation and meals: Scholarship package includes housing and meals support in host institutions",
+      "Documentation support: Coverage includes costs linked to residence permit processing and related procedures",
+      "Health coverage: Private health insurance is included in scholarship support",
+      "Travel and setup: Partner universities may include travel/startup support according to individual calls",
+      "Stipend note: Exact cash stipend amount is university-specific and must be checked in each university call document",
+    ],
+
+    applicationProcess: [
+      "Create one profile on the official UNICORE portal when applications open (March 2, 2026)",
+      "Select up to two universities and submit complete applications before the global deadline",
+      "Upload all mandatory documents in required format",
+      "Participate in university-level evaluations/interviews for shortlisted candidates",
+      "Follow final ranking/publication instructions from each participating university and complete enrollment/visa steps if selected",
+    ],
+
+    documents: [
+      "Refugee status documentation (ID/registration evidence required by call)",
+      "Bachelor's degree certificate eligible for Master's admission",
+      "Official academic transcripts",
+      "GPA evidence or conversion statement when required",
+      "Curriculum Vitae (CV)",
+      "Motivation letter",
+      "Any university-specific documents listed in the individual call",
+    ],
+
+    goodToKnow: [
+      "The two-university application cap is strictly enforced; extra applications can invalidate later submissions.",
+      "Each university publishes its own detailed call, so required documents and support details can vary.",
+      "Fraudulent or altered documents trigger disqualification and formal reporting under call rules.",
+    ],
+
+    faqs: [
+      {
+        question: "Can I apply to more than two universities in UNICORE 8.0?",
+        answer:
+          "No. The official FAQ states that if more than two applications are submitted, only the first two are considered valid.",
+      },
+      {
+        question: "Is there an application fee for UNICORE 8.0?",
+        answer:
+          "No. The UNICORE FAQ states applications are free of charge.",
+      },
+      {
+        question: "What is the final deadline for 2026/2027?",
+        answer:
+          "The portal deadline is April 17, 2026 at 12:00 PM (UTC+2).",
+      },
+      {
+        question: "Do all universities offer the same stipend amount?",
+        answer:
+          "No. Core support is shared, but cash stipend levels and extra grants are defined in each university's individual call.",
+      },
+    ],
+
+    applyUrl: "https://universitycorridors.unhcr.it/",
+    officialSource: "UNICORE (University Corridors for Refugees) Portal",
+
+    lastUpdated: "2026-03-10",
+  },
+
+  {
     slug: "spain-la-caixa-foundation-scholarship",
 
     title: "Spain La Caixa Foundation Scholarship",
