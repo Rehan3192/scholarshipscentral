@@ -10275,6 +10275,55 @@ const rawScholarships: Scholarship[] = [
 
     lastUpdated: "2026-03-03",
   },
+  {
+    slug: "uaeu-graduate-research-assistantship-masters",
+
+    title: "UAEU Graduate Research Assistantship (Master's)",
+    overview:
+      "The UAEU Graduate Research Assistantship is a paid research role for UAEU Master's students, funded by a supervisor's research project and administered through the College of Graduate Studies.",
+
+    country: "United Arab Emirates",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline: "Rolling (available year-round; subject to supervisor funding)",
+    duration: "Up to 2 years (based on grant duration and performance)",
+
+    eligibility: [
+      "Active UAEU Master's student status",
+      "Minimum cumulative GPA of 3.0/4.0",
+      "No other financial sponsorship or current employment during the assistantship",
+      "Meet program admission requirements (including English language requirements where applicable)",
+      "Research assistantship availability depends on supervisor-funded projects",
+    ],
+
+    benefits: [
+      "Monthly stipend (amount varies by project budget and appointment type)",
+      "Research assistantship appointment tied to an approved UAEU project",
+      "Possible renewal based on performance and funding availability",
+    ],
+
+    applicationProcess: [
+      "Apply and gain admission to a UAEU Master's program via the graduate admissions portal",
+      "Identify a supervisor or research project that is offering a Research Assistant position",
+      "Complete the assistantship request process through the supervisor/college",
+      "College/CGS reviews eligibility and funding availability",
+      "Receive appointment confirmation and complete any HR onboarding steps",
+    ],
+
+    documents: [
+      "UAEU admission offer (or proof of active graduate status)",
+      "Passport/Emirates ID copy",
+      "CV or academic resume",
+      "Academic transcripts",
+      "Supervisor project/assistantship approval documents (as required by college)",
+    ],
+
+    applyUrl: "https://uaeu.ac.ae/en/cgs/research_assistantships.shtml",
+    officialSource: "UAEU College of Graduate Studies",
+
+    lastUpdated: "2026-03-11",
+  },
 ];
 
 function fixMojibake(value: string) {
