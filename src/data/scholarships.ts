@@ -10324,6 +10324,92 @@ const rawScholarships: Scholarship[] = [
 
     lastUpdated: "2026-03-11",
   },
+  {
+    slug: "nl-scholarship-masters-netherlands",
+
+    title: "NL Scholarship (formerly Holland Scholarship)",
+    overview:
+      "The NL Scholarship is a one-time grant of EUR 5,000 for non-EEA international students starting a full-time Master's degree at participating Dutch institutions. It supports first-year study costs and does not cover full tuition.",
+    summary:
+      "NL Scholarship 2026-2027: EUR 5,000 one-time grant for non-EEA international students admitted to a full-time Master's at participating Dutch universities or universities of applied sciences. Apply through the institution; deadlines vary.",
+
+    country: "Netherlands",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+
+    deadline:
+      "Varies by institution (2026-2027 applications opened Nov 1, 2025; some close May 1, 2026)",
+    duration: "One-time grant for the first study year",
+
+    eligibility: [
+      "Eligible nationalities: Non-EEA (non-European Economic Area) applicants",
+      "Degree level: Full-time Master's programme at a participating Dutch higher education institution",
+      "Institution requirements: Must meet academic and language requirements of the host institution",
+      "Prior Dutch education: No degree from an educational institution in the Netherlands",
+    ],
+
+    benefits: [
+      "Grant amount: EUR 5,000 paid once in the first year",
+      "Cost coverage: Contributes to study-related expenses; not a full-tuition scholarship",
+      "Funding source: Financed by the Dutch Ministry of Education, Culture and Science plus participating Dutch institutions",
+    ],
+
+    applicationProcess: [
+      "Where to apply: Apply for admission and the NL Scholarship directly via the participating institution",
+      "Check eligibility: Confirm institution-specific criteria, eligible programmes, and deadline on the institution website",
+      "Submit scholarship materials: Follow the institution's NL Scholarship instructions and upload required documents",
+      "Await decision: Scholarship results are communicated by the institution",
+    ],
+
+    documents: [
+      "Passport or national ID",
+      "Admission application or (provisional) offer letter",
+      "Academic transcripts and degree certificate",
+      "CV/Resume",
+      "Motivation letter",
+      "Language test results if required by the institution/programme",
+    ],
+
+    goodToKnow: [
+      "The NL Scholarship covers bachelor's and master's programmes; this listing focuses on master's opportunities.",
+      "Participating institutions change each year. For 2026-2027, Study in NL lists research universities (e.g., Eindhoven University of Technology, Maastricht University, Radboud University, University of Groningen, University of Twente, Utrecht University, VU Amsterdam, Wageningen) and multiple universities of applied sciences.",
+      "Applications for the 2026-2027 academic year opened on November 1, 2025 and deadlines are set by each institution.",
+      "Always verify the exact deadline and required documents on the institution's official NL Scholarship page.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the NL Scholarship fully funded?",
+        answer:
+          "No. It is a one-time EUR 5,000 grant for first-year costs and does not cover full tuition.",
+      },
+      {
+        question: "Who can apply?",
+        answer:
+          "Non-EEA international students admitted to a full-time Master's programme at a participating Dutch institution, subject to the institution's requirements.",
+      },
+      {
+        question: "How do I apply?",
+        answer:
+          "Apply through your chosen participating institution. Each institution has its own application process and deadline.",
+      },
+      {
+        question: "When is the deadline?",
+        answer:
+          "Deadlines vary by institution. Some participating institutions close May 1, 2026 for the 2026-2027 intake, so always check the institution page.",
+      },
+      {
+        question: "Can I apply if I already have a Dutch degree?",
+        answer:
+          "No. The NL Scholarship requires that you do not have a degree from an educational institution in the Netherlands.",
+      },
+    ],
+
+    applyUrl: "https://www.studyinnl.org/finances/nl-scholarship",
+    officialSource: "Study in NL",
+
+    lastUpdated: "2026-03-12",
+  },
 ];
 
 function fixMojibake(value: string) {
@@ -10682,7 +10768,7 @@ function providerKind(officialSource: string) {
   return "organization";
 }
 
-const CONTENT_LAST_UPDATED = "2026-02-09";
+const CONTENT_LAST_UPDATED = "2026-03-12";
 
 function defaultGoodToKnow(s: Scholarship) {
   const kind = providerKind(s.officialSource);
