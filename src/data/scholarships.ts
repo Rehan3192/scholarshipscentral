@@ -6774,6 +6774,59 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "italy-university-of-calabria-unicaladmission-scholarship-masters",
+
+    title: "University of Calabria UnicalAdmission Scholarship",
+    overview:
+      "UnicalAdmission is the University of Calabria's early-admission call for non-EU students living abroad, with scholarship seats for two-year master's programs.",
+
+    country: "Italy",
+    degreeLevel: "Masters",
+    fundingType: "Fully Funded",
+
+    deadline: "March 30, 2026 (11:59 PM Italy time)",
+    duration: "2 years",
+
+    eligibility: [
+      "Non-EU citizens living abroad (extra-EU)",
+      "Bachelor's degree (or equivalent) valid for master's admission in Italy",
+      "Meet program-specific academic requirements",
+      "Apply for an eligible master's program listed in the call",
+      "Selection is based on qualifications; interview may be required",
+    ],
+
+    benefits: [
+      "Tuition fees waived for scholarship seats",
+      "Free accommodation on campus (where available)",
+      "Free canteen services (board)",
+      "Annual allowance around EUR 3,600",
+    ],
+
+    applicationProcess: [
+      "Read the official UnicalAdmission call for 2026/27 and confirm eligible programs",
+      "Register on the Unical Esse3 portal and start the application",
+      "Choose your degree program and the competition for extra-EU students",
+      "Upload required documents in the portal",
+      "Pay the application fee via PagoPA before the deadline",
+      "Complete any online interview steps if requested",
+    ],
+
+    documents: [
+      "Passport (bio page) or national ID",
+      "Curriculum Vitae (CV)",
+      "Bachelor's degree certificate and transcripts",
+      "Course syllabus/descriptions where required",
+      "Language proficiency evidence (English or Italian as required by the program)",
+    ],
+
+    applyUrl:
+      "https://unical.portaleamministrazionetrasparente.it/archivio22_bandi-di-concorso_0_33784_640_1.html",
+    officialSource: "University of Calabria (UnicalAdmission)",
+
+    lastUpdated: "2026-03-13",
+  },
+
+  {
     slug: "italy-university-of-insubria-scholarship-bachelors",
 
     title: "University of Insubria Scholarship",
@@ -10768,7 +10821,7 @@ function providerKind(officialSource: string) {
   return "organization";
 }
 
-const CONTENT_LAST_UPDATED = "2026-03-12";
+const CONTENT_LAST_UPDATED = "2026-03-13";
 
 function defaultGoodToKnow(s: Scholarship) {
   const kind = providerKind(s.officialSource);
