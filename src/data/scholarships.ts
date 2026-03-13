@@ -10385,8 +10385,6 @@ const rawScholarships: Scholarship[] = [
       "The NL Scholarship is a one-time grant of EUR 5,000 for non-EEA international students starting a full-time Master's degree at participating Dutch institutions. It supports first-year study costs and does not cover full tuition.",
     summary:
       "NL Scholarship 2026-2027: EUR 5,000 one-time grant for non-EEA international students admitted to a full-time Master's at participating Dutch universities or universities of applied sciences. Apply through the institution; deadlines vary.",
-    guideUrl: "/nl-scholarship-application-guide",
-    guideLabel: "NL Scholarship application guide",
 
     country: "Netherlands",
     degreeLevel: "Masters",
