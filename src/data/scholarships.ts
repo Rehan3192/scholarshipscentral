@@ -6827,6 +6827,54 @@ const rawScholarships: Scholarship[] = [
   },
 
   {
+    slug: "italy-university-of-pisa-dsu-toscana-scholarship-masters",
+
+    title: "University of Pisa DSU Toscana Scholarship",
+    overview:
+      "Need-based regional scholarship for University of Pisa students delivered by DSU Toscana, combining a monetary grant with student services.",
+
+    country: "Italy",
+    degreeLevel: "Masters",
+    fundingType: "Fully Funded",
+
+    deadline: "Varies by annual DSU call (typically mid-July to early September; confirm for 2026/27)",
+    duration: "1 academic year (renewable subject to merit and annual call rules)",
+
+    eligibility: [
+      "Enrolled or applying to a University of Pisa master's program",
+      "Meets DSU economic criteria (amount varies by income and student status)",
+      "International students with income/assets abroad must submit official documentation as required by the DSU call",
+      "Comply with DSU application deadlines and program-specific admission rules",
+    ],
+
+    benefits: [
+      "Monetary scholarship amount varies by economic condition and student status",
+      "Tuition fee exemption for scholarship recipients (per UniPi program financial support guidance)",
+      "Free DSU meals for winners and eligible non-winners",
+      "Accommodation support: free housing for winners if available; reduced rate for eligible non-winners",
+    ],
+
+    applicationProcess: [
+      "Apply for admission to your University of Pisa master's program by its deadline",
+      "Apply to the DSU Toscana scholarship call when it opens",
+      "Submit the required income/asset documentation and any legalisation/translation required by the call",
+      "Follow DSU rankings, acceptance steps, and enrollment timelines",
+    ],
+
+    documents: [
+      "Passport or national ID",
+      "Admission or application proof from the University of Pisa",
+      "Family income and asset documentation required by DSU for foreign students",
+      "Legalized/apostilled documents and Italian translations as specified in the DSU call",
+    ],
+
+    applyUrl: "https://www.dsu.toscana.it/-/foreign-students",
+    officialSource: "DSU Toscana (Agenzia Regionale Diritto allo Studio Universitario)",
+
+    lastUpdated: "2026-03-14",
+  },
+
+  {
     slug: "italy-university-of-insubria-scholarship-bachelors",
 
     title: "University of Insubria Scholarship",
@@ -10821,7 +10869,7 @@ function providerKind(officialSource: string) {
   return "organization";
 }
 
-const CONTENT_LAST_UPDATED = "2026-03-13";
+const CONTENT_LAST_UPDATED = "2026-03-14";
 
 function defaultGoodToKnow(s: Scholarship) {
   const kind = providerKind(s.officialSource);
