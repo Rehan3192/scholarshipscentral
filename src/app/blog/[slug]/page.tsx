@@ -120,7 +120,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       <article className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
         <div
-          className="space-y-4"
+          className="wp-content space-y-4"
           dangerouslySetInnerHTML={{ __html: post.content.rendered }}
         />
       </article>

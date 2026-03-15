@@ -43,6 +43,34 @@ ol {
   list-style: decimal;
 }
 
+.wp-content figure.wp-block-table {
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.wp-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.wp-content th,
+.wp-content td {
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.wp-content thead th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+
+.wp-content table tr:nth-child(even) td {
+  background: #fcfcfd;
+}
+
 .content-visibility-auto {
   content-visibility: auto;
   contain-intrinsic-size: 1px 800px;
