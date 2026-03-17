@@ -14,24 +14,34 @@ export type DegreeLevel =
 export type Scholarship = {
   slug: string;
   title: string;
+  seoTitle?: string;
+  metaDescription?: string;
+  keywords?: string[];
   overview: string;
+  introduction?: string;
   summary?: string;
   guideUrl?: string;
   guideLabel?: string;
   country: string;
+  continent?: string;
   degreeLevel: DegreeLevel;
   fundingType: FundingType;
+  tags?: string[];
   deadline: string;
   duration: string;
   eligibility: string[];
   benefits: string[];
   applicationProcess: string[];
   documents: string[];
+  selectionCriteria?: string[];
+  tips?: string[];
   goodToKnow?: string[];
   faqs?: Array<{
     question: string;
     answer: string;
   }>;
+  relatedScholarships?: string[];
+  categoryLinks?: string[];
   applyUrl: string;
   officialSource: string;
   lastUpdated: string;

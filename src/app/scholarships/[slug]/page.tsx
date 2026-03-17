@@ -102,23 +102,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  const metaTitle =
+    scholarship.seoTitle && scholarship.seoTitle.trim()
+      ? scholarship.seoTitle.trim()
+      : `${scholarship.title} | Scholarships Central`;
+  const metaDescription =
+    scholarship.metaDescription && scholarship.metaDescription.trim()
+      ? scholarship.metaDescription.trim()
+      : scholarship.overview;
+
   return {
-    title: `${scholarship.title} | Scholarships Central`,
-    description: scholarship.overview,
+    title: metaTitle,
+    description: metaDescription,
+    keywords: scholarship.keywords,
     alternates: {
       canonical: `/scholarships/${scholarship.slug}`,
     },
     openGraph: {
-      title: scholarship.title,
-      description: scholarship.overview,
+      title: metaTitle,
+      description: metaDescription,
       url: `/scholarships/${scholarship.slug}`,
       siteName: "Scholarships Central",
       type: "article",
     },
     twitter: {
       card: "summary",
-      title: scholarship.title,
-      description: scholarship.overview,
+      title: metaTitle,
+      description: metaDescription,
     },
   };
 }
@@ -152,6 +162,8 @@ export default async function ScholarshipPage({ params }: Props) {
   const applicationProcess = withoutPlaceholders(scholarship.applicationProcess);
   const documents = withoutPlaceholders(scholarship.documents);
   const goodToKnow = withoutPlaceholders(scholarship.goodToKnow);
+  const selectionCriteria = withoutPlaceholders(scholarship.selectionCriteria);
+  const tips = withoutPlaceholders(scholarship.tips);
   const faqs = (scholarship.faqs ?? []).filter((f) => {
     if (!f) return false;
     const q = String(f.question ?? "").trim();
@@ -189,6 +201,14 @@ export default async function ScholarshipPage({ params }: Props) {
 
       <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
         <div className="space-y-6">
+          {scholarship.introduction ? (
+            <SectionCard title="Introduction">
+              <p className="mb-0 text-sm text-gray-700 break-words">
+                {scholarship.introduction}
+              </p>
+            </SectionCard>
+          ) : null}
+
           <SectionCard title="Eligibility">
             {eligibility.length > 0 ? (
               renderKeyValueOrList(eligibility)
@@ -236,6 +256,26 @@ export default async function ScholarshipPage({ params }: Props) {
               </p>
             )}
           </SectionCard>
+
+          {selectionCriteria.length > 0 ? (
+            <SectionCard title="Selection criteria">
+              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700 break-words">
+                {selectionCriteria.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </SectionCard>
+          ) : null}
+
+          {tips.length > 0 ? (
+            <SectionCard title="Tips to win">
+              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700 break-words">
+                {tips.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </SectionCard>
+          ) : null}
 
           {goodToKnow.length > 0 ? (
             <SectionCard title="Good to know">

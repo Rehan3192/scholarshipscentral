@@ -10939,6 +10939,12 @@ export const scholarships: Scholarship[] = rawScholarships.map((s) => {
   const cleanedApplication = cleanList(s.applicationProcess);
   const cleanedDocuments = cleanList(s.documents);
   const cleanedGoodToKnow = cleanList(s.goodToKnow);
+  const cleanedKeywords = cleanList(s.keywords);
+  const cleanedTags = cleanList(s.tags);
+  const cleanedSelection = cleanList(s.selectionCriteria);
+  const cleanedTips = cleanList(s.tips);
+  const cleanedRelated = cleanList(s.relatedScholarships);
+  const cleanedCategoryLinks = cleanList(s.categoryLinks);
 
   const eligibilityBase = cleanedEligibility.length > 0 ? cleanedEligibility : [];
   const benefitsBase = cleanedBenefits.length > 0 ? cleanedBenefits : [];
@@ -10984,14 +10990,32 @@ export const scholarships: Scholarship[] = rawScholarships.map((s) => {
   return {
     ...s,
     title: fixMojibake(s.title),
+    seoTitle:
+      typeof s.seoTitle === "string" && s.seoTitle.trim() !== ""
+        ? fixMojibake(s.seoTitle).trim()
+        : undefined,
+    metaDescription:
+      typeof s.metaDescription === "string" && s.metaDescription.trim() !== ""
+        ? fixMojibake(s.metaDescription).trim()
+        : undefined,
+    keywords: cleanedKeywords.length > 0 ? cleanedKeywords : undefined,
     overview: fixMojibake(s.overview),
+    introduction:
+      typeof s.introduction === "string" && s.introduction.trim() !== ""
+        ? fixMojibake(s.introduction).trim()
+        : undefined,
 	    summary:
 	      typeof s.summary === "string" && s.summary.trim() !== ""
 	        ? fixMojibake(s.summary).trim()
 	        : fixMojibake(buildSummary(base)).trim(),
 	    country: normalized.country,
+	    continent:
+	      typeof s.continent === "string" && s.continent.trim() !== ""
+	        ? fixMojibake(s.continent).trim()
+	        : undefined,
 	    degreeLevel: normalized.degreeLevel,
 	    fundingType: normalized.fundingType,
+	    tags: cleanedTags.length > 0 ? cleanedTags : undefined,
     deadline: enhanceDeadline(s.deadline),
     duration: fixMojibake(s.duration),
     officialSource: fixMojibake(s.officialSource),
@@ -11000,7 +11024,11 @@ export const scholarships: Scholarship[] = rawScholarships.map((s) => {
     benefits,
     applicationProcess,
     documents,
+    selectionCriteria: cleanedSelection.length > 0 ? cleanedSelection : undefined,
+    tips: cleanedTips.length > 0 ? cleanedTips : undefined,
     goodToKnow,
     faqs,
+    relatedScholarships: cleanedRelated.length > 0 ? cleanedRelated : undefined,
+    categoryLinks: cleanedCategoryLinks.length > 0 ? cleanedCategoryLinks : undefined,
   };
 });
