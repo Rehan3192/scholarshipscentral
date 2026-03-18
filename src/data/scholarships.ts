@@ -10511,6 +10511,145 @@ const rawScholarships: Scholarship[] = [
 
     lastUpdated: "2026-03-12",
   },
+  {
+    slug: "university-of-turin-scholarships-2026",
+
+    title: "University of Turin Scholarships 2026",
+    seoTitle:
+      "University of Turin Scholarships 2026 in Italy for International Students",
+    metaDescription:
+      "University of Turin Scholarships 2026 for international master's students in Italy. Covers Talents 4 UniTo and EDISU Piemonte, with benefits, eligibility, documents, deadlines, and application steps.",
+    keywords: [
+      "University of Turin Scholarships 2026",
+      "University of Turin scholarships for international students",
+      "Italy scholarships 2026",
+      "masters scholarships in Italy",
+      "EDISU Piemonte scholarship",
+    ],
+
+    overview:
+      "The University of Turin Scholarships 2026 options for international master's students mainly include the merit-based Talents 4 UniTo scholarship and the regional EDISU Piemonte scholarship and accommodation service.",
+    introduction:
+      "The University of Turin Scholarships 2026 landscape for international master's students is built around two main funding routes: Talents 4 UniTo and EDISU Piemonte. Talents 4 UniTo is the university's merit-based scholarship for eligible English-taught postgraduate programs, while EDISU Piemonte is the regional right-to-study support system based on financial status and accommodation rules.",
+    summary:
+      "University of Turin Scholarships 2026: Talents 4 UniTo offers 40 two-year scholarships worth EUR 20,000 gross total, while EDISU Piemonte provides regional scholarship and accommodation support for eligible master's students in Italy.",
+
+    country: "Italy",
+    continent: "Europe",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+    tags: [
+      "Italy scholarships",
+      "masters scholarships",
+      "university scholarships",
+      "EDISU Piemonte",
+      "Talents 4 UniTo",
+    ],
+
+    deadline:
+      "Talents 4 UniTo closed January 29, 2026; Universitaly pre-enrolment for non-EU visa applicants is due July 15, 2026; the next EDISU Piemonte call is pending publication",
+    duration:
+      "Talents 4 UniTo: 2 years; EDISU Piemonte: generally aligned with the academic year",
+
+    benefits: [
+      "Talents 4 UniTo award: 40 two-year scholarships worth EUR 20,000 gross total, paid as EUR 10,000 gross per year",
+      "EDISU Piemonte route: scholarship support plus an optional accommodation service for eligible students",
+      "EDISU accommodation network: around 2,700 beds across Turin and other university cities in Piedmont",
+      "Accommodation rule: when scholarship and housing are both assigned, part of the total benefit is absorbed through the bed fee rather than paid fully as cash",
+    ],
+
+    eligibility: [
+      "Talents 4 UniTo: international student enrolling at the University of Turin for the first time",
+      "Talents 4 UniTo: admission to an eligible English-taught postgraduate degree without restricted admission",
+      "Talents 4 UniTo: application submitted through Apply@UniTo within the official deadline",
+      "EDISU Piemonte: enrolment or admission path at an eligible university in Piedmont such as the University of Turin",
+      "EDISU Piemonte: compliance with the regional economic-status rules for scholarship and accommodation benefits",
+      "Language route: some English-taught programs accept a certificate confirming the previous degree was taught in English, depending on the course rules",
+    ],
+
+    applicationProcess: [
+      "Create an account on Apply@UniTo and select the correct citizenship category",
+      "Apply for up to 2 postgraduate degree programs and upload all required academic and identity documents",
+      "Submit the complete University of Turin application within the active admission window; incomplete applications are not considered",
+      "If eligible and still within the call period, apply for Talents 4 UniTo through the same Apply@UniTo route",
+      "If you are a non-EU student requiring a visa, complete Universitaly pre-enrolment by July 15, 2026",
+      "Prepare family income, bank, property, and family-composition documents early for the next EDISU Piemonte call",
+      "Submit the EDISU Piemonte application when the new regional notice opens",
+    ],
+
+    documents: [
+      "Passport or identity document",
+      "Bachelor's degree certificate or equivalent qualification",
+      "Academic transcripts",
+      "Motivation letter in English or Italian for postgraduate programs",
+      "English language certificate if required by the selected degree program",
+      "Certified translations for documents not issued in Italian, English, French, or Spanish",
+      "Authenticity or comparability documents when requested, such as Apostille, legalization, Statement of Verification, or CIMEA statement",
+      "For EDISU Piemonte: family composition, annual income, bank balance, and real-estate documents with Italian translations and legalization or Apostille where required",
+    ],
+
+    selectionCriteria: [
+      "Talents 4 UniTo: limited merit-based competition with only 40 scholarships for the 2026-2027 cycle",
+      "Talents 4 UniTo: strongest files combine academic performance, a complete application, and alignment with an eligible English-taught master's",
+      "EDISU Piemonte: document compliance and verified economic status are decisive in the ranking process",
+      "EDISU Piemonte: incomplete or inconsistent family-income and property documentation can weaken or block eligibility",
+    ],
+
+    tips: [
+      "If you missed the Talents 4 UniTo deadline, shift your strategy to EDISU Piemonte instead of dropping the University of Turin plan entirely",
+      "Build the EDISU file early, especially family income, property, and bank documents with Italian translations",
+      "Use accepted digital verification systems for academic documents when available in your country",
+      "Treat Universitaly as a separate visa deadline if you are a non-EU student residing abroad",
+      "Do not leave document verification until the last stage, because academic and financial verification follow different tracks",
+    ],
+
+    goodToKnow: [
+      "Apply@UniTo is reserved for applicants holding a foreign study qualification.",
+      "University of Turin states that applicants can apply to no more than 2 degree programs.",
+      "For the first 2026-2027 postgraduate admission call, the published application window ran from November 25, 2025 to January 29, 2026.",
+      "University of Turin accepts several document-authenticity methods, including legalization, Apostille, ENIC-NARIC verification, and recognized digital verification systems.",
+      "The latest published EDISU scholarship and accommodation notice for 2025-2026 opened on July 25, 2025 and closed on September 9, 2025 at noon Italian time.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the University of Turin scholarship fully funded?",
+        answer:
+          "Not automatically. Talents 4 UniTo provides EUR 20,000 gross over two years, while EDISU Piemonte combines scholarship support with accommodation rules and service-based benefits.",
+      },
+      {
+        question: "Can I apply without IELTS?",
+        answer:
+          "Some English-taught master's programs at the University of Turin accept proof that the previous degree was taught in English, but this depends on the specific course requirements.",
+      },
+      {
+        question: "Do I need admission first?",
+        answer:
+          "Yes. Both the Talents 4 UniTo route and the EDISU Piemonte route depend on the University of Turin admission or enrolment process.",
+      },
+      {
+        question: "What is the main deadline for 2026?",
+        answer:
+          "Talents 4 UniTo closed on January 29, 2026. Non-EU visa applicants must complete Universitaly pre-enrolment by July 15, 2026, while the next EDISU Piemonte notice has not yet been published.",
+      },
+      {
+        question: "Which route is more realistic if I apply later in 2026?",
+        answer:
+          "If the Talents 4 UniTo deadline has passed, EDISU Piemonte becomes the more realistic funding route, especially for students who can prepare the required financial documents early.",
+      },
+    ],
+
+    categoryLinks: [
+      "/countries/italy",
+      "/degrees/masters",
+      "/scholarships",
+    ],
+
+    applyUrl: "https://apply.unito.it/",
+    officialSource: "University of Turin and EDISU Piemonte",
+
+    lastUpdated: "2026-03-18",
+  },
 ];
 
 function fixMojibake(value: string) {
@@ -10869,7 +11008,7 @@ function providerKind(officialSource: string) {
   return "organization";
 }
 
-const CONTENT_LAST_UPDATED = "2026-03-14";
+const CONTENT_LAST_UPDATED = "2026-03-18";
 
 function defaultGoodToKnow(s: Scholarship) {
   const kind = providerKind(s.officialSource);
