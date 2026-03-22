@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Suspense } from "react";
 import { scholarships } from "@/data/scholarships";
 import ScholarshipFilters from "@/components/scholarship/ScholarshipFilters";
@@ -97,6 +98,19 @@ export default function ScholarshipsPage() {
           Filter by country, degree level, and funding type. We only link to
           official external application pages.
         </p>
+        <div className="flex flex-wrap items-center gap-3 pt-2 text-sm">
+          <Link href="/scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">
+            Scholarships still open 2026
+          </Link>
+          <span className="text-gray-400">&bull;</span>
+          <Link href="/europe-scholarships-2026" className="font-medium text-blue-700 hover:underline">
+            Europe scholarships 2026
+          </Link>
+          <span className="text-gray-400">&bull;</span>
+          <Link href="/fully-funded-scholarships-2026" className="font-medium text-blue-700 hover:underline">
+            Fully funded scholarships 2026
+          </Link>
+        </div>
       </header>
 
       <div className="content-visibility-auto">

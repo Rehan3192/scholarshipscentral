@@ -51,6 +51,10 @@ export default function CountriesPage() {
           >
             All scholarships
           </Link>
+          <span className="text-gray-400">&bull;</span>
+          <Link href="/europe-scholarships-2026" className="font-medium text-blue-700 hover:underline">
+            Europe scholarships 2026
+          </Link>
           <span className="text-gray-400">•</span>
           <Link href="/degrees" className="font-medium text-blue-700 hover:underline">
             Browse by degree

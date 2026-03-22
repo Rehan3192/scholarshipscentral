@@ -43,6 +43,15 @@ export default function FullyFundedScholarshipsPage() {
           Browse fully funded scholarships worldwide. We only link to official
           external application pages.
         </p>
+        <div className="flex flex-wrap items-center gap-3 pt-2 text-sm">
+          <Link href="/fully-funded-scholarships-2026" className="font-medium text-blue-700 hover:underline">
+            Fully funded scholarships 2026 hub
+          </Link>
+          <span className="text-gray-400">&bull;</span>
+          <Link href="/scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">
+            Still-open scholarships
+          </Link>
+        </div>
         <div className="pt-2">
           <ScholarshipFilterBar
             baseHref="/scholarships"

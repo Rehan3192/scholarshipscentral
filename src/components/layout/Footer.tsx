@@ -49,6 +49,21 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/europe-scholarships-2026" className={linkClassName}>
+                  Europe scholarships 2026
+                </Link>
+              </li>
+              <li>
+                <Link href="/fully-funded-scholarships-2026" className={linkClassName}>
+                  Fully funded scholarships 2026
+                </Link>
+              </li>
+              <li>
+                <Link href="/scholarships-still-open-2026" className={linkClassName}>
+                  Scholarships still open 2026
+                </Link>
+              </li>
+              <li>
                 <Link href="/degrees" className={linkClassName}>
                   Degrees
                 </Link>

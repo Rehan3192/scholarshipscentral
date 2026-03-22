@@ -158,6 +158,24 @@ export default function HomePage() {
           >
             Fully funded
           </Link>
+          <Link
+            href="/scholarships-still-open-2026"
+            className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+          >
+            Still open 2026
+          </Link>
+          <Link
+            href="/europe-scholarships-2026"
+            className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+          >
+            Europe hub
+          </Link>
+          <Link
+            href="/fully-funded-scholarships-2026"
+            className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+          >
+            Fully funded 2026
+          </Link>
         </div>
 
         <p className="mt-5 mb-0 text-sm text-gray-600">
