@@ -14,15 +14,35 @@ import {
   isStillOpen,
   sortByUpcomingDeadline,
 } from "@/lib/scholarship-taxonomy";
+import {
+  getWordPressPageBySlug,
+  stripHtmlToText,
+} from "@/lib/wordpress";
 
-export const metadata: Metadata = {
-  title: "Scholarships Still Open 2026 | Scholarships Central",
-  description:
-    "Browse scholarships still open in 2026, with direct paths into Europe, fully funded, UK, Germany, and Italy scholarship pages.",
-  alternates: {
-    canonical: "/scholarships-still-open-2026",
-  },
-};
+const PAGE_SLUG = "scholarships-still-open-2026";
+const WORDPRESS_REVALIDATE_SECONDS = 60 * 60;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const page = await getWordPressPageBySlug(PAGE_SLUG, {
+    revalidateSeconds: WORDPRESS_REVALIDATE_SECONDS,
+  }).catch(() => null);
+
+  const title = page
+    ? `${stripHtmlToText(page.title.rendered)} | Scholarships Central`
+    : "Scholarships Still Open 2026 | Scholarships Central";
+  const description = page
+    ? stripHtmlToText(page.excerpt.rendered).slice(0, 160) ||
+      "Browse scholarships still open in 2026, with direct paths into Europe, fully funded, UK, Germany, and Italy scholarship pages."
+    : "Browse scholarships still open in 2026, with direct paths into Europe, fully funded, UK, Germany, and Italy scholarship pages.";
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: "/scholarships-still-open-2026",
+    },
+  };
+}
 
 const STILL_OPEN_LINKS = [
   {
@@ -62,7 +82,10 @@ const STILL_OPEN_LINKS = [
   },
 ] as const;
 
-export default function ScholarshipsStillOpen2026Page() {
+export default async function ScholarshipsStillOpen2026Page() {
+  const wordPressPage = await getWordPressPageBySlug(PAGE_SLUG, {
+    revalidateSeconds: WORDPRESS_REVALIDATE_SECONDS,
+  }).catch(() => null);
   const openScholarships = [...scholarships]
     .filter((scholarship) => isStillOpen(scholarship.deadline))
     .sort(sortByUpcomingDeadline);
@@ -115,6 +138,15 @@ export default function ScholarshipsStillOpen2026Page() {
           </Link>
         </div>
       </header>
+
+      {wordPressPage?.content.rendered ? (
+        <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
+          <div
+            className="wp-content space-y-4"
+            dangerouslySetInnerHTML={{ __html: wordPressPage.content.rendered }}
+          />
+        </section>
+      ) : null}
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">

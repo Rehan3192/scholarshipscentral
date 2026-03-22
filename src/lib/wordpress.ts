@@ -2,6 +2,8 @@ type WordPressRenderedField = {
   rendered: string;
 };
 
+const WORDPRESS_FETCH_TIMEOUT_MS = 8000;
+
 export type WordPressPostListItem = {
   id: number;
   slug: string;
@@ -13,6 +15,15 @@ export type WordPressPostListItem = {
 
 export type WordPressPost = WordPressPostListItem & {
   content: WordPressRenderedField;
+};
+
+export type WordPressPage = {
+  id: number;
+  slug: string;
+  title: WordPressRenderedField;
+  excerpt: WordPressRenderedField;
+  content: WordPressRenderedField;
+  modified: string;
 };
 
 function stripTrailingSlash(url: string) {
@@ -68,11 +79,16 @@ async function wpFetchJson<T>(
   if (!apiBase) return null;
 
   const url = buildUrl(apiBase, path, query);
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), WORDPRESS_FETCH_TIMEOUT_MS);
   const res = await fetch(url, {
     next: { revalidate: revalidateSeconds },
     headers: {
       Accept: "application/json",
     },
+    signal: controller.signal,
+  }).finally(() => {
+    clearTimeout(timeoutId);
   });
 
   if (!res.ok) {
@@ -121,6 +137,25 @@ export async function getWordPressPostBySlug(
   return result?.data?.[0] ?? null;
 }
 
+export async function getWordPressPageBySlug(
+  slug: string,
+  { revalidateSeconds }: { revalidateSeconds?: number } = {},
+): Promise<WordPressPage | null> {
+  const normalizedSlug = slug.trim();
+  if (!normalizedSlug) return null;
+
+  const result = await wpFetchJson<WordPressPage[]>("/pages", {
+    revalidateSeconds,
+    query: {
+      slug: normalizedSlug,
+      status: "publish",
+      _fields: "id,slug,title,excerpt,content,modified",
+    },
+  });
+
+  return result?.data?.[0] ?? null;
+}
+
 export async function getWordPressAllPostSlugs({
   maxPosts = 500,
   revalidateSeconds,
@@ -161,4 +196,3 @@ export function stripHtmlToText(html: string): string {
     .replaceAll(/\s+/g, " ")
     .trim();
 }
-
