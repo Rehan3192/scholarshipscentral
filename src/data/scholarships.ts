@@ -10650,6 +10650,268 @@ const rawScholarships: Scholarship[] = [
 
     lastUpdated: "2026-03-18",
   },
+  {
+    slug: "uk-goldsmiths-sanctuary-scholarship-undergraduate",
+
+    title: "Goldsmiths Sanctuary Scholarship (Undergraduate)",
+    seoTitle:
+      "Goldsmiths Sanctuary Scholarship 2026 in the UK (Undergraduate + Fully Funded)",
+    metaDescription:
+      "Goldsmiths Sanctuary Scholarship 2026 for undergraduate students in the UK. Covers full tuition, GBP 8,825 allowance, accommodation support, eligibility, documents, and deadline.",
+    keywords: [
+      "Goldsmiths Sanctuary Scholarship 2026",
+      "Goldsmiths scholarship undergraduate",
+      "UK scholarship 2026",
+      "scholarships in London",
+      "fully funded UK scholarships",
+    ],
+
+    overview:
+      "The Goldsmiths Sanctuary Scholarship 2026 is a high-support UK scholarship for eligible undergraduate applicants with refugee status or an active asylum claim in the UK, combining full tuition, living-cost support, and accommodation support.",
+    introduction:
+      "The Goldsmiths Sanctuary Scholarship 2026 is one of the few UK scholarships that covers tuition, living support, and accommodation, but it is limited to applicants with refugee status or an active asylum claim in the UK. For eligible undergraduate students, this is a rare support package that reduces both study costs and day-to-day financial pressure.",
+    summary:
+      "Goldsmiths Sanctuary Scholarship 2026 for undergraduate students: up to 2 awards covering full tuition fees, a GBP 8,825 allowance, and accommodation support up to GBP 200 per week, with applications closing on May 25, 2026.",
+
+    country: "United Kingdom",
+    continent: "Europe",
+    degreeLevel: "Bachelors",
+    fundingType: "Fully Funded",
+    tags: [
+      "UK scholarships",
+      "undergraduate scholarships",
+      "scholarships in London",
+      "fully funded UK scholarships",
+      "sanctuary scholarship",
+    ],
+
+    deadline: "May 25, 2026 at midnight BST",
+    duration: "Full undergraduate degree duration",
+
+    eligibility: [
+      "Status rule: must have refugee status in the UK or an active application for asylum in the UK",
+      "Admission rule: must hold an offer of study for an in-person undergraduate degree at Goldsmiths",
+      "Study mode: online degrees are not eligible",
+      "Study permission: must be eligible to study in the UK; if on Immigration Bail, study conditions must allow it",
+      "Additional note: Goldsmiths states that Ukrainian applicants seeking refuge in the UK under the special Home Office arrangement will also be considered",
+    ],
+
+    benefits: [
+      "Tuition support: full tuition fee waiver for each year of study",
+      "Living support: GBP 8,825 allowance",
+      "Accommodation support: accommodation fee for a single study bedroom in Goldsmiths halls of residence, up to GBP 200 per week",
+      "Award scale: up to 2 undergraduate awards under the 2026 scholarship cycle",
+    ],
+
+    applicationProcess: [
+      "Apply for an eligible in-person undergraduate degree at Goldsmiths, University of London",
+      "Secure a Goldsmiths offer of study before starting the scholarship submission",
+      "Prepare refugee-status or asylum-application evidence and upload supporting documents to MyGoldsmiths as instructed",
+      "Complete the official Sanctuary Scholarship application form after applications open",
+      "Submit a separate Goldsmiths accommodation application if you want to use the accommodation support and mention the Sanctuary Scholarship in the accommodation notes section",
+      "Submit the scholarship application by May 25, 2026 at midnight BST",
+    ],
+
+    documents: [
+      "Documentation proving refugee status in the UK or an active asylum application",
+      "Goldsmiths undergraduate offer of study",
+      "Information requested in the official scholarship application form",
+      "Separate accommodation application details if seeking the accommodation component",
+    ],
+
+    selectionCriteria: [
+      "Panel review: Goldsmiths states that applicants are assessed by an awarding panel",
+      "Academic record: academic profile is considered in the review process",
+      "Application quality: answers to the scholarship application questions are part of the evaluation",
+      "Relevance over polish: Goldsmiths notes that content and relevance matter more than polished writing style alone",
+    ],
+
+    tips: [
+      "Do not wait on the scholarship form before applying for the Goldsmiths degree, because the offer is a core eligibility gate",
+      "Prioritize this scholarship early if you are eligible, because it is stronger than most tuition-only scholarships in London",
+      "Prepare immigration-status documents in advance so the scholarship application is not delayed by evidence collection",
+      "Apply separately for accommodation if you want the housing support included in the package",
+      "Keep answers direct and relevant rather than over-polished, because Goldsmiths emphasizes substance over style",
+    ],
+
+    goodToKnow: [
+      "Applications opened on February 16, 2026 and close on May 25, 2026 at midnight BST.",
+      "This scholarship is highly targeted and is not a general international student scholarship.",
+      "Among fully funded UK scholarships, this route is unusually strong on practical living support because it includes accommodation assistance as well as tuition and cash support.",
+      "Compared with broader UK scholarship routes, the applicant pool is narrower because of the immigration-status rules.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the Goldsmiths Sanctuary Scholarship for undergraduate students fully funded?",
+        answer:
+          "In practical terms, yes. The undergraduate route includes a full tuition fee waiver, a GBP 8,825 allowance, and accommodation support up to GBP 200 per week.",
+      },
+      {
+        question: "Can general international students apply?",
+        answer:
+          "No. This scholarship is targeted to applicants with refugee status in the UK or an active asylum claim in the UK, so it is not open to general international applicants who do not meet those rules.",
+      },
+      {
+        question: "Do I need a Goldsmiths offer first?",
+        answer:
+          "Yes. Goldsmiths requires applicants to hold an offer of study for an eligible in-person undergraduate degree before applying for the scholarship.",
+      },
+      {
+        question: "Does the scholarship include accommodation?",
+        answer:
+          "Yes, but you must also make a separate accommodation application and mention the scholarship in the accommodation notes section.",
+      },
+      {
+        question: "What is the exact 2026 deadline?",
+        answer:
+          "The official deadline is May 25, 2026 at midnight BST.",
+      },
+    ],
+
+    categoryLinks: [
+      "/countries/united-kingdom",
+      "/funding/fully-funded",
+      "/degrees/bachelors",
+    ],
+
+    applyUrl:
+      "https://www.gold.ac.uk/fees-funding/scholarships/sanctuary-scholarship/",
+    officialSource: "Goldsmiths, University of London",
+
+    lastUpdated: "2026-03-31",
+  },
+  {
+    slug: "uk-goldsmiths-sanctuary-scholarship-postgraduate",
+
+    title: "Goldsmiths Sanctuary Scholarship (Postgraduate)",
+    seoTitle:
+      "Goldsmiths Sanctuary Scholarship 2026 in the UK (Postgraduate + Fully Funded)",
+    metaDescription:
+      "Goldsmiths Sanctuary Scholarship 2026 for taught postgraduate students in the UK. Covers full tuition, GBP 8,825 allowance, accommodation support, eligibility, documents, and deadline.",
+    keywords: [
+      "Goldsmiths Sanctuary Scholarship 2026",
+      "Goldsmiths scholarship postgraduate",
+      "UK scholarship 2026",
+      "scholarships in London",
+      "fully funded UK scholarships",
+    ],
+
+    overview:
+      "The Goldsmiths Sanctuary Scholarship 2026 is a high-support UK scholarship for eligible taught postgraduate applicants with refugee status or an active asylum claim in the UK, combining full tuition, living-cost support, and accommodation support.",
+    introduction:
+      "The Goldsmiths Sanctuary Scholarship 2026 is one of the few scholarships in London that reduces both tuition pressure and a large part of living pressure, but only for applicants with refugee status or an active asylum claim in the UK. For eligible taught postgraduate students, it is one of the strongest targeted UK scholarship packages currently open.",
+    summary:
+      "Goldsmiths Sanctuary Scholarship 2026 for taught postgraduate students: up to 2 awards covering full tuition fees, a GBP 8,825 allowance, and accommodation support up to GBP 200 per week, with applications closing on May 25, 2026.",
+
+    country: "United Kingdom",
+    continent: "Europe",
+    degreeLevel: "Masters",
+    fundingType: "Fully Funded",
+    tags: [
+      "UK scholarships",
+      "masters scholarships",
+      "scholarships in London",
+      "fully funded UK scholarships",
+      "sanctuary scholarship",
+    ],
+
+    deadline: "May 25, 2026 at midnight BST",
+    duration: "Standard taught postgraduate program duration",
+
+    eligibility: [
+      "Status rule: must have refugee status in the UK or an active application for asylum in the UK",
+      "Admission rule: must hold an offer of study for an in-person taught postgraduate degree at Goldsmiths",
+      "Study mode: online degrees are not eligible",
+      "Study permission: must be eligible to study in the UK; if on Immigration Bail, study conditions must allow it",
+      "Additional note: Goldsmiths states that Ukrainian applicants seeking refuge in the UK under the special Home Office arrangement will also be considered",
+    ],
+
+    benefits: [
+      "Tuition support: full tuition fee waiver for the taught postgraduate degree",
+      "Living support: GBP 8,825 allowance",
+      "Accommodation support: accommodation fee for a single study bedroom in Goldsmiths halls of residence, up to GBP 200 per week",
+      "Award scale: up to 2 taught postgraduate awards under the 2026 scholarship cycle",
+    ],
+
+    applicationProcess: [
+      "Apply for an eligible in-person taught postgraduate degree at Goldsmiths, University of London",
+      "Secure a Goldsmiths offer of study before starting the scholarship submission",
+      "Prepare refugee-status or asylum-application evidence and upload supporting documents to MyGoldsmiths as instructed",
+      "Complete the official Sanctuary Scholarship application form after applications open",
+      "Submit a separate Goldsmiths accommodation application if you want to use the accommodation support and mention the Sanctuary Scholarship in the accommodation notes section",
+      "Submit the scholarship application by May 25, 2026 at midnight BST",
+    ],
+
+    documents: [
+      "Documentation proving refugee status in the UK or an active asylum application",
+      "Goldsmiths taught postgraduate offer of study",
+      "Information requested in the official scholarship application form",
+      "Separate accommodation application details if seeking the accommodation component",
+    ],
+
+    selectionCriteria: [
+      "Panel review: Goldsmiths states that applicants are assessed by an awarding panel",
+      "Academic record: academic profile is considered in the review process",
+      "Application quality: answers to the scholarship application questions are part of the evaluation",
+      "Relevance over polish: Goldsmiths notes that content and relevance matter more than polished writing style alone",
+    ],
+
+    tips: [
+      "Do not delay the Goldsmiths postgraduate application, because the scholarship depends on holding an eligible offer",
+      "If you meet the status rules, prioritize this scholarship before broader but weaker tuition-only UK scholarship routes",
+      "Prepare immigration-status documents in advance so the scholarship application is not slowed by evidence issues",
+      "Apply separately for accommodation if you need the housing support included in the package",
+      "Keep scholarship answers focused and relevant, because Goldsmiths emphasizes substance rather than polished language alone",
+    ],
+
+    goodToKnow: [
+      "Applications opened on February 16, 2026 and close on May 25, 2026 at midnight BST.",
+      "This scholarship is highly targeted and is not a general postgraduate international scholarship.",
+      "Among fully funded UK scholarships for postgraduate study, this route is unusually strong on practical support because it includes tuition, cash support, and accommodation help.",
+      "Compared with broader UK scholarship routes, the applicant pool is narrower because of the immigration-status rules.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the Goldsmiths Sanctuary Scholarship for taught postgraduate students fully funded?",
+        answer:
+          "In practical terms, yes. The postgraduate route includes a full tuition fee waiver, a GBP 8,825 allowance, and accommodation support up to GBP 200 per week.",
+      },
+      {
+        question: "Can general international postgraduate students apply?",
+        answer:
+          "No. This scholarship is targeted to applicants with refugee status in the UK or an active asylum claim in the UK, so it is not open to general international postgraduate applicants who do not meet those rules.",
+      },
+      {
+        question: "Do I need a Goldsmiths offer first?",
+        answer:
+          "Yes. Goldsmiths requires applicants to hold an offer of study for an eligible in-person taught postgraduate degree before applying for the scholarship.",
+      },
+      {
+        question: "Does the scholarship include accommodation?",
+        answer:
+          "Yes, but you must also make a separate accommodation application and mention the scholarship in the accommodation notes section.",
+      },
+      {
+        question: "What is the exact 2026 deadline?",
+        answer:
+          "The official deadline is May 25, 2026 at midnight BST.",
+      },
+    ],
+
+    categoryLinks: [
+      "/countries/united-kingdom",
+      "/funding/fully-funded",
+      "/degrees/masters",
+    ],
+
+    applyUrl:
+      "https://www.gold.ac.uk/fees-funding/scholarships/sanctuary-scholarship/",
+    officialSource: "Goldsmiths, University of London",
+
+    lastUpdated: "2026-03-31",
+  },
 ];
 
 function fixMojibake(value: string) {
@@ -11008,7 +11270,7 @@ function providerKind(officialSource: string) {
   return "organization";
 }
 
-const CONTENT_LAST_UPDATED = "2026-03-18";
+const CONTENT_LAST_UPDATED = "2026-03-31";
 
 function defaultGoodToKnow(s: Scholarship) {
   const kind = providerKind(s.officialSource);
