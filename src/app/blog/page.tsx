@@ -11,6 +11,7 @@ import {
   isWordPressConfigured,
   stripHtmlToText,
 } from "@/lib/wordpress";
+import { FEATURED_HUB_PAGES } from "@/lib/featuredHubPages";
 import type { WordPressPage, WordPressPostListItem } from "@/lib/wordpress";
 
 export const metadata: Metadata = {
@@ -21,24 +22,6 @@ export const metadata: Metadata = {
     canonical: "/blog",
   },
 };
-
-const FEATURED_HUB_PAGES = [
-  {
-    slug: "europe-scholarships-2026",
-    href: "/europe-scholarships-2026",
-    label: "Hub Page",
-  },
-  {
-    slug: "fully-funded-scholarships-2026",
-    href: "/fully-funded-scholarships-2026",
-    label: "Hub Page",
-  },
-  {
-    slug: "scholarships-still-open-2026",
-    href: "/scholarships-still-open-2026",
-    label: "Hub Page",
-  },
-] as const;
 
 function formatDate(value: string) {
   const iso = value.split("T")[0];
@@ -161,7 +144,7 @@ export default async function BlogPage() {
                   Core scholarship hubs managed in WordPress pages and rendered on the frontend.
                 </p>
               </div>
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {featuredPages.map((page) => {
                   const title = stripHtmlToText(page.title.rendered);
                   const excerpt =
@@ -171,25 +154,30 @@ export default async function BlogPage() {
                   return (
                     <article
                       key={`page-${page.id}`}
-                      className="rounded-2xl border border-blue-200 bg-white p-5 shadow-sm transition-transform duration-200 motion-reduce:transition-none hover:-translate-y-0.5"
+                      className="group rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50/60 to-white p-5 shadow-sm transition-all duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md"
                     >
-                      <div className="flex items-center justify-between gap-3">
-                        <div className="text-xs font-semibold uppercase tracking-wide text-blue-700">
-                          {page.label}
+                      <div className="flex flex-wrap items-center justify-between gap-2">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-800">
+                            Featured
+                          </span>
+                          <span className="inline-flex items-center rounded-full border border-blue-200 bg-white px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-700">
+                            {page.label}
+                          </span>
                         </div>
                         <div className="text-xs font-semibold text-gray-500">
                           Updated {formatDate(page.modified)}
                         </div>
                       </div>
-                      <h3 className="mt-2 text-lg font-semibold text-gray-900">
-                        <Link href={page.href} className="hover:underline">
+                      <h3 className="mt-3 text-lg font-semibold text-gray-900">
+                        <Link href={page.href} className="hover:underline group-hover:text-blue-800">
                           {title}
                         </Link>
                       </h3>
-                      <p className="mt-2 text-sm text-gray-700">{excerpt}</p>
+                      <p className="mt-2 line-clamp-3 text-sm text-gray-700">{excerpt}</p>
                       <Link
                         href={page.href}
-                        className="mt-3 inline-flex items-center text-sm font-semibold text-blue-700 hover:underline"
+                        className="mt-4 inline-flex items-center rounded-lg border border-blue-200 bg-white px-3 py-2 text-sm font-semibold text-blue-700 transition-colors duration-200 motion-reduce:transition-none hover:border-blue-300 hover:bg-blue-50"
                       >
                         Open resource page &rarr;
                       </Link>

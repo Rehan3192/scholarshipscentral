@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Suspense } from "react";
 import { scholarships } from "@/data/scholarships";
+import { FEATURED_HUB_PAGES } from "@/lib/featuredHubPages";
 import { toSegment } from "@/lib/helpers";
 import {
   getWordPressPageBySlug,
@@ -13,23 +14,6 @@ import {
 
 const BLOG_FETCH_TIMEOUT_MS = 450;
 const BLOG_REVALIDATE_SECONDS = 60 * 60 * 6;
-const FEATURED_HUB_PAGES = [
-  {
-    slug: "europe-scholarships-2026",
-    href: "/europe-scholarships-2026",
-    label: "Hub Page",
-  },
-  {
-    slug: "fully-funded-scholarships-2026",
-    href: "/fully-funded-scholarships-2026",
-    label: "Hub Page",
-  },
-  {
-    slug: "scholarships-still-open-2026",
-    href: "/scholarships-still-open-2026",
-    label: "Hub Page",
-  },
-] as const;
 const LATEST_SCHOLARSHIPS = [...scholarships]
   .sort((a, b) => (b.lastUpdated ?? "").localeCompare(a.lastUpdated ?? ""))
   .slice(0, 6);
@@ -146,23 +130,28 @@ async function HomepageBlogSection() {
                 <Link
                   key={`page-${page.id}`}
                   href={page.href}
-                  className="rounded-2xl border border-blue-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-blue-300 hover:bg-blue-50/30 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                  className="group rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50/60 to-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-blue-300 hover:bg-blue-50/30 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
                 >
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="text-xs font-semibold uppercase tracking-wide text-blue-700">
-                      {page.label}
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-800">
+                        Featured
+                      </span>
+                      <span className="inline-flex items-center rounded-full border border-blue-200 bg-white px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-700">
+                        {page.label}
+                      </span>
                     </div>
                     <div className="text-xs font-semibold text-gray-500">
                       {formatDate(page.modified)}
                     </div>
                   </div>
-                  <div className="mt-2 text-base font-semibold text-gray-900">
+                  <div className="mt-3 text-base font-semibold text-gray-900 group-hover:text-blue-800">
                     {title}
                   </div>
-                  <div className="mt-2 text-sm text-gray-700">
+                  <div className="mt-2 line-clamp-3 text-sm text-gray-700">
                     {excerpt}
                   </div>
-                  <div className="mt-3 text-sm font-semibold text-blue-700">
+                  <div className="mt-4 inline-flex items-center rounded-lg border border-blue-200 bg-white px-3 py-2 text-sm font-semibold text-blue-700 transition-colors duration-200 motion-reduce:transition-none group-hover:border-blue-300 group-hover:bg-blue-50">
                     Open page &rarr;
                   </div>
                 </Link>
