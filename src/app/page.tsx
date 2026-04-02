@@ -3,14 +3,33 @@ import { Suspense } from "react";
 import { scholarships } from "@/data/scholarships";
 import { toSegment } from "@/lib/helpers";
 import {
+  getWordPressPageBySlug,
   getWordPressPosts,
   isWordPressConfigured,
   stripHtmlToText,
+  type WordPressPage,
   type WordPressPostListItem,
 } from "@/lib/wordpress";
 
 const BLOG_FETCH_TIMEOUT_MS = 450;
 const BLOG_REVALIDATE_SECONDS = 60 * 60 * 6;
+const FEATURED_HUB_PAGES = [
+  {
+    slug: "europe-scholarships-2026",
+    href: "/europe-scholarships-2026",
+    label: "Hub Page",
+  },
+  {
+    slug: "fully-funded-scholarships-2026",
+    href: "/fully-funded-scholarships-2026",
+    label: "Hub Page",
+  },
+  {
+    slug: "scholarships-still-open-2026",
+    href: "/scholarships-still-open-2026",
+    label: "Hub Page",
+  },
+] as const;
 const LATEST_SCHOLARSHIPS = [...scholarships]
   .sort((a, b) => (b.lastUpdated ?? "").localeCompare(a.lastUpdated ?? ""))
   .slice(0, 6);
@@ -54,6 +73,38 @@ async function getHomepageBlogPosts(): Promise<WordPressPostListItem[]> {
   }
 }
 
+async function getHomepageFeaturedPages(): Promise<
+  Array<WordPressPage & { href: string; label: string }>
+> {
+  if (!isWordPressConfigured()) return [];
+
+  try {
+    const pagesPromise = Promise.all(
+      FEATURED_HUB_PAGES.map(async (page) => {
+        const wpPage = await getWordPressPageBySlug(page.slug, {
+          revalidateSeconds: BLOG_REVALIDATE_SECONDS,
+        });
+        if (!wpPage) return null;
+        return { ...wpPage, href: page.href, label: page.label };
+      }),
+    ).then((pages) =>
+      pages.flatMap((page) =>
+        page ? [page as WordPressPage & { href: string; label: string }] : [],
+      ),
+    );
+
+    const timeoutPromise = new Promise<Array<WordPressPage & { href: string; label: string }>>(
+      (resolve) => {
+        setTimeout(() => resolve([]), BLOG_FETCH_TIMEOUT_MS);
+      },
+    );
+
+    return await Promise.race([pagesPromise, timeoutPromise]);
+  } catch {
+    return [];
+  }
+}
+
 function BlogSectionFallback() {
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-5 text-sm text-gray-700 shadow-sm">
@@ -63,41 +114,105 @@ function BlogSectionFallback() {
 }
 
 async function HomepageBlogSection() {
-  const blogPosts = await getHomepageBlogPosts();
+  const [blogPosts, featuredPages] = await Promise.all([
+    getHomepageBlogPosts(),
+    getHomepageFeaturedPages(),
+  ]);
 
-  if (blogPosts.length === 0) {
+  if (blogPosts.length === 0 && featuredPages.length === 0) {
     return <BlogSectionFallback />;
   }
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {blogPosts.map((post) => {
-        const title = stripHtmlToText(post.title.rendered);
-        const excerpt =
-          stripHtmlToText(post.excerpt.rendered) ||
-          "Read the full post for details.";
+    <div className="space-y-6">
+      {featuredPages.length > 0 ? (
+        <div className="space-y-3">
+          <div className="flex items-center justify-between gap-3">
+            <h3 className="m-0 text-lg font-semibold text-gray-900">
+              Featured resource pages
+            </h3>
+            <Link href="/blog" className="text-sm font-medium text-blue-700 hover:underline">
+              See all content
+            </Link>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredPages.map((page) => {
+              const title = stripHtmlToText(page.title.rendered);
+              const excerpt =
+                stripHtmlToText(page.excerpt.rendered) ||
+                "Open this resource page for curated scholarship links and guidance.";
 
-        return (
-          <Link
-            key={post.id}
-            href={`/blog/${post.slug}`}
-            className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-gray-300 hover:bg-gray-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-          >
-            <div className="text-xs font-semibold text-gray-500">
-              {formatDate(post.date)}
-            </div>
-            <div className="mt-2 text-base font-semibold text-gray-900">
-              {title}
-            </div>
-            <div className="mt-2 text-sm text-gray-700">
-              {excerpt}
-            </div>
-            <div className="mt-3 text-sm font-semibold text-blue-700">
-              Read more &rarr;
-            </div>
-          </Link>
-        );
-      })}
+              return (
+                <Link
+                  key={`page-${page.id}`}
+                  href={page.href}
+                  className="rounded-2xl border border-blue-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-blue-300 hover:bg-blue-50/30 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+                      {page.label}
+                    </div>
+                    <div className="text-xs font-semibold text-gray-500">
+                      {formatDate(page.modified)}
+                    </div>
+                  </div>
+                  <div className="mt-2 text-base font-semibold text-gray-900">
+                    {title}
+                  </div>
+                  <div className="mt-2 text-sm text-gray-700">
+                    {excerpt}
+                  </div>
+                  <div className="mt-3 text-sm font-semibold text-blue-700">
+                    Open page &rarr;
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      ) : null}
+
+      {blogPosts.length > 0 ? (
+        <div className="space-y-3">
+          <div className="flex items-center justify-between gap-3">
+            <h3 className="m-0 text-lg font-semibold text-gray-900">
+              Latest blog posts
+            </h3>
+            <Link href="/blog" className="text-sm font-medium text-blue-700 hover:underline">
+              View all posts
+            </Link>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {blogPosts.map((post) => {
+              const title = stripHtmlToText(post.title.rendered);
+              const excerpt =
+                stripHtmlToText(post.excerpt.rendered) ||
+                "Read the full post for details.";
+
+              return (
+                <Link
+                  key={post.id}
+                  href={`/blog/${post.slug}`}
+                  className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-gray-300 hover:bg-gray-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                >
+                  <div className="text-xs font-semibold text-gray-500">
+                    {formatDate(post.date)}
+                  </div>
+                  <div className="mt-2 text-base font-semibold text-gray-900">
+                    {title}
+                  </div>
+                  <div className="mt-2 text-sm text-gray-700">
+                    {excerpt}
+                  </div>
+                  <div className="mt-3 text-sm font-semibold text-blue-700">
+                    Read more &rarr;
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
