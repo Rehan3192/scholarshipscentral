@@ -116,8 +116,12 @@ export function isEuropeanScholarship(scholarship: Scholarship) {
   return scholarship.continent === "Europe" || EUROPEAN_COUNTRIES.has(scholarship.country);
 }
 
+export function isRollingDeadline(deadline: string) {
+  return ROLLING_DEADLINE_RE.test(deadline);
+}
+
 export function isStillOpen(deadline: string, now = new Date()) {
-  if (ROLLING_DEADLINE_RE.test(deadline)) return true;
+  if (isRollingDeadline(deadline)) return true;
 
   const today = startOfDay(now);
   const explicitDates = extractDeadlineDates(deadline);
@@ -132,7 +136,7 @@ export function isStillOpen(deadline: string, now = new Date()) {
 }
 
 export function upcomingDeadlineScore(deadline: string, now = new Date()) {
-  if (ROLLING_DEADLINE_RE.test(deadline)) {
+  if (isRollingDeadline(deadline)) {
     return Number.POSITIVE_INFINITY;
   }
 

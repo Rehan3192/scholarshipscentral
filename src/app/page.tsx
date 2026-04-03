@@ -4,11 +4,9 @@ import { scholarships } from "@/data/scholarships";
 import { FEATURED_HUB_PAGES } from "@/lib/featuredHubPages";
 import { toSegment } from "@/lib/helpers";
 import {
-  getWordPressPageBySlug,
   getWordPressPosts,
   isWordPressConfigured,
   stripHtmlToText,
-  type WordPressPage,
   type WordPressPostListItem,
 } from "@/lib/wordpress";
 
@@ -57,38 +55,6 @@ async function getHomepageBlogPosts(): Promise<WordPressPostListItem[]> {
   }
 }
 
-async function getHomepageFeaturedPages(): Promise<
-  Array<WordPressPage & { href: string; label: string }>
-> {
-  if (!isWordPressConfigured()) return [];
-
-  try {
-    const pagesPromise = Promise.all(
-      FEATURED_HUB_PAGES.map(async (page) => {
-        const wpPage = await getWordPressPageBySlug(page.slug, {
-          revalidateSeconds: BLOG_REVALIDATE_SECONDS,
-        });
-        if (!wpPage) return null;
-        return { ...wpPage, href: page.href, label: page.label };
-      }),
-    ).then((pages) =>
-      pages.flatMap((page) =>
-        page ? [page as WordPressPage & { href: string; label: string }] : [],
-      ),
-    );
-
-    const timeoutPromise = new Promise<Array<WordPressPage & { href: string; label: string }>>(
-      (resolve) => {
-        setTimeout(() => resolve([]), BLOG_FETCH_TIMEOUT_MS);
-      },
-    );
-
-    return await Promise.race([pagesPromise, timeoutPromise]);
-  } catch {
-    return [];
-  }
-}
-
 function BlogSectionFallback() {
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-5 text-sm text-gray-700 shadow-sm">
@@ -98,68 +64,47 @@ function BlogSectionFallback() {
 }
 
 async function HomepageBlogSection() {
-  const [blogPosts, featuredPages] = await Promise.all([
-    getHomepageBlogPosts(),
-    getHomepageFeaturedPages(),
-  ]);
-
-  if (blogPosts.length === 0 && featuredPages.length === 0) {
-    return <BlogSectionFallback />;
-  }
+  const blogPosts = await getHomepageBlogPosts();
 
   return (
     <div className="space-y-6">
-      {featuredPages.length > 0 ? (
-        <div className="space-y-3">
-          <div className="flex items-center justify-between gap-3">
-            <h3 className="m-0 text-lg font-semibold text-gray-900">
-              Featured resource pages
-            </h3>
-            <Link href="/blog" className="text-sm font-medium text-blue-700 hover:underline">
-              See all content
-            </Link>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredPages.map((page) => {
-              const title = stripHtmlToText(page.title.rendered);
-              const excerpt =
-                stripHtmlToText(page.excerpt.rendered) ||
-                "Open this resource page for curated scholarship links and guidance.";
-
-              return (
-                <Link
-                  key={`page-${page.id}`}
-                  href={page.href}
-                  className="group rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50/60 to-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-blue-300 hover:bg-blue-50/30 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-                >
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-800">
-                        Featured
-                      </span>
-                      <span className="inline-flex items-center rounded-full border border-blue-200 bg-white px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-700">
-                        {page.label}
-                      </span>
-                    </div>
-                    <div className="text-xs font-semibold text-gray-500">
-                      {formatDate(page.modified)}
-                    </div>
-                  </div>
-                  <div className="mt-3 text-base font-semibold text-gray-900 group-hover:text-blue-800">
-                    {title}
-                  </div>
-                  <div className="mt-2 line-clamp-3 text-sm text-gray-700">
-                    {excerpt}
-                  </div>
-                  <div className="mt-4 inline-flex items-center rounded-lg border border-blue-200 bg-white px-3 py-2 text-sm font-semibold text-blue-700 transition-colors duration-200 motion-reduce:transition-none group-hover:border-blue-300 group-hover:bg-blue-50">
-                    Open page &rarr;
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
+      <div className="space-y-3">
+        <div className="flex items-center justify-between gap-3">
+          <h3 className="m-0 text-lg font-semibold text-gray-900">
+            Featured resource pages
+          </h3>
+          <Link href="/blog" className="text-sm font-medium text-blue-700 hover:underline">
+            See all content
+          </Link>
         </div>
-      ) : null}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {FEATURED_HUB_PAGES.map((page) => (
+            <Link
+              key={page.slug}
+              href={page.href}
+              className="group rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50/60 to-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-blue-300 hover:bg-blue-50/30 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            >
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-800">
+                  Featured
+                </span>
+                <span className="inline-flex items-center rounded-full border border-blue-200 bg-white px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-700">
+                  {page.label}
+                </span>
+              </div>
+              <div className="mt-3 text-base font-semibold text-gray-900 group-hover:text-blue-800">
+                {page.title}
+              </div>
+              <div className="mt-2 line-clamp-3 text-sm text-gray-700">
+                {page.description}
+              </div>
+              <div className="mt-4 inline-flex items-center rounded-lg border border-blue-200 bg-white px-3 py-2 text-sm font-semibold text-blue-700 transition-colors duration-200 motion-reduce:transition-none group-hover:border-blue-300 group-hover:bg-blue-50">
+                Open page &rarr;
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
 
       {blogPosts.length > 0 ? (
         <div className="space-y-3">
@@ -201,7 +146,9 @@ async function HomepageBlogSection() {
             })}
           </div>
         </div>
-      ) : null}
+      ) : (
+        <BlogSectionFallback />
+      )}
     </div>
   );
 }
@@ -470,7 +417,7 @@ export default function HomePage() {
       <section className="space-y-4 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="text-2xl font-semibold text-gray-900">
-            From the blog
+            Guides and resource hubs
           </h2>
           <Link href="/blog" className="text-sm font-medium text-blue-700 hover:underline">
             View all posts

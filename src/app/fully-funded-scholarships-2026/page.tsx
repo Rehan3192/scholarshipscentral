@@ -9,36 +9,20 @@ import {
   WebPageJsonLd,
 } from "@/components/seo/StructuredData";
 import { scholarships } from "@/data/scholarships";
-import { isEuropeanScholarship, isStillOpen } from "@/lib/scholarship-taxonomy";
 import {
-  getWordPressPageBySlug,
-  stripHtmlToText,
-} from "@/lib/wordpress";
+  isEuropeanScholarship,
+  isStillOpen,
+  sortByUpcomingDeadline,
+} from "@/lib/scholarship-taxonomy";
 
-const PAGE_SLUG = "fully-funded-scholarships-2026";
-const WORDPRESS_REVALIDATE_SECONDS = 60 * 60;
-
-export async function generateMetadata(): Promise<Metadata> {
-  const page = await getWordPressPageBySlug(PAGE_SLUG, {
-    revalidateSeconds: WORDPRESS_REVALIDATE_SECONDS,
-  }).catch(() => null);
-
-  const title = page
-    ? `${stripHtmlToText(page.title.rendered)} | Scholarships Central`
-    : "Fully Funded Scholarships 2026 | Scholarships Central";
-  const description = page
-    ? stripHtmlToText(page.excerpt.rendered).slice(0, 160) ||
-      "Browse fully funded scholarships for 2026 and move into Europe, Asia, government-funded, and still-open scholarship routes from one page."
-    : "Browse fully funded scholarships for 2026 and move into Europe, Asia, government-funded, and still-open scholarship routes from one page.";
-
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: "/fully-funded-scholarships-2026",
-    },
-  };
-}
+export const metadata: Metadata = {
+  title: "Fully Funded Scholarships 2026 | Scholarships Central",
+  description:
+    "Browse fully funded scholarships for 2026 and move into Europe, Asia, government-funded, and still-open scholarship routes from one page.",
+  alternates: {
+    canonical: "/fully-funded-scholarships-2026",
+  },
+};
 
 const HUB_LINKS = [
   {
@@ -114,18 +98,19 @@ const LANGUAGE_ROUTE_LINKS = [
   },
 ] as const;
 
-export default async function FullyFundedScholarships2026Page() {
-  const wordPressPage = await getWordPressPageBySlug(PAGE_SLUG, {
-    revalidateSeconds: WORDPRESS_REVALIDATE_SECONDS,
-  }).catch(() => null);
+export default function FullyFundedScholarships2026Page() {
   const fullyFundedScholarships = [...scholarships]
     .filter((scholarship) => scholarship.fundingType === "Fully Funded")
     .sort((a, b) => (b.lastUpdated ?? "").localeCompare(a.lastUpdated ?? ""));
+  const stillOpenFullyFundedScholarships = [...fullyFundedScholarships]
+    .filter((scholarship) => isStillOpen(scholarship.deadline))
+    .sort(sortByUpcomingDeadline);
 
   const europeCount = fullyFundedScholarships.filter(isEuropeanScholarship).length;
-  const stillOpenCount = fullyFundedScholarships.filter((scholarship) =>
-    isStillOpen(scholarship.deadline),
-  ).length;
+  const stillOpenCount = stillOpenFullyFundedScholarships.length;
+  const countryCount = new Set(
+    fullyFundedScholarships.map((scholarship) => scholarship.country),
+  ).size;
   const items = fullyFundedScholarships.slice(0, 20).map((scholarship) => ({
     name: scholarship.title,
     href: `/scholarships/${scholarship.slug}`,
@@ -170,14 +155,58 @@ export default async function FullyFundedScholarships2026Page() {
         </div>
       </header>
 
-      {wordPressPage?.content.rendered ? (
-        <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-          <div
-            className="wp-content space-y-4"
-            dangerouslySetInnerHTML={{ __html: wordPressPage.content.rendered }}
-          />
-        </section>
-      ) : null}
+      <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
+            Fully funded coverage
+          </p>
+          <p className="mb-0 text-3xl font-bold text-gray-900">
+            {fullyFundedScholarships.length}
+          </p>
+          <p className="mt-2 mb-0 text-sm text-gray-600">
+            Fully funded scholarships across {countryCount} countries in the directory.
+          </p>
+        </div>
+        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
+            Europe fully funded
+          </p>
+          <p className="mb-0 text-3xl font-bold text-gray-900">
+            {europeCount}
+          </p>
+          <p className="mt-2 mb-0 text-sm text-gray-600">
+            Europe listings inside the full-funding pool.
+          </p>
+        </div>
+        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
+          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
+            Still open now
+          </p>
+          <p className="mb-0 text-3xl font-bold text-gray-900">
+            {stillOpenCount}
+          </p>
+          <p className="mt-2 mb-0 text-sm text-gray-600">
+            Fully funded listings with live or rolling deadlines.
+          </p>
+        </div>
+      </section>
+
+      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          What this frontend funding hub gives you
+        </h2>
+        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+          This page is powered directly by the scholarship dataset, so every
+          listing here already matches full-funding intent. Use it when you want
+          tuition, stipend, travel, or accommodation support to be the first filter
+          before you narrow by region or deadline.
+        </p>
+        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+          If you need current deadlines, start with the still-open fully funded
+          section below. If you already know your destination, the region and
+          country links will get you from funding intent to a tighter shortlist faster.
+        </p>
+      </section>
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
@@ -194,6 +223,24 @@ export default async function FullyFundedScholarships2026Page() {
           ))}
         </div>
       </section>
+
+      {stillOpenFullyFundedScholarships.length > 0 ? (
+        <section className="space-y-4">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+              Still-open fully funded scholarships
+            </h2>
+            <p className="mb-0 text-sm text-gray-600">
+              Start here if you want the strongest funding packages with live deadlines.
+            </p>
+          </div>
+          <div className="grid gap-4">
+            {stillOpenFullyFundedScholarships.slice(0, 6).map((scholarship) => (
+              <ScholarshipCard key={scholarship.slug} scholarship={scholarship} />
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
