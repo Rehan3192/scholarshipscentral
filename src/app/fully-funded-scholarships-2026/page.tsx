@@ -56,9 +56,10 @@ const HUB_LINKS = [
     badge: "Asia",
   },
   {
-    href: "/funding/fully-funded",
-    title: "Funding taxonomy page",
-    description: "Existing fully funded category page for the broader scholarship directory.",
+    href: "/government-scholarships-in-europe-2026",
+    title: "Government scholarships in Europe",
+    description: "Use this when your next filter is public-funding routes inside the Europe pool.",
+    badge: "Government",
   },
 ] as const;
 
@@ -86,6 +87,11 @@ const GOVERNMENT_ROUTE_LINKS = [
 ] as const;
 
 const LANGUAGE_ROUTE_LINKS = [
+  {
+    href: "/europe-scholarships-without-ielts-2026",
+    title: "Europe scholarships without IELTS",
+    description: "Frontend cluster page for Europe routes that discuss IELTS alternatives and language-proof flexibility.",
+  },
   {
     href: "/scholarships/stipendium-hungaricum",
     title: "Stipendium Hungaricum",

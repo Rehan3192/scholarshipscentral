@@ -38,6 +38,18 @@ const EUROPE_CLUSTER_LINKS = [
     badge: "Core hub",
   },
   {
+    href: "/government-scholarships-in-europe-2026",
+    title: "Government scholarships in Europe",
+    description: "Public-funding routes backed by ministries, commissions, and state-linked agencies.",
+    badge: "Government",
+  },
+  {
+    href: "/europe-scholarships-without-ielts-2026",
+    title: "Europe scholarships without IELTS",
+    description: "Europe routes that discuss IELTS alternatives or other accepted language-proof paths.",
+    badge: "Language",
+  },
+  {
     href: "/countries/germany",
     title: "Germany scholarships",
     description: "DAAD, public university, and foundation-funded routes.",
@@ -51,11 +63,6 @@ const EUROPE_CLUSTER_LINKS = [
     href: "/countries/united-kingdom",
     title: "UK scholarships",
     description: "Scholarship routes across leading UK institutions.",
-  },
-  {
-    href: "/countries",
-    title: "All country pages",
-    description: "Use country hubs to move from Europe-wide research to local pages.",
   },
 ] as const;
 

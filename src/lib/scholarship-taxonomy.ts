@@ -120,6 +120,80 @@ export function isRollingDeadline(deadline: string) {
   return ROLLING_DEADLINE_RE.test(deadline);
 }
 
+function scholarshipText(scholarship: Scholarship) {
+  return [
+    scholarship.title,
+    scholarship.overview,
+    scholarship.introduction,
+    scholarship.summary,
+    scholarship.country,
+    scholarship.officialSource,
+    ...(scholarship.keywords ?? []),
+    ...(scholarship.tags ?? []),
+    ...scholarship.eligibility,
+    ...scholarship.benefits,
+    ...scholarship.applicationProcess,
+    ...scholarship.documents,
+    ...(scholarship.selectionCriteria ?? []),
+    ...(scholarship.tips ?? []),
+    ...(scholarship.goodToKnow ?? []),
+    ...(scholarship.faqs?.flatMap((faq) => [faq.question, faq.answer]) ?? []),
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+}
+
+const GOVERNMENT_PATTERNS = [
+  /\bgovernment scholarship\b/,
+  /\bgovernment-funded\b/,
+  /\bgovernment funded\b/,
+  /\bgovernment-backed\b/,
+  /\bministry\b/,
+  /\beuropean commission\b/,
+  /\bforeign commonwealth and development office\b/,
+  /\bswiss confederation\b/,
+  /\bdaad\b/,
+  /\bpresidency for turks abroad\b/,
+  /\bpublic funding\b/,
+] as const;
+
+const LANGUAGE_FLEXIBILITY_PATTERNS = [
+  /\bwithout ielts\b/,
+  /\bcan i apply without ielts\b/,
+  /\balternative proof\b/,
+  /\baccepted alternative\b/,
+  /\baccepted alternatives\b/,
+  /\baccepted equivalent\b/,
+  /\baccepted equivalents\b/,
+  /\bexemption\b/,
+  /\bexemptions\b/,
+  /\benglish-medium instruction\b/,
+  /\benglish medium instruction\b/,
+  /\bmoi\b/,
+  /\bnot mandatory\b/,
+  /\bnot the only routes\b/,
+  /\boptional for pre-admission\b/,
+  /\bprevious degree was taught in english\b/,
+] as const;
+
+export function isGovernmentScholarship(scholarship: Scholarship) {
+  const text = scholarshipText(scholarship);
+  return GOVERNMENT_PATTERNS.some((pattern) => pattern.test(text));
+}
+
+export function hasLanguageFlexibleRoute(scholarship: Scholarship) {
+  const text = scholarshipText(scholarship);
+  const mentionsLanguageEvidence =
+    /\bielts\b|\btoefl\b|\benglish proficiency\b|\benglish certificates?\b|\blanguage requirement\b/.test(
+      text,
+    );
+
+  if (!mentionsLanguageEvidence) return false;
+
+  return LANGUAGE_FLEXIBILITY_PATTERNS.some((pattern) => pattern.test(text));
+}
+
 export function isStillOpen(deadline: string, now = new Date()) {
   if (isRollingDeadline(deadline)) return true;
 
