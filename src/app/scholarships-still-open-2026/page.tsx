@@ -39,6 +39,12 @@ const STILL_OPEN_LINKS = [
     badge: "Funding",
   },
   {
+    href: "/government-scholarships-still-open-2026",
+    title: "Government scholarships still open 2026",
+    description: "Narrow the live-deadline pool to ministry-backed and public-funding routes.",
+    badge: "Government",
+  },
+  {
     href: "/countries/united-kingdom",
     title: "UK scholarships",
     description: "Current UK-focused scholarship listings for 2026 applicants.",

@@ -45,15 +45,15 @@ const LANGUAGE_CLUSTER_LINKS = [
     badge: "Funding",
   },
   {
-    href: "/countries/italy",
-    title: "Italy scholarships",
-    description: "A strong next step for regional and university routes with English-proof alternatives.",
+    href: "/italy-scholarships-without-ielts-2026",
+    title: "Italy scholarships without IELTS",
+    description: "A stronger next step for Italy routes that already mention language-proof alternatives.",
     badge: "Country",
   },
   {
-    href: "/countries/united-kingdom",
-    title: "UK scholarships",
-    description: "Use this when you want scholarship routes in the UK with alternative language pathways.",
+    href: "/uk-scholarships-without-ielts-2026",
+    title: "UK scholarships without IELTS",
+    description: "Use this when you want UK scholarship routes that already mention alternative language pathways.",
     badge: "Country",
   },
   {

@@ -10,80 +10,80 @@ import {
 } from "@/components/seo/StructuredData";
 import { scholarships } from "@/data/scholarships";
 import {
-  isEuropeanScholarship,
-  isGovernmentScholarship,
+  hasLanguageFlexibleRoute,
   isStillOpen,
   sortByUpcomingDeadline,
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Government Scholarships in Europe 2026 | Scholarships Central",
+  title: "UK Scholarships Without IELTS 2026 | Scholarships Central",
   description:
-    "Browse government scholarships in Europe for 2026, including still-open public-funding routes and country pages for Germany, Romania, Hungary, and more.",
+    "Browse UK scholarships for 2026 that discuss IELTS alternatives, English-medium routes, or accepted language-proof flexibility.",
   alternates: {
-    canonical: "/government-scholarships-in-europe-2026",
+    canonical: "/uk-scholarships-without-ielts-2026",
   },
 };
 
-const GOVERNMENT_CLUSTER_LINKS = [
+const UK_LANGUAGE_LINKS = [
   {
-    href: "/europe-scholarships-2026",
-    title: "Europe scholarships 2026",
-    description: "Return to the full Europe pool after narrowing by public-funding routes.",
+    href: "/europe-scholarships-without-ielts-2026",
+    title: "Europe scholarships without IELTS",
+    description: "Return to the wider Europe pool once you finish narrowing the UK options.",
     badge: "Europe hub",
   },
   {
-    href: "/government-scholarships-still-open-2026",
-    title: "Government scholarships still open 2026",
-    description: "Use this when your next filter is live public-funding deadlines instead of region.",
+    href: "/countries/united-kingdom",
+    title: "UK scholarships",
+    description: "Go back to the full UK scholarship pool without the language-flexibility filter.",
+    badge: "Country",
+  },
+  {
+    href: "/scholarships-still-open-2026",
+    title: "Scholarships still open 2026",
+    description: "Use this when you want UK-friendly language routes with active deadlines first.",
     badge: "Open now",
   },
   {
     href: "/fully-funded-scholarships-2026",
     title: "Fully funded scholarships 2026",
-    description: "Move from public-funding routes into the strongest cost-coverage pool.",
+    description: "Move from language flexibility into the stronger funding pool.",
     badge: "Funding",
   },
   {
-    href: "/countries/germany",
-    title: "Germany scholarships",
-    description: "Best next step if DAAD and Germany-based public routes are your priority.",
-    badge: "Country",
+    href: "/italy-scholarships-without-ielts-2026",
+    title: "Italy scholarships without IELTS",
+    description: "Compare the UK shortlist with Italy routes that also mention alternative language proof.",
+    badge: "Compare",
   },
   {
-    href: "/countries/hungary",
-    title: "Hungary scholarships",
-    description: "Useful when you want Hungary public-funding and Stipendium Hungaricum style routes.",
-    badge: "Country",
-  },
-  {
-    href: "/countries/romania",
-    title: "Romania scholarships",
-    description: "Go deeper into Romania-specific public scholarships and admissions paths.",
-    badge: "Country",
+    href: "/europe-scholarships-2026",
+    title: "Europe scholarships 2026",
+    description: "Return to the wider Europe hub when you want to broaden beyond the UK.",
+    badge: "Europe",
   },
 ] as const;
 
-export default function GovernmentScholarshipsInEurope2026Page() {
-  const governmentScholarships = [...scholarships]
+export default function UkScholarshipsWithoutIelts2026Page() {
+  const ukLanguageFlexibleScholarships = [...scholarships]
     .filter(
       (scholarship) =>
-        isEuropeanScholarship(scholarship) && isGovernmentScholarship(scholarship),
+        scholarship.country === "United Kingdom" &&
+        hasLanguageFlexibleRoute(scholarship),
     )
     .sort((a, b) => (b.lastUpdated ?? "").localeCompare(a.lastUpdated ?? ""));
 
-  const stillOpenGovernmentScholarships = [...governmentScholarships]
+  const stillOpenScholarships = [...ukLanguageFlexibleScholarships]
     .filter((scholarship) => isStillOpen(scholarship.deadline))
     .sort(sortByUpcomingDeadline);
 
-  const fullyFundedCount = governmentScholarships.filter(
+  const fullyFundedCount = ukLanguageFlexibleScholarships.filter(
     (scholarship) => scholarship.fundingType === "Fully Funded",
   ).length;
-  const countryCount = new Set(
-    governmentScholarships.map((scholarship) => scholarship.country),
-  ).size;
+  const mastersCount = ukLanguageFlexibleScholarships.filter(
+    (scholarship) => scholarship.degreeLevel === "Masters",
+  ).length;
 
-  const items = governmentScholarships.slice(0, 20).map((scholarship) => ({
+  const items = ukLanguageFlexibleScholarships.slice(0, 20).map((scholarship) => ({
     name: scholarship.title,
     href: `/scholarships/${scholarship.slug}`,
   }));
@@ -94,51 +94,48 @@ export default function GovernmentScholarshipsInEurope2026Page() {
         items={[
           { label: "Home", href: "/" },
           { label: "Scholarships", href: "/scholarships" },
-          { label: "Europe scholarships 2026", href: "/europe-scholarships-2026" },
+          { label: "UK scholarships", href: "/countries/united-kingdom" },
           {
-            label: "Government scholarships in Europe 2026",
-            href: "/government-scholarships-in-europe-2026",
+            label: "UK scholarships without IELTS 2026",
+            href: "/uk-scholarships-without-ielts-2026",
           },
         ]}
       />
       <WebPageJsonLd
-        pagePath="/government-scholarships-in-europe-2026"
-        title="Government Scholarships in Europe 2026"
-        description="Browse government scholarships in Europe for 2026, with direct paths into still-open, fully funded, and country-specific public-funding routes."
+        pagePath="/uk-scholarships-without-ielts-2026"
+        title="UK Scholarships Without IELTS 2026"
+        description="Browse UK scholarships for 2026 that discuss IELTS alternatives, English-medium study routes, or accepted language-proof flexibility."
       />
-      <ItemListJsonLd
-        pagePath="/government-scholarships-in-europe-2026"
-        items={items}
-      />
+      <ItemListJsonLd pagePath="/uk-scholarships-without-ielts-2026" items={items} />
 
       <header className="space-y-3">
         <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
-          Government scholarships in Europe 2026
+          UK scholarships without IELTS 2026
         </h1>
         <p className="mb-0 text-sm text-gray-600">
-          Use this page when you want Europe scholarships backed by ministries,
-          public agencies, commissions, and other state-linked funding routes.
+          Use this page when you want UK scholarship routes that mention IELTS
+          alternatives, English-medium instruction, or other accepted language-proof flexibility.
         </p>
         <div className="flex flex-wrap items-center gap-3 text-sm">
           <Link
             href="/scholarships-still-open-2026"
             className="font-medium text-blue-700 hover:underline"
           >
-            {stillOpenGovernmentScholarships.length} government routes still open
+            {stillOpenScholarships.length} UK routes still open
           </Link>
           <span className="text-gray-400">&bull;</span>
           <Link
             href="/fully-funded-scholarships-2026"
             className="font-medium text-blue-700 hover:underline"
           >
-            {fullyFundedCount} fully funded public routes
+            {fullyFundedCount} fully funded options
           </Link>
           <span className="text-gray-400">&bull;</span>
           <Link
-            href="/europe-scholarships-2026"
+            href="/countries/united-kingdom"
             className="font-medium text-blue-700 hover:underline"
           >
-            Back to Europe hub
+            Back to UK country page
           </Link>
         </div>
       </header>
@@ -146,86 +143,85 @@ export default function GovernmentScholarshipsInEurope2026Page() {
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
-            Public-funding routes
+            UK language-flexible routes
           </p>
           <p className="mb-0 text-3xl font-bold text-gray-900">
-            {governmentScholarships.length}
+            {ukLanguageFlexibleScholarships.length}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Europe scholarship listings that match government or state-backed funding intent.
+            UK scholarships where the official guidance discusses language-proof flexibility.
           </p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
-            Countries covered
+            Still open now
           </p>
           <p className="mb-0 text-3xl font-bold text-gray-900">
-            {countryCount}
+            {stillOpenScholarships.length}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Public-funding destinations already represented in the dataset.
+            UK listings with active or rolling deadlines right now.
           </p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
-            Still open now
+            Masters-heavy pool
           </p>
           <p className="mb-0 text-3xl font-bold text-gray-900">
-            {stillOpenGovernmentScholarships.length}
+            {mastersCount}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Public-funding scholarships that still look active today.
+            UK language-flexible routes currently indexed at masters level.
           </p>
         </div>
       </section>
 
       <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          What this frontend government hub gives you
+          What this UK frontend page means by &quot;without IELTS&quot;
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          This page is built from the live dataset, so it groups the Europe
-          scholarships that read like public-funding or ministry-backed routes
-          instead of mixing them with general university awards. That makes it
-          useful when you want state-linked options first and university-specific
-          scholarships second.
+          On this page, &quot;without IELTS&quot; does not mean there is never any English
+          proof. It means the scholarship or linked admission guidance discusses
+          accepted alternatives, exemptions, English-medium study history, or
+          another route besides IELTS alone.
         </p>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          The tradeoff is that government scholarships can be more rule-heavy.
-          Many require stricter eligibility, nomination routes, embassy handling,
-          or centralized application systems. If you want simpler university-led
-          routes instead, go back to the main Europe hub.
+          This is useful because many UK scholarships are tied to university
+          admission rules rather than having a separate language policy of their own.
+          Use this page to shortlist the right routes first, then confirm the final
+          language requirement on the official university source.
         </p>
       </section>
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            Government scholarship cluster links
+            UK language cluster links
           </h2>
           <p className="mb-0 text-sm text-gray-600">
-            Use these next steps to narrow public-funding routes by urgency or country.
+            Use these next steps to compare UK language-flexible routes with wider Europe or funding pages.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {GOVERNMENT_CLUSTER_LINKS.map((link) => (
+          {UK_LANGUAGE_LINKS.map((link) => (
             <HubLinkCard key={link.href} {...link} />
           ))}
         </div>
       </section>
 
-      {stillOpenGovernmentScholarships.length > 0 ? (
+      {stillOpenScholarships.length > 0 ? (
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <h2 className="mt-0 text-lg font-semibold text-gray-900">
-              Government scholarships in Europe still open
+              UK scholarships without IELTS still open
             </h2>
             <p className="mb-0 text-sm text-gray-600">
-              Start here if you want live public-funding deadlines before reading the full list.
+              Start here if you need UK language-flexible routes with current deadlines.
             </p>
           </div>
           <div className="grid gap-4">
-            {stillOpenGovernmentScholarships.slice(0, 6).map((scholarship) => (
+            {stillOpenScholarships.slice(0, 6).map((scholarship) => (
               <ScholarshipCard key={scholarship.slug} scholarship={scholarship} />
             ))}
           </div>
@@ -235,15 +231,15 @@ export default function GovernmentScholarshipsInEurope2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            All government scholarships in Europe
+            All UK scholarships with IELTS alternatives
           </h2>
           <p className="mb-0 text-sm text-gray-600">
-            {governmentScholarships.length} scholarship
-            {governmentScholarships.length === 1 ? "" : "s"}
+            {ukLanguageFlexibleScholarships.length} scholarship
+            {ukLanguageFlexibleScholarships.length === 1 ? "" : "s"}
           </p>
         </div>
         <div className="grid gap-4">
-          {governmentScholarships.map((scholarship) => (
+          {ukLanguageFlexibleScholarships.map((scholarship) => (
             <ScholarshipCard key={scholarship.slug} scholarship={scholarship} />
           ))}
         </div>
