@@ -72,6 +72,24 @@ export const ASIAN_COUNTRIES = new Set<string>([
   "United Arab Emirates",
 ]);
 
+export const AFRICAN_COUNTRIES = new Set<string>([
+  "Algeria",
+  "Botswana",
+  "Egypt",
+  "Ethiopia",
+  "Ghana",
+  "Kenya",
+  "Morocco",
+  "Nigeria",
+  "Rwanda",
+  "South Africa",
+  "Tanzania",
+  "Tunisia",
+  "Uganda",
+  "Zambia",
+  "Zimbabwe",
+]);
+
 function startOfDay(value: Date) {
   return new Date(value.getFullYear(), value.getMonth(), value.getDate());
 }
@@ -140,6 +158,10 @@ export function isEuropeanScholarship(scholarship: Scholarship) {
 
 export function isAsianScholarship(scholarship: Scholarship) {
   return scholarship.continent === "Asia" || ASIAN_COUNTRIES.has(scholarship.country);
+}
+
+export function isAfricanScholarship(scholarship: Scholarship) {
+  return scholarship.continent === "Africa" || AFRICAN_COUNTRIES.has(scholarship.country);
 }
 
 export function isRollingDeadline(deadline: string) {
