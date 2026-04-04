@@ -17,70 +17,69 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Government Scholarships Still Open 2026 | Scholarships Central",
+  title: "Fully Funded Scholarships Still Open 2026 | Scholarships Central",
   description:
-    "Browse government scholarships still open in 2026, including public-funding routes in Europe and other live ministry-backed opportunities.",
+    "Browse fully funded scholarships still open in 2026, including Europe, government-funded, and country-specific routes with live deadlines.",
   alternates: {
-    canonical: "/government-scholarships-still-open-2026",
+    canonical: "/fully-funded-scholarships-still-open-2026",
   },
 };
 
-const GOVERNMENT_OPEN_LINKS = [
-  {
-    href: "/scholarships-still-open-2026",
-    title: "Scholarships still open 2026",
-    description: "Return to the full open-deadline pool once you finish narrowing by public funding.",
-    badge: "Deadline hub",
-  },
-  {
-    href: "/government-scholarships-in-europe-2026",
-    title: "Government scholarships in Europe",
-    description: "Use this if you want to narrow the still-open public routes by Europe only.",
-    badge: "Europe",
-  },
-  {
-    href: "/government-scholarships-in-asia-2026",
-    title: "Government scholarships in Asia",
-    description: "Use this if you want to narrow the still-open public routes by Asia only.",
-    badge: "Asia",
-  },
+const OPEN_FUNDING_LINKS = [
   {
     href: "/fully-funded-scholarships-2026",
     title: "Fully funded scholarships 2026",
-    description: "Move from public-funding routes into the strongest cost-coverage pool.",
-    badge: "Funding",
+    description: "Return to the full funding pool once you finish narrowing by active deadlines.",
+    badge: "Funding hub",
+  },
+  {
+    href: "/scholarships-still-open-2026",
+    title: "Scholarships still open 2026",
+    description: "Go back to the full live-deadline pool without the full-funding filter.",
+    badge: "Deadline hub",
+  },
+  {
+    href: "/government-scholarships-still-open-2026",
+    title: "Government scholarships still open 2026",
+    description: "Use this if your next filter is public funding, not just full funding.",
+    badge: "Government",
+  },
+  {
+    href: "/europe-scholarships-2026",
+    title: "Europe scholarships 2026",
+    description: "Compare the live fully funded pool with the wider Europe listing page.",
+    badge: "Europe",
+  },
+  {
+    href: "/countries/japan",
+    title: "Japan scholarships",
+    description: "Good next step if you want strong Asia routes inside the fully funded pool.",
+    badge: "Country",
   },
   {
     href: "/countries/germany",
     title: "Germany scholarships",
-    description: "Good next step for DAAD and Germany-based public-funding routes.",
-    badge: "Country",
-  },
-  {
-    href: "/countries/hungary",
-    title: "Hungary scholarships",
-    description: "Useful when Stipendium Hungaricum and other public routes are your focus.",
+    description: "Good next step if you want Europe routes after scanning the live funding pool.",
     badge: "Country",
   },
 ] as const;
 
-export default function GovernmentScholarshipsStillOpen2026Page() {
-  const openGovernmentScholarships = [...scholarships]
+export default function FullyFundedScholarshipsStillOpen2026Page() {
+  const openFullyFundedScholarships = [...scholarships]
     .filter(
       (scholarship) =>
-        isGovernmentScholarship(scholarship) && isStillOpen(scholarship.deadline),
+        scholarship.fundingType === "Fully Funded" &&
+        isStillOpen(scholarship.deadline),
     )
     .sort(sortByUpcomingDeadline);
 
-  const europeCount = openGovernmentScholarships.filter(isEuropeanScholarship).length;
-  const fullyFundedCount = openGovernmentScholarships.filter(
-    (scholarship) => scholarship.fundingType === "Fully Funded",
-  ).length;
+  const europeCount = openFullyFundedScholarships.filter(isEuropeanScholarship).length;
+  const governmentCount = openFullyFundedScholarships.filter(isGovernmentScholarship).length;
   const countryCount = new Set(
-    openGovernmentScholarships.map((scholarship) => scholarship.country),
+    openFullyFundedScholarships.map((scholarship) => scholarship.country),
   ).size;
 
-  const items = openGovernmentScholarships.slice(0, 20).map((scholarship) => ({
+  const items = openFullyFundedScholarships.slice(0, 20).map((scholarship) => ({
     name: scholarship.title,
     href: `/scholarships/${scholarship.slug}`,
   }));
@@ -91,51 +90,51 @@ export default function GovernmentScholarshipsStillOpen2026Page() {
         items={[
           { label: "Home", href: "/" },
           { label: "Scholarships", href: "/scholarships" },
-          { label: "Scholarships still open 2026", href: "/scholarships-still-open-2026" },
+          { label: "Fully funded scholarships 2026", href: "/fully-funded-scholarships-2026" },
           {
-            label: "Government scholarships still open 2026",
-            href: "/government-scholarships-still-open-2026",
+            label: "Fully funded scholarships still open 2026",
+            href: "/fully-funded-scholarships-still-open-2026",
           },
         ]}
       />
       <WebPageJsonLd
-        pagePath="/government-scholarships-still-open-2026"
-        title="Government Scholarships Still Open 2026"
-        description="Browse government scholarships still open in 2026, including public-funding routes in Europe and other live ministry-backed opportunities."
+        pagePath="/fully-funded-scholarships-still-open-2026"
+        title="Fully Funded Scholarships Still Open 2026"
+        description="Browse fully funded scholarships still open in 2026, including Europe, government-funded, and country-specific routes with live deadlines."
       />
       <ItemListJsonLd
-        pagePath="/government-scholarships-still-open-2026"
+        pagePath="/fully-funded-scholarships-still-open-2026"
         items={items}
       />
 
       <header className="space-y-3">
         <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
-          Government scholarships still open 2026
+          Fully funded scholarships still open 2026
         </h1>
         <p className="mb-0 text-sm text-gray-600">
-          Use this page when you want government or public-funding scholarship
-          routes that still look active today.
+          Use this page when you want the strongest funding packages that still
+          have live or rolling deadlines right now.
         </p>
         <div className="flex flex-wrap items-center gap-3 text-sm">
           <Link
-            href="/government-scholarships-in-europe-2026"
+            href="/europe-scholarships-2026"
             className="font-medium text-blue-700 hover:underline"
           >
-            {europeCount} Europe government routes open
+            {europeCount} Europe listings still open
+          </Link>
+          <span className="text-gray-400">&bull;</span>
+          <Link
+            href="/government-scholarships-still-open-2026"
+            className="font-medium text-blue-700 hover:underline"
+          >
+            {governmentCount} government-funded routes open
           </Link>
           <span className="text-gray-400">&bull;</span>
           <Link
             href="/fully-funded-scholarships-2026"
             className="font-medium text-blue-700 hover:underline"
           >
-            {fullyFundedCount} fully funded public routes open
-          </Link>
-          <span className="text-gray-400">&bull;</span>
-          <Link
-            href="/scholarships-still-open-2026"
-            className="font-medium text-blue-700 hover:underline"
-          >
-            Back to still-open hub
+            Back to funding hub
           </Link>
         </div>
       </header>
@@ -143,13 +142,13 @@ export default function GovernmentScholarshipsStillOpen2026Page() {
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
-            Open government routes
+            Open fully funded routes
           </p>
           <p className="mb-0 text-3xl font-bold text-gray-900">
-            {openGovernmentScholarships.length}
+            {openFullyFundedScholarships.length}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Government or ministry-backed scholarships that still look active now.
+            Fully funded scholarships that still look active today.
           </p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
@@ -160,49 +159,50 @@ export default function GovernmentScholarshipsStillOpen2026Page() {
             {countryCount}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Destinations represented in the live government deadline pool.
+            Destinations represented in the live full-funding pool.
           </p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
-            Europe share
+            Government overlap
           </p>
           <p className="mb-0 text-3xl font-bold text-gray-900">
-            {europeCount}
+            {governmentCount}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Open public-funding routes currently tied to Europe.
+            Open fully funded routes that also look government-backed.
           </p>
         </div>
       </section>
 
       <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          What this open-government frontend page gives you
+          What this live full-funding page gives you
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          This page combines two high-intent filters at once: government funding
-          and live deadlines. That makes it useful when you do not want to scan
-          expired ministry-backed routes or mix them with general university awards.
+          This page combines two high-intent filters at once: full funding and
+          live deadlines. That means every listing here already matches the strongest
+          funding intent and still looks actionable today.
         </p>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          Government scholarships can still be more complex than university-led
-          routes, so use this page to shortlist active options first, then read the
-          official call carefully for nomination rules, embassy processing, or central portals.
+          This is usually the fastest shortlist builder if you care most about
+          cost coverage and do not want to waste time on closed scholarship calls.
+          If you want broader context, go back to the full funding hub or the wider
+          still-open page.
         </p>
       </section>
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            Government still-open cluster links
+            Fully funded still-open cluster links
           </h2>
           <p className="mb-0 text-sm text-gray-600">
-            Use these next steps to narrow live public-funding routes by Europe, country, or funding level.
+            Use these next steps to narrow the live full-funding pool by region, country, or public-funding overlap.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {GOVERNMENT_OPEN_LINKS.map((link) => (
+          {OPEN_FUNDING_LINKS.map((link) => (
             <HubLinkCard key={link.href} {...link} />
           ))}
         </div>
@@ -211,15 +211,15 @@ export default function GovernmentScholarshipsStillOpen2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            All government scholarships still open
+            All fully funded scholarships still open
           </h2>
           <p className="mb-0 text-sm text-gray-600">
-            {openGovernmentScholarships.length} scholarship
-            {openGovernmentScholarships.length === 1 ? "" : "s"}
+            {openFullyFundedScholarships.length} scholarship
+            {openFullyFundedScholarships.length === 1 ? "" : "s"}
           </p>
         </div>
         <div className="grid gap-4">
-          {openGovernmentScholarships.map((scholarship) => (
+          {openFullyFundedScholarships.map((scholarship) => (
             <ScholarshipCard key={scholarship.slug} scholarship={scholarship} />
           ))}
         </div>

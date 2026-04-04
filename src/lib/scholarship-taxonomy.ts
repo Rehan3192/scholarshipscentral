@@ -50,6 +50,28 @@ export const EUROPEAN_COUNTRIES = new Set<string>([
   "United Kingdom",
 ]);
 
+export const ASIAN_COUNTRIES = new Set<string>([
+  "Azerbaijan",
+  "Brunei",
+  "Brunei Darussalam",
+  "China",
+  "Hong Kong",
+  "India",
+  "Indonesia",
+  "Japan",
+  "Kazakhstan",
+  "Malaysia",
+  "Qatar",
+  "Russia",
+  "Saudi Arabia",
+  "Singapore",
+  "South Korea",
+  "Taiwan",
+  "Thailand",
+  "Turkey",
+  "United Arab Emirates",
+]);
+
 function startOfDay(value: Date) {
   return new Date(value.getFullYear(), value.getMonth(), value.getDate());
 }
@@ -114,6 +136,10 @@ function extractMonthOnlyRange(deadline: string) {
 
 export function isEuropeanScholarship(scholarship: Scholarship) {
   return scholarship.continent === "Europe" || EUROPEAN_COUNTRIES.has(scholarship.country);
+}
+
+export function isAsianScholarship(scholarship: Scholarship) {
+  return scholarship.continent === "Asia" || ASIAN_COUNTRIES.has(scholarship.country);
 }
 
 export function isRollingDeadline(deadline: string) {

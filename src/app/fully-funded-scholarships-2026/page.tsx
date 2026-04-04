@@ -32,8 +32,8 @@ const HUB_LINKS = [
     badge: "Europe",
   },
   {
-    href: "/scholarships-still-open-2026",
-    title: "Still-open scholarships 2026",
+    href: "/fully-funded-scholarships-still-open-2026",
+    title: "Fully funded scholarships still open 2026",
     description: "Move into live deadlines after scanning the full-funding pool.",
     badge: "Open now",
   },
@@ -59,6 +59,12 @@ const HUB_LINKS = [
     href: "/government-scholarships-in-europe-2026",
     title: "Government scholarships in Europe",
     description: "Use this when your next filter is public-funding routes inside the Europe pool.",
+    badge: "Government",
+  },
+  {
+    href: "/government-scholarships-in-asia-2026",
+    title: "Government scholarships in Asia",
+    description: "Use this when your next filter is Asia public-funding routes inside the full-funding pool.",
     badge: "Government",
   },
 ] as const;

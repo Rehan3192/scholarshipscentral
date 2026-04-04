@@ -11,79 +11,79 @@ import {
 import { scholarships } from "@/data/scholarships";
 import {
   hasLanguageFlexibleRoute,
-  isEuropeanScholarship,
   isStillOpen,
   sortByUpcomingDeadline,
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Europe Scholarships Without IELTS 2026 | Scholarships Central",
+  title: "Germany Scholarships Without IELTS 2026 | Scholarships Central",
   description:
-    "Browse Europe scholarships for 2026 that discuss IELTS alternatives, English-medium routes, or accepted language-proof flexibility.",
+    "Browse Germany scholarships for 2026 that discuss IELTS alternatives, English-medium routes, or accepted language-proof flexibility.",
   alternates: {
-    canonical: "/europe-scholarships-without-ielts-2026",
+    canonical: "/germany-scholarships-without-ielts-2026",
   },
 };
 
-const LANGUAGE_CLUSTER_LINKS = [
+const GERMANY_LANGUAGE_LINKS = [
   {
-    href: "/europe-scholarships-2026",
-    title: "Europe scholarships 2026",
-    description: "Return to the full Europe pool after narrowing by language-flexible routes.",
+    href: "/europe-scholarships-without-ielts-2026",
+    title: "Europe scholarships without IELTS",
+    description: "Return to the wider Europe pool once you finish narrowing Germany options.",
     badge: "Europe hub",
+  },
+  {
+    href: "/countries/germany",
+    title: "Germany scholarships",
+    description: "Go back to the full Germany scholarship pool without the language filter.",
+    badge: "Country",
   },
   {
     href: "/scholarships-still-open-2026",
     title: "Scholarships still open 2026",
-    description: "Use this when you need language-flexible routes with live deadlines first.",
+    description: "Use this when you want Germany-friendly language routes with active deadlines first.",
     badge: "Open now",
   },
   {
-    href: "/fully-funded-scholarships-2026",
-    title: "Fully funded scholarships 2026",
-    description: "Move from language flexibility into the strongest funding pool.",
+    href: "/fully-funded-scholarships-still-open-2026",
+    title: "Fully funded scholarships still open 2026",
+    description: "Move from Germany language flexibility into the strongest live funding routes.",
     badge: "Funding",
+  },
+  {
+    href: "/government-scholarships-in-europe-2026",
+    title: "Government scholarships in Europe",
+    description: "Compare Germany routes with wider public-funding opportunities across Europe.",
+    badge: "Government",
   },
   {
     href: "/italy-scholarships-without-ielts-2026",
     title: "Italy scholarships without IELTS",
-    description: "A stronger next step for Italy routes that already mention language-proof alternatives.",
-    badge: "Country",
-  },
-  {
-    href: "/uk-scholarships-without-ielts-2026",
-    title: "UK scholarships without IELTS",
-    description: "Use this when you want UK scholarship routes that already mention alternative language pathways.",
-    badge: "Country",
-  },
-  {
-    href: "/germany-scholarships-without-ielts-2026",
-    title: "Germany scholarships without IELTS",
-    description: "Good next step for Germany routes that already discuss flexible English-proof handling.",
-    badge: "Country",
+    description: "Compare Germany language-flexible routes with Italy alternatives.",
+    badge: "Compare",
   },
 ] as const;
 
-export default function EuropeScholarshipsWithoutIelts2026Page() {
-  const languageFlexibleScholarships = [...scholarships]
+export default function GermanyScholarshipsWithoutIelts2026Page() {
+  const germanyLanguageFlexibleScholarships = [...scholarships]
     .filter(
       (scholarship) =>
-        isEuropeanScholarship(scholarship) && hasLanguageFlexibleRoute(scholarship),
+        scholarship.country === "Germany" &&
+        hasLanguageFlexibleRoute(scholarship),
     )
     .sort((a, b) => (b.lastUpdated ?? "").localeCompare(a.lastUpdated ?? ""));
 
-  const stillOpenLanguageFlexibleScholarships = [...languageFlexibleScholarships]
+  const stillOpenScholarships = [...germanyLanguageFlexibleScholarships]
     .filter((scholarship) => isStillOpen(scholarship.deadline))
     .sort(sortByUpcomingDeadline);
 
-  const fullyFundedCount = languageFlexibleScholarships.filter(
+  const fullyFundedCount = germanyLanguageFlexibleScholarships.filter(
     (scholarship) => scholarship.fundingType === "Fully Funded",
   ).length;
-  const countryCount = new Set(
-    languageFlexibleScholarships.map((scholarship) => scholarship.country),
-  ).size;
+  const mastersCount = germanyLanguageFlexibleScholarships.filter(
+    (scholarship) => scholarship.degreeLevel === "Masters",
+  ).length;
 
-  const items = languageFlexibleScholarships
+  const items = germanyLanguageFlexibleScholarships
     .slice(0, 20)
     .map((scholarship) => ({
       name: scholarship.title,
@@ -96,38 +96,37 @@ export default function EuropeScholarshipsWithoutIelts2026Page() {
         items={[
           { label: "Home", href: "/" },
           { label: "Scholarships", href: "/scholarships" },
-          { label: "Europe scholarships 2026", href: "/europe-scholarships-2026" },
+          { label: "Germany scholarships", href: "/countries/germany" },
           {
-            label: "Europe scholarships without IELTS 2026",
-            href: "/europe-scholarships-without-ielts-2026",
+            label: "Germany scholarships without IELTS 2026",
+            href: "/germany-scholarships-without-ielts-2026",
           },
         ]}
       />
       <WebPageJsonLd
-        pagePath="/europe-scholarships-without-ielts-2026"
-        title="Europe Scholarships Without IELTS 2026"
-        description="Browse Europe scholarships for 2026 that discuss IELTS alternatives, English-medium instruction, or accepted language-proof flexibility."
+        pagePath="/germany-scholarships-without-ielts-2026"
+        title="Germany Scholarships Without IELTS 2026"
+        description="Browse Germany scholarships for 2026 that discuss IELTS alternatives, English-medium instruction, or accepted language-proof flexibility."
       />
       <ItemListJsonLd
-        pagePath="/europe-scholarships-without-ielts-2026"
+        pagePath="/germany-scholarships-without-ielts-2026"
         items={items}
       />
 
       <header className="space-y-3">
         <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
-          Europe scholarships without IELTS 2026
+          Germany scholarships without IELTS 2026
         </h1>
         <p className="mb-0 text-sm text-gray-600">
-          Use this page when you want Europe scholarship routes that mention
-          IELTS alternatives, English-medium instruction, or other accepted
-          language-proof flexibility.
+          Use this page when you want Germany scholarship routes that mention
+          IELTS alternatives, English-medium instruction, or other accepted language-proof flexibility.
         </p>
         <div className="flex flex-wrap items-center gap-3 text-sm">
           <Link
             href="/scholarships-still-open-2026"
             className="font-medium text-blue-700 hover:underline"
           >
-            {stillOpenLanguageFlexibleScholarships.length} language-flexible routes still open
+            {stillOpenScholarships.length} Germany routes still open
           </Link>
           <span className="text-gray-400">&bull;</span>
           <Link
@@ -138,10 +137,10 @@ export default function EuropeScholarshipsWithoutIelts2026Page() {
           </Link>
           <span className="text-gray-400">&bull;</span>
           <Link
-            href="/europe-scholarships-2026"
+            href="/countries/germany"
             className="font-medium text-blue-700 hover:underline"
           >
-            Back to Europe hub
+            Back to Germany country page
           </Link>
         </div>
       </header>
@@ -149,85 +148,84 @@ export default function EuropeScholarshipsWithoutIelts2026Page() {
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
-            IELTS-alternative routes
+            Germany language-flexible routes
           </p>
           <p className="mb-0 text-3xl font-bold text-gray-900">
-            {languageFlexibleScholarships.length}
+            {germanyLanguageFlexibleScholarships.length}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Europe listings where official guidance discusses language-proof flexibility.
+            Germany scholarships where the official guidance discusses language-proof flexibility.
           </p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
-            Countries covered
+            Still open now
           </p>
           <p className="mb-0 text-3xl font-bold text-gray-900">
-            {countryCount}
+            {stillOpenScholarships.length}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Europe destinations currently represented in this language-flexible cluster.
+            Germany listings with active or rolling deadlines right now.
           </p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
-            Still open now
+            Masters-heavy pool
           </p>
           <p className="mb-0 text-3xl font-bold text-gray-900">
-            {stillOpenLanguageFlexibleScholarships.length}
+            {mastersCount}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Language-flexible Europe scholarships with live or rolling deadlines.
+            Germany language-flexible routes currently indexed at masters level.
           </p>
         </div>
       </section>
 
       <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          What “without IELTS” means on this frontend page
+          What this Germany frontend page means by &quot;without IELTS&quot;
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          On this site, “without IELTS” does not mean “without English proof.”
-          It means the official scholarship or admission guidance discusses some
-          kind of flexibility, such as English-medium instruction, accepted alternatives,
-          exemptions, or a statement that IELTS is not the only route.
+          On this page, &quot;without IELTS&quot; does not mean there is no language proof at all.
+          It means the scholarship or linked admission guidance discusses accepted
+          alternatives, exemptions, English-medium study history, or another route
+          besides IELTS alone.
         </p>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          That distinction matters because some Europe scholarships are flexible
-          at the admission stage but still require formal proof later. Use this
-          page to build a shortlist quickly, then always confirm the exact language
-          rule on the official source before applying.
+          This matters in Germany because scholarship rules and university admission
+          rules are often connected but not identical. Use this page to shortlist the
+          right Germany routes first, then confirm the exact language rule on the official source.
         </p>
       </section>
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            Language-flexible cluster links
+            Germany language cluster links
           </h2>
           <p className="mb-0 text-sm text-gray-600">
-            Use these next steps to narrow by deadline, funding, or country once you have the language filter.
+            Use these next steps to compare Germany language-flexible routes with Europe, funding, and government hubs.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {LANGUAGE_CLUSTER_LINKS.map((link) => (
+          {GERMANY_LANGUAGE_LINKS.map((link) => (
             <HubLinkCard key={link.href} {...link} />
           ))}
         </div>
       </section>
 
-      {stillOpenLanguageFlexibleScholarships.length > 0 ? (
+      {stillOpenScholarships.length > 0 ? (
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <h2 className="mt-0 text-lg font-semibold text-gray-900">
-              Europe scholarships without IELTS still open
+              Germany scholarships without IELTS still open
             </h2>
             <p className="mb-0 text-sm text-gray-600">
-              Start here if you need language-flexible routes that are still active now.
+              Start here if you need Germany language-flexible routes with current deadlines.
             </p>
           </div>
           <div className="grid gap-4">
-            {stillOpenLanguageFlexibleScholarships.slice(0, 6).map((scholarship) => (
+            {stillOpenScholarships.slice(0, 6).map((scholarship) => (
               <ScholarshipCard key={scholarship.slug} scholarship={scholarship} />
             ))}
           </div>
@@ -237,15 +235,15 @@ export default function EuropeScholarshipsWithoutIelts2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            All Europe scholarships with IELTS alternatives
+            All Germany scholarships with IELTS alternatives
           </h2>
           <p className="mb-0 text-sm text-gray-600">
-            {languageFlexibleScholarships.length} scholarship
-            {languageFlexibleScholarships.length === 1 ? "" : "s"}
+            {germanyLanguageFlexibleScholarships.length} scholarship
+            {germanyLanguageFlexibleScholarships.length === 1 ? "" : "s"}
           </p>
         </div>
         <div className="grid gap-4">
-          {languageFlexibleScholarships.map((scholarship) => (
+          {germanyLanguageFlexibleScholarships.map((scholarship) => (
             <ScholarshipCard key={scholarship.slug} scholarship={scholarship} />
           ))}
         </div>
