@@ -26,6 +26,11 @@ export type WordPressPage = {
   modified: string;
 };
 
+type WordPressPostListPreview = Pick<
+  WordPressPostListItem,
+  "slug" | "title" | "excerpt"
+>;
+
 function stripTrailingSlash(url: string) {
   return url.endsWith("/") ? url.slice(0, -1) : url;
 }
@@ -116,6 +121,44 @@ export async function getWordPressPosts({
   });
 
   return result?.data ?? [];
+}
+
+function normalizeWordPressText(value: string): string {
+  return stripHtmlToText(value)
+    .replaceAll(/[-_]/g, " ")
+    .toLowerCase();
+}
+
+export function isScholarshipResultPost(post: WordPressPostListPreview): boolean {
+  const haystack = [
+    post.slug,
+    post.title.rendered,
+    post.excerpt.rendered,
+  ]
+    .map(normalizeWordPressText)
+    .join(" ");
+
+  const hasResultSignal =
+    /\bresults?\b/.test(haystack) ||
+    haystack.includes("interview outcome") ||
+    haystack.includes("selection result") ||
+    haystack.includes("selection results");
+
+  const includesDifferentYear =
+    /\b20\d{2}\b/.test(haystack) && !haystack.includes("2026");
+
+  return hasResultSignal && !includesDifferentYear;
+}
+
+export async function getWordPressScholarshipResultPosts({
+  perPage = 100,
+  revalidateSeconds,
+}: {
+  perPage?: number;
+  revalidateSeconds?: number;
+} = {}): Promise<WordPressPostListItem[]> {
+  const posts = await getWordPressPosts({ perPage, revalidateSeconds });
+  return posts.filter(isScholarshipResultPost);
 }
 
 export async function getWordPressPostBySlug(

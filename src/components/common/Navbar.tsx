@@ -304,6 +304,12 @@ export default function Navbar() {
           >
             Blog
           </Link>
+          <Link
+            href="/scholarship-results-2026"
+            className={pillClassName}
+          >
+            Results
+          </Link>
           <NavDropdown
             id="countries"
             label="Countries"

@@ -73,9 +73,14 @@ async function HomepageBlogSection() {
           <h3 className="m-0 text-lg font-semibold text-gray-900">
             Featured resource pages
           </h3>
-          <Link href="/blog" className="text-sm font-medium text-blue-700 hover:underline">
-            See all content
-          </Link>
+          <div className="flex flex-wrap items-center gap-3 text-sm">
+            <Link href="/scholarship-results-2026" className="font-medium text-blue-700 hover:underline">
+              Scholarship results 2026
+            </Link>
+            <Link href="/blog" className="font-medium text-blue-700 hover:underline">
+              See all content
+            </Link>
+          </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURED_HUB_PAGES.map((page) => (

@@ -144,6 +144,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.85,
     },
     {
+      url: `${siteUrl}/scholarship-results-2026`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.75,
+    },
+    {
       url: `${siteUrl}/countries`,
       lastModified: new Date(),
       priority: 0.7,

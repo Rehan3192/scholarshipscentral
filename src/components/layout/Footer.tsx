@@ -44,6 +44,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/scholarship-results-2026" className={linkClassName}>
+                  Scholarship results 2026
+                </Link>
+              </li>
+              <li>
                 <Link href="/countries" className={linkClassName}>
                   Countries
                 </Link>

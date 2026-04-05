@@ -78,6 +78,13 @@ export default async function BlogPage() {
         <p className="mb-0 text-sm text-gray-600">
           Scholarship guides, frontend resource hubs, and WordPress updates in one place.
         </p>
+        <p className="mb-0 text-sm text-blue-700">
+          Need result-date articles? Browse the{" "}
+          <Link href="/scholarship-results-2026" className="font-semibold hover:underline">
+            Scholarship Results 2026
+          </Link>{" "}
+          hub.
+        </p>
       </header>
 
       <div className="space-y-6">
