@@ -35,19 +35,19 @@ const guideLinks = [
     href: "/blog",
     title: "All scholarship blog posts",
     description:
-      "Browse every WordPress article if you want application guides, deadline posts, and updates beyond result dates.",
+      "Browse every scholarship article if you want deadline guides, application posts, and updates beyond result timelines.",
   },
   {
     href: "/scholarships-still-open-2026",
     title: "Scholarships still open 2026",
     description:
-      "Use this if you want live opportunities to apply for before focusing on result timelines.",
+      "Use this if you want live opportunities to apply for before focusing on outcomes.",
   },
   {
     href: "/fully-funded-scholarships-2026",
     title: "Fully funded scholarships 2026",
     description:
-      "Move here if your real priority is stronger funding coverage rather than announcement timing.",
+      "Move here if your main priority is funding strength rather than result timing.",
   },
 ];
 
@@ -105,21 +105,19 @@ export default async function ScholarshipResults2026Page() {
 
       <header className="space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <div className="inline-flex w-fit items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-800">
-          Editorial hub
+          Results hub
         </div>
         <div className="space-y-2">
           <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
             Scholarship Results 2026
           </h1>
           <p className="mb-0 max-w-3xl text-sm text-gray-700 sm:text-base">
-            Use this page to track result-date articles, interview outcome updates,
-            and scholarship selection guides published on the blog for 2026 cycles.
+            Use this page to track scholarship-specific result articles, interview
+            outcome updates, and official announcement timelines for 2026 cycles.
           </p>
           <p className="mb-0 rounded-xl border border-blue-200 bg-blue-50/70 px-4 py-3 text-sm text-blue-900">
-            Publish a normal WordPress post with <span className="font-semibold">result</span>{" "}
-            or <span className="font-semibold">results</span> in the title or slug
-            — for example, <span className="font-semibold">Chevening Scholarship Results 2026</span> —
-            and it will appear here automatically.
+            If you are waiting for a decision, this page helps you find result-focused
+            articles faster instead of relying on forum speculation or unverified dates.
           </p>
         </div>
       </header>
@@ -149,9 +147,9 @@ export default async function ScholarshipResults2026Page() {
           </p>
         </article>
         <article className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
-          <div className="text-lg font-bold text-gray-900">WordPress posts</div>
+          <div className="text-lg font-bold text-gray-900">Result archive</div>
           <p className="mb-0 mt-1 text-sm text-gray-600">
-            This hub reads normal blog posts, so you do not need a separate CMS flow.
+            A focused place to browse scholarship outcome coverage without unrelated posts.
           </p>
         </article>
       </section>
@@ -159,23 +157,24 @@ export default async function ScholarshipResults2026Page() {
       <section className="grid gap-4 lg:grid-cols-[1.3fr_0.9fr]">
         <article className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <h2 className="mt-0 text-2xl font-semibold text-gray-900">
-            How to publish result articles here
+            What you can track here
           </h2>
           <div className="mt-4 space-y-3 text-sm leading-6 text-gray-700">
             <p className="mb-0">
-              This hub reads normal WordPress posts, not a separate custom post type.
-              That keeps your workflow simple and lets you publish result updates the
-              same way you publish standard blog articles.
+              This page is built for scholarship-specific result coverage, including
+              interview outcomes, final selections, and official announcement timing
+              where providers have published real date windows.
             </p>
             <p className="mb-0">
-              To make a post appear on this page, use result-focused wording in the
-              title or slug, such as <span className="font-semibold">result</span>,{" "}
-              <span className="font-semibold">results</span>, or{" "}
-              <span className="font-semibold">interview outcome</span>.
+              It is most useful after you have already applied and are waiting for
+              updates. If you are still choosing scholarships to apply for, pages
+              like <span className="font-semibold">Scholarships Still Open 2026</span> or{" "}
+              <span className="font-semibold">Fully Funded Scholarships 2026</span>{" "}
+              are usually the better next step.
             </p>
             <p className="mb-0">
-              If a post should stay out of the results feed, keep the title framed
-              as a guide, deadline article, or application article instead.
+              The goal is to help you find official-timeline articles faster, so you
+              can separate confirmed updates from speculation.
             </p>
           </div>
         </article>
@@ -202,11 +201,10 @@ export default async function ScholarshipResults2026Page() {
       {!configured ? (
         <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            WordPress connection not configured yet
+            Results page temporarily unavailable
           </h2>
           <p className="mt-2 mb-0">
-            Once the WordPress connection is active, result articles published as
-            normal blog posts will appear here automatically.
+            We could not load scholarship result articles right now. Please check back shortly.
           </p>
         </section>
       ) : loadError ? (
@@ -215,7 +213,7 @@ export default async function ScholarshipResults2026Page() {
             Results feed temporarily unavailable
           </h2>
           <p className="mt-2 mb-0">
-            The page is live, but we could not load WordPress result posts right now.
+            The page is live, but we could not load scholarship result articles right now.
             Please try again in a moment.
           </p>
           <p className="mt-3 mb-0 text-xs text-gray-500">Error: {loadError}</p>
@@ -223,21 +221,15 @@ export default async function ScholarshipResults2026Page() {
       ) : posts.length === 0 ? (
         <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            No result articles published yet
+            No result articles are live yet
           </h2>
           <div className="mt-3 space-y-2 leading-6">
             <p className="mb-0">
-              You can start filling this page by publishing normal WordPress posts
-              such as:
+              We have not published scholarship-specific result updates here yet.
             </p>
-            <ul className="mb-0 list-disc space-y-1 pl-5">
-              <li>Chevening Scholarship Results 2026</li>
-              <li>Eiffel Scholarship Results 2026</li>
-              <li>MEXT Scholarship Interview Outcome 2026</li>
-            </ul>
             <p className="mb-0">
-              Once published, they will appear here automatically as long as the
-              title or slug clearly signals result intent.
+              Once result articles are available, this page will become the central
+              place to track them.
             </p>
           </div>
         </section>
