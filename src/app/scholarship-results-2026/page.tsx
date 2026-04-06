@@ -6,9 +6,11 @@ import {
   WebPageJsonLd,
 } from "@/components/seo/StructuredData";
 import {
+  getWordPressPageBySlug,
   getWordPressScholarshipResultPosts,
   isWordPressConfigured,
   stripHtmlToText,
+  type WordPressPage,
   type WordPressPostListItem,
 } from "@/lib/wordpress";
 
@@ -53,17 +55,27 @@ export default async function ScholarshipResults2026Page() {
   const configured = isWordPressConfigured();
 
   let posts: WordPressPostListItem[] = [];
+  let pageContent: WordPressPage | null = null;
   let loadError: string | null = null;
 
   if (configured) {
     try {
-      posts = await getWordPressScholarshipResultPosts({
-        perPage: 100,
-        revalidateSeconds: RESULTS_REVALIDATE_SECONDS,
-      });
+      const [resultPosts, resultPage] = await Promise.all([
+        getWordPressScholarshipResultPosts({
+          perPage: 100,
+          revalidateSeconds: RESULTS_REVALIDATE_SECONDS,
+        }),
+        getWordPressPageBySlug("scholarship-results-2026", {
+          revalidateSeconds: RESULTS_REVALIDATE_SECONDS,
+        }),
+      ]);
+
+      posts = resultPosts;
+      pageContent = resultPage;
     } catch (error) {
       loadError = error instanceof Error ? error.message : "Unknown error";
       posts = [];
+      pageContent = null;
     }
   }
 
@@ -112,6 +124,15 @@ export default async function ScholarshipResults2026Page() {
         </div>
       </header>
 
+      {pageContent ? (
+        <article className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
+          <div
+            className="wp-content space-y-4"
+            dangerouslySetInnerHTML={{ __html: pageContent.content.rendered }}
+          />
+        </article>
+      ) : null}
+
       <section className="grid gap-4 sm:grid-cols-3">
         <article className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
           <div className="text-3xl font-bold text-gray-900">{posts.length}</div>
@@ -138,25 +159,23 @@ export default async function ScholarshipResults2026Page() {
       <section className="grid gap-4 lg:grid-cols-[1.3fr_0.9fr]">
         <article className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <h2 className="mt-0 text-2xl font-semibold text-gray-900">
-            How this results page works
+            How to publish result articles here
           </h2>
           <div className="mt-4 space-y-3 text-sm leading-6 text-gray-700">
             <p className="mb-0">
-              This page is meant for scholarship result articles only. Instead of
-              creating a separate content type, we filter normal WordPress posts
-              that signal result intent through words like{" "}
-              <span className="font-semibold">result</span>,{" "}
+              This hub reads normal WordPress posts, not a separate custom post type.
+              That keeps your workflow simple and lets you publish result updates the
+              same way you publish standard blog articles.
+            </p>
+            <p className="mb-0">
+              To make a post appear on this page, use result-focused wording in the
+              title or slug, such as <span className="font-semibold">result</span>,{" "}
               <span className="font-semibold">results</span>, or{" "}
               <span className="font-semibold">interview outcome</span>.
             </p>
             <p className="mb-0">
-              That means your publishing workflow stays simple: write a normal
-              blog post, keep the title clear, and this page becomes the archive
-              layer for result-date content.
-            </p>
-            <p className="mb-0">
-              If a post does not need to appear here, avoid using result-focused
-              wording in the title or slug.
+              If a post should stay out of the results feed, keep the title framed
+              as a guide, deadline article, or application article instead.
             </p>
           </div>
         </article>
