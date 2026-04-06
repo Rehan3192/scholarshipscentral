@@ -16,7 +16,7 @@ import type { WordPressPostListItem } from "@/lib/wordpress";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Scholarship guides, resource hubs, and updates from Scholarships Central.",
+    "Scholarship guides, hub pages, result updates, and application-focused articles from Scholarships Central.",
   alternates: {
     canonical: "/blog",
   },
@@ -76,7 +76,7 @@ export default async function BlogPage() {
           Blog
         </h1>
         <p className="mb-0 text-sm text-gray-600">
-          Scholarship guides, frontend resource hubs, and WordPress updates in one place.
+          Scholarship guides, hub pages, and result updates in one place.
         </p>
         <p className="mb-0 text-sm text-blue-700">
           Need result-date articles? Browse the{" "}
@@ -91,10 +91,10 @@ export default async function BlogPage() {
         <section className="space-y-4">
           <div className="space-y-1">
             <h2 className="mt-0 text-2xl font-semibold text-gray-900">
-              Featured resource pages
+              Featured scholarship pages
             </h2>
             <p className="mb-0 text-sm text-gray-600">
-              Frontend-owned scholarship hubs built from the live dataset.
+              Start with these key pages when you want the fastest path into major scholarship topics.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -123,7 +123,7 @@ export default async function BlogPage() {
                   href={page.href}
                   className="mt-4 inline-flex items-center rounded-lg border border-blue-200 bg-white px-3 py-2 text-sm font-semibold text-blue-700 transition-colors duration-200 motion-reduce:transition-none hover:border-blue-300 hover:bg-blue-50"
                 >
-                  Open resource page &rarr;
+                  Open page &rarr;
                 </Link>
               </article>
             ))}
@@ -133,13 +133,10 @@ export default async function BlogPage() {
         {!configured ? (
           <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
             <h2 className="mt-0 text-lg font-semibold text-gray-900">
-              WordPress blog not configured yet
+              Blog temporarily unavailable
             </h2>
             <p className="mt-2 mb-0">
-              The frontend resource pages are live. Set{" "}
-              <span className="font-mono">WORDPRESS_URL</span> (or{" "}
-              <span className="font-mono">WORDPRESS_API_BASE</span>) when you
-              want WordPress posts to appear here too.
+              Please check back shortly for scholarship guides and updates.
             </p>
           </section>
         ) : loadError ? (
@@ -148,8 +145,8 @@ export default async function BlogPage() {
               Blog temporarily unavailable
             </h2>
             <p className="mt-2 mb-0">
-              The resource hubs are still available, but we couldn&apos;t load
-              WordPress posts right now. Please try again in a moment.
+              Some scholarship pages are still available, but we couldn&apos;t load
+              blog posts right now. Please try again in a moment.
             </p>
             <p className="mt-3 mb-0 text-xs text-gray-500">
               Error: {loadError}
@@ -158,11 +155,10 @@ export default async function BlogPage() {
         ) : posts.length === 0 ? (
           <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
             <h2 className="mt-0 text-lg font-semibold text-gray-900">
-              No WordPress posts yet
+              No blog posts yet
             </h2>
             <p className="mt-2 mb-0">
-              Your frontend hub pages are already live here. Publish a WordPress
-              post whenever you want article cards to appear below them.
+              Check back soon for scholarship guides, updates, and result articles.
             </p>
           </section>
         ) : (

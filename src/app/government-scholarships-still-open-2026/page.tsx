@@ -178,7 +178,7 @@ export default function GovernmentScholarshipsStillOpen2026Page() {
 
       <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          What this open-government frontend page gives you
+          Why use this still-open government scholarships page
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
           This page combines two high-intent filters at once: government funding

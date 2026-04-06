@@ -180,10 +180,10 @@ export default function GovernmentScholarshipsInAsia2026Page() {
 
       <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          What this frontend Asia government hub gives you
+          Why use this Asia government scholarships page
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          This page is built from the live dataset, so it groups Asia scholarships
+          This page groups Asia scholarships
           that read like public-funding or ministry-backed routes instead of mixing
           them with general university awards. That makes it useful when you want
           state-linked Asia options first and institution-specific scholarships second.

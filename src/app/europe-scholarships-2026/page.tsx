@@ -188,11 +188,9 @@ export default function EuropeScholarships2026Page() {
 
       <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          What this frontend Europe hub gives you
+          Why use this Europe scholarships page
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          This page now runs directly from the live scholarship dataset, so
-          Europe scholarships appear here automatically as the directory grows.
           Start here when you want the full Europe pool, then move into still-open,
           fully funded, or country-level pages once you know how narrow your search
           needs to be.

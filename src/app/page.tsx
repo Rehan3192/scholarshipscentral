@@ -71,7 +71,7 @@ async function HomepageBlogSection() {
       <div className="space-y-3">
         <div className="flex items-center justify-between gap-3">
           <h3 className="m-0 text-lg font-semibold text-gray-900">
-            Featured resource pages
+            Featured scholarship pages
           </h3>
           <div className="flex flex-wrap items-center gap-3 text-sm">
             <Link href="/scholarship-results-2026" className="font-medium text-blue-700 hover:underline">
@@ -422,7 +422,7 @@ export default function HomePage() {
       <section className="space-y-4 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="text-2xl font-semibold text-gray-900">
-            Guides and resource hubs
+            Guides and hub pages
           </h2>
           <Link href="/blog" className="text-sm font-medium text-blue-700 hover:underline">
             View all posts

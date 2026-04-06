@@ -183,7 +183,7 @@ export default function FullyFundedScholarshipsStillOpen2026Page() {
 
       <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          What this live full-funding page gives you
+          Why use this still-open fully funded page
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
           This page combines two high-intent filters at once: full funding and

@@ -184,7 +184,7 @@ export default function EuropeScholarshipsWithoutIelts2026Page() {
 
       <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          What “without IELTS” means on this frontend page
+          What “without IELTS” means on this page
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
           On this site, “without IELTS” does not mean “without English proof.”

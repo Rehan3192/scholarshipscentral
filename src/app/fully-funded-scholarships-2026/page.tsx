@@ -96,7 +96,7 @@ const LANGUAGE_ROUTE_LINKS = [
   {
     href: "/europe-scholarships-without-ielts-2026",
     title: "Europe scholarships without IELTS",
-    description: "Frontend cluster page for Europe routes that discuss IELTS alternatives and language-proof flexibility.",
+    description: "Europe routes that discuss IELTS alternatives and language-proof flexibility.",
   },
   {
     href: "/scholarships/stipendium-hungaricum",
@@ -205,11 +205,10 @@ export default function FullyFundedScholarships2026Page() {
 
       <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          What this frontend funding hub gives you
+          Why use this fully funded scholarships page
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          This page is powered directly by the scholarship dataset, so every
-          listing here already matches full-funding intent. Use it when you want
+          Every listing here already matches full-funding intent. Use it when you want
           tuition, stipend, travel, or accommodation support to be the first filter
           before you narrow by region or deadline.
         </p>
