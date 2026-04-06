@@ -14,16 +14,16 @@ body {
   overflow-x: clip;
 }
 
-a {
+a:not([class]) {
   color: #1d4ed8; /* blue-700 */
   text-underline-offset: 0.15em;
 }
 
-a:hover {
+a:not([class]):hover {
   color: #1e40af; /* blue-800 */
 }
 
-a:focus-visible {
+a:not([class]):focus-visible {
   outline: 2px solid #2563eb; /* blue-600 */
   outline-offset: 2px;
 }
@@ -63,7 +63,18 @@ ol {
 }
 
 .wp-content a {
+  color: #1d4ed8; /* blue-700 */
   text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.wp-content a:hover {
+  color: #1e40af; /* blue-800 */
+}
+
+.wp-content a:focus-visible {
+  outline: 2px solid #2563eb; /* blue-600 */
+  outline-offset: 2px;
 }
 
 .wp-content table {
