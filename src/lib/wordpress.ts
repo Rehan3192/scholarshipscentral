@@ -2,7 +2,17 @@ type WordPressRenderedField = {
   rendered: string;
 };
 
-const WORDPRESS_FETCH_TIMEOUT_MS = 8000;
+const DEFAULT_WORDPRESS_FETCH_TIMEOUT_MS = 15000;
+const WORDPRESS_FETCH_TIMEOUT_MS = (() => {
+  const rawValue = process.env.WORDPRESS_FETCH_TIMEOUT_MS;
+  const parsedValue = rawValue ? Number.parseInt(rawValue, 10) : NaN;
+
+  if (Number.isFinite(parsedValue) && parsedValue > 0) {
+    return parsedValue;
+  }
+
+  return DEFAULT_WORDPRESS_FETCH_TIMEOUT_MS;
+})();
 
 export type WordPressPostListItem = {
   id: number;
@@ -84,17 +94,34 @@ async function wpFetchJson<T>(
   if (!apiBase) return null;
 
   const url = buildUrl(apiBase, path, query);
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), WORDPRESS_FETCH_TIMEOUT_MS);
-  const res = await fetch(url, {
-    next: { revalidate: revalidateSeconds },
-    headers: {
-      Accept: "application/json",
-    },
-    signal: controller.signal,
-  }).finally(() => {
-    clearTimeout(timeoutId);
-  });
+  const fetchWithTimeout = async () => {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), WORDPRESS_FETCH_TIMEOUT_MS);
+
+    try {
+      return await fetch(url, {
+        next: { revalidate: revalidateSeconds },
+        headers: {
+          Accept: "application/json",
+        },
+        signal: controller.signal,
+      });
+    } finally {
+      clearTimeout(timeoutId);
+    }
+  };
+
+  let res: Response;
+
+  try {
+    res = await fetchWithTimeout();
+  } catch (error) {
+    if (error instanceof Error && error.name === "AbortError") {
+      res = await fetchWithTimeout();
+    } else {
+      throw error;
+    }
+  }
 
   if (!res.ok) {
     throw new Error(`WordPress API error (${res.status}) for ${path}`);

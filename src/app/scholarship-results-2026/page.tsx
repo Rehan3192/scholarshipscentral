@@ -59,23 +59,27 @@ export default async function ScholarshipResults2026Page() {
   let loadError: string | null = null;
 
   if (configured) {
-    try {
-      const [resultPosts, resultPage] = await Promise.all([
-        getWordPressScholarshipResultPosts({
-          perPage: 100,
-          revalidateSeconds: RESULTS_REVALIDATE_SECONDS,
-        }),
-        getWordPressPageBySlug("scholarship-results-2026", {
-          revalidateSeconds: RESULTS_REVALIDATE_SECONDS,
-        }),
-      ]);
+    const [postsResult, pageResult] = await Promise.allSettled([
+      getWordPressScholarshipResultPosts({
+        perPage: 100,
+        revalidateSeconds: RESULTS_REVALIDATE_SECONDS,
+      }),
+      getWordPressPageBySlug("scholarship-results-2026", {
+        revalidateSeconds: RESULTS_REVALIDATE_SECONDS,
+      }),
+    ]);
 
-      posts = resultPosts;
-      pageContent = resultPage;
-    } catch (error) {
-      loadError = error instanceof Error ? error.message : "Unknown error";
-      posts = [];
-      pageContent = null;
+    if (postsResult.status === "fulfilled") {
+      posts = postsResult.value;
+    } else {
+      loadError =
+        postsResult.reason instanceof Error
+          ? postsResult.reason.message
+          : "Unknown error";
+    }
+
+    if (pageResult.status === "fulfilled") {
+      pageContent = pageResult.value;
     }
   }
 
