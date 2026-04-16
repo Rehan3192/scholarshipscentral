@@ -22,6 +22,31 @@ type KeyValueItem = {
   value: string;
 };
 
+const INTERNAL_CLUSTER_SUPPORT: Record<
+  string,
+  {
+    title: string;
+    href: string;
+    anchorText: string;
+    trailingCopy: string;
+  }
+> = {
+  "italy-university-of-padua-excellence-scholarship": {
+    title: "Compare Italy full-funding routes",
+    href: "/fully-funded-scholarships-in-italy-2026",
+    anchorText: "fully funded scholarships in Italy 2026",
+    trailingCopy:
+      "before you decide whether Padua's package is strong enough for your Italy shortlist.",
+  },
+  "italy-university-of-tuscia-scholarship-masters": {
+    title: "Compare stronger Italy funding options",
+    href: "/fully-funded-scholarships-in-italy-2026",
+    anchorText: "Italy fully funded scholarship options for 2026",
+    trailingCopy:
+      "before you commit to a route with call-based funding terms and variable annual coverage.",
+  },
+};
+
 function SectionCard({
   title,
   children,
@@ -172,6 +197,7 @@ export default async function ScholarshipPage({ params }: Props) {
     if (q.toUpperCase() === "TODO" || a.toUpperCase() === "TODO") return false;
     return true;
   });
+  const internalClusterSupport = INTERNAL_CLUSTER_SUPPORT[scholarship.slug];
 
   return (
     <div className="space-y-6">
@@ -304,6 +330,21 @@ export default async function ScholarshipPage({ params }: Props) {
                   </details>
                 ))}
               </div>
+            </SectionCard>
+          ) : null}
+
+          {internalClusterSupport ? (
+            <SectionCard title={internalClusterSupport.title}>
+              <p className="mb-0 text-sm text-gray-700">
+                If this scholarship is on your shortlist, review{" "}
+                <Link
+                  href={internalClusterSupport.href}
+                  className="font-medium text-blue-700 hover:underline"
+                >
+                  {internalClusterSupport.anchorText}
+                </Link>{" "}
+                {internalClusterSupport.trailingCopy}
+              </p>
             </SectionCard>
           ) : null}
 

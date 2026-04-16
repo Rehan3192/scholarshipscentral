@@ -18,7 +18,7 @@ type Props = {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const reserved = new Set(["germany", "united-kingdom", "usa"]);
+  const reserved = new Set(["germany", "italy", "united-kingdom", "usa"]);
   const uniqueSegments = Array.from(new Set(scholarships.map((s) => toSegment(s.country))));
   return uniqueSegments
     .filter((segment) => !reserved.has(segment))
