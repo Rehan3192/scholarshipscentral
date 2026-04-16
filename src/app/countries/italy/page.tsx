@@ -44,6 +44,12 @@ const CLUSTER_LINKS = [
     badge: "Funding",
   },
   {
+    href: "/italy-scholarships-still-open-2026",
+    title: "Italy scholarships still open 2026",
+    description: "Use this if you want Italy routes currently open or deadlines approaching.",
+    badge: "Urgent",
+  },
+  {
     href: "/fully-funded-scholarships-2026",
     title: "Fully funded scholarships 2026",
     description: "Compare Italy routes against the full-funding pool before deciding.",
@@ -208,6 +214,11 @@ export default function ItalyScholarships2026Page() {
         </p>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
           This page matters because it pushes the right next decision. If you
+          need to decide what to apply for now, use{" "}
+          <Link href="/italy-scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">
+            Italy scholarships still open 2026
+          </Link>
+          {" "}for the Italy routes currently accepting applications. If you
           need a tighter shortlist, start with{" "}
           <Link href="/fully-funded-scholarships-in-italy-2026" className="font-medium text-blue-700 hover:underline">
             fully funded scholarships in Italy 2026

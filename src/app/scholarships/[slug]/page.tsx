@@ -45,6 +45,34 @@ const INTERNAL_CLUSTER_SUPPORT: Record<
     trailingCopy:
       "before you commit to a route with call-based funding terms and variable annual coverage.",
   },
+  "university-of-turin-scholarships-2026": {
+    title: "Need more Italy routes still accepting applications?",
+    href: "/italy-scholarships-still-open-2026",
+    anchorText: "Italy scholarships still open 2026",
+    trailingCopy:
+      "if you want backup Italy options that are currently open or using rolling deadline language.",
+  },
+  "italy-university-of-insubria-scholarship-masters": {
+    title: "Need more live Italy options?",
+    href: "/italy-scholarships-still-open-2026",
+    anchorText: "Italy scholarships still accepting applications in 2026",
+    trailingCopy:
+      "before you narrow your shortlist to one call-based university route.",
+  },
+  "italy-university-of-camerino-scholarship-masters": {
+    title: "Compare other Italy deadlines approaching",
+    href: "/italy-scholarships-still-open-2026",
+    anchorText: "currently open scholarships in Italy for 2026",
+    trailingCopy:
+      "if you want more Italy routes you can act on now.",
+  },
+  "italy-unicore-8-scholarship-masters": {
+    title: "Need more Italy routes to apply for now?",
+    href: "/italy-scholarships-still-open-2026",
+    anchorText: "Italy scholarships still open 2026",
+    trailingCopy:
+      "if this deadline feels too close and you need other active Italy options immediately.",
+  },
 };
 
 function SectionCard({

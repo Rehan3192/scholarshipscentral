@@ -27,6 +27,12 @@ export const metadata: Metadata = {
 
 const STILL_OPEN_LINKS = [
   {
+    href: "/italy-scholarships-still-open-2026",
+    title: "Italy scholarships still open 2026",
+    description: "Go straight to the Italy-specific apply-now cluster when Italy is already on your shortlist.",
+    badge: "Italy",
+  },
+  {
     href: "/europe-scholarships-2026",
     title: "Europe scholarships 2026",
     description: "Move from open-deadline research into the broader Europe scholarship hub.",
@@ -191,6 +197,19 @@ export default function ScholarshipsStillOpen2026Page() {
             <HubLinkCard key={link.href} {...link} />
           ))}
         </div>
+      </section>
+
+      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          Country shortcut: Italy
+        </h2>
+        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+          If Italy is already on your shortlist, go straight to{" "}
+          <Link href="/italy-scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">
+            Italy scholarships still open 2026
+          </Link>
+          {" "}for Italy routes still accepting applications instead of scanning the full global urgency pool first.
+        </p>
       </section>
 
       <section className="space-y-4">
