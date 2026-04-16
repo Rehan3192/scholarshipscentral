@@ -195,26 +195,29 @@ export default function FullyFundedScholarshipsInItaly2026Page() {
 
       <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          Why this page exists separately from the main Italy cluster
+          Where to find more Italy options
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          A user searching for fully funded scholarships in Italy 2026 is asking a
-          narrower question than a user searching for Italy scholarships 2026. The
-          first user wants to remove fee-reduction and merit-discount pages from the
-          shortlist. The second user is still exploring the full Italy market.
-        </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          This distinction matters because Italy is strong for partial funding, but
-          the fully funded pool is smaller and more competitive. If you want broader
-          Italy coverage, go back to{" "}
+          Use{" "}
           <Link href="/countries/italy" className="font-medium text-blue-700 hover:underline">
             Italy scholarships 2026
           </Link>
-          . If you want global comparisons, use{" "}
+          {" "}for the full Italy scholarship list. Use{" "}
           <Link href="/fully-funded-scholarships-2026" className="font-medium text-blue-700 hover:underline">
             fully funded scholarships 2026
           </Link>
-          .
+          {" "}for global comparisons.
+        </p>
+        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+          Use{" "}
+          <Link href="/italy-scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">
+            Italy scholarships still open 2026
+          </Link>
+          {" "}for Italy routes still accepting applications, or{" "}
+          <Link href="/italy-scholarships-without-ielts-2026" className="font-medium text-blue-700 hover:underline">
+            Italy scholarships without IELTS
+          </Link>
+          {" "}if language flexibility matters too.
         </p>
       </section>
 

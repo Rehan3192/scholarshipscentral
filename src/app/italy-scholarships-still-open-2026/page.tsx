@@ -195,25 +195,29 @@ export default function ItalyScholarshipsStillOpen2026Page() {
 
       <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          How to use this page
+          Where to find more Italy options
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          The point of this page is speed. A user searching for Italy scholarships
-          still open 2026 usually needs to decide what to apply for now, not build
-          a perfect longlist. That is why the apply-first section comes before the
-          full set of Italy options still accepting applications.
-        </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          If the live Italy pool feels too narrow, go back to{" "}
+          Use{" "}
           <Link href="/countries/italy" className="font-medium text-blue-700 hover:underline">
             Italy scholarships 2026
           </Link>
-          {" "}for broader options. If you want to compare urgency across countries,
-          use{" "}
+          {" "}for the full Italy list. Use{" "}
           <Link href="/scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">
             scholarships still open 2026
           </Link>
-          .
+          {" "}to compare current deadlines across countries.
+        </p>
+        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+          Use{" "}
+          <Link href="/fully-funded-scholarships-in-italy-2026" className="font-medium text-blue-700 hover:underline">
+            fully funded scholarships in Italy 2026
+          </Link>
+          {" "}for stronger funding, or{" "}
+          <Link href="/italy-scholarships-without-ielts-2026" className="font-medium text-blue-700 hover:underline">
+            Italy scholarships without IELTS
+          </Link>
+          {" "}for language-flexible routes.
         </p>
       </section>
 

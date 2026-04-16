@@ -203,40 +203,33 @@ export default function ItalyScholarships2026Page() {
 
       <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          Why Italy needs its own 2026 cluster page
+          Where to go next
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          Italy sits in a different position from the broader Europe hub.
-          Applicants usually land here with a clearer question: do they want a
-          high-brand university scholarship, a regional fee-support route, or a
-          more generous fully funded option. A generic country listing does not
-          answer that well enough.
-        </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          This page matters because it pushes the right next decision. If you
-          need to decide what to apply for now, use{" "}
+          Use{" "}
           <Link href="/italy-scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">
             Italy scholarships still open 2026
           </Link>
-          {" "}for the Italy routes currently accepting applications. If you
-          need a tighter shortlist, start with{" "}
+          {" "}for Italy routes currently accepting applications. Use{" "}
           <Link href="/fully-funded-scholarships-in-italy-2026" className="font-medium text-blue-700 hover:underline">
             fully funded scholarships in Italy 2026
           </Link>
-          {" "}when full cost coverage is your first filter. If you
-          care about cost coverage first, go to{" "}
+          {" "}for stronger funding. Use{" "}
           <Link href="/fully-funded-scholarships-2026" className="font-medium text-blue-700 hover:underline">
             fully funded scholarships 2026
           </Link>
-          . If you care about language flexibility, go to{" "}
+          {" "}for global comparisons.
+        </p>
+        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+          Use{" "}
           <Link href="/italy-scholarships-without-ielts-2026" className="font-medium text-blue-700 hover:underline">
             Italy scholarships without IELTS
           </Link>
-          . If you need live deadlines, use{" "}
+          {" "}for language-flexible routes. Use{" "}
           <Link href="/scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">
             scholarships still open 2026
           </Link>
-          .
+          {" "}if you want to compare live deadlines outside Italy.
         </p>
       </section>
 
