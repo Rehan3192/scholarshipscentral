@@ -22,28 +22,59 @@ type KeyValueItem = {
   value: string;
 };
 
-const ITALY_CLUSTER_PATHS = [
-  {
-    href: "/countries/italy",
-    title: "Italy scholarships 2026",
-    description: "Return to the full Italy cluster for all Italy scholarship routes.",
-  },
-  {
-    href: "/fully-funded-scholarships-in-italy-2026",
-    title: "Fully funded scholarships in Italy 2026",
-    description: "Use this when stronger funding is the next filter inside the Italy cluster.",
-  },
-  {
-    href: "/italy-scholarships-still-open-2026",
-    title: "Italy scholarships still open 2026",
-    description: "Use this when you want Italy routes currently accepting applications.",
-  },
-  {
-    href: "/italy-scholarships-without-ielts-2026",
-    title: "Italy scholarships without IELTS 2026",
-    description: "Use this when language flexibility matters inside the Italy cluster.",
-  },
-] as const;
+const COUNTRY_CLUSTER_PATHS = {
+  Italy: [
+    {
+      href: "/countries/italy",
+      title: "Italy scholarships 2026",
+      description: "Return to the full Italy cluster for all Italy scholarship routes.",
+    },
+    {
+      href: "/fully-funded-scholarships-in-italy-2026",
+      title: "Fully funded scholarships in Italy 2026",
+      description: "Use this when stronger funding is the next filter inside the Italy cluster.",
+    },
+    {
+      href: "/italy-scholarships-still-open-2026",
+      title: "Italy scholarships still open 2026",
+      description: "Use this when you want Italy routes currently accepting applications.",
+    },
+    {
+      href: "/italy-scholarships-without-ielts-2026",
+      title: "Italy scholarships without IELTS 2026",
+      description: "Use this when language flexibility matters inside the Italy cluster.",
+    },
+  ],
+  "United Kingdom": [
+    {
+      href: "/countries/united-kingdom",
+      title: "UK scholarships 2026",
+      description: "Return to the full UK cluster before deciding which route deserves your effort.",
+    },
+    {
+      href: "/uk-scholarships-without-ielts-2026",
+      title: "UK scholarships without IELTS 2026",
+      description: "Use this when language flexibility is the next filter inside the UK cluster.",
+    },
+    {
+      href: "/fully-funded-scholarships-2026",
+      title: "Fully funded scholarships 2026",
+      description: "Use this when you want to compare UK routes against the full-funding pool.",
+    },
+    {
+      href: "/scholarships-still-open-2026",
+      title: "Scholarships still open 2026",
+      description: "Use this when you want UK routes with deadlines approaching first.",
+    },
+  ],
+} as const;
+
+const COUNTRY_CLUSTER_LABELS: Record<string, string> = {
+  Italy: "Italy",
+  "United Kingdom": "UK",
+};
+
+const STRICT_COUNTRY_RELATED = new Set(["Italy", "United Kingdom"]);
 
 const INTERNAL_CLUSTER_SUPPORT: Record<
   string,
@@ -95,6 +126,34 @@ const INTERNAL_CLUSTER_SUPPORT: Record<
     anchorText: "Italy scholarships still open 2026",
     trailingCopy:
       "if this deadline feels too close and you need other active Italy options immediately.",
+  },
+  "chevening-scholarship": {
+    title: "Need the full UK shortlist?",
+    href: "/countries/united-kingdom",
+    anchorText: "UK scholarships 2026",
+    trailingCopy:
+      "before you decide whether Chevening is the right first-choice route inside the wider UK cluster.",
+  },
+  "commonwealth-scholarship": {
+    title: "Compare this with the wider UK pool",
+    href: "/countries/united-kingdom",
+    anchorText: "scholarships in the UK for 2026",
+    trailingCopy:
+      "if you want to compare Commonwealth against the broader mix of UK-funded and university-led routes.",
+  },
+  "uk-gates-cambridge-scholarship": {
+    title: "Need more top-end UK routes?",
+    href: "/countries/united-kingdom",
+    anchorText: "UK scholarship options for 2026",
+    trailingCopy:
+      "before you narrow your shortlist to Cambridge-only routes.",
+  },
+  "uk-clarendon-scholarship": {
+    title: "Review the wider UK flagship pool",
+    href: "/countries/united-kingdom",
+    anchorText: "full UK scholarship shortlist for 2026",
+    trailingCopy:
+      "if you want to compare Clarendon with the rest of the UK flagship scholarship cluster.",
   },
 };
 
@@ -188,9 +247,9 @@ function buildRelatedScholarships(current: (typeof scholarships)[number]) {
     )
     .map((entry) => entry.scholarship);
 
-  if (current.country === "Italy") {
-    const italyFirst = sameCountry.slice(0, 4);
-    if (italyFirst.length >= 4) return italyFirst;
+  if (STRICT_COUNTRY_RELATED.has(current.country)) {
+    const countryFirst = sameCountry.slice(0, 4);
+    if (countryFirst.length >= 4) return countryFirst;
 
     const fallback = pool
       .filter((candidate) => candidate.country !== current.country)
@@ -203,7 +262,7 @@ function buildRelatedScholarships(current: (typeof scholarships)[number]) {
       )
       .map((entry) => entry.scholarship);
 
-    return [...italyFirst, ...fallback].slice(0, 4);
+    return [...countryFirst, ...fallback].slice(0, 4);
   }
 
   return pool
@@ -288,7 +347,11 @@ export default async function ScholarshipPage({ params }: Props) {
     return true;
   });
   const internalClusterSupport = INTERNAL_CLUSTER_SUPPORT[scholarship.slug];
-  const italyClusterPaths = scholarship.country === "Italy" ? ITALY_CLUSTER_PATHS : [];
+  const countryClusterPaths =
+    COUNTRY_CLUSTER_PATHS[
+      scholarship.country as keyof typeof COUNTRY_CLUSTER_PATHS
+    ] ?? [];
+  const countryClusterLabel = COUNTRY_CLUSTER_LABELS[scholarship.country] ?? scholarship.country;
 
   return (
     <div className="space-y-6">
@@ -439,13 +502,13 @@ export default async function ScholarshipPage({ params }: Props) {
             </SectionCard>
           ) : null}
 
-          {italyClusterPaths.length > 0 ? (
-            <SectionCard title="More Italy scholarship paths">
+          {countryClusterPaths.length > 0 ? (
+            <SectionCard title={`More ${countryClusterLabel} scholarship paths`}>
               <p className="mb-4 text-sm text-gray-700">
-                Stay inside the Italy cluster when you want more routes in the same destination before widening your search.
+                Stay inside the {countryClusterLabel} cluster when you want more routes in the same destination before widening your search.
               </p>
               <div className="grid gap-3 sm:grid-cols-2">
-                {italyClusterPaths.map((path) => (
+                {countryClusterPaths.map((path) => (
                   <Link
                     key={path.href}
                     href={path.href}

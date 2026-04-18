@@ -50,12 +50,6 @@ const UK_LANGUAGE_LINKS = [
     badge: "Funding",
   },
   {
-    href: "/italy-scholarships-without-ielts-2026",
-    title: "Italy scholarships without IELTS",
-    description: "Compare the UK shortlist with Italy routes that also mention alternative language proof.",
-    badge: "Compare",
-  },
-  {
     href: "/europe-scholarships-2026",
     title: "Europe scholarships 2026",
     description: "Return to the wider Europe hub when you want to broaden beyond the UK.",
