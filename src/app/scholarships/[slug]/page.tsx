@@ -22,6 +22,29 @@ type KeyValueItem = {
   value: string;
 };
 
+const ITALY_CLUSTER_PATHS = [
+  {
+    href: "/countries/italy",
+    title: "Italy scholarships 2026",
+    description: "Return to the full Italy cluster for all Italy scholarship routes.",
+  },
+  {
+    href: "/fully-funded-scholarships-in-italy-2026",
+    title: "Fully funded scholarships in Italy 2026",
+    description: "Use this when stronger funding is the next filter inside the Italy cluster.",
+  },
+  {
+    href: "/italy-scholarships-still-open-2026",
+    title: "Italy scholarships still open 2026",
+    description: "Use this when you want Italy routes currently accepting applications.",
+  },
+  {
+    href: "/italy-scholarships-without-ielts-2026",
+    title: "Italy scholarships without IELTS 2026",
+    description: "Use this when language flexibility matters inside the Italy cluster.",
+  },
+] as const;
+
 const INTERNAL_CLUSTER_SUPPORT: Record<
   string,
   {
@@ -144,6 +167,57 @@ function renderKeyValueOrList(items: string[]) {
   );
 }
 
+function scholarshipScore(candidate: (typeof scholarships)[number], current: (typeof scholarships)[number]) {
+  return (
+    (candidate.country === current.country ? 2 : 0) +
+    (candidate.degreeLevel === current.degreeLevel ? 2 : 0) +
+    (candidate.fundingType === current.fundingType ? 1 : 0)
+  );
+}
+
+function buildRelatedScholarships(current: (typeof scholarships)[number]) {
+  const pool = scholarships.filter((candidate) => candidate.slug !== current.slug);
+
+  const sameCountry = pool
+    .filter((candidate) => candidate.country === current.country)
+    .map((candidate) => ({ scholarship: candidate, score: scholarshipScore(candidate, current) }))
+    .sort(
+      (left, right) =>
+        right.score - left.score ||
+        (right.scholarship.lastUpdated ?? "").localeCompare(left.scholarship.lastUpdated ?? ""),
+    )
+    .map((entry) => entry.scholarship);
+
+  if (current.country === "Italy") {
+    const italyFirst = sameCountry.slice(0, 4);
+    if (italyFirst.length >= 4) return italyFirst;
+
+    const fallback = pool
+      .filter((candidate) => candidate.country !== current.country)
+      .map((candidate) => ({ scholarship: candidate, score: scholarshipScore(candidate, current) }))
+      .filter((entry) => entry.score > 0)
+      .sort(
+        (left, right) =>
+          right.score - left.score ||
+          (right.scholarship.lastUpdated ?? "").localeCompare(left.scholarship.lastUpdated ?? ""),
+      )
+      .map((entry) => entry.scholarship);
+
+    return [...italyFirst, ...fallback].slice(0, 4);
+  }
+
+  return pool
+    .map((candidate) => ({ scholarship: candidate, score: scholarshipScore(candidate, current) }))
+    .filter((entry) => entry.score > 0)
+    .sort(
+      (left, right) =>
+        right.score - left.score ||
+        (right.scholarship.lastUpdated ?? "").localeCompare(left.scholarship.lastUpdated ?? ""),
+    )
+    .slice(0, 4)
+    .map((entry) => entry.scholarship);
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const scholarship = scholarships.find((x) => x.slug === slug);
@@ -191,19 +265,7 @@ export default async function ScholarshipPage({ params }: Props) {
   const scholarship = scholarships.find((x) => x.slug === slug);
   if (!scholarship) notFound();
 
-  const related = scholarships
-    .filter((s) => s.slug !== scholarship.slug)
-    .map((s) => {
-      const score =
-        (s.country === scholarship.country ? 2 : 0) +
-        (s.degreeLevel === scholarship.degreeLevel ? 2 : 0) +
-        (s.fundingType === scholarship.fundingType ? 1 : 0);
-      return { s, score };
-    })
-    .filter((x) => x.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 4)
-    .map((x) => x.s);
+  const related = buildRelatedScholarships(scholarship);
 
   const withoutPlaceholders = (items?: string[]) =>
     (items ?? [])
@@ -226,6 +288,7 @@ export default async function ScholarshipPage({ params }: Props) {
     return true;
   });
   const internalClusterSupport = INTERNAL_CLUSTER_SUPPORT[scholarship.slug];
+  const italyClusterPaths = scholarship.country === "Italy" ? ITALY_CLUSTER_PATHS : [];
 
   return (
     <div className="space-y-6">
@@ -373,6 +436,26 @@ export default async function ScholarshipPage({ params }: Props) {
                 </Link>{" "}
                 {internalClusterSupport.trailingCopy}
               </p>
+            </SectionCard>
+          ) : null}
+
+          {italyClusterPaths.length > 0 ? (
+            <SectionCard title="More Italy scholarship paths">
+              <p className="mb-4 text-sm text-gray-700">
+                Stay inside the Italy cluster when you want more routes in the same destination before widening your search.
+              </p>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {italyClusterPaths.map((path) => (
+                  <Link
+                    key={path.href}
+                    href={path.href}
+                    className="rounded-xl border border-gray-200 bg-white p-4 text-sm text-gray-700 transition-colors duration-200 motion-reduce:transition-none hover:border-gray-300 hover:bg-gray-50"
+                  >
+                    <div className="font-semibold text-gray-900">{path.title}</div>
+                    <div className="mt-2">{path.description}</div>
+                  </Link>
+                ))}
+              </div>
             </SectionCard>
           ) : null}
 

@@ -38,22 +38,16 @@ const ITALY_LANGUAGE_LINKS = [
     badge: "Country",
   },
   {
-    href: "/scholarships-still-open-2026",
-    title: "Scholarships still open 2026",
-    description: "Use this when your next filter is active deadlines rather than country alone.",
+    href: "/italy-scholarships-still-open-2026",
+    title: "Italy scholarships still open 2026",
+    description: "Use this when you want Italy routes currently open or deadlines approaching.",
     badge: "Open now",
   },
   {
-    href: "/fully-funded-scholarships-2026",
-    title: "Fully funded scholarships 2026",
-    description: "Move from language flexibility into stronger funding routes.",
+    href: "/fully-funded-scholarships-in-italy-2026",
+    title: "Fully funded scholarships in Italy 2026",
+    description: "Move from language flexibility into stronger Italy funding routes.",
     badge: "Funding",
-  },
-  {
-    href: "/uk-scholarships-without-ielts-2026",
-    title: "UK scholarships without IELTS",
-    description: "Compare Italy routes with UK scholarship pages that also mention alternative proof.",
-    badge: "Compare",
   },
   {
     href: "/europe-scholarships-2026",
@@ -196,6 +190,12 @@ export default function ItalyScholarshipsWithoutIelts2026Page() {
           opportunities first, then confirm the exact language rule on the official source
           before applying.
         </p>
+        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+          Italy universities often accept alternatives like MOI or internal language
+          assessments, which makes this route more accessible for students who do not
+          want to take IELTS. If you are exploring other countries, compare them on
+          their own cluster pages rather than mixing them into this Italy page.
+        </p>
       </section>
 
       <section className="space-y-4">
@@ -204,7 +204,7 @@ export default function ItalyScholarshipsWithoutIelts2026Page() {
             Italy language cluster links
           </h2>
           <p className="mb-0 text-sm text-gray-600">
-            Use these next steps to compare Italy language-flexible routes with UK, Europe, and funding hubs.
+            Use these next steps to stay inside the Italy cluster or move back up to Europe when needed.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
