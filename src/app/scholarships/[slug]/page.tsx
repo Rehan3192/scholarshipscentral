@@ -52,6 +52,11 @@ const COUNTRY_CLUSTER_PATHS = {
       description: "Return to the full UK cluster before deciding which route deserves your effort.",
     },
     {
+      href: "/fully-funded-scholarships-in-uk-2026",
+      title: "Fully funded scholarships in UK 2026",
+      description: "Use this when full cost coverage is the next filter inside the UK cluster.",
+    },
+    {
       href: "/uk-scholarships-without-ielts-2026",
       title: "UK scholarships without IELTS 2026",
       description: "Use this when language flexibility is the next filter inside the UK cluster.",
@@ -67,14 +72,37 @@ const COUNTRY_CLUSTER_PATHS = {
       description: "Use this when you want UK routes with deadlines approaching first.",
     },
   ],
+  Germany: [
+    {
+      href: "/countries/germany",
+      title: "Germany scholarships 2026",
+      description: "Return to the full Germany cluster before deciding which route deserves your effort.",
+    },
+    {
+      href: "/germany-scholarships-without-ielts-2026",
+      title: "Germany scholarships without IELTS 2026",
+      description: "Use this when language flexibility is the next filter inside the Germany cluster.",
+    },
+    {
+      href: "/fully-funded-scholarships-2026",
+      title: "Fully funded scholarships 2026",
+      description: "Use this when you want to compare Germany routes against the full-funding pool.",
+    },
+    {
+      href: "/scholarships-still-open-2026",
+      title: "Scholarships still open 2026",
+      description: "Use this when you want Germany routes with deadlines approaching first.",
+    },
+  ],
 } as const;
 
 const COUNTRY_CLUSTER_LABELS: Record<string, string> = {
   Italy: "Italy",
   "United Kingdom": "UK",
+  Germany: "Germany",
 };
 
-const STRICT_COUNTRY_RELATED = new Set(["Italy", "United Kingdom"]);
+const STRICT_COUNTRY_RELATED = new Set(["Italy", "United Kingdom", "Germany"]);
 
 const INTERNAL_CLUSTER_SUPPORT: Record<
   string,
@@ -128,32 +156,74 @@ const INTERNAL_CLUSTER_SUPPORT: Record<
       "if this deadline feels too close and you need other active Italy options immediately.",
   },
   "chevening-scholarship": {
-    title: "Need the full UK shortlist?",
-    href: "/countries/united-kingdom",
-    anchorText: "UK scholarships 2026",
+    title: "Need the full UK funding shortlist?",
+    href: "/fully-funded-scholarships-in-uk-2026",
+    anchorText: "fully funded scholarships in UK 2026",
     trailingCopy:
-      "before you decide whether Chevening is the right first-choice route inside the wider UK cluster.",
+      "before you decide whether Chevening is the right first-choice route inside the UK full-funding cluster.",
   },
   "commonwealth-scholarship": {
-    title: "Compare this with the wider UK pool",
-    href: "/countries/united-kingdom",
-    anchorText: "scholarships in the UK for 2026",
+    title: "Compare this with the wider UK funding pool",
+    href: "/fully-funded-scholarships-in-uk-2026",
+    anchorText: "UK fully funded scholarship options for 2026",
     trailingCopy:
-      "if you want to compare Commonwealth against the broader mix of UK-funded and university-led routes.",
+      "if you want to compare Commonwealth against the broader mix of fully funded UK routes.",
   },
   "uk-gates-cambridge-scholarship": {
-    title: "Need more top-end UK routes?",
-    href: "/countries/united-kingdom",
-    anchorText: "UK scholarship options for 2026",
+    title: "Need more top-end UK funding routes?",
+    href: "/fully-funded-scholarships-in-uk-2026",
+    anchorText: "top fully funded scholarships in the UK for 2026",
     trailingCopy:
       "before you narrow your shortlist to Cambridge-only routes.",
   },
   "uk-clarendon-scholarship": {
-    title: "Review the wider UK flagship pool",
-    href: "/countries/united-kingdom",
-    anchorText: "full UK scholarship shortlist for 2026",
+    title: "Review the wider UK flagship funding pool",
+    href: "/fully-funded-scholarships-in-uk-2026",
+    anchorText: "full UK fully funded scholarship shortlist for 2026",
     trailingCopy:
-      "if you want to compare Clarendon with the rest of the UK flagship scholarship cluster.",
+      "if you want to compare Clarendon with the rest of the UK flagship funding cluster.",
+  },
+  "daad-postgraduate-scholarship-germany": {
+    title: "Need the full Germany shortlist?",
+    href: "/countries/germany",
+    anchorText: "Germany scholarships 2026",
+    trailingCopy:
+      "before you decide whether the DAAD postgraduate route is the right first-choice page inside the wider Germany cluster.",
+  },
+  "daad-epos-scholarship-masters": {
+    title: "Compare this with the wider Germany pool",
+    href: "/countries/germany",
+    anchorText: "scholarships in Germany for 2026",
+    trailingCopy:
+      "if you want to compare DAAD EPOS against the broader mix of Germany scholarship routes.",
+  },
+  "daad-research-grants": {
+    title: "Need more Germany doctoral routes?",
+    href: "/countries/germany",
+    anchorText: "Germany scholarship options for 2026",
+    trailingCopy:
+      "before you narrow your shortlist to research-grant routes alone.",
+  },
+  "germany-heinrich-b-ll-scholarship": {
+    title: "Review the wider Germany funding cluster",
+    href: "/countries/germany",
+    anchorText: "full Germany scholarship shortlist for 2026",
+    trailingCopy:
+      "if you want to compare Heinrich Böll with the rest of the Germany foundation and DAAD pool.",
+  },
+  "germany-konrad-adenauer-scholarship": {
+    title: "Compare more Germany-funded postgraduate routes",
+    href: "/countries/germany",
+    anchorText: "Germany funded scholarship routes for 2026",
+    trailingCopy:
+      "before you commit to one foundation-led route inside the Germany cluster.",
+  },
+  "germany-friedrich-ebert-stiftung-scholarship": {
+    title: "Need the wider Germany route mix?",
+    href: "/countries/germany",
+    anchorText: "Germany scholarship shortlist for 2026",
+    trailingCopy:
+      "if you want to compare Friedrich Ebert with the wider Germany scholarship pool first.",
   },
 };
 

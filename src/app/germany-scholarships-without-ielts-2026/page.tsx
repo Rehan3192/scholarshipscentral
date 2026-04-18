@@ -55,12 +55,6 @@ const GERMANY_LANGUAGE_LINKS = [
     description: "Compare Germany routes with wider public-funding opportunities across Europe.",
     badge: "Government",
   },
-  {
-    href: "/italy-scholarships-without-ielts-2026",
-    title: "Italy scholarships without IELTS",
-    description: "Compare Germany language-flexible routes with Italy alternatives.",
-    badge: "Compare",
-  },
 ] as const;
 
 export default function GermanyScholarshipsWithoutIelts2026Page() {

@@ -38,6 +38,12 @@ const CLUSTER_LINKS = [
     badge: "Language",
   },
   {
+    href: "/fully-funded-scholarships-in-uk-2026",
+    title: "Fully funded scholarships in UK 2026",
+    description: "Use this when full cost coverage is your next filter inside the UK cluster.",
+    badge: "Funding",
+  },
+  {
     href: "/fully-funded-scholarships-2026",
     title: "Fully funded scholarships 2026",
     description: "Move here if you only want full-cost coverage before comparing UK routes.",
@@ -218,6 +224,17 @@ export default function UkScholarships2026Page() {
         <h2 className="mt-0 text-lg font-semibold text-gray-900">
           Choose the right UK path next
         </h2>
+        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+          Use{" "}
+          <Link
+            href="/fully-funded-scholarships-in-uk-2026"
+            className="font-medium text-blue-700 hover:underline"
+          >
+            fully funded scholarships in UK 2026
+          </Link>{" "}
+          if you only want the strongest UK funding routes before comparing the
+          wider UK mix.
+        </p>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
           Use{" "}
           <Link

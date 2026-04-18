@@ -26,6 +26,12 @@ export const metadata: Metadata = {
 
 const HUB_LINKS = [
   {
+    href: "/fully-funded-scholarships-in-uk-2026",
+    title: "Fully funded scholarships in UK 2026",
+    description: "Use this if the UK is already on your shortlist and you want the country-level full-funding cluster first.",
+    badge: "UK",
+  },
+  {
     href: "/fully-funded-scholarships-in-italy-2026",
     title: "Fully funded scholarships in Italy 2026",
     description: "Use this if Italy is already on your shortlist and you want the country-level full-funding cluster first.",
@@ -239,6 +245,19 @@ export default function FullyFundedScholarships2026Page() {
             <HubLinkCard key={link.href} {...link} />
           ))}
         </div>
+      </section>
+
+      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          Country shortcut: UK
+        </h2>
+        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+          If the UK is already on your shortlist, go straight to{" "}
+          <Link href="/fully-funded-scholarships-in-uk-2026" className="font-medium text-blue-700 hover:underline">
+            fully funded scholarships in UK 2026
+          </Link>
+          {" "}instead of scanning the full global list first.
+        </p>
       </section>
 
       <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
