@@ -11,7 +11,9 @@ import {
 } from "@/lib/wordpress";
 
 const BLOG_FETCH_TIMEOUT_MS = 450;
-const BLOG_REVALIDATE_SECONDS = 60 * 60 * 6;
+const BLOG_REVALIDATE_SECONDS = 60 * 60;
+const SHARED_BLOG_POSTS_PAGE_SIZE = 20;
+const HOMEPAGE_BLOG_POST_LIMIT = 3;
 const LATEST_SCHOLARSHIPS = [...scholarships]
   .sort((a, b) => (b.lastUpdated ?? "").localeCompare(a.lastUpdated ?? ""))
   .slice(0, 6);
@@ -39,19 +41,20 @@ function formatDate(value: string) {
 async function getHomepageBlogPosts(): Promise<WordPressPostListItem[]> {
   if (!isWordPressConfigured()) return [];
 
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), BLOG_FETCH_TIMEOUT_MS);
+
   try {
-    const postsPromise = getWordPressPosts({
-      perPage: 3,
+    const posts = await getWordPressPosts({
+      perPage: SHARED_BLOG_POSTS_PAGE_SIZE,
       revalidateSeconds: BLOG_REVALIDATE_SECONDS,
-    }).catch(() => []);
-
-    const timeoutPromise = new Promise<WordPressPostListItem[]>((resolve) => {
-      setTimeout(() => resolve([]), BLOG_FETCH_TIMEOUT_MS);
+      signal: controller.signal,
     });
-
-    return await Promise.race([postsPromise, timeoutPromise]);
+    return posts.slice(0, HOMEPAGE_BLOG_POST_LIMIT);
   } catch {
     return [];
+  } finally {
+    clearTimeout(timeoutId);
   }
 }
 

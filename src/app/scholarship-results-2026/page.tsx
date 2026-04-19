@@ -61,7 +61,7 @@ export default async function ScholarshipResults2026Page() {
   if (configured) {
     const [postsResult, pageResult] = await Promise.allSettled([
       getWordPressScholarshipResultPosts({
-        perPage: 100,
+        perPage: 20,
         revalidateSeconds: RESULTS_REVALIDATE_SECONDS,
       }),
       getWordPressPageBySlug("scholarship-results-2026", {

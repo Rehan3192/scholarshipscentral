@@ -9,11 +9,17 @@ import {
   isWordPressConfigured,
 } from "@/lib/wordpress";
 
+const STATIC_LAST_MODIFIED = new Date("2026-02-09T00:00:00Z");
+
 function isoDateOrNow(value: string | undefined) {
   if (!value) return new Date();
   const d = new Date(value);
   if (Number.isNaN(d.getTime())) return new Date();
   return d;
+}
+
+function maxDate(current: Date, candidate: Date) {
+  return candidate > current ? candidate : current;
 }
 
 function toFundingSlug(fundingType: string) {
@@ -30,6 +36,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   const siteUrl = getSiteUrl();
+  const latestScholarshipModified = scholarships.reduce(
+    (latest, scholarship) => maxDate(latest, isoDateOrNow(scholarship.lastUpdated)),
+    STATIC_LAST_MODIFIED,
+  );
   const scholarshipPages = scholarships.map((s) => ({
     url: `${siteUrl}/scholarships/${s.slug}`,
     lastModified: isoDateOrNow(s.lastUpdated),
@@ -66,18 +76,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   const blogEntries: MetadataRoute.Sitemap = [];
+  let latestBlogModified = STATIC_LAST_MODIFIED;
   if (isWordPressConfigured()) {
-    blogEntries.push({
-      url: `${siteUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: 0.6,
-    });
-
     try {
       const posts = await getWordPressAllPostSlugs({
         maxPosts: 500,
         revalidateSeconds: 60 * 60,
+      });
+      latestBlogModified = posts.reduce(
+        (latest, post) => maxDate(latest, isoDateOrNow(post.modified)),
+        STATIC_LAST_MODIFIED,
+      );
+      blogEntries.push({
+        url: `${siteUrl}/blog`,
+        lastModified: latestBlogModified,
+        changeFrequency: "weekly" as const,
+        priority: 0.6,
       });
       blogEntries.push(
         ...posts.map((p) => ({
@@ -89,84 +103,95 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       );
     } catch {
       // If WordPress is temporarily unavailable, keep sitemap stable.
+      blogEntries.push({
+        url: `${siteUrl}/blog`,
+        lastModified: STATIC_LAST_MODIFIED,
+        changeFrequency: "weekly" as const,
+        priority: 0.6,
+      });
     }
   }
+
+  const homepageLastModified = maxDate(
+    latestScholarshipModified,
+    latestBlogModified,
+  );
 
   return [
     {
       url: siteUrl,
-      lastModified: new Date(),
+      lastModified: homepageLastModified,
       priority: 1,
     },
     ...blogEntries,
     {
       url: `${siteUrl}/contact`,
-      lastModified: new Date(),
+      lastModified: STATIC_LAST_MODIFIED,
       priority: 0.4,
     },
     {
       url: `${siteUrl}/privacy-policy`,
-      lastModified: new Date(),
+      lastModified: STATIC_LAST_MODIFIED,
       priority: 0.3,
     },
     {
       url: `${siteUrl}/terms-of-service`,
-      lastModified: new Date(),
+      lastModified: STATIC_LAST_MODIFIED,
       priority: 0.3,
     },
     {
       url: `${siteUrl}/loughborough-global-impact-scholarship-application-guide`,
-      lastModified: new Date(),
+      lastModified: STATIC_LAST_MODIFIED,
       changeFrequency: "monthly" as const,
       priority: 0.6,
     },
     {
       url: `${siteUrl}/scholarships`,
-      lastModified: new Date(),
+      lastModified: latestScholarshipModified,
       priority: 0.9,
     },
     {
       url: `${siteUrl}/europe-scholarships-2026`,
-      lastModified: new Date(),
+      lastModified: latestScholarshipModified,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     {
       url: `${siteUrl}/fully-funded-scholarships-2026`,
-      lastModified: new Date(),
+      lastModified: latestScholarshipModified,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     {
       url: `${siteUrl}/scholarships-still-open-2026`,
-      lastModified: new Date(),
+      lastModified: latestScholarshipModified,
       changeFrequency: "daily" as const,
       priority: 0.85,
     },
     {
       url: `${siteUrl}/scholarship-results-2026`,
-      lastModified: new Date(),
+      lastModified: latestBlogModified,
       changeFrequency: "weekly" as const,
       priority: 0.75,
     },
     {
       url: `${siteUrl}/countries`,
-      lastModified: new Date(),
+      lastModified: latestScholarshipModified,
       priority: 0.7,
     },
     {
       url: `${siteUrl}/degrees`,
-      lastModified: new Date(),
+      lastModified: latestScholarshipModified,
       priority: 0.7,
     },
     {
       url: `${siteUrl}/funding`,
-      lastModified: new Date(),
+      lastModified: latestScholarshipModified,
       priority: 0.7,
     },
     ...uniqueCountries.map((country) => {
       const slug = toSegment(country);
-      const lastModified = lastUpdatedByCountry.get(country) ?? new Date();
+      const lastModified = lastUpdatedByCountry.get(country) ?? STATIC_LAST_MODIFIED;
       return {
         url: `${siteUrl}/countries/${slug}`,
         lastModified,
@@ -176,7 +201,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }),
     ...uniqueDegrees.map((degree) => {
       const slug = toSegment(degree);
-      const lastModified = lastUpdatedByDegree.get(degree) ?? new Date();
+      const lastModified = lastUpdatedByDegree.get(degree) ?? STATIC_LAST_MODIFIED;
       return {
         url: `${siteUrl}/degrees/${slug}`,
         lastModified,
@@ -185,7 +210,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       };
     }),
     ...uniqueFunding.map((f) => {
-      const lastModified = lastUpdatedByFunding.get(f.label) ?? new Date();
+      const lastModified = lastUpdatedByFunding.get(f.label) ?? STATIC_LAST_MODIFIED;
       return {
         url: `${siteUrl}/funding/${f.slug}`,
         lastModified,

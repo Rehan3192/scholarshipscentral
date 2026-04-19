@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { cache } from "react";
 import {
   BreadcrumbJsonLd,
   WebPageJsonLd,
@@ -16,12 +17,20 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+const BLOG_REVALIDATE_SECONDS = 60 * 60;
+
+export const dynamicParams = false;
+
+const getCachedWordPressPostBySlug = cache(async (slug: string) =>
+  getWordPressPostBySlug(slug, { revalidateSeconds: BLOG_REVALIDATE_SECONDS }),
+);
+
 export async function generateStaticParams() {
   if (!isWordPressConfigured()) return [];
   try {
     const posts = await getWordPressAllPostSlugs({
-      maxPosts: 200,
-      revalidateSeconds: 60 * 60,
+      maxPosts: 500,
+      revalidateSeconds: BLOG_REVALIDATE_SECONDS,
     });
     return posts.map((p) => ({ slug: p.slug }));
   } catch {
@@ -46,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   let post = null;
   try {
-    post = await getWordPressPostBySlug(slug, { revalidateSeconds: 60 * 60 });
+    post = await getCachedWordPressPostBySlug(slug);
   } catch {
     post = null;
   }
@@ -85,7 +94,7 @@ export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   if (!isWordPressConfigured()) notFound();
 
-  const post = await getWordPressPostBySlug(slug, { revalidateSeconds: 60 * 60 });
+  const post = await getCachedWordPressPostBySlug(slug);
   if (!post) notFound();
 
   const title = stripHtmlToText(post.title.rendered);

@@ -85,9 +85,11 @@ async function wpFetchJson<T>(
   {
     query,
     revalidateSeconds = 60 * 60,
+    signal,
   }: {
     query?: Record<string, string | number | boolean | undefined>;
     revalidateSeconds?: number;
+    signal?: AbortSignal;
   } = {},
 ): Promise<{ data: T; headers: Headers } | null> {
   const apiBase = getWordPressApiBase();
@@ -95,8 +97,10 @@ async function wpFetchJson<T>(
 
   const url = buildUrl(apiBase, path, query);
   const fetchWithTimeout = async () => {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), WORDPRESS_FETCH_TIMEOUT_MS);
+    const controller = signal ? null : new AbortController();
+    const timeoutId = controller
+      ? setTimeout(() => controller.abort(), WORDPRESS_FETCH_TIMEOUT_MS)
+      : null;
 
     try {
       return await fetch(url, {
@@ -104,10 +108,10 @@ async function wpFetchJson<T>(
         headers: {
           Accept: "application/json",
         },
-        signal: controller.signal,
+        signal: signal ?? controller?.signal,
       });
     } finally {
-      clearTimeout(timeoutId);
+      if (timeoutId) clearTimeout(timeoutId);
     }
   };
 
@@ -116,7 +120,7 @@ async function wpFetchJson<T>(
   try {
     res = await fetchWithTimeout();
   } catch (error) {
-    if (error instanceof Error && error.name === "AbortError") {
+    if (!signal && error instanceof Error && error.name === "AbortError") {
       res = await fetchWithTimeout();
     } else {
       throw error;
@@ -134,16 +138,22 @@ async function wpFetchJson<T>(
 export async function getWordPressPosts({
   perPage = 20,
   revalidateSeconds,
+  search,
+  signal,
 }: {
   perPage?: number;
   revalidateSeconds?: number;
+  search?: string;
+  signal?: AbortSignal;
 } = {}): Promise<WordPressPostListItem[]> {
   const result = await wpFetchJson<WordPressPostListItem[]>("/posts", {
     revalidateSeconds,
+    signal,
     query: {
       per_page: Math.min(Math.max(perPage, 1), 100),
       status: "publish",
       _fields: "id,slug,title,excerpt,date,modified",
+      search: search?.trim() || undefined,
     },
   });
 
@@ -178,13 +188,17 @@ export function isScholarshipResultPost(post: WordPressPostListPreview): boolean
 }
 
 export async function getWordPressScholarshipResultPosts({
-  perPage = 100,
+  perPage = 20,
   revalidateSeconds,
 }: {
   perPage?: number;
   revalidateSeconds?: number;
 } = {}): Promise<WordPressPostListItem[]> {
-  const posts = await getWordPressPosts({ perPage, revalidateSeconds });
+  const posts = await getWordPressPosts({
+    perPage,
+    revalidateSeconds,
+    search: "results",
+  });
   return posts.filter(isScholarshipResultPost);
 }
 
