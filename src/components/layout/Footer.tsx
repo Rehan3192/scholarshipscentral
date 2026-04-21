@@ -85,6 +85,11 @@ export default function Footer() {
             <div className="text-sm font-semibold text-gray-900">Support</div>
             <ul className="space-y-2 text-sm text-gray-700">
               <li>
+                <Link href="/about" className={linkClassName}>
+                  About
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className={linkClassName}>
                   Contact
                 </Link>

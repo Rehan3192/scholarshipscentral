@@ -125,6 +125,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     ...blogEntries,
     {
+      url: `${siteUrl}/about`,
+      lastModified: new Date("2026-04-21T00:00:00Z"),
+      priority: 0.4,
+    },
+    {
       url: `${siteUrl}/contact`,
       lastModified: STATIC_LAST_MODIFIED,
       priority: 0.4,
