@@ -27,6 +27,13 @@ export type WordPressPost = WordPressPostListItem & {
   content: WordPressRenderedField;
 };
 
+export type WordPressPostsPage = {
+  posts: WordPressPostListItem[];
+  totalPosts: number;
+  totalPages: number;
+  currentPage: number;
+};
+
 export type WordPressPage = {
   id: number;
   slug: string;
@@ -78,6 +85,12 @@ function buildUrl(
     }
   }
   return url.toString();
+}
+
+function parsePositiveInteger(value: string | null, fallback: number) {
+  const parsed = value ? Number(value) : NaN;
+  if (!Number.isFinite(parsed) || parsed <= 0) return fallback;
+  return Math.floor(parsed);
 }
 
 async function wpFetchJson<T>(
@@ -137,27 +150,80 @@ async function wpFetchJson<T>(
 
 export async function getWordPressPosts({
   perPage = 20,
+  page = 1,
   revalidateSeconds,
   search,
   signal,
 }: {
   perPage?: number;
+  page?: number;
   revalidateSeconds?: number;
   search?: string;
   signal?: AbortSignal;
 } = {}): Promise<WordPressPostListItem[]> {
+  const result = await getWordPressPostsPage({
+    perPage,
+    page,
+    revalidateSeconds,
+    search,
+    signal,
+  });
+
+  return result.posts;
+}
+
+export async function getWordPressPostsPage({
+  perPage = 20,
+  page = 1,
+  revalidateSeconds,
+  search,
+  signal,
+}: {
+  perPage?: number;
+  page?: number;
+  revalidateSeconds?: number;
+  search?: string;
+  signal?: AbortSignal;
+} = {}): Promise<WordPressPostsPage> {
+  const normalizedPerPage = Math.min(Math.max(perPage, 1), 100);
+  const normalizedPage = Math.max(1, Math.floor(page));
   const result = await wpFetchJson<WordPressPostListItem[]>("/posts", {
     revalidateSeconds,
     signal,
     query: {
-      per_page: Math.min(Math.max(perPage, 1), 100),
+      per_page: normalizedPerPage,
+      page: normalizedPage,
       status: "publish",
       _fields: "id,slug,title,excerpt,date,modified",
       search: search?.trim() || undefined,
     },
   });
 
-  return result?.data ?? [];
+  if (!result) {
+    return {
+      posts: [],
+      totalPosts: 0,
+      totalPages: 1,
+      currentPage: normalizedPage,
+    };
+  }
+
+  const posts = result.data ?? [];
+  const totalPosts = parsePositiveInteger(
+    result.headers.get("x-wp-total"),
+    posts.length,
+  );
+  const totalPages = parsePositiveInteger(
+    result.headers.get("x-wp-totalpages"),
+    totalPosts > 0 ? Math.ceil(totalPosts / normalizedPerPage) : 1,
+  );
+
+  return {
+    posts,
+    totalPosts,
+    totalPages: Math.max(1, totalPages),
+    currentPage: normalizedPage,
+  };
 }
 
 function normalizeWordPressText(value: string): string {
