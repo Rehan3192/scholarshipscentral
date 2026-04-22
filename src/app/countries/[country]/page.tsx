@@ -10,6 +10,7 @@ import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/seo/StructuredDat
 import { scholarships } from "@/data/scholarships";
 import { normalizeCountry } from "@/data/values";
 import { toSegment } from "@/lib/helpers";
+import { buildCountryHubLinks } from "@/lib/internal-linking";
 
 type Props = {
   params: Promise<{ country: string }>;
@@ -64,6 +65,7 @@ export default async function CountryPage({ params }: Props) {
   const filtered = scholarships.filter(
     (s) => s.country === label
   );
+  const hubLinks = buildCountryHubLinks(label);
   const items = filtered.map((s) => ({
     name: s.title,
     href: `/scholarships/${s.slug}`,
@@ -99,6 +101,34 @@ export default async function CountryPage({ params }: Props) {
           />
         </div>
       </header>
+
+      {hubLinks.length > 0 ? (
+        <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+          <div className="space-y-2">
+            <h2 className="mt-0 text-xl font-semibold text-gray-900">
+              Broaden your {label} shortlist
+            </h2>
+            <p className="mb-0 text-sm text-gray-700">
+              Use these hub pages to move from the {label} cluster into broader
+              scholarship pools without losing context.
+            </p>
+          </div>
+
+          <div className="mt-5 space-y-3 text-sm text-gray-700">
+            {hubLinks.map((link) => (
+              <p
+                key={link.href}
+                className="mb-0"
+              >
+                <Link href={link.href} className="font-semibold text-blue-700 hover:underline">
+                  {link.title}
+                </Link>{" "}
+                {link.description}
+              </p>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       {filtered.length === 0 ? (
         <div className="rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-700">

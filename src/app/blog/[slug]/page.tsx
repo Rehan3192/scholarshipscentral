@@ -12,6 +12,7 @@ import {
   isWordPressConfigured,
   stripHtmlToText,
 } from "@/lib/wordpress";
+import { getBlogContentWithInternalLinks } from "@/lib/internal-linking";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -100,6 +101,10 @@ export default async function BlogPostPage({ params }: Props) {
   const title = stripHtmlToText(post.title.rendered);
   const published = formatDate(post.date);
   const modified = formatDate(post.modified);
+  const contentWithInternalLinks = getBlogContentWithInternalLinks(
+    post.slug,
+    post.content.rendered,
+  );
 
   return (
     <div className="space-y-6">
@@ -130,7 +135,7 @@ export default async function BlogPostPage({ params }: Props) {
       <article className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
         <div
           className="wp-content space-y-4"
-          dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+          dangerouslySetInnerHTML={{ __html: contentWithInternalLinks }}
         />
       </article>
 

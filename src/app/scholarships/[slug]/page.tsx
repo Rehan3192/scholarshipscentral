@@ -6,6 +6,7 @@ import ScholarshipHeader from "@/components/scholarship/ScholarshipHeader";
 import ScholarshipCard from "@/components/scholarship/ScholarshipCard";
 import { BreadcrumbJsonLd, WebPageJsonLd } from "@/components/seo/StructuredData";
 import { toSegment } from "@/lib/helpers";
+import { buildScholarshipExplorationLinks } from "@/lib/internal-linking";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -422,6 +423,13 @@ export default async function ScholarshipPage({ params }: Props) {
       scholarship.country as keyof typeof COUNTRY_CLUSTER_PATHS
     ] ?? [];
   const countryClusterLabel = COUNTRY_CLUSTER_LABELS[scholarship.country] ?? scholarship.country;
+  const supportingPathHrefs = new Set<string>(
+    countryClusterPaths.map((path) => path.href),
+  );
+  if (internalClusterSupport) supportingPathHrefs.add(internalClusterSupport.href);
+  const broaderLinks = buildScholarshipExplorationLinks(scholarship).filter(
+    (link) => !supportingPathHrefs.has(link.href),
+  );
 
   return (
     <div className="space-y-6">
@@ -587,6 +595,28 @@ export default async function ScholarshipPage({ params }: Props) {
                     <div className="font-semibold text-gray-900">{path.title}</div>
                     <div className="mt-2">{path.description}</div>
                   </Link>
+                ))}
+              </div>
+            </SectionCard>
+          ) : null}
+
+          {broaderLinks.length > 0 ? (
+            <SectionCard title="Broaden this shortlist">
+              <p className="mb-4 text-sm text-gray-700">
+                Use these routes to move from one scholarship page into the
+                wider country and hub structure before you make a final choice.
+              </p>
+              <div className="space-y-3 text-sm text-gray-700">
+                {broaderLinks.map((link) => (
+                  <p
+                    key={link.href}
+                    className="mb-0"
+                  >
+                    <Link href={link.href} className="font-semibold text-blue-700 hover:underline">
+                      {link.title}
+                    </Link>{" "}
+                    {link.description}
+                  </p>
                 ))}
               </div>
             </SectionCard>
