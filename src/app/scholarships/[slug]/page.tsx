@@ -6,7 +6,10 @@ import ScholarshipHeader from "@/components/scholarship/ScholarshipHeader";
 import ScholarshipCard from "@/components/scholarship/ScholarshipCard";
 import { BreadcrumbJsonLd, WebPageJsonLd } from "@/components/seo/StructuredData";
 import { toSegment } from "@/lib/helpers";
-import { buildScholarshipExplorationLinks } from "@/lib/internal-linking";
+import {
+  buildScholarshipExplorationLinks,
+  getScholarshipBlogGuideLink,
+} from "@/lib/internal-linking";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -427,6 +430,7 @@ export default async function ScholarshipPage({ params }: Props) {
     countryClusterPaths.map((path) => path.href),
   );
   if (internalClusterSupport) supportingPathHrefs.add(internalClusterSupport.href);
+  const blogGuideLink = getScholarshipBlogGuideLink(scholarship);
   const broaderLinks = buildScholarshipExplorationLinks(scholarship).filter(
     (link) => !supportingPathHrefs.has(link.href),
   );
@@ -455,7 +459,7 @@ export default async function ScholarshipPage({ params }: Props) {
         dateModified={scholarship.lastUpdated}
       />
 
-      <ScholarshipHeader scholarship={scholarship} />
+      <ScholarshipHeader scholarship={scholarship} guideLink={blogGuideLink} />
 
       <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
         <div className="space-y-6">

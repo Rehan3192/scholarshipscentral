@@ -30,6 +30,15 @@ export type InternalLinkCard = {
   description: string;
 };
 
+export type BlogGuideLink = {
+  href: string;
+  anchorText: string;
+};
+
+type BlogGuideReference = BlogGuideLink & {
+  blogSlug: string;
+};
+
 const scholarshipBySlug = new Map(scholarships.map((scholarship) => [scholarship.slug, scholarship]));
 
 const plan = (
@@ -42,6 +51,12 @@ const plan = (
   scholarshipSlug,
   hub,
   support,
+});
+
+const blogGuide = (blogSlug: string, anchorText: string): BlogGuideReference => ({
+  blogSlug,
+  href: `/blog/${blogSlug}`,
+  anchorText,
 });
 
 const BLOG_LINK_PLANS: Record<string, BlogLinkPlan> = {
@@ -281,6 +296,149 @@ const SUPPORT_REFERENCES: Record<SupportKey, InternalLinkReference> = {
   },
 };
 
+const SCHOLARSHIP_BLOG_GUIDES: Partial<Record<string, BlogGuideReference>> = {
+  "germany-heinrich-b-ll-scholarship": blogGuide(
+    "heinrich-boll-foundation-scholarship-2026-guide",
+    "Heinrich Boll Foundation scholarship guide",
+  ),
+  "hbku-masters-scholarship-qatar": blogGuide(
+    "hamad-bin-khalifa-university-hbku-scholarship-apply-now",
+    "HBKU scholarship guide",
+  ),
+  "indonesian-government-knb-scholarship-masters": blogGuide(
+    "knb-indonesian-government-scholarship",
+    "Indonesian Government KNB scholarship guide",
+  ),
+  "iowa-state-university-international-merit-scholarship": blogGuide(
+    "iowa-state-university-international-merit-scholarship-2026-application-guide",
+    "Iowa State University International Merit Scholarship guide",
+  ),
+  "italy-unicore-8-scholarship-masters": blogGuide(
+    "unicore-8-0-scholarship",
+    "UNICORE 8.0 scholarship guide",
+  ),
+  "italy-university-of-camerino-scholarship-masters": blogGuide(
+    "university-of-camerino-scholarship-2026-27-in-italy-apply-now",
+    "University of Camerino scholarship guide",
+  ),
+  "italy-university-of-insubria-scholarship-masters": blogGuide(
+    "university-of-insubria-scholarship-italy-2026",
+    "University of Insubria scholarship guide",
+  ),
+  "italy-university-of-pisa-dsu-toscana-scholarship-masters": blogGuide(
+    "university-of-pisa-scholarship-2026-2027",
+    "University of Pisa scholarship guide",
+  ),
+  "italy-university-of-tuscia-scholarship-masters": blogGuide(
+    "university-of-tuscia-scholarship-italy",
+    "University of Tuscia scholarship guide",
+  ),
+  "khalifa-university-scholarship-masters": blogGuide(
+    "khalifa-university-scholarship-2026-uae-application-guide",
+    "Khalifa University scholarship guide",
+  ),
+  "nl-scholarship-masters-netherlands": blogGuide(
+    "nl-scholarship-2026-2027",
+    "NL Scholarship guide",
+  ),
+  "nycu-international-student-scholarship-masters": blogGuide(
+    "nycu-international-student-scholarship",
+    "NYCU International Student Scholarship guide",
+  ),
+  "skoltech-university-scholarship-masters": blogGuide(
+    "skoltech-university-scholarship-2026-apply-now",
+    "Skoltech University scholarship guide",
+  ),
+  "uaeu-graduate-research-assistantship-masters": blogGuide(
+    "uaeu-graduate-research-assistantship",
+    "UAEU Graduate Research Assistantship guide",
+  ),
+  "uk-ucl-global-masters-scholarship": blogGuide(
+    "ucl-global-masters-scholarship",
+    "UCL Global Masters scholarship guide",
+  ),
+};
+
+const COUNTRY_BLOG_GUIDES: Partial<Record<Scholarship["country"], BlogGuideReference[]>> = {
+  Germany: [
+    blogGuide(
+      "heinrich-boll-foundation-scholarship-2026-guide",
+      "Heinrich Boll Foundation scholarship guide",
+    ),
+  ],
+  Indonesia: [
+    blogGuide(
+      "knb-indonesian-government-scholarship",
+      "Indonesian Government KNB scholarship guide",
+    ),
+  ],
+  Italy: [
+    blogGuide(
+      "university-of-padua-scholarships-2026",
+      "University of Padua scholarships guide",
+    ),
+    blogGuide(
+      "university-of-tuscia-scholarship-italy",
+      "University of Tuscia scholarship guide",
+    ),
+    blogGuide(
+      "university-of-pisa-scholarship-2026-2027",
+      "University of Pisa scholarship guide",
+    ),
+  ],
+  Netherlands: [
+    blogGuide("nl-scholarship-2026-2027", "NL Scholarship guide"),
+  ],
+  Qatar: [
+    blogGuide(
+      "hamad-bin-khalifa-university-hbku-scholarship-apply-now",
+      "HBKU scholarship guide",
+    ),
+  ],
+  Russia: [
+    blogGuide(
+      "skoltech-university-scholarship-2026-apply-now",
+      "Skoltech University scholarship guide",
+    ),
+  ],
+  Taiwan: [
+    blogGuide(
+      "nycu-international-student-scholarship",
+      "NYCU International Student Scholarship guide",
+    ),
+  ],
+  "United Arab Emirates": [
+    blogGuide(
+      "khalifa-university-scholarship-2026-uae-application-guide",
+      "Khalifa University scholarship guide",
+    ),
+    blogGuide(
+      "uaeu-graduate-research-assistantship",
+      "UAEU Graduate Research Assistantship guide",
+    ),
+  ],
+  "United Kingdom": [
+    blogGuide(
+      "ucl-global-masters-scholarship",
+      "UCL Global Masters scholarship guide",
+    ),
+    blogGuide(
+      "university-of-sheffield-scholarship",
+      "University of Sheffield scholarship guide",
+    ),
+    blogGuide(
+      "university-of-sussex-scholarships-2026",
+      "University of Sussex scholarships guide",
+    ),
+  ],
+  USA: [
+    blogGuide(
+      "iowa-state-university-international-merit-scholarship-2026-application-guide",
+      "Iowa State University International Merit Scholarship guide",
+    ),
+  ],
+};
+
 const invalidBlogScholarshipSlugs = Object.values(BLOG_LINK_PLANS)
   .map((entry) => entry.scholarshipSlug)
   .filter((slug) => !scholarshipBySlug.has(slug));
@@ -288,6 +446,22 @@ const invalidBlogScholarshipSlugs = Object.values(BLOG_LINK_PLANS)
 if (invalidBlogScholarshipSlugs.length > 0) {
   throw new Error(
     `Invalid blog internal linking scholarship slugs: ${invalidBlogScholarshipSlugs.join(", ")}`,
+  );
+}
+
+const knownBlogSlugs = new Set(Object.keys(BLOG_LINK_PLANS));
+
+const invalidReverseGuideBlogSlugs = [
+  ...Object.values(SCHOLARSHIP_BLOG_GUIDES),
+  ...Object.values(COUNTRY_BLOG_GUIDES).flatMap((entries) => entries ?? []),
+]
+  .filter((guideLink): guideLink is BlogGuideReference => Boolean(guideLink))
+  .map((guideLink) => guideLink.blogSlug)
+  .filter((blogSlug) => !knownBlogSlugs.has(blogSlug));
+
+if (invalidReverseGuideBlogSlugs.length > 0) {
+  throw new Error(
+    `Invalid reverse guide blog slugs: ${invalidReverseGuideBlogSlugs.join(", ")}`,
   );
 }
 
@@ -306,6 +480,16 @@ function dedupeCards(cards: InternalLinkCard[]) {
   return cards.filter((card) => {
     if (seen.has(card.href)) return false;
     seen.add(card.href);
+    return true;
+  });
+}
+
+function dedupeGuideLinks(links: BlogGuideReference[]) {
+  const seen = new Set<string>();
+
+  return links.filter((link) => {
+    if (seen.has(link.href)) return false;
+    seen.add(link.href);
     return true;
   });
 }
@@ -453,6 +637,29 @@ export function getBlogContentWithInternalLinks(slug: string, html: string) {
   }
 
   return injectInternalLinkSentences(html, references);
+}
+
+export function getScholarshipBlogGuideLink(
+  scholarship: Scholarship,
+): BlogGuideLink | null {
+  const guideLink = SCHOLARSHIP_BLOG_GUIDES[scholarship.slug];
+  if (!guideLink) return null;
+
+  return {
+    href: guideLink.href,
+    anchorText: guideLink.anchorText,
+  };
+}
+
+export function getCountryBlogGuideLinks(
+  country: Scholarship["country"],
+): BlogGuideLink[] {
+  return dedupeGuideLinks(COUNTRY_BLOG_GUIDES[country] ?? [])
+    .slice(0, 3)
+    .map((guideLink) => ({
+      href: guideLink.href,
+      anchorText: guideLink.anchorText,
+    }));
 }
 
 export function buildCountryHubLinks(country: Scholarship["country"]): InternalLinkCard[] {

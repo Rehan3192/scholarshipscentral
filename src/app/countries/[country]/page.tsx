@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Fragment } from "react";
 
 import ScholarshipCard from "@/components/scholarship/ScholarshipCard";
 import ScholarshipFilterBar from "@/components/scholarship/ScholarshipFilterBar";
@@ -10,7 +11,7 @@ import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/seo/StructuredDat
 import { scholarships } from "@/data/scholarships";
 import { normalizeCountry } from "@/data/values";
 import { toSegment } from "@/lib/helpers";
-import { buildCountryHubLinks } from "@/lib/internal-linking";
+import { buildCountryHubLinks, getCountryBlogGuideLinks } from "@/lib/internal-linking";
 
 type Props = {
   params: Promise<{ country: string }>;
@@ -66,6 +67,7 @@ export default async function CountryPage({ params }: Props) {
     (s) => s.country === label
   );
   const hubLinks = buildCountryHubLinks(label);
+  const countryGuideLinks = getCountryBlogGuideLinks(label);
   const items = filtered.map((s) => ({
     name: s.title,
     href: `/scholarships/${s.slug}`,
@@ -92,6 +94,29 @@ export default async function CountryPage({ params }: Props) {
         <p className="mb-0 text-sm text-gray-600">
           Explore scholarships available in {label}. We only link to official
           external application pages.
+          {countryGuideLinks.length > 0 ? (
+            <>
+              {" "}For deeper examples, review our{" "}
+              {countryGuideLinks.map((link, index) => (
+                <Fragment key={link.href}>
+                  {index === 0
+                    ? null
+                    : index === countryGuideLinks.length - 1
+                      ? countryGuideLinks.length === 2
+                        ? " and "
+                        : ", and "
+                      : ", "}
+                  <Link
+                    href={link.href}
+                    className="font-semibold text-blue-700 hover:underline"
+                  >
+                    {link.anchorText}
+                  </Link>
+                </Fragment>
+              ))}
+              .
+            </>
+          ) : null}
         </p>
         <div className="pt-2">
           <ScholarshipFilterBar

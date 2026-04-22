@@ -7,6 +7,10 @@ import { toSegment } from "@/lib/helpers";
 
 type Props = {
   scholarship: Scholarship;
+  guideLink?: {
+    href: string;
+    anchorText: string;
+  } | null;
 };
 
 function fundingPath(fundingType: Scholarship["fundingType"]) {
@@ -15,7 +19,7 @@ function fundingPath(fundingType: Scholarship["fundingType"]) {
   return "/funding/self-funded";
 }
 
-export default function ScholarshipHeader({ scholarship }: Props) {
+export default function ScholarshipHeader({ scholarship, guideLink }: Props) {
   const summary =
     typeof scholarship.summary === "string" && scholarship.summary.trim() !== ""
       ? scholarship.summary.trim()
@@ -49,6 +53,18 @@ export default function ScholarshipHeader({ scholarship }: Props) {
 
         <p className="mt-4 mb-0 max-w-3xl break-words text-sm text-gray-700 sm:text-base">
           {summary}
+          {guideLink ? (
+            <>
+              {" "}For a detailed breakdown, see our{" "}
+              <Link
+                href={guideLink.href}
+                className="font-semibold text-blue-700 hover:underline"
+              >
+                {guideLink.anchorText}
+              </Link>
+              .
+            </>
+          ) : null}
         </p>
 
         <div className="mt-6 flex min-w-0 flex-wrap gap-2 text-sm">
