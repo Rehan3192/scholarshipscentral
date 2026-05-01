@@ -88,18 +88,17 @@ export default function AboutPage() {
         </div>
       </header>
 
-      {/* About Founder (NEW SECTION) */}
+      {/* About Founder */}
       <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <h2 className="text-lg font-semibold text-gray-900 mb-4">
           About the Founder
         </h2>
 
         <div className="grid gap-6 md:grid-cols-[140px_1fr] items-start">
-          {/* IMAGE */}
           <div className="flex justify-center md:justify-start">
             <Image
-              src="/rehan.jpg" // 👉 place your image in /public/rehan.jpg
-              alt="Muhammad Rehan"
+              src="/rehan.jpg"
+              alt="Muhammad Rehan - Founder of Scholarships Central"
               width={120}
               height={120}
               className="rounded-full object-cover border border-gray-200"
@@ -107,7 +106,6 @@ export default function AboutPage() {
             />
           </div>
 
-          {/* TEXT */}
           <div className="space-y-3 text-sm text-gray-700">
             <p>
               Muhammad Rehan is the founder of Scholarships Central and a
@@ -115,21 +113,21 @@ export default function AboutPage() {
             </p>
 
             <p>
+              He personally researches and structures scholarship information
+              before publishing to ensure clarity, accuracy, and practical value
+              for students.
+            </p>
+
+            <p>
               He has hands-on experience building and managing multiple
-              content platforms, where he handles content writing, SEO,
-              and full website development independently.
+              content platforms, handling content writing, SEO, and full
+              website development independently.
             </p>
 
             <p>
-              Through his work, he has developed a strong focus on
-              researching reliable sources, structuring information for
-              clarity, and avoiding misleading or low-value content.
-            </p>
-
-            <p>
-              Scholarships Central was created to provide students with
-              clear, structured, and realistic scholarship information
-              without unnecessary complexity or false expectations.
+              Scholarships Central was created to help students find
+              reliable, structured, and realistic scholarship opportunities
+              without misleading claims or unnecessary complexity.
             </p>
 
             <p className="text-xs text-gray-500">
@@ -137,6 +135,7 @@ export default function AboutPage() {
               <a
                 href="https://linkedin.com/in/muhammad-rehan"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-700 hover:underline"
               >
                 View Profile
@@ -146,8 +145,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Existing sections unchanged */}
-
+      {/* Who We Are */}
       <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
         <h2 className="text-lg font-semibold text-gray-900">Who We Are</h2>
         <p className="mt-4">
@@ -162,8 +160,32 @@ export default function AboutPage() {
         </p>
       </section>
 
-      {/* (rest stays same, no need to modify further) */}
+      {/* Internal Linking Boost */}
+      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
+        <h2 className="text-lg font-semibold text-gray-900">
+          Start Exploring Scholarships
+        </h2>
 
+        <ul className="mt-4 space-y-2">
+          <li>
+            <Link href="/scholarships" className="text-blue-700 hover:underline">
+              Browse all scholarships
+            </Link>
+          </li>
+          <li>
+            <Link href="/fully-funded-scholarships-2026" className="text-blue-700 hover:underline">
+              Fully funded scholarships
+            </Link>
+          </li>
+          <li>
+            <Link href="/countries" className="text-blue-700 hover:underline">
+              Scholarships by country
+            </Link>
+          </li>
+        </ul>
+      </section>
+
+      {/* Contact */}
       <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
         <h2 className="text-lg font-semibold text-gray-900">
           Contact / Responsibility Statement
