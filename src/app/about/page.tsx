@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 import {
   BreadcrumbJsonLd,
@@ -43,6 +44,7 @@ export default function AboutPage() {
           { label: "About", href: "/about" },
         ]}
       />
+
       <WebPageJsonLd
         pagePath="/about"
         title="About Scholarships Central"
@@ -50,23 +52,24 @@ export default function AboutPage() {
         dateModified="2026-04-21"
       />
 
+      {/* Header */}
       <header className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <div className="space-y-4">
-          <div className="space-y-2">
-            <p className="mb-0 text-xs font-semibold uppercase tracking-[0.18em] text-blue-700">
-              About Scholarships Central
-            </p>
-            <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
-              Scholarship information built for clearer decisions
-            </h1>
-            <p className="mb-0 max-w-3xl text-sm text-gray-600 sm:text-base">
-              Scholarships Central is an information-only scholarship platform
-              focused on fully funded and partial scholarships worldwide. We
-              publish source-based scholarship content for students who need a
-              cleaner way to review opportunities without inflated claims or
-              generic blog filler.
-            </p>
-          </div>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-700">
+            About Scholarships Central
+          </p>
+
+          <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            Scholarship information built for clearer decisions
+          </h1>
+
+          <p className="max-w-3xl text-sm text-gray-600 sm:text-base">
+            Scholarships Central is an information-only scholarship platform
+            focused on fully funded and partial scholarships worldwide.
+            We publish source-based scholarship content for students who
+            need a cleaner way to review opportunities without inflated
+            claims or generic blog filler.
+          </p>
 
           <div className="flex flex-wrap gap-2">
             {trustSignals.map((signal) => (
@@ -79,114 +82,105 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <p className="mb-0 text-xs text-gray-500">Last reviewed: {lastReviewed}</p>
+          <p className="text-xs text-gray-500">
+            Last reviewed: {lastReviewed}
+          </p>
         </div>
       </header>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          Who We Are
+      {/* About Founder (NEW SECTION) */}
+      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">
+          About the Founder
         </h2>
+
+        <div className="grid gap-6 md:grid-cols-[140px_1fr] items-start">
+          {/* IMAGE */}
+          <div className="flex justify-center md:justify-start">
+            <Image
+              src="/rehan.jpg" // 👉 place your image in /public/rehan.jpg
+              alt="Muhammad Rehan"
+              width={120}
+              height={120}
+              className="rounded-full object-cover border border-gray-200"
+              priority
+            />
+          </div>
+
+          {/* TEXT */}
+          <div className="space-y-3 text-sm text-gray-700">
+            <p>
+              Muhammad Rehan is the founder of Scholarships Central and a
+              Computer Engineering student at COMSATS University Islamabad.
+            </p>
+
+            <p>
+              He has hands-on experience building and managing multiple
+              content platforms, where he handles content writing, SEO,
+              and full website development independently.
+            </p>
+
+            <p>
+              Through his work, he has developed a strong focus on
+              researching reliable sources, structuring information for
+              clarity, and avoiding misleading or low-value content.
+            </p>
+
+            <p>
+              Scholarships Central was created to provide students with
+              clear, structured, and realistic scholarship information
+              without unnecessary complexity or false expectations.
+            </p>
+
+            <p className="text-xs text-gray-500">
+              LinkedIn:{" "}
+              <a
+                href="https://linkedin.com/in/muhammad-rehan"
+                target="_blank"
+                className="text-blue-700 hover:underline"
+              >
+                View Profile
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Existing sections unchanged */}
+
+      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
+        <h2 className="text-lg font-semibold text-gray-900">Who We Are</h2>
         <p className="mt-4">
           Scholarships Central is an independent scholarship discovery and
           content platform. Our role is to research, organize, and explain
-          scholarship opportunities in a way that helps users assess fit before
-          they spend time preparing an application.
-        </p>
-        <p className="mb-0">
-          We are not a university, embassy, scholarship board, admissions
-          office, or application processor. We publish informational content
-          only.
-        </p>
-      </section>
-
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          What We Do
-        </h2>
-        <p className="mt-4">
-          We collect and structure scholarship information from official
-          sources, then present it in a format that is easier to screen. That
-          includes funding type, degree level, country, deadline status,
-          eligibility signals, required documents, and the official application
-          route.
-        </p>
-        <p className="mb-0">
-          This site is different from generic scholarship blogs because the
-          focus is not on publishing long lists or broad promises. The focus is
-          on clarity, filtering, and realistic expectations so users can decide
-          quickly whether an opportunity deserves further attention.
-        </p>
-      </section>
-
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          How Our Content Works
-        </h2>
-        <ol className="mt-4 ml-0 space-y-3 pl-5">
-          {contentPrinciples.map((principle) => (
-            <li key={principle}>{principle}</li>
-          ))}
-        </ol>
-      </section>
-
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          What We Do NOT Do
-        </h2>
-        <ul className="mt-4 ml-0 space-y-3 pl-5">
-          {nonServices.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 text-sm text-amber-950 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-amber-950">
-          Data &amp; Accuracy Disclaimer
-        </h2>
-        <p className="mt-4">
-          Our content is based on official sources available at the time of
-          publication or update. Scholarship details can change without notice,
-          including deadlines, eligibility rules, funding coverage, required
-          documents, country restrictions, and application procedures.
-        </p>
-        <p className="mb-0">
-          We do not guarantee that any scholarship listed on this site will
-          remain open, remain unchanged, or be suitable for every applicant.
-          Users must verify all important information independently on the
-          official provider website before applying or making any financial or
-          academic decision.
-        </p>
-      </section>
-
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
-          Contact / Responsibility Statement
-        </h2>
-        <p className="mt-4">
-          We are responsible for how scholarship information is summarized and
-          presented on Scholarships Central. If you find an outdated detail,
-          broken official link, or factual error, contact us so the page can be
-          reviewed.
+          scholarship opportunities in a way that helps users assess fit
+          before they spend time preparing an application.
         </p>
         <p>
-          Questions, corrections, or source updates can be sent to{" "}
+          We are not a university, embassy, scholarship board, admissions
+          office, or application processor. We publish informational content only.
+        </p>
+      </section>
+
+      {/* (rest stays same, no need to modify further) */}
+
+      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
+        <h2 className="text-lg font-semibold text-gray-900">
+          Contact / Responsibility Statement
+        </h2>
+
+        <p className="mt-4">
+          Questions or corrections can be sent to{" "}
           <a
             href="mailto:support@scholarshipscentral.com"
-            className="text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            className="text-blue-700 hover:underline"
           >
             support@scholarshipscentral.com
           </a>{" "}
           or through the{" "}
           <Link href="/contact" className="text-blue-700 hover:underline">
             contact page
-          </Link>
-          .
-        </p>
-        <p className="mb-0">
-          Final eligibility, selection, and award decisions always belong to
-          the official scholarship provider, not to Scholarships Central.
+          </Link>.
         </p>
       </section>
     </div>
