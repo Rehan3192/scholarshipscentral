@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { scholarships } from "@/data/scholarships";
+import type { ScholarshipContentSection } from "@/data/types";
 import ScholarshipHeader from "@/components/scholarship/ScholarshipHeader";
 import ScholarshipCard from "@/components/scholarship/ScholarshipCard";
 import { BreadcrumbJsonLd, WebPageJsonLd } from "@/components/seo/StructuredData";
-import { toSegment } from "@/lib/helpers";
+import { cleanDisplayText, toSegment } from "@/lib/helpers";
 import {
   buildScholarshipExplorationLinks,
   getScholarshipBlogGuideLink,
@@ -24,6 +25,17 @@ export async function generateStaticParams() {
 type KeyValueItem = {
   key: string;
   value: string;
+};
+
+type CleanContentSection = {
+  title: string;
+  paragraphs: string[];
+  bullets: string[];
+  ordered: string[];
+  facts: Array<{
+    label: string;
+    value: string;
+  }>;
 };
 
 const COUNTRY_CLUSTER_PATHS = {
@@ -300,6 +312,48 @@ function renderKeyValueOrList(items: string[]) {
   );
 }
 
+function cleanTextItems(items?: string[]) {
+  return (items ?? [])
+    .map((item) => cleanDisplayText(item).trim())
+    .filter((item) => item.length > 0 && item.toUpperCase() !== "TODO");
+}
+
+function cleanContentSections(sections?: ScholarshipContentSection[]): CleanContentSection[] {
+  return (sections ?? [])
+    .map((section) => {
+      const title = cleanDisplayText(section.title).trim();
+      const paragraphs = cleanTextItems(section.paragraphs);
+      const bullets = cleanTextItems(section.bullets);
+      const ordered = cleanTextItems(section.ordered);
+      const facts = (section.facts ?? [])
+        .map((fact) => ({
+          label: cleanDisplayText(fact.label).trim(),
+          value: cleanDisplayText(fact.value).trim(),
+        }))
+        .filter(
+          (fact) =>
+            fact.label.length > 0 &&
+            fact.value.length > 0 &&
+            fact.label.toUpperCase() !== "TODO" &&
+            fact.value.toUpperCase() !== "TODO",
+        );
+
+      if (!title) return null;
+      if (paragraphs.length === 0 && bullets.length === 0 && ordered.length === 0 && facts.length === 0) {
+        return null;
+      }
+
+      return {
+        title,
+        paragraphs,
+        bullets,
+        ordered,
+        facts,
+      };
+    })
+    .filter((section): section is CleanContentSection => Boolean(section));
+}
+
 function scholarshipScore(candidate: (typeof scholarships)[number], current: (typeof scholarships)[number]) {
   return (
     (candidate.country === current.country ? 2 : 0) +
@@ -399,19 +453,14 @@ export default async function ScholarshipPage({ params }: Props) {
   if (!scholarship) notFound();
 
   const related = buildRelatedScholarships(scholarship);
-
-  const withoutPlaceholders = (items?: string[]) =>
-    (items ?? [])
-      .map((x) => x.trim())
-      .filter((x) => x.length > 0 && x.toUpperCase() !== "TODO");
-
-  const eligibility = withoutPlaceholders(scholarship.eligibility);
-  const benefits = withoutPlaceholders(scholarship.benefits);
-  const applicationProcess = withoutPlaceholders(scholarship.applicationProcess);
-  const documents = withoutPlaceholders(scholarship.documents);
-  const goodToKnow = withoutPlaceholders(scholarship.goodToKnow);
-  const selectionCriteria = withoutPlaceholders(scholarship.selectionCriteria);
-  const tips = withoutPlaceholders(scholarship.tips);
+  const contentSections = cleanContentSections(scholarship.contentSections);
+  const eligibility = cleanTextItems(scholarship.eligibility);
+  const benefits = cleanTextItems(scholarship.benefits);
+  const applicationProcess = cleanTextItems(scholarship.applicationProcess);
+  const documents = cleanTextItems(scholarship.documents);
+  const goodToKnow = cleanTextItems(scholarship.goodToKnow);
+  const selectionCriteria = cleanTextItems(scholarship.selectionCriteria);
+  const tips = cleanTextItems(scholarship.tips);
   const faqs = (scholarship.faqs ?? []).filter((f) => {
     if (!f) return false;
     const q = String(f.question ?? "").trim();
@@ -466,10 +515,57 @@ export default async function ScholarshipPage({ params }: Props) {
           {scholarship.introduction ? (
             <SectionCard title="Introduction">
               <p className="mb-0 text-sm text-gray-700 break-words">
-                {scholarship.introduction}
+                {cleanDisplayText(scholarship.introduction)}
               </p>
             </SectionCard>
           ) : null}
+
+          {scholarship.summary ? (
+            <SectionCard title="Quick summary">
+              <p className="mb-0 text-sm text-gray-700 break-words">
+                {cleanDisplayText(scholarship.summary)}
+              </p>
+            </SectionCard>
+          ) : null}
+
+          {contentSections.map((section) => (
+            <SectionCard key={section.title} title={section.title}>
+              <div className="space-y-4 text-sm text-gray-700">
+                {section.facts.length > 0 ? (
+                  <dl className="grid gap-3 sm:grid-cols-2">
+                    {section.facts.map((fact) => (
+                      <div key={`${fact.label}:${fact.value}`} className="space-y-1">
+                        <dt className="font-medium text-gray-600">{fact.label}</dt>
+                        <dd className="font-semibold text-gray-900">{fact.value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                ) : null}
+
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph} className="mb-0 break-words">
+                    {paragraph}
+                  </p>
+                ))}
+
+                {section.bullets.length > 0 ? (
+                  <ul className="ml-0 list-disc space-y-2 pl-5 break-words">
+                    {section.bullets.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                ) : null}
+
+                {section.ordered.length > 0 ? (
+                  <ol className="ml-0 list-decimal space-y-2 pl-5 break-words">
+                    {section.ordered.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ol>
+                ) : null}
+              </div>
+            </SectionCard>
+          ))}
 
           <SectionCard title="Eligibility">
             {eligibility.length > 0 ? (
@@ -672,7 +768,7 @@ export default async function ScholarshipPage({ params }: Props) {
                 href={scholarship.guideUrl}
                 className="mt-3 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-center text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 break-words"
               >
-                Read: {scholarship.guideLabel ?? "Application guide"}
+                Read: {cleanDisplayText(scholarship.guideLabel ?? "Application guide")}
               </a>
             ) : null}
 
@@ -682,7 +778,7 @@ export default async function ScholarshipPage({ params }: Props) {
               rel="noopener noreferrer"
               className="mt-3 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-center text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 break-words"
             >
-              Official source: {scholarship.officialSource}
+              Official source: {cleanDisplayText(scholarship.officialSource)}
             </a>
 
             <p className="mt-3 mb-0 text-xs text-gray-500">
@@ -726,13 +822,13 @@ export default async function ScholarshipPage({ params }: Props) {
               <div className="flex items-start justify-between gap-3">
                 <dt className="font-medium text-gray-600">Deadline</dt>
                 <dd className="break-words text-right font-semibold text-gray-900">
-                  {scholarship.deadline}
+                  {cleanDisplayText(scholarship.deadline)}
                 </dd>
               </div>
               <div className="flex items-start justify-between gap-3">
                 <dt className="font-medium text-gray-600">Duration</dt>
                 <dd className="break-words text-right font-semibold text-gray-900">
-                  {scholarship.duration}
+                  {cleanDisplayText(scholarship.duration)}
                 </dd>
               </div>
             </dl>

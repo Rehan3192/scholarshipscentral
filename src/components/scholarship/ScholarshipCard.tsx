@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ScholarshipListItem } from "@/data/types";
-import { toSegment } from "@/lib/helpers";
+import { cleanDisplayText, toSegment } from "@/lib/helpers";
 
 type Props = {
   scholarship: ScholarshipListItem;
@@ -25,12 +25,12 @@ export default function ScholarshipCard({ scholarship }: Props) {
           href={href}
           className="rounded-sm text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
         >
-          {scholarship.title}
+          {cleanDisplayText(scholarship.title)}
         </Link>
       </h3>
 
       <p className="mt-2 mb-0 text-sm text-gray-700 line-clamp-3 break-words">
-        {scholarship.overview}
+        {cleanDisplayText(scholarship.overview)}
       </p>
 
       <div className="mt-4 flex min-w-0 flex-wrap gap-2 text-xs">
@@ -53,14 +53,14 @@ export default function ScholarshipCard({ scholarship }: Props) {
           {scholarship.fundingType}
         </Link>
         <span className="max-w-full break-words rounded-full border border-gray-200 bg-gray-50 px-2.5 py-1 font-semibold text-gray-700">
-          Deadline: {scholarship.deadline}
+          Deadline: {cleanDisplayText(scholarship.deadline)}
         </span>
       </div>
 
       <p className="mt-3 mb-0 text-xs text-gray-500">
         Official source:{" "}
         <span className="font-medium text-gray-700">
-          {scholarship.officialSource}
+          {cleanDisplayText(scholarship.officialSource)}
         </span>{" "}
         • Updated:{" "}
         <time dateTime={scholarship.lastUpdated}>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import type { Scholarship } from "@/data/types";
-import { toSegment } from "@/lib/helpers";
+import { cleanDisplayText, toSegment } from "@/lib/helpers";
 
 type Props = {
   scholarship: Scholarship;
@@ -22,8 +22,8 @@ function fundingPath(fundingType: Scholarship["fundingType"]) {
 export default function ScholarshipHeader({ scholarship, guideLink }: Props) {
   const summary =
     typeof scholarship.summary === "string" && scholarship.summary.trim() !== ""
-      ? scholarship.summary.trim()
-      : scholarship.overview;
+      ? cleanDisplayText(scholarship.summary.trim())
+      : cleanDisplayText(scholarship.overview);
 
   return (
     <header className="space-y-4">
@@ -40,7 +40,7 @@ export default function ScholarshipHeader({ scholarship, guideLink }: Props) {
             href: `/degrees/${toSegment(scholarship.degreeLevel)}`,
           },
           {
-            label: scholarship.title,
+            label: cleanDisplayText(scholarship.title),
             href: `/scholarships/${scholarship.slug}`,
           },
         ]}
@@ -48,7 +48,7 @@ export default function ScholarshipHeader({ scholarship, guideLink }: Props) {
 
       <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         <h1 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">
-          {scholarship.title}
+          {cleanDisplayText(scholarship.title)}
         </h1>
 
         <p className="mt-4 mb-0 max-w-3xl break-words text-sm text-gray-700 sm:text-base">
@@ -90,14 +90,14 @@ export default function ScholarshipHeader({ scholarship, guideLink }: Props) {
           </Link>
 
           <span className="max-w-full break-words rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 font-semibold text-gray-700">
-            Deadline: {scholarship.deadline}
+            Deadline: {cleanDisplayText(scholarship.deadline)}
           </span>
         </div>
 
         <p className="mt-4 mb-0 break-words text-xs text-gray-500">
           Official source:{" "}
           <span className="font-medium text-gray-700">
-            {scholarship.officialSource}
+            {cleanDisplayText(scholarship.officialSource)}
           </span>{" "}
           • Last updated:{" "}
           <time dateTime={scholarship.lastUpdated}>

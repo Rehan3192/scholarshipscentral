@@ -11,6 +11,17 @@ export type DegreeLevel =
   | "PhD"
   | "Postdoc";
 
+export type ScholarshipContentSection = {
+  title: string;
+  paragraphs?: string[];
+  bullets?: string[];
+  ordered?: string[];
+  facts?: Array<{
+    label: string;
+    value: string;
+  }>;
+};
+
 export type Scholarship = {
   slug: string;
   title: string;
@@ -20,6 +31,7 @@ export type Scholarship = {
   overview: string;
   introduction?: string;
   summary?: string;
+  contentSections?: ScholarshipContentSection[];
   guideUrl?: string;
   guideLabel?: string;
   country: string;

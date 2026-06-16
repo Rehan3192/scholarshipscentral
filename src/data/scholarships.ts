@@ -1,6 +1,6 @@
 // FILE: src/data/scholarships.ts
 
-import type { Scholarship } from "./types";
+import type { Scholarship, ScholarshipContentSection } from "./types";
 import { ensureInAllowedSets } from "./values";
 
 const rawScholarships: Scholarship[] = [
@@ -1807,7 +1807,72 @@ const rawScholarships: Scholarship[] = [
   {
     slug: "stipendium-hungaricum",
 
-    title: "Stipendium Hungaricum",
+    title: "Stipendium Hungaricum Scholarship",
+    seoTitle:
+      "Stipendium Hungaricum Scholarship 2026 | Fully Funded Hungary Scholarship",
+    metaDescription:
+      "Decision-first guide to the Stipendium Hungaricum Scholarship for Bachelor's applicants, including who qualifies, what it covers, and who should not apply.",
+    keywords: [
+      "Stipendium Hungaricum Scholarship",
+      "Hungary government scholarship",
+      "fully funded scholarship in Hungary",
+      "Stipendium Hungaricum Bachelor's",
+    ],
+    introduction:
+      "This is a structured government scholarship for students from partner countries who can satisfy both the scholarship rules and university admission requirements. It is not a broad open-entry Europe scholarship for anyone simply searching for free study abroad.",
+    summary:
+      "Apply if you are from an eligible partner country, can handle the nomination and university stages, and want a government-managed route into Hungary. Do not apply blindly if your country is not on the current partner list or you cannot complete the sending-partner process.",
+    contentSections: [
+      {
+        title: "What this scholarship actually is",
+        paragraphs: [
+          "Stipendium Hungaricum is Hungary's flagship government scholarship system for international students studying at participating Hungarian universities.",
+          "Unlike a simple university discount, this route can involve multiple layers: the official scholarship portal, partner-country rules, possible nomination by a sending authority, and university admission screening. This page focuses on the Bachelor's route inside that wider system.",
+        ],
+      },
+      {
+        title: "What full funding usually means here",
+        bullets: [
+          "Tuition support for the approved study programme at a participating Hungarian university.",
+          "Monthly stipend under the scholarship package for the study level.",
+          "Accommodation support through a dormitory place or an accommodation contribution, depending on university conditions.",
+          "Medical insurance or equivalent health support under the published scholarship rules.",
+          "Travel funding is not confirmed as a universal benefit for every applicant and should be checked in the current call.",
+        ],
+      },
+      {
+        title: "Reality check",
+        paragraphs: [
+          "This is not an automatic study-in-Europe route. Eligibility depends first on the partner-country framework and then on institutional admission.",
+          "If your country is not included in the current partner list, or if your country requires a sending-partner nomination and you miss that step, your chances are effectively zero even before university evaluation starts.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        bullets: [
+          "Students from eligible partner countries with strong academic records and realistic Hungarian programme choices.",
+          "Applicants who can manage a multi-step process rather than a one-form scholarship submission.",
+          "Students who need a real full-support route and are comfortable studying under Hungarian government scholarship rules.",
+        ],
+      },
+      {
+        title: "Who should not apply",
+        bullets: [
+          "Applicants from countries not included in the active partnership framework.",
+          "Students who are only applying because the scholarship sounds fully funded and have not checked programme availability.",
+          "Applicants who cannot complete nomination, translations, or university-specific admission requirements on time.",
+        ],
+      },
+      {
+        title: "How selection works",
+        paragraphs: [
+          "Selection is usually a combination of rule fit, nomination compliance where required, document completeness, and university admission evaluation.",
+          "Strong grades matter, but this scholarship is not judged on grades alone. Programme fit, valid documents, and correct procedural steps matter just as much because the process is centralized and structured.",
+        ],
+      },
+    ],
+    guideUrl: "/blog/stipendium-hungaricum-scholarship",
+    guideLabel: "Stipendium Hungaricum scholarship guide",
     overview:
       "Fully funded Hungarian government scholarship for international bachelor’s students.",
 
@@ -1819,22 +1884,100 @@ const rawScholarships: Scholarship[] = [
     duration: "3–4 years",
 
     eligibility: [
-      "TODO",
+      "Eligible nationalities: Only applicants from partner countries or territories listed in the current call can apply.",
+      "Degree level: Bachelor's route under the Stipendium Hungaricum system.",
+      "Academic background: Completed secondary school qualification required for undergraduate admission.",
+      "Admission required: Applicants must satisfy both scholarship rules and the admission requirements of the chosen Hungarian university.",
+      "Field of study: Only programmes available under the current partner-country and university matrix are eligible.",
+      "Language requirements: Must meet the language-of-instruction requirement for the selected programme.",
+      "Nomination requirement: Some countries require nomination or endorsement by an official sending partner before final scholarship consideration.",
+      "Hard filter: If your country is not eligible or your nomination step is missing where required, this route is closed to you.",
     ],
 
     benefits: [
-      "TODO",
+      "Tuition: Tuition support is part of the standard Stipendium Hungaricum package.",
+      "Stipend: Monthly living support is included under the scholarship rules.",
+      "Accommodation: Dormitory support or accommodation contribution is commonly included, depending on host-university conditions.",
+      "Health insurance: Medical insurance or equivalent health support is included under the programme framework.",
+      "Travel: Not confirmed as a universal benefit for all applicants; check the current call for exact rules.",
+      "Application fee: The scholarship route is handled through the official system; confirm any institution-specific admission fees directly with the host university.",
     ],
 
     applicationProcess: [
-      "TODO",
+      "Confirm that your country is eligible in the current Stipendium Hungaricum call and check whether a sending-partner nomination is mandatory.",
+      "Choose an eligible Hungarian Bachelor's programme and review the host university's admission and language requirements.",
+      "Create your official scholarship application, upload the required documents, and rank your programme choices carefully.",
+      "Complete any sending-partner, embassy, or nomination-side steps required for your country before the deadline.",
+      "Wait for technical screening, nomination validation, and university evaluation steps such as document review or interview where applicable.",
+      "If selected, follow the scholarship acceptance, visa, and enrollment instructions issued through the official system.",
     ],
 
     documents: [
-      "TODO",
+      "Passport copy",
+      "Secondary school transcripts",
+      "Secondary school completion certificate",
+      "Motivation letter",
+      "Language certificate if required by the chosen programme",
+      "Medical certificate if requested in the annual call",
+      "Recommendation letters or extra institutional forms where required",
+      "Nomination or endorsement evidence where a sending partner is involved",
     ],
 
-    applyUrl: "https://stipendiumhungaricum.hu",
+    selectionCriteria: [
+      "Eligibility compliance: The first filter is whether the applicant fits the active partner-country and scholarship rules.",
+      "Academic strength: Competitive applicants usually have solid grades and a credible undergraduate study profile.",
+      "Programme fit: Realistic university and field selection matters because admission review is part of the process.",
+      "Process accuracy: Missing nomination steps, incomplete documents, or weak document quality can end the application early.",
+    ],
+
+    tips: [
+      "Check the partner-country document carefully before choosing programmes, because eligibility is not uniform across all countries.",
+      "Do not delay the nomination step if your country uses a sending authority, because that step can eliminate otherwise strong applicants.",
+      "Choose programmes you genuinely qualify for instead of chasing only high-demand universities.",
+      "Prepare translations and document scans early so the portal submission is not rushed at the end.",
+    ],
+
+    goodToKnow: [
+      "This scholarship covers multiple study levels, but this page is specifically for Bachelor's applicants.",
+      "The annual call can change by country, field, and university participation, so last year's eligibility matrix is not enough.",
+      "The next cycle should always be confirmed on the official platform because opening dates and partner rules can shift.",
+      "Use only the official scholarship system and partner-country channels; avoid agents claiming guaranteed selection.",
+    ],
+
+    faqs: [
+      {
+        question: "Is Stipendium Hungaricum fully funded for Bachelor's students?",
+        answer:
+          "It is generally treated as a fully funded government scholarship because it usually includes tuition support, a monthly stipend, accommodation support, and health coverage under the scholarship rules. Travel should still be checked in the current call.",
+      },
+      {
+        question: "Can any international student apply?",
+        answer:
+          "No. The scholarship is tied to partner-country eligibility, and some countries also require nomination through an official sending authority.",
+      },
+      {
+        question: "Do I need admission from a Hungarian university?",
+        answer:
+          "You need to satisfy university admission conditions as part of the process. Final selection is not based on the scholarship form alone.",
+      },
+      {
+        question: "Is the deadline the same every year?",
+        answer:
+          "No. The call usually runs on an annual cycle, but the exact opening and closing dates must be confirmed on the official Stipendium Hungaricum platform.",
+      },
+      {
+        question: "What is the biggest mistake applicants make?",
+        answer:
+          "Many applicants treat it like a single-form scholarship and ignore nomination rules, programme eligibility, or document quality. That is where many weak applications fail.",
+      },
+    ],
+
+    categoryLinks: [
+      "/funding/fully-funded",
+      "/degrees/bachelors",
+    ],
+
+    applyUrl: "https://stipendiumhungaricum.hu/",
     officialSource: "Tempus Public Foundation",
 
     lastUpdated: "2026-02-06",
@@ -1951,35 +2094,182 @@ const rawScholarships: Scholarship[] = [
   {
     slug: "romanian-government-scholarship",
 
-    title: "Romanian Government Scholarship",
+    title: "Romanian Government Scholarship for Bachelor's Students",
+    seoTitle:
+      "Romanian Government Scholarship 2026 | Fully Funded Bachelor's Study in Romania",
+    metaDescription:
+      "Decision-first guide to the Romanian Government Scholarship for Bachelor's applicants, including non-EU eligibility, funding coverage, language route, and key exclusions.",
+    keywords: [
+      "Romanian Government Scholarship",
+      "Romania scholarship for non-EU students",
+      "fully funded Bachelor's scholarship in Romania",
+      "Study in Romania scholarship",
+    ],
+    introduction:
+      "This route is for non-EU applicants who can work through the Romanian government scholarship system and, where required, study through the Romanian-language pathway. It is not for EU citizens or applicants who want an easy English-only scholarship without checking field and language restrictions.",
+    summary:
+      "Apply if you are a non-EU candidate with good academic results, can prepare a clean official file, and are serious about studying in Romania. Do not apply if your target field is excluded or you expect this scholarship to work like a simple no-tuition offer.",
+    contentSections: [
+      {
+        title: "How this scholarship works",
+        paragraphs: [
+          "The Romanian Government Scholarship is run through a centralized state process rather than a simple university discount or tuition waiver.",
+          "Applicants are filtered on rule fit, document quality, and academic profile, then moved through scholarship evaluation and university placement steps. This page focuses on the Bachelor's route inside that system.",
+        ],
+      },
+      {
+        title: "What full funding means here",
+        bullets: [
+          "Tuition fee coverage under the scholarship framework.",
+          "Monthly scholarship support for living costs.",
+          "Accommodation support in student dormitories within the allocated subsidy.",
+          "Romanian language preparatory year funding where the language route requires it.",
+          "Registration or tuition-related fee exemptions may apply under the official rules.",
+          "Travel is not confirmed as a universal benefit and should not be assumed.",
+        ],
+      },
+      {
+        title: "Common misconceptions",
+        bullets: [
+          "No tuition does not mean every Romania route is fully funded. This scholarship is a specific government programme with its own rules.",
+          "The scholarship is not open to everyone worldwide on the same terms; non-EU status is a hard filter.",
+          "English-medium study cannot be assumed. Language route and programme availability must be checked at university level.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        bullets: [
+          "Non-EU students with good academic performance and a serious plan to study in Romania.",
+          "Applicants who can prepare translations, certifications, and a clean official dossier.",
+          "Students who are open to the Romanian preparatory-year route where the chosen programme requires it.",
+        ],
+      },
+      {
+        title: "Who should not apply",
+        bullets: [
+          "EU citizens.",
+          "Applicants targeting excluded fields such as Medicine, Dental Medicine, or Pharmacy unless the official call clearly states otherwise.",
+          "Students who are applying to any fully funded scholarship without checking language, field, and document rules.",
+        ],
+      },
+      {
+        title: "How selection works",
+        paragraphs: [
+          "This is usually a file-based competition where academic results, complete documentation, and exact compliance with the official rules matter more than vague motivation alone.",
+          "Applicants with incomplete translations, weak document quality, or unrealistic programme choices often lose before the final placement stage.",
+        ],
+      },
+    ],
+    guideUrl: "/blog/romania-government-scholarship-2027",
+    guideLabel: "Romania Government Scholarship guide",
     overview:
-      "Romanian state scholarship for non-EU international students.",
+      "Government-funded non-EU scholarship route for Bachelor's study at participating Romanian universities under the Romanian MFA scholarship system.",
 
     country: "Romania",
     degreeLevel: "Bachelors",
     fundingType: "Fully Funded",
 
     deadline: "March",
-    duration: "Degree + language year",
+    duration: "Degree duration plus preparatory year where required",
 
     eligibility: [
-      "TODO",
+      "Eligible nationalities: Non-EU citizens under the Romanian government scholarship rules.",
+      "Degree level: Bachelor's study at participating Romanian universities.",
+      "Academic background: Completed secondary school qualification from a recognized institution.",
+      "Academic performance: Good academic results are expected under the scholarship rules.",
+      "Field restrictions: Medicine, Dental Medicine, and Pharmacy are commonly excluded; confirm the current call.",
+      "Admission required: Applicants must fit both scholarship rules and host-university placement or admission conditions.",
+      "Language route: Romanian language preparatory study may be part of the scholarship where the chosen programme requires it.",
+      "Hard filter: EU citizenship, excluded fields, or an incomplete official file will usually end the application.",
     ],
 
     benefits: [
-      "TODO",
+      "Tuition: Tuition support is part of the Romanian government scholarship package.",
+      "Stipend: Monthly scholarship support is commonly included for living expenses.",
+      "Accommodation: Student dormitory support is typically financed within the allocated subsidy.",
+      "Preparatory year: Romanian language preparatory study can be financed where applicable.",
+      "Administrative fees: Registration and tuition-related fee exemptions may apply under the official rules.",
+      "Travel: Not confirmed as a universal benefit for all recipients; verify the current call.",
+      "Health insurance: Not confirmed here as a universal benefit; verify the official scholarship terms.",
     ],
 
     applicationProcess: [
-      "TODO",
+      "Monitor the annual release on the official Romanian scholarship portal and read the current instructions carefully.",
+      "Confirm that you are a non-EU applicant and that your intended field is eligible in the active scholarship cycle.",
+      "Prepare your passport, academic records, motivation material, translations, and any legalization required by the official system.",
+      "Create or access the official application account and upload the complete file before the deadline.",
+      "Wait for eligibility screening, document verification, scholarship evaluation, and university placement review.",
+      "If selected, follow the official result, visa, and enrollment instructions issued through the Romanian scholarship system.",
     ],
 
     documents: [
-      "TODO",
+      "Passport copy",
+      "Secondary school transcripts",
+      "Secondary school completion certificate",
+      "Motivation letter",
+      "CV or resume if required",
+      "Language certificate where required by the chosen programme",
+      "Certified translations and legalized documents where required",
+      "Any official forms requested through the Romanian scholarship portal",
     ],
 
-    applyUrl: "https://studyinromania.gov.ro",
-    officialSource: "Romanian Ministry of Foreign Affairs",
+    selectionCriteria: [
+      "Nationality rule fit: Non-EU status is a first-level eligibility filter.",
+      "Academic record: Strong school results improve competitiveness.",
+      "Document quality: Correct translations, legalization, and clean file preparation matter significantly.",
+      "Programme fit: Applicants must choose allowed fields and realistic university pathways.",
+    ],
+
+    tips: [
+      "Prepare translations and legalization early, because document quality is one of the biggest failure points in this scholarship.",
+      "Do not assume all programmes are English-medium. Check the real language route before building your application plan.",
+      "Avoid excluded fields unless the official call clearly allows them in the current cycle.",
+      "Keep your application file precise and complete; centralized government schemes reward compliance more than improvisation.",
+    ],
+
+    goodToKnow: [
+      "This scholarship is not for EU citizens.",
+      "Romanian language preparation can extend the total study path if your programme route requires it.",
+      "Result timing can vary by cycle, so monitor the official portal after submission instead of relying on informal timelines.",
+      "This is a government scholarship route with document verification and placement steps, not a casual university promotional award.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the Romanian Government Scholarship fully funded for Bachelor's students?",
+        answer:
+          "It is generally treated as a fully funded government route because it commonly includes tuition support, monthly scholarship support, accommodation assistance, and the Romanian preparatory year where applicable. Travel should not be assumed unless the current call confirms it.",
+      },
+      {
+        question: "Can EU citizens apply?",
+        answer:
+          "No. This route is designed for non-EU applicants under the Romanian government scholarship rules.",
+      },
+      {
+        question: "Is Romanian language mandatory?",
+        answer:
+          "Not in every case, but many routes involve Romanian-language study or a preparatory year. English-medium availability depends on the chosen university and programme.",
+      },
+      {
+        question: "Does the scholarship support Medicine or Pharmacy?",
+        answer:
+          "Those fields are commonly excluded in this scholarship system. Always confirm the active call before planning your application around them.",
+      },
+      {
+        question: "What matters most in selection?",
+        answer:
+          "Good academic results, a complete official file, correct translations or legalization where required, and realistic programme choices matter more than vague enthusiasm.",
+      },
+    ],
+
+    categoryLinks: [
+      "/countries/romania",
+      "/funding/fully-funded",
+      "/degrees/bachelors",
+    ],
+
+    applyUrl: "https://scholarships.studyinromania.gov.ro/",
+    officialSource: "Study in Romania / Romanian Ministry of Foreign Affairs",
 
     lastUpdated: "2026-02-06",
   },
@@ -1987,9 +2277,75 @@ const rawScholarships: Scholarship[] = [
   {
     slug: "romanian-government-scholarship-masters",
 
-    title: "Romanian Government Scholarship",
+    title: "Romanian Government Scholarship for Master's Students",
+    seoTitle:
+      "Romanian Government Scholarship 2026 | Fully Funded Master's Study in Romania",
+    metaDescription:
+      "Decision-first guide to the Romanian Government Scholarship for Master's applicants, including non-EU eligibility, funding structure, language route, and who should not apply.",
+    keywords: [
+      "Romanian Government Scholarship for Master's",
+      "Romania fully funded Master's scholarship",
+      "Study in Romania government scholarship",
+      "Romania scholarship for non-EU graduates",
+    ],
+    introduction:
+      "This route is for non-EU graduates who can handle a formal government scholarship process, meet Master's entry requirements, and follow the real language or programme conditions of their target university. It is not a loose scholarship option for applicants who only want any funded English programme in Europe.",
+    summary:
+      "Apply if you want a structured state scholarship in Romania and can meet the academic, document, and language conditions of a real Master's route. Avoid it if you are outside the non-EU rules or are not prepared for centralized evaluation.",
+    contentSections: [
+      {
+        title: "How the Master's route differs",
+        paragraphs: [
+          "The Romanian Government Scholarship for Master's study still runs through the same centralized state framework, but applicants are expected to present a stronger academic progression and a clearer postgraduate study rationale.",
+          "This means the scholarship is not just about being eligible on paper. Your prior degree, document quality, and realistic programme choice all matter because the file must survive both scholarship review and university placement logic.",
+        ],
+      },
+      {
+        title: "What full funding usually means here",
+        bullets: [
+          "Tuition support for the approved Master's programme.",
+          "Monthly scholarship support for living costs.",
+          "Accommodation assistance in student dormitories within the allocated subsidy.",
+          "Romanian language preparatory support where the chosen route requires it.",
+          "Registration or tuition-related fee exemptions may apply under official scholarship rules.",
+          "Travel is not confirmed as a universal benefit and should not be assumed.",
+        ],
+      },
+      {
+        title: "Reality check",
+        paragraphs: [
+          "This is not a broad open Master's scholarship for every international graduate. Non-EU status, eligible fields, and document compliance are hard filters.",
+          "Applicants who want a casual English-only route without checking programme language, or who ignore translations and legalization requirements, are usually a poor fit for this system.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        bullets: [
+          "Non-EU graduates with a credible academic profile for postgraduate study in Romania.",
+          "Applicants who can build a complete, organized official file and follow a structured government process.",
+          "Students who are open to the real language route of the programme instead of assuming every funded option is automatically English-medium.",
+        ],
+      },
+      {
+        title: "Who should not apply",
+        bullets: [
+          "EU citizens.",
+          "Applicants targeting commonly excluded fields without checking the current official restrictions.",
+          "Graduates applying randomly to any full-funding page without programme fit, document readiness, or serious interest in Romania.",
+        ],
+      },
+      {
+        title: "How selection works",
+        paragraphs: [
+          "Selection usually depends on academic strength, rule fit, clean documents, and whether the programme choice makes sense for a Master's-level applicant.",
+          "At postgraduate level, alignment matters more than volume. A precise file and realistic study plan outperform a rushed application built only around the phrase fully funded.",
+        ],
+      },
+    ],
+    guideUrl: "/blog/romania-government-scholarship-2027",
+    guideLabel: "Romania Government Scholarship guide",
     overview:
-      "Fully funded postgraduate studies in Romanian universities.",
+      "Government-funded non-EU scholarship route for Master's study at participating Romanian universities under the Romanian MFA scholarship system.",
 
     country: "Romania",
     degreeLevel: "Masters",
@@ -1999,23 +2355,103 @@ const rawScholarships: Scholarship[] = [
     duration: "2 years",
 
     eligibility: [
-      "TODO",
+      "Eligible nationalities: Non-EU citizens under the Romanian government scholarship rules.",
+      "Degree level: Master's study at participating Romanian universities.",
+      "Academic background: Completed Bachelor's degree or equivalent recognized qualification.",
+      "Academic performance: Good academic results are expected for competitive postgraduate selection.",
+      "Field restrictions: Medicine, Dental Medicine, and Pharmacy are commonly excluded; confirm the active call.",
+      "Admission required: Applicants must satisfy both scholarship rules and the host university's Master's placement or admission conditions.",
+      "Language requirements: Programme language must be checked carefully, and Romanian preparatory study may still be relevant depending on the route.",
+      "Hard filter: EU citizenship, excluded fields, or a weak incomplete file usually end the application before meaningful review.",
     ],
 
     benefits: [
-      "TODO",
+      "Tuition: Tuition support is part of the Romanian government scholarship package.",
+      "Stipend: Monthly scholarship support is commonly included for living expenses.",
+      "Accommodation: Student dormitory support is typically financed within the allocated subsidy.",
+      "Preparatory year: Romanian language preparatory study can be financed where applicable.",
+      "Administrative fees: Registration and tuition-related fee exemptions may apply under the official rules.",
+      "Travel: Not confirmed as a universal benefit for all recipients; verify the current call.",
+      "Health insurance: Not confirmed here as a universal benefit; verify the official scholarship terms.",
     ],
 
     applicationProcess: [
-      "TODO",
+      "Monitor the annual Romanian government scholarship release and review the current Master's-level conditions on the official portal.",
+      "Confirm your non-EU eligibility, check field restrictions, and shortlist Master's programmes that match your academic background.",
+      "Prepare your Bachelor's records, passport, motivation material, translations, and any legalization required by the official system.",
+      "Submit the full application through the official scholarship platform before the deadline and double-check file completeness.",
+      "Wait for document verification, scholarship evaluation, and university placement or admission review.",
+      "If selected, complete the official result, visa, and enrollment steps exactly as instructed by the scholarship authorities and host university.",
     ],
 
     documents: [
-      "TODO",
+      "Passport copy",
+      "Bachelor's degree certificate",
+      "Bachelor's transcripts",
+      "Motivation letter",
+      "CV or resume",
+      "Language certificate where required by the chosen programme",
+      "Certified translations and legalized documents where required",
+      "Any official forms requested through the Romanian scholarship portal",
     ],
 
-    applyUrl: "https://studyinromania.gov.ro",
-    officialSource: "Romanian Ministry of Foreign Affairs",
+    selectionCriteria: [
+      "Nationality rule fit: Non-EU status is a first-level requirement.",
+      "Academic strength: Competitive Master's applicants usually show consistent undergraduate performance.",
+      "Document quality: Correct translations, legalization, and file completeness have major impact in this scholarship system.",
+      "Programme alignment: Postgraduate study choice should fit the applicant's academic background and realistic placement path.",
+    ],
+
+    tips: [
+      "Do not submit a generic postgraduate application. Match your academic background to the Master's route you select.",
+      "Prepare translations and legalization early because government-file errors are one of the most common rejection points.",
+      "Check language conditions carefully instead of assuming funded Master's study in Romania always means English-medium study.",
+      "Treat this as a rule-based system. Clean compliance beats vague ambition.",
+    ],
+
+    goodToKnow: [
+      "This scholarship is not for EU citizens.",
+      "Postgraduate applicants still need to respect language and field restrictions even when they already hold a prior degree.",
+      "Result timing can vary by annual cycle, so follow official updates after submission rather than relying on forum claims.",
+      "This is a strong route for disciplined applicants, but it is a bad fit for people only searching any fully funded page in Europe.",
+    ],
+
+    faqs: [
+      {
+        question: "Is the Romanian Government Scholarship fully funded for Master's students?",
+        answer:
+          "It is generally treated as a fully funded route because it commonly includes tuition support, a monthly scholarship, accommodation assistance, and preparatory language funding where applicable. Travel should be checked in the active call rather than assumed.",
+      },
+      {
+        question: "Can non-EU graduates apply for Master's study in English?",
+        answer:
+          "Sometimes, depending on the university and programme. You still need to verify real programme language and any language-proof requirement before applying.",
+      },
+      {
+        question: "Do excluded fields matter at Master's level too?",
+        answer:
+          "Yes. Common restrictions such as Medicine, Dental Medicine, and Pharmacy should be checked carefully in the current official scholarship rules.",
+      },
+      {
+        question: "What makes a strong Master's application here?",
+        answer:
+          "Strong undergraduate performance, complete and accurate documents, correct translations or legalization where required, and a realistic Master's study choice all matter more than broad motivational language.",
+      },
+      {
+        question: "Is this a simple university scholarship?",
+        answer:
+          "No. It is a centralized government scholarship route with verification and placement logic, so the process is more structured than a normal university-funded award.",
+      },
+    ],
+
+    categoryLinks: [
+      "/countries/romania",
+      "/funding/fully-funded",
+      "/degrees/masters",
+    ],
+
+    applyUrl: "https://scholarships.studyinromania.gov.ro/",
+    officialSource: "Study in Romania / Romanian Ministry of Foreign Affairs",
 
     lastUpdated: "2026-02-06",
   },
@@ -11321,7 +11757,7 @@ function defaultFaqs(s: Scholarship) {
   ];
 }
 
-export const scholarships: Scholarship[] = rawScholarships.map((s) => {
+function normalizeScholarship(s: Scholarship): Scholarship {
   const normalized = ensureInAllowedSets({
     country: s.country,
     degreeLevel: s.degreeLevel,
@@ -11346,6 +11782,42 @@ export const scholarships: Scholarship[] = rawScholarships.map((s) => {
   const cleanedTips = cleanList(s.tips);
   const cleanedRelated = cleanList(s.relatedScholarships);
   const cleanedCategoryLinks = cleanList(s.categoryLinks);
+  const cleanedContentSections: ScholarshipContentSection[] = Array.isArray(s.contentSections)
+    ? s.contentSections
+        .map((section) => {
+          const title = fixMojibake(String(section.title ?? "")).trim();
+          const paragraphs = cleanList(section.paragraphs);
+          const bullets = cleanList(section.bullets);
+          const ordered = cleanList(section.ordered);
+          const facts = Array.isArray(section.facts)
+            ? section.facts
+                .map((fact) => ({
+                  label: fixMojibake(String(fact.label ?? "")).trim(),
+                  value: fixMojibake(String(fact.value ?? "")).trim(),
+                }))
+                .filter(
+                  (fact) =>
+                    fact.label.length > 0 &&
+                    fact.value.length > 0 &&
+                    !isPlaceholderItem(fact.label) &&
+                    !isPlaceholderItem(fact.value),
+                )
+            : [];
+
+          if (!title) return null;
+          if (paragraphs.length === 0 && bullets.length === 0 && ordered.length === 0 && facts.length === 0) {
+            return null;
+          }
+
+          const cleanedSection: ScholarshipContentSection = { title };
+          if (paragraphs.length > 0) cleanedSection.paragraphs = paragraphs;
+          if (bullets.length > 0) cleanedSection.bullets = bullets;
+          if (ordered.length > 0) cleanedSection.ordered = ordered;
+          if (facts.length > 0) cleanedSection.facts = facts;
+          return cleanedSection;
+        })
+        .filter((section): section is ScholarshipContentSection => section !== null)
+    : [];
 
   const eligibilityBase = cleanedEligibility.length > 0 ? cleanedEligibility : [];
   const benefitsBase = cleanedBenefits.length > 0 ? cleanedBenefits : [];
@@ -11405,10 +11877,20 @@ export const scholarships: Scholarship[] = rawScholarships.map((s) => {
       typeof s.introduction === "string" && s.introduction.trim() !== ""
         ? fixMojibake(s.introduction).trim()
         : undefined,
+    contentSections:
+      cleanedContentSections.length > 0 ? cleanedContentSections : undefined,
 	    summary:
 	      typeof s.summary === "string" && s.summary.trim() !== ""
 	        ? fixMojibake(s.summary).trim()
 	        : fixMojibake(buildSummary(base)).trim(),
+    guideUrl:
+      typeof s.guideUrl === "string" && s.guideUrl.trim() !== ""
+        ? fixMojibake(s.guideUrl).trim()
+        : undefined,
+    guideLabel:
+      typeof s.guideLabel === "string" && s.guideLabel.trim() !== ""
+        ? fixMojibake(s.guideLabel).trim()
+        : undefined,
 	    country: normalized.country,
 	    continent:
 	      typeof s.continent === "string" && s.continent.trim() !== ""
@@ -11432,4 +11914,40 @@ export const scholarships: Scholarship[] = rawScholarships.map((s) => {
     relatedScholarships: cleanedRelated.length > 0 ? cleanedRelated : undefined,
     categoryLinks: cleanedCategoryLinks.length > 0 ? cleanedCategoryLinks : undefined,
   };
-});
+}
+
+function hasTodoPlaceholder(value: string | undefined) {
+  return typeof value === "string" && value.trim().toUpperCase() === "TODO";
+}
+
+function hasThinScholarshipContent(scholarship: Scholarship) {
+  const listFields = [
+    scholarship.eligibility,
+    scholarship.benefits,
+    scholarship.applicationProcess,
+    scholarship.documents,
+    scholarship.selectionCriteria,
+    scholarship.tips,
+    scholarship.goodToKnow,
+    scholarship.keywords,
+    scholarship.tags,
+    scholarship.relatedScholarships,
+    scholarship.categoryLinks,
+  ];
+
+  return listFields.some(
+    (items) => Array.isArray(items) && items.some((item) => hasTodoPlaceholder(item)),
+  ) || (scholarship.contentSections ?? []).some((section) => {
+    if (hasTodoPlaceholder(section.title)) return true;
+    if ((section.paragraphs ?? []).some((item) => hasTodoPlaceholder(item))) return true;
+    if ((section.bullets ?? []).some((item) => hasTodoPlaceholder(item))) return true;
+    if ((section.ordered ?? []).some((item) => hasTodoPlaceholder(item))) return true;
+    return (section.facts ?? []).some(
+      (fact) => hasTodoPlaceholder(fact.label) || hasTodoPlaceholder(fact.value),
+    );
+  });
+}
+
+export const scholarships: Scholarship[] = rawScholarships
+  .map(normalizeScholarship)
+  .filter((scholarship) => !hasThinScholarshipContent(scholarship));
