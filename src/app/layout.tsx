@@ -12,6 +12,7 @@ import {
 import { getSiteUrl, isVercelProduction } from "@/lib/site";
 
 const GA_MEASUREMENT_ID = "G-YMEB4WNX7G";
+const ADSENSE_CLIENT_ID = "ca-pub-2098848132009421";
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
@@ -64,6 +65,13 @@ export default function RootLayout({
       <head>
         {isProd ? (
           <>
+            {/* Google AdSense site ownership verification (production only) */}
+            <script
+              async
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
+              crossOrigin="anonymous"
+            />
+
             {/* Google Analytics (production only) */}
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
