@@ -2402,7 +2402,7 @@ const rawScholarships: Scholarship[] = [
 
     guideUrl:
       "https://www.scholarshipscentral.com/blog/heinrich-boll-foundation-scholarship-2026-guide",
-    guideLabel: "Heinrich BÃ¶ll Foundation Scholarship 2026 guide",
+    guideLabel: "Heinrich Böll Foundation Scholarship 2026 guide",
 
     country: "Germany",
     degreeLevel: "Masters",
@@ -5631,7 +5631,10 @@ function normalizeScholarship(s: Scholarship): Scholarship {
     deadline: enhanceDeadline(s.deadline),
     duration: fixMojibake(s.duration),
     officialSource: fixMojibake(s.officialSource),
-    lastUpdated: CONTENT_LAST_UPDATED,
+    lastUpdated:
+      typeof s.lastUpdated === "string" && s.lastUpdated.trim() !== ""
+        ? s.lastUpdated.trim()
+        : CONTENT_LAST_UPDATED,
     eligibility,
     benefits,
     applicationProcess,

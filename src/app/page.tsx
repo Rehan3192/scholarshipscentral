@@ -1,8 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import { scholarships } from "@/data/scholarships";
 import { FEATURED_HUB_PAGES } from "@/lib/featuredHubPages";
 import { toSegment } from "@/lib/helpers";
+import { isStillOpen, sortByUpcomingDeadline } from "@/lib/scholarship-taxonomy";
 import {
   getWordPressPosts,
   isWordPressConfigured,
@@ -17,6 +19,10 @@ const HOMEPAGE_BLOG_POST_LIMIT = 3;
 const LATEST_SCHOLARSHIPS = [...scholarships]
   .sort((a, b) => (b.lastUpdated ?? "").localeCompare(a.lastUpdated ?? ""))
   .slice(0, 6);
+const CLOSING_SOON_SCHOLARSHIPS = [...scholarships]
+  .filter((scholarship) => isStillOpen(scholarship.deadline))
+  .sort(sortByUpcomingDeadline)
+  .slice(0, 4);
 
 const COUNTRY_COUNTS = new Map<string, number>();
 for (const s of scholarships) {
@@ -32,6 +38,51 @@ const TOP_COUNTRIES = Array.from(COUNTRY_COUNTS.entries())
     count,
     href: `/countries/${toSegment(country)}`,
   }));
+const FEATURED_COUNTRIES = TOP_COUNTRIES.slice(0, 3);
+
+const QUICK_FILTERS = [
+  { label: "Masters", href: "/degrees/masters" },
+  { label: "Fully funded", href: "/funding/fully-funded" },
+  { label: "Still open", href: "/scholarships-still-open-2026" },
+  { label: "Without IELTS", href: "/europe-scholarships-without-ielts-2026" },
+  { label: "Germany", href: "/countries/germany" },
+  { label: "UK", href: "/countries/united-kingdom" },
+] as const;
+
+const TRUST_SIGNALS = [
+  "Official links only",
+  "No application fees collected",
+  "Updated regularly",
+  `${scholarships.length} verified listings`,
+] as const;
+
+const POPULAR_SEARCHES = [
+  { label: "Fully funded scholarships 2026", href: "/fully-funded-scholarships-2026" },
+  { label: "Scholarships without IELTS", href: "/europe-scholarships-without-ielts-2026" },
+  { label: "Masters scholarships", href: "/degrees/masters" },
+  { label: "Government scholarships", href: "/government-scholarships-still-open-2026" },
+  { label: "Scholarships still open", href: "/scholarships-still-open-2026" },
+] as const;
+
+export const metadata: Metadata = {
+  title: "Scholarships Central | Fully Funded Scholarships 2026",
+  description:
+    "Browse verified scholarships by country, degree, funding type, and deadline with official application links for 2026 opportunities worldwide.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Scholarships Central | Fully Funded Scholarships 2026",
+    description:
+      "Find verified scholarship listings, active deadlines, country hubs, and official application links.",
+    url: "/",
+  },
+  twitter: {
+    title: "Scholarships Central | Fully Funded Scholarships 2026",
+    description:
+      "Find verified scholarship listings, active deadlines, country hubs, and official application links.",
+  },
+};
 
 function formatDate(value: string) {
   const iso = value.split("T")[0];
@@ -58,62 +109,51 @@ async function getHomepageBlogPosts(): Promise<WordPressPostListItem[]> {
   }
 }
 
-function BlogSectionFallback() {
+function SectionFallback({ label }: { label: string }) {
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-5 text-sm text-gray-700 shadow-sm">
-      <p className="m-0">New guides and updates will appear here.</p>
+      <p className="m-0">{label}</p>
     </div>
   );
 }
 
-async function HomepageBlogSection() {
+function FeaturedHubSection() {
+  return (
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {FEATURED_HUB_PAGES.map((page) => (
+        <Link
+          key={page.slug}
+          href={page.href}
+          className="group rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50/60 to-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-blue-300 hover:bg-blue-50/30 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+        >
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-800">
+              Featured
+            </span>
+            <span className="inline-flex items-center rounded-full border border-blue-200 bg-white px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-700">
+              {page.label}
+            </span>
+          </div>
+          <div className="mt-3 text-base font-semibold text-gray-900 group-hover:text-blue-800">
+            {page.title}
+          </div>
+          <div className="mt-2 line-clamp-3 text-sm text-gray-700">
+            {page.description}
+          </div>
+          <div className="mt-4 inline-flex items-center rounded-lg border border-blue-200 bg-white px-3 py-2 text-sm font-semibold text-blue-700 transition-colors duration-200 motion-reduce:transition-none group-hover:border-blue-300 group-hover:bg-blue-50">
+            Open page &rarr;
+          </div>
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+async function LatestBlogSection() {
   const blogPosts = await getHomepageBlogPosts();
 
   return (
-    <div className="space-y-6">
-      <div className="space-y-3">
-        <div className="flex items-center justify-between gap-3">
-          <h3 className="m-0 text-lg font-semibold text-gray-900">
-            Featured scholarship pages
-          </h3>
-          <div className="flex flex-wrap items-center gap-3 text-sm">
-            <Link href="/scholarship-results-2026" className="font-medium text-blue-700 hover:underline">
-              Scholarship results 2026
-            </Link>
-            <Link href="/blog" className="font-medium text-blue-700 hover:underline">
-              See all content
-            </Link>
-          </div>
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURED_HUB_PAGES.map((page) => (
-            <Link
-              key={page.slug}
-              href={page.href}
-              className="group rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50/60 to-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-blue-300 hover:bg-blue-50/30 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-            >
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-800">
-                  Featured
-                </span>
-                <span className="inline-flex items-center rounded-full border border-blue-200 bg-white px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-700">
-                  {page.label}
-                </span>
-              </div>
-              <div className="mt-3 text-base font-semibold text-gray-900 group-hover:text-blue-800">
-                {page.title}
-              </div>
-              <div className="mt-2 line-clamp-3 text-sm text-gray-700">
-                {page.description}
-              </div>
-              <div className="mt-4 inline-flex items-center rounded-lg border border-blue-200 bg-white px-3 py-2 text-sm font-semibold text-blue-700 transition-colors duration-200 motion-reduce:transition-none group-hover:border-blue-300 group-hover:bg-blue-50">
-                Open page &rarr;
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-
+    <>
       {blogPosts.length > 0 ? (
         <div className="space-y-3">
           <div className="flex items-center justify-between gap-3">
@@ -155,16 +195,16 @@ async function HomepageBlogSection() {
           </div>
         </div>
       ) : (
-        <BlogSectionFallback />
+        <SectionFallback label="New guides and updates will appear here." />
       )}
-    </div>
+    </>
   );
 }
 
 export default function HomePage() {
   return (
     <div className="py-10 space-y-12">
-      <header className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-10">
+      <header className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-10">
         <p className="text-sm font-medium text-blue-700">
           Scholarships Central
         </p>
@@ -178,6 +218,18 @@ export default function HomePage() {
           redirect to official external application pages - no accounts, no
           forms.
         </p>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          {QUICK_FILTERS.map((filter) => (
+            <Link
+              key={filter.href}
+              href={filter.href}
+              className="inline-flex items-center rounded-full border border-gray-300 bg-gray-50 px-3 py-1.5 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            >
+              {filter.label}
+            </Link>
+          ))}
+        </div>
 
         <form
           action="/scholarships"
@@ -252,6 +304,17 @@ export default function HomePage() {
           </span>{" "}
           degree levels.
         </p>
+
+        <div className="mt-5 grid gap-3 border-t border-gray-200 pt-5 sm:grid-cols-2 lg:grid-cols-4">
+          {TRUST_SIGNALS.map((signal) => (
+            <div
+              key={signal}
+              className="rounded-xl border border-emerald-200 bg-emerald-50/60 px-3 py-2 text-sm font-semibold text-emerald-900"
+            >
+              {signal}
+            </div>
+          ))}
+        </div>
       </header>
 
       <section className="space-y-4 content-visibility-auto">
@@ -295,6 +358,44 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {CLOSING_SOON_SCHOLARSHIPS.length > 0 ? (
+        <section className="space-y-4 content-visibility-auto">
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+            <h2 className="text-2xl font-semibold text-gray-900">
+              Closing soon
+            </h2>
+            <Link href="/scholarships-still-open-2026" className="text-sm font-medium text-blue-700 hover:underline">
+              View still-open scholarships
+            </Link>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {CLOSING_SOON_SCHOLARSHIPS.map((s) => (
+              <Link
+                key={s.slug}
+                href={`/scholarships/${s.slug}`}
+                className="rounded-2xl border border-amber-200 bg-amber-50/70 p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-amber-300 hover:bg-amber-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2"
+              >
+                <div className="text-sm font-semibold text-amber-900">
+                  Deadline: {s.deadline}
+                </div>
+                <div className="mt-2 text-base font-semibold text-gray-900">
+                  {s.title}
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2 text-xs text-gray-700">
+                  <span className="rounded-full border border-amber-200 bg-white px-2.5 py-1 font-semibold">
+                    {s.country}
+                  </span>
+                  <span className="rounded-full border border-amber-200 bg-white px-2.5 py-1 font-semibold">
+                    {s.degreeLevel}
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="space-y-4 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
@@ -356,41 +457,20 @@ export default function HomePage() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-3">
-          <Link
-            href="/countries/germany"
-            className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-gray-300 hover:bg-gray-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-          >
-            <div className="font-semibold text-gray-900">
-              Germany
-            </div>
-            <div className="mt-1 text-sm text-gray-700">
-              Public universities, DAAD, and more.
-            </div>
-          </Link>
-
-          <Link
-            href="/countries/usa"
-            className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-gray-300 hover:bg-gray-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-          >
-            <div className="font-semibold text-gray-900">
-              USA
-            </div>
-            <div className="mt-1 text-sm text-gray-700">
-              Scholarships from universities and foundations.
-            </div>
-          </Link>
-
-          <Link
-            href="/countries/united-kingdom"
-            className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-gray-300 hover:bg-gray-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-          >
-            <div className="font-semibold text-gray-900">
-              UK
-            </div>
-            <div className="mt-1 text-sm text-gray-700">
-              Scholarships for top UK institutions.
-            </div>
-          </Link>
+          {FEATURED_COUNTRIES.map((country) => (
+            <Link
+              key={country.country}
+              href={country.href}
+              className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-gray-300 hover:bg-gray-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            >
+              <div className="font-semibold text-gray-900">
+                {country.country === "United Kingdom" ? "UK" : country.country}
+              </div>
+              <div className="mt-1 text-sm text-gray-700">
+                {country.count} current scholarship listing{country.count === 1 ? "" : "s"}.
+              </div>
+            </Link>
+          ))}
         </div>
 
         {TOP_COUNTRIES.length > 0 ? (
@@ -425,16 +505,52 @@ export default function HomePage() {
       <section className="space-y-4 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="text-2xl font-semibold text-gray-900">
-            Guides and hub pages
+            Featured scholarship hubs
+          </h2>
+          <Link href="/scholarship-results-2026" className="text-sm font-medium text-blue-700 hover:underline">
+            Scholarship results 2026
+          </Link>
+        </div>
+
+        <FeaturedHubSection />
+      </section>
+
+      <section className="space-y-4 content-visibility-auto">
+        <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+          <h2 className="text-2xl font-semibold text-gray-900">
+            Latest guides
           </h2>
           <Link href="/blog" className="text-sm font-medium text-blue-700 hover:underline">
             View all posts
           </Link>
         </div>
 
-        <Suspense fallback={<BlogSectionFallback />}>
-          <HomepageBlogSection />
+        <Suspense fallback={<SectionFallback label="Loading latest guides..." />}>
+          <LatestBlogSection />
         </Suspense>
+      </section>
+
+      <section className="space-y-4 content-visibility-auto">
+        <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+          <h2 className="text-2xl font-semibold text-gray-900">
+            Popular searches
+          </h2>
+          <p className="text-sm text-gray-600">
+            Common starting points for 2026 applications.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap gap-2 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          {POPULAR_SEARCHES.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="inline-flex items-center rounded-full border border-gray-300 bg-white px-3 py-1.5 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
       </section>
 
       <section className="space-y-4 content-visibility-auto">

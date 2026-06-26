@@ -190,13 +190,13 @@ export default function ItalyScholarships2026Page() {
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
-            Master's-heavy
+            Master&apos;s-heavy
           </p>
           <p className="mb-0 text-3xl font-bold text-gray-900">
             {mastersCount}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Italy listings currently aligned with master's-level intent.
+            Italy listings currently aligned with master&apos;s-level intent.
           </p>
         </div>
       </section>
