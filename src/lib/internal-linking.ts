@@ -62,7 +62,7 @@ const blogGuide = (blogSlug: string, anchorText: string): BlogGuideReference => 
 const BLOG_LINK_PLANS: Record<string, BlogLinkPlan> = {
   "university-of-sheffield-scholarship": plan(
     "United Kingdom",
-    "uk-clarendon-scholarship",
+    "uk-ucl-global-masters-scholarship",
     "fullyFunded",
   ),
   "ucl-ioe-clarke-scholarships-2026": plan(
@@ -77,7 +77,7 @@ const BLOG_LINK_PLANS: Record<string, BlogLinkPlan> = {
   ),
   "durham-inspiring-scholarship": plan(
     "United Kingdom",
-    "uk-clarendon-scholarship",
+    "uk-sussex-chancellors-international-scholarship-masters",
     "fullyFunded",
   ),
   "soas-masters-scholarships": plan(
@@ -87,19 +87,19 @@ const BLOG_LINK_PLANS: Record<string, BlogLinkPlan> = {
   ),
   "campusart-results-2026": plan(
     "France",
-    "eiffel-excellence-scholarship",
+    "france-universite-paris-saclay-international-masters-scholarship-idex",
     "europe",
     "resultsHub",
   ),
   "entente-cordiale-scholarship-results-2026": plan(
     "France",
-    "eiffel-excellence-scholarship",
+    "france-universite-paris-saclay-international-masters-scholarship-idex",
     "europe",
     "resultsHub",
   ),
   "eiffel-scholarship-results-2026": plan(
     "France",
-    "eiffel-excellence-scholarship",
+    "france-universite-paris-saclay-international-masters-scholarship-idex",
     "europe",
     "resultsHub",
   ),
@@ -116,7 +116,7 @@ const BLOG_LINK_PLANS: Record<string, BlogLinkPlan> = {
   ),
   "university-of-padua-scholarships-2026": plan(
     "Italy",
-    "italy-university-of-padua-excellence-scholarship",
+    "italy-university-of-pisa-dsu-toscana-scholarship-masters",
     "fullyFunded",
   ),
   "goldsmiths-sanctuary-scholarship-2026-apply-now": plan(
@@ -131,7 +131,7 @@ const BLOG_LINK_PLANS: Record<string, BlogLinkPlan> = {
   ),
   "university-of-bristol-think-big-scholarships": plan(
     "United Kingdom",
-    "uk-gates-cambridge-scholarship",
+    "uk-ucl-global-masters-scholarship",
     "fullyFunded",
   ),
   "scholarships-in-italy-without-ielts": plan(
@@ -147,12 +147,12 @@ const BLOG_LINK_PLANS: Record<string, BlogLinkPlan> = {
   ),
   "top-3-scholarships-in-europe-2026": plan(
     "France",
-    "eiffel-excellence-scholarship",
+    "france-universite-paris-saclay-international-masters-scholarship-idex",
     "europe",
   ),
   "top-scholarships-in-europe": plan(
     "Italy",
-    "italy-university-of-padua-excellence-scholarship",
+    "italy-university-of-pisa-dsu-toscana-scholarship-masters",
     "europe",
   ),
   "edisu-piemonte-scholarship-2026": plan(
@@ -162,12 +162,12 @@ const BLOG_LINK_PLANS: Record<string, BlogLinkPlan> = {
   ),
   "university-of-nottingham-scholarships": plan(
     "United Kingdom",
-    "uk-gates-cambridge-scholarship",
+    "uk-ucl-global-masters-scholarship",
     "fullyFunded",
   ),
   "university-of-alberta-scholarships": plan(
     "Canada",
-    "canada-university-of-british-columbia-international-scholarship",
+    "canada-university-of-winnipeg-president-scholarship-masters",
     "fullyFunded",
   ),
   "scholarships-without-ielts-2026": plan(
