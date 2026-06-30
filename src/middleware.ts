@@ -11,10 +11,16 @@ export function middleware(request: NextRequest) {
 
   const isKnownHost = host === APEX_HOST || host === CANONICAL_HOST;
   if (!isKnownHost) return NextResponse.next();
-  if (isHttps) return NextResponse.next();
+
+  const shouldRedirectToHttps = !isHttps;
+  const shouldRedirectToCanonicalHost = host === APEX_HOST;
+  if (!shouldRedirectToHttps && !shouldRedirectToCanonicalHost) {
+    return NextResponse.next();
+  }
 
   const redirectUrl = new URL(request.url);
   redirectUrl.protocol = "https:";
+  redirectUrl.hostname = CANONICAL_HOST;
   return NextResponse.redirect(redirectUrl, 308);
 }
 
