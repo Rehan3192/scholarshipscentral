@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import { scholarships } from "@/data/scholarships";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import ScholarshipCard from "@/components/scholarship/ScholarshipCard";
 import ScholarshipFilterBar from "@/components/scholarship/ScholarshipFilterBar";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/seo/StructuredData";
@@ -11,36 +12,52 @@ type Props = {
   params: Promise<{ degree: string }>;
 };
 
+const DEGREE_SLUGS = {
+  bachelors: "Bachelors",
+  masters: "Masters",
+  phd: "PhD",
+} as const;
+
+function getDegreeLabel(degree: string) {
+  return DEGREE_SLUGS[degree.toLowerCase() as keyof typeof DEGREE_SLUGS] ?? null;
+}
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return Object.keys(DEGREE_SLUGS).map((degree) => ({ degree }));
+}
+
 export async function generateMetadata(
   { params }: Props
 ): Promise<Metadata> {
   const { degree } = await params;
-  const decoded = decodeURIComponent(degree);
+  const label = getDegreeLabel(decodeURIComponent(degree));
+
+  if (!label) {
+    return {
+      title: "Degree Not Found",
+      robots: { index: false, follow: false },
+    };
+  }
 
   return {
-    title: `${decoded} Scholarships | Scholarships Central`,
-    description: `Browse ${decoded} scholarships worldwide.`,
+    title: `${label} Scholarships | Scholarships Central`,
+    description: `Browse ${label} scholarships worldwide.`,
     alternates: {
-      canonical: `/degrees/${degree}`,
+      canonical: `/degrees/${degree.toLowerCase()}`,
     },
   };
 }
 
 export default async function DegreePage({ params }: Props) {
   const { degree } = await params;
-  const decoded = decodeURIComponent(degree);
-
-  const label =
-    decoded.toLowerCase() === "phd"
-      ? "PhD"
-      : decoded.toLowerCase() === "masters"
-        ? "Masters"
-        : decoded.toLowerCase() === "bachelors"
-          ? "Bachelors"
-          : decoded;
+  const slug = decodeURIComponent(degree).toLowerCase();
+  const label = getDegreeLabel(slug);
+  if (!label) notFound();
 
   const filtered = scholarships.filter(
-    (s) => s.degreeLevel.toLowerCase() === decoded.toLowerCase()
+    (s) => s.degreeLevel === label
   );
   const items = filtered.map((s) => ({
     name: s.title,
@@ -53,10 +70,10 @@ export default async function DegreePage({ params }: Props) {
         items={[
           { label: "Home", href: "/" },
           { label: "Scholarships", href: "/scholarships" },
-          { label: `${label} Scholarships`, href: `/degrees/${degree}` },
+          { label: `${label} Scholarships`, href: `/degrees/${slug}` },
         ]}
       />
-      <ItemListJsonLd pagePath={`/degrees/${degree}`} items={items} />
+      <ItemListJsonLd pagePath={`/degrees/${slug}`} items={items} />
 
       <header className="space-y-2">
         <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">

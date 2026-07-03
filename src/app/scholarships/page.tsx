@@ -8,12 +8,6 @@ import {
 } from "@/components/seo/StructuredData";
 import { COUNTRIES, DEGREE_LEVELS, FUNDING_TYPES } from "@/data/values";
 
-export const metadata: Metadata = {
-  title: "All Scholarships | Scholarships Central",
-  description:
-    "Browse fully funded, partial, and international scholarships worldwide.",
-};
-
 type ScholarshipsPageProps = {
   searchParams?: Promise<Record<string, string | string[] | undefined>>;
 };
@@ -54,6 +48,25 @@ const QUICK_FILTERS: Array<{
   { label: "Masters", params: { degree: "Masters" } },
   { label: "PhD", params: { degree: "PhD" } },
 ];
+
+export async function generateMetadata({
+  searchParams,
+}: ScholarshipsPageProps): Promise<Metadata> {
+  const params = (await searchParams) ?? {};
+  const hasQueryParams = Object.keys(params).length > 0;
+
+  return {
+    title: "All Scholarships | Scholarships Central",
+    description:
+      "Browse fully funded, partial, and international scholarships worldwide.",
+    alternates: {
+      canonical: "/scholarships",
+    },
+    robots: hasQueryParams
+      ? { index: false, follow: true }
+      : { index: true, follow: true },
+  };
+}
 
 function getFirstValue(value: string | string[] | undefined) {
   if (Array.isArray(value)) return value[0] ?? "";
