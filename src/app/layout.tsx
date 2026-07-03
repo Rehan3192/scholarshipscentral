@@ -87,6 +87,11 @@ export default function RootLayout({
                 });
               `}
             </Script>
+
+            {/* Monetag In-Page Push banner (production only) */}
+            <Script id="monetag-in-page-push" strategy="lazyOnload">
+              {`(function(s){s.dataset.zone='11233241',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`}
+            </Script>
           </>
         ) : null}
       </head>
