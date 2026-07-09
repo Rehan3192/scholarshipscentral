@@ -8,7 +8,7 @@ import {
 import { FEATURED_HUB_PAGES } from "@/lib/featuredHubPages";
 import { stripHtmlToText, type WordPressPostListItem } from "@/lib/wordpress";
 
-export const BLOG_REVALIDATE_SECONDS = 60 * 60;
+export const BLOG_REVALIDATE_SECONDS = 5 * 60;
 export const BLOG_PAGE_SIZE = 20;
 
 type Props = {

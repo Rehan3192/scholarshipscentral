@@ -16,7 +16,7 @@ type Props = {
   params: Promise<{ page: string }>;
 };
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 function parseArchivePage(value: string) {
   if (!/^\d+$/.test(value)) return null;

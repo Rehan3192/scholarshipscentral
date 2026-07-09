@@ -17,8 +17,8 @@ import {
   type WordPressPostListItem,
 } from "@/lib/wordpress";
 
-const BLOG_FETCH_TIMEOUT_MS = 450;
-const BLOG_REVALIDATE_SECONDS = 60 * 60;
+const BLOG_FETCH_TIMEOUT_MS = 2000;
+const BLOG_REVALIDATE_SECONDS = 5 * 60;
 const SHARED_BLOG_POSTS_PAGE_SIZE = 20;
 const HOMEPAGE_BLOG_POST_LIMIT = 3;
 const LATEST_SCHOLARSHIPS = [...scholarships]

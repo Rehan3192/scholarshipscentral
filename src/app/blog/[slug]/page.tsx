@@ -18,9 +18,9 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-const BLOG_REVALIDATE_SECONDS = 60 * 60;
+const BLOG_REVALIDATE_SECONDS = 5 * 60;
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 const getCachedWordPressPostBySlug = cache(async (slug: string) =>
   getWordPressPostBySlug(slug, { revalidateSeconds: BLOG_REVALIDATE_SECONDS }),
