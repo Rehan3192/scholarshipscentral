@@ -6,6 +6,9 @@ import {
   BreadcrumbJsonLd,
   WebPageJsonLd,
 } from "@/components/seo/StructuredData";
+import ScholarshipFinderCTA, {
+  detectScholarshipFinderContext,
+} from "@/components/blog/ScholarshipFinderCTA";
 import {
   getWordPressAllPostSlugs,
   getWordPressPostBySlug,
@@ -42,6 +45,21 @@ export async function generateStaticParams() {
 function formatDate(value: string) {
   const iso = value.split("T")[0];
   return iso || value;
+}
+
+function splitAfterIntroduction(html: string) {
+  const paragraphs = [...html.matchAll(/<p\b[^>]*>[\s\S]*?<\/p>/gi)];
+  const insertionParagraph = paragraphs[Math.min(1, paragraphs.length - 1)];
+
+  if (!insertionParagraph || insertionParagraph.index === undefined) {
+    return { introduction: html, remainder: "" };
+  }
+
+  const splitIndex = insertionParagraph.index + insertionParagraph[0].length;
+  return {
+    introduction: html.slice(0, splitIndex),
+    remainder: html.slice(splitIndex),
+  };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -105,6 +123,11 @@ export default async function BlogPostPage({ params }: Props) {
     post.slug,
     post.content.rendered,
   );
+  const articleContent = splitAfterIntroduction(contentWithInternalLinks);
+  const finderContext = detectScholarshipFinderContext({
+    title,
+    slug: post.slug,
+  });
 
   return (
     <div className="space-y-6">
@@ -135,8 +158,15 @@ export default async function BlogPostPage({ params }: Props) {
       <article className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
         <div
           className="wp-content space-y-4"
-          dangerouslySetInnerHTML={{ __html: contentWithInternalLinks }}
+          dangerouslySetInnerHTML={{ __html: articleContent.introduction }}
         />
+        <ScholarshipFinderCTA {...finderContext} />
+        {articleContent.remainder ? (
+          <div
+            className="wp-content space-y-4"
+            dangerouslySetInnerHTML={{ __html: articleContent.remainder }}
+          />
+        ) : null}
       </article>
 
       <div className="flex flex-wrap gap-3">

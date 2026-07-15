@@ -56,6 +56,46 @@ export default function FinderWizard({ scholarships, options }: Props) {
   );
 
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const countryParam = params.get("country")?.trim();
+    const country = countryParam
+      ? options.countries.find(
+          (value) => value.toLocaleLowerCase() === countryParam.toLocaleLowerCase(),
+        )
+      : undefined;
+    const degreeParam = params.get("degree")?.toLocaleLowerCase();
+    const degreeLevel =
+      degreeParam === "bachelors"
+        ? "Bachelors"
+        : degreeParam === "masters"
+          ? "Masters"
+          : degreeParam === "phd"
+            ? "PhD"
+            : undefined;
+    const fundingParam = params.get("funding")?.toLocaleLowerCase();
+    const funding =
+      fundingParam === "fully-funded"
+        ? "Fully Funded"
+        : fundingParam === "partially-funded"
+          ? "Partially Funded"
+          : undefined;
+    const englishRequirement =
+      params.get("ielts")?.toLocaleLowerCase() === "false" ? "No IELTS" : undefined;
+
+    if (!country && !degreeLevel && !funding && !englishRequirement) return;
+
+    setState((current) => ({
+      ...current,
+      ...(country ? { countries: [country] } : {}),
+      ...(degreeLevel ? { degreeLevel } : {}),
+      ...(funding ? { funding } : {}),
+      ...(englishRequirement ? { englishRequirement } : {}),
+    }));
+    // Context is read once from the initial URL; later state changes remain user-controlled.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
     if (!hasMounted.current) {
       hasMounted.current = true;
       return;
