@@ -841,6 +841,12 @@ export default async function ScholarshipPage({ params }: Props) {
                 Browse all
               </Link>
               <Link
+                href="/find-scholarships"
+                className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+              >
+                Find my matches
+              </Link>
+              <Link
                 href={`/funding/${scholarship.fundingType === "Fully Funded" ? "fully-funded" : "partially-funded"}`}
                 className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
               >

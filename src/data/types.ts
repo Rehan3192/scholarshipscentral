@@ -1,15 +1,9 @@
 // FILE: src/data/types.ts
 
-export type FundingType =
-  | "Fully Funded"
-  | "Partially Funded"
-  | "Self Funded";
+import type { DegreeLevel, FundingType } from "@/data/primitives";
+import type { ScholarshipDiscovery } from "@/lib/discovery/types";
 
-export type DegreeLevel =
-  | "Bachelors"
-  | "Masters"
-  | "PhD"
-  | "Postdoc";
+export type { DegreeLevel, FundingType } from "@/data/primitives";
 
 export type ScholarshipContentSection = {
   title: string;
@@ -57,6 +51,7 @@ export type Scholarship = {
   applyUrl: string;
   officialSource: string;
   lastUpdated: string;
+  discovery?: ScholarshipDiscovery;
 };
 
 export type ScholarshipListItem = Pick<

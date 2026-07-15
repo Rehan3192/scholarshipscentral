@@ -156,6 +156,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: `${siteUrl}/find-scholarships`,
+      lastModified: latestScholarshipModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
       url: `${siteUrl}/europe-scholarships-2026`,
       lastModified: latestScholarshipModified,
       changeFrequency: "weekly" as const,

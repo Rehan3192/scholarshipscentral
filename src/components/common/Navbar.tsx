@@ -299,6 +299,12 @@ export default function Navbar() {
             Scholarships
           </Link>
           <Link
+            href="/find-scholarships"
+            className={pillClassName}
+          >
+            Finder
+          </Link>
+          <Link
             href="/blog"
             className={pillClassName}
           >
