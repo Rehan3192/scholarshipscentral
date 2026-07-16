@@ -7,6 +7,12 @@ import {
   ItemListJsonLd,
 } from "@/components/seo/StructuredData";
 import { COUNTRIES, DEGREE_LEVELS, FUNDING_TYPES } from "@/data/values";
+import {
+  getWordPressPostsPage,
+  isWordPressConfigured,
+  stripHtmlToText,
+  type WordPressPostListItem,
+} from "@/lib/wordpress";
 
 type ScholarshipsPageProps = {
   searchParams?: Promise<Record<string, string | string[] | undefined>>;
@@ -16,6 +22,18 @@ type SortKey = "updated" | "deadline" | "title";
 
 const DEFAULT_SORT: SortKey = "updated";
 const PAGE_SIZE = 10;
+const BLOG_SEARCH_LIMIT = 12;
+
+function formatPostDate(value: string) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+
+  return new Intl.DateTimeFormat("en", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  }).format(date);
+}
 
 const TOP_ITEMS = [...scholarships]
   .sort((a, b) => (b.lastUpdated ?? "").localeCompare(a.lastUpdated ?? ""))
@@ -225,13 +243,31 @@ export default async function ScholarshipsPage({
     ? (rawSort as SortKey)
     : DEFAULT_SORT;
   const requestedPage = parsePage(params.page);
+  const normalizedQuery = query.trim();
+
+  let blogPosts: WordPressPostListItem[] = [];
+  let totalBlogPosts = 0;
+
+  if (normalizedQuery && isWordPressConfigured()) {
+    try {
+      const blogResults = await getWordPressPostsPage({
+        search: normalizedQuery,
+        perPage: BLOG_SEARCH_LIMIT,
+        revalidateSeconds: 60 * 5,
+      });
+      blogPosts = blogResults.posts;
+      totalBlogPosts = blogResults.totalPosts;
+    } catch {
+      // Scholarship search remains available if WordPress is temporarily down.
+    }
+  }
 
   const filtered = LISTING.filter((scholarship) => {
-    const normalizedQuery = query.trim().toLowerCase();
+    const normalizedScholarshipQuery = normalizedQuery.toLowerCase();
 
-    if (normalizedQuery) {
+    if (normalizedScholarshipQuery) {
       const haystack = `${scholarship.title} ${scholarship.overview} ${scholarship.country} ${scholarship.degreeLevel} ${scholarship.fundingType} ${scholarship.officialSource}`.toLowerCase();
-      if (!haystack.includes(normalizedQuery)) return false;
+      if (!haystack.includes(normalizedScholarshipQuery)) return false;
     }
 
     return (
@@ -561,7 +597,10 @@ export default async function ScholarshipsPage({
 
           {sorted.length === 0 ? (
             <div className="rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-700">
-              <p className="mb-3">No scholarships match these filters.</p>
+              <p className="mb-3">
+                No scholarship records match these filters
+                {blogPosts.length > 0 ? "; matching articles appear below." : "."}
+              </p>
               <Link
                 href="/scholarships"
                 className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
@@ -623,6 +662,74 @@ export default async function ScholarshipsPage({
           )}
         </section>
       </div>
+
+      {normalizedQuery ? (
+        <section className="space-y-4" aria-labelledby="article-search-results">
+          <div className="flex flex-wrap items-end justify-between gap-2">
+            <div>
+              <h2
+                id="article-search-results"
+                className="mt-0 text-2xl font-semibold text-gray-900"
+              >
+                Articles
+              </h2>
+              <p className="mb-0 text-sm text-gray-600">
+                WordPress guides and updates matching “{normalizedQuery}”.
+              </p>
+            </div>
+            {totalBlogPosts > 0 ? (
+              <p className="mb-0 text-sm text-gray-600">
+                {totalBlogPosts} article{totalBlogPosts === 1 ? "" : "s"}
+              </p>
+            ) : null}
+          </div>
+
+          {blogPosts.length > 0 ? (
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {blogPosts.map((post) => {
+                const title = stripHtmlToText(post.title.rendered);
+                const excerpt =
+                  stripHtmlToText(post.excerpt.rendered) ||
+                  "Read the complete article for scholarship details.";
+                const postDate = formatPostDate(post.date);
+
+                return (
+                  <article
+                    key={post.id}
+                    className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
+                  >
+                    {postDate ? (
+                      <p className="mb-0 text-xs font-semibold text-gray-500">
+                        {postDate}
+                      </p>
+                    ) : null}
+                    <h3 className="mt-2 text-lg font-semibold text-gray-900">
+                      <Link
+                        href={`/blog/${post.slug}`}
+                        className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                      >
+                        {title}
+                      </Link>
+                    </h3>
+                    <p className="mt-2 text-sm text-gray-700">{excerpt}</p>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      aria-label={`Read ${title}`}
+                      className="mt-3 inline-flex items-center text-sm font-semibold text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                    >
+                      Read article <span aria-hidden="true">&rarr;</span>
+                    </Link>
+                  </article>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-700">
+              No articles match this search.
+            </div>
+          )}
+        </section>
+      ) : null}
     </div>
   );
 }
