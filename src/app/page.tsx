@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import ScholarshipFinderCTA from "@/components/blog/ScholarshipFinderCTA";
 import { scholarships } from "@/data/scholarships";
 import { FEATURED_HUB_PAGES } from "@/lib/featuredHubPages";
 import { toSegment } from "@/lib/helpers";
@@ -386,6 +387,8 @@ export default function HomePage() {
           ))}
         </div>
       </header>
+
+      <ScholarshipFinderCTA />
 
       <section className="space-y-3 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
