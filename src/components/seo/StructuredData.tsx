@@ -56,6 +56,27 @@ export function BreadcrumbJsonLd({ items }: { items: BreadcrumbItem[] }) {
   return <JsonLd data={data} />;
 }
 
+export function FaqJsonLd({
+  items,
+}: {
+  items: Array<{ question: string; answer: string }>;
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
+  return <JsonLd data={data} />;
+}
+
 export function ItemListJsonLd({
   pagePath,
   items,

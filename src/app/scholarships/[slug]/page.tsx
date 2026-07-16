@@ -5,7 +5,11 @@ import { scholarships } from "@/data/scholarships";
 import type { ScholarshipContentSection } from "@/data/types";
 import ScholarshipHeader from "@/components/scholarship/ScholarshipHeader";
 import ScholarshipCard from "@/components/scholarship/ScholarshipCard";
-import { BreadcrumbJsonLd, WebPageJsonLd } from "@/components/seo/StructuredData";
+import {
+  BreadcrumbJsonLd,
+  FaqJsonLd,
+  WebPageJsonLd,
+} from "@/components/seo/StructuredData";
 import { cleanDisplayText, toSegment } from "@/lib/helpers";
 import {
   buildScholarshipExplorationLinks,
@@ -507,6 +511,7 @@ export default async function ScholarshipPage({ params }: Props) {
         description={scholarship.overview}
         dateModified={scholarship.lastUpdated}
       />
+      {faqs.length > 0 ? <FaqJsonLd items={faqs} /> : null}
 
       <ScholarshipHeader scholarship={scholarship} guideLink={blogGuideLink} />
 
