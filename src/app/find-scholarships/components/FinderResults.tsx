@@ -1,17 +1,55 @@
-import type { FinderRecommendation, RecommendationCounts } from "../types";
+import type {
+  FinderRecommendation,
+  ProfileStrength,
+  RecommendationCounts,
+  RecommendationLevel,
+} from "../types";
 import RecommendationCard from "./RecommendationCard";
 
 type Props = {
   recommendations: FinderRecommendation[];
   totalRecommendations: number;
   recommendationCounts: RecommendationCounts;
+  profileStrength: ProfileStrength;
 };
+
+const LABEL_DESCRIPTIONS: Record<RecommendationLevel, string> = {
+  "Broad Match": "Matches the broad criteria currently included in your profile.",
+  "Potential Match": "May be relevant, but adding more preferences will improve ranking precision.",
+  "Highly Recommended": "Strong match based on your profile and available eligibility information.",
+  "Good Match": "Matches most of your preferences.",
+  "Worth Checking": "May be suitable but important eligibility details should be verified.",
+  "Not Recommended": "Important mismatches were detected.",
+};
+
+function visibleLevels(profileStrength: ProfileStrength): RecommendationLevel[] {
+  if (profileStrength === "Weak") return ["Broad Match", "Potential Match"];
+  if (profileStrength === "Medium") return ["Good Match", "Worth Checking"];
+  return ["Highly Recommended", "Good Match", "Worth Checking", "Not Recommended"];
+}
+
+function completionMessage(
+  profileStrength: ProfileStrength,
+  total: number,
+  counts: RecommendationCounts,
+) {
+  if (profileStrength === "Weak") {
+    return `We found ${total} scholarships matching your broad preferences. Choose a preferred country or funding option to receive more personalized recommendations.`;
+  }
+  if (profileStrength === "Medium") {
+    return `We found ${counts["Good Match"]} scholarships matching your profile.`;
+  }
+  return `We found ${counts["Highly Recommended"]} scholarships that closely match your profile.`;
+}
 
 export default function FinderResults({
   recommendations,
   totalRecommendations,
   recommendationCounts,
+  profileStrength,
 }: Props) {
+  const levels = visibleLevels(profileStrength);
+
   return (
     <section className="space-y-5" aria-labelledby="finder-results-heading">
       <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-gray-900">
@@ -19,11 +57,13 @@ export default function FinderResults({
           <span aria-hidden="true">🎉 </span>
           Your personalized scholarship recommendations are ready.
         </h2>
-        <p className="mt-2 mb-0 text-sm">Based on your profile we found:</p>
+        <p className="mt-2 mb-0 text-sm">
+          {completionMessage(profileStrength, totalRecommendations, recommendationCounts)}
+        </p>
         <ul className="mt-2 mb-0 space-y-1 text-sm">
-          <li>{recommendationCounts["Highly Recommended"]} Highly Recommended</li>
-          <li>{recommendationCounts["Good Match"]} Good Matches</li>
-          <li>{recommendationCounts["Worth Checking"]} Worth Checking</li>
+          {levels.map((level) => (
+            <li key={level}>{recommendationCounts[level]} {level}</li>
+          ))}
         </ul>
         <p className="mt-2 mb-0 text-sm font-medium">Scroll below to review them.</p>
       </div>
@@ -31,10 +71,12 @@ export default function FinderResults({
       <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
         <h3 className="m-0 text-base font-semibold text-gray-900">What the recommendation labels mean</h3>
         <dl className="mt-3 grid gap-3 text-sm sm:grid-cols-2">
-          <div><dt className="font-semibold text-emerald-800">Highly Recommended</dt><dd className="mt-1 text-gray-600">Strong match based on your profile and available eligibility information.</dd></div>
-          <div><dt className="font-semibold text-blue-800">Good Match</dt><dd className="mt-1 text-gray-600">Matches most of your preferences.</dd></div>
-          <div><dt className="font-semibold text-amber-800">Worth Checking</dt><dd className="mt-1 text-gray-600">May be suitable but important eligibility details should be verified.</dd></div>
-          <div><dt className="font-semibold text-gray-800">Not Recommended</dt><dd className="mt-1 text-gray-600">Important mismatches were detected.</dd></div>
+          {levels.map((level) => (
+            <div key={level}>
+              <dt className="font-semibold text-gray-900">{level}</dt>
+              <dd className="mt-1 text-gray-600">{LABEL_DESCRIPTIONS[level]}</dd>
+            </div>
+          ))}
         </dl>
       </div>
 

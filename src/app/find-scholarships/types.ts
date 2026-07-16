@@ -31,6 +31,8 @@ export type FinderState = {
 };
 
 export type RecommendationLevel =
+  | "Broad Match"
+  | "Potential Match"
   | "Highly Recommended"
   | "Good Match"
   | "Worth Checking"
@@ -40,6 +42,8 @@ export type FinderRecommendation = {
   scholarship: FinderScholarship;
   discovery: NormalizedScholarshipDiscovery;
   score: number;
+  normalizedScore: number;
+  dataConfidence: number;
   recommendationLevel: RecommendationLevel;
   matchedCriteria: string[];
   missingCriteria: string[];
@@ -47,3 +51,5 @@ export type FinderRecommendation = {
 };
 
 export type RecommendationCounts = Record<RecommendationLevel, number>;
+
+export type ProfileStrength = "Weak" | "Medium" | "Strong";

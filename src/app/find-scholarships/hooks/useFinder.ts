@@ -13,6 +13,10 @@ import type {
   RecommendationCounts,
   RecommendationLevel,
 } from "../types";
+import {
+  classifyRecommendations,
+  debugFinderRecommendations,
+} from "../lib/recommendations";
 import { trackFinderEvent } from "./analytics";
 
 const INITIAL_STATE: FinderState = {
@@ -25,27 +29,13 @@ const INITIAL_STATE: FinderState = {
 };
 
 const RECOMMENDATION_RANK: Record<RecommendationLevel, number> = {
+  "Broad Match": 4,
+  "Potential Match": 3,
   "Highly Recommended": 4,
   "Good Match": 3,
   "Worth Checking": 2,
   "Not Recommended": 1,
 };
-
-function getRecommendationLevel(match: {
-  score: number;
-  missingCriteria: string[];
-  warnings: string[];
-}): RecommendationLevel {
-  const unresolved = [...match.missingCriteria, ...match.warnings].some((item) => {
-    const value = item.toLowerCase();
-    return value.includes("unavailable") || value.includes("unknown") || value.includes("not verified");
-  });
-
-  if (match.score >= 82 && !unresolved) return "Highly Recommended";
-  if (match.score >= 65 && !unresolved) return "Good Match";
-  if (match.score >= 45 || unresolved) return "Worth Checking";
-  return "Not Recommended";
-}
 
 function confidenceRank(recommendation: FinderRecommendation) {
   if (recommendation.discovery.dataQuality === "Verified") return 3;
@@ -128,20 +118,19 @@ export function useFinder(
 
   const filters = useMemo(() => toFinderFilters(state), [state]);
 
-  const recommendations = useMemo(() => {
+  const classified = useMemo(() => {
     const matches = getMatchingScholarships(scholarships, filters);
-    return sortRecommendations(
-      matches.map((match) => ({
-        scholarship: match.scholarship,
-        discovery: match.discovery,
-        score: match.score,
-        recommendationLevel: getRecommendationLevel(match),
-        matchedCriteria: match.matchedCriteria,
-        missingCriteria: match.missingCriteria,
-        warnings: match.warnings,
-      })),
-    );
-  }, [filters, scholarships]);
+    return classifyRecommendations(matches, state);
+  }, [filters, scholarships, state]);
+
+  const recommendations = useMemo(
+    () => sortRecommendations(classified.recommendations),
+    [classified.recommendations],
+  );
+
+  useEffect(() => {
+    debugFinderRecommendations(recommendations, state);
+  }, [recommendations, state]);
 
   const visibleRecommendations = useMemo(
     () => recommendations.slice(0, 20),
@@ -154,6 +143,8 @@ export function useFinder(
       "Good Match": 0,
       "Worth Checking": 0,
       "Not Recommended": 0,
+      "Broad Match": 0,
+      "Potential Match": 0,
     };
 
     for (const recommendation of recommendations) {
@@ -178,6 +169,9 @@ export function useFinder(
       highlyRecommended: recommendationCounts["Highly Recommended"],
       goodMatch: recommendationCounts["Good Match"],
       worthChecking: recommendationCounts["Worth Checking"],
+      broadMatch: recommendationCounts["Broad Match"],
+      potentialMatch: recommendationCounts["Potential Match"],
+      profileStrength: classified.profileStrength,
     });
   };
 
@@ -191,5 +185,6 @@ export function useFinder(
     recommendations: visibleRecommendations,
     totalRecommendations: recommendations.length,
     recommendationCounts,
+    profileStrength: classified.profileStrength,
   };
 }

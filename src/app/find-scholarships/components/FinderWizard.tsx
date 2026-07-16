@@ -46,6 +46,7 @@ export default function FinderWizard({ scholarships, options }: Props) {
     recommendations,
     totalRecommendations,
     recommendationCounts,
+    profileStrength,
   } = useFinder(scholarships);
 
   const lastStep = STEP_LABELS.length - 1;
@@ -250,6 +251,7 @@ export default function FinderWizard({ scholarships, options }: Props) {
           recommendations={recommendations}
           totalRecommendations={totalRecommendations}
           recommendationCounts={recommendationCounts}
+          profileStrength={profileStrength}
         />
       ) : (
         <section className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6" aria-label="Finder completion status">

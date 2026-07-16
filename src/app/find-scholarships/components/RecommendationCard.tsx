@@ -3,6 +3,8 @@ import type { FinderRecommendation } from "../types";
 import { trackFinderEvent } from "../hooks/analytics";
 
 const BADGE_STYLES: Record<FinderRecommendation["recommendationLevel"], string> = {
+  "Broad Match": "border-blue-200 bg-blue-50 text-blue-900",
+  "Potential Match": "border-amber-200 bg-amber-50 text-amber-900",
   "Highly Recommended": "border-emerald-200 bg-emerald-50 text-emerald-900",
   "Good Match": "border-blue-200 bg-blue-50 text-blue-900",
   "Worth Checking": "border-amber-200 bg-amber-50 text-amber-900",
