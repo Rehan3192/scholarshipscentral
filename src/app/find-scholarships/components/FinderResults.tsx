@@ -52,20 +52,33 @@ export default function FinderResults({
 
   return (
     <section className="space-y-5" aria-labelledby="finder-results-heading">
-      <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-gray-900">
-        <h2 id="finder-results-heading" className="m-0 text-xl font-semibold">
-          <span aria-hidden="true">🎉 </span>
-          Your personalized scholarship recommendations are ready.
-        </h2>
-        <p className="mt-2 mb-0 text-sm">
-          {completionMessage(profileStrength, totalRecommendations, recommendationCounts)}
-        </p>
-        <ul className="mt-2 mb-0 space-y-1 text-sm">
-          {levels.map((level) => (
-            <li key={level}>{recommendationCounts[level]} {level}</li>
-          ))}
-        </ul>
-        <p className="mt-2 mb-0 text-sm font-medium">Scroll below to review them.</p>
+      <div className="grid gap-5 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-gray-900 sm:grid-cols-[minmax(0,1fr)_220px] sm:items-center">
+        <div>
+          <h2 id="finder-results-heading" className="m-0 text-xl font-semibold">
+            <span aria-hidden="true">🎉 </span>
+            Your personalized scholarship recommendations are ready.
+          </h2>
+          <p className="mt-2 mb-0 text-sm">
+            {completionMessage(profileStrength, totalRecommendations, recommendationCounts)}
+          </p>
+          <ul className="mt-2 mb-0 space-y-1 text-sm">
+            {levels.map((level) => (
+              <li key={level}>{recommendationCounts[level]} {level}</li>
+            ))}
+          </ul>
+          <p className="mt-2 mb-0 text-sm font-medium">Scroll below to review them.</p>
+        </div>
+        {/* This result-only asset stays native to avoid adding image-component code to the Finder client bundle. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/finder-results-ready.webp"
+          alt="Student celebrating a personalized scholarship shortlist"
+          width="960"
+          height="720"
+          loading="lazy"
+          decoding="async"
+          className="h-auto w-full rounded-xl"
+        />
       </div>
 
       <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">

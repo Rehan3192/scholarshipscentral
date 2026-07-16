@@ -462,6 +462,15 @@ export default function HomePage() {
           </Link>
         </div>
 
+        <Image
+          src="/scholarship-country-discovery.webp"
+          alt="International students exploring scholarship destinations around the world"
+          width={1200}
+          height={420}
+          sizes="(min-width: 1152px) 1120px, calc(100vw - 32px)"
+          className="h-auto w-full rounded-2xl border border-gray-200 bg-white"
+        />
+
         <div className="grid gap-4 sm:grid-cols-3">
           {FEATURED_COUNTRIES.map((country) => (
             <Link
