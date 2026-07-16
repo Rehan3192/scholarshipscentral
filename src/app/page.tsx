@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import ScholarshipFinderCTA from "@/components/blog/ScholarshipFinderCTA";
 import { scholarships } from "@/data/scholarships";
 import { FEATURED_HUB_PAGES } from "@/lib/featuredHubPages";
 import { toSegment } from "@/lib/helpers";
@@ -35,7 +34,6 @@ for (const s of scholarships) {
   COUNTRY_COUNTS.set(s.country, (COUNTRY_COUNTS.get(s.country) ?? 0) + 1);
 }
 
-const DEGREE_COUNT = new Set(scholarships.map((s) => s.degreeLevel)).size;
 const TOP_COUNTRIES = Array.from(COUNTRY_COUNTS.entries())
   .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
   .slice(0, 9)
@@ -46,20 +44,11 @@ const TOP_COUNTRIES = Array.from(COUNTRY_COUNTS.entries())
   }));
 const FEATURED_COUNTRIES = TOP_COUNTRIES.slice(0, 3);
 
-const QUICK_FILTERS = [
-  { label: "Masters", href: "/degrees/masters" },
-  { label: "Fully funded", href: "/funding/fully-funded" },
-  { label: "Still open", href: "/scholarships-still-open-2026" },
-  { label: "Without IELTS", href: "/europe-scholarships-without-ielts-2026" },
-  { label: "Germany", href: "/countries/germany" },
-  { label: "UK", href: "/countries/united-kingdom" },
-] as const;
-
 const TRUST_SIGNALS = [
   "Official links only",
-  "No application fees collected",
+  "Eligibility-based matching",
   "Updated regularly",
-  `${scholarships.length} verified listings`,
+  "No signup required",
 ] as const;
 
 const POPULAR_SEARCHES = [
@@ -238,35 +227,45 @@ export default function HomePage() {
             </p>
 
             <h1 className="mt-3 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-              Find scholarships worldwide, fast.
+              Find scholarships that match your profile.
             </h1>
 
             <p className="mt-4 max-w-2xl text-lg text-gray-700">
-              Browse scholarships by degree, country, and funding type. We only
-              redirect to official external application pages - no accounts, no
-              forms.
+              Get personalized recommendations based on your degree,
+              nationality, preferred destination, funding needs, and English
+              requirements.
             </p>
 
-            <div className="mt-5 flex flex-wrap gap-2">
-              {QUICK_FILTERS.map((filter) => (
-                <Link
-                  key={filter.href}
-                  href={filter.href}
-                  className="inline-flex items-center rounded-full border border-gray-300 bg-gray-50 px-3 py-1.5 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-                >
-                  {filter.label}
-                </Link>
-              ))}
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <Link
+                href="/find-scholarships"
+                className="inline-flex items-center rounded-lg bg-gray-900 px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+              >
+                Find Scholarships for Me <span aria-hidden="true">&rarr;</span>
+              </Link>
+              <Link
+                href="/scholarships"
+                className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-5 py-3 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+              >
+                Browse all scholarships
+              </Link>
             </div>
+
+            <p className="mt-3 mb-0 text-sm font-medium text-gray-600">
+              No signup required. Takes less than two minutes.
+            </p>
 
             <form
               action="/scholarships"
               method="get"
               role="search"
-              className="mt-6 max-w-xl"
+              className="mt-8 max-w-xl border-t border-gray-200 pt-5"
             >
-              <label htmlFor="home-search" className="sr-only">
-                Search scholarships and articles
+              <label
+                htmlFor="home-search"
+                className="mb-2 block text-sm font-semibold text-gray-900"
+              >
+                Already know what you’re looking for?
               </label>
               <div className="flex flex-col gap-2 sm:flex-row">
                 <input
@@ -283,96 +282,33 @@ export default function HomePage() {
                 </button>
               </div>
             </form>
-
-            <div className="mt-4 flex flex-wrap gap-3">
-              <Link
-                href="/scholarships"
-                className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
-              >
-                Browse all scholarships
-              </Link>
-              <Link
-                href="/funding/fully-funded"
-                className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-              >
-                Fully funded
-              </Link>
-              <Link
-                href="/scholarships-still-open-2026"
-                className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-              >
-                Still open 2026
-              </Link>
-              <Link
-                href="/europe-scholarships-2026"
-                className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-              >
-                Europe hub
-              </Link>
-              <Link
-                href="/fully-funded-scholarships-2026"
-                className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-              >
-                Fully funded 2026
-              </Link>
-            </div>
-
-            <p className="mt-5 mb-0 text-sm text-gray-600">
-              Currently listing{" "}
-              <span className="font-semibold text-gray-900">
-                {scholarships.length}
-              </span>{" "}
-              scholarships across{" "}
-              <span className="font-semibold text-gray-900">
-                {COUNTRY_COUNTS.size}
-              </span>{" "}
-              countries and{" "}
-              <span className="font-semibold text-gray-900">
-                {DEGREE_COUNT}
-              </span>{" "}
-              degree levels.
-            </p>
           </div>
 
           <aside className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
             <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
-              Directory snapshot
+              Personalized Finder
             </p>
-            <div className="grid grid-cols-2 gap-3">
-              <div>
-                <div className="text-2xl font-bold text-gray-900">
-                  {scholarships.length}
-                </div>
-                <div className="text-xs font-medium text-gray-600">
-                  listings
-                </div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-gray-900">
-                  {COUNTRY_COUNTS.size}
-                </div>
-                <div className="text-xs font-medium text-gray-600">
-                  countries
-                </div>
-              </div>
-            </div>
-
-            {CLOSING_SOON_SCHOLARSHIPS[0] ? (
-              <Link
-                href={`/scholarships/${CLOSING_SOON_SCHOLARSHIPS[0].slug}`}
-                className="mt-5 block rounded-xl border border-amber-200 bg-white p-4 transition-colors duration-200 motion-reduce:transition-none hover:bg-amber-50 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2"
-              >
-                <div className="text-xs font-semibold uppercase tracking-wide text-amber-800">
-                  Closing soon
-                </div>
-                <div className="mt-2 text-sm font-semibold text-gray-900">
-                  {CLOSING_SOON_SCHOLARSHIPS[0].title}
-                </div>
-                <div className="mt-2 text-xs font-semibold text-amber-900">
-                  {shortDeadlineLabel(CLOSING_SOON_SCHOLARSHIPS[0].deadline)}
-                </div>
-              </Link>
-            ) : null}
+            <h2 className="mt-2 text-xl font-semibold text-gray-900">
+              A shortlist you can understand
+            </h2>
+            <p className="mt-2 mb-0 text-sm leading-6 text-gray-700">
+              Answer six quick questions and receive ranked recommendations
+              with clear match reasons and details to verify before applying.
+            </p>
+            <ul className="mt-5 mb-0 space-y-3 text-sm text-gray-700">
+              <li className="flex gap-2">
+                <span aria-hidden="true" className="font-bold text-emerald-700">✓</span>
+                Matches your degree and destination preferences
+              </li>
+              <li className="flex gap-2">
+                <span aria-hidden="true" className="font-bold text-emerald-700">✓</span>
+                Considers funding and English requirements
+              </li>
+              <li className="flex gap-2">
+                <span aria-hidden="true" className="font-bold text-emerald-700">✓</span>
+                Links you to official scholarship sources
+              </li>
+            </ul>
           </aside>
         </div>
 
@@ -387,8 +323,6 @@ export default function HomePage() {
           ))}
         </div>
       </header>
-
-      <ScholarshipFinderCTA />
 
       <section className="space-y-3 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
