@@ -309,7 +309,7 @@ export default async function ScholarshipsPage({
       : TOP_ITEMS;
 
   return (
-    <div className="space-y-6">
+    <div className="flex flex-col gap-6">
       <BreadcrumbJsonLd
         items={[
           { label: "Home", href: "/" },
@@ -318,7 +318,7 @@ export default async function ScholarshipsPage({
       />
       <ItemListJsonLd pagePath="/scholarships" items={topItems} />
 
-      <header className="space-y-2">
+      <header className="order-1 space-y-2">
         <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
           All Scholarships
         </h1>
@@ -341,7 +341,7 @@ export default async function ScholarshipsPage({
         </div>
       </header>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
+      <section className="order-3 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="mt-0 text-base font-semibold text-gray-900">
             Quick filters
@@ -386,7 +386,7 @@ export default async function ScholarshipsPage({
         </div>
       </section>
 
-      <div className="grid gap-6 lg:grid-cols-[280px_1fr]">
+      <div className="order-4 grid gap-6 lg:grid-cols-[280px_1fr]">
         <aside className="h-fit rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
             Filter scholarships
@@ -664,7 +664,10 @@ export default async function ScholarshipsPage({
       </div>
 
       {normalizedQuery ? (
-        <section className="space-y-4" aria-labelledby="article-search-results">
+        <section
+          className="order-2 space-y-4"
+          aria-labelledby="article-search-results"
+        >
           <div className="flex flex-wrap items-end justify-between gap-2">
             <div>
               <h2

@@ -265,13 +265,13 @@ export default function HomePage() {
               className="mt-6 max-w-xl"
             >
               <label htmlFor="home-search" className="sr-only">
-                Search scholarships
+                Search scholarships and articles
               </label>
               <div className="flex flex-col gap-2 sm:flex-row">
                 <input
                   id="home-search"
                   name="q"
-                  placeholder="Search by title, country, provider..."
+                  placeholder="Search scholarships and articles..."
                   className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600"
                 />
                 <button

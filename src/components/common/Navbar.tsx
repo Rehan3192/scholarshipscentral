@@ -272,13 +272,13 @@ export default function Navbar() {
             role="search"
           >
             <label htmlFor="nav-search" className="sr-only">
-              Search scholarships
+              Search scholarships and articles
             </label>
             <div className="flex w-full items-center gap-1.5 rounded-xl border border-gray-300 bg-white p-0.5 focus-within:ring-2 focus-within:ring-blue-600 focus-within:ring-offset-2 sm:w-auto sm:gap-2 sm:p-1">
               <input
                 id="nav-search"
                 name="q"
-                placeholder="Search scholarships..."
+                placeholder="Search scholarships and articles..."
                 className="w-full bg-transparent px-2.5 py-1.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none sm:w-72 sm:px-3 sm:py-2"
               />
               <button
