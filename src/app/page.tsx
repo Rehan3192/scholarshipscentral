@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { scholarships } from "@/data/scholarships";
@@ -288,27 +289,22 @@ export default function HomePage() {
             <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
               Personalized Finder
             </p>
-            <h2 className="mt-2 text-xl font-semibold text-gray-900">
+            <Image
+              src="/scholarship-finder-hero.webp"
+              alt="Student reviewing personalized scholarship recommendations"
+              width={960}
+              height={720}
+              priority
+              sizes="(min-width: 1024px) 280px, (min-width: 640px) 50vw, 100vw"
+              className="mt-3 h-auto w-full rounded-xl"
+            />
+            <h2 className="mt-4 text-xl font-semibold text-gray-900">
               A shortlist you can understand
             </h2>
             <p className="mt-2 mb-0 text-sm leading-6 text-gray-700">
               Answer six quick questions and receive ranked recommendations
               with clear match reasons and details to verify before applying.
             </p>
-            <ul className="mt-5 mb-0 space-y-3 text-sm text-gray-700">
-              <li className="flex gap-2">
-                <span aria-hidden="true" className="font-bold text-emerald-700">✓</span>
-                Matches your degree and destination preferences
-              </li>
-              <li className="flex gap-2">
-                <span aria-hidden="true" className="font-bold text-emerald-700">✓</span>
-                Considers funding and English requirements
-              </li>
-              <li className="flex gap-2">
-                <span aria-hidden="true" className="font-bold text-emerald-700">✓</span>
-                Links you to official scholarship sources
-              </li>
-            </ul>
           </aside>
         </div>
 
