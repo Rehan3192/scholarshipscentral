@@ -43,6 +43,7 @@ export default function FinderWizard({ scholarships, options }: Props) {
     setStep,
     isComplete,
     completeFinder,
+    resetFinder,
     recommendations,
     totalRecommendations,
     recommendationCounts,
@@ -126,6 +127,14 @@ export default function FinderWizard({ scholarships, options }: Props) {
       stepName: STEP_LABELS[step],
     });
     completeFinder();
+  };
+
+  const handleReset = () => {
+    resetFinder();
+    window.history.replaceState(null, "", window.location.pathname);
+    window.requestAnimationFrame(() => {
+      document.getElementById(STEP_HEADING_IDS[0])?.focus();
+    });
   };
 
   return (
@@ -220,25 +229,34 @@ export default function FinderWizard({ scholarships, options }: Props) {
           >
             Previous
           </button>
-          {step < lastStep ? (
+          <div className="flex flex-wrap items-center gap-3">
             <button
               type="button"
-              onClick={goToNextStep}
-              disabled={!canContinue}
-              className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+              onClick={handleReset}
+              className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
             >
-              Next
+              Reset
             </button>
-          ) : (
-            <button
-              type="button"
-              onClick={finishFinder}
-              disabled={!canFinish}
-              className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
-            >
-              Show My Recommendations
-            </button>
-          )}
+            {step < lastStep ? (
+              <button
+                type="button"
+                onClick={goToNextStep}
+                disabled={!canContinue}
+                className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+              >
+                Next
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={finishFinder}
+                disabled={!canFinish}
+                className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+              >
+                Show My Recommendations
+              </button>
+            )}
+          </div>
         </div>
       </section>
 

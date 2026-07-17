@@ -175,6 +175,13 @@ export function useFinder(
     });
   };
 
+  const resetFinder = () => {
+    setState(INITIAL_STATE);
+    setStep(0);
+    setIsComplete(false);
+    trackFinderEvent("finder_reset");
+  };
+
   return {
     state,
     setState: updateState,
@@ -182,6 +189,7 @@ export function useFinder(
     setStep,
     isComplete,
     completeFinder,
+    resetFinder,
     recommendations: visibleRecommendations,
     totalRecommendations: recommendations.length,
     recommendationCounts,

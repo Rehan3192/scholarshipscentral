@@ -3,6 +3,7 @@
 export type FinderAnalyticsEvent =
   | "finder_started"
   | "finder_step_completed"
+  | "finder_reset"
   | "finder_completed"
   | "finder_results_generated"
   | "finder_scholarship_clicked";
