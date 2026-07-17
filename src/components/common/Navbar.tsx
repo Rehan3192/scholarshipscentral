@@ -43,6 +43,7 @@ function NavDropdown({
   canHoverOpen,
   cancelClose,
   scheduleClose,
+  onNavigate,
 }: {
   id: MenuId;
   label: string;
@@ -52,6 +53,7 @@ function NavDropdown({
   canHoverOpen: boolean;
   cancelClose: () => void;
   scheduleClose: () => void;
+  onNavigate?: () => void;
 }) {
   const isOpen = openMenu === id;
 
@@ -112,7 +114,10 @@ function NavDropdown({
               key={`${id}:${item.href}`}
               href={item.href}
               role="menuitem"
-              onClick={() => setOpenMenu(null)}
+              onClick={() => {
+                setOpenMenu(null);
+                onNavigate?.();
+              }}
               className="block rounded-lg px-3 py-2 text-sm text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
             >
               <span className="font-semibold">{item.label}</span>
@@ -131,9 +136,11 @@ function NavDropdown({
 
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState<MenuId | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const openMenuRef = useRef<MenuId | null>(null);
   const closeTimerRef = useRef<number | null>(null);
   const navRef = useRef<HTMLElement | null>(null);
+  const mobileMenuButtonRef = useRef<HTMLButtonElement | null>(null);
 
   const [canHoverOpen, setCanHoverOpen] = useState(false);
 
@@ -194,14 +201,19 @@ export default function Navbar() {
 
   // Close on Escape.
   useEffect(() => {
-    if (!openMenu) return;
+    if (!openMenu && !isMobileMenuOpen) return;
 
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpenMenu(null);
+      if (event.key !== "Escape") return;
+      setOpenMenu(null);
+      if (isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+        mobileMenuButtonRef.current?.focus();
+      }
     };
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
-  }, [openMenu]);
+  }, [isMobileMenuOpen, openMenu]);
 
   // Hide on scroll down, show on scroll up.
   useEffect(() => {
@@ -251,20 +263,37 @@ export default function Navbar() {
         aria-label="Primary"
       >
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-base font-extrabold tracking-tight text-gray-900 sm:text-lg"
-          >
-            <Image
-              src="/logo-mark.svg"
-              alt=""
-              aria-hidden="true"
-              width={24}
-              height={24}
-              className="h-6 w-6 rounded-md"
-            />
-            <span>Scholarships Central</span>
-          </Link>
+          <div className="flex items-center justify-between gap-3">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-base font-extrabold tracking-tight text-gray-900 sm:text-lg"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Image
+                src="/logo-mark.svg"
+                alt=""
+                aria-hidden="true"
+                width={24}
+                height={24}
+                className="h-6 w-6 rounded-md"
+              />
+              <span>Scholarships Central</span>
+            </Link>
+
+            <button
+              ref={mobileMenuButtonRef}
+              type="button"
+              className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:hidden"
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="primary-navigation-links"
+              onClick={() => {
+                setOpenMenu(null);
+                setIsMobileMenuOpen((open) => !open);
+              }}
+            >
+              {isMobileMenuOpen ? "Close" : "Menu"}
+            </button>
+          </div>
 
           <form
             action="/scholarships"
@@ -292,28 +321,38 @@ export default function Navbar() {
           </form>
         </div>
 
-        <div className="mt-2 flex flex-wrap items-center gap-1.5 text-sm text-gray-700 sm:mt-3 sm:gap-2">
+        <div
+          id="primary-navigation-links"
+          className={[
+            "mt-2 flex-wrap items-center gap-1.5 text-sm text-gray-700 sm:mt-3 sm:flex sm:gap-2",
+            isMobileMenuOpen ? "flex" : "hidden",
+          ].join(" ")}
+        >
           <Link
             href="/scholarships"
             className={pillClassName}
+            onClick={() => setIsMobileMenuOpen(false)}
           >
             Scholarships
           </Link>
           <Link
             href="/find-scholarships"
             className={pillClassName}
+            onClick={() => setIsMobileMenuOpen(false)}
           >
             Finder
           </Link>
           <Link
             href="/blog"
             className={pillClassName}
+            onClick={() => setIsMobileMenuOpen(false)}
           >
             Blog
           </Link>
           <Link
             href="/scholarship-results-2026"
             className={pillClassName}
+            onClick={() => setIsMobileMenuOpen(false)}
           >
             Results
           </Link>
@@ -335,6 +374,7 @@ export default function Navbar() {
             canHoverOpen={canHoverOpen}
             cancelClose={cancelClose}
             scheduleClose={scheduleClose}
+            onNavigate={() => setIsMobileMenuOpen(false)}
           />
           <NavDropdown
             id="degrees"
@@ -354,6 +394,7 @@ export default function Navbar() {
             canHoverOpen={canHoverOpen}
             cancelClose={cancelClose}
             scheduleClose={scheduleClose}
+            onNavigate={() => setIsMobileMenuOpen(false)}
           />
           <NavDropdown
             id="funding"
@@ -372,10 +413,12 @@ export default function Navbar() {
             canHoverOpen={canHoverOpen}
             cancelClose={cancelClose}
             scheduleClose={scheduleClose}
+            onNavigate={() => setIsMobileMenuOpen(false)}
           />
           <Link
             href="/contact"
             className={pillClassName}
+            onClick={() => setIsMobileMenuOpen(false)}
           >
             Contact
           </Link>
