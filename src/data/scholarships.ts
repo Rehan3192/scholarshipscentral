@@ -3,6 +3,140 @@
 import type { Scholarship, ScholarshipContentSection } from "./types";
 import { ensureInAllowedSets } from "./values";
 
+type OpenDoorsTrack = "Bachelor's" | "Master's" | "Doctoral";
+
+function openDoorsReaderSections(track: OpenDoorsTrack): ScholarshipContentSection[] {
+  const isDoctoral = track === "Doctoral";
+  const requiredEducation =
+    track === "Bachelor's"
+      ? "secondary education completed, or due to be completed, before enrollment"
+      : track === "Master's"
+        ? "a Bachelor's degree completed, or due to be completed, before enrollment"
+        : "a Master's or Specialist degree completed, or due to be completed, before enrollment";
+
+  return [
+    {
+      title: "Scholarship at a glance",
+      facts: [
+        { label: "Track", value: `${track} track` },
+        { label: "Application format", value: "Free and fully online" },
+        { label: "2026 portfolio deadline", value: "November 1, 2026" },
+        { label: "Main award", value: "Tuition-free study under the Russian government quota" },
+        { label: "Living and travel costs", value: "Not guaranteed by the Open Doors award" },
+        { label: "Study language", value: "Russian or English, depending on the programme" },
+        { label: "Entrance examination", value: "Winners and prize-winners receive the stated admission advantage" },
+        { label: "Required education", value: requiredEducation },
+      ],
+      paragraphs: [
+        `The Open Doors ${track} track is an international online competition, not a conventional application in which every complete file receives funding. Applicants compete within a subject area through a portfolio and a proctored task stage.${isDoctoral ? " Doctoral candidates who advance also complete interviews with prospective research supervisors." : " Winners and prize-winners are then directed through the admission process for eligible programmes."}`,
+        "The award is best described as tuition-free study rather than a complete living-cost scholarship. The official project promotes free tuition and, when required, a preparatory Russian-language year. It does not promise that airfare, accommodation, food, insurance, visa costs, document legalisation, or monthly living expenses will be paid for every winner.",
+      ],
+    },
+    {
+      title: "What winning Open Doors provides",
+      paragraphs: [
+        "Winners and prize-winners can use the Open Doors result to pursue eligible admission at participating Russian universities under the government quota and without the normal entrance examinations described by the project. The available university and programme choices depend on the selected subject area, track, result status, capacity, and later admission instructions.",
+        "Students choosing a Russian-taught degree may receive a tuition-free preparatory Russian-language year when required. English-taught options exist in some subject areas and universities, but applicants should not assume that every programme listed by a university is available in English or available through Open Doors during the same cycle.",
+        "Tuition-free status does not eliminate the need for a realistic budget. Before accepting a place, check dormitory charges, food, local transport, medical insurance, visa and migration expenses, document translation and legalisation, winter clothing, travel to Russia, and emergency funds. The host university should confirm whether any separate institutional stipend or dormitory support applies.",
+      ],
+    },
+    {
+      title: "How the online competition works",
+      ordered: [
+        "Create one account on the official Open Doors platform and select the correct academic track.",
+        "Choose a subject area that matches your previous education and intended degree rather than selecting only by university name.",
+        "Complete the entrance test and portfolio before the November 1, 2026 deadline; the portfolio cannot be edited after submission closes.",
+        "Wait for portfolio grading and check the result in the personal account. Only qualifying participants continue.",
+        "Register for and complete the second-stage tasks during the assigned session under online proctoring. Participation is mandatory for a winning result.",
+        ...(isDoctoral
+          ? ["If invited to the third stage, choose suitable prospective supervisors and complete the required online research interviews before final doctoral results."]
+          : ["Review the published winner or prize-winner result and follow the platform's university and programme selection instructions."]),
+        "After selection, complete the Russian government quota and university admission steps, supply final education documents, and follow visa and enrollment instructions.",
+      ],
+      paragraphs: [
+        "The second stage is not a casual questionnaire. Official guidance describes tasks of different types and difficulty completed within a three-hour proctored session. Applicants should study the published subject-area programme and sample tasks, test their camera and internet connection, and read the identification rules before the scheduled session.",
+      ],
+    },
+    {
+      title: "Documents and portfolio preparation",
+      bullets: [
+        "Passport or accepted identity information matching the account",
+        `Evidence of ${requiredEducation}`,
+        "Academic transcript or grade record",
+        "Portfolio evidence relevant to the selected subject area",
+        "Translations and later legalisation or recognition documents required for Russian enrollment",
+        "A clear account profile using consistent names, dates, and contact details",
+        ...(isDoctoral
+          ? ["Research interests and evidence that help prospective supervisors assess doctoral fit"]
+          : ["Academic achievements, projects, competitions, research, employment, or activities that can be verified"]),
+      ],
+      paragraphs: [
+        "The competition portfolio and the later university enrollment file are not necessarily identical. A participant may be allowed to enter the competition with provisional education evidence but still need final diplomas, certified translations, medical documents, and other formal records after winning. Follow the personal-account instructions rather than assuming the initial upload completes admission.",
+        "Portfolio quality depends on relevance and evidence. Upload achievements that support the chosen subject area and describe them accurately. Do not inflate participation into an award or submit material that cannot be verified. The automated portfolio estimate can help applicants understand the approximate score, but it is not an official result.",
+      ],
+    },
+    {
+      title: "Tests, language, camera, and interview requirements",
+      paragraphs: [
+        "Open Doors does not publish one universal IELTS or TOEFL requirement for every programme. Competition participation is available in Russian and English, while the eventual language of instruction depends on the selected university programme. A university may request proof of language ability during admission even when the competition itself did not require IELTS.",
+        "The second-stage task session uses identification and online proctoring. Applicants therefore need a suitable computer, reliable connection, working camera and microphone, quiet room, and an identity document. Attempts to obtain outside help or break the proctoring rules can invalidate the result.",
+        isDoctoral
+          ? "Doctoral applicants face an additional human evaluation. They can schedule interviews with up to three prospective research supervisors whose interests fit their proposed work. The conversation is used to judge subject knowledge, research readiness, fit, and the feasibility of supervision; it is not a faceless or written-only selection."
+          : "The Bachelor's and Master's tracks normally conclude after portfolio review and the proctored second stage. They do not use the doctoral supervisor-interview stage, although a university can still request additional information while processing final admission.",
+      ],
+    },
+    {
+      title: "Choosing a subject area and university",
+      paragraphs: [
+        `Open Doors is organised by broad subject areas, while enrollment eventually happens in a specific ${track.toLowerCase()} programme. Begin with the official subject-area page and read its academic programme, participating universities, degree options, and sample tasks. A university appearing in Open Doors does not mean that every degree offered by that university is available through every subject area.`,
+        "Choose the subject area that best matches both your qualifying education and the knowledge tested in stage two. Applicants who select an unrelated area because it contains a famous university may struggle to document portfolio relevance or complete the advanced tasks. Compare curricula, programme codes, teaching language, research strengths, location, and later career fit before ranking choices.",
+        isDoctoral
+          ? "For doctoral study, supervisor fit is more important than a general university ranking. Read the prospective supervisor's current research, publications, laboratory resources, and proposed topics. Prepare to explain the research problem you want to study, the methods or knowledge you already possess, and why that supervisor can support the project. A successful interview still requires later agreement on the doctoral specialization and formal enrollment."
+          : "For taught degrees, check whether the programme is delivered fully in English, partly in Russian, or only in Russian. Also examine the city and university's dormitory information and realistic monthly costs. The best option is one that is academically suitable and financially sustainable, not simply the institution with the most familiar name.",
+      ],
+    },
+    {
+      title: "What happens after winning",
+      paragraphs: [
+        "A published winner or prize-winner result begins the admission phase; it is not permission to travel immediately. Follow the personal-account instructions for programme selection and the Russian government quota application. The receiving university may request final diplomas, transcripts, certified Russian translations, document legalisation or recognition, medical records, photographs, and passport copies in a prescribed format.",
+        "Confirm the immigration process with the university. International students commonly need a university invitation, the correct study visa, valid medical insurance, migration registration after arrival, and medical checks or certificates required by current law. Requirements depend on citizenship and can change, so instructions issued by the university and Russian authorities control this stage.",
+        "Ask the university for a written breakdown of costs before accepting. Important questions include whether dormitory space is guaranteed, the monthly dormitory charge, the estimated food and transport budget, when students may arrive, whether a preparatory year is required, and whether any separate institutional stipend is available. Do not rely on the word scholarship as proof that these expenses are paid.",
+        "Keep names and document details consistent across Open Doors, quota, university, and visa systems. Differences in transliteration, passport numbers, graduation dates, or programme names can delay processing. Respond quickly to requests, retain copies of every upload and confirmation, and do not resign from work or purchase non-refundable travel until the university confirms admission and visa documentation.",
+      ],
+    },
+    {
+      title: "Common problems applicants should avoid",
+      bullets: [
+        "Calling the award fully funded without explaining that living costs and travel are not universally covered",
+        "Choosing the wrong track or a subject area unrelated to the qualifying education",
+        "Missing the portfolio deadline because the account was created but the portfolio was not submitted",
+        "Assuming a high automated portfolio estimate guarantees advancement",
+        "Skipping the mandatory second-stage registration or proctored task session",
+        "Using a phone for a process that requires stable proctoring and detailed portfolio uploads",
+        "Ignoring whether the preferred degree is taught in Russian or English",
+        "Assuming the Open Doors result completes visa, quota, document-recognition, and university enrollment procedures",
+        "Budgeting only for tuition and overlooking accommodation, insurance, travel, and daily living costs",
+        ...(isDoctoral
+          ? ["Selecting supervisors only by university reputation instead of research alignment"]
+          : ["Selecting universities before checking whether the relevant programme appears under the chosen subject area"]),
+      ],
+    },
+    {
+      title: "Final application checklist",
+      ordered: [
+        `Confirm that you meet the ${track} track's education requirement.`,
+        "Read the current official rules and 2026 schedule in full.",
+        "Choose the subject area and inspect its programme, universities, and sample second-stage tasks.",
+        "Create the account with passport-consistent personal information.",
+        "Complete the entrance test and upload a relevant, verifiable portfolio before November 1, 2026.",
+        "Prepare the computer, camera, microphone, identification, and connection required for proctoring.",
+        "Complete every mandatory competition stage and monitor the personal account for results and appeals.",
+        "After winning, confirm programme language, total living costs, documents, quota processing, visa requirements, and enrollment deadlines with the assigned university.",
+      ],
+    },
+  ];
+}
+
 const rawScholarships: Scholarship[] = [
   {
     slug: "honjo-international-scholarship-2027-japan",
@@ -241,194 +375,451 @@ const rawScholarships: Scholarship[] = [
   },
   {
     slug: "daad-postgraduate-scholarship-germany",
-
-    title: "DAAD Postgraduate Scholarship in Germany",
+    title: "DAAD Study Scholarship 2027/28 for Master's Study in Germany",
+    seoTitle: "DAAD Master's Scholarship 2027/28 in Germany",
+    metaDescription:
+      "DAAD Study Scholarships fund eligible Master's study in Germany for 2027/28. Check the €992 stipend, country-specific deadline, documents, and rules.",
+    keywords: [
+      "DAAD scholarship 2027",
+      "DAAD Master's scholarship Germany",
+      "Study Scholarships Master Studies all disciplines",
+      "DAAD 992 euro stipend",
+    ],
     overview:
-      "The DAAD Postgraduate Scholarship is a fully funded opportunity for international students to pursue a Master's degree in Germany.",
-
+      "The DAAD Study Scholarships – Master Studies for All Academic Disciplines programme supports eligible graduates pursuing a full Master's degree in Germany or an eligible study year in Germany. Applications for 2027/28 are open from June, but the exact 2026 deadline and country eligibility must be checked using the applicant's location in the official DAAD database.",
+    introduction:
+      "This is not a single October 15 scholarship and it does not pay university tuition fees. DAAD lists country-dependent deadlines and provides a €992 monthly scholarship payment, insurance contributions, travel support on application, and a €460 annual study allowance for eligible 2027/28 applicants.",
+    summary:
+      "For eligible Master's study beginning in 2027, with 10 to 24 months of support. Applicants need a first degree, an eligible new study plan in Germany, language evidence for the chosen course, and a separate university admission application.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "Official programme", value: "DAAD Study Scholarships – Master Studies for All Academic Disciplines" },
+          { label: "Study destination", value: "State or state-recognised universities in Germany" },
+          { label: "Funding start", value: "Winter semester 2027/28" },
+          { label: "Monthly payment", value: "€992" },
+          { label: "Funding duration", value: "10 to 24 months" },
+          { label: "Application period", value: "From June to the deadline shown for the applicant's country" },
+          { label: "University application", value: "Required separately" },
+          { label: "Tuition coverage", value: "Not covered by DAAD" },
+        ],
+        paragraphs: [
+          "The first decision is whether this is the correct DAAD programme for your study plan. It is intended for graduates beginning a new postgraduate or Master's course in Germany, or for an eligible year of German study that forms part of a Master's degree based outside Germany. It is not the DAAD EPOS programme, a doctoral research grant, or one of the separate scholarships for architecture, music, performing arts, fine art, design, film, or visual communication.",
+          "The official database changes its deadline and sometimes its availability after you select your applicant country. For that reason, a deadline copied from another country is not reliable evidence that you can apply on the same date. Open the official record, select the country where you live and apply, and save the resulting programme details before preparing documents.",
+        ],
+      },
+      {
+        title: "What this DAAD scholarship really funds",
+        paragraphs: [
+          "The €992 monthly scholarship payment is intended to support living costs during the approved study period. DAAD also lists contributions toward health, accident, and personal liability insurance, an annual €460 study allowance, and a travel allowance when the applicant meets the relevant conditions and applies for it. These benefits make the award substantial, but the phrase fully funded should not be interpreted as a promise that every possible cost will be paid.",
+          "DAAD explicitly states that it does not pay tuition fees under this programme. Many public universities in Germany charge no general tuition for standard programmes, but exceptions exist, and students can still face semester contributions, programme fees, or tuition imposed by a university or federal state. Check the exact fee page of every proposed Master's programme before deciding that the scholarship will cover the complete cost of attendance.",
+          "Additional benefits are conditional rather than automatic. After funding begins, some scholars may qualify for rent support, an allowance for accompanying family members, disability- or chronic-illness-related costs, or green-mobility support. DAAD decides these benefits under its current scholarship rules, so applicants should budget using the guaranteed programme value and treat conditional support separately.",
+          "Language preparation can include an online course after the award letter, a DAAD-selected German course before study, an allowance for a personally chosen German course, or reimbursement for an eligible TestDaF or DSH examination. DAAD decides whether a pre-study German course is necessary and how long it will last. Participation becomes compulsory when DAAD funds such a course for a German-taught degree.",
+        ],
+      },
+      {
+        title: "Which Master's programmes can be supported",
+        paragraphs: [
+          "Applicants can propose a complete postgraduate or Master's degree at a state or state-recognised German university. They can alternatively propose one year in Germany as part of a second degree or Master's programme at a university outside Germany, provided the home university recognises the German credits and the exchange does not extend the normal duration of the home degree.",
+          "Funding is only for a programme beginning in the relevant future winter semester. A Master's degree that has already started in Germany is not eligible under this call. This distinction is important for students who are already enrolled and hope to convert an existing degree into a DAAD-funded programme.",
+          "The general all-disciplines programme does not cover every creative subject through the same call. Architecture, fine art, design, visual communication, film, performing arts, and music have separate DAAD postgraduate scholarship programmes with their own portfolios, deadlines, and evaluation methods. Applicants in those areas should use the official database to locate the correct specialised call instead of applying through this record.",
+          "A study or work period outside Germany can only receive funding under limited conditions. It must be necessary for the degree, must not take place in the applicant's home country, and is normally limited to one quarter of the scholarship period. Joint and double-degree programmes may permit a longer proportion when it is formally required by the study regulations, but the applicant should verify this before choosing the programme.",
+        ],
+      },
+      {
+        title: "Language tests and university admission",
+        paragraphs: [
+          "There is no single IELTS rule for every DAAD applicant. The required evidence follows the language of instruction of the proposed degree. For an English-taught programme, DAAD lists examples including IELTS, TOEFL, Cambridge English, PTE Academic, TOEIC, Duolingo English Test, ISE, and onSET English. The university may accept a narrower set or require a specific minimum score, so both sets of rules must be satisfied.",
+          "For German-taught study, commonly accepted evidence can include TestDaF, DSH, Goethe-Zertifikat, DSD, telc Deutsch, the Austrian German Language Diploma, or onSET Deutsch. Applicants to non-German programmes may still need to submit a German-language certificate or the permitted informal declaration stating that they have no German knowledge. The country-specific DAAD application instructions control the exact evidence.",
+          "A DAAD application and a German university application are separate processes. Applicants are responsible for researching university admission requirements and meeting every university deadline. If the admission letter is unavailable when the scholarship application closes, DAAD may allow it to be submitted later, but it must arrive before the funding period begins. The award letter is only valid when the applicant is admitted to the host university named in the scholarship application.",
+        ],
+      },
+      {
+        title: "How DAAD evaluates the application",
+        paragraphs: [
+          "An independent committee of academic specialists evaluates applications. Strong grades matter, but DAAD does not describe the process as a grade-only competition. Reviewers consider academic performance, the previous course of study, language ability, relevant internships or professional experience, and the quality of the proposed Master's plan.",
+          "The study project should show that the applicant has researched suitable programmes, understands the host university, and can explain how the German degree fits into a coherent academic and professional path. A generic motivation letter that praises Germany without explaining programme choice is unlikely to answer these criteria well.",
+          "The committee also considers future potential, personal and academic motivation, the importance of the stay for professional development, extracurricular abilities, and social engagement. Equal-opportunity circumstances can be considered through the relevant part of the application. Applicants should provide context honestly rather than assuming that only conventional academic achievements belong in the file.",
+        ],
+      },
+      {
+        title: "Problems applicants commonly face",
+        bullets: [
+          "Using a deadline found on a blog without selecting the correct applicant country in the DAAD database",
+          "Applying to the general all-disciplines call when a separate architecture or artistic-discipline scholarship is required",
+          "Assuming that DAAD will apply to the German university on the applicant's behalf",
+          "Calling the award tuition-funded even though the official programme says tuition is not covered",
+          "Selecting a Master's programme that has already begun in Germany",
+          "Uploading a language certificate accepted by DAAD but not accepted by the chosen university, or the reverse",
+          "Forgetting the additional German certificate or no-German declaration for an English-taught programme",
+          "Submitting untranslated documents or translations without the corresponding original-language document",
+          "Writing a motivation letter that does not explain the selected programmes and their relationship to the applicant's goals",
+          "Waiting until the final day even though the portal closes at midnight Central European time and incomplete applications are rejected",
+        ],
+        paragraphs: [
+          "DAAD states that its application portal is only available while the call is open and that mobile use is limited. Prepare PDFs in advance and use a desktop computer where possible. Keep a copy of the country-specific call because deadlines and instructions are updated annually.",
+        ],
+      },
+      {
+        title: "Final application checklist",
+        ordered: [
+          "Select your applicant country and status in the official DAAD database and confirm that programme 50026200 appears.",
+          "Verify the exact country-specific deadline, funding start, and additional document rules.",
+          "Choose eligible Master's programmes that have not already begun in Germany and compare their tuition, semester charges, admission deadlines, and language rules.",
+          "Prepare the three-page maximum tabular CV and a specific one-to-three-page motivation letter.",
+          "Collect transcripts, degree evidence, language certificates, and German or English translations attached to the originals.",
+          "Complete the preferred-programmes form and obtain one detailed university-teacher recommendation using the DAAD process.",
+          "Submit the complete DAAD portal application before the displayed deadline and retain the confirmation.",
+          "Submit every separate university application and provide the final admission letter before funding begins.",
+        ],
+      },
+    ],
     country: "Germany",
+    continent: "Europe",
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
-
-    deadline: "October 15",
-    duration: "12-24 months",
-
+    tags: ["Germany", "Masters", "DAAD", "International students", "Open"],
+    deadline: "Varies by applicant country (2026 deadline for 2027/28 funding)",
+    duration: "10-24 months",
     eligibility: [
-      "International students from eligible countries",
-      "Bachelor's degree completed",
-      "Strong academic background",
+      "Applicant location: The DAAD database must show this programme for the country from which you are applying",
+      "Academic qualification: A first university degree such as a Bachelor's or Diplom must be completed by the start of funding",
+      "Degree recency: As a rule, the most recent university degree should be no more than six years old at the application deadline",
+      "Study plan: A complete Master's degree at a state or state-recognised German university, or one eligible study year in Germany as part of a Master's degree abroad",
+      "Previous enrollment: Funding is not available for a Master's programme that has already begun in Germany",
+      "Residence: Applicants normally cannot have lived in Germany for more than 15 months by the deadline",
+      "Language: Proof of the chosen programme's language of instruction is required; accepted evidence depends on whether the programme uses German, English, or both",
+      "University admission: The applicant must apply separately and receive admission before funding begins",
     ],
-
     benefits: [
-      "Full tuition fee coverage",
-      "Monthly stipend",
-      "Health insurance",
-      "Travel allowance",
+      "Monthly scholarship payment: €992",
+      "Insurance: Contributions toward health, accident, and personal liability insurance",
+      "Travel: DAAD travel allowance when applicable and requested",
+      "Study allowance: €460 per year",
+      "Language preparation: Eligible online or in-person German courses and certain language-test costs",
+      "Possible additional support: Rent subsidy, family allowance, disability-related support, and green-mobility support in qualifying circumstances",
+      "Tuition: DAAD explicitly states that this programme does not cover tuition fees",
     ],
-
     applicationProcess: [
-      "Select an eligible Master's program",
-      "Prepare required documents",
-      "Apply through the DAAD portal",
-      "Submit before the deadline",
+      "Set your applicant status and country in the DAAD scholarship database and confirm that programme 50026200 is available to you",
+      "Choose an eligible Master's programme and check its admission, enrollment, language, and tuition requirements",
+      "Register in the DAAD portal while the country-specific application window is open",
+      "Generate the DAAD recommendation form and ask an eligible university teacher to complete it",
+      "Upload the complete application and translations as PDFs before the deadline shown for your applicant country",
+      "Apply separately to the German university and submit the admission letter before funding begins if it was unavailable at the DAAD deadline",
     ],
-
     documents: [
-      "Academic transcripts",
-      "Curriculum Vitae (CV)",
-      "Motivation letter",
-      "Language proficiency certificate",
+      "DAAD online application form",
+      "Tabular curriculum vitae of no more than three pages",
+      "Motivation letter explaining academic and personal reasons for the study project, normally one to three pages",
+      "DAAD form describing preferred Master's programmes",
+      "Current transcript showing individual grades",
+      "University degree certificate with final grades, or submission before funding begins when the degree is incomplete",
+      "Proof of the language of instruction, normally no more than three years old",
+      "One supporting recommendation from a university teacher",
+      "German or English translations attached to documents issued in another language",
+      "German-language certificate or the permitted informal no-German declaration when the programme is taught in another language",
     ],
-
-    applyUrl: "https://www.daad.de/en/",
+    selectionCriteria: [
+      "Academic achievement and the quality of the previous course of study",
+      "Language ability relevant to the planned programme",
+      "Quality and preparation of the study project in Germany",
+      "Fit between the project and the applicant's academic career",
+      "Academic and personal motivation and future development potential",
+      "Relevant internships, work experience, extracurricular skills, and social commitment where applicable",
+    ],
+    goodToKnow: [
+      "The deadline is not universal: it changes by applicant country and is updated annually",
+      "The scholarship portal may be difficult to use on mobile; DAAD recommends a desktop computer",
+      "A DAAD award is valid only if the applicant is admitted to the German university named in the application",
+      "Incomplete applications cannot be considered, and the portal closes at midnight Central European time on the stated deadline",
+      "Funding normally begins in the 2027 winter semester and cannot support a Master's degree already started in Germany",
+    ],
+    faqs: [
+      {
+        question: "Does the DAAD Master's scholarship pay tuition fees?",
+        answer: "No. The official programme states that DAAD does not cover tuition fees. Applicants must check the chosen university for any tuition or semester charges.",
+      },
+      {
+        question: "Is October 15 the deadline for every applicant?",
+        answer: "No. The deadline depends on the applicant's country or location in the DAAD database and is updated each year. Use the official programme record with your correct country selected.",
+      },
+      {
+        question: "Can I apply before receiving German university admission?",
+        answer: "Yes, when the admission result is not yet available, but the admission letter must be submitted before funding begins and the university application remains the applicant's responsibility.",
+      },
+      {
+        question: "Is IELTS always required?",
+        answer: "Not universally. Applicants must prove proficiency in the language of instruction using evidence accepted for the chosen programme and DAAD application. English-taught programmes may accept IELTS or other listed English tests.",
+      },
+    ],
+    applyUrl:
+      "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database?detail=50026200",
     officialSource: "German Academic Exchange Service (DAAD)",
-
-    lastUpdated: "2025-03-01",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "open-doors-russian-scholarship-bachelors",
-
-    title: "Open Doors: Russian Scholarship Project",
+    title: "Open Doors Russian Scholarship 2027: Bachelor's Track",
+    seoTitle: "Open Doors Bachelor's Scholarship 2027 in Russia",
+    metaDescription: "Open Doors 2027 offers tuition-free Bachelor's study in Russia. Check the November 1 portfolio deadline, online test, costs, documents, and rules.",
     overview:
-      "A competitive government-funded scholarship allowing international students to study tuition-free at leading Russian universities. Selection is merit-based through online Olympiads.",
-
+      "The Open Doors Bachelor's track is a free international online competition for foreign citizens seeking tuition-free undergraduate study at participating Russian universities. The 2026 competition portfolio deadline is November 1, with winners and prize-winners determined after portfolio review and a proctored online task stage.",
+    introduction: "Open Doors covers tuition under the Russian government quota but does not guarantee airfare, accommodation, insurance, food, or a living stipend. Applicants should treat it as a tuition scholarship and confirm the language and complete cost of the eventual degree before enrollment.",
+    summary: "For international applicants who have completed or will complete qualifying secondary education before enrollment. Selection uses an online portfolio and entrance test followed by a mandatory three-hour proctored task stage.",
+    contentSections: openDoorsReaderSections("Bachelor's"),
     country: "Russia",
+    continent: "Europe",
     degreeLevel: "Bachelors",
-    fundingType: "Fully Funded",
-
-    deadline: "January (varies by year)",
+    fundingType: "Partially Funded",
+    deadline: "November 1, 2026 (portfolio submission)",
     duration: "Full degree duration",
-
     eligibility: [
-      "International applicants",
-      "Meet the Open Doors Olympiad rules",
-      "Meet program-specific requirements",
+      "Nationality: Foreign citizens and eligible stateless persons under the official rules",
+      "Education: Secondary education completed or due to be completed before university enrollment",
+      "Track: Applicants must register for the Bachelor's track and select one subject area",
+      "Language: Competition participation is available in Russian or English; degree language depends on the programme",
+      "Technical access: A suitable computer, camera, microphone, identification document, and stable internet are needed for proctoring",
     ],
-
     benefits: [
-      "Tuition-free study (tuition only)",
-      "Study at leading Russian universities",
-      "Merit-based selection via Olympiad",
+      "Tuition: Tuition-free study for the eligible programme assigned through the winner process",
+      "Entrance examination: Winners and prize-winners receive the admission advantage described by Open Doors",
+      "Russian preparation: A tuition-free preparatory Russian-language year may be available when required",
+      "Choice: Access to participating universities and programmes within the selected subject area",
+      "Not guaranteed: Travel, accommodation, meals, insurance, visa costs, and a monthly stipend",
     ],
-
     applicationProcess: [
-      "Review tracks and eligibility",
-      "Register and complete Olympiad stages online",
-      "Follow official admission steps after selection",
+      "Register on the Open Doors platform and select the Bachelor's track",
+      "Choose a subject area, complete the entrance test, and submit the portfolio by November 1, 2026",
+      "If advanced, register for and complete the three-hour second-stage tasks under online proctoring",
+      "Review the result and appeal window in the personal account",
+      "If selected, follow the quota, university, document, visa, and enrollment instructions",
     ],
-
     documents: [
-      "Passport",
-      "Academic transcripts",
-      "Diploma or expected graduation proof",
-      "Program-specific documents (if required)",
+      "Passport or accepted identity information",
+      "Secondary-school certificate or proof of expected completion",
+      "Academic grades or transcript",
+      "Portfolio evidence relevant to the selected subject area",
+      "Translations, legalisation, medical, and enrollment documents requested after selection",
     ],
-
+    selectionCriteria: ["Portfolio score", "Entrance test completion", "Performance in the proctored subject-area tasks", "Compliance with identification, timing, and competition rules"],
+    goodToKnow: ["The 2026 registration and portfolio period runs from August 20 to November 1", "Bachelor's applicants complete two competition stages, not the doctoral supervisor-interview stage", "The final degree may be taught in Russian or English, and an English competition attempt does not guarantee an English-taught placement", "Winning does not remove later visa and university enrollment requirements"],
     applyUrl: "https://od.globaluni.ru",
-    officialSource: "Open Doors - Global Universities",
-
-    lastUpdated: "2026-02-06",
+    officialSource: "Open Doors Russian Scholarship Project - Global Universities Association",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "open-doors-russian-scholarship-masters",
-
-    title: "Open Doors: Russian Scholarship Project",
+    title: "Open Doors Russian Scholarship 2027: Master's Track",
+    seoTitle: "Open Doors Master's Scholarship 2027 in Russia",
+    metaDescription: "Open Doors 2027 offers tuition-free Master's study in Russia. Check Bachelor's eligibility, the November 1 deadline, portfolio, online test, and costs.",
     overview:
-      "A competitive government-funded scholarship allowing international students to study tuition-free at leading Russian universities. Selection is merit-based through online Olympiads.",
-
+      "The Open Doors Master's track is a free online competition for international graduates seeking tuition-free Master's study at participating Russian universities. Applicants submit a subject-area portfolio by November 1, 2026 and qualifying candidates complete mandatory proctored online tasks.",
+    introduction: "The award provides tuition-free study rather than guaranteed payment of every expense. Applicants need a completed Bachelor's degree, or must complete it before enrollment, and should verify programme language, living costs, and post-result admission documents.",
+    summary: "For international Bachelor's graduates competing through a portfolio, entrance test, and three-hour proctored task stage. Master's winners do not complete the doctoral supervisor-interview stage. Programme availability, teaching language, living costs, and final enrollment documents must be checked before accepting a university placement.",
+    contentSections: openDoorsReaderSections("Master's"),
     country: "Russia",
+    continent: "Europe",
     degreeLevel: "Masters",
-    fundingType: "Fully Funded",
-
-    deadline: "January (varies by year)",
+    fundingType: "Partially Funded",
+    deadline: "November 1, 2026 (portfolio submission)",
     duration: "Full degree duration",
-
     eligibility: [
-      "International applicants",
-      "Meet the Open Doors Olympiad rules",
-      "Meet program-specific requirements",
+      "Nationality: Foreign citizens and eligible stateless persons under the official rules",
+      "Education: Bachelor's degree completed or due to be completed before enrollment",
+      "Academic fit: Previous education should support the chosen subject area and Master's programme",
+      "Language: Competition in Russian or English; the selected degree controls instruction language",
+      "Technical access: Computer, camera, microphone, identification, and stable internet for proctoring",
     ],
-
     benefits: [
-      "Tuition-free study (tuition only)",
-      "Study at leading Russian universities",
-      "Merit-based selection via Olympiad",
+      "Tuition-free eligible Master's study under the winner process",
+      "Admission advantage without the normal entrance examinations described by Open Doors",
+      "Possible preparatory Russian-language year for a Russian-taught programme",
+      "Programme choice through participating universities within the subject area",
+      "No universal guarantee for travel, housing, food, insurance, visa expenses, or living stipend",
     ],
-
     applicationProcess: [
-      "Review tracks and eligibility",
-      "Register and complete Olympiad stages online",
-      "Follow official admission steps after selection",
+      "Register for the Master's track and select the appropriate subject area",
+      "Complete the entrance test and portfolio by November 1, 2026",
+      "Advance through portfolio grading and register for the mandatory second stage",
+      "Complete the three-hour subject-area tasks under online proctoring",
+      "After a winning result, complete quota, programme choice, document, visa, and enrollment steps",
     ],
-
     documents: [
-      "Passport",
-      "Academic transcripts",
-      "Diploma or expected graduation proof",
-      "Program-specific documents (if required)",
+      "Passport or accepted identity information",
+      "Bachelor's diploma or official expected-completion evidence",
+      "Bachelor's transcript or grade record",
+      "Verifiable portfolio evidence relevant to the subject area",
+      "Translations and formal enrollment documents requested after winning",
     ],
-
+    selectionCriteria: ["Portfolio relevance and score", "Entrance test", "Proctored second-stage performance", "Compliance with competition rules"],
+    goodToKnow: ["Registration and portfolio submission run from August 20 to November 1, 2026", "The Master's track has two competition stages and no supervisor interview; advancement depends on the portfolio and mandatory proctored subject tasks", "A winning result is followed by formal university and quota processing, so keep the final Bachelor's diploma and translations ready", "Check whether the desired degree is actually offered in English and compare its curriculum with your previous education before selecting the subject area", "Applicants should prepare a realistic Russia living-cost budget because tuition-free status does not confirm a monthly stipend or free dormitory"],
     applyUrl: "https://od.globaluni.ru",
-    officialSource: "Open Doors - Global Universities",
-
-    lastUpdated: "2026-02-06",
+    officialSource: "Open Doors Russian Scholarship Project - Global Universities Association",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "open-doors-russian-scholarship-phd",
-
-    title: "Open Doors: Russian Scholarship Project",
+    title: "Open Doors Russian Scholarship 2027: Doctoral Track",
+    seoTitle: "Open Doors PhD Scholarship 2027 in Russia",
+    metaDescription: "Open Doors 2027 offers tuition-free doctoral study in Russia. Check Master's eligibility, November 1 deadline, proctored test, and supervisor interviews.",
     overview:
-      "A competitive government-funded scholarship allowing international students to study tuition-free at leading Russian universities. Selection is merit-based through online Olympiads.",
-
+      "The Open Doors doctoral track is a three-stage online competition for international Master's or Specialist graduates seeking tuition-free doctoral study in Russia. After portfolio review and proctored subject tasks, selected candidates interview prospective research supervisors before final results.",
+    introduction: "Doctoral applicants are not selected from documents alone. They must demonstrate subject knowledge in the proctored second stage and research fit during online interviews with prospective supervisors. The award covers tuition, while living and travel costs are not universally guaranteed.",
+    summary: "For eligible Master's or Specialist graduates. The 2026 portfolio deadline is November 1; the process continues through proctored tasks and supervisor interviews scheduled from December 22, 2026 to February 26, 2027.",
+    contentSections: openDoorsReaderSections("Doctoral"),
     country: "Russia",
+    continent: "Europe",
     degreeLevel: "PhD",
-    fundingType: "Fully Funded",
-
-    deadline: "January (varies by year)",
+    fundingType: "Partially Funded",
+    deadline: "November 1, 2026 (portfolio submission)",
     duration: "Full degree duration",
-
     eligibility: [
-      "International applicants",
-      "Meet the Open Doors Olympiad rules",
-      "Meet program-specific requirements",
+      "Nationality: Foreign citizens and eligible stateless persons under the official rules",
+      "Education: Master's or Specialist degree completed or due to be completed before enrollment",
+      "Research fit: Background and proposed interests must fit the selected subject area and an available supervisor",
+      "Language: Competition in Russian or English; doctoral working language depends on placement",
+      "Technical access: Computer, camera, microphone, identity document, and stable internet for proctoring and interviews",
     ],
-
     benefits: [
-      "Tuition-free study (tuition only)",
-      "Study at leading Russian universities",
-      "Merit-based selection via Olympiad",
+      "Tuition-free eligible doctoral study under the Russian government quota",
+      "Research-supervisor matching through the invitation-only third stage",
+      "Admission advantage described by Open Doors for winners and prize-winners",
+      "Possible preparatory Russian-language support when required",
+      "No universal guarantee for airfare, housing, meals, insurance, visa costs, or monthly living expenses",
     ],
-
     applicationProcess: [
-      "Review tracks and eligibility",
-      "Register and complete Olympiad stages online",
-      "Follow official admission steps after selection",
+      "Register for the doctoral track and select a research subject area",
+      "Complete the entrance test and submit the research-relevant portfolio by November 1, 2026",
+      "If advanced, complete the three-hour second-stage tasks under online proctoring",
+      "If invited to stage three, select up to three appropriate prospective supervisors and attend the online interviews",
+      "After final selection, complete supervisor, specialization, quota, university, visa, and enrollment procedures",
     ],
-
     documents: [
-      "Passport",
-      "Academic transcripts",
-      "Diploma or expected graduation proof",
-      "Program-specific documents (if required)",
+      "Passport or accepted identity information",
+      "Master's or Specialist diploma or expected-completion evidence",
+      "Graduate transcript or grade record",
+      "Research, publication, project, and academic portfolio evidence",
+      "Translations and formal doctoral enrollment documents requested after selection",
     ],
-
+    selectionCriteria: ["Portfolio and entrance-test result", "Proctored subject-area task performance", "Research readiness and subject knowledge", "Fit with prospective supervisors", "Compliance with every competition stage"],
+    goodToKnow: ["The doctoral track has three stages, and completing the portfolio and proctored task stages does not guarantee a supervisor interview", "Candidates can arrange interviews with up to three prospective supervisors and should compare research fit before scheduling", "The third stage runs from December 22, 2026 to February 26, 2027", "Doctoral winners specify an agreed specialization during later quota processing", "Prepare a concise explanation of the proposed research problem, relevant methods, previous work, and the facilities or supervision needed"],
     applyUrl: "https://od.globaluni.ru",
-    officialSource: "Open Doors - Global Universities",
-
-    lastUpdated: "2026-02-06",
+    officialSource: "Open Doors Russian Scholarship Project - Global Universities Association",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "skoltech-university-scholarship-masters",
 
-    title: "Skoltech University Scholarship",
+    title: "Skoltech Master's Scholarship 2027 in Russia: Pre-Open Guide",
+    seoTitle: "Skoltech Master's Scholarship 2027: Pre-Open",
+    metaDescription: "Skoltech Master's admissions for 2027 are not open yet. Use this verified guide to check tuition, stipend, documents, tests, selection, and costs.",
     overview:
-      "Skoltech offers scholarship-backed admission for international MSc applicants in Russia, including tuition coverage, monthly stipend, and medical insurance for selected students.",
+      "Skoltech's 2026 Master's admission cycle closed on July 7, 2026. The official admissions page tells candidates interested in a 2027 start to check back in autumn or subscribe for notification. This pre-open guide uses the completed 2026 rules as preparation evidence and does not claim that the 2027 dates are confirmed.",
+    introduction:
+      "Skoltech combines admission and competitive financial support. Tuition is covered for admitted MSc students, while the standard 2026 scholarship was 40,000 RUB per month and higher support could reach 55,000 RUB for top-scoring applicants. Housing and travel were not universally guaranteed.",
     summary:
-      "The Skoltech University Scholarship for Master's study is administered through Skoltech Admissions for international applicants to graduate programs in Russia. The process is merit-based and typically includes profile review, online testing, and a final-stage evaluation. Official admissions information states that selected MSc students receive tuition coverage, a monthly stipend, and medical insurance, while applicants should verify any track-specific conditions directly on the official admissions portal.",
+      "Pre-open for the 2027 intake. Applicants should expect an English-taught, two-year MSc selection process involving an online application, academic testing, and a final Selection Weekend with interviews, group work, written assessment, and an entrepreneurship challenge, subject to the forthcoming 2027 rules.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "Current status", value: "2026 closed; 2027 dates not yet published" },
+          { label: "Institution", value: "Skolkovo Institute of Science and Technology, Moscow" },
+          { label: "Degree", value: "Two-year, full-time Master of Science" },
+          { label: "Teaching language", value: "English" },
+          { label: "Tuition", value: "Covered by Skoltech for admitted students" },
+          { label: "Standard 2026 stipend", value: "40,000 RUB per month" },
+          { label: "Higher 2026 stipend", value: "Up to 55,000 RUB for highest-scoring applicants" },
+          { label: "2026 final deadline", value: "July 7, 2026" },
+        ],
+        paragraphs: [
+          "The 2027 application should not be described as open until Skoltech publishes the new call. The completed 2026 cycle ran in three waves from February 2 through July 7. Those dates are useful for preparation but are not a substitute for the forthcoming 2027 schedule.",
+          "Skoltech is a graduate science and technology institution rather than a general university offering every subject. Applicants should begin by checking whether their academic background fits a published MSc programme and whether its research, engineering, and innovation focus matches their goals.",
+        ],
+      },
+      {
+        title: "Funding reality and costs not guaranteed",
+        paragraphs: [
+          "Skoltech states that admitted MSc students do not pay tuition. Financial support is then distributed competitively using the selection results. For 2026, the standard MSc scholarship was 40,000 RUB per month, while the highest-scoring applicants could receive up to 55,000 RUB per month. Applicants should wait for the 2027 offer letter before treating either amount as guaranteed.",
+          "International students are covered by medical insurance under local Skoltech policies. The main admissions information does not promise free accommodation, an international flight, visa expenses, document legalisation, meals, or all personal costs. Ask Admissions about dormitory availability and prepare a Moscow living-cost budget before accepting.",
+          "A scholarship amount can be increased for individual students by a special commission during study, but that possibility is not an initial entitlement. Students receiving outside support may still compete for Skoltech funding, subject to the rules and any restrictions communicated by Admissions.",
+        ],
+      },
+      {
+        title: "Academic background and programme fit",
+        paragraphs: [
+          "Applicants need a Bachelor's degree in a relevant discipline or must be completing it before enrollment. There is no published universal minimum GPA for submitting an application, but GPA is used in competitive scholarship ranking. The reputation of the previous university, online-test result, interview, presentation, and entrepreneurship assessment can also affect financial-support decisions.",
+          "Relevant preparation differs by MSc programme. Data science can demand mathematics, programming, probability, and algorithms; engineering programmes can test physics, systems, mechanics, electronics, or control; life-science programmes can expect biology, chemistry, or quantitative skills. Read the programme curriculum and sample tests instead of relying on the broad phrase relevant degree.",
+          "A strong applicant can explain why a specific Skoltech programme is necessary for a concrete academic or professional objective. Generic claims about innovation are weaker than evidence from projects, research, employment, competitions, or coursework connected to the chosen programme.",
+        ],
+      },
+      {
+        title: "English, GPA, and entrance assessments",
+        paragraphs: [
+          "All selection challenges and assessments are conducted in English. The 2026 guidance accepted official English evidence such as TOEFL or Duolingo English Test under its current rules and allowed finalists without an accepted score to take an internal English test during the final stage. Applicants must recheck the accepted evidence and minimum results for 2027.",
+          "GRE and SAT were not listed as universal mandatory application documents for the 2026 MSc cycle. That does not remove Skoltech's own academic testing. Candidates who pass document screening receive an online test intended to assess programme knowledge and analytical ability, with sample material provided for preparation.",
+          "Skoltech publishes no universal minimum GPA for applying. However, no minimum does not mean grades are ignored: GPA forms part of competitive evaluation alongside the previous institution, testing, final interview, presentation, and Entrepreneurship and Innovation Challenge.",
+        ],
+      },
+      {
+        title: "What Selection Weekend involves",
+        paragraphs: [
+          "Successful online-test candidates proceed to the final selection round, commonly called Selection Weekend. Official guidance describes one or two days of individual interviews, group assignments, written examinations, and an Entrepreneurship and Innovation Challenge. An internal English assessment can also be required.",
+          "The final round is normally associated with the Skoltech campus, while an online participation option may be available by prior arrangement. Applicants should not assume remote participation automatically; request it early and obtain confirmation from Admissions.",
+          "Interview preparation should cover previous academic work, motivation for the programme, relevant projects, technical foundations, teamwork, and future plans. The presentation and entrepreneurship components mean that a technically strong applicant must also communicate ideas clearly and work productively with others.",
+        ],
+      },
+      {
+        title: "Application fee and timing",
+        paragraphs: [
+          "The previous page incorrectly stated that there was no application fee. In 2026, Skoltech charged 1,000 RUB for payment with a Russian-issued bank card or 50 USD for a card issued outside Russia, subject to bank charges. Applications submitted before February 15, 2026 received a fee waiver. The 2027 amount and any early waiver must be verified when the new call opens.",
+          "The 2026 MSc cycle used three waves: February 2 to March 16, March 17 to June 1, and June 2 to July 7. Scholarship allocation occurred competitively after each wave, so an earlier complete application could provide an earlier decision. Do not copy these dates into a 2027 application calendar until Skoltech confirms them.",
+        ],
+      },
+      {
+        title: "Common application problems",
+        bullets: [
+          "Calling the 2027 intake open before Skoltech publishes the new cycle",
+          "Assuming tuition coverage automatically guarantees the maximum monthly stipend",
+          "Ignoring Moscow housing and living costs because the page uses the term scholarship",
+          "Choosing a programme without checking its prerequisite mathematics, science, or engineering knowledge",
+          "Preparing only for an interview and overlooking the online academic test, written work, group tasks, and entrepreneurship challenge",
+          "Submitting weak recommendations from people unable to discuss technical or academic readiness",
+          "Assuming IELTS is always mandatory or always waived instead of checking the current English-evidence rules",
+          "Missing an application wave or paying a fee before checking whether an early fee waiver applies",
+          "Expecting an online Selection Weekend without requesting and confirming that arrangement",
+          "Using the old 2026 deadline, fee, or stipend as a guaranteed 2027 term",
+        ],
+      },
+      {
+        title: "What to verify after receiving an offer",
+        paragraphs: [
+          "Read the admission and scholarship documents as separate commitments. Confirm the exact monthly amount, the period for which it is awarded, the academic conditions for continuation, the tuition arrangement, and whether outside funding can be combined. Do not rely on a general admissions webpage when the personal offer contains applicant-specific conditions.",
+          "International students should request the visa timetable, invitation-document process, arrival dates, medical-insurance arrangements, and list of documents that require translation or legalisation. Names must match the passport consistently across the application, diploma translations, invitation, visa, and enrollment records.",
+          "Ask about accommodation before booking travel. Confirm whether a Skoltech dormitory place is available, its location and monthly charge, what deposit is required, and what alternatives exist if housing is unavailable. Compare the stipend with food, transport, communications, clothing, and personal expenses in Moscow rather than assuming the scholarship removes the need for savings.",
+          "Finally, check the enrollment conditions and academic calendar. An applicant may need to present original education documents, complete recognition procedures, arrive for orientation, register migration details, and meet programme-specific requirements. Purchase flexible travel only after the university issues the documents required for lawful entry and confirms when the student should arrive.",
+        ],
+      },
+      {
+        title: "Final preparation checklist for 2027",
+        ordered: [
+          "Subscribe to the official admissions notification and wait for the 2027 call.",
+          "Compare MSc programmes, curricula, prerequisites, research areas, and sample tests.",
+          "Prepare the Bachelor's diploma or expected-completion record and complete transcripts.",
+          "Update the CV, motivation statement, recommendations, and English evidence.",
+          "Check the new fee, any early waiver, all application waves, and the final deadline.",
+          "Prepare for programme-specific online testing using official samples.",
+          "Plan for interviews, a presentation, group tasks, written assessment, and the entrepreneurship challenge.",
+          "Confirm the scholarship amount, insurance, housing, visa, travel, and total Moscow budget before enrollment.",
+        ],
+      },
+    ],
     guideUrl:
       "https://scholarshipscentral.com/skoltech-university-russia-scholarship-2026-application-guide/",
     guideLabel: "Skoltech 2026 application guide",
@@ -437,8 +828,7 @@ const rawScholarships: Scholarship[] = [
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
 
-    deadline:
-      "March 16, 2026 (MSc first-wave deadline; check official portal for additional rounds)",
+    deadline: "2027 dates not yet published (2026 cycle closed July 7)",
     duration: "2 years",
 
     eligibility: [
@@ -458,7 +848,7 @@ const rawScholarships: Scholarship[] = [
       "Health insurance: Medical insurance is provided for international students",
       "Accommodation: The main 2026 admissions page does not guarantee housing for every selected applicant; availability depends on policy and status",
       "Travel support: No specific travel grant is officially stated on the main admissions page",
-      "Application fee: No application fee",
+      "Application fee: The 2026 fee was 1,000 RUB with a Russian bank card or 50 USD with a foreign card; an early waiver applied before February 15",
       "Other benefits: Program-level support opportunities may exist and should be verified on the official source",
     ],
 
@@ -486,7 +876,7 @@ const rawScholarships: Scholarship[] = [
     ],
 
     goodToKnow: [
-      "Official admissions information lists March 16, 2026 as the MSc first-wave deadline for the 2026 cycle.",
+      "The 2026 MSc cycle closed on July 7; Skoltech asks 2027 applicants to check back in autumn or subscribe for notification.",
       "GRE and SAT are not listed as mandatory submission documents on the main 2026 Skoltech admissions pages.",
       "This scholarship is competitive, so a strong academic profile and clear program fit materially improve ranking outcomes.",
       "Always verify exact scholarship terms, intake rounds, and document rules on official Skoltech sources before submitting.",
@@ -516,24 +906,142 @@ const rawScholarships: Scholarship[] = [
       {
         question: "Does Skoltech charge an MSc application fee?",
         answer:
-          "The official admissions portal states that there is no application fee.",
+          "Yes in the completed 2026 cycle: 1,000 RUB with a Russian-issued card or 50 USD with a foreign-issued card, with an early fee waiver before February 15. Verify the 2027 fee when the new call opens.",
       },
     ],
 
-    applyUrl: "https://admissions.skoltech.ru",
+    applyUrl: "https://www.skoltech.ru/en/admissions/",
     officialSource: "Skoltech Admissions",
 
-    lastUpdated: "2026-02-16",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "skoltech-university-scholarship-phd",
 
-    title: "Skoltech University Scholarship",
+    title: "Skoltech PhD Scholarship 2027 in Russia: Pre-Open Guide",
+    seoTitle: "Skoltech PhD Scholarship 2027: Pre-Open",
+    metaDescription: "Skoltech PhD admissions for 2027 are not open yet. Check tuition, 75,000 RUB stipend, research fit, documents, English, selection, and costs.",
     overview:
-      "Skoltech provides scholarship-backed PhD admission for international researchers in Russia, including tuition coverage, monthly stipend, and medical insurance for admitted students.",
+      "Skoltech's 2026 PhD application cycle closed on June 29, 2026. The official admissions page directs candidates interested in a 2027 start to check back in autumn or subscribe for notification. This pre-open guide explains the completed 2026 requirements without presenting them as confirmed 2027 dates.",
+    introduction:
+      "Admitted PhD students receive tuition coverage, and the standard scholarship stated for 2026 was 75,000 RUB per month. International students receive medical insurance under local policy, but accommodation, international travel, visa expenses, and every living cost are not universally guaranteed.",
     summary:
-      "The Skoltech University Scholarship for PhD study is offered via Skoltech Admissions for international applicants targeting research tracks in Russia. PhD selection is competitive and combines profile screening with formal evaluation stages defined by Skoltech. Official admissions information for 2026 states that admitted PhD students receive tuition coverage, a monthly stipend, and medical insurance, with final conditions governed by current official call rules.",
+      "Pre-open for 2027. International applicants need a relevant Master's or Specialist qualification, strong research alignment, English ability, and success in Skoltech's competitive evaluation. The forthcoming call controls the final programmes, supervisors, dates, fee, documents, and scholarship terms.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "Current status", value: "2026 closed; 2027 dates not yet published" },
+          { label: "Institution", value: "Skolkovo Institute of Science and Technology, Moscow" },
+          { label: "Degree", value: "Full-time PhD" },
+          { label: "Required education", value: "Relevant Master's or Specialist qualification" },
+          { label: "Tuition", value: "Covered by Skoltech" },
+          { label: "Standard 2026 stipend", value: "75,000 RUB per month" },
+          { label: "2026 final deadline", value: "June 29, 2026" },
+          { label: "2027 opening", value: "Not announced; check back in autumn" },
+        ],
+        paragraphs: [
+          "A Skoltech PhD application is an application to join a specific research environment, not only a request for funding. Applicants should evaluate the doctoral programme, research areas, faculty, laboratories, methods, and potential supervision before preparing documents.",
+          "The 2026 cycle ran in two waves from February 2 to April 27 and April 28 to June 29. These dates help candidates estimate preparation time, but they must not be reused as 2027 deadlines until Skoltech publishes the next rules.",
+        ],
+      },
+      {
+        title: "Funding and expenses",
+        paragraphs: [
+          "Skoltech covers PhD tuition for Russian and international admitted students. The standard scholarship published for 2026 was 75,000 RUB monthly, and individual students could later receive increased support through a special commission. The personal admission and scholarship documents determine the actual amount and continuation rules.",
+          "International students are covered by medical insurance according to local Skoltech policy. The main admissions page does not guarantee free dormitory accommodation, airfare, visa charges, document translation or legalisation, relocation expenses, food, local transport, or every research-related personal cost.",
+          "Before accepting, compare the offered stipend with a realistic Moscow budget. Ask whether dormitory space is available, what it costs, when scholarship payments begin, whether an initial deposit is needed, and what funds are required before the first payment. A tuition-covered PhD can still require meaningful personal savings during relocation.",
+        ],
+      },
+      {
+        title: "Research fit comes before the scholarship",
+        paragraphs: [
+          "Applicants should start with the official PhD programme pages and identify research groups whose current work matches their preparation. Read faculty profiles and recent publications, then determine whether the needed methods, equipment, data, and supervision exist at Skoltech.",
+          "A convincing application defines a research direction without pretending that the entire dissertation is already settled. Explain the problem, why it matters, which knowledge or methods you bring, and why the selected Skoltech environment is appropriate. Connect previous coursework, thesis work, publications, employment, code, experiments, or projects to the proposed area.",
+          "Sending a generic motivation letter to a prestigious institution is weaker than demonstrating real alignment. Where the programme encourages contact with faculty, communicate professionally with a focused introduction and research question rather than requesting a guaranteed acceptance or sending mass email.",
+        ],
+      },
+      {
+        title: "Academic requirements, GPA, and English",
+        paragraphs: [
+          "The 2026 rules required education no lower than a Master's or Specialist qualification in a relevant field. Applicants completing the degree could use the documentation permitted by Admissions, but final qualification evidence would still be required for enrollment.",
+          "Skoltech stated that there was no universal minimum GPA merely to apply. GPA nevertheless formed part of competitive ranking, together with testing, previous-university information, interview performance, and research fit. No published minimum should not be interpreted as weak academic preparation being unimportant.",
+          "English is central to Skoltech's academic environment. Applicants need accepted English evidence under the current call. Previous guidance referred to TOEFL, Duolingo English Test, Lingvotest, or an internal route in qualifying circumstances. The accepted tests, exemptions, and minimum results must be checked again for 2027.",
+          "GRE was not listed as a universal mandatory PhD application document on the main 2026 admissions page. Skoltech can still use its own technical evaluation and programme-specific assessment, so applicants should prepare using the research track's stated knowledge requirements rather than relying on the absence of GRE.",
+        ],
+      },
+      {
+        title: "Documents that demonstrate doctoral readiness",
+        bullets: [
+          "Passport and consistent personal information",
+          "Master's or Specialist diploma, or accepted expected-completion evidence",
+          "Complete academic transcripts and required translations",
+          "Academic and research-focused CV",
+          "Motivation or research statement tailored to the PhD area",
+          "Accepted English-proficiency evidence",
+          "Two detailed recommendation letters submitted through the required process",
+          "Publication list, manuscripts, thesis abstract, code, portfolio, patents, conference work, or project evidence where relevant",
+          "Any programme-specific research proposal or additional files requested in the 2027 call",
+        ],
+        paragraphs: [
+          "Quality matters more than creating an inflated list. Clearly distinguish published papers from submissions, conference talks from attendance, and personal contributions from team output. Provide links or identifiers only when the application allows them and ensure every claim can be verified.",
+          "Recommendations should come from people able to discuss research ability, independence, technical preparation, persistence, and collaboration using concrete examples. A senior title alone does not compensate for a vague letter written by someone who barely knows the applicant.",
+        ],
+      },
+      {
+        title: "Selection and interview experience",
+        paragraphs: [
+          "Skoltech first reviews the online application and required evidence. Competitive ranking can consider academic testing, GPA, the previous institution, and interview results. Programme teams may evaluate research preparation and alignment differently, so the new call and chosen PhD page control the exact sequence.",
+          "The interview is not simply a personality conversation. Prepare to explain previous research decisions, methods, limitations, results, and your own contribution. Be ready to discuss the proposed area, alternative approaches, technical foundations, setbacks, teamwork, and why the Skoltech group is a suitable environment.",
+          "Applicants should answer honestly when they do not know something and reason through unfamiliar questions. Doctoral potential includes the ability to learn, accept criticism, communicate evidence, and refine a research problem—not only memorising ideal responses.",
+        ],
+      },
+      {
+        title: "Application fee and cycle status",
+        paragraphs: [
+          "The previous record incorrectly said there was no application fee. For 2026, Skoltech published a fee of 1,000 RUB when paid with a Russian-issued bank card or 50 USD when paid with a bank card issued outside Russia. An early submission waiver applied before February 15, 2026.",
+          "The fee and waiver must be verified for 2027. Do not pay through unofficial agents or assume an old waiver remains active. The fee covers application processing and does not improve the admission decision.",
+          "The official site currently describes PhD admissions as closed and asks 2027 candidates to subscribe or return in autumn. Until the new cycle appears, applicants can research programmes, strengthen English and technical preparation, organise references, and prepare accurate academic documents.",
+        ],
+      },
+      {
+        title: "Common PhD application problems",
+        bullets: [
+          "Presenting the 2027 intake as open before Skoltech publishes it",
+          "Reusing the April first-wave deadline and overlooking the completed June 29 final deadline",
+          "Applying mainly for the stipend without identifying a suitable research group",
+          "Writing a broad research statement unrelated to current faculty work",
+          "Assuming tuition and stipend guarantee free housing and travel",
+          "Listing publications or projects without explaining the applicant's contribution",
+          "Choosing recommenders for status instead of detailed knowledge of research ability",
+          "Assuming no minimum GPA or no universal GRE requirement means there is no technical evaluation",
+          "Failing to prepare original degrees, translations, recognition, visa, and enrollment documents",
+          "Using the old application-fee claim instead of checking the new cycle",
+        ],
+      },
+      {
+        title: "After an admission offer",
+        paragraphs: [
+          "Read the admission, scholarship, and supervision conditions carefully. Confirm the monthly amount, payment start, continuation requirements, tuition arrangement, programme duration, research expectations, and any teaching or academic duties. Ask how supervisor assignment is formalised and what happens if a research direction changes.",
+          "International students should obtain the university's instructions for invitation documents, visa, medical insurance, document recognition, translations, migration registration, and arrival. Keep passport spelling consistent across every record and avoid non-refundable travel until the university confirms the required documents and arrival date.",
+          "Confirm housing and first-month costs in writing. A student may need money for travel, deposits, food, transport, communications, medical paperwork, and daily expenses before scholarship payments begin. Prepare a contingency plan rather than assuming the first stipend will be immediately available.",
+        ],
+      },
+      {
+        title: "Final preparation checklist for 2027",
+        ordered: [
+          "Subscribe to official admissions updates and wait for the 2027 call.",
+          "Identify the correct PhD programme, research area, laboratories, and potential supervision.",
+          "Map previous education and research evidence to that area.",
+          "Prepare the diploma, transcripts, CV, research statement, recommendations, English evidence, and translations.",
+          "Check the new fee, waiver, waves, final deadline, tests, and interview format.",
+          "Prepare to discuss methods, results, limitations, research fit, and personal contribution during interviews.",
+          "Verify the individual scholarship, insurance, housing, visa, and enrollment terms before accepting.",
+          "Use only the official Skoltech portal and Admissions instructions as the controlling source.",
+        ],
+      },
+    ],
     guideUrl:
       "https://scholarshipscentral.com/skoltech-university-russia-scholarship-2026-application-guide/",
     guideLabel: "Skoltech 2026 application guide",
@@ -542,7 +1050,7 @@ const rawScholarships: Scholarship[] = [
     degreeLevel: "PhD",
     fundingType: "Fully Funded",
 
-    deadline: "April 27, 2026 (PhD first-wave deadline)",
+    deadline: "2027 dates not yet published (2026 cycle closed June 29)",
     duration: "Program duration varies by PhD track (confirm official program page)",
 
     eligibility: [
@@ -562,7 +1070,7 @@ const rawScholarships: Scholarship[] = [
       "Health insurance: Medical insurance is provided for international students",
       "Accommodation: The main 2026 admissions page does not guarantee housing for every selected applicant; availability depends on policy and status",
       "Travel support: No specific travel grant is officially stated on the main admissions page",
-      "Application fee: No application fee",
+      "Application fee: The 2026 fee was 1,000 RUB with a Russian card or 50 USD with a foreign card; an early waiver applied before February 15",
       "Other benefits: Track-level research support may vary and should be confirmed through official channels",
     ],
 
@@ -590,7 +1098,7 @@ const rawScholarships: Scholarship[] = [
     ],
 
     goodToKnow: [
-      "Official admissions information lists April 27, 2026 as the PhD first-wave deadline for the 2026 cycle.",
+      "The 2026 PhD cycle closed on June 29; Skoltech directs 2027 candidates to check back in autumn or subscribe for notification.",
       "Published ranking criteria for PhD include test score, GPA, university ranking, and interview score.",
       "Strong research alignment and clear motivation are critical because PhD admissions are highly selective.",
       "Always confirm track-specific requirements and supervisor expectations on official Skoltech sources before applying.",
@@ -620,28 +1128,177 @@ const rawScholarships: Scholarship[] = [
       {
         question: "Is there an application fee for PhD admission?",
         answer:
-          "The official admissions portal states that there is no application fee.",
+          "Yes in the 2026 cycle: 1,000 RUB with a Russian-issued card or 50 USD with a foreign-issued card, with an early waiver before February 15. Verify the 2027 terms when published.",
       },
     ],
 
-    applyUrl: "https://admissions.skoltech.ru",
+    applyUrl: "https://www.skoltech.ru/en/admissions/",
     officialSource: "Skoltech Admissions",
 
-    lastUpdated: "2026-02-16",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "erasmus-mundus-joint-master-degrees",
-
-    title: "Erasmus Mundus Joint Master Degrees (EMJM)",
+    title: "Erasmus Mundus Joint Masters Scholarship 2027/28 Guide",
+    seoTitle: "Erasmus Mundus Scholarship 2027/28: Complete Guide",
+    metaDescription: "Prepare for Erasmus Mundus 2027/28 scholarships. Learn how to choose a programme, apply to its consortium, meet requirements, and receive €1,400 monthly.",
     overview:
-      "EU-funded joint masters programs delivered by multiple European universities with full financial support. Highly competitive and internationally recognized.",
-
+      "Erasmus Mundus Joint Masters are integrated international Master's programmes delivered by university consortia. Students apply directly to a chosen programme, not through one central scholarship form. Most 2027/28 applications are expected between October 2026 and January 2027, but every consortium sets its own deadline and requirements.",
+    introduction:
+      "The best-ranked applicants may receive an EU scholarship calculated at €1,400 per month for the programme duration, up to 24 months. The scholarship also covers participation costs and contributes to travel, visa, and living expenses. Admission without a scholarship may also be offered.",
+    summary:
+      "For Bachelor's graduates and eligible final-year students worldwide. Each programme has a distinct curriculum, mobility route, degree award, language policy, document list, scholarship quota, and selection method, so applicants must research each consortium separately.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "Study level", value: "Joint Master's degree" },
+          { label: "Eligibility", value: "Applicants worldwide with a Bachelor's degree or recognised equivalent" },
+          { label: "Typical duration", value: "1-2 academic years; 60, 90, or 120 ECTS" },
+          { label: "EU scholarship", value: "€1,400 per month for the programme duration, maximum 24 months" },
+          { label: "Application destination", value: "Directly to the chosen programme consortium" },
+          { label: "Typical application period", value: "October-January for the following academic year" },
+          { label: "Mobility", value: "Study periods at multiple consortium universities" },
+          { label: "Degree outcome", value: "Joint degree or multiple degrees" },
+        ],
+        paragraphs: [
+          "Erasmus Mundus Joint Masters are a category of programmes, not one course called Erasmus Mundus. The official catalogue lists individual consortia in fields ranging from engineering and data science to public policy, health, agriculture, environment, education, and culture. Each consortium runs its own admission website.",
+          "A programme normally brings together at least three higher-education institutions from at least three countries. The integrated curriculum can include coursework, research, traineeships, thesis preparation, and defence across more than one institution.",
+        ],
+      },
+      {
+        title: "What the scholarship covers",
+        paragraphs: [
+          "Current EU programme guidance calculates the individual scholarship as €1,400 multiplied by the number of months in the Master's programme, up to 24 months. This contribution is intended to support living, travel, visa, installation, and related individual costs during the required mobility path.",
+          "Scholarship holders should not be charged the participation costs covered under the programme's Erasmus Mundus arrangement. However, applicants must read the consortium's financial page to understand deposits, insurance, services, payment timing, and any costs that may initially need to be paid and reimbursed.",
+          "The same programme can admit scholarship holders and self-funded students. Receiving admission therefore does not automatically mean receiving the €1,400 scholarship. Read the decision letter carefully and distinguish admission, reserve-list status, scholarship selection, and self-funded admission.",
+          "Additional support may be available for eligible individual needs connected to disability or long-term physical, mental, intellectual, or sensory impairments. Applicants requiring support should follow the consortium's confidential process and current Erasmus+ rules.",
+        ],
+      },
+      {
+        title: "How to choose the right Erasmus Mundus programme",
+        paragraphs: [
+          "Start with the official Erasmus Mundus catalogue and shortlist programmes by academic fit, not only by the countries visited. Read the entry profile, prerequisite subjects, curriculum, mobility route, thesis options, associated partners, internship opportunities, and graduate outcomes.",
+          "Mobility is compulsory and can require moving between countries on a fixed schedule. Consider visa eligibility, housing markets, climate, family responsibilities, accessibility, healthcare, and whether the scholarship payment timing can support each move. A prestigious itinerary is not useful if the curriculum does not match your goals or the mobility plan is impractical.",
+          "Check the degree awarded. Some programmes issue one joint degree on behalf of multiple institutions; others issue at least two degrees. Confirm recognition requirements for the career or regulated profession you plan to enter, particularly when professional licensing is important.",
+          "Verify that the programme is accepting students for the intended intake and still has Erasmus Mundus scholarships available. Catalogue presence alone does not guarantee a scholarship competition every year or an identical number of funded places.",
+        ],
+      },
+      {
+        title: "Eligibility and academic background",
+        paragraphs: [
+          "At EU level, applicants need a Bachelor's degree, must be in the final year of Bachelor's study and graduate before the Master's begins, or must demonstrate an officially recognised equivalent level of learning. The consortium then defines the accepted disciplines, prerequisite credits, grades, experience, and language evidence.",
+          "There is no universal Erasmus Mundus minimum GPA applying to every programme. One consortium may publish a percentage or class requirement, while another uses a holistic ranking. Convert grades only in the format requested and provide the official grading scale when required instead of inventing a GPA conversion.",
+          "Applicants from all countries are welcome under the general scheme. A consortium can still apply programme rules concerning previous study, scholarship history, residence, available regional funding, or document recognition. Use the current call rather than advice written for an older Erasmus Mundus generation.",
+        ],
+      },
+      {
+        title: "English tests and other language requirements",
+        paragraphs: [
+          "There is no single IELTS score for all Erasmus Mundus programmes. Each consortium decides whether it accepts IELTS, TOEFL, Cambridge qualifications, another test, an English-medium degree, or a formal institutional letter. Minimum scores, test validity, component requirements, and waiver conditions differ.",
+          "A mobility route may also involve local-language learning even when the academic programme is taught in English. Read whether another language is required for admission, placement, clinical work, internship, or daily participation. Do not assume that English instruction removes every local-language expectation.",
+          "Book language testing early enough to receive results before the deadline. If a consortium permits a pending score, follow its upload procedure exactly. An unofficial screenshot or medium-of-instruction letter should only be used when the programme explicitly accepts it.",
+        ],
+      },
+      {
+        title: "Documents commonly requested",
+        bullets: [
+          "Passport or accepted identity document",
+          "Bachelor's diploma or official expected-graduation evidence",
+          "Complete transcripts and the institution's grading scale",
+          "Certified translations when documents are not in an accepted language",
+          "Academic or Europass-style CV when specified",
+          "Programme-specific motivation letter or statement of purpose",
+          "Two or more recommendation letters when required",
+          "Accepted English or other language evidence",
+          "Proof of residence, nationality, or previous mobility when requested",
+          "Course descriptions or evidence of prerequisite credits",
+          "Portfolio, research proposal, writing sample, employment proof, or other field-specific evidence",
+        ],
+        paragraphs: [
+          "The phrase required documents on a general scholarship website is never the controlling checklist. Download the current consortium call and create a document tracker for each programme because file names, formats, certification rules, word limits, and referee procedures vary.",
+          "Recommendations should show academic readiness and fit using evidence. Motivation letters should explain why the particular joint curriculum and mobility route are necessary for the applicant's objectives. Replacing the programme name in a generic essay is unlikely to demonstrate serious fit.",
+        ],
+      },
+      {
+        title: "Application and selection process",
+        ordered: [
+          "Search the official catalogue and open the consortium website for the intended intake.",
+          "Confirm curriculum, mobility, eligibility, language rules, scholarship availability, and deadline.",
+          "Create the consortium application and choose the scholarship option where the form distinguishes funded and self-funded consideration.",
+          "Upload every document and arrange referee submissions before the consortium deadline.",
+          "Complete any programme-specific test, interview, portfolio review, or additional verification.",
+          "Monitor email and the application portal for scholarship, reserve-list, or self-funded decisions.",
+          "If selected, accept by the stated deadline and follow the consortium's study agreement, visa, insurance, housing, and enrollment instructions.",
+        ],
+        paragraphs: [
+          "Selection is normally competitive and programme-specific. Committees can evaluate academic achievement, prerequisite preparation, motivation, recommendations, experience, research potential, language ability, geographic or disciplinary balance permitted by the call, and overall fit.",
+          "Some programmes interview shortlisted candidates; others decide from documents. An interview can test academic knowledge, motivation, mobility readiness, teamwork, and whether the applicant understands the programme rather than merely seeking any European scholarship.",
+        ],
+      },
+      {
+        title: "Mobility, visas, and practical planning",
+        paragraphs: [
+          "An Erasmus Mundus student may need residence permissions for several countries. The consortium should provide guidance, but the student remains responsible for supplying documents and meeting consular timelines. Passport validity, proof of funds, insurance, housing evidence, and appointment availability can affect travel.",
+          "Ask when scholarship payments start and whether the first installment arrives before relocation. Prepare emergency funds for visa fees, deposits, temporary accommodation, flights, and daily costs. The €1,400 contribution is substantial, but living costs differ significantly between programme locations.",
+          "Read the study agreement to understand attendance, academic progression, mobility, thesis, scholarship continuation, and repayment conditions. Failure to complete required mobility or maintain satisfactory progress can affect the degree and financial support.",
+        ],
+      },
+      {
+        title: "How to build a competitive programme-specific application",
+        paragraphs: [
+          "Begin by mapping the programme's published learning outcomes and prerequisites against your transcript and experience. Identify the courses, thesis, research, employment, or projects that prove readiness. If a prerequisite is missing, do not hide it; explain relevant alternative preparation only when the consortium permits equivalent evidence.",
+          "A strong motivation letter answers why this exact joint curriculum is necessary. Refer to particular modules, mobility locations, laboratories, internships, thesis routes, or partner expertise and connect them to a coherent objective. Avoid generic claims that Europe is diverse or that Erasmus Mundus is prestigious, because those statements do not distinguish your application.",
+          "Explain mobility readiness realistically. Committees need confidence that the applicant understands studying in several academic systems, relocating, collaborating across cultures, and completing a demanding integrated curriculum. Use specific examples of adaptation, teamwork, independent learning, or international experience without pretending that previous travel is required.",
+          "Select referees who can evaluate the abilities relevant to the programme. Give them the curriculum, your objectives, deadline, and submission instructions early. A detailed letter explaining analytical ability, research, professional contribution, or academic growth is more useful than a famous recommender offering only general praise.",
+          "Review the complete application as one argument. The CV, motivation, recommendations, transcript, and portfolio should reinforce the same programme fit without repeating identical sentences. Remove unsupported claims, explain unusual grading or study gaps briefly where allowed, and ensure dates and programme names remain consistent.",
+        ],
+      },
+      {
+        title: "What to verify after scholarship selection",
+        paragraphs: [
+          "Read the scholarship agreement and study agreement before accepting. Confirm the programme duration used to calculate the scholarship, participation-cost treatment, payment schedule, required mobility, insurance, academic progression, thesis rules, and circumstances that can suspend or end support.",
+          "Ask the consortium which university handles enrollment at each stage and which institution issues immigration documents. A student moving across several countries may need different residence permits or registrations. Start appointments early and keep certified digital and paper copies of identity, admission, scholarship, insurance, housing, and academic records.",
+          "Create a cash-flow plan rather than multiplying €1,400 by the full duration and assuming the total is available immediately. Account for deposits, visa charges, travel between mobility locations, temporary accommodation, local transport, and the possibility that the first payment arrives after initial expenses.",
+          "Confirm what degree certificate will be awarded and how names will appear on it. Students entering a regulated profession should investigate recognition in the country where they plan to work. The consortium can explain the academic award, but professional licensing decisions belong to the relevant national authority.",
+        ],
+      },
+      {
+        title: "Common applicant mistakes",
+        bullets: [
+          "Looking for one central Erasmus Mundus application instead of applying to a consortium",
+          "Using a general October-January estimate as the exact deadline",
+          "Assuming programme admission automatically includes the EU scholarship",
+          "Applying because of the countries while ignoring curriculum and prerequisites",
+          "Sending the same motivation letter to unrelated programmes",
+          "Using an English waiver or GPA conversion the consortium does not accept",
+          "Missing referee, certification, translation, or grading-scale requirements",
+          "Ignoring compulsory mobility, visa timing, housing, and relocation costs",
+          "Treating every catalogue programme as open with scholarships in the same intake",
+          "Paying an unofficial agent even though applications go to the programme consortium",
+        ],
+      },
+      {
+        title: "Final application checklist",
+        ordered: [
+          "Choose programmes from the official Erasmus Mundus catalogue.",
+          "Verify that each programme is open for 2027/28 and offers scholarships.",
+          "Compare academic prerequisites, mobility, degree award, languages, and career fit.",
+          "Record the exact consortium deadline and time zone.",
+          "Prepare degrees, transcripts, grading scale, translations, CV, motivation, references, and language proof.",
+          "Submit directly through the consortium and complete any interview or test.",
+          "Distinguish scholarship selection from reserve-list or self-funded admission.",
+          "Before accepting, confirm payment timing, visas, insurance, housing, individual needs, and the full mobility budget.",
+        ],
+      },
+    ],
     country: "Multiple Countries",
+    continent: "Europe",
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
 
-    deadline: "December-January (program specific)",
+    deadline: "Usually October 2026-January 2027 (programme-specific)",
     duration: "1-2 years",
 
     eligibility: [
@@ -652,8 +1309,9 @@ const rawScholarships: Scholarship[] = [
 
     benefits: [
       "Tuition coverage",
-      "Monthly stipend (program dependent)",
-      "Travel and installation support (program dependent)",
+      "EU scholarship contribution: €1,400 per month for the programme duration, up to 24 months",
+      "Participation costs covered for scholarship holders",
+      "Contribution toward travel, visa, installation, and living costs",
     ],
 
     applicationProcess: [
@@ -671,252 +1329,1115 @@ const rawScholarships: Scholarship[] = [
       "Language proficiency certificate",
     ],
 
-    applyUrl: "https://erasmus-plus.ec.europa.eu",
+    applyUrl: "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters",
     officialSource: "European Commission - Erasmus+",
 
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "chevening-scholarship",
-
-    title: "Chevening Scholarship",
+    title: "Chevening Scholarship 2027/28: Complete Application Guide",
+    seoTitle: "Chevening Scholarship 2027/28: Eligibility and Application Guide",
+    metaDescription: "Apply for the fully funded Chevening Scholarship 2027/28. Check the 6 October 2026 deadline, 2,800-hour work rule, course choices, essays, and timeline.",
     overview:
-      "UK government scholarship for future leaders to pursue a one-year masters degree at any UK university.",
+      "Chevening is the UK government's fully funded scholarship for emerging leaders from eligible countries and territories. The 2027/28 competition opens on 4 August 2026 at 11:00 UTC and closes on 6 October 2026 at 11:00 UTC. Applicants choose three eligible one-year taught Master's courses and apply separately to Chevening and their selected UK universities.",
+    introduction:
+      "A competitive Chevening application is not simply a request for tuition funding. It must connect evidence of leadership and relationship-building with carefully researched courses and a realistic plan to create positive change after returning home. Eligibility is strict: applicants need 2,800 hours of work experience gained after completing their undergraduate degree and must commit to returning to their country of award for at least two years after the scholarship.",
+    summary:
+      "Applications for 2027/28 are currently pre-open. Use the period before 4 August 2026 to verify eligibility, calculate work hours, research three eligible courses, collect evidence for the four application criteria, and contact two appropriate referees. Do not submit AI-generated essay answers: Chevening explicitly prohibits this and requires applicants' own original work.",
+    contentSections: [
+      {
+        title: "Chevening 2027/28 at a glance",
+        facts: [
+          { label: "Study level", value: "One-year taught Master's degree" },
+          { label: "Study destination", value: "United Kingdom" },
+          { label: "Applications open", value: "4 August 2026 at 11:00 UTC" },
+          { label: "Applications close", value: "6 October 2026 at 11:00 UTC" },
+          { label: "Work experience", value: "At least 2,800 hours after completing the undergraduate degree" },
+          { label: "Course choices", value: "Three different eligible UK Master's courses" },
+          { label: "University offer deadline", value: "8 July 2027 at 17:00 BST" },
+          { label: "Study begins", value: "September or October 2027" },
+        ],
+        paragraphs: [
+          "Chevening Scholarships are funded by the UK Foreign, Commonwealth and Development Office and partner organisations. Scholars complete an intensive Master's year, participate in a wider engagement programme, and join an international alumni network. There is no upper age limit and applicants can come from many professional and academic backgrounds.",
+          "The scholarship and university admission are separate processes. Listing a course in the Chevening form does not apply to that university. Applicants must submit their Chevening application through the official online system and also complete each university's own admission process in time to secure at least one unconditional offer by the published deadline.",
+        ],
+      },
+      {
+        title: "What the Chevening Scholarship covers",
+        bullets: [
+          "Payment of eligible tuition fees",
+          "Economy travel to and from the country of residence by an approved route for the scholar",
+          "Monthly living allowance, with the rate determined by study inside or outside London",
+          "Arrival and departure allowances",
+          "Cost of one entry-clearance visa application for the scholar",
+          "Travel top-up allowance",
+          "Contribution of up to £75 toward tuberculosis testing when required",
+          "Access to Chevening's engagement, networking, and alumni activities",
+        ],
+        paragraphs: [
+          "Chevening describes its standard scholarship as fully funded, but applicants should still plan carefully. The award supports the scholar, not accompanying family members. Dependants' flights, visas, accommodation, childcare, and living costs are not automatically covered. University deposits can also create an early cash-flow problem because Chevening states that it does not pay tuition deposits requested to secure an offer.",
+          "Monthly stipend rates are reviewed and depend on whether the university is in London. A stipend is intended for reasonable accommodation and living expenses; it should not be treated as a guaranteed surplus. Before accepting, compare local rent, deposits, transport, food, and personal commitments and read the current final award letter and terms rather than relying on amounts quoted by older articles.",
+        ],
+      },
+      {
+        title: "Eligibility requirements explained",
+        paragraphs: [
+          "Applicants must be citizens of a Chevening-eligible country or territory. Where an award is from an ODA-eligible country, the applicant must also be resident in an ODA-eligible country and show a clear intention to support the country of award. Country pages can contain local information, so eligibility should be checked through the official country or territory page before starting.",
+          "You must commit to returning to your country of award for at least two years after the scholarship ends. This is a core condition, not an optional statement to make the application sound persuasive. Career plans should therefore explain how the UK degree, professional relationships, and Chevening network will be used to create credible impact after returning.",
+          "You need an undergraduate degree that qualifies you for admission to a UK Master's programme. For the 2027/28 cycle, undergraduate studies must have been completed at least two years before the Chevening application deadline, even if the physical certificate was issued later. The official degree certificate must be available by interview. A previous Master's degree does not by itself prevent an application for another Master's.",
+          "British or dual British citizens are generally ineligible, subject to the official exceptions for certain British Overseas Territory citizens and BN(O) applicants from Hong Kong. Other exclusions cover some UK residents, employees and recent former employees of specified organisations and their immediate relatives, and people who previously studied in the UK with a UK government-funded scholarship. Read every current exclusion because personal circumstances can determine eligibility before application quality is considered.",
+        ],
+      },
+      {
+        title: "How the 2,800-hour work experience rule works",
+        paragraphs: [
+          "Chevening requires at least 2,800 hours of work experience acquired after completing the undergraduate degree. This is approximately two years of full-time work at 35 hours per week, but the hours may be accumulated across a longer period and more than one role. Experience gained before undergraduate completion should not be counted toward the current requirement.",
+          "Eligible experience can include full-time employment, part-time employment, voluntary work, and paid or unpaid internships. The online system permits up to fifteen work periods and calculates hours by multiplying weeks worked by hours per week. Overlapping roles require care: record dates and normal weekly hours truthfully and do not inflate a total by presenting the same working time twice.",
+          "Meeting 2,800 hours only clears an eligibility threshold. Competitive strength comes from what the experience demonstrates. Prepare examples showing decisions, initiative, influence, collaboration, measurable outcomes, setbacks, and learning. A long job title list is weaker than a few specific situations in which your actions contributed to a meaningful result.",
+          "Keep contracts, experience letters, payslips, volunteer confirmations, or other evidence that may help verify dates and responsibilities. The application asks for detailed work history, and inconsistencies between the form, CV, references, interview answers, or public professional profile can damage credibility.",
+        ],
+      },
+      {
+        title: "Choosing three eligible UK courses",
+        paragraphs: [
+          "The Chevening form requires three different eligible Master's courses. They may be related courses at up to three universities or three different courses at one university. Each must normally be UK-based, full-time, start in the autumn term, and lead to a taught Master's qualification. Part-time, distance-learning, PhD, and most postgraduate diploma programmes are not eligible.",
+          "Choose courses as part of one career argument. Compare compulsory and optional modules, teaching methods, faculty expertise, practical projects, professional accreditation, industry connections, location, and graduate outcomes. Explain why the content fills a specific knowledge or skills gap and how it supports the work you plan to do after returning home.",
+          "Apply separately to universities as early as practical. University decisions, document checks, English tests, references, deposits, and conditions can take months. Successful interview candidates must upload at least one unconditional offer for a listed eligible course by 8 July 2027 at 17:00 BST. Chevening does not require applicants to hold an offer when submitting the scholarship form, but waiting until the final months creates avoidable risk.",
+          "Check the official Chevening course finder and then confirm details on the university website. Course names, availability, delivery modes, and entry rules can change. Applicants remain responsible for ensuring that their selections qualify, and an ineligible course can be rejected during final checks even if it appeared in an older database or article.",
+        ],
+      },
+      {
+        title: "Building strong answers for the four application criteria",
+        paragraphs: [
+          "The application asks four essay questions concerning leadership, relationship-building, course choices, and future career goals. Treat them as connected but distinct evidence. Prepare answers in your own words, respect the form's current word limits, and answer the exact prompt rather than recycling a personal statement or describing job duties.",
+          "For leadership, select one or two examples with a clear problem, your individual action, the people or decisions you influenced, and the result. Leadership does not require a senior title. It can involve introducing a better process, mobilising a team, resolving resistance, advocating for a community, or turning an idea into an outcome. State what you did using 'I' where appropriate instead of hiding your contribution behind 'we'.",
+          "For relationship-building, show how you created and maintained professional connections and used collaboration to achieve something constructive. Name the context, how trust developed, what value you contributed, and how the relationship continued. Then explain how you would participate in the Chevening network rather than treating it only as a source of personal contacts.",
+          "The course-choice answer should demonstrate research. Connect particular modules, learning methods, or expertise across the three choices to the same development need and career direction. Avoid generic praise of UK education. The career-plan answer should provide realistic short-, medium-, and long-term steps, likely partners or institutions, intended beneficiaries, barriers, and a credible route from the degree to positive change in the country of award.",
+          "Chevening explicitly states that using artificial intelligence to generate essay answers is prohibited. Applicants must submit original work and confirm that they have not used AI to generate their answers. Use official guidance to understand the criteria, but write from your own experience and voice. Fabricated examples, copied templates, paid essays, and AI-generated narratives can lead to disqualification for plagiarism or fraud.",
+        ],
+      },
+      {
+        title: "Documents and references",
+        bullets: [
+          "Valid photo identification as requested",
+          "Official undergraduate degree certificate showing the degree and grade",
+          "Names, job details, and contact information for two referees",
+          "Two English reference letters if invited to interview",
+          "Accurate education and post-degree work history",
+          "Details of three eligible course choices",
+          "At least one unconditional university offer by the July deadline if successful at interview",
+        ],
+        paragraphs: [
+          "At initial application, candidates provide the details of two referees rather than uploading letters immediately. If shortlisted, they must upload two reference letters no later than seven working days before the interview. Chevening does not contact referees to collect letters on the applicant's behalf, although referees may later be contacted for verification.",
+          "Referees may be professional, academic, or one of each. They should know the applicant well enough to discuss relevant qualities and evidence; they cannot simply be a friend or relative. Ask early, share the deadline and guidance, and confirm availability. References must be in English. A reference written in another language must be accompanied by a notarised English translation in the same file.",
+          "For education evidence, Chevening's current preparation guidance asks shortlisted applicants for the official undergraduate degree certificate, not an academic transcript as a substitute. Universities may separately request transcripts, translations, English results, or other admission documents, so maintain two checklists: one for Chevening and one for each university.",
+        ],
+      },
+      {
+        title: "Application and selection timeline",
+        ordered: [
+          "Prepare before opening: verify eligibility, total post-degree work hours, research courses, outline evidence, and contact referees.",
+          "Submit the online Chevening application between 4 August and 6 October 2026; the system closes at 11:00 UTC.",
+          "Apply separately to the three selected universities and work toward unconditional admission.",
+          "Eligibility sifting begins from October 2026, followed by independent reading committee assessments from mid-October through January 2027.",
+          "Interview shortlists are expected in mid-February 2027.",
+          "Interviews take place at British embassies and high commissions during March and April 2027.",
+          "Shortlisted candidates upload photo ID, degree certificate, and two reference letters at least seven working days before interview.",
+          "Interview results are expected from mid-June 2027.",
+          "Successful candidates submit at least one unconditional eligible university offer by 8 July 2027 at 17:00 BST.",
+          "Final award, visa, travel, and university arrangements follow before study begins in September or October 2027.",
+        ],
+        paragraphs: [
+          "The entire process lasts roughly a year. Save a copy of the submitted form and confirmation because essay and work-history content cannot normally be edited after submission. The system may log inactive users out, so draft original answers separately, save progress frequently, and submit before the final hours in case of connectivity or time-zone mistakes.",
+        ],
+      },
+      {
+        title: "Preparing for the Chevening interview",
+        paragraphs: [
+          "Interviews are conducted in English by a panel at a British embassy or high commission. Preparation should begin by rereading the submitted application and checking what has changed since submission. Be ready to explain examples, decisions, outcomes, course research, career plans, and the intended contribution to the home country clearly and consistently.",
+          "Do not memorise speeches. Practise concise answers that give enough context, identify your own action, and show reflection. Panels can ask follow-up questions about why a particular course is essential, how a plan will be implemented, what obstacles exist, how relationships are maintained, or what was learned when leadership did not produce the expected result.",
+          "Bring the perspective of a future scholar, not a scholarship collector. Show that you understand the academic intensity of a one-year Master's, the two-year return commitment, the purpose of the Chevening community, and the practical next steps after study. Honest evidence and a coherent plan are more persuasive than exaggerated claims of changing an entire country alone.",
+        ],
+      },
+      {
+        title: "Common reasons applications fail",
+        bullets: [
+          "Counting work completed before the undergraduate degree toward the required 2,800 hours",
+          "Missing the 6 October deadline because of an incorrect local-time conversion",
+          "Choosing a part-time, online, research, PhD, or otherwise ineligible course",
+          "Assuming the Chevening form also applies to the universities",
+          "Listing responsibilities instead of evidence of leadership and influence",
+          "Writing generic UK or university praise without linking course content to a career plan",
+          "Presenting ambitious goals without realistic steps, partners, beneficiaries, or a return-home pathway",
+          "Using copied, paid, or AI-generated essay answers",
+          "Providing inconsistent dates or inflated work hours",
+          "Choosing referees late or missing the seven-working-day pre-interview upload deadline",
+          "Failing to obtain an unconditional offer for an eligible listed course by 8 July 2027",
+          "Relying on old third-party instructions instead of the current official country page and guidance",
+        ],
+      },
+      {
+        title: "Final preparation checklist",
+        ordered: [
+          "Confirm citizenship, residence, education timing, return commitment, employment exclusions, and prior UK funding against official eligibility rules.",
+          "Calculate at least 2,800 truthful post-degree work hours and document each employment period.",
+          "Select three eligible autumn-start, full-time, UK-based taught Master's courses that support one coherent goal.",
+          "Develop specific evidence for leadership, relationship-building, course fit, and short-, medium-, and long-term career plans.",
+          "Choose two suitable referees and confirm that they can provide English letters if you reach interview.",
+          "Complete every online form section accurately and submit before 6 October 2026 at 11:00 UTC.",
+          "Apply separately to the universities early and satisfy admission and English-language conditions.",
+          "If shortlisted, upload the required photo ID, degree certificate, and references at least seven working days before interview.",
+          "Prepare for interview using the exact application submitted and current course information.",
+          "If selected, upload one unconditional eligible offer by 8 July 2027 and verify award, visa, housing, and dependant costs before departure.",
+        ],
+      },
+    ],
 
     country: "United Kingdom",
+    continent: "Europe",
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
 
-    deadline: "November",
+    deadline: "6 October 2026 at 11:00 UTC",
     duration: "1 year",
 
     eligibility: [
-      "Citizen of an eligible country or territory",
-      "Meet academic requirements for a UK masters",
-      "Meet work experience and other program requirements",
+      "Citizen of a Chevening-eligible country or territory and meet applicable residence rules",
+      "Undergraduate studies completed at least two years before the application deadline",
+      "At least 2,800 hours of work experience gained after completing the undergraduate degree",
+      "Commit to returning to the country of award for at least two years after the scholarship",
+      "Apply to three different eligible UK Master's courses",
     ],
 
     benefits: [
-      "Tuition fees",
-      "Monthly living allowance",
-      "Travel costs",
-      "Visa and related fees (as applicable)",
+      "Payment of eligible tuition fees",
+      "Monthly living allowance based on study inside or outside London",
+      "Approved economy travel, arrival allowance, departure allowance, and travel top-up",
+      "Entry-clearance visa application cost and up to £75 toward required TB testing",
     ],
 
     applicationProcess: [
-      "Review eligibility and timeline",
-      "Submit online application",
-      "Provide references and documents",
-      "Attend interview if shortlisted",
+      "Verify eligibility and choose three eligible courses",
+      "Submit the Chevening online application by 6 October 2026",
+      "Apply separately to the selected UK universities",
+      "Upload documents and attend an interview if shortlisted",
+      "Submit at least one unconditional offer by 8 July 2027 if selected",
     ],
 
     documents: [
-      "Passport",
-      "Academic transcripts",
-      "References",
-      "Personal statements",
-      "Work history details",
+      "Photo identification",
+      "Official undergraduate degree certificate",
+      "Names and contact details of two referees",
+      "Two English reference letters if shortlisted",
+      "Accurate education and work history details",
+      "Unconditional university offer by the post-interview deadline",
     ],
 
-    applyUrl: "https://www.chevening.org",
-    officialSource: "UK Foreign Commonwealth and Development Office",
+    applyUrl: "https://www.chevening.org/scholarships/",
+    officialSource: "Chevening - UK Foreign, Commonwealth and Development Office",
 
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "daad-epos-scholarship-masters",
-
-    title: "DAAD EPOS Scholarship",
+    title: "DAAD EPOS Scholarship 2027/28: Master's Application Guide",
+    seoTitle: "DAAD EPOS Scholarship 2027/28: Courses, Eligibility and Deadlines",
+    metaDescription: "Prepare for the DAAD EPOS Scholarship 2027/28. Compare eligible Master's courses, course-specific deadlines, €992 stipend, work experience, and documents.",
     overview:
-      "German government scholarship for professionals from developing countries pursuing development-related masters and PhD programs.",
+      "DAAD's Development-Related Postgraduate Courses programme, known as EPOS, funds experienced professionals from eligible developing and emerging countries to complete selected development-related postgraduate courses in Germany. For the 2027/28 intake, applicants must choose from the official EPOS course list and follow the deadline and application route published for that specific course.",
+    introduction:
+      "EPOS is not a scholarship that can be attached to any German Master's degree. Individual scholarships are available only for the courses named in the current DAAD list. A typical applicant has a related Bachelor's degree, far-above-average academic results, at least two years of relevant professional experience, and a credible plan to use the qualification in development-related work after returning home.",
+    summary:
+      "The 2027/28 application cycle is course-specific. Some programmes state a fixed university deadline while others direct candidates to the course website. Applicants may apply for up to three EPOS courses, must keep the same priority order across their forms, and normally submit through the course or university rather than sending an unsolicited application to DAAD.",
+    contentSections: [
+      {
+        title: "DAAD EPOS Master's scholarship at a glance",
+        facts: [
+          { label: "Study destination", value: "Selected universities in Germany" },
+          { label: "Target group", value: "Professionals from eligible developing and emerging countries" },
+          { label: "Study level", value: "Selected development-related postgraduate courses" },
+          { label: "Professional experience", value: "At least two years of relevant experience" },
+          { label: "Graduate stipend", value: "€992 per month under the current call" },
+          { label: "Funding duration", value: "12-42 months depending on the programme" },
+          { label: "Course choices", value: "Up to three, ranked consistently" },
+          { label: "Deadline", value: "Different for every listed course" },
+        ],
+        paragraphs: [
+          "EPOS supports practical postgraduate education in areas connected to sustainable development and global challenges. The list can include programmes in economics, development cooperation, engineering, regional planning, agriculture, environmental sciences, public health, social sciences, education, and media. The available courses can change between intakes, so an older brochure is not a safe eligibility list.",
+          "The university first considers academic and programme fit, while DAAD scholarship selection also examines professional experience, development-related motivation, and future responsibility. Admission to a listed course is necessary for the award, but applicants should follow that course's EPOS instructions rather than seeking unrelated pre-admission unless the programme tells them to do so.",
+        ],
+      },
+      {
+        title: "What the EPOS scholarship covers",
+        bullets: [
+          "Monthly payment of €992 for graduate-level scholarship holders under the current call",
+          "Payments toward health, accident, and personal liability insurance",
+          "Travel allowance unless travel is funded by the home country or another source",
+          "Possible monthly rent subsidy under qualifying circumstances",
+          "Possible monthly allowance for accompanying family members under qualifying circumstances",
+          "A preparatory German-language course, normally lasting two to six months where provided",
+        ],
+        paragraphs: [
+          "The scholarship database classifies funding by academic level and lists €992 monthly for graduates. Do not confuse that amount with the higher doctoral rate or assume an online article's old figure will apply to the final award. The award letter and current DAAD rules control the amount, duration, insurance contribution, travel support, and any additional benefits.",
+          "Additional family or rent support is conditional, not automatic. Applicants travelling with dependants should investigate visas, insurance, childcare, housing, and the fact that a preparatory German course may begin before the academic programme. Make a realistic relocation budget and retain emergency funds for deposits and expenses that arise before the first payment.",
+          "German public universities often charge no general tuition for many programmes, but semester contributions and programme-specific fees can still apply. EPOS applicants must read the selected course's finance page. Scholarship coverage should never be interpreted as permission to ignore enrolment charges, deposits, field trips, equipment, or other costs not expressly included in the award.",
+        ],
+      },
+      {
+        title: "Who is eligible for EPOS",
+        paragraphs: [
+          "Applicants must come from a country included in the current EPOS list of eligible developing countries. Citizenship alone is not the entire assessment: the programme is designed for professionals whose education and experience connect to development needs and who are expected to apply their training in their professional environment after study.",
+          "The typical scholarship holder works for a public authority, state organisation, private company, civil-society organisation, research institution, or another employer in a developing country and contributes to planning or implementing projects with technological, economic, social, environmental, health, or policy relevance. Job title matters less than the demonstrated relationship between work, the chosen course, and future impact.",
+          "Candidates normally hold a Bachelor's degree in a related subject, commonly a four-year qualification, with far-above-average results. DAAD describes the typical academic profile as being in the upper third. Each course can set more specific prerequisite subjects, degree length, grades, professional licences, quantitative preparation, or admission rules, and those requirements must be met in addition to the general scholarship criteria.",
+          "At least two years of relevant professional experience is a central EPOS requirement. The experience should normally have been obtained after the first degree and must relate meaningfully to the selected programme. A generic employment history reaching two calendar years is not necessarily competitive if the applicant cannot explain responsibilities, progression, results, and development relevance.",
+          "Academic degrees should generally not be more than six years old at the application deadline, subject to the current call and possible stated exceptions. Applicants who have resided in Germany for longer than the allowed period at the application deadline may also be ineligible. Verify both rules in the live scholarship database because personal circumstances and programme wording require exact review.",
+        ],
+      },
+      {
+        title: "How to choose an eligible EPOS course",
+        paragraphs: [
+          "Begin with the official 2027/28 EPOS deadline list and programme information, not a general search for English-taught Master's degrees in Germany. If a course is absent from the current list, admission to it does not make it eligible for this scholarship. A course that participated in an earlier year may have changed or left the scheme.",
+          "Read each course page for academic prerequisites, required professional background, language scores, intake, length, fees, application portal, certification rules, and deadline. Some programmes are taught in English, some in German, and some use more than one language. The general DAAD call cannot replace a course's precise admission criteria.",
+          "Compare curriculum with actual professional needs. Identify modules, laboratories, fieldwork, research groups, practical projects, or regional specialisations that solve a defined skills gap. EPOS is development-oriented, so course selection should form a logical bridge between prior work and a realistic contribution after graduation rather than merely provide an opportunity to move to Germany.",
+          "Applicants may normally apply for a maximum of three courses. If choosing more than one, list them in priority order in the DAAD application form and keep that order consistent across all submitted applications and supporting documents. Explain why the choices form a coherent plan. Three unrelated subjects can make the motivation appear unfocused.",
+        ],
+      },
+      {
+        title: "Deadlines and where to apply",
+        paragraphs: [
+          "There is no single EPOS deadline. DAAD publishes a table for the intake, and many entries direct applicants to the course website for the live date. Deadlines usually fall well before the programme begins and may differ even between courses at the same university. Record the date, time zone, portal, and document-delivery method separately for every choice.",
+          "Applications are generally sent to the selected postgraduate course or university using its prescribed process. Documents sent directly to DAAD without instructions may not be forwarded to the course. Some programmes use an online university portal, others request a course-specific platform or additional documents. Follow the current programme page line by line.",
+          "If applying to two or three courses, each recipient may need a complete application package. Do not assume one upload is distributed automatically. Use a tracker showing portal account, deadline, referee status, certified copies, language results, submission confirmation, and any physical-delivery requirement for each programme.",
+          "Selection commonly runs from late October into March, but individual communication schedules vary. Monitor the email address used in the form, including spam folders, and respond promptly to requests for clarification, interviews, additional admission steps, or original documents.",
+        ],
+      },
+      {
+        title: "Documents commonly required",
+        bullets: [
+          "Signed DAAD application form with courses in consistent priority order",
+          "Current curriculum vitae in the format required by the call",
+          "Motivation letter explaining academic, professional, and development objectives",
+          "Letter of recommendation from the current employer with official letterhead and signature where required",
+          "Certificates of employment proving at least two years of relevant professional experience",
+          "Where possible, employer confirmation of re-employment after returning home",
+          "Bachelor's degree certificate and complete academic transcripts",
+          "Explanation of the institution's grading system when requested",
+          "Certified translations for documents not in an accepted language",
+          "English or German language certificate meeting the chosen course's rule",
+          "Passport copy and any course-specific application form or evidence",
+        ],
+        paragraphs: [
+          "The exact checklist belongs to the course and current call. Some programmes request certified copies at application; others accept scans initially. Some need additional essays, research concepts, proof of quantitative modules, portfolios, or application portal entries. Submitting the general DAAD documents without the course-specific items can still produce an incomplete application.",
+          "Employment certificates should establish dates, position, responsibilities, and relevance rather than merely state that a person worked for an organisation. The employer recommendation should evaluate professional performance and potential using concrete evidence. Applicants should not write a flattering generic letter and ask a supervisor to sign it without ensuring that it is accurate and responsive to the official guidance.",
+          "Keep names, dates, employers, grades, and course priorities consistent across the CV, application form, motivation letter, certificates, and portals. If there is a career gap, grading anomaly, name variation, or non-standard degree structure, provide a brief factual explanation where the application permits instead of leaving reviewers to guess.",
+        ],
+      },
+      {
+        title: "Language requirements and German preparation",
+        paragraphs: [
+          "EPOS has no universal IELTS or TOEFL score. Every course sets its own teaching language, accepted tests, score thresholds, validity period, and exemption policy. A medium-of-instruction letter is valid only if that specific programme accepts it. Book a recognised test early enough to receive an official result before the course deadline.",
+          "For German-taught programmes, applicants normally need the German proficiency specified by the course. For English-taught programmes, DAAD may still fund a preparatory German course, often two to six months, before academic study. This training supports daily life and integration but should not be confused with permission to arrive without the required language evidence for admission.",
+          "A language course can move the scholarship start and arrival date earlier than the university semester. Selected applicants should confirm attendance obligations, housing, insurance, visa dates, family timing, and whether the language phase occurs in the same city as the degree programme.",
+        ],
+      },
+      {
+        title: "Writing a development-focused motivation letter",
+        paragraphs: [
+          "A useful motivation letter connects four elements: the development problem the applicant understands through experience, evidence of relevant academic and professional preparation, the specific learning offered by the selected course, and a feasible plan to apply that learning after returning. It is not enough to say that Germany has excellent education or that the applicant wants to help society.",
+          "Describe a defined issue at organisational, local, national, or regional level. Explain your role, what you have already attempted, what limitations remain, and which course components address those limitations. Use specific modules, methods, or practical elements rather than copying promotional sentences from the university website.",
+          "Future plans should identify likely responsibilities, employers or partners, beneficiaries, and a realistic sequence of action. A credible plan may involve improving a public service, designing evidence-based policy, strengthening an institution, transferring technical practice, leading a programme, conducting applied research, or training colleagues. Avoid promises to solve an entire national problem immediately after graduation.",
+          "When applying to several courses, follow the current instruction on motivation letters and course priority. The choices should reinforce the same professional direction, while any required course-specific explanation should show that the applicant understands differences between the programmes. Never submit mismatched university names or contradictory priorities.",
+        ],
+      },
+      {
+        title: "How selection works and what makes an application competitive",
+        paragraphs: [
+          "EPOS selection combines course admission and scholarship assessment. Reviewers examine academic quality, relevant experience, language readiness, programme fit, development motivation, social responsibility, and the likelihood that the applicant will initiate or support change after training. Meeting minimum eligibility does not guarantee nomination or funding.",
+          "Strong applications show progression and outcomes. Instead of listing duties, quantify or explain how work improved a process, informed a decision, served a community, managed resources, reduced risk, built capacity, or changed professional practice. Evidence should be proportionate and verifiable; exaggerated impact can undermine trust.",
+          "A university may contact shortlisted applicants, request an interview, or ask for additional documents. Prepare to discuss technical readiness, professional challenges, course choice, return plans, and how knowledge will be transferred. An answer focused only on personal salary or immigration opportunities conflicts with the programme's development purpose.",
+          "Admission and scholarship results can arrive at different stages. Read communications carefully to distinguish course admission, EPOS nomination, DAAD approval, reserve status, and a self-funded offer. Do not resign from employment, book travel, or make non-refundable payments until the responsible institution provides formal confirmation and required conditions are satisfied.",
+        ],
+      },
+      {
+        title: "Planning for visa, relocation, and study in Germany",
+        paragraphs: [
+          "Selected scholars normally use the award and admission documents for the appropriate German visa process, but the applicant remains responsible for applying through the competent mission and supplying requested documents. Passport validity, appointment availability, certified records, insurance, and family documentation can affect timing, so follow official consular instructions early.",
+          "Ask when the first scholarship payment begins and what expenses must be paid before arrival. Budget for document certification, visa-related travel, deposits, temporary accommodation, semester contributions, local transport, and essential setup. Housing shortages are common in many university cities, and a monthly stipend does not remove the need to begin searching promptly through legitimate channels.",
+          "Scholars should understand academic progression, attendance, language-course obligations, changes of programme, outside employment, travel, and reporting conditions in their award documents. The scholarship is tied to the selected course and intended purpose; it is not portable funding for an unrelated degree.",
+        ],
+      },
+      {
+        title: "Common EPOS application mistakes",
+        bullets: [
+          "Applying to a German course that is not on the current EPOS list",
+          "Using a general August-October estimate instead of the selected course's exact deadline",
+          "Sending documents to DAAD when the course requires submission through its university portal",
+          "Claiming two years of work without proving relevance, dates, responsibilities, and post-degree timing",
+          "Choosing up to three unrelated courses or changing their priority order between forms",
+          "Assuming one application is automatically forwarded to several universities",
+          "Submitting a generic motivation letter with no defined development problem or return plan",
+          "Missing an employer recommendation, work certificate, certification, translation, or grading explanation",
+          "Using a language waiver or score the selected course does not accept",
+          "Confusing admission with final DAAD scholarship approval",
+          "Relying on an old EPOS brochure, deadline table, stipend amount, or third-party checklist",
+          "Paying an unofficial agent for an application that should follow the university's published process",
+        ],
+      },
+      {
+        title: "Final EPOS 2027/28 checklist",
+        ordered: [
+          "Confirm that your country appears on the current eligible-country list.",
+          "Verify degree age, academic level, residence history, and at least two years of relevant professional experience.",
+          "Choose only courses appearing on the official 2027/28 EPOS list.",
+          "Compare curriculum, prerequisites, language, duration, fees, and career relevance.",
+          "Record the exact application route, deadline, and time zone for each course.",
+          "If applying to multiple courses, rank no more than three and keep the order consistent everywhere.",
+          "Prepare the DAAD form, CV, development-focused motivation, employer recommendation, work certificates, academic records, translations, and language proof.",
+          "Complete every university or course-specific form and retain submission confirmation.",
+          "Monitor communications through the selection period and respond to interviews or document requests.",
+          "Before accepting, verify the formal award, stipend, insurance, travel, German course, visa, housing, family costs, and programme conditions.",
+        ],
+      },
+    ],
 
     country: "Germany",
+    continent: "Europe",
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
 
-    deadline: "August-October (program dependent)",
-    duration: "1-3 years",
+    deadline: "Course-specific for the 2027/28 intake; check the official EPOS deadline list",
+    duration: "12-42 months depending on the selected programme",
 
     eligibility: [
-      "From an eligible developing country",
-      "Relevant academic degree",
-      "Professional experience (often required)",
+      "Citizen of a country included in the current EPOS eligible-country list",
+      "Related Bachelor's degree with far-above-average academic performance",
+      "At least two years of relevant professional experience",
+      "Development-related motivation and a credible plan to create change after study",
+      "Meet every admission and language requirement of the selected EPOS course",
     ],
 
     benefits: [
-      "Monthly stipend",
-      "Health insurance",
-      "Travel allowance",
-      "Additional support depending on program",
+      "€992 monthly payment for graduate scholarship holders under the current call",
+      "Payments toward health, accident, and personal liability insurance",
+      "Travel allowance unless covered by another funding source",
+      "Possible rent, family, and preparatory German-language support under applicable conditions",
     ],
 
     applicationProcess: [
-      "Select an EPOS course",
-      "Prepare required documents",
-      "Apply directly to the course or university",
-      "Follow DAAD selection process",
+      "Select up to three courses from the current EPOS list and rank them consistently",
+      "Check each course's exact deadline, portal, and admission requirements",
+      "Submit a complete application to the course or university as instructed",
+      "Complete any interview or additional selection steps",
+      "Wait for course admission, nomination, and formal DAAD scholarship confirmation",
     ],
 
     documents: [
-      "CV",
-      "Motivation letter",
-      "Academic transcripts",
-      "Proof of work experience",
-      "Language proficiency certificate",
+      "DAAD application form and current CV",
+      "Development-focused motivation letter",
+      "Employer recommendation and certificates proving relevant work experience",
+      "Bachelor's certificate, transcripts, grading information, and required translations",
+      "Accepted English or German language certificate",
+      "Any additional course-specific forms and evidence",
     ],
 
-    applyUrl: "https://www.daad.de/en",
+    applyUrl: "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50076777",
     officialSource: "DAAD - German Academic Exchange Service",
 
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "daad-epos-scholarship-phd",
-
-    title: "DAAD EPOS Scholarship",
+    title: "DAAD EPOS PhD Scholarship 2027/28: Complete Guide",
+    seoTitle: "DAAD EPOS PhD Scholarship 2027/28: Eligibility and Application",
+    metaDescription: "Prepare for the exceptional DAAD EPOS PhD options for 2027/28. Check listed doctoral programmes, €1,400 stipend, research fit, work experience, and deadlines.",
     overview:
-      "German government scholarship for professionals from developing countries pursuing development-related masters and PhD programs.",
+      "DAAD's Development-Related Postgraduate Courses programme supports doctoral study only in exceptional cases through specific PhD programmes included in the current EPOS list. It is not general funding for any doctorate in Germany. Applicants for 2027/28 must identify a listed doctoral option, satisfy that programme's research and admission criteria, and use its exact application route and deadline.",
+    introduction:
+      "The EPOS doctoral route is designed for highly qualified professionals and researchers from eligible developing and emerging countries whose work, proposed research, and future plans address development challenges. The current call lists a doctoral stipend of €1,400 per month from February 2026, with insurance and travel support, but funding depends on programme nomination and final DAAD approval.",
+    summary:
+      "Treat this opportunity as a small group of programme-specific PhD competitions rather than one DAAD PhD form. Verify that a doctoral programme appears in the official 2027/28 list, then check its research fields, Master's requirements, professional-experience rule, proposal format, supervisor process, language evidence, documents, and deadline. If your intended doctorate is not listed, search the DAAD database for a different doctoral funding programme.",
+    contentSections: [
+      {
+        title: "EPOS doctoral funding at a glance",
+        facts: [
+          { label: "Availability", value: "Exceptional doctoral cases through listed EPOS programmes only" },
+          { label: "Study destination", value: "Participating institutions in Germany" },
+          { label: "Target group", value: "Qualified professionals from eligible developing and emerging countries" },
+          { label: "Academic background", value: "Relevant Master's degree and programme-specific research preparation" },
+          { label: "Professional experience", value: "Normally at least two years of relevant experience" },
+          { label: "Doctoral stipend", value: "€1,400 per month from February 2026 under the current call" },
+          { label: "Typical listed duration", value: "Up to approximately 40-42 months, programme-specific" },
+          { label: "Deadline", value: "Set by the individual doctoral programme" },
+        ],
+        paragraphs: [
+          "EPOS exists to strengthen development-related professional and institutional capacity. Its doctoral options are therefore structured programmes in selected fields, not an open invitation to propose any research topic at any German university. The official intake list is the controlling source for whether a PhD route participates that year.",
+          "A doctorate appearing in an older EPOS brochure may be absent, paused, or scheduled for a different intake. Some programmes recruit every two years or revise their research themes. Never begin from an unofficial list and assume the opportunity remains open; confirm the programme name, degree, intake, and deadline in the current DAAD table and host-university page.",
+        ],
+      },
+      {
+        title: "What the doctoral scholarship covers",
+        bullets: [
+          "Monthly payment of €1,400 for doctoral candidates from February 2026 under the current call",
+          "Payments toward health, accident, and personal liability insurance",
+          "Travel allowance unless travel is funded by the home country or another source",
+          "Possible monthly rent subsidy under qualifying circumstances",
+          "Possible monthly allowance for accompanying family members under qualifying circumstances",
+          "Potential preparatory German-language course where included in the award",
+        ],
+        paragraphs: [
+          "The doctoral payment differs from the €992 graduate rate used for Master's-level EPOS scholars. Applicants should quote neither amount as permanent: DAAD can revise rates, and the formal award letter controls the final financial terms. The scholarship period is tied to the selected programme and may be reviewed according to academic progress.",
+          "Insurance and travel contributions make the package substantial, but fully funded does not mean every personal expense is reimbursed. Family travel and living costs, housing deposits, document certification, equipment, fieldwork beyond the approved budget, and expenses before the first payment may remain the scholar's responsibility. Additional rent or family support is conditional and should not be assumed during application planning.",
+          "Doctoral research can require conferences, data collection, laboratory consumables, software, field travel, or publication charges. Ask the programme which research costs it covers separately from the personal stipend and what approval is required. A scientifically suitable project can become impractical if its data and fieldwork budget is undefined.",
+        ],
+      },
+      {
+        title: "Who should consider the EPOS PhD route",
+        paragraphs: [
+          "The programme is intended for applicants from countries on the current EPOS eligible-country list. A strong candidate usually has a relevant Master's degree, excellent academic results, substantial professional or research experience, and a clear relationship between the proposed doctorate and a development challenge affecting the country or region of origin.",
+          "EPOS generally expects at least two years of relevant professional experience. For doctoral programmes, experience may come from public institutions, universities, research organisations, civil society, development agencies, or private-sector roles connected to the research field. Each doctoral programme decides how it interprets relevance and whether additional research or teaching experience is required.",
+          "The typical EPOS profile combines academic quality with social responsibility. A proposal should not merely identify an interesting literature gap; it should explain why the problem matters, which stakeholders or systems are affected, how rigorous research can contribute, and how the applicant expects to use or transfer the resulting expertise after the doctorate.",
+          "Applicants should also check degree-age and residence restrictions in the live call. DAAD commonly expects the most recent academic degree to fall within a stated period and limits eligibility for people who have already lived in Germany beyond a specified duration at the deadline. Do not infer an exception from another DAAD programme.",
+        ],
+      },
+      {
+        title: "EPOS PhD is not the same as a general DAAD doctoral scholarship",
+        paragraphs: [
+          "DAAD operates several funding schemes for doctoral candidates. EPOS is distinctive because it is tied to named development-related postgraduate programmes and experienced professionals from eligible countries. A general individual doctorate, a cotutelle arrangement, a short research visit, or a doctoral project at an unlisted institute may belong under a different DAAD call.",
+          "Before preparing documents, ask one decisive question: does the official 2027/28 EPOS list show this exact programme as a PhD? If not, do not label the proposed funding as EPOS. Use the DAAD scholarship database to search by country, academic status, subject, and intended activity, then read the separate call that actually covers the project.",
+          "This distinction prevents a common and costly error: contacting a German professor, receiving informal interest, and assuming an EPOS application can be added later. Supervisor interest is valuable only when it fits the selected programme's admissions and scholarship process. EPOS funding cannot normally be transferred to an unrelated department or self-designed host.",
+        ],
+      },
+      {
+        title: "How to find an eligible doctoral programme",
+        paragraphs: [
+          "Open the official EPOS deadline list for the intended intake and filter the degree column for PhD entries. Then visit the host programme's current application page. Read its thematic areas, participating institutes, faculty, research groups, degree regulations, structured training, fieldwork expectations, cohort schedule, and funding instructions.",
+          "Some doctoral options may accept proposals only within advertised themes or supervisor expertise. Others may ask candidates to indicate faculty alignment without independently securing formal supervision. Follow the programme's language precisely: unsolicited supervisor emails can be ineffective when selection is centralised, while failing to contact a required supervisor can make another application incomplete.",
+          "Compare the programme with your methodological preparation. A development economics doctorate may require advanced econometrics; an environmental or resource programme may expect quantitative modelling, laboratory methods, spatial analysis, or interdisciplinary experience. A compelling social objective cannot replace the academic tools needed to execute the research.",
+          "Check whether the programme recruits annually or in alternate years. The published 2027/28 list may identify a later intake for some options or direct applicants to the programme website. Only describe an application as open when the official programme portal is accepting submissions for the matching cohort.",
+        ],
+      },
+      {
+        title: "Designing a competitive research proposal",
+        paragraphs: [
+          "Use the exact proposal structure and page limit published by the doctoral programme. A strong proposal normally defines the research problem, establishes the relevant literature and gap, states focused questions or hypotheses, explains the conceptual framework, details methods and data, addresses feasibility and ethics, provides a work plan, and identifies the expected scientific and development contribution.",
+          "The research problem should be specific enough for a doctorate and important enough to justify sustained study. Replace broad ambitions such as ending poverty or solving climate change with a bounded question involving a defined population, system, geography, mechanism, or policy problem. Explain what existing research cannot yet answer.",
+          "Methods must match the question. Identify likely data sources, sampling or case selection, analytical techniques, validation, limitations, and access requirements. If fieldwork depends on government records, vulnerable participants, laboratories, or cross-border travel, discuss permissions and practical risk. Reviewers need confidence that the project can be completed within the funded period.",
+          "Development relevance should emerge from the research logic, not from adding the word sustainable to the title. Describe how findings could inform policy, institutions, technology, professional practice, capacity, or future research, while avoiding guarantees that evidence alone will create change. Identify plausible users of the work and how knowledge could reach them.",
+          "The proposal must be the applicant's own scholarly work and correctly cite sources. Programmes may screen for plagiarism. Fabricated citations, copied proposals, undisclosed ghostwriting, and generic AI-produced text can destroy credibility and may lead to rejection. Seek academic feedback on reasoning and feasibility while retaining authorship and verifying every reference.",
+        ],
+      },
+      {
+        title: "Documents commonly requested",
+        bullets: [
+          "Completed DAAD and programme-specific application forms",
+          "Current curriculum vitae in the requested format",
+          "Development-focused motivation letter",
+          "Detailed original research proposal following programme rules",
+          "Master's and Bachelor's degree certificates and complete transcripts",
+          "Explanation of the grading system and required certified translations",
+          "Certificates proving at least two years of relevant professional experience",
+          "Recommendation from the current employer where required",
+          "Academic recommendation letters meeting programme instructions",
+          "Accepted English or German language evidence",
+          "Passport copy and other identity or country-eligibility evidence",
+          "Research publications, thesis abstract, writing sample, or supervisor evidence when requested",
+        ],
+        paragraphs: [
+          "The host programme's checklist has priority over a generic list. Doctoral applications often require more research evidence than Master's applications, including a Master's thesis summary, publication list, methodological writing sample, or proposal. Requirements for certified copies, translations, referee submission, signatures, and file naming vary.",
+          "Professional certificates should prove employment dates, role, responsibilities, and relevance. Academic references should evaluate research ability rather than offer only personal praise. Give referees the programme description, proposal, CV, deadline, and submission method early, but do not write misleading letters for them.",
+          "Ensure that proposed research dates, degree titles, employment periods, publications, and institutional names remain consistent across every file and portal. Clearly mark co-authored publications and describe your contribution truthfully. Reviewers can verify academic outputs, and inflated authorship claims are a serious integrity concern.",
+        ],
+      },
+      {
+        title: "Language and academic preparation",
+        paragraphs: [
+          "There is no universal EPOS doctoral IELTS score. The listed PhD programme defines accepted tests, minimum scores, component requirements, validity, and exemption rules. An English-medium Master's letter is sufficient only when the programme explicitly accepts it. Arrange testing well before the deadline.",
+          "For German-taught study, the current DAAD call refers to the proficiency required for admission, such as DSH 2 or TestDaF level 4 where applicable, even when a preparatory German course is funded. An introductory language course cannot replace the entry standard for a doctoral programme conducted in German.",
+          "English-taught researchers still benefit from German for administration, field access, teaching, workplace communication, and daily life. If DAAD provides preparatory training, confirm its duration and location because it may require arrival months before doctoral enrolment and can affect housing and family plans.",
+        ],
+      },
+      {
+        title: "Application and selection process",
+        ordered: [
+          "Confirm that the exact PhD programme appears in the official 2027/28 EPOS list.",
+          "Read the programme's research themes, eligibility, supervisor policy, proposal rules, documents, portal, and deadline.",
+          "Assess country eligibility, degree timing, residence history, professional experience, language readiness, and methodological fit.",
+          "Develop the research proposal and obtain appropriate academic feedback well before submission.",
+          "Prepare DAAD forms, motivation, academic records, professional evidence, references, and all programme-specific materials.",
+          "Submit through the host programme or university exactly as instructed, not through an assumed general DAAD route.",
+          "Complete interviews, research presentations, written assessments, or supervisor discussions if shortlisted.",
+          "Wait for programme admission or nomination and final DAAD scholarship confirmation as separate decisions.",
+          "After a formal award, complete visa, enrolment, research, ethics, housing, insurance, and arrival requirements.",
+        ],
+        paragraphs: [
+          "Selection can involve academic reviewers at the university and final scholarship review by DAAD. Committees assess academic record, proposal quality and feasibility, research fit, professional experience, language, development motivation, and future contribution. Minimum eligibility never guarantees nomination in a small doctoral cohort.",
+          "An interview may test the research problem, literature, method, data access, ethical risks, programme fit, and career plans. Prepare to defend choices and acknowledge limitations. Changing the entire proposal whenever challenged suggests weak ownership; refusing to recognise any limitation suggests weak research judgement.",
+        ],
+      },
+      {
+        title: "Planning the doctorate and return impact",
+        paragraphs: [
+          "Create a realistic research timeline covering coursework, proposal refinement, ethics review, data access, collection, analysis, writing, conferences, publications, and defence. Include contingency time for visas, field delays, unavailable data, recruitment problems, or equipment access. A 40-month programme can still be demanding when fieldwork spans countries.",
+          "Discuss supervision expectations before accepting. Understand meeting frequency, committee structure, progress reviews, publication expectations, teaching duties, data ownership, authorship, research integrity, and the process for resolving supervisory problems. The programme's structured support matters as much as the reputation of one professor.",
+          "EPOS expects graduates to support development processes in their professional environment. Build a return and knowledge-transfer plan that names plausible institutions, networks, collaborators, or teaching and policy channels. This can evolve during the doctorate, but it should begin as more than a promise to return and become a professor or leader.",
+        ],
+      },
+      {
+        title: "Visa, family, housing, and financial preparation",
+        paragraphs: [
+          "The successful applicant remains responsible for completing the appropriate German visa process using official award and admission documents. Start by checking the competent German mission's instructions, passport validity, appointment availability, family-document rules, and any country-specific academic verification process.",
+          "Ask the programme when funding begins and whether the first payment arrives before or after relocation. Budget for certification, travel to visa appointments, deposits, temporary accommodation, semester contributions, local registration, and research setup. Never send housing deposits through unverified channels.",
+          "Applicants considering accompanying family should verify visa eligibility, proof requirements, health insurance, childcare or schooling, housing size, and the limits of conditional family allowances. A doctoral award is primarily calculated for the scholar; a family's practical budget needs a separate assessment.",
+        ],
+      },
+      {
+        title: "Common EPOS PhD application mistakes",
+        bullets: [
+          "Treating EPOS as funding for any PhD or any German supervisor",
+          "Applying to a doctoral programme that appeared only in an older intake list",
+          "Calling an opportunity open before the host programme opens its matching portal",
+          "Using a general DAAD deadline instead of the exact doctoral programme deadline",
+          "Submitting directly to DAAD when the host programme manages applications",
+          "Proposing a broad development topic without a researchable question and feasible method",
+          "Ignoring the programme's advertised themes, supervisor process, or methodological expectations",
+          "Claiming professional experience without proof of dates, responsibilities, and relevance",
+          "Using copied, fabricated, ghostwritten, or unverifiable proposal material",
+          "Assuming admission, nomination, and final scholarship approval are the same decision",
+          "Confusing the doctoral stipend with the lower graduate-level rate",
+          "Making irreversible employment or travel commitments before receiving a formal award",
+        ],
+      },
+      {
+        title: "Final doctoral application checklist",
+        ordered: [
+          "Locate the exact PhD entry in the official EPOS list for 2027/28.",
+          "Confirm that the programme is accepting applications for the intended cohort.",
+          "Verify eligible country, Master's background, degree age, residence, work experience, language, and research-field fit.",
+          "Follow the programme's instructions on supervisor contact and research themes.",
+          "Write an original, cited, methodologically feasible proposal within the required format.",
+          "Prepare DAAD and university forms, CV, motivation, degrees, transcripts, translations, professional evidence, references, language proof, and research outputs.",
+          "Submit through the correct portal before the course-specific deadline and retain confirmation.",
+          "Prepare to defend the proposal and development plan in an interview or research presentation.",
+          "Distinguish admission and programme nomination from final DAAD funding approval.",
+          "Before accepting, confirm stipend, research costs, duration, progress rules, supervision, visa, housing, insurance, family costs, and return plans.",
+        ],
+      },
+    ],
 
     country: "Germany",
+    continent: "Europe",
     degreeLevel: "PhD",
     fundingType: "Fully Funded",
 
-    deadline: "August-October (program dependent)",
-    duration: "1-3 years",
+    deadline: "Programme-specific; doctoral study is available only through listed 2027/28 EPOS options",
+    duration: "Up to approximately 40-42 months depending on the listed doctoral programme",
 
     eligibility: [
-      "From an eligible developing country",
-      "Relevant academic degree",
-      "Professional experience (often required)",
+      "Citizen of a country included in the current EPOS eligible-country list",
+      "Relevant Master's degree with strong academic and research preparation",
+      "Normally at least two years of relevant professional experience",
+      "Original feasible research proposal aligned with a listed doctoral programme",
+      "Development-related motivation and a credible return or knowledge-transfer plan",
     ],
 
     benefits: [
-      "Monthly stipend",
-      "Health insurance",
-      "Travel allowance",
-      "Additional support depending on program",
+      "€1,400 monthly payment for doctoral candidates from February 2026 under the current call",
+      "Payments toward health, accident, and personal liability insurance",
+      "Travel allowance unless covered by another funding source",
+      "Possible rent, family, and preparatory German-language support under applicable conditions",
     ],
 
     applicationProcess: [
-      "Select an EPOS course",
-      "Prepare required documents",
-      "Apply directly to the course or university",
-      "Follow DAAD selection process",
+      "Find a PhD programme in the current EPOS intake list",
+      "Follow its research, supervisor, document, portal, and deadline instructions",
+      "Submit the complete application to the host programme or university",
+      "Complete any interview, proposal defence, or additional assessment",
+      "Wait for programme nomination and formal DAAD scholarship confirmation",
     ],
 
     documents: [
-      "CV",
-      "Motivation letter",
-      "Academic transcripts",
-      "Proof of work experience",
-      "Language proficiency certificate",
+      "DAAD and programme-specific application forms",
+      "CV, development-focused motivation letter, and original research proposal",
+      "Bachelor's and Master's certificates, transcripts, and required translations",
+      "Professional-experience certificates and requested recommendations",
+      "Accepted language proof and programme-specific research evidence",
     ],
 
-    applyUrl: "https://www.daad.de/en",
+    applyUrl: "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50076777",
     officialSource: "DAAD - German Academic Exchange Service",
 
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "turkiye-burslari-scholarship-bachelors",
-
-    title: "Turkiye Burslari Scholarship",
+    title: "Türkiye Scholarships 2027: Bachelor's Application Guide",
+    seoTitle: "Türkiye Scholarships 2027 for Bachelor's Students: Complete Guide",
+    metaDescription: "Prepare for Türkiye Scholarships 2027 undergraduate applications. Check the expected 10 January–20 February window, eligibility, 4,500 TL stipend, documents, and interview.",
     overview:
-      "Turkish government scholarship covering tuition accommodation and monthly stipend for international students.",
+      "Türkiye Scholarships is a competitive government-funded programme that combines an undergraduate scholarship with placement at a participating Turkish university. The annual general application period runs from 10 January to 20 February. The 2027 competition is currently pre-open, so applicants should use the official portal only when the matching cycle is announced.",
+    introduction:
+      "The full-time Bachelor's scholarship currently includes university and department placement, tuition, accommodation, health insurance, a one-year Turkish-language course, a one-time flight ticket at the beginning and after graduation, and a monthly undergraduate stipend of 4,500 TL. Applicants apply free of charge through the Türkiye Scholarships Application System, known as TBBS.",
+    summary:
+      "This scholarship is suitable for strong international school-leavers who meet the age, academic, graduation, nationality, and programme-specific conditions. Selection looks beyond grades: applicants should present consistent academic evidence, informed course choices, purposeful extracurricular or community activity, and a credible explanation of why study in Türkiye supports their future contribution.",
+    contentSections: [
+      {
+        title: "Türkiye Scholarships 2027 at a glance",
+        facts: [
+          { label: "Current status", value: "Pre-open for the 2027 cycle" },
+          { label: "Expected application period", value: "10 January-20 February 2027, subject to official confirmation" },
+          { label: "Study level", value: "Bachelor's degree" },
+          { label: "Application fee", value: "No fee through the official TBBS portal" },
+          { label: "Current undergraduate stipend", value: "4,500 TL per month" },
+          { label: "Placement", value: "Scholarship and university placement are assessed together" },
+          { label: "Turkish preparation", value: "One year for scholarship holders as applicable" },
+          { label: "Results", value: "Normally announced in early August" },
+        ],
+        paragraphs: [
+          "Türkiye Scholarships is administered by the Presidency for Turks Abroad and Related Communities. Unlike scholarships that require admission first, the full-time application allows candidates to select available universities and departments inside the scholarship system. Placement is therefore part of the award process, although applicants must still meet the chosen programme's academic and language requirements.",
+          "The application calendar normally places evaluation in March and April, interviews between April and June, results in early August, initial procedures during August, and travel to Türkiye around September. Dates can change, and special or joint programmes may use different rules, so readers should confirm the 2027 announcement before acting.",
+        ],
+      },
+      {
+        title: "What the Bachelor's scholarship covers",
+        bullets: [
+          "Placement in an eligible university and academic department",
+          "Tuition-fee coverage for the placed programme",
+          "Current monthly undergraduate stipend of 4,500 TL",
+          "Accommodation under the programme's applicable arrangements",
+          "Health insurance",
+          "One year of Turkish-language education",
+          "One-time flight ticket at the beginning of study and after graduation",
+          "Access to academic, cultural, social, and alumni activities",
+        ],
+        paragraphs: [
+          "The package is comprehensive, but students should not assume it removes every personal expense. The stipend is paid in Turkish lira and its purchasing power depends on the city, personal habits, and future economic conditions. Costs such as passport preparation, document translation, local transport beyond available support, clothing, devices, personal travel, and some residence or administrative expenses may need a separate budget.",
+          "Accommodation arrangements can depend on availability and programme rules. Selected students should read their award and placement documents to confirm dormitory procedures, arrival dates, what is included, and whether any alternative arrangement changes financial support. Do not rely on social-media claims about guaranteed private rooms or cash housing allowances.",
+          "Flight support is described as one-time travel at the start of education and upon graduation. It is not an unlimited annual ticket or automatic funding for family travel. The award is for the selected student, so anyone considering travel with relatives must separately assess visas, accommodation, insurance, and living costs.",
+        ],
+      },
+      {
+        title: "General undergraduate eligibility",
+        paragraphs: [
+          "Applications are open internationally under the published nationality rules, except for people who hold Turkish citizenship or otherwise fall within official ineligible categories. Former Turkish citizens and applicants with dual nationality should check the live criteria carefully rather than relying on a simplified all-countries statement.",
+          "Undergraduate applicants are generally expected to be under 21 years of age. Age is assessed using the programme's stated rule and relevant date, not simply the applicant's age when reading this guide. Confirm the 2027 criterion in the official system before investing time in the application.",
+          "The general minimum academic achievement for Bachelor's applicants is commonly 70 percent, while candidates for health sciences such as medicine, dentistry, and pharmacy are generally expected to reach 90 percent. These are eligibility floors, not competitive predictions. Strong programmes can attract applicants with much higher results.",
+          "Applicants must have graduated or be expected to graduate from their current school level before the university enrolment period. Current students already studying in Türkiye at the same education level for which they apply are normally ineligible. Final-year candidates should upload the official expected-graduation evidence requested by TBBS and later provide final records when required.",
+          "Every university department may impose additional subject prerequisites, examination scores, language conditions, portfolios, or professional standards. Passing the scholarship's general percentage and age rules does not guarantee that the system will display every programme or that the candidate qualifies for a specific field.",
+        ],
+      },
+      {
+        title: "Choosing universities and departments",
+        paragraphs: [
+          "Candidates choose from the programmes made available to their profile inside TBBS. The displayed options can depend on nationality, educational background, grades, examination results, language evidence, and programme rules. An institution or department seen by another applicant may not appear for you.",
+          "Research choices before the portal opens. Compare curriculum, teaching language, city, campus, accreditation, facilities, internships, professional recognition, and graduate pathways. For medicine, engineering, architecture, teaching, law, and other regulated professions, investigate whether the Turkish degree will be recognised and what licensing steps apply in the country where you intend to work.",
+          "Do not rank universities only by a general league table. A programme's academic fit, language, laboratory or clinical resources, and recognition can matter more than the institution's overall rank. Think about climate, housing, transport, accessibility, and the cost of living because placement may be outside İstanbul or Ankara.",
+          "Choices should tell a coherent academic story. Selecting unrelated fields merely to increase the number of options can weaken the explanation of purpose. If you are genuinely deciding between related disciplines, explain the common problem or career direction that connects them.",
+        ],
+      },
+      {
+        title: "Teaching language and the Turkish-language year",
+        paragraphs: [
+          "Many Bachelor's programmes are taught in Turkish, while some are taught partly or fully in English or another language. The programme search and university page should state the language. Applicants must satisfy any accepted international language-test requirement attached to the department.",
+          "Scholarship holders generally receive one year of Turkish-language education, including students placed in programmes taught in another language. Turkish proficiency supports university life and social integration, but the preparatory year should not be mistaken for an automatic waiver of a department's English or other entry condition.",
+          "If a programme requires TOEFL, SAT, an international diploma, a national examination, or another credential, upload the accepted result in the format and validity period specified. IELTS or an informal school letter should not be assumed acceptable when the university requests a different test. Requirements visible in TBBS and on the university's current page should be compared.",
+          "Students should be ready for the academic consequences of studying in a new language. A one-year course is intensive. Begin learning Turkish before selection, particularly for fields involving patients, schools, public services, fieldwork, or local internships where practical communication is essential.",
+        ],
+      },
+      {
+        title: "Documents commonly needed",
+        bullets: [
+          "Valid passport, national identity document, or accepted identity evidence",
+          "Recent candidate photograph meeting portal requirements",
+          "National examination results where applicable",
+          "High-school diploma or official temporary graduation certificate",
+          "Current transcript showing completed courses and grades",
+          "International examination results such as SAT, IB, or other credentials when required",
+          "Accepted language-test results when required by selected programmes",
+          "Portfolio, aptitude evidence, or other programme-specific material where applicable",
+          "Awards, certificates, volunteering, projects, and activity evidence relevant to the application",
+        ],
+        paragraphs: [
+          "The official online system determines the exact checklist. Upload legible, complete documents and use certified translations when requested. A cropped screenshot, unofficial grade table, unreadable photo, or missing page can prevent reviewers from confirming eligibility even when the underlying record is strong.",
+          "Enter grades exactly as issued and follow the portal's conversion instructions. Do not invent a percentage or GPA conversion. If the school uses an unusual scale, provide the official explanation when the system allows and ensure the transcript shows the scale or maximum grade.",
+          "Activities should be truthful and evidenced where possible. A small number of sustained contributions is more credible than dozens of vague certificates. Describe what you did, the time involved, the outcome, and what you learned rather than relying on an impressive organisation name.",
+        ],
+      },
+      {
+        title: "How to complete the TBBS application",
+        ordered: [
+          "Create an account only through the official Türkiye Scholarships Application System.",
+          "Verify identity, contact details, nationality, and personal information exactly as shown on official documents.",
+          "Enter education history and grades without unsupported conversions or omissions.",
+          "Upload the required photograph, identity, diploma or expected-graduation proof, transcript, tests, and activity evidence.",
+          "Review the programmes offered to your profile and research each available choice before ranking it.",
+          "Write original responses explaining academic interests, experience, course choices, and future plans.",
+          "Check every section and document for consistency, readability, and completeness.",
+          "Submit before 20 February in the confirmed 2027 cycle and retain the application record or confirmation.",
+          "Monitor TBBS and email for evaluation updates and interview invitations.",
+        ],
+        paragraphs: [
+          "Applications are free. The scholarship authority warns candidates to use the official system; a private agent cannot guarantee selection or create an official advantage. Never provide portal passwords or pay someone claiming to reserve a scholarship place.",
+          "Do not wait for the last day. The form requires detailed education, programme, and activity information, and high traffic or connectivity problems can interfere with submission. Prepare records in advance and save work regularly, but recheck the live fields because the 2027 form may differ from older screenshots or tutorials.",
+        ],
+      },
+      {
+        title: "Writing a strong letter of intent or application responses",
+        paragraphs: [
+          "The application should answer why the field matters to you, what preparation you already have, why the selected programmes in Türkiye are suitable, and how the education supports realistic future goals. Avoid writing a general biography that never connects evidence to the chosen degree.",
+          "Use examples from school subjects, projects, competitions, family or community responsibilities, volunteering, work, reading, or independent learning. Explain your action and learning rather than listing achievements. A candidate for engineering might discuss a design problem; a public-health candidate might explain a community issue and the scientific preparation needed to address it.",
+          "Show informed interest in Türkiye without copying tourism language. Refer to relevant programme content, educational environment, regional research, or professional context. Do not claim that Türkiye is your only dream if the rest of the application contains no evidence that you researched the available universities or teaching language.",
+          "Future goals should be ambitious but believable for an undergraduate applicant. Describe the skills you hope to develop and the early steps you could take after graduation. You do not need to promise to transform an entire country. A thoughtful plan to enter a profession, build expertise, serve a community, pursue responsible research, or strengthen an institution is more persuasive.",
+          "Write in your own voice and verify every fact. Copied templates and manufactured personal stories can create inconsistent interview answers. If someone reviews grammar, retain control of the ideas and ensure the final responses truthfully represent your experience.",
+        ],
+      },
+      {
+        title: "Evaluation and interview process",
+        paragraphs: [
+          "After applications close, reviewers assess basic eligibility and the strength of academic records, interests, career goals, preferences, participation in social activities, and the consistency of the overall file. Some applicants may complete additional tests depending on the competition and field before or around interview.",
+          "Shortlisted candidates are normally interviewed between April and June. Interview arrangements can vary by country and may be in person or use another approved format. Follow the invitation exactly and bring or upload original documents when requested.",
+          "Prepare to introduce yourself concisely, discuss academic interests, justify programme choices, explain activities and achievements, and describe future goals. Review the courses listed in the submitted application because interviewers may ask why a particular university or department was selected.",
+          "Answer honestly when you do not know something. A panel is assessing readiness and motivation, not expecting a school-leaver to be an established expert. Clear thinking, evidence, curiosity, and consistency are stronger than memorised speeches or exaggerated claims.",
+          "Results are generally announced in early August. An interview invitation is not an award, and a result shown by an unofficial page is not confirmation. Wait for the official TBBS notification before making travel, enrolment, or financial decisions.",
+        ],
+      },
+      {
+        title: "Health sciences and highly competitive fields",
+        paragraphs: [
+          "Medicine, dentistry, and pharmacy generally use a higher minimum academic threshold of 90 percent and attract intense competition. Meeting 90 percent does not indicate a likely award. Applicants should demonstrate exceptional science preparation and confirm the teaching language, clinical training environment, programme length, and professional recognition.",
+          "Licensing rules after graduation can involve examinations, supervised practice, document verification, or language proficiency in the intended country of work. Research these obligations before ranking a health programme. Scholarship funding cannot guarantee that a foreign professional regulator will recognise the qualification automatically.",
+          "Other selective fields can require portfolios, aptitude tests, mathematics preparation, or international exam scores. Read each available programme entry. A strong overall grade cannot compensate for a missing mandatory subject or test.",
+        ],
+      },
+      {
+        title: "Preparing for selection and arrival",
+        paragraphs: [
+          "If selected, follow placement acceptance, document verification, visa, travel, accommodation, language-course, and university-registration instructions in order. Names and dates across the passport, school records, and application must match or be supported by official evidence.",
+          "Use only the competent Turkish authorities for visa information. Scholarship selection does not remove the student's responsibility to submit the correct visa application and attend required appointments. Do not book non-refundable travel before the placement and travel process is formally confirmed.",
+          "Plan for arrival cash even with a stipend. Initial expenses can include local transport, phone service, personal supplies, clothing, and costs incurred before payments or accommodation access are fully arranged. Keep copies of award, placement, identity, education, health, housing, and travel documents in secure digital and paper form.",
+          "Read scholarship continuation and academic-performance rules. Students must meet university and scholarship obligations during the Turkish preparatory year and degree. Funding can be affected by prolonged failure, unauthorised changes, inaccurate information, or other breaches of the award terms.",
+        ],
+      },
+      {
+        title: "Common application mistakes",
+        bullets: [
+          "Treating the expected 10 January-20 February window as confirmed before the 2027 announcement",
+          "Paying an agent even though the official online application is free",
+          "Assuming the scholarship application is separate from university placement",
+          "Selecting unrelated programmes without a coherent academic reason",
+          "Ignoring teaching language, recognition, prerequisites, or city costs",
+          "Using the 70 percent minimum as evidence that selection is likely",
+          "Missing the higher health-sciences threshold or programme-specific exam requirement",
+          "Uploading unreadable, cropped, incomplete, or inconsistently translated records",
+          "Entering an invented GPA conversion or inaccurate activity evidence",
+          "Submitting generic copied responses that cannot be explained in interview",
+          "Assuming accommodation, flights, or the stipend cover every student and family expense",
+          "Trusting an unofficial results link, agent, social account, or portal clone",
+        ],
+      },
+      {
+        title: "Final 2027 application checklist",
+        ordered: [
+          "Wait for the official 2027 call and verify dates, age, nationality, graduation, and academic thresholds.",
+          "Check whether your intended field requires 90 percent, a test, portfolio, language evidence, or particular school subjects.",
+          "Research suitable programmes, teaching languages, cities, recognition, and career fit before ranking choices.",
+          "Prepare identity, photograph, diploma or expected-graduation proof, transcripts, tests, translations, and activity evidence.",
+          "Complete TBBS yourself through the official free portal.",
+          "Write original, specific responses connecting preparation, course choice, Türkiye, and realistic future goals.",
+          "Review every date, grade, name, upload, and programme choice before submitting.",
+          "Submit before the confirmed deadline and retain proof.",
+          "Prepare for possible tests and interview using the exact application submitted.",
+          "If selected, verify award terms, placement, recognition, visa, accommodation, language study, personal costs, and academic obligations before travel.",
+        ],
+      },
+    ],
 
     country: "Turkey",
+    continent: "Asia",
     degreeLevel: "Bachelors",
     fundingType: "Fully Funded",
 
-    deadline: "February",
-    duration: "Degree duration + language year",
+    deadline: "Expected 10 January-20 February 2027; awaiting official cycle confirmation",
+    duration: "Normal Bachelor's duration plus one year of Turkish-language study as applicable",
 
     eligibility: [
-      "International applicants",
-      "Meet age and academic requirements",
-      "Meet program-specific requirements",
+      "Meet the official international nationality and citizenship criteria",
+      "Generally be under age 21 under the confirmed 2027 rule",
+      "Normally achieve at least 70%, or 90% for health sciences",
+      "Be graduated or expected to graduate before university enrolment",
+      "Meet every subject, examination, language, and portfolio rule for selected programmes",
     ],
 
     benefits: [
-      "Tuition coverage",
-      "Accommodation",
-      "Monthly stipend",
-      "Health insurance",
-      "Turkish language course",
+      "University and department placement with tuition coverage",
+      "Current undergraduate stipend of 4,500 TL per month",
+      "Accommodation and health insurance under programme rules",
+      "One year of Turkish-language education",
+      "One-time flight ticket at the beginning of study and after graduation",
     ],
 
     applicationProcess: [
-      "Review eligibility",
-      "Apply through the official online system",
-      "Submit required documents",
-      "Track results on the official site",
+      "Verify the official 2027 criteria and research available programmes",
+      "Complete the free TBBS application between the confirmed dates",
+      "Upload academic, identity, test, and activity evidence",
+      "Complete any test and interview if shortlisted",
+      "Track placement and results only through official channels",
     ],
 
     documents: [
-      "Passport or national ID",
-      "Academic transcripts",
-      "Diploma or expected graduation proof",
-      "Photo",
-      "Test scores (if required)",
+      "Passport or accepted national identity document and recent photograph",
+      "High-school diploma or official expected-graduation evidence",
+      "Complete academic transcript",
+      "National or international examination and language results when required",
+      "Programme-specific portfolio, aptitude, award, or activity evidence where applicable",
     ],
 
-    applyUrl: "https://www.turkiyeburslari.gov.tr",
+    applyUrl: "https://turkiyeburslari.gov.tr/fulltimeprograms",
     officialSource: "Presidency for Turks Abroad and Related Communities",
 
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "turkiye-burslari-scholarship-masters",
-
-    title: "Turkiye Burslari Scholarship",
+    title: "Türkiye Scholarships 2027: Master's Application Guide",
+    seoTitle: "Türkiye Scholarships 2027 for Master's: Eligibility and Application",
+    metaDescription: "Prepare for Türkiye Scholarships 2027 Master's applications. Check the expected January-February window, 75% and age rules, 6,500 TL stipend, programmes, and interview.",
     overview:
-      "Turkish government scholarship covering tuition accommodation and monthly stipend for international students.",
+      "Türkiye Scholarships is a competitive government programme that combines full-time Master's funding with placement at a participating university in Türkiye. The general application period runs from 10 January to 20 February each year. The 2027 cycle is currently pre-open and should be treated as unconfirmed until the official announcement and TBBS portal display the matching intake.",
+    introduction:
+      "The current Master's package includes university and department placement, tuition, accommodation, health insurance, a one-year Turkish-language course, a one-time flight ticket at the beginning and after graduation, and a monthly stipend of 6,500 TL. Applications are completed free of charge through the Türkiye Scholarships Application System, or TBBS.",
+    summary:
+      "Applicants generally need at least 75% academic achievement, must be under age 30 under the current criteria, and must have graduated or be due to graduate before August. Graduate scholarships cover fields in social sciences, humanities, natural sciences, and engineering, but the official full-time programme states that Türkiye Scholarships does not award graduate scholarships in health sciences.",
+    contentSections: [
+      {
+        title: "Master's scholarship at a glance",
+        facts: [
+          { label: "Current status", value: "Pre-open for 2027" },
+          { label: "Expected application period", value: "10 January-20 February 2027, subject to confirmation" },
+          { label: "Minimum academic achievement", value: "75% under the current general criteria" },
+          { label: "Age criterion", value: "Under 30 for Master's programmes" },
+          { label: "Current monthly stipend", value: "6,500 TL" },
+          { label: "Placement", value: "University and department placement included" },
+          { label: "Application cost", value: "Free through the official TBBS portal" },
+          { label: "Typical results", value: "Early August under the general calendar" },
+        ],
+        paragraphs: [
+          "Türkiye Scholarships is administered by the Presidency for Turks Abroad and Related Communities. Candidates enter education history, upload documents, select the programmes available to their profile, and submit their scholarship and placement preferences in one official system. They do not need to pay an agent or submit a separate speculative admission application for the options selected through this route unless formally instructed.",
+          "The general calendar places evaluation in March and April, interviews from April through June, results in early August, initial procedures during August, and travel around September. Joint or specialised programmes can use different dates and conditions, so the 2027 call and the candidate's portal notifications remain authoritative.",
+        ],
+      },
+      {
+        title: "What the scholarship covers",
+        bullets: [
+          "Placement at a participating university and department",
+          "Tuition-fee coverage for the placed Master's programme",
+          "Current monthly Master's stipend of 6,500 TL",
+          "Accommodation under the programme's applicable arrangements",
+          "Health insurance",
+          "One year of Turkish-language education",
+          "One-time flight ticket at the beginning of education and after graduation",
+          "Access to academic, cultural, social, and alumni activities",
+        ],
+        paragraphs: [
+          "The scholarship is comprehensive but does not guarantee reimbursement of every cost. The stipend is denominated in Turkish lira, and living costs vary substantially by city and housing arrangement. Applicants should budget for documents, translations, personal equipment, local transport, clothing, deposits, and expenses that may arise before scholarship payments begin.",
+          "Accommodation support follows the programme's placement and availability rules. Selected candidates must read the current award documents rather than assuming a private room, chosen location, or automatic cash alternative. Family housing and dependant expenses are not generally part of a standard individual scholarship package.",
+          "Flight coverage is described as one-time support at the start of education and upon graduation. It is not an annual return ticket. Scholars who want to travel during holidays or bring family should plan those costs separately and verify visa and insurance requirements independently.",
+        ],
+      },
+      {
+        title: "Eligibility requirements explained",
+        paragraphs: [
+          "The current general criteria list citizens of all countries as eligible groups, while Turkish citizens and people who have lost Turkish citizenship are ineligible. Applicants with complex citizenship histories should check the live rule and provide accurate identity information rather than relying on a simplified international-student label.",
+          "Master's candidates must currently be under 30. Age is assessed according to the official scholarship rule, not simply how old a person is when they begin preparing. Confirm the 2027 calculation and cut-off in the call because being close to the limit requires an exact date-based check.",
+          "The general minimum academic achievement for graduate candidates is 75%. This is a threshold for consideration, not a score that predicts selection. Expert reviewers also examine previous qualifications, academic interests, career goals, preference consistency, the letter of intent, social activity, and interview performance.",
+          "Applicants should hold a Bachelor's degree or be on track to graduate by the end of the current academic year before August. Current students enrolled at a Turkish university at the same Master's level for which they seek funding are ineligible under the published general criteria.",
+          "Each available programme may impose higher grades, accepted degree disciplines, prerequisite coursework, examination scores, language evidence, or other requirements. The options shown in TBBS depend on the candidate's profile, so meeting the general rules does not create access to every university or subject.",
+        ],
+      },
+      {
+        title: "Graduate health sciences are not covered",
+        paragraphs: [
+          "The official full-time scholarship page states that the Graduate Scholarship Programme does not award scholarships in health sciences. Applicants should not confuse this with the undergraduate scholarship, where medicine, dentistry, and pharmacy may appear under a higher academic threshold.",
+          "A candidate seeking medical specialisation, clinical residency, dentistry, pharmacy, or another health-science graduate route should not assume the general Master's scholarship can fund it. Check the programmes displayed in TBBS and the university's classification. A health-adjacent subject may be classified differently, but only the official system and programme information can confirm availability.",
+          "This restriction is a good example of why third-party programme lists age badly. Even if a university offers a health-related Master's to international students, that does not mean Türkiye Scholarships funds it through the graduate competition.",
+        ],
+      },
+      {
+        title: "Choosing a suitable Master's programme",
+        paragraphs: [
+          "Start with the official programme search and then verify details on the university website. Compare entry background, curriculum, thesis or non-thesis structure, teaching language, faculty expertise, laboratories, research centres, internships, accreditation, location, duration, and graduate outcomes.",
+          "Choose programmes that build on your Bachelor's preparation or explain a defensible transition. A candidate moving from engineering into public policy, for example, should identify the professional problem connecting both fields and show evidence of the analytical or social-science preparation needed for the new programme.",
+          "Preferences should form a coherent academic direction. Expert evaluation explicitly considers their consistency. Selecting unrelated subjects because the system permits them can make the letter of intent and career plan appear opportunistic. Related programmes can differ, but each should address the same central development need or professional objective.",
+          "Investigate degree recognition before applying, particularly for regulated professions, public employment, doctoral admission, or teaching careers in the intended country of return. Applicants are advised by the scholarship programme to check equivalence and validity. Placement and funding cannot guarantee recognition by a foreign authority.",
+          "City choice also matters. İstanbul, Ankara, İzmir, and smaller university cities offer different costs, research ecosystems, transport, climate, and housing conditions. Academic fit should lead, but candidates should demonstrate readiness to study wherever a suitable placement is offered.",
+        ],
+      },
+      {
+        title: "Thesis, research interests, and supervisor fit",
+        paragraphs: [
+          "Determine whether the available Master's is thesis-based, non-thesis, or includes a substantial research project. Applicants planning a later PhD or research career should examine methods training, thesis supervision, laboratories, data access, publication culture, and the recent work of relevant faculty.",
+          "The scholarship application may ask about academic interests even when it does not require a full doctoral-style proposal. Define a focused topic area, explain why it matters, and connect it to prior study or professional experience. Avoid presenting an inflexible thesis title before learning the programme's resources and supervision structure.",
+          "If the programme expects supervisor contact, follow its instructions. Do not mass-email unrelated academics with a generic scholarship request. A concise message should demonstrate knowledge of the faculty member's work, explain the relevant background and question, and ask only what the programme permits.",
+          "For professionally oriented programmes, the equivalent of research fit may be practical projects, studios, field placements, industry partnerships, or policy labs. Explain how those components develop capabilities you can use after graduation rather than focusing only on university reputation.",
+        ],
+      },
+      {
+        title: "Teaching language and language preparation",
+        paragraphs: [
+          "Programmes may be taught in Turkish, English, or another stated language. Candidates must meet any language requirement shown for the selected option. TOEFL, another international result, or institutional evidence should be uploaded only when accepted; do not assume every Turkish university accepts IELTS or a medium-of-instruction letter.",
+          "Full-time scholars normally receive one year of Turkish-language education, including many students in programmes taught in English. This supports integration and academic life, but it does not automatically replace an English-language requirement attached to admission.",
+          "Begin learning Turkish early. Master's students may need it for local research, professional networking, interviews, archives, administrative tasks, internships, or community fieldwork. The preparatory year is intensive, and scholarship continuation can depend on fulfilling language and academic obligations.",
+        ],
+      },
+      {
+        title: "Documents commonly required",
+        bullets: [
+          "Valid passport, national identity document, or other accepted identity evidence",
+          "Recent candidate photograph meeting portal requirements",
+          "Bachelor's diploma or official expected-graduation evidence",
+          "Complete Bachelor's transcript and grading information",
+          "National or international examination results when required",
+          "Accepted language-test score where required by selected programmes",
+          "Original letter of intent or application responses",
+          "Academic or professional recommendations if requested in the live form",
+          "CV, awards, publications, projects, employment, volunteering, and activity evidence where relevant",
+          "Programme-specific portfolio, writing sample, or research material where applicable",
+        ],
+        paragraphs: [
+          "TBBS determines the final checklist for the 2027 cycle. Upload full, legible records and provide translations or certification when requested. The scholarship reviewers and university must be able to verify the degree, grades, dates, and identity from the files submitted.",
+          "Enter the institution's grades accurately and follow portal conversion instructions. Do not manufacture a 100-point percentage from a GPA without an accepted method. When possible, include the university's official grading scale or explanation.",
+          "Keep the CV, education form, transcript, employment history, activities, and letter of intent consistent. Explain name variations, study gaps, transfers, or unusual grading briefly where the system permits. Inconsistency creates avoidable doubt even when there is an innocent explanation.",
+        ],
+      },
+      {
+        title: "Writing a competitive letter of intent",
+        paragraphs: [
+          "A strong letter connects preparation, the selected field, the programme environment in Türkiye, and a realistic post-graduation plan. It should answer why a Master's is needed now, which capabilities are missing, and how the candidate will apply them.",
+          "Use evidence from the Bachelor's degree, thesis, projects, employment, volunteering, publications, or community work. Explain your individual contribution and learning. A list of job responsibilities or course titles is less useful than one or two examples showing analytical ability, initiative, collaboration, or subject commitment.",
+          "Show programme research without copying university marketing. Refer to modules, methods, research groups, practical components, or regional context that fit your goals. When preferences include several universities, explain their shared academic logic without pretending they are identical.",
+          "Career plans should include feasible early steps after graduation and a longer direction. Identify the sector, problem, likely role, or community you want to serve. Avoid promising instant national transformation or presenting the Master's only as a route to migration.",
+          "Write in your own voice. Templates often produce generic praise and mismatched university names. Any reviewer helping with clarity should not replace your experiences or invent claims. You must be able to discuss every statement naturally during interview.",
+        ],
+      },
+      {
+        title: "How to apply through TBBS",
+        ordered: [
+          "Wait for the official 2027 call and create or update an account only in the official TBBS system.",
+          "Enter identity, nationality, contact, education, employment, and activity information accurately.",
+          "Upload the required photograph, diploma or graduation evidence, transcript, tests, language results, and supporting records.",
+          "Review programmes offered to your profile and research each option before ranking preferences.",
+          "Complete original application responses connecting academic preparation, programme choices, Türkiye, and career goals.",
+          "Review all fields, dates, grades, files, and programme names for consistency.",
+          "Submit before the confirmed 20 February deadline and retain the confirmation.",
+          "Monitor the official portal and email for evaluation and interview communication.",
+        ],
+        paragraphs: [
+          "The application is free. An agent cannot guarantee placement, influence the committee, or lawfully sell an award. Keep login credentials private and avoid cloned portals or payment requests using the scholarship name.",
+          "Prepare early and do not submit during the final minutes. The portal may require details not visible in old tutorials, and technical problems can occur. Saving a private copy of application answers and uploaded documents also helps with interview preparation.",
+        ],
+      },
+      {
+        title: "Evaluation and Master's interview",
+        paragraphs: [
+          "Applications first undergo preliminary assessment for age, academic achievement, and required documents. Eligible files then receive expert evaluation of academic status, prior qualifications, interests, career goals, preference consistency, letter content, and participation in social activities.",
+          "Candidates who reach the final shortlist are interviewed by committees of academics and experts. The official description says interviews usually last 15 to 30 minutes and cover document checking, the purpose of applying, academic knowledge, career goals, and candidate questions.",
+          "Bring the documents and certificates for the latest completed education as instructed. Review the exact submitted application, selected programmes, Bachelor's subject, thesis or projects, and current developments in the proposed field. The panel may test whether the academic transition and career plan are credible.",
+          "Prepare concise answers rather than memorising a speech. Explain why the Master's is necessary, what distinguishes the chosen programmes, how you will handle Turkish preparation, and what contribution you expect to make. If a question exposes a gap, reason honestly instead of inventing expertise.",
+          "Final selection considers the interview together with general eligibility and application evaluation. An invitation is not an award. Results should be trusted only when issued through official Türkiye Scholarships channels.",
+        ],
+      },
+      {
+        title: "After selection: practical checks",
+        paragraphs: [
+          "Read the placement and scholarship agreement before accepting. Confirm university, department, teaching language, thesis structure, duration, Turkish course, accommodation, stipend, insurance, and academic-performance obligations. A placement different from a first preference still requires a fresh fit assessment.",
+          "Follow official Turkish visa instructions for the country of residence. Scholarship selection supports the process but does not permit applicants to skip forms, appointments, or document requirements. Avoid non-refundable bookings until official travel instructions are issued.",
+          "Budget for initial personal expenses and keep emergency funds. The first weeks can involve transport, phone service, supplies, deposits, and costs before normal payments or accommodation routines are established. The 6,500 TL stipend should be assessed against the placed city's current costs, not converted using an old exchange rate.",
+          "Understand continuation rules during language study and the Master's. Academic failure, inaccurate application information, unauthorised programme changes, or violations of scholarship terms can affect support. Ask the responsible office before making changes to enrolment, leave, employment, or research plans.",
+        ],
+      },
+      {
+        title: "Common Master's application mistakes",
+        bullets: [
+          "Calling the 2027 competition open before the official announcement",
+          "Applying while age, graduation timing, citizenship, or same-level enrolment makes the candidate ineligible",
+          "Treating 75% as a competitive guarantee rather than a minimum threshold",
+          "Seeking a graduate health-sciences award that the programme says it does not offer",
+          "Selecting unrelated subjects without a coherent academic transition",
+          "Ignoring teaching language, thesis structure, recognition, prerequisites, or city costs",
+          "Uploading incomplete, unreadable, mistranslated, or inconsistently converted records",
+          "Using a generic letter that lists achievements without explaining programme and career fit",
+          "Paying an agent or sharing TBBS login credentials",
+          "Assuming accommodation, flights, or stipend cover every personal or family cost",
+          "Failing to prepare from the submitted application for the interview",
+          "Making travel or resignation decisions before receiving formal placement and award instructions",
+        ],
+      },
+      {
+        title: "Final 2027 Master's checklist",
+        ordered: [
+          "Confirm the official 2027 dates and the under-30, 75%, nationality, graduation, and enrolment criteria.",
+          "Exclude unavailable graduate health-science routes and verify every programme-specific prerequisite.",
+          "Research curriculum, teaching language, thesis format, faculty, recognition, city, and career relevance.",
+          "Prepare identity, photograph, degree or graduation evidence, transcripts, translations, tests, language results, CV, and supporting activities.",
+          "Write an original letter connecting prior preparation, coherent preferences, study in Türkiye, and realistic career contribution.",
+          "Complete the free TBBS application yourself and check every entry against official documents.",
+          "Submit before the confirmed deadline and retain the complete application record.",
+          "Prepare for a 15-30 minute interview using your exact file and current programme information.",
+          "Trust selection results only through official channels.",
+          "Before accepting, verify placement, award terms, visa, accommodation, language study, living costs, research fit, and continuation conditions.",
+        ],
+      },
+    ],
 
     country: "Turkey",
+    continent: "Asia",
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
 
-    deadline: "February",
-    duration: "Degree duration + language year",
+    deadline: "Expected 10 January-20 February 2027; awaiting official cycle confirmation",
+    duration: "Normal Master's duration plus one year of Turkish-language study as applicable",
 
     eligibility: [
-      "International applicants",
-      "Meet age and academic requirements",
-      "Meet program-specific requirements",
+      "Meet official nationality and citizenship criteria",
+      "Be under age 30 under the confirmed 2027 rule",
+      "Normally achieve at least 75% in prior study",
+      "Hold a Bachelor's degree or graduate before August 2027",
+      "Meet programme-specific academic and language rules; graduate health sciences are not offered",
     ],
 
     benefits: [
-      "Tuition coverage",
-      "Accommodation",
-      "Monthly stipend",
-      "Health insurance",
-      "Turkish language course",
+      "University and department placement with tuition coverage",
+      "Current Master's stipend of 6,500 TL per month",
+      "Accommodation and health insurance under programme rules",
+      "One year of Turkish-language education",
+      "One-time flight ticket at the beginning of study and after graduation",
     ],
 
     applicationProcess: [
-      "Review eligibility",
-      "Apply through the official online system",
-      "Submit required documents",
-      "Track results on the official site",
+      "Verify the official 2027 criteria and research coherent programme choices",
+      "Submit the free TBBS application during the confirmed window",
+      "Upload complete academic, identity, test, and supporting evidence",
+      "Attend a 15-30 minute interview if shortlisted",
+      "Track placement and results only through official channels",
     ],
 
     documents: [
-      "Passport or national ID",
-      "Academic transcripts",
-      "Diploma or expected graduation proof",
-      "Photo",
-      "Test scores (if required)",
+      "Passport or accepted identity evidence and recent photograph",
+      "Bachelor's diploma or official expected-graduation document",
+      "Complete Bachelor's transcript and required translations",
+      "Accepted examination and language results where required",
+      "CV, original application responses, and programme-specific supporting evidence",
     ],
 
-    applyUrl: "https://www.turkiyeburslari.gov.tr",
+    applyUrl: "https://turkiyeburslari.gov.tr/fulltimeprograms",
     officialSource: "Presidency for Turks Abroad and Related Communities",
 
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
