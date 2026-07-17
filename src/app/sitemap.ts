@@ -186,6 +186,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.75,
     },
     {
+      url: `${siteUrl}/csc-scholarship-2027-results`,
+      lastModified: new Date("2026-07-17T00:00:00Z"),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
       url: `${siteUrl}/countries`,
       lastModified: latestScholarshipModified,
       priority: 0.7,

@@ -77,6 +77,50 @@ export function FaqJsonLd({
   return <JsonLd data={data} />;
 }
 
+export function ArticleJsonLd({
+  pagePath,
+  headline,
+  description,
+  datePublished,
+  dateModified,
+  news = false,
+}: {
+  pagePath: string;
+  headline: string;
+  description: string;
+  datePublished: string;
+  dateModified: string;
+  news?: boolean;
+}) {
+  const siteUrl = getSiteUrl();
+  const data = {
+    "@context": "https://schema.org",
+    "@type": news ? ["Article", "NewsArticle"] : "Article",
+    headline,
+    description,
+    url: `${siteUrl}${pagePath}`,
+    mainEntityOfPage: `${siteUrl}${pagePath}`,
+    datePublished,
+    dateModified,
+    author: {
+      "@type": "Organization",
+      name: "Scholarships Central",
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Scholarships Central",
+      url: siteUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/icon-512.png`,
+      },
+    },
+  };
+
+  return <JsonLd data={data} />;
+}
+
 export function ItemListJsonLd({
   pagePath,
   items,

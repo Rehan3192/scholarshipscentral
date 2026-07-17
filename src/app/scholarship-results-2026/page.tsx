@@ -32,6 +32,12 @@ function formatDate(value: string) {
 
 const guideLinks = [
   {
+    href: "/csc-scholarship-2027-results",
+    title: "CSC Scholarship 2027 results",
+    description:
+      "Track the expected Type A and Type B result period, checking methods, status meanings, and post-selection steps.",
+  },
+  {
     href: "/blog",
     title: "All scholarship blog posts",
     description:
