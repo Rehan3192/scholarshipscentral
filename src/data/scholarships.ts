@@ -1402,6 +1402,15 @@ const rawScholarships: Scholarship[] = [
         ],
       },
       {
+        title: "How to prepare while the 2027 call is pre-open",
+        paragraphs: [
+          "Because the 2027 cycle is not fully open yet, the best use of time is preparation rather than guessing. Students should first secure or progress toward admission at a Japanese graduate school, because HISF supports students who are studying or planning to study in Japan at master's or doctoral level. A scholarship application is much stronger when the university plan is already credible.",
+          "Start by building a research package. Prepare a clear research theme, a short explanation of why Japan is the right place for the work, and a simple description of the professor, laboratory, graduate school, or academic environment you hope to join. The official process requires a two-minute research presentation video, so applicants should be ready to explain their work plainly rather than only in long academic language.",
+          "Next, prepare finances honestly. HISF's FAQ says the scholarship provides a monthly stipend only and does not cover tuition or initial travel costs. That means applicants should check Japanese university tuition, admission fees, housing deposits, flights, insurance, local transport, and early living expenses. A strong monthly stipend helps after selection, but it does not remove every upfront cost.",
+          "Finally, mark the expected August 2026 guideline release. When the new document appears, compare every requirement against your draft documents before uploading anything. Age limits, recommendation formats, transcript rules, Japanese interview expectations, video instructions, and online-system steps may change. Treat old-cycle information as preparation material, not final authority.",
+        ],
+      },
+      {
         title: "Official resources",
         bullets: [
           "Scholarship website: https://www.hisf.or.jp/en/scholarship/foreigner/",
@@ -7988,7 +7997,7 @@ const rawScholarships: Scholarship[] = [
       {
         title: "What the GBP 10,000 waiver changes",
         paragraphs: [
-          "A GBP 10,000 waiver directly reduces tuition fees. That can be a major help, especially for creative postgraduate courses where international tuition can be high. However, the student still needs to confirm the course's total fee and calculate the remaining balance after the waiver.",
+          "A GBP 10,000 waiver directly reduces tuition fees. That can be a major practical help, especially for creative postgraduate courses where international tuition can be high. However, the student still needs to confirm the course's total fee and calculate the remaining balance after the waiver.",
           "London living costs are a separate issue. Rent, transport, food, materials, printing, software, equipment, exhibitions, visa, immigration health surcharge, and personal expenses can be significant. Creative courses can also involve project costs that are not obvious from tuition alone.",
           "Before accepting, students should make a spreadsheet: total tuition, scholarship waiver, remaining tuition, deposit, visa/IHS, monthly rent, transport, food, materials, and emergency reserve. A tuition waiver helps only if the rest of the budget is still workable.",
         ],
@@ -8134,6 +8143,122 @@ const rawScholarships: Scholarship[] = [
       "Need-based scholarship for overseas students from lower-income backgrounds pursuing a full-time Master's degree at University College London (UCL).",
     summary:
       "The UCL Global Masters Scholarship supports international students with overseas fee status who demonstrate financial need for taught Master's study at UCL. For 2026/27, UCL states the award is GBP 15,000 for one year, with up to 85 scholarships available. The application is completed through UCL's Portico funding section after submitting an eligible Master's application.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "University College London" },
+          { label: "Award", value: "UCL Global Masters Scholarship" },
+          { label: "Value", value: "GBP 15,000" },
+          { label: "Awards available", value: "Up to 85 in 2026/27" },
+          { label: "Fee status", value: "Overseas fee payer" },
+          { label: "Study mode", value: "Full-time, in-person master's study" },
+          { label: "Application route", value: "UCL Portico funding section after submitting an eligible master's application" },
+          { label: "Deadline", value: "May 7, 2026 at 5:00 PM BST" },
+        ],
+        paragraphs: [
+          "The UCL Global Masters Scholarship is a need-based award for international students from lower-income backgrounds who want to pursue full-time master's study at University College London. UCL's official page lists up to 85 scholarships for 2026/27, with five ring-fenced for students from India and one for a student from Japan.",
+          "The award is valuable but partial. The official value is GBP 15,000. It can reduce the cost of a UCL master's significantly, but it does not automatically cover all tuition, rent, visa costs, travel, health surcharge, food, books, or London living costs. Students should approach it as a major contribution, not a complete funding package.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "This scholarship is best suited to international applicants who are academically ready for a UCL master's programme but cannot realistically afford UCL without significant help. The award specifically aims to enable and encourage students from lower-income backgrounds to pursue full-time master's degree studies at UCL.",
+          "A strong applicant should have a clear programme fit, a complete admissions application, and a credible financial-need case. Because the scholarship is need-based, it is not enough to say UCL is prestigious or that the applicant has high grades. The funding office needs to understand the applicant's financial background and why support is necessary.",
+          "It is not the right fit for distance-learning applicants, home-fee students, part-time or online routes where not eligible, or applicants who have not submitted a complete UCL master's application including references. It is also not ideal for students who need every cost guaranteed before applying, because GBP 15,000 may still leave a large gap.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Eligible to pay the overseas fee rate.",
+          "From a lower-income background under UCL guidance.",
+          "Submitted a complete admission application for a full-time master's degree at UCL.",
+          "Distance-learning programmes are not eligible.",
+          "Study must be in person at UCL.",
+          "Application must be submitted through Portico by the stated deadline.",
+        ],
+        paragraphs: [
+          "The admissions application does not need to result in an offer before scholarship application in every case, but it must be submitted and complete enough for the funding process. UCL guidance says applicants need to have submitted an admission application, including references, to apply through the funding section.",
+          "Fee status matters. If UCL does not assess the applicant as overseas fee status, the scholarship eligibility changes. Applicants should monitor UCL communications and Portico because fee-status confirmation can affect whether the scholarship appears as available.",
+        ],
+      },
+      {
+        title: "What the GBP 15,000 award covers",
+        paragraphs: [
+          "UCL states that the scholarship is worth GBP 15,000 and is tenable for one year only unless the full-time programme is two years in length. For two-year programmes, the award is paid 50 percent in each year. The current record also notes that the award is applied to tuition first, with any remaining amount paid in three maintenance instalments.",
+          "This structure matters for budgeting. If tuition is higher than GBP 15,000, the full award may be absorbed by tuition and no maintenance cash may remain. If tuition is lower than the award, the remaining amount may help with living costs, but it is still paid according to UCL's schedule rather than as a single upfront living allowance.",
+          "Students should check whether the award can be held alongside other scholarships, bursaries, or loans. UCL's official page says it may be held alongside other funding depending on the total value received, and recipients must inform the Student Funding Office immediately about other funding awarded toward the master's degree.",
+        ],
+      },
+      {
+        title: "Application process",
+        ordered: [
+          "Choose a full-time, in-person UCL master's programme.",
+          "Submit the UCL admissions application and required references before the scholarship deadline.",
+          "Log in to Portico using UCL application credentials.",
+          "Open the active application for the master's programme.",
+          "Go to the Funding tab.",
+          "Select UCL Global Masters Scholarship under available funds.",
+          "Complete all required scholarship questions and submit before May 7, 2026 at 5:00 PM BST.",
+          "Monitor UCL communications for outcome and any financial verification requests.",
+        ],
+        paragraphs: [
+          "The scholarship application is not automatic. Submitting a course application alone is not enough. Applicants must actively complete the Portico funding application. This is one of the easiest mistakes to make because the process sits inside the applicant system rather than a separate public form.",
+          "Do not leave Portico submission to the final hour. Funding tabs, references, or fee-status issues can create delays. Submit early enough to solve problems through official UCL channels before the deadline.",
+        ],
+      },
+      {
+        title: "Financial need evidence",
+        paragraphs: [
+          "The scholarship is designed for lower-income backgrounds, so financial information must be accurate and credible. Applicants should be ready to provide household income details, family circumstances, currency context, dependants, assets, and other evidence requested by UCL. The active form controls the exact questions.",
+          "Financial need should be explained clearly rather than dramatically. Good answers show the real cost gap: total UCL tuition, estimated London living costs, family contribution, other funding available, and why the award would make study possible. Avoid vague statements like my family is poor without numbers or context when the form asks for specific information.",
+          "If income is informal, irregular, self-employed, agricultural, or affected by exchange rates, provide the clearest documentation possible under UCL instructions. Do not invent figures or hide support. Funding decisions can be audited, and inaccurate information can threaten the award.",
+        ],
+      },
+      {
+        title: "Choosing the right UCL master's",
+        paragraphs: [
+          "The scholarship can apply across eligible full-time master's programmes, but programme choice still matters. UCL is academically demanding and London is expensive, so applicants should choose a course that fits their previous education, career direction, and realistic financial plan.",
+          "Before applying, check tuition fee, course length, department requirements, references, English language requirements, deposit rules, and visa timing. A one-year course and a two-year course affect how the scholarship is paid and how much extra funding is needed.",
+          "A strong scholarship case often connects financial need with future impact. Explain why this specific UCL programme is necessary for your academic or professional development and how it connects to goals that would otherwise be blocked by cost.",
+        ],
+      },
+      {
+        title: "Budgeting for London",
+        paragraphs: [
+          "London living costs can be the deciding factor. Even with GBP 15,000 support, students may need additional funds for rent, deposit, food, transport, visa, immigration health surcharge, laptop, books, fieldwork, clothing, and emergency costs. UCL's cost guidance should be checked alongside the scholarship value.",
+          "Students should also consider timing. If the award is applied to tuition first and remaining funds arrive later in instalments, a student may need money for early rent deposit, travel, and setup before maintenance support arrives. Planning only from the total scholarship value can create cash-flow problems.",
+          "If the funding gap remains too large, compare other UCL department awards, external scholarships, education loans, employer support, or deferral options. It is better to make a realistic decision before visa spending than to arrive in London underfunded.",
+        ],
+      },
+      {
+        title: "How to make the application stronger",
+        paragraphs: [
+          "The strongest applications usually feel specific rather than decorated. A student should explain the exact master's programme, why UCL is academically relevant, what barriers the student has faced, and how the scholarship would change the financial equation. This does not require dramatic language. It requires clear evidence, careful numbers, and a realistic study plan.",
+          "When writing about financial need, connect the scholarship to actual costs. For example, show the tuition fee, expected living expenses, family contribution, savings, other pending scholarships, and remaining gap. If your family income changes by season, commission, exchange rate, agriculture, or self-employment, explain that context plainly. Reviewers need to understand the real affordability problem, not just the emotional desire to study abroad.",
+          "When writing about academic and career fit, avoid repeating UCL rankings. Instead, name the course structure, department strength, research area, professional pathway, or practical training that makes the programme necessary for your next step. A convincing answer shows that you chose UCL deliberately and that the scholarship would support a coherent plan rather than a generic dream of studying in the United Kingdom.",
+          "Applicants should also keep the admissions and funding timelines connected. A delayed reference, incomplete transcript, unresolved fee-status question, or late Portico submission can damage an otherwise strong scholarship profile. Build a checklist with dates for the course application, references, funding form, supporting evidence, and email monitoring. For a need-based scholarship with a hard deadline, administrative discipline is part of competitiveness.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Calling the scholarship fully funded when the official value is GBP 15,000.",
+          "Applying to a distance-learning programme.",
+          "Forgetting to complete the Portico funding application.",
+          "Submitting a master's application without references before the scholarship deadline.",
+          "Ignoring fee-status confirmation.",
+          "Writing generic financial need answers without concrete budget context.",
+          "Assuming the award cannot interact with other funding.",
+          "Underestimating London living costs and cash-flow timing.",
+        ],
+        paragraphs: [
+          "A strong UCL Global Masters Scholarship application is complete, precise, and financially realistic. The student submits the admissions application early, completes Portico funding, explains need clearly, and understands that GBP 15,000 is powerful support but not a full-cost guarantee.",
+        ],
+      },
+    ],
 
     country: "United Kingdom",
     degreeLevel: "Masters",
@@ -8218,6 +8343,131 @@ const rawScholarships: Scholarship[] = [
       "Competitive tuition-fee reduction for overseas students starting a full-time taught Master's degree at the University of Sussex.",
     summary:
       "The University of Sussex Chancellor's International Scholarship is a merit-competitive award for international students with overseas fee status who have accepted an offer for an eligible full-time Master's course. For the 2026/27 intake, Sussex publishes a GBP 5,000 value and a separate scholarship application window, with applications opening in April and closing at the end of April.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "University of Sussex" },
+          { label: "Award", value: "Chancellor's International Scholarships" },
+          { label: "Level", value: "Full-time taught master's" },
+          { label: "Value", value: "GBP 5,000 tuition fee reduction" },
+          { label: "Fee status", value: "Overseas" },
+          { label: "Funding type", value: "Sussex funded" },
+          { label: "Deadline", value: "April 30, 2026 at 23:59" },
+        ],
+        paragraphs: [
+          "The University of Sussex Chancellor's International Scholarship is a competitive tuition-fee reduction for international master's applicants with strong academic records. It is not an automatic discount and it is not a full scholarship. Sussex describes it as a limited award for applicants with exceptional academic achievement and potential.",
+          "For students comparing UK master's funding, this scholarship is best understood as a merit award that reduces the tuition bill by GBP 5,000. It can make Sussex more affordable, but applicants still need a complete funding plan for the remaining tuition, visa costs, accommodation, food, transport, health surcharge, and personal expenses.",
+        ],
+      },
+      {
+        title: "Who this scholarship is best for",
+        paragraphs: [
+          "This award is most suitable for an international student who already has a strong academic profile and a realistic plan to fund the rest of a Sussex master's degree. A good candidate has excellent grades, a focused course choice, and a convincing reason why Sussex is the right academic environment for the next stage of study.",
+          "The scholarship is not designed for students who only need an admission discount without a competitive application. Sussex explicitly treats the Chancellor's International Scholarship as selective. Applicants should expect the review to compare them with other high-achieving international offer holders, not simply check whether they meet basic course entry requirements.",
+          "Students from countries that also have Sussex country scholarships should read the terms carefully. Sussex states that strong applicants from several countries may be selected to combine this scholarship with country scholarships up to a maximum value. That can be useful, but it also means the exact final discount should be verified from the official award email and CAS information.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "You must be classified as overseas for fee purposes.",
+          "You must take up a place on a full-time master's degree starting in September 2026.",
+          "The offer can be conditional, but you still need a Sussex master's offer before applying.",
+          "You must be self-financing under Sussex scholarship rules.",
+          "You must have exceptional academic grades according to Sussex guidance.",
+          "Online courses, integrated master's final-year progression, and excluded programmes are not eligible.",
+        ],
+        paragraphs: [
+          "The most important point is that this is a master's scholarship, not a general international discount. You need to be applying to Sussex, taking up a place on an eligible full-time taught master's course, and meeting the overseas fee-status condition. If any of those foundations are missing, the scholarship will not solve the problem.",
+          "Academic strength is also central. Sussex publishes country-based qualification guidance, including examples such as high GPAs, first-class classifications, or strong percentage marks. These examples are guidance rather than a complete global conversion table, so students should not assume eligibility from one number alone. The safest approach is to compare your record with the official guidance and then present a strong academic-interest statement.",
+        ],
+      },
+      {
+        title: "What the GBP 5,000 award actually means",
+        paragraphs: [
+          "The award is a tuition fee reduction. That means it normally reduces the amount charged by the university rather than arriving as living-cost cash in the student's bank account. Sussex also states that there is no cash equivalent. This matters because many applicants casually describe every scholarship as funding, but the practical budgeting effect depends on how the award is paid.",
+          "If your tuition fee is much higher than GBP 5,000, the scholarship reduces the invoice but does not remove the need for savings, family support, education loans, external awards, or other verified funding. If you need help with rent in Brighton, visa fees, the immigration health surcharge, flights, and setup costs, you should budget those separately.",
+          "Students should also check scholarship-combination rules. Sussex states that this award cannot be combined with the Sussex Alumni Scholarship, and if a student is eligible for both, the higher-value scholarship is awarded. It may be combined with the Sussex Progressive Futures Scholarship under official terms. These details are easy to miss but can change the real funding picture.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Choose an eligible full-time taught master's programme at Sussex.",
+          "Submit the master's application and receive an offer.",
+          "Check that your fee status, study mode, start date, and course are eligible.",
+          "Prepare the scholarship application and academic-interest statement.",
+          "Submit the scholarship application before April 30, 2026 at 23:59.",
+          "Monitor Sussex emails for the decision, which Sussex says applicants can expect before the end of July.",
+        ],
+        paragraphs: [
+          "The Chancellor's International Scholarship requires a separate scholarship application. Applying for a master's course alone is not enough. A student who receives an offer but never completes the scholarship form should not expect to be considered automatically.",
+          "Because the deadline arrives early in the UK admissions cycle, applicants should not wait until every condition is finished. Sussex allows conditional offers in the eligibility text, so the practical priority is to get the course application submitted early enough to receive an offer and then complete the scholarship form on time.",
+        ],
+      },
+      {
+        title: "Writing the scholarship statement",
+        paragraphs: [
+          "The best scholarship statements are specific, personal, and tied to the course. Do not write a generic paragraph about wanting to study in the United Kingdom. Explain why this particular Sussex master's fits your academic background, what problem or field you want to work on, and why your previous grades show readiness for that programme.",
+          "Sussex warns that AI-generated scholarship statements are often unsuccessful and that the personal statement needs to be written by the applicant. This does not mean students cannot plan carefully; it means the final answer should sound like a real student with a real academic history, not a polished template that could belong to anyone.",
+          "A strong structure is simple: your academic record, your chosen Sussex course, the subject area you want to develop, the future use of the degree, and the reason the scholarship would make the plan more achievable. Use concrete examples such as projects, coursework, research interests, professional experience, or community work. Avoid empty phrases like world-class university without proving course fit.",
+        ],
+      },
+      {
+        title: "Budgeting and offer strategy",
+        paragraphs: [
+          "Before applying, calculate the cost after the GBP 5,000 reduction. Add tuition balance, accommodation, food, transport, visa, health surcharge, travel, laptop, books, and emergency savings. A scholarship can feel large in isolation but still leave a serious funding gap when UK living costs are included.",
+          "Applicants should also think about timing. Scholarship decisions come after the closing date, and Sussex states applicants can expect a decision before the end of July. If your visa or deposit plan depends completely on the result, make sure you understand university deposit deadlines and refund rules before paying anything.",
+          "If you are also eligible for a country scholarship or another Sussex award, read combination rules before assuming the amounts stack. A realistic applicant treats the official scholarship email and CAS details as the final funding evidence, not an online article or a rough calculation.",
+        ],
+      },
+      {
+        title: "How to decide whether it is worth applying",
+        paragraphs: [
+          "Apply if you meet the eligibility conditions, have strong grades by the standard used in your country, and can write a specific academic-interest statement. The scholarship is competitive, but the application effort is reasonable compared with the value. If you already have or expect a Sussex offer, it is usually worth preparing the scholarship form rather than leaving GBP 5,000 unattempted.",
+          "Be more cautious if your course appears in the excluded list, if your academic record is far below the guidance for your country, or if you need full funding to study. In those cases, the award may either be unavailable or insufficient. That does not mean Sussex is impossible, but it means you should not treat this scholarship as your only funding plan.",
+          "A practical decision rule is to ask three questions. First, would I still consider Sussex if I did not receive this award? Second, can I fund the remaining cost if I do receive it? Third, can I submit a scholarship statement that clearly shows academic fit and personal authorship? If the answer to all three is yes, the application is worth serious attention.",
+        ],
+      },
+      {
+        title: "Timeline checklist",
+        ordered: [
+          "Shortlist eligible Sussex master's courses and remove excluded programmes.",
+          "Check the academic-grade guidance for your country.",
+          "Submit the master's application early enough to receive an offer before the scholarship deadline.",
+          "Draft the scholarship statement in your own voice and connect it to Sussex course content.",
+          "Submit the scholarship application before April 30, 2026 at 23:59.",
+          "Keep evidence of submission and monitor email through July.",
+          "If selected, compare the award email with your tuition invoice, other scholarships, and CAS details.",
+        ],
+        paragraphs: [
+          "The timeline is tight because the scholarship is not something to think about after arriving at the university. It sits between course admission and final funding/visa planning. Students who wait until late April to start the course application may not have enough time to receive an offer, review eligibility, and write a careful scholarship statement.",
+          "Keep all official messages in one folder. Save the course offer, scholarship submission confirmation, decision email, fee assessment, and CAS evidence. This is not just tidy administration; it helps if you need to ask Sussex a question about scholarship value, combination rules, or whether the award has been reflected correctly.",
+        ],
+      },
+      {
+        title: "Final advice",
+        paragraphs: [
+          "If you apply, make the application feel like a Sussex master's application, not a recycled scholarship essay. The reader should understand your academic strength, your exact programme choice, and the reason this tuition reduction matters to your plan.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Calling the award fully funded when it is a GBP 5,000 tuition fee reduction.",
+          "Applying without first receiving a Sussex master's offer.",
+          "Choosing an online or excluded course.",
+          "Ignoring the self-financing condition.",
+          "Submitting a generic statement that does not show Sussex course fit.",
+          "Assuming country scholarships and Chancellor's awards always combine automatically.",
+          "Forgetting that the scholarship has no cash equivalent for living costs.",
+        ],
+        paragraphs: [
+          "The cleanest application is academically strong, administratively complete, and honest about funding. Treat the Chancellor's International Scholarship as a competitive tuition discount for excellent international master's applicants, then build the rest of your study plan around verified costs and official Sussex conditions.",
+        ],
+      },
+    ],
 
     country: "United Kingdom",
     degreeLevel: "Masters",
@@ -8270,6 +8520,135 @@ const rawScholarships: Scholarship[] = [
       "Tuition-fee reduction for Pakistani nationals classified as overseas students applying to eligible Master's programs at Sussex.",
     summary:
       "The University of Sussex Pakistan Scholarship (Masters) is a country-specific tuition award for Pakistani nationals with overseas fee status who are admitted to eligible taught Master's courses. Sussex publishes this as an automatic award route for eligible offer holders, with no separate scholarship application required under the 2026 call terms.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "University of Sussex" },
+          { label: "Award", value: "Sussex Pakistan Scholarship (Masters)" },
+          { label: "Value", value: "GBP 4,000 tuition fee reduction" },
+          { label: "Nationality", value: "Pakistan" },
+          { label: "Fee status", value: "Overseas" },
+          { label: "Study start", value: "September 2026 or January 2027" },
+          { label: "Application", value: "Automatic for eligible offer holders" },
+          { label: "Deadline", value: "September 1, 2026 at 23:59" },
+        ],
+        paragraphs: [
+          "The Sussex Pakistan Scholarship is a country-specific master's tuition discount for Pakistani nationals who are classified as overseas fee-paying students and take up a place on an eligible full-time master's course at the University of Sussex. For the 2026 entry cycle, Sussex lists the award value as GBP 4,000.",
+          "The most student-friendly part of this scholarship is that it is applied automatically when the eligibility conditions are met. That does not mean students can ignore the rules. Nationality, fee status, course eligibility, intake, offer status, and tuition sponsorship all still matter.",
+        ],
+      },
+      {
+        title: "Who this scholarship is best for",
+        paragraphs: [
+          "This award is best for Pakistani students who want a direct tuition reduction without writing a separate scholarship application. It is especially useful for applicants who have already chosen Sussex for a master's degree and need a predictable discount to make the tuition plan more realistic.",
+          "Because the award is automatic, the main work is not writing a scholarship essay. The main work is choosing an eligible course, submitting a strong admissions application, proving Pakistani nationality, confirming overseas fee status, and watching the offer and CAS documents carefully to make sure the discount appears.",
+          "Students should not confuse automatic with guaranteed for every Pakistani applicant. If the course is excluded, the tuition fee is fully sponsored, the applicant is not classified as overseas, or the student does not take up an eligible full-time master's place in the correct intake, the scholarship can be unavailable or removed.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "You must be a national of Pakistan.",
+          "You must be classified as overseas for fee purposes.",
+          "You must take up a place on a full-time eligible master's degree at Sussex.",
+          "The course must start in September 2026 or January 2027.",
+          "You are not eligible if your tuition fees are fully sponsored.",
+          "Excluded courses include several certificates, diplomas, online routes, BSMS courses, and specific development-related master's programmes listed by Sussex.",
+        ],
+        paragraphs: [
+          "The nationality rule is precise. The award is for Pakistani nationals, so students should be ready to confirm nationality through passport or official identity documents during the admissions and visa process. Partial wording, residence alone, or family origin is not the same as meeting the official nationality condition.",
+          "The fee-status condition is equally important. Many international scholarships at UK universities are tied to being assessed as overseas for fees. If a student's fee status changes, the scholarship position may change as well. Always rely on the fee status shown by Sussex, not assumptions based on where you currently live.",
+        ],
+      },
+      {
+        title: "What the GBP 4,000 award covers",
+        paragraphs: [
+          "The scholarship is a tuition fee reduction. It reduces the tuition cost charged by Sussex; it is not a cash stipend for rent, flights, food, visa charges, or the immigration health surcharge. Students should therefore calculate the remaining tuition after the GBP 4,000 reduction and then add living costs separately.",
+          "For many Pakistani applicants, the award can still be meaningful because UK master's tuition is a major part of the budget. A predictable GBP 4,000 reduction may affect whether a student can combine savings, family support, work income within visa limits, or an education loan into a viable plan.",
+          "The scholarship should appear in official Sussex communications after an eligible offer. Sussex states that confirmation is sent by email after an offer, and scholarship information is included in the CAS for visa purposes. If the scholarship does not show where expected, students should contact the admissions office rather than assuming it will be fixed automatically at the last minute.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Choose a full-time eligible Sussex master's course.",
+          "Submit the master's application with accurate nationality and personal details.",
+          "Receive an offer from Sussex.",
+          "Confirm that your course, start date, nationality, fee status, and sponsorship position meet the scholarship rules.",
+          "Check email and offer/CAS details for scholarship confirmation.",
+          "Contact Sussex admissions if the scholarship does not appear despite meeting the published criteria.",
+        ],
+        paragraphs: [
+          "There is no separate scholarship application for eligible students. This is helpful because it removes the personal-statement burden, but it also makes accuracy inside the admissions record more important. If your passport name, nationality, fee status, or course details are wrong, resolve them early.",
+          "The application deadline shown by Sussex is tied to taking up an eligible place rather than submitting a separate scholarship essay. Still, students should apply well before the deadline because master's admissions, documents, offer conditions, deposits, CAS processing, and visa appointments can take time.",
+        ],
+      },
+      {
+        title: "Course exclusions and sponsorship checks",
+        paragraphs: [
+          "The biggest hidden risk is course eligibility. Sussex excludes several programme categories and named courses from many master's scholarships, including certificates and diplomas, online courses, Schools Direct teaching courses, research-council-funded master's routes, some BSMS courses, and a group of development-related programmes. Always verify your exact course against the official page.",
+          "Fully sponsored students are not eligible. This means that if another organisation is already covering the tuition fees, the Pakistan Scholarship may not apply. Partial family support or a private education loan is different from a full tuition sponsorship, but students should use Sussex's official interpretation if their situation is complicated.",
+          "Applicants should also check whether they are eligible for other Sussex awards. Some awards cannot be combined, and some country scholarships may interact with other discounts. The safe rule is simple: do not build a budget by stacking scholarships unless Sussex confirms the combination.",
+        ],
+      },
+      {
+        title: "Planning from Pakistan",
+        paragraphs: [
+          "Pakistani applicants should prepare early for documents that affect both admission and visa timing. These can include degree transcripts, final certificates, English language evidence if required, passport, references, financial documents for visa purposes, and any course-specific material. The scholarship may be automatic, but admission and visa readiness are not automatic.",
+          "Currency movement can affect affordability. A GBP 4,000 reduction may look different when converted into Pakistani rupees at different exchange rates. Build your budget in pounds first, then convert using a conservative exchange-rate assumption so you are not surprised later.",
+          "Students should also account for cash-flow timing. A tuition discount can reduce the final invoice, but you may still need money earlier for application costs, deposits, tests, TB testing if applicable, visa fees, immigration health surcharge, flight booking, and initial accommodation. Plan the first-month arrival budget separately from the tuition calculation.",
+        ],
+      },
+      {
+        title: "How to confirm the award is applied correctly",
+        paragraphs: [
+          "Because this scholarship is automatic, students sometimes assume silence means everything is fine. A better approach is to verify the discount in writing. After receiving the Sussex offer, check whether the scholarship confirmation email arrives and whether the award is later reflected in the CAS or fee information used for visa planning.",
+          "If the scholarship is missing, contact the relevant Sussex admissions or scholarship contact with a concise message. Include your applicant ID, course title, intake, nationality, fee-status information, and a link or reference to the Pakistan Scholarship page. Do not send a vague message asking whether you can get a scholarship; ask for a check against the published automatic eligibility rules.",
+          "If Sussex explains that your course is excluded, your fee status is not overseas, or another funding condition blocks the award, treat that official answer as controlling. It is better to know early than to build a visa budget around a discount that will not appear.",
+        ],
+      },
+      {
+        title: "Offer-holder checklist",
+        ordered: [
+          "Confirm your exact course title is eligible.",
+          "Check that the course starts in September 2026 or January 2027.",
+          "Confirm that your fee status is overseas.",
+          "Make sure your passport/nationality record shows Pakistan correctly.",
+          "Review whether any sponsor is covering full tuition.",
+          "Look for scholarship confirmation after receiving the offer.",
+          "Verify the award appears correctly before finalising visa funding calculations.",
+        ],
+        paragraphs: [
+          "This checklist is deliberately simple because automatic awards can fail through small record mismatches. A misspelled name is usually fixable, but an excluded course or wrong fee status is not a small clerical issue. Treat every line as a pass/fail item before you rely on the GBP 4,000 reduction.",
+          "The best time to solve these issues is before CAS issuance and before visa money is locked. Once visa timing becomes urgent, even a small scholarship clarification can feel stressful. Early verification gives you room to correct records, switch plans, or adjust the budget.",
+        ],
+      },
+      {
+        title: "Final advice",
+        paragraphs: [
+          "For Pakistani students, the main advantage is simplicity: no separate scholarship essay, no extra competition form, and a clear tuition reduction when the rules are met. Use that simplicity well. Put your energy into a strong Sussex admissions application, accurate documents, and early verification of the scholarship on your offer record.",
+          "Do not wait until the visa stage to discover whether the discount applies. The best applicant treats this as an automatic award that still needs active checking. If the scholarship appears correctly, it becomes a stable part of the budget; if it does not, you still have time to ask Sussex, adjust the plan, or look for another verified funding route.",
+          "Also remember that automatic awards do not judge motivation, but admissions teams still judge the course application. Your personal statement, academic record, references, and English readiness can decide whether you receive the eligible offer in the first place. The scholarship helps after that foundation is in place.",
+          "A good final check is simple: would your Sussex applicant record clearly show that you are a Pakistani national, an overseas fee payer, and an offer holder for an eligible full-time master's course? If yes, the scholarship should be much easier to track and confirm.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Assuming residence in Pakistan is enough without confirming Pakistani nationality.",
+          "Treating the award as a living-cost stipend instead of a tuition fee reduction.",
+          "Choosing an excluded course and expecting the automatic discount anyway.",
+          "Ignoring fee-status assessment.",
+          "Waiting until CAS issuance to question a missing scholarship line.",
+          "Assuming fully sponsored tuition can still receive the discount.",
+          "Building a budget from rupee conversions without checking the pound cost first.",
+        ],
+        paragraphs: [
+          "The Sussex Pakistan Scholarship is straightforward when the record is clean: Pakistani nationality, overseas fee status, eligible full-time master's course, correct intake, no full tuition sponsorship, and official Sussex confirmation. The student who checks those points early has a much smoother path than the student who discovers a mismatch during visa preparation.",
+        ],
+      },
+    ],
 
     country: "United Kingdom",
     degreeLevel: "Masters",
@@ -8320,6 +8699,134 @@ const rawScholarships: Scholarship[] = [
       "Country-targeted Master's scholarship under the GREAT Scholarships campaign for selected Sussex taught Master's courses.",
     summary:
       "The University of Sussex GREAT Scholarship is part of the GREAT Scholarships campaign and supports selected international applicants from eligible countries for taught Master's study at Sussex. For the 2026 call, Sussex lists a GBP 10,000 scholarship value and a late-April deadline, with eligibility linked to nationality and course participation under official GREAT terms.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "University of Sussex" },
+          { label: "Award", value: "GREAT Scholarship" },
+          { label: "Campaign", value: "GREAT Scholarships / Study UK partner route" },
+          { label: "Value", value: "GBP 10,000 tuition support" },
+          { label: "Level", value: "Taught master's" },
+          { label: "Funding type", value: "Partial tuition support" },
+          { label: "Deadline", value: "April 30, 2026" },
+        ],
+        paragraphs: [
+          "The University of Sussex GREAT Scholarship is a partial tuition award connected to the wider GREAT Scholarships campaign. The practical appeal is clear: GBP 10,000 toward a UK taught master's can make a major difference to the tuition budget.",
+          "It should not be described as fully funded. GREAT awards normally support tuition rather than providing a complete living-cost package. A student still needs to budget for the remaining tuition, accommodation, food, transport, visa costs, health surcharge, travel, and emergency money.",
+        ],
+      },
+      {
+        title: "Who this scholarship is best for",
+        paragraphs: [
+          "This scholarship is best for students from eligible GREAT countries who have a strong reason to study a participating taught master's at Sussex and can fund the rest of the study plan. It fits applicants who need significant tuition help but do not necessarily require a full stipend package.",
+          "The strongest candidates usually have a clear subject direction. GREAT Scholarships are not just generic discounts; they are designed to support students who can explain their academic interest, future contribution, and connection between the course and their goals. A vague application about wanting to study in the UK is weaker than a focused application about a specific field and outcome.",
+          "Because country eligibility can change by year and university, students should not rely on old lists from social media or general blogs. Always check the official Sussex page and the official Study UK GREAT page for the exact countries, course scope, deadline, and application process for the active cycle.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "You must be from an eligible country listed for the Sussex GREAT Scholarship cycle.",
+          "You must apply to an eligible taught master's programme at Sussex.",
+          "You must meet the university's admission and English language requirements.",
+          "You must satisfy GREAT country and applicant rules for the cycle.",
+          "The award is normally for tuition support and does not replace visa or living-cost evidence.",
+          "Course-level participation and exclusions must be checked on official pages.",
+        ],
+        paragraphs: [
+          "The key eligibility detail is that GREAT Scholarships are country-linked. A student may be academically strong and still ineligible if their passport, residence, or country category does not match the active Sussex GREAT call. This is why country-specific verification should happen before writing essays or paying application-related costs.",
+          "Course eligibility is the second major filter. Some GREAT awards are open across many taught master's programmes, while others are tied to specific subject areas or partner arrangements. Do not assume every Sussex master's is covered. Open the official scholarship page, compare your course title exactly, and save the page or email evidence for your planning file.",
+        ],
+      },
+      {
+        title: "What the GBP 10,000 award covers",
+        paragraphs: [
+          "The award reduces tuition. It is a strong partial scholarship because GBP 10,000 can remove a large part of the international fee bill, but it does not automatically pay rent, visa charges, the immigration health surcharge, flights, meals, laptop costs, or family travel. This distinction matters for students preparing UK visa financial evidence.",
+          "A useful budgeting method is to calculate three numbers: total tuition before scholarship, tuition after the GBP 10,000 reduction, and total non-tuition cost for the year. Only after those three numbers are visible can you decide whether the scholarship makes Sussex financially realistic.",
+          "If you are also applying for another award, check combination rules. Some university scholarships can be combined, some cannot, and some will only allow the highest award to apply. Do not assume two discounts stack unless the university confirms it in writing or in official terms.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Confirm that your country is eligible for Sussex's GREAT Scholarship in the active cycle.",
+          "Check the official Sussex page for eligible course rules and exclusions.",
+          "Apply for the relevant taught master's programme at Sussex.",
+          "Prepare scholarship answers that explain subject motivation, course fit, and future impact.",
+          "Submit the GREAT Scholarship application through the process specified by Sussex before the deadline.",
+          "Monitor university emails for decision updates and any instructions after selection.",
+        ],
+        paragraphs: [
+          "A common mistake is looking for one central British Council form. GREAT Scholarships are promoted through Study UK, but applications are usually handled through individual university pages. For Sussex, students should follow the Sussex scholarship instructions and deadline.",
+          "Start early because the scholarship deadline may arrive before students expect. You may need time to identify eligible courses, prepare a master's application, write scholarship responses, request references if needed, and solve document problems. A rushed application usually produces generic answers, and generic answers rarely help in a competitive award.",
+        ],
+      },
+      {
+        title: "Writing a stronger GREAT application",
+        paragraphs: [
+          "A strong GREAT application connects three things: the applicant's academic background, the Sussex course, and the future impact of the degree. Instead of writing broadly about the United Kingdom, explain why the specific programme matters for your subject, career path, community, industry, or research direction.",
+          "Use evidence. Mention relevant coursework, projects, work experience, volunteering, publications, competitions, leadership, or real problems you have worked on. The goal is not to sound dramatic; the goal is to show that your interest is already active and that a Sussex master's would build on something real.",
+          "The future-impact part should be credible. Avoid promising to transform an entire country in one sentence. It is better to explain a focused next step: a policy area you want to work in, a sector you want to enter, a research gap you want to address, a business or public-service problem you understand, or a professional role where the Sussex course gives relevant skills.",
+          "If the form asks about being a GREAT scholar or ambassador, take that seriously. The wider programme values engagement, networking, and representing the scholarship community. Show that you understand the responsibility without turning the answer into slogans.",
+        ],
+      },
+      {
+        title: "Budgeting and visa planning",
+        paragraphs: [
+          "Because the award is partial, students should separate scholarship optimism from visa readiness. UK visa rules require credible funds for study and living costs according to official requirements. A tuition discount helps, but it does not remove the need to show whatever remaining money is required for the visa and university process.",
+          "Brighton and the wider Sussex area can still be expensive. Students should compare accommodation types, transport routes, food costs, deposits, household items, health surcharge, and arrival cash. If the scholarship only appears as a tuition reduction, you may need money before or alongside the award for early setup costs.",
+          "If your funding depends on family support, loans, or exchange-rate-sensitive savings, keep a conservative buffer. A GBP 10,000 scholarship is valuable, but exchange rates, flight prices, visa timing, and accommodation deposits can shift quickly. The best funding plan survives those changes.",
+        ],
+      },
+      {
+        title: "How to compare GREAT with other UK scholarships",
+        paragraphs: [
+          "GREAT is often easier to understand than fully funded government scholarships because the value is usually a fixed tuition contribution. Compared with Chevening or Commonwealth-style awards, it normally offers less total coverage but may have a different application route and subject profile. That makes it a strong option for students who can cover living costs but need help reducing tuition.",
+          "Compared with small automatic university discounts, GREAT is usually more competitive and more valuable. A GBP 10,000 award can change the affordability of a UK master's, but the competition means the application needs stronger evidence of motivation and fit. Do not treat it like an automatic country discount.",
+          "The best shortlist often includes one dream full-funding route, one or two strong tuition-support routes such as GREAT, and several realistic university discounts. This is not about lowering ambition; it is about protecting the study plan. If one scholarship closes or becomes too competitive, another verified route may still keep the UK master's possible.",
+        ],
+      },
+      {
+        title: "Application readiness checklist",
+        ordered: [
+          "Verify eligible country and residence rules for the active cycle.",
+          "Confirm the exact Sussex master's course is included.",
+          "Check whether you need an offer before applying for the scholarship.",
+          "Prepare transcripts, degree evidence, passport, and English proof if required.",
+          "Write a subject-specific statement rather than a general UK-study essay.",
+          "Explain how you will use the course after returning to your field or community.",
+          "Submit before the Sussex deadline and save proof of submission.",
+        ],
+        paragraphs: [
+          "A strong application is usually ready before the final week. Students should use the final week for polishing, not for discovering that their course is not eligible or that the form asks for a statement they have not drafted. Scholarship quality often comes from preparation time.",
+          "If the form has short answer limits, answer the question directly. A 200-word answer cannot carry a life story, a full SOP, and a course catalogue summary. Choose one or two strong examples and make every sentence prove fit, motivation, or future contribution.",
+        ],
+      },
+      {
+        title: "Final advice",
+        paragraphs: [
+          "Treat GREAT as a focused tuition scholarship for students who can explain exactly why their subject matters. The award is large enough to change the budget, but competitive enough that a generic application wastes the opportunity.",
+          "Before submitting, read your answers as if you were a scholarship reviewer with limited time. If the answer does not show country eligibility, course fit, subject motivation, and credible future use, revise it. The goal is not to sound impressive in general; the goal is to make Sussex and GREAT feel like the logical next step in your education.",
+          "If your country is eligible but your preferred Sussex course is not, do not force the fit. Choose the course that genuinely matches your goals and then look for the right funding route. A scholarship should support a good academic decision, not push you into a master's that is wrong for your future.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Calling GREAT fully funded when it is tuition support.",
+          "Using an old country list instead of the current Sussex and Study UK pages.",
+          "Assuming all Sussex master's programmes are automatically eligible.",
+          "Looking for a central British Council application instead of following Sussex instructions.",
+          "Writing a generic scholarship statement with no course-specific evidence.",
+          "Forgetting to budget for living costs and visa financial evidence.",
+          "Assuming this award can be stacked with other scholarships without confirmation.",
+        ],
+        paragraphs: [
+          "The Sussex GREAT Scholarship is a strong opportunity when the applicant checks country eligibility, chooses an eligible master's, writes a focused application, and builds a realistic budget. Treat it as a serious GBP 10,000 tuition award, not as a full-cost solution, and the planning becomes much clearer.",
+        ],
+      },
+    ],
 
     country: "United Kingdom",
     degreeLevel: "Masters",
@@ -8369,6 +8876,120 @@ const rawScholarships: Scholarship[] = [
       "IDEX-funded scholarships for outstanding international students admitted to eligible Université Paris-Saclay master's programs.",
     summary:
       "Université Paris-Saclay International Master's Scholarships (IDEX) support high-level international students admitted to eligible master's programs delivered by Paris-Saclay member institutions. The scholarship is aimed at facilitating access to master's studies in France and can renew from M1 to M2 under progression rules. Selection is coordinated through the master's program team and the official Paris-Saclay scholarship workflow.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "Université Paris-Saclay" },
+          { label: "Award", value: "International Master's Scholarships Program IDEX" },
+          { label: "Level", value: "Master's" },
+          { label: "Value", value: "EUR 10,000 per academic year" },
+          { label: "Travel/visa support", value: "Up to EUR 900 depending on country of origin" },
+          { label: "Payment period", value: "September to June after arrival and registration" },
+          { label: "Application route", value: "Nomination/pre-selection by eligible master's programme" },
+        ],
+        paragraphs: [
+          "The Université Paris-Saclay International Master's Scholarships Program is an IDEX-funded award for strong international students admitted to eligible master's programmes. It is designed to attract high-level students to research-intensive master's study in France, especially students who may later continue toward doctoral research.",
+          "The headline value is EUR 10,000 per year, paid during the academic year from September to June. A travel and visa contribution of up to EUR 900 may also be awarded depending on the student's country of origin. This is generous support, but it is not the same as a guaranteed full-cost package for every expense.",
+        ],
+      },
+      {
+        title: "Who this scholarship is best for",
+        paragraphs: [
+          "This scholarship is best for international students who already have a strong academic profile and a clear fit with a Paris-Saclay master's programme. It is especially relevant for students who want a research-oriented master's environment and may be considering a PhD, research career, or advanced technical profession after graduation.",
+          "It is not a scholarship where students apply directly first and then choose a course later. The course application comes first. The master's programme team must identify or pre-select eligible candidates for the scholarship workflow. That means your programme fit, academic record, and admission file are central to scholarship access.",
+          "Students who need a guaranteed tuition waiver, housing, and living allowance before making any move should read the payment rules carefully. Paris-Saclay states that scholarship and travel expenses are paid only after arrival in France and registration in the admitted programme. No advance payment is made.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "You must be a student of foreign nationality.",
+          "You must be admitted to an eligible Université Paris-Saclay master's programme.",
+          "M1 and M2 levels can be eligible under the programme rules.",
+          "The scholarship is intended for students entering French higher education for the first time, with limited official exceptions.",
+          "Applicants must be under 30 during the application year.",
+          "Apprenticeship-based master's tracks are excluded.",
+          "The award cannot be combined with certain major scholarships, including Eiffel, Europa, or Erasmus Mundus funding.",
+        ],
+        paragraphs: [
+          "Eligibility is not only about nationality. The selected master's programme, admission status, age rule, prior French higher-education history, and funding compatibility all matter. A student can be academically excellent but still not eligible if the programme is outside scope or the student already receives incompatible funding.",
+          "The first-enrollment rule is especially important. The scholarship is aimed at international students newly entering French higher education, with limited exceptions stated by the university. If you have already studied in France, check the official rule rather than assuming you are either eligible or ineligible.",
+        ],
+      },
+      {
+        title: "What the funding covers",
+        paragraphs: [
+          "The main scholarship amount is EUR 10,000 per academic year. Paris-Saclay states that it is paid monthly for the duration of the academic year, usually September to June. The amount may be reduced during months spent abroad or during internships outside Université Paris-Saclay affiliated laboratories, so students should not assume identical payments in every situation.",
+          "The travel and visa contribution can be up to EUR 900 per year depending on country of origin. This is helpful for arrival costs, but it is paid after arrival and registration. Students should therefore have enough money to travel, settle, and complete early administrative steps before scholarship funds arrive.",
+          "The award does not automatically remove every cost. Students should still plan for tuition or registration charges where applicable, accommodation deposit, food, transport, health insurance or complementary coverage if needed, study materials, winter clothing, and emergency savings. France can be more affordable than some destinations, but arrival cash flow still matters.",
+        ],
+      },
+      {
+        title: "How the application process works",
+        ordered: [
+          "Choose an eligible Université Paris-Saclay master's programme.",
+          "Submit the master's admission application through the official route.",
+          "Wait for the programme coordinator or admissions team to assess scholarship nomination/pre-selection.",
+          "If pre-selected, complete the scholarship form sent through the official workflow.",
+          "Submit any required references or supporting information before the final scholarship deadline.",
+          "Wait for jury review and scholarship results.",
+          "If selected, arrive in France, register in the programme, and then receive scholarship and travel/visa payments under university rules.",
+        ],
+        paragraphs: [
+          "The key point for students is that there is no simple public scholarship form to complete before admission. The master's programme controls pre-selection. This makes the course application itself very important: transcripts, motivation, academic fit, references, and programme relevance can influence whether the scholarship path opens.",
+          "Deadlines may be split between programme coordinator pre-selection and candidate scholarship-form submission. Missing either stage can end the opportunity for that cycle. Students should track both dates and not assume that submitting the course application automatically completes the scholarship application.",
+        ],
+      },
+      {
+        title: "How to make the application stronger",
+        paragraphs: [
+          "A strong Paris-Saclay application should show why the chosen master's programme is academically necessary. Mention the specialization, labs, research environment, methods, faculty areas, or professional skills that make the programme a fit. Do not rely only on the university's reputation.",
+          "If your goal is a PhD, make that connection credible. Explain the research area you want to build toward, the academic preparation you already have, and why this master's is the right bridge. If your goal is industry or public-sector work, explain the technical or analytical skills you need and how the programme develops them.",
+          "International applicants should also show readiness for France. That can include language preparation where relevant, understanding of programme structure, ability to live independently, and a realistic funding plan before the first scholarship payment. Reviewers want students who can succeed after arrival, not just students who like the idea of studying abroad.",
+        ],
+      },
+      {
+        title: "Budgeting before arrival",
+        paragraphs: [
+          "The most important budgeting detail is timing. Paris-Saclay states that laureates receive scholarship and travel expenses only after arrival in France and registration in the programme. Students need upfront funds for travel, first accommodation costs, deposits, food, transport, phone setup, and administrative expenses.",
+          "Build a first-month budget separately from the annual scholarship amount. Even if EUR 10,000 is enough to support a large part of the year, the first weeks can require cash before the monthly payment begins. This is where many students feel pressure if they treat the scholarship as immediate pre-arrival money.",
+          "If your programme includes mobility, internship periods, or time outside affiliated labs, read the payment-reduction rule carefully. A reduced scholarship month can affect rent and living costs. Ask the programme coordinator how the structure of your specific master's might interact with scholarship payments.",
+        ],
+      },
+      {
+        title: "Programme-fit checklist",
+        ordered: [
+          "Confirm the master's programme is part of the eligible Paris-Saclay scholarship scope.",
+          "Check whether you are applying for M1 or M2 and how renewal or continuation works.",
+          "Review language of instruction and any French or English language evidence needed.",
+          "Identify the academic track, laboratory links, internship expectations, and research orientation.",
+          "Ask whether mobility or external internships could affect monthly scholarship payments.",
+          "Prepare a motivation statement that explains the programme fit rather than only the university brand.",
+          "Keep contact details for the programme coordinator because pre-selection happens through the programme route.",
+        ],
+        paragraphs: [
+          "This checklist matters because Paris-Saclay is a large university ecosystem with many master's tracks and partner institutions. Students should not treat the scholarship as one identical experience across every programme. The academic expectations, language requirements, internship structure, and research environment can vary.",
+          "A strong applicant can explain why the selected track is the right one. For example, a data-science applicant might discuss mathematical preparation, programming experience, and intended research area. A physics applicant might discuss lab experience and future doctoral interests. A public-policy or management applicant might focus on methods, sector goals, and evidence of previous preparation.",
+          "The scholarship review benefits from clarity. If your application shows that you understand the programme structure, the funding conditions, and your own next step, you look more prepared than a student who simply says Paris is attractive or the university is highly ranked.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Trying to apply for the scholarship before applying to an eligible master's programme.",
+          "Assuming admission automatically guarantees scholarship nomination.",
+          "Ignoring the under-30 and first-entry rules.",
+          "Forgetting that payments begin only after arrival and registration.",
+          "Treating the travel/visa contribution as guaranteed at the maximum amount.",
+          "Combining the scholarship with incompatible awards.",
+          "Missing the separate coordinator and candidate-form deadlines.",
+        ],
+        paragraphs: [
+          "The safest strategy is to treat Paris-Saclay IDEX as a programme-linked scholarship. First build a strong master's application, then follow the official nomination workflow exactly, and finally plan finances around the real payment timing rather than the headline annual value.",
+        ],
+      },
+    ],
 
     country: "France",
     degreeLevel: "Masters",
@@ -8459,6 +9080,132 @@ const rawScholarships: Scholarship[] = [
       "KFUPM's project-based Master's admission route in Saudi Arabia includes merit-linked tuition discount support for selected applicants. This track is separate from full-time thesis scholarship cycles.",
     summary:
       "The King Fahd University Scholarship listing refers to KFUPM's project-based Master's admission pathway for Fall 2026 open programs. Applicants apply through the official KFUPM Master's portal, where tuition discount categories are published for eligible admitted students. This route is primarily tuition-support based and should not be treated as a guaranteed full-stipend scholarship for every applicant.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "King Fahd University of Petroleum and Minerals" },
+          { label: "Country", value: "Saudi Arabia" },
+          { label: "Route", value: "Project-based Master of Science admission pathway" },
+          { label: "Funding style", value: "Tuition discount categories for eligible admitted students" },
+          { label: "Relevant cycle", value: "Fall 2026 project-based MS open-program cycle" },
+          { label: "Deadline", value: "February 28, 2026" },
+        ],
+        paragraphs: [
+          "This record covers KFUPM's project-based master's route, not a blanket promise that every master's applicant receives a fully funded package. That distinction is important because KFUPM also publishes information about full scholarships for distinguished full-time graduate applicants, especially for thesis-based MS and PhD routes.",
+          "For the project-based MS pathway, the public master's portal lists tuition discount categories such as continuing-scholar, lifelong-learner, Vision 2030 citizen, Vision 2030 Destination KSA, and early-bird discounts. Applicants should therefore read the exact programme and scholarship page before assuming monthly stipends, housing, airfare, or full tuition waiver.",
+        ],
+      },
+      {
+        title: "Who this route is best for",
+        paragraphs: [
+          "This route is best for applicants who want a professionally oriented master's degree at KFUPM and can evaluate a tuition-discount model realistically. It may be especially relevant for students interested in engineering, computing, business, data, energy, sustainability, industrial systems, or other areas where KFUPM has strong applied programmes.",
+          "It is not the best fit for students who need every cost fully covered before applying and who are specifically searching for a research assistantship-style package. Those students should separately check KFUPM's full scholarship pages for thesis-based MS or PhD routes and confirm whether their programme is included.",
+          "The right applicant reads the admission page, identifies the exact master's programme, checks tuition and discount rules, and then decides whether the remaining cost is affordable. That is a very different process from applying to a national fully funded scholarship where stipend, housing, and airfare are guaranteed in the award terms.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Applicants need a bachelor's degree in a relevant discipline.",
+          "Programme-specific academic prerequisites must be satisfied.",
+          "English language evidence is required under current KFUPM admissions rules.",
+          "Discount eligibility depends on the category published by KFUPM for the project-based MS route.",
+          "International applicants should verify whether the Vision 2030 Destination KSA or other discount category applies to them.",
+          "Admission does not automatically mean every discount or full scholarship applies.",
+        ],
+        paragraphs: [
+          "The first eligibility layer is academic admission. KFUPM will look at whether the student's background matches the selected master's programme. A student with a strong GPA but unrelated preparation may still need to satisfy prerequisites, and some programmes may expect specific technical foundations.",
+          "The second eligibility layer is funding category. A continuing KFUPM graduate, a Saudi citizen, an international applicant, and an early registrant may fall under different discount rules. Do not copy another student's discount outcome unless your category, programme, and cycle are the same.",
+        ],
+      },
+      {
+        title: "What the funding may cover",
+        paragraphs: [
+          "For this project-based MS listing, the safest wording is tuition support or tuition discount. KFUPM's master's portal publishes discount percentages for specific categories, while the broader graduate scholarship page discusses full scholarship benefits for distinguished full-time MS or PhD students. These are related university funding concepts but not identical promises for every applicant.",
+          "If a student receives a tuition discount, the practical benefit is a lower tuition bill. It may not include monthly stipend, free housing, medical care, textbooks, subsidized meals, or airfare unless those benefits are explicitly attached to the student's confirmed scholarship category. Always use the official admission or scholarship offer as the final source.",
+          "Students should calculate the remaining cost after the discount. Include tuition balance, housing, meals, transport, medical insurance if not covered, visa/residency costs, travel, laptop, books, and personal expenses. Saudi Arabia can be financially attractive for some students, but the exact cost depends on campus arrangements and award category.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Open the official KFUPM master's admission portal for the active cycle.",
+          "Choose the project-based MS programme that matches your background.",
+          "Check admission prerequisites, English requirements, tuition, and discount rules.",
+          "Prepare transcripts, degree evidence, passport or national ID, CV, English proof, and any programme-specific documents.",
+          "Submit the application before the published Fall 2026 cycle deadline.",
+          "Monitor the applicant portal and email for admission and discount information.",
+          "Confirm the exact funding terms before accepting or making travel plans.",
+        ],
+        paragraphs: [
+          "A successful application starts with the programme page, not with a social-media scholarship post. KFUPM has multiple graduate routes, and the funding attached to each route can differ. Students should match the correct programme type before preparing documents.",
+          "Because the deadline is cycle-specific, applicants should not wait until the final week. English test results, transcript formats, recommendation requirements, and document uploads can cause delays. Early application may also matter if an early-bird discount is part of the published tuition-discount structure.",
+        ],
+      },
+      {
+        title: "How to choose the right KFUPM master's",
+        paragraphs: [
+          "Start with academic fit. A project-based MS is usually strongest when the student wants advanced applied training, industry-facing skills, or a professional technical pathway. If your main goal is a research thesis, funded lab work, or doctoral preparation, compare the project-based route with thesis-based MS and PhD options before deciding.",
+          "Look at course structure, duration, delivery model, capstone or project expectations, faculty strengths, and career outcomes. A discount can make a programme cheaper, but it should not be the only reason to choose it. The degree still needs to help you move toward a real academic or professional target.",
+          "International students should also consider location and industry ecosystem. KFUPM is in Dhahran, close to Saudi Arabia's energy, technology, and industrial sectors. That can be a major advantage for students whose goals align with those sectors, but it should be evaluated alongside programme content and funding terms.",
+        ],
+      },
+      {
+        title: "Funding questions to ask before accepting",
+        bullets: [
+          "Which exact discount category applies to me?",
+          "Is the discount percentage applied to all tuition or only specific semesters?",
+          "Are there GPA, registration, or timing conditions to keep the discount?",
+          "Does my offer include any stipend, housing, medical cover, or travel support?",
+          "What costs must I pay before arriving or registering?",
+          "Can the discount be combined with any other KFUPM support?",
+        ],
+        paragraphs: [
+          "These questions protect students from the most common misunderstanding: treating a tuition discount as a full scholarship. If the offer letter says tuition discount only, plan for every other cost. If it says full scholarship, read the benefit list and maintenance conditions carefully.",
+          "Keep written evidence of the funding terms. Screenshots of public pages are useful for planning, but the official admission or scholarship offer is what matters when deciding whether the programme is financially possible.",
+        ],
+      },
+      {
+        title: "How to decide if this route is worth it",
+        paragraphs: [
+          "This route is worth serious consideration if the programme matches your career direction, the tuition discount leaves a manageable remaining cost, and you are comfortable with a project-based master's structure. For students who want a shorter, professionally focused graduate degree in Saudi Arabia, KFUPM can be attractive because of its technical reputation and industry environment.",
+          "It may be less suitable if your only goal is a fully funded research pathway. In that case, you should compare KFUPM's thesis-based MS and PhD scholarship options separately and confirm whether your target field has full scholarship availability. A project-based MS can still be valuable, but it should not be chosen because you confused it with another funding route.",
+          "A practical decision test is to write down the confirmed offer, the confirmed discount, and the remaining out-of-pocket cost. If any of those three items are unknown, keep asking official questions before making financial commitments. The strongest plan is based on confirmed numbers, not on the most optimistic interpretation of the scholarship page.",
+        ],
+      },
+      {
+        title: "Application readiness checklist",
+        ordered: [
+          "Choose the exact project-based MS programme.",
+          "Compare your bachelor's background with the programme prerequisites.",
+          "Prepare official transcripts and degree documents early.",
+          "Check English test requirements and score validity.",
+          "Review tuition, discount categories, and payment timing.",
+          "Submit before the cycle deadline rather than relying on last-minute upload.",
+          "Read the offer carefully before accepting and ask KFUPM to clarify any unclear funding terms.",
+        ],
+        paragraphs: [
+          "This checklist keeps the process grounded. A student can lose time by chasing scholarship rumours while ignoring basic admissions readiness. The application still needs accurate documents, programme fit, and clear evidence that the applicant can succeed in the selected master's.",
+          "If you are an international applicant, also prepare practical questions about visa/residency processing, arrival dates, housing options, campus services, and whether any support is included. These details do not always appear in short scholarship summaries, but they affect whether the degree is realistic.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Assuming every KFUPM master's route is fully funded.",
+          "Mixing project-based MS tuition discounts with thesis-based scholarship benefits.",
+          "Ignoring programme-specific prerequisites.",
+          "Waiting too long to prepare English language evidence.",
+          "Applying based on a general scholarship post instead of the official KFUPM portal.",
+          "Accepting before confirming the exact discount percentage and remaining cost.",
+          "Forgetting that international living, travel, and setup costs may still be required.",
+        ],
+        paragraphs: [
+          "The safest way to approach this opportunity is to separate admission, discount category, and full-scholarship benefits. If all three are confirmed in your favour, excellent. If only admission and tuition discount are confirmed, make the budget from that reality rather than from the most generous version of KFUPM funding you have seen online.",
+        ],
+      },
+    ],
 
     country: "Saudi Arabia",
     degreeLevel: "Masters",
@@ -8544,6 +9291,134 @@ const rawScholarships: Scholarship[] = [
       "The Guillaume Dupaix International Scholarship supports high-achieving international candidates admitted to selected Master's programs at the University of Luxembourg.",
     summary:
       "The Guillaume Dupaix International Scholarship is administered by the University of Luxembourg for students applying to eligible Master's degrees. It is a selective merit-based award for the 2026-2027 intake and follows the university's admission cycle. The scholarship provides a semester stipend plus accommodation support in university housing, while tuition fees are not covered under this award.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "University of Luxembourg" },
+          { label: "Award", value: "Guillaume Dupaix International Scholarship" },
+          { label: "Level", value: "Master's" },
+          { label: "Value", value: "Semester stipend plus accommodation support" },
+          { label: "Duration", value: "Up to two years" },
+          { label: "Tuition", value: "Not covered" },
+          { label: "Main deadline", value: "March 24, 2026" },
+        ],
+        paragraphs: [
+          "The Guillaume Dupaix International Scholarship is a selective merit-based award for international students applying to eligible master's programmes at the University of Luxembourg. It is designed to attract strong students to Luxembourg and is linked to the university's admission process.",
+          "The award is valuable, but it should be explained accurately. It provides stipend support and accommodation-related support in university housing, while tuition fees are not covered. Students should therefore treat it as a high-value partial scholarship rather than a full-cost package.",
+        ],
+      },
+      {
+        title: "Who this scholarship is best for",
+        paragraphs: [
+          "This scholarship is best for academically strong international applicants who want a master's degree in Luxembourg and can present a clear programme fit. It suits students who have strong undergraduate results, a serious motivation for their chosen field, and a realistic plan for living and studying in a small, multilingual European country.",
+          "It is not ideal for applicants who need tuition, travel, and every living cost guaranteed before applying. The scholarship can reduce the living-cost burden, especially through accommodation support, but students still need to plan for tuition, arrival expenses, residence procedures, food, transport, insurance, study materials, and personal costs.",
+          "Because the award is competitive and limited, students should not treat it as an automatic discount. Admission to a master's programme is necessary, but selection for the scholarship depends on merit, eligibility, and official evaluation.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Applicants must apply to an eligible University of Luxembourg master's programme.",
+          "The scholarship is for international students, including EU and non-EU applicants under official rules.",
+          "A strong academic record is required.",
+          "The selected master's programme must be eligible; programmes with mandatory semester or year abroad requirements may be excluded.",
+          "Applicants must meet the language requirements of the selected master's programme.",
+          "Students receiving Luxembourg state financial aid for higher education are not eligible.",
+        ],
+        paragraphs: [
+          "The first filter is programme eligibility. Students should not assume every master's degree at the University of Luxembourg qualifies. The official scholarship page and programme page should be checked together, especially if the programme includes mobility or mandatory study abroad.",
+          "The second filter is academic merit. The scholarship is intended for high-achieving applicants, so transcripts, ranking where available, academic references, and motivation all matter. A student with basic admission eligibility may still not be competitive for the scholarship.",
+        ],
+      },
+      {
+        title: "What the funding covers",
+        paragraphs: [
+          "The scholarship combines financial support with accommodation-related support. Current summaries describe the award as around EUR 10,000 to EUR 11,500 per academic year depending on the official cycle wording, paid by semester. The record for this site lists EUR 5,763 per semester, or EUR 11,526 per academic year, for up to two years.",
+          "Accommodation support is one of the most practical parts of the award. Official descriptions refer to support for university residence costs up to a monthly limit. This can reduce a major expense in Luxembourg, where housing can be difficult and expensive for international students.",
+          "Tuition fees are not covered. That sentence should be front and centre for students. Even if accommodation and stipend support are strong, the student still needs to check tuition, enrollment charges, deposit timing, visa or residence costs, travel, food, transport, health insurance, and personal expenses.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Choose an eligible master's programme at the University of Luxembourg.",
+          "Check admission requirements, language requirements, and scholarship eligibility.",
+          "Prepare the master's application and scholarship materials before the deadline.",
+          "Submit the master's application and scholarship form by March 24, 2026.",
+          "Upload or provide supporting documents by March 31, 2026 where applicable.",
+          "Wait for university evaluation and official scholarship communication.",
+          "If selected, accept the scholarship within the stated window and follow residence/accommodation instructions.",
+        ],
+        paragraphs: [
+          "The scholarship process is closely linked to admission. Students should start from the university's official master's application system rather than looking for a detached scholarship-only route. If the course application is weak or late, the scholarship chance becomes much weaker.",
+          "Because supporting documents may have a separate deadline, applicants should prepare early. Waiting until the final days can create problems with transcripts, recommendations, language certificates, passport scans, or document translations.",
+        ],
+      },
+      {
+        title: "How to make the application stronger",
+        paragraphs: [
+          "A strong application explains why the selected master's programme at Luxembourg is the right fit. Mention the academic field, course structure, multilingual environment, research or professional relevance, and how your previous study prepared you. Avoid writing a general Europe scholarship essay that could be sent anywhere.",
+          "Use evidence of merit. Strong grades matter, but so do relevant projects, thesis work, internships, research experience, leadership, publications, competitions, or professional achievements. If your transcript does not use a familiar grading scale, provide context where the application allows it.",
+          "The motivation statement should also show practical readiness. Luxembourg is international and multilingual, but students still need to navigate housing, residence procedures, language environments, and a high cost of living. A prepared applicant looks more credible than one who only focuses on the scholarship value.",
+        ],
+      },
+      {
+        title: "Budgeting for Luxembourg",
+        paragraphs: [
+          "Luxembourg can be expensive, especially for housing. The scholarship's accommodation support can therefore be very valuable, but it does not remove every cost. Students should calculate rent after any support, tuition fees, food, public transport or mobility costs, insurance, residence documents, books, laptop, phone, and emergency funds.",
+          "Cash-flow timing matters. If the scholarship is paid by semester, students may need money before the first payment for travel, deposits, first groceries, local registration, and setup. A student should not arrive with only the assumption that the award will solve the first week.",
+          "If you are comparing Luxembourg with Germany, France, Belgium, or the Netherlands, compare total annual cost rather than scholarship headline. Luxembourg's location and labour market can be attractive, but the budget must be realistic from the start.",
+        ],
+      },
+      {
+        title: "Timeline and document strategy",
+        ordered: [
+          "Shortlist eligible master's programmes and remove any course with a mandatory mobility structure if the scholarship excludes it.",
+          "Check the programme language, admission prerequisites, and document format.",
+          "Prepare transcripts, degree certificate or expected graduation proof, CV, motivation statement, and recommendation letters.",
+          "Submit the admission and scholarship materials before the main March deadline.",
+          "Use the supporting-document deadline only for permitted late documents, not as a reason to delay the main application.",
+          "Save all submission confirmations and official university emails.",
+          "If selected, review the scholarship agreement, accommodation terms, tuition bill, and residence steps before final acceptance.",
+        ],
+        paragraphs: [
+          "The March timeline means applicants should begin well before spring. International documents can take time: transcripts may need stamps, translations, grading explanations, or degree confirmation. Recommendation letters also need notice. A rushed file can make a strong student look careless.",
+          "The scholarship is tied to a real master's application, so every document should support both admission and funding. The CV should show academic and professional progression, the motivation statement should explain course fit, and recommendations should reinforce the applicant's ability to succeed at graduate level.",
+          "If you are still finishing your bachelor's degree, check whether expected graduation proof is accepted and what final documents will be required later. Conditional progress is common in admissions, but scholarship offices still need confidence that you can enroll on time.",
+        ],
+      },
+      {
+        title: "How to decide whether Luxembourg is the right fit",
+        paragraphs: [
+          "Luxembourg is attractive for students who want a small international environment, proximity to European institutions, multilingual professional exposure, and strong links to finance, technology, law, data, logistics, sustainability, or European policy fields. The University of Luxembourg can be a strategic choice when the master's programme aligns with those ecosystems.",
+          "It may be less suitable if the student's goal depends on a very large campus, a low-cost city, or a scholarship that pays every expense including tuition. The country is small and expensive, and the scholarship does not erase that reality. A good applicant chooses Luxembourg because the academic and professional fit is real, not only because the scholarship sounds European and prestigious.",
+          "Before applying, write a one-page plan: why this master's, why Luxembourg, how the scholarship changes affordability, what costs remain, and what you will do after graduation. If that page feels vague, the motivation statement will probably feel vague too. If it is concrete, the scholarship application becomes much easier to write.",
+        ],
+      },
+      {
+        title: "Final advice",
+        paragraphs: [
+          "The Guillaume Dupaix Scholarship rewards careful applicants. Treat the official university page as the controlling source, verify programme eligibility, and do not hide the fact that tuition remains outside the award. A realistic budget is not a weakness; it shows that you understand the opportunity.",
+          "If you can combine strong grades, a precise master's choice, a clear motivation statement, and a credible cost plan, this scholarship is worth serious effort. If you only have a general desire to study in Europe, spend more time choosing the programme before submitting.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Calling the scholarship fully funded when tuition is not covered.",
+          "Applying to a master's programme that is not eligible.",
+          "Ignoring programmes with mandatory mobility rules.",
+          "Submitting a generic motivation statement.",
+          "Underestimating Luxembourg housing and arrival costs.",
+          "Missing the separate supporting-document deadline.",
+          "Assuming admission automatically means scholarship selection.",
+        ],
+        paragraphs: [
+          "The Guillaume Dupaix Scholarship is strongest for students who combine academic merit with precise planning. Choose the right programme, confirm eligibility, prepare documents early, and build a budget that includes tuition and arrival costs alongside the scholarship support.",
+        ],
+      },
+    ],
 
     country: "Luxembourg",
     degreeLevel: "Masters",
