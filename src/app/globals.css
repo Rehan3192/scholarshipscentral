@@ -58,8 +58,90 @@ ol {
 }
 
 .wp-content figure.wp-block-table {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   overflow-x: auto;
+  border: 1px solid #dbeafe;
+  border-radius: 0.75rem;
+}
+
+.wp-content {
+  color: #374151; /* gray-700 */
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.wp-content h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #2563eb; /* blue-600 */
+  border-radius: 0.5rem;
+  background: #eff6ff; /* blue-50 */
+  padding: 0.75rem 1rem;
+  color: #111827; /* gray-900 */
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.wp-content h3 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: #1e3a8a; /* blue-900 */
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.wp-content h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #047857; /* emerald-700 */
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.wp-content p {
+  margin-bottom: 1rem;
+}
+
+.wp-content strong {
+  color: #111827; /* gray-900 */
+  font-weight: 700;
+}
+
+.wp-content ul,
+.wp-content ol {
+  margin: 1rem 0 1.25rem 1.25rem;
+  padding-left: 0.5rem;
+}
+
+.wp-content li {
+  margin-top: 0.45rem;
+  padding-left: 0.2rem;
+}
+
+.wp-content li::marker {
+  color: #2563eb; /* blue-600 */
+  font-weight: 700;
+}
+
+.wp-content blockquote {
+  margin: 1.5rem 0;
+  border-left: 4px solid #059669; /* emerald-600 */
+  border-radius: 0.75rem;
+  background: #ecfdf5; /* emerald-50 */
+  padding: 1rem 1.25rem;
+  color: #064e3b; /* emerald-900 */
+}
+
+.wp-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.wp-content hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid #dbeafe; /* blue-100 */
 }
 
 .wp-content a {
@@ -81,6 +163,7 @@ ol {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
+  color: #374151;
 }
 
 .wp-content th,
@@ -92,12 +175,26 @@ ol {
 }
 
 .wp-content thead th {
-  background: #f9fafb;
-  font-weight: 600;
+  background: #eff6ff; /* blue-50 */
+  color: #1e3a8a; /* blue-900 */
+  font-weight: 700;
 }
 
 .wp-content table tr:nth-child(even) td {
-  background: #fcfcfd;
+  background: #f9fafb;
+}
+
+.wp-content img {
+  height: auto;
+  max-width: 100%;
+  border-radius: 0.75rem;
+}
+
+.wp-content figcaption {
+  margin-top: 0.5rem;
+  color: #6b7280; /* gray-500 */
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 .content-visibility-auto {

@@ -145,17 +145,20 @@ export default async function BlogPostPage({ params }: Props) {
         dateModified={post.modified}
       />
 
-      <header className="space-y-2">
-        <p className="mb-0 text-xs font-semibold text-gray-500">
+      <header className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+        <p className="mb-0 text-xs font-semibold uppercase tracking-wide text-blue-700">
+          Scholarship guide
+        </p>
+        <p className="mt-2 mb-0 text-xs font-semibold text-gray-500">
           Published {published}
           {modified && modified !== published ? ` | Updated ${modified}` : ""}
         </p>
-        <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="mt-3 mb-0 max-w-4xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           {title}
         </h1>
       </header>
 
-      <article className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
+      <article className="wp-article rounded-2xl border border-gray-200 bg-white p-6 text-base text-gray-700 shadow-sm sm:p-8">
         <div
           className="wp-content space-y-4"
           dangerouslySetInnerHTML={{ __html: articleContent.introduction }}
