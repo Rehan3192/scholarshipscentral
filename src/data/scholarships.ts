@@ -1018,6 +1018,244 @@ function azerbaijanReaderSections(level: AzerbaijanLevel): ScholarshipContentSec
   ];
 }
 
+type InsubriaLevel = "Bachelors" | "Masters";
+
+function insubriaReaderSections(level: InsubriaLevel): ScholarshipContentSection[] {
+  const bachelors = level === "Bachelors";
+  const degree = bachelors ? "Bachelor's" : "Master's";
+  const priorEducation = bachelors
+    ? "secondary school qualification accepted for admission to the selected bachelor's or single-cycle programme"
+    : "bachelor's degree or equivalent qualification accepted for admission to the selected master's programme";
+
+  return [
+    {
+      title: "Scholarship at a glance",
+      facts: [
+        { label: "University", value: "University of Insubria" },
+        { label: "Study level", value: degree },
+        { label: "Scholarship style", value: "Call-based support for deserving first-year students" },
+        { label: "Official structure", value: "Separate annual calls for bachelor/single-cycle entrants and master's entrants" },
+        { label: "Selection basis", value: "Eligibility, admission status, and call-specific merit or right-to-study criteria" },
+        { label: "Funding certainty", value: "Benefits depend on the active call; do not assume full funding" },
+        { label: "Main risk", value: "Applying without matching admission, call, documents, and deadline" },
+        { label: "Best first step", value: "Read the active University of Insubria scholarship and right-to-study pages" },
+      ],
+      paragraphs: [
+        `The University of Insubria Scholarship listing should be understood as a family of call-based support routes, not one permanent scholarship with identical benefits every year. For ${degree} applicants, the university's official right-to-study and support page says specific calls are published for particularly deserving students enrolled in the first year, with one call for bachelor and single-cycle master's entrants and another for first-year master's entrants.`,
+        "That official structure is important because many scholarship summaries online turn Insubria into a vague fully funded Italy scholarship. The safer wording is more precise: support may include fee relief, merit awards, regional right-to-study support, or other benefits depending on the annual call. Applicants must verify the current call before making financial plans.",
+      ],
+    },
+    {
+      title: "Who should apply",
+      paragraphs: [
+        `A strong ${degree} applicant should first be academically eligible for a real University of Insubria programme. The scholarship cannot fix a weak or ineligible admission file. The applicant should be ready to document ${priorEducation}, language readiness, and any programme-specific prerequisites.`,
+        bachelors
+          ? "Bachelor's applicants should be especially careful about school-leaving qualification rules, visa eligibility, programme language, and whether the chosen programme is open to international applicants in the intended intake. A scholarship call may support deserving students, but admission to the degree remains the first practical gate."
+          : "Master's applicants should check whether the bachelor's degree matches the master's prerequisites. In Italy, master's admission can depend on subject credits, previous coursework, language, and departmental evaluation. A student with a large field change should not rely on scholarship enthusiasm to overcome academic mismatch.",
+        "This opportunity is best for students who can handle a call-based process: admission first or in parallel, then scholarship application, then ranking or selection, then enrollment. It is a poor fit for students who need a guaranteed full living-cost package before applying or who cannot check annual call documents carefully.",
+      ],
+    },
+    {
+      title: "What funding may include",
+      paragraphs: [
+        "The current records describe the funding as partially funded because benefits vary. Depending on the active call, students may see tuition fee reduction, partial fee relief, a merit-based scholarship amount, regional right-to-study support, accommodation-related support, or other services. The University of Insubria also points students toward right-to-study and support opportunities rather than one single all-purpose award.",
+        "Do not assume accommodation, travel, health insurance, or a monthly stipend unless the active call explicitly says so. Some Italian scholarship routes reduce fees but do not cover rent. Some regional benefits depend on income documentation rather than academic ranking. Some merit calls provide a fixed amount but not a complete living-cost budget.",
+        "Before accepting admission, build a conservative budget: tuition after any reduction, regional tax or semester fees, rent in Varese or Como, food, local transport, health insurance or registration costs, residence permit, documents, travel to Italy, and emergency funds. A partial scholarship can be helpful but still leave real expenses.",
+      ],
+    },
+    {
+      title: "Admission and scholarship are linked",
+      paragraphs: [
+        `Scholarship consideration normally depends on valid admission or enrollment status. For ${degree} applicants, this means choosing a programme first, reading its academic and language requirements, and completing admission steps by the required deadline. Applying for financial support without a valid programme route is usually wasted effort.`,
+        "The official Insubria structure of separate calls means applicants must know which call they belong to. A bachelor's entrant should not follow a master's-only call. A master's entrant should not assume bachelor/single-cycle deadlines apply. International applicants should also check whether the programme uses a pre-admission portal, Universitaly pre-enrollment, or other procedures for non-EU visa applicants.",
+        "If scholarship results are published after admission, students may need to decide whether they can proceed if the award is smaller than expected or not awarded. That is why a financial backup plan matters.",
+      ],
+    },
+    {
+      title: "Documents to prepare",
+      bullets: [
+        bachelors ? "Secondary school certificate and transcript" : "Bachelor's degree certificate and transcript",
+        "Passport or national identity document",
+        "Programme admission or enrollment evidence where requested",
+        "Language certificate or proof required by the selected programme",
+        "Curriculum vitae or academic profile where requested by the call",
+        "Motivation or supporting statement if the call asks for one",
+        "Financial documents if applying for right-to-study or need-based support",
+        "Certified translations and legalisation or apostille for non-Italian documents where required",
+        "Any declaration, ranking form, or online application receipt required by the active call",
+      ],
+      paragraphs: [
+        "The document checklist depends on the call type. A merit call may focus on grades and admission evidence. A right-to-study route may require income and asset documents. A programme admission route may require translated academic records, course descriptions, or language proof. Read the active call line by line.",
+        "International documents should be prepared early because translation and legalisation can take longer than expected. Students applying from outside Italy also need to coordinate scholarship documents with visa and pre-enrollment documents.",
+      ],
+    },
+    {
+      title: "Application process",
+      ordered: [
+        "Choose a University of Insubria programme and confirm admission requirements.",
+        "Check whether the active scholarship call applies to bachelor/single-cycle entrants or master's entrants.",
+        "Complete admission or pre-admission steps required for the programme.",
+        "Prepare academic, identity, language, financial, and translation documents required by the scholarship call.",
+        "Submit the scholarship application through the official university or regional portal before the deadline.",
+        "Track ranking publication, correction windows, acceptance requirements, and enrollment deadlines.",
+        "If selected, confirm the benefit amount and conditions before relying on it for your full budget.",
+      ],
+      paragraphs: [
+        "The exact timing can change each year. The existing records mention May to June as a typical window, but applicants should confirm the current call rather than treating that as permanent. Italian university calls can open and close quickly, and late applications are usually not rescued by email.",
+        "Save every confirmation page and receipt. If the university asks for corrections or additional documents, respond within the official window. A missing upload can be just as damaging as ineligibility.",
+      ],
+    },
+    {
+      title: "How to judge whether it is worth applying",
+      paragraphs: [
+        "It is worth applying if you already want a University of Insubria programme, meet admission requirements, can document your academic background, and understand that support may be partial. The scholarship can reduce cost and make Italy more affordable, especially when combined with careful budgeting or regional support.",
+        "It is less worth applying if your only goal is a fully funded package. Insubria support is useful but call-dependent. If you need guaranteed tuition, rent, meals, insurance, and monthly stipend before committing, compare other Italian routes such as DSU regional scholarships, fully funded university calls, or external government scholarships.",
+        `For ${degree} applicants, the best decision is practical: first decide whether the programme itself is a good academic choice, then decide whether the active support call makes the finances workable. Scholarship first, programme later is the wrong order.`,
+      ],
+    },
+    {
+      title: "Common mistakes to avoid",
+      bullets: [
+        "Calling the opportunity fully funded without checking the active call.",
+        "Applying to the wrong call for the study level.",
+        "Ignoring programme admission rules while focusing on scholarship wording.",
+        "Missing translation, legalisation, or visa-related document requirements.",
+        "Assuming accommodation or travel support exists when the call does not list it.",
+        "Using old deadline screenshots instead of the current university call.",
+        "Failing to calculate the remaining cost after partial support.",
+      ],
+      paragraphs: [
+        `A strong University of Insubria ${degree} scholarship application is realistic. It links a valid programme choice with the correct annual call, clean documents, and a conservative budget. That is much more useful to a student than chasing a vague label like Italy scholarship without knowing what is actually covered.`,
+      ],
+    },
+  ];
+}
+
+type WinnipegLevel = "Bachelors" | "Masters";
+
+function winnipegPresidentReaderSections(level: WinnipegLevel): ScholarshipContentSection[] {
+  const bachelors = level === "Bachelors";
+  const degree = bachelors ? "Undergraduate" : "Graduate";
+  const deadline = bachelors
+    ? "term-specific deadlines, including February 15, June 15, and October 1 for listed 2026/27 starts"
+    : "June 1 for listed 2026/27 graduate starts";
+  const awardCount = bachelors ? "six undergraduate awards in the listed 2026/27 table" : "three graduate awards in the listed 2026/27 table";
+
+  return [
+    {
+      title: "Scholarship at a glance",
+      facts: [
+        { label: "University", value: "University of Winnipeg" },
+        { label: "Award", value: "President's Scholarship for World Leaders" },
+        { label: "Study level", value: degree },
+        { label: "Value", value: "CAD 5,000" },
+        { label: "Award count", value: awardCount },
+        { label: "Eligibility floor", value: "Minimum 80 percent admission average or equivalent" },
+        { label: "Core evidence", value: "Exceptional leadership qualities and complete admission application" },
+        { label: "Deadline", value: deadline },
+      ],
+      paragraphs: [
+        `The University of Winnipeg President's Scholarship for World Leaders is an entrance award for international students entering the University of Winnipeg for the first time. For ${degree.toLowerCase()} applicants, the official award pages list a value of CAD 5,000 and require a minimum 80 percent admission average or equivalent, international-student status, first-year entry, leadership evidence, and a complete admission application by the scholarship deadline.`,
+        "The most important clarity point is funding size. This is not a fully funded Canada scholarship. It is a meaningful entrance award that can reduce costs, but it does not cover full tuition, housing, flights, visa costs, insurance, or total living expenses. Students should plan a full Canada budget before relying on it.",
+      ],
+    },
+    {
+      title: "Who should apply",
+      paragraphs: [
+        bachelors
+          ? "Undergraduate applicants should apply if they are entering the first year of a University of Winnipeg undergraduate programme, have a strong school record equivalent to at least 80 percent, and can show leadership through school, community, volunteer, creative, athletic, advocacy, entrepreneurship, or service activities."
+          : "Graduate applicants should apply if they are entering a University of Winnipeg graduate programme for the first time, have a strong admission average, and can show leadership beyond ordinary coursework. The official graduate page states that qualifying year or Pre-Masters students do not qualify.",
+        "A strong candidate can explain leadership with evidence. Leadership does not have to mean holding the biggest title. It can mean starting an initiative, organizing people, solving a community problem, mentoring others, leading a student group, volunteering consistently, contributing to social change, or taking responsibility in a difficult context.",
+        "This award is a poor fit for applicants below the academic threshold, students who are not international students, students who are not entering the first year of an eligible programme, or applicants who need full funding to make Canada possible. It can help, but it should be one part of a larger funding plan.",
+      ],
+    },
+    {
+      title: "Eligibility explained",
+      bullets: [
+        "Minimum 80 percent admission average or equivalent.",
+        "International student status.",
+        "Entering the first year of the relevant University of Winnipeg programme.",
+        "Exceptional leadership qualities.",
+        "Complete admission application submitted by the scholarship deadline date.",
+        bachelors ? "Term-specific undergraduate start and scholarship deadline must match." : "Qualifying year and Pre-Masters students do not qualify for the graduate version.",
+      ],
+      paragraphs: [
+        "The complete admission application requirement is easy to underestimate. The scholarship application cannot rescue a late or incomplete admission file. Students should apply for admission early enough that student number, documents, and portal access are available before the award deadline.",
+        "The 80 percent threshold is a floor, not a guarantee. The number of awards is limited, so leadership evidence and application quality matter. Applicants should not assume that meeting the minimum average automatically produces the CAD 5,000 award.",
+      ],
+    },
+    {
+      title: "What CAD 5,000 really means",
+      paragraphs: [
+        "CAD 5,000 can be very useful, especially at the start of study when tuition deposits, books, relocation, and living costs arrive quickly. But it is not a full scholarship. International students in Canada must still plan for tuition balance, housing, food, local transport, winter clothing, health insurance or medical coverage requirements, study materials, visa or study permit costs, biometrics, travel, and emergency funds.",
+        bachelors
+          ? "Undergraduate study usually lasts several years, so a one-time or entrance award should not be confused with full-degree funding. Students should calculate costs for the first year and then ask how they will fund later years through family resources, work rules, other scholarships, co-op options if available, or continued awards."
+          : "Graduate programmes may be shorter, but costs still matter. Graduate applicants should check whether their programme has separate assistantships, departmental awards, research funding, or tuition structures. The President's Scholarship can support entry but may not be the main funding source.",
+        "Before accepting admission, compare confirmed funding with the official cost of attendance and personal budget. A scholarship headline feels good, but the visa and study plan need numbers that work.",
+      ],
+    },
+    {
+      title: "Application package",
+      paragraphs: [
+        "The official scholarship pages direct applicants to complete admission and then apply through the award process. Third-party summaries and portal text commonly mention a completed application form, a 250 to 500 word personal statement, and two references who can speak to extra-curricular or volunteer activities. Applicants should verify the current checklist in the University of Winnipeg awards portal.",
+        "The personal statement should focus on leadership, not only financial need or admiration for Canada. Use one or two concrete examples: what problem existed, what you did, who was affected, what changed, and what you learned. A specific story is stronger than a list of titles.",
+        "References should be chosen for evidence. A referee who can describe your actual leadership, initiative, reliability, or service is more useful than a famous person who writes a generic letter. Give referees enough time and share the scholarship purpose so they can write clearly.",
+      ],
+    },
+    {
+      title: "Application process",
+      ordered: [
+        "Choose the University of Winnipeg programme and confirm admission requirements.",
+        "Submit a complete admission application before the scholarship deadline.",
+        "Receive or use the student number required for the awards process where applicable.",
+        "Prepare the scholarship application form, personal statement, leadership evidence, and references.",
+        "Submit through the official University of Winnipeg awards route before the correct deadline for your level and term.",
+        "Monitor email and portal messages for results or additional requests.",
+        "If awarded, include the CAD 5,000 award in a complete cost plan rather than treating it as full funding.",
+      ],
+      paragraphs: [
+        bachelors
+          ? "Undergraduate applicants should be careful with term-specific deadlines. The University of Winnipeg international awards page lists different deadline dates for Spring 2026, Fall 2026, and Winter 2027 starts. Applying for the wrong term or missing the term's deadline can make an otherwise strong student ineligible."
+          : "Graduate applicants should use the graduate deadline and confirm programme admission timelines. Some graduate programmes have earlier admission document deadlines than the scholarship, so work backward from both dates.",
+        "Keep copies of submission confirmations. Award competitions can be competitive and deadline-sensitive, so applicants should not rely on memory or informal messages.",
+      ],
+    },
+    {
+      title: "How to write the leadership statement",
+      paragraphs: [
+        "A good leadership statement is not a biography of every activity since childhood. It should select the most relevant examples and explain them with depth. What was your role? What choices did you make? What obstacles did you handle? What was the impact? How will that leadership continue at the University of Winnipeg?",
+        "Avoid vague phrases such as passionate leader, hardworking student, or active volunteer unless you support them with evidence. A reader should be able to picture what you actually did. If you mentored students, how many? If you led a club, what did the club accomplish? If you supported a community, what need did you address?",
+        "Connect leadership to future contribution. The award is called World Leaders, so the application should show potential to contribute on campus and beyond. That does not require grand claims about changing the world. It requires credible examples of responsibility, initiative, and service.",
+      ],
+    },
+    {
+      title: "Admission timing and budget planning",
+      paragraphs: [
+        "The award application sits on top of admission, so timing should be planned backward from both deadlines. Admission offices may need transcripts, English proof, programme documents, and payment before an application is complete. If admission is incomplete on the scholarship deadline date, the award file can be in trouble even if the personal statement is strong.",
+        bachelors
+          ? "Undergraduate applicants should also remember that the award is attached to entry, not every year of study. A four-year degree requires a plan beyond the first CAD 5,000. Ask what tuition will be after the award, whether other entrance or in-course awards are possible, and how later-year costs will be covered."
+          : "Graduate applicants should check programme-specific funding separately. Some graduate programmes may have assistantships, research funding, or department awards, while others may not. The President's Scholarship should be listed as one confirmed or hoped-for funding source, not the entire funding plan.",
+        "For visa or study permit planning, students should be conservative. Immigration officers and universities may need evidence that total costs can be covered. A CAD 5,000 scholarship is helpful evidence, but it usually will not prove full financial capacity by itself.",
+      ],
+    },
+    {
+      title: "Common mistakes to avoid",
+      bullets: [
+        "Calling the award fully funded when the official value is CAD 5,000.",
+        "Submitting the scholarship application before completing admission requirements.",
+        "Missing the correct deadline for the intended start term.",
+        "Writing a generic personal statement with no leadership evidence.",
+        "Choosing references who cannot discuss extra-curricular or volunteer activity.",
+        "Assuming the 80 percent minimum average guarantees selection.",
+        "Forgetting to build a full Canada tuition and living-cost budget.",
+      ],
+      paragraphs: [
+        `A strong University of Winnipeg President's Scholarship ${degree.toLowerCase()} application is honest about the award size and strong on evidence. It proves academic eligibility, gives concrete leadership examples, and treats the CAD 5,000 award as helpful support rather than a complete funding plan.`,
+      ],
+    },
+  ];
+}
+
 const rawScholarships: Scholarship[] = [
   {
     slug: "honjo-international-scholarship-2027-japan",
@@ -6311,6 +6549,131 @@ const rawScholarships: Scholarship[] = [
     title: "University of Pisa DSU Toscana Scholarship",
     overview:
       "Need-based regional scholarship for University of Pisa students delivered by DSU Toscana, combining a monetary grant with student services.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "Provider", value: "DSU Toscana, the Tuscany regional right-to-study agency" },
+          { label: "University link", value: "University of Pisa students apply through the regional DSU Toscana system" },
+          { label: "Study level", value: "Master's and other eligible university study levels under the annual call" },
+          { label: "Selection style", value: "Administrative need-based ranking using economic and merit requirements" },
+          { label: "Main benefits", value: "Monetary grant, meals, accommodation or rent support, and tuition-fee exemption" },
+          { label: "Call timing", value: "Annual call, usually released in summer with deadlines around late summer or early autumn" },
+          { label: "Foreign documents", value: "Income and asset documents from abroad must follow DSU rules on translation and legalisation" },
+          { label: "Renewal", value: "One academic year at a time, subject to annual call, merit, and economic criteria" },
+        ],
+        paragraphs: [
+          "The University of Pisa DSU Toscana Scholarship is not a university merit prize. It is a regional right-to-study benefit delivered by DSU Toscana for students enrolled at universities in Tuscany, including the University of Pisa. The University of Pisa guidance describes a DSU grant as including free accommodation, free meals at university dining halls, a contribution for extra expenses such as books or sport activities, and exemption from university tuition fees.",
+          "This scholarship is often called fully funded by students because the package can cover the biggest cost areas: tuition, food, housing support, and a cash contribution. That is useful, but the route is administrative and document-heavy. Winning depends on proving economic eligibility and meeting merit rules, not on writing the most emotional personal statement.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "A strong DSU Toscana applicant is a student who has secured, or is applying for, a University of Pisa master's programme and can document family income and assets according to the annual call. This is especially relevant for students from modest-income households who need support beyond a fee waiver.",
+          "International students can apply, but the hardest part for many non-Italian students is documentation. Income, property, family composition, and asset records issued abroad may need official translation, legalisation, apostille, or consular validation depending on the country and annual DSU rules. If those documents are not prepared in time, the student can miss the scholarship even if the family income is genuinely low.",
+          "This route is not ideal for applicants who want a simple one-click scholarship, who cannot document household finances, or who are not ready to follow Italian administrative rules carefully. It can be excellent for the right student, but only if admission, enrollment, DSU application, income documentation, and deadlines all line up.",
+        ],
+      },
+      {
+        title: "What DSU Toscana can cover",
+        paragraphs: [
+          "DSU Toscana benefits usually combine a monetary scholarship with services. The DSU call for accommodation and scholarship states that scholarship winners are entitled to a monetary allowance, free use of the canteen service, and, if awarded accommodation, free allocation in university residences or a rent subsidy if places are unavailable under the call rules. University of Pisa guidance also lists tuition-fee exemption for DSU grant recipients.",
+          "The exact cash amount varies by annual call, economic condition, student status, housing status, and available budget. Students should not copy a cash figure from another region or older year and assume it applies to Pisa. DSU Toscana publishes the controlling values in its annual call.",
+          "Accommodation is valuable but not unlimited. A scholarship winner may receive a university residence place if available, but room allocation depends on rankings, places, timing, and DSU procedures. If accommodation is not available, the call may provide rent support under defined conditions. Students should read how to accept housing, what happens if they refuse, and what documents are needed for rent subsidy.",
+        ],
+      },
+      {
+        title: "Eligibility: economic and merit requirements",
+        paragraphs: [
+          "DSU scholarships are usually based on two broad requirements: economic status and academic merit. Economic status is evaluated using income and asset indicators under Italian right-to-study rules. For foreign students, the challenge is translating foreign family circumstances into documents accepted by DSU Toscana and, where relevant, Italian ISEE/ISEE Università processes.",
+          "Merit requirements depend on year of enrollment and study level. First-year master's students may be assessed differently from continuing students. Continuing students usually need to meet credit or exam-progress requirements by the date set in the call. This means DSU support is not simply awarded once for the full master's degree; students must keep meeting annual rules.",
+          "Applicants should read the annual call before assuming eligibility. The call defines income thresholds, asset thresholds, family-unit rules, merit credits, deadlines, ranking criteria, exclusions, and consequences for false declarations. If a student's documents are incomplete or inconsistent, DSU may place the application in a lower status, request corrections, or exclude it.",
+        ],
+      },
+      {
+        title: "Foreign income and asset documents",
+        paragraphs: [
+          "For many international students, this is the most important section. DSU Toscana requires foreign students with income or assets abroad to submit official documentation according to the call. That can include family income, property ownership, bank balances or movable assets, household composition, and other documents needed to calculate economic status.",
+          "Documents often need to be issued by competent authorities in the home country, translated into Italian, and legalised or apostilled depending on the country. In some cases, consular declarations may be required. These steps can take weeks, especially if the nearest Italian consulate is busy or if government offices in the home country are slow.",
+          "Start early. Do not wait until the DSU call is almost closed. As soon as you are seriously applying to the University of Pisa, research what your country's students usually need for DSU Toscana and contact the relevant offices. A student can be financially eligible and still lose the scholarship because documents arrive after the deadline.",
+        ],
+      },
+      {
+        title: "Application process",
+        ordered: [
+          "Apply for admission to the University of Pisa master's programme and track its enrollment requirements.",
+          "Watch the DSU Toscana website for the annual scholarship and accommodation call.",
+          "Read the call carefully for income thresholds, merit rules, foreign-document rules, deadlines, and ranking publication dates.",
+          "Prepare family income, asset, household, and identity documents with required translation and legalisation.",
+          "Submit the DSU Toscana online application before the deadline.",
+          "Check provisional rankings and correct any issues within the allowed correction window.",
+          "Complete University of Pisa enrollment and DSU acceptance or accommodation steps on time.",
+          "Monitor final rankings, payment schedules, canteen access, housing assignment, and renewal requirements.",
+        ],
+        paragraphs: [
+          "The application is less about persuasion and more about precision. Fill in data carefully, upload every required document, and save receipts or confirmation pages. If rankings are published and something is wrong, act immediately within the correction window rather than assuming it will fix itself.",
+          "Admission and DSU are connected but separate. A student may apply for DSU while admission is still in progress, but final benefit use depends on valid enrollment and compliance with the call. Always follow both University of Pisa and DSU Toscana timelines.",
+        ],
+      },
+      {
+        title: "Documents to prepare",
+        bullets: [
+          "Passport or national identity document.",
+          "University of Pisa admission, application, or enrollment evidence where required.",
+          "Family composition certificate or equivalent household document.",
+          "Family income documents for the required tax year.",
+          "Property, land, or real-estate documents where relevant.",
+          "Bank balance or movable asset documents where required.",
+          "Translations into Italian if required by the call.",
+          "Legalisation, apostille, or consular declarations depending on the issuing country.",
+          "Residence or rental documents if applying for away-from-home status or rent support.",
+        ],
+        paragraphs: [
+          "The exact document list depends on citizenship, residence, income location, family situation, and annual call rules. Students from countries with difficult document systems should begin even earlier. It is much easier to correct a document in July than to discover in September that the authority you need is closed or slow.",
+          "Keep original files, certified copies, scans, translations, and upload receipts. DSU and university offices may ask for evidence again during ranking, enrollment, payment, or audit checks.",
+        ],
+      },
+      {
+        title: "Rankings, winners, and eligible non-winners",
+        paragraphs: [
+          "DSU calls often distinguish between winners, eligible non-winners, accommodation winners, and students who meet some conditions but are not immediately funded because of resources or ranking position. Read the ranking labels carefully. A label can affect meals, accommodation, cash payment, tuition exemption, and later scrolling of rankings.",
+          "If you are an eligible non-winner, do not assume the process is over. Some benefits may still be available, and rankings can change. Follow DSU updates, deadlines for appeals or corrections, and any instructions about canteen access or housing.",
+          "If you win accommodation, read acceptance instructions immediately. Missing an accommodation acceptance deadline can mean losing the place. If no accommodation is available, check whether rent subsidy rules require a registered lease, specific location, or minimum contract duration.",
+        ],
+      },
+      {
+        title: "Renewal and academic progress",
+        paragraphs: [
+          "The listed duration is one academic year, renewable subject to merit and annual call rules. For master's students, renewal usually depends on earning enough credits or meeting academic milestones by the date in the call. A student who receives DSU in the first year but does not progress can lose support in the second year.",
+          "This makes study planning important. Understand the exam calendar, credit system, thesis timeline, and any programme-specific barriers early. If you are struggling academically, use university support services before the renewal deadline becomes a crisis.",
+          "Students should also keep financial documents updated annually. A new academic year usually means a new call and updated economic documentation. Do not assume last year's DSU application automatically renews without action.",
+        ],
+      },
+      {
+        title: "Is DSU Toscana worth applying for?",
+        paragraphs: [
+          "For a low-income international master's student at the University of Pisa, DSU Toscana is usually worth serious effort because it can affect tuition, food, housing, and cash support at the same time. Few funding routes touch that many cost categories. The tradeoff is paperwork: the application rewards students who can document their situation precisely.",
+          "It is less useful for students whose family income or assets are clearly above the annual thresholds, or for students who cannot obtain valid foreign documentation before the deadline. In those cases, time may be better spent on university admission, fee reductions, or other scholarships. The right decision comes from reading the current call, not from guessing based on the word fully funded.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Treating DSU Toscana as a merit essay scholarship instead of a documented right-to-study benefit.",
+          "Waiting until the call opens to start foreign income and asset documents.",
+          "Using documents without required translation, legalisation, apostille, or consular validation.",
+          "Missing provisional ranking correction windows.",
+          "Assuming accommodation is guaranteed for every scholarship winner.",
+          "Ignoring University of Pisa admission and enrollment deadlines while focusing only on DSU.",
+          "Forgetting that renewal depends on academic progress and annual call rules.",
+          "Budgeting as if the cash grant arrives immediately at the start of the semester.",
+        ],
+        paragraphs: [
+          "A strong DSU Toscana application is organised rather than dramatic. The student proves economic eligibility, respects every deadline, prepares foreign documents early, checks rankings, and keeps academic progress on track. That is the path that gives the scholarship the best chance of actually helping during the master's degree.",
+        ],
+      },
+    ],
 
     country: "Italy",
     degreeLevel: "Masters",
@@ -6361,6 +6724,7 @@ const rawScholarships: Scholarship[] = [
       "University of Insubria offers right-to-study and scholarship support pathways for bachelor's applicants in Italy, with benefits that can include fee relief and regional financial aid depending on eligibility.",
     summary:
       "The University of Insubria Scholarship is an Italy study-support opportunity linked to admission and right-to-study frameworks at the University of Insubria. For bachelor's applicants, scholarship outcomes depend on official calls, eligibility rules, and merit/economic criteria where applicable. Published benefits can vary by scheme and year, so applicants should confirm the latest call details on official university pages before submitting.",
+    contentSections: insubriaReaderSections("Bachelors"),
     guideUrl:
       "https://www.scholarshipscentral.com/blog/university-of-insubria-scholarship-italy-2026",
     guideLabel: "University of Insubria Scholarship 2026 guide",
@@ -6462,6 +6826,7 @@ const rawScholarships: Scholarship[] = [
       "University of Insubria provides scholarship and right-to-study support routes for master's students in Italy, with benefits depending on annual calls and applicant eligibility.",
     summary:
       "The University of Insubria Scholarship for master's study is an admission-linked funding opportunity at the University of Insubria in Italy. The university and related right-to-study frameworks may offer tuition relief and financial support, but packages vary by annual call and applicant profile. Applicants should verify current eligibility, benefit details, and document requirements directly on official pages before applying.",
+    contentSections: insubriaReaderSections("Masters"),
     guideUrl:
       "https://www.scholarshipscentral.com/blog/university-of-insubria-scholarship-italy-2026",
     guideLabel: "University of Insubria Scholarship 2026 guide",
@@ -6563,6 +6928,121 @@ const rawScholarships: Scholarship[] = [
       "University of Tuscia provides call-based scholarship opportunities for international master's students in Italy, with benefits and eligibility varying by official annual notices.",
     summary:
       "The University of Tuscia Scholarship is an Italy master's funding opportunity linked to official University of Tuscia calls and admission rules. It is not a single guaranteed package for every applicant, and scholarship terms vary by year, program, and eligibility criteria. Applicants should use the official university scholarship and program pages to confirm deadlines, required documents, language requirements, and exact funding coverage before submission.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "University of Tuscia, Viterbo" },
+          { label: "Study level", value: "International master's and second-cycle programmes" },
+          { label: "Scholarship style", value: "Annual call and ranking for eligible admitted students" },
+          { label: "Key timing", value: "Admission by the call's stated date can control ranking eligibility" },
+          { label: "Funding certainty", value: "Benefits vary by annual call; no permanent universal package" },
+          { label: "Application focus", value: "Programme admission first, scholarship ranking second" },
+          { label: "Visa route", value: "Non-EU students abroad also need Universitaly pre-enrollment and visa steps" },
+          { label: "Best source", value: "University of Tuscia international scholarship and programme pages" },
+        ],
+        paragraphs: [
+          "The University of Tuscia Scholarship for master's students is a call-based opportunity for international students applying to study in Viterbo, Italy. The official scholarship opportunity page for international students says that students admitted to an international master's degree course by the stated date are included in the ranking list, with no need to submit a new scholarship application for that specific call mechanism.",
+          "That admission-first structure is the most important point for readers. This is not a scholarship where a student writes a separate essay before choosing a degree. The student must first target a real University of Tuscia master's programme, meet its requirements, and receive admission by the scholarship-call deadline. Missing admission timing can mean missing ranking eligibility.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "A strong applicant is someone who genuinely wants a University of Tuscia international master's programme and can meet its academic and language requirements. Examples of areas often checked by applicants include agriculture, forestry, circular economy, security and human rights, engineering, biology, environmental sciences, and other second-cycle programmes, but the active programme list should always be checked on the university site.",
+          "This opportunity is best for students who can move quickly through admission: choosing a programme, preparing transcripts, proving language ability, and submitting documents early enough to be admitted before the scholarship ranking date. A student who waits until the scholarship deadline to start admission may be too late.",
+          "It is a poor fit for applicants who need a guaranteed full funding package before applying, who are not academically eligible for a Tuscia master's degree, or who choose the university only because a third-party page says scholarship. The scholarship can help, but the degree programme must make academic sense first.",
+        ],
+      },
+      {
+        title: "Funding reality",
+        paragraphs: [
+          "University of Tuscia scholarship conditions vary by annual call. Some past communications have listed fixed annual grant amounts for international students, while current pages can refer applicants to a specific call and ranking. The safest wording is that support is call-based and must be verified for the active academic year.",
+          "Do not assume airfare, visa fees, full accommodation, meals, health insurance, or monthly stipend unless the current call explicitly states those benefits. Many Italian university scholarships reduce costs but do not cover every living expense. Students should plan for rent in or near Viterbo, food, transport, residence permit, health insurance or registration, documents, travel, and personal expenses.",
+          "Students should also compare university scholarships with regional right-to-study options in Lazio where applicable. Regional scholarships often use income documentation and can include services, but they have different deadlines and rules. A Tuscia university scholarship and a regional scholarship are not automatically the same thing.",
+        ],
+      },
+      {
+        title: "Admission-first strategy",
+        paragraphs: [
+          "Start with the master's programme page. Check whether the programme is taught in English, Italian, or another language, whether your bachelor's degree field is acceptable, whether course credits or prerequisites are required, and whether there are specific application windows. Only after that should you assess the scholarship call.",
+          "If the official call includes students admitted by a certain date, the practical goal is to complete admission before that date. That means transcripts, degree certificates, translations, language proof, CV, motivation statement, and any programme-specific documents should be ready early. Admission review can take time, and international files may be processed in submission order.",
+          "Non-EU students living outside Italy should also remember that admission is followed by Universitaly pre-enrollment and visa procedures. Scholarship ranking does not replace the immigration process. A student can be admitted and even ranked for funding but still need to complete consular and enrollment requirements correctly.",
+        ],
+      },
+      {
+        title: "Eligibility and programme fit",
+        bullets: [
+          "A bachelor's degree or equivalent qualification relevant to the chosen master's programme.",
+          "Programme-specific academic prerequisites and credit requirements where applicable.",
+          "Language evidence required by the selected programme.",
+          "Complete application documents submitted by the admission deadline.",
+          "Admission to an international master's degree course by the date stated in the scholarship call.",
+          "Compliance with any nationality, age, qualification-abroad, or ranking rules in the active call.",
+        ],
+        paragraphs: [
+          "The scholarship cannot compensate for an ineligible degree background. If the programme requires a specific academic area, subject credits, or language level, check this before applying. Italian second-cycle admission is often more technical than students expect.",
+          "Applicants with qualifications obtained abroad should expect document checks. Depending on the programme and enrollment stage, this can involve transcripts, diploma supplements, translations, legalisation, apostille, Declaration of Value, CIMEA statements, or other evidence. The exact requirement comes from the university and Italian authorities, not from a general scholarship summary.",
+        ],
+      },
+      {
+        title: "Application process",
+        ordered: [
+          "Choose an eligible University of Tuscia international master's programme.",
+          "Read the programme admission page for academic, language, and document requirements.",
+          "Submit the admission application through the official university route before the programme deadline.",
+          "Check the scholarship opportunity page and annual call for the admission-by date and ranking rules.",
+          "If admitted by the required date, follow the scholarship ranking instructions published by the university.",
+          "For non-EU students abroad, complete Universitaly pre-enrollment and visa steps after admission.",
+          "Monitor ranking results, enrollment deadlines, and any acceptance or confirmation actions.",
+        ],
+        paragraphs: [
+          "The order matters. A student who focuses only on the scholarship can miss the programme application. A student who gets admitted late may still be able to study but may miss the ranking for a specific scholarship call. Work backward from both dates.",
+          "Keep screenshots or PDFs of application submission, admission outcome, scholarship ranking, and any emails from the university. These can help if there is a question about timing or eligibility.",
+        ],
+      },
+      {
+        title: "Documents to prepare",
+        bullets: [
+          "Passport or identity document.",
+          "Bachelor's degree certificate or expected graduation evidence where accepted.",
+          "Academic transcript with grades and credits.",
+          "Curriculum vitae, often Europass format if requested.",
+          "Statement of purpose or motivation letter if required by the programme.",
+          "Language certificate or proof accepted by the selected programme.",
+          "Recommendation letters if requested.",
+          "Course descriptions or syllabi if needed for prerequisite assessment.",
+          "Translations, legalisation, apostille, Declaration of Value, or CIMEA documents where required later.",
+        ],
+        paragraphs: [
+          "Documents should prove both admission eligibility and scholarship-call eligibility. If a call targets students with qualifications obtained abroad, make sure the degree origin and documentation are clear. If the programme is English-taught, confirm whether the scholarship or admission office accepts your language proof.",
+          "Do not upload unclear scans. Italian university offices often process many international files in a short period, and clean documentation reduces delays. Make file names simple and keep originals ready for enrollment.",
+        ],
+      },
+      {
+        title: "Ranking and results",
+        paragraphs: [
+          "Scholarship ranking can depend on criteria defined in the call, such as admission status, academic merit, qualification type, nationality category, or other rules. The university publishes official ranking information, and applicants should read whether they are winners, eligible, reserve candidates, or excluded.",
+          "If the ranking shows an issue, act quickly. Calls often have short windows for corrections, appeals, or document completion. Do not wait until enrollment week to ask why a file was excluded.",
+          "A scholarship ranking result should also be checked against financial reality. If the award is partial or paid after arrival, students still need enough money for travel, first rent or deposit, residence permit, food, and early semester costs.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Treating the scholarship as separate from admission when the call is based on admitted students.",
+          "Missing the admission-by date for scholarship ranking.",
+          "Assuming every international master's applicant receives funding.",
+          "Choosing a programme without checking bachelor's background or language fit.",
+          "Ignoring Universitaly and visa steps for non-EU applicants abroad.",
+          "Budgeting as if the award covers airfare, housing, meals, and insurance without checking the call.",
+          "Using old annual call amounts as if they are permanent.",
+        ],
+        paragraphs: [
+          "A strong University of Tuscia scholarship plan is admission-driven. Choose the right master's, submit a clean admission file early, verify the current scholarship call, and keep a realistic budget. That is the useful path for students, not a vague promise that Tuscia is fully funded.",
+        ],
+      },
+    ],
     guideUrl:
       "https://www.scholarshipscentral.com/blog/university-of-tuscia-scholarship-italy",
     guideLabel: "University of Tuscia Scholarship Italy guide",
@@ -6665,6 +7145,126 @@ const rawScholarships: Scholarship[] = [
       "UNICAM supports international Master's applicants in Italy through university admission and the ERDIS Marche regional scholarship system.",
     summary:
       "The University of Camerino (UNICAM) scholarship path for international Master's students combines UNICAM pre-admission with a separate ERDIS Marche regional scholarship application. The pre-admission step is required for admission eligibility, while ERDIS awards are based on merit and family income and can include tuition waiver and support for food and lodging. Applicants should follow the official UNICAM and ERDIS timelines and requirements for the 2026/27 intake.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "University of Camerino (UNICAM)" },
+          { label: "Study level", value: "Master's programmes" },
+          { label: "Admission step", value: "UNICAM pre-admission through the international portal" },
+          { label: "2026/27 pre-admission deadline", value: "March 31, 2026" },
+          { label: "Funding route", value: "Separate ERDIS Marche regional scholarship application" },
+          { label: "ERDIS timing", value: "Annual call usually published in the second half of July" },
+          { label: "Important distinction", value: "Pre-admission is not the scholarship award" },
+          { label: "Best source", value: "UNICAM international admissions and ERDIS Marche call pages" },
+        ],
+        paragraphs: [
+          "The University of Camerino scholarship path is really two connected processes. First, international students complete UNICAM pre-admission for the master's programme. Then, eligible students can apply for ERDIS Marche regional support when the annual call opens. The official UNICAM pre-admission page for 2026/27 listed the preliminary evaluation deadline as March 31, 2026 and later stated that the call was closed for non-EU students.",
+          "This distinction matters because many students call it the UNICAM scholarship as if the university automatically funds every admitted student. That is not accurate. Pre-admission helps establish academic eligibility and supports later enrollment or visa steps. ERDIS is a separate right-to-study scholarship route based on annual rules, family income, merit, ranking, and available resources.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "A strong applicant is an international student who wants a UNICAM master's programme and can complete pre-admission early. The student should have a bachelor's degree or equivalent, a programme that matches prior study, and documents ready for academic evaluation. UNICAM is not only checking whether the student wants Italy; it is checking whether the student can enter the chosen programme.",
+          "This route is useful for students who also want to compete for regional right-to-study support through ERDIS Marche. ERDIS can make study more affordable through benefits connected to tuition, food, lodging, and financial support, but those benefits depend on the annual call and ranking. Students from low-income households should prepare financial documents early because ERDIS is documentation-heavy.",
+          "It is a poor fit for applicants who miss the pre-admission deadline, do not qualify academically for a master's programme, or expect one application to guarantee both admission and full funding. The safe mindset is: admission first, then regional scholarship application, then ranking, enrollment, and visa/residence steps.",
+        ],
+      },
+      {
+        title: "Pre-admission explained",
+        paragraphs: [
+          "Pre-admission is the preliminary evaluation step used by UNICAM for international students. It helps the university assess whether the applicant's previous studies are suitable for the chosen programme. A positive pre-admission outcome can support later enrollment and, for non-EU visa applicants, later Universitaly and embassy procedures.",
+          "The current record notes a EUR 20 non-refundable pre-admission fee where required by the portal. Applicants should treat this as an application processing step, not a scholarship fee. Paying the fee and submitting pre-admission does not mean the student has won ERDIS funding.",
+          "UNICAM also gives specific language guidance for pre-admission. The existing record notes that English certificates are not mandatory at the pre-admission stage and that medium-of-instruction certificates are not accepted at that stage. This does not mean language can be ignored forever. Programme enrollment, visa, or later academic requirements can still involve language readiness.",
+        ],
+      },
+      {
+        title: "ERDIS scholarship reality",
+        paragraphs: [
+          "ERDIS Marche is the regional right-to-study body, and its scholarship rules are published annually. The benefits can include tuition waiver and support for food and lodging, with possible cash assistance depending on the call, student status, income, merit, and ranking. The exact benefit package must be checked in the ERDIS call for the relevant academic year.",
+          "Because ERDIS is based partly on economic criteria, students with family income or assets abroad must prepare official documents. These can require translation, legalisation, apostille, or consular certification depending on the country and call rules. This is often the hardest step for international students, and it should not be left until July.",
+          "ERDIS is not a reward for being admitted to UNICAM. It is a separate administrative scholarship route. A student can be pre-admitted and still fail to win ERDIS if documents are missing, income thresholds are not met, merit rules are not met, or ranking position is not funded.",
+        ],
+      },
+      {
+        title: "Benefits and limits",
+        paragraphs: [
+          "The current record correctly treats the opportunity as partially funded because not every admitted student receives full support and the final benefit depends on ERDIS. Benefits may include tuition waiver, food and lodging support from October to July, and possible cash assistance. Students should verify whether housing is guaranteed, assigned by ranking, or replaced by another form of support.",
+          "Do not assume airfare, visa fees, private accommodation, all meals, health insurance, or a monthly stipend unless the annual ERDIS call says so. Italian regional scholarships can be generous, but the support is rule-based and often paid or activated according to administrative schedules.",
+          "Students should budget for pre-admission fee, document translation, legalisation, visa appointment, travel to Italy, residence permit, first-month costs, local transport, phone, food before benefits activate, and emergency expenses. Even a good regional scholarship may not place cash in the student's account on day one.",
+        ],
+      },
+      {
+        title: "Application process",
+        ordered: [
+          "Choose a UNICAM master's programme and read its academic requirements.",
+          "Submit pre-admission through the official UNICAM international portal before the deadline.",
+          "Pay the pre-admission fee if the portal requires it.",
+          "Wait for academic evaluation and pre-admission outcome.",
+          "For non-EU visa applicants, follow Universitaly and embassy instructions after pre-admission.",
+          "Watch for the ERDIS Marche annual scholarship call, usually in the second half of July.",
+          "Prepare and submit economic, identity, enrollment, and academic documents required by ERDIS.",
+          "Track ERDIS rankings, correction windows, benefit acceptance, housing, food, and payment instructions.",
+        ],
+        paragraphs: [
+          "The order is important. Do not wait for the ERDIS call to begin UNICAM pre-admission. If pre-admission is missed, the student may not have the academic or enrollment pathway needed for the scholarship year.",
+          "At the same time, do not wait until July to prepare financial documents. Students applying from abroad may need several weeks to obtain official income and asset documents, translations, and legalisation.",
+        ],
+      },
+      {
+        title: "Documents to prepare",
+        bullets: [
+          "Passport or valid identity document.",
+          "Bachelor's degree certificate or expected graduation evidence if accepted.",
+          "Academic transcripts.",
+          "Curriculum vitae.",
+          "Motivation letter or study plan.",
+          "Programme-specific documents requested by UNICAM.",
+          "Language evidence where later required by programme or enrollment rules.",
+          "Family income and asset documents for ERDIS.",
+          "Translations, legalisation, apostille, or consular declarations required by ERDIS.",
+          "Universitaly, visa, and enrollment documents for non-EU applicants abroad.",
+        ],
+        paragraphs: [
+          "The pre-admission document set and the ERDIS document set are not the same. Pre-admission is mainly academic. ERDIS is heavily financial and administrative. Students should keep separate checklists so they do not upload an academic file and assume the scholarship documentation is complete.",
+          "Document consistency matters. Names, dates, degree titles, passport details, and family information should match across portals. Inconsistent records can slow admission, visa, enrollment, or scholarship ranking.",
+        ],
+      },
+      {
+        title: "Ranking and renewal",
+        paragraphs: [
+          "ERDIS rankings can include winners, eligible students, excluded applicants, and students awaiting correction or verification. Read the ranking status carefully and respond within official windows. A student who ignores provisional rankings can lose the chance to correct a document.",
+          "Regional scholarships are usually annual. For a two-year master's programme, students should expect to recheck rules for the second year, including merit credits and updated economic documentation. Winning support in the first year does not mean the second year is automatic without academic progress.",
+          "If housing is part of the package, read acceptance deadlines. Missing a housing acceptance window can create immediate financial pressure because private rentals may be costly or difficult to arrange quickly.",
+        ],
+      },
+      {
+        title: "Is this route worth applying for?",
+        paragraphs: [
+          "It is worth applying if you genuinely want a UNICAM master's programme and can meet the pre-admission deadline. The pre-admission step is useful even before scholarship results because it clarifies academic eligibility and supports later enrollment planning. For students who can also document low family income, ERDIS may make the route much more affordable.",
+          "It is less useful if your goal is only a guaranteed scholarship package. UNICAM pre-admission does not promise funding, and ERDIS depends on annual rules and ranking. Students who need confirmed housing, meals, and cash before starting any admission process should compare other scholarship routes as well.",
+          "The best strategy is to treat UNICAM as an admission opportunity plus a separate financial-aid opportunity. If both work, the route can be strong. If only admission works, the student must decide whether self-funding or other aid is realistic.",
+          "That decision should be made before visa and travel spending begins, because those costs can become difficult to recover.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Thinking UNICAM pre-admission is the same as winning a scholarship.",
+          "Waiting for ERDIS before submitting pre-admission.",
+          "Assuming no IELTS at pre-admission means no language expectations later.",
+          "Preparing academic documents but forgetting foreign income and asset documents for ERDIS.",
+          "Missing ranking correction windows.",
+          "Assuming housing, meals, and cash are guaranteed for every admitted student.",
+          "Ignoring Universitaly and visa steps after pre-admission.",
+          "Budgeting as if ERDIS payments arrive immediately after landing in Italy.",
+        ],
+        paragraphs: [
+          "A strong UNICAM scholarship plan separates each stage clearly: pre-admission, Universitaly or visa where needed, ERDIS application, ranking, enrollment, housing or services, and renewal. Students who understand those stages make fewer expensive mistakes.",
+        ],
+      },
+    ],
 
     country: "Italy",
     degreeLevel: "Masters",
@@ -6751,6 +7351,124 @@ const rawScholarships: Scholarship[] = [
       "UNICORE 8.0 supports recognized refugees in selected countries to access taught Master's programs at participating Italian universities.",
     summary:
       "UNICORE 8.0 (University Corridors for Refugees) is a coordinated scholarship pathway run by Italian universities and partners to admit refugee students into two-year Master's programs in Italy. For the 2026/2027 call, candidates create one profile and can submit up to two university applications. Selection is based on eligibility screening and university-level assessment, with scholarship support designed to cover major study and relocation costs under each university's call.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "Programme", value: "University Corridors for Refugees - UNICORE 8.0" },
+          { label: "Study level", value: "Two-year master's degree programmes in Italy" },
+          { label: "Applicant group", value: "Recognized refugees in eligible host countries" },
+          { label: "Application deadline", value: "April 17, 2026 at 12:00 PM Italy time / UTC+2" },
+          { label: "Application cap", value: "One profile and no more than two university applications" },
+          { label: "Selection authority", value: "Individual participating universities carry out selection" },
+          { label: "Main partners", value: "Italian universities, UNHCR, MAECI, Caritas, Diaconia Valdese, Centro Astalli and others" },
+          { label: "Funding detail", value: "Scholarship package and cash amount are university-specific" },
+        ],
+        paragraphs: [
+          "UNICORE 8.0 is a coordinated pathway that helps recognized refugee students continue higher education through master's programmes at participating Italian universities. The official UNICORE portal says applications for UNICORE 8.0 were open until April 17, 2026 and names eligible refugee-hosting countries including Bangladesh, Burkina Faso, Cameroon, Ethiopia, India, Kenya, Mozambique, Niger, Nigeria, South Africa, Uganda, Zambia, and Zimbabwe.",
+          "This is not a general international scholarship for all students. It is specifically for refugee students recognized in the countries covered by the call. The selection process for admission is carried out by individual universities, so applicants must read both the central UNICORE rules and the dedicated page or call for each university they choose.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "A strong UNICORE applicant has recognized refugee status in one of the eligible countries, a bachelor's degree that can support master's admission, and a clear match with one or two participating Italian universities. The programme is designed for students who face displacement-related barriers but are academically ready for graduate study.",
+          "The current data record notes minimum GPA rules, degree recency, and the two-university cap. Applicants should not treat those as small details. If the bachelor's degree, GPA, refugee status, country of recognition, or selected course does not match the call, the application may fail before academic review.",
+          "This scholarship is a poor fit for applicants who are asylum seekers without recognized refugee status where the call requires recognition, applicants outside the eligible countries, students without a valid previous degree, or students who apply to more universities than the rules allow. The safest path is to verify eligibility before investing time in essays and documents.",
+        ],
+      },
+      {
+        title: "Eligible countries and refugee status",
+        paragraphs: [
+          "The official UNICORE portal lists the eligible countries for the 8.0 edition. Applicants must confirm that their refugee recognition is in one of those countries and that their documentation is accepted. Refugee status evidence is not the same as a general hardship statement. It must be formal, current, and uploaded according to the platform instructions.",
+          "If a student has moved between countries, has expired documentation, or is unsure whether their status counts under the call, they should seek guidance from the official UNICORE information channels or UNHCR-linked local resources before applying. Do not guess on refugee-status eligibility; it is a core rule.",
+          "Applicants should also protect sensitive documents. Use only the official UNICORE portal and official university instructions. Do not send refugee documents, passport scans, or personal data to unofficial agents, social media accounts, or people promising guaranteed selection.",
+        ],
+      },
+      {
+        title: "Choosing universities and courses",
+        paragraphs: [
+          "Applicants can submit applications to no more than two participating universities. That cap makes course choice strategic. Do not use one application on a programme that is famous but academically mismatched. Choose programmes where your prior degree, grades, language ability, and future plans fit the admission criteria.",
+          "Each participating university publishes its own eligible master's programmes and selection process. Some universities may offer engineering, science, agriculture, social science, humanities, data, environment, or development-related programmes; others may have a narrower list. Read the university call, not only the central portal.",
+          "A good course choice explains why the programme is realistic and useful. For displaced students, a future plan can include rebuilding a profession, contributing to host or origin communities, entering research, or developing skills that are portable across uncertain circumstances. The application should still be academically grounded, not only emotionally compelling.",
+        ],
+      },
+      {
+        title: "What the scholarship can cover",
+        paragraphs: [
+          "UNICORE scholarship support is designed to cover major barriers to study and relocation, but the exact package is university-specific. The current record lists tuition waiver, housing and meals support, residence-permit related support, health insurance, and possible travel or startup support according to individual university calls. It also notes that the exact cash stipend amount must be checked in each university call document.",
+          "This university-specific structure is important. One participating university may provide two scholarships with a particular package; another may provide different services, timing, or cash support. Applicants should compare support packages before choosing universities, especially if they have family responsibilities or health needs.",
+          "Students should also understand what may not be covered: dependants, long-term family relocation, extra travel, replacement documents, personal debts, special medical needs outside insurance, technology, clothing, or emergency costs unless the university call states otherwise. A fully funded label does not mean unlimited support.",
+        ],
+      },
+      {
+        title: "Application process",
+        ordered: [
+          "Create or access an account on the official UNICORE portal.",
+          "Read the central UNICORE 8.0 eligibility rules and confirm refugee-status, country, degree, GPA, and deadline requirements.",
+          "Review participating universities and eligible master's programmes.",
+          "Choose no more than two university applications.",
+          "Prepare refugee-status proof, identity documents, academic records, translations, CV, motivation, and language evidence where required.",
+          "Submit the complete application through the UNICORE website before April 17, 2026 at 12:00 PM Italy time.",
+          "Follow university-level selection, interviews, document verification, and final-result instructions.",
+          "If selected, complete visa, travel, residence permit, enrollment, housing, and arrival steps with the host university and partners.",
+        ],
+        paragraphs: [
+          "The central portal is the only safe route for application submission. University pages may provide call details, but applications should follow the official UNICORE submission process. Do not email applications unless a university call explicitly instructs a specific additional step.",
+          "Because final selection is university-level, applicants should prepare for interviews or additional assessments. A university may ask about academic background, course fit, English readiness, motivation, and practical ability to relocate and study in Italy.",
+        ],
+      },
+      {
+        title: "Documents to prepare",
+        bullets: [
+          "Proof of recognized refugee status in an eligible country.",
+          "Passport, travel document, or accepted identity evidence.",
+          "Bachelor's degree certificate or completion evidence accepted by the call.",
+          "Academic transcripts with grading scale where possible.",
+          "Translations where documents are not in accepted languages.",
+          "Curriculum vitae.",
+          "Motivation statement or course-specific statement.",
+          "Language proof or interview readiness evidence where required by the university.",
+          "Any university-specific documents listed in the selected call.",
+        ],
+        paragraphs: [
+          "Academic documents can be difficult for displaced students to retrieve. If original records are missing, damaged, or hard to verify, read the call instructions carefully and contact official support channels where allowed. Do not invent documents or alter scans. Integrity problems can damage the application and future protection-sensitive processes.",
+          "If your transcript uses a grading scale unfamiliar to Italian universities, include the grading scale or explanation if the portal allows it. The current record notes a GPA threshold; reviewers need enough information to judge equivalence.",
+        ],
+      },
+      {
+        title: "Selection and interviews",
+        paragraphs: [
+          "Selection is carried out by the individual universities. This means two applicants in the same central programme may face different academic criteria depending on their chosen universities and courses. Read the university call for ranking criteria, interview format, language expectations, and result dates.",
+          "Prepare for the interview as an academic conversation. Be ready to explain your previous degree, why you chose the programme, how you meet prerequisites, what challenges you expect in Italy, and how the degree fits your future. Avoid memorised answers that say only you need help. The scholarship exists because of displacement, but the master's place still requires academic readiness.",
+          "If internet access is unstable, plan ahead for interviews. Find a quiet location, test the device, prepare documents, and keep contact details updated. Missing an interview because of preventable technical issues can cost a rare opportunity.",
+        ],
+      },
+      {
+        title: "After selection",
+        paragraphs: [
+          "A final selection result starts another set of steps: admission confirmation, visa or travel documentation, health insurance, residence permit planning, housing, enrollment, and arrival. The host university and partners usually guide selected students, but students must respond quickly and keep documents ready.",
+          "Relocation can be emotionally and administratively heavy, especially for refugee students. Keep copies of identity documents, refugee-status proof, academic records, scholarship award letters, travel permissions, medical information, and emergency contacts. Use official communication channels and be cautious with anyone asking for payment.",
+          "Once in Italy, students should use university support services early: language support, tutoring, counselling, international office, student associations, and academic advisers. The scholarship opens the door, but academic success still requires active adjustment.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Applying without recognized refugee status in an eligible country.",
+          "Submitting more than the allowed number of university applications.",
+          "Choosing courses without checking academic prerequisites.",
+          "Assuming every participating university offers the same scholarship package.",
+          "Missing the noon Italy-time deadline.",
+          "Uploading unclear refugee-status or academic documents.",
+          "Using unofficial agents or sending sensitive documents outside official channels.",
+          "Treating selection as final before visa, travel, and enrollment steps are complete.",
+        ],
+        paragraphs: [
+          "A strong UNICORE application is careful and protected. It verifies eligibility first, chooses realistic university options, uploads honest documents, prepares for university-level assessment, and uses only official channels. That care matters because the opportunity is valuable and the applicant's personal data is sensitive.",
+        ],
+      },
+    ],
 
     country: "Italy",
     degreeLevel: "Masters",
@@ -6839,6 +7557,7 @@ const rawScholarships: Scholarship[] = [
       "Entrance scholarship for international students starting undergraduate study at the University of Winnipeg.",
     summary:
       "The University of Winnipeg President's Scholarship for World Leaders is an application-based entrance scholarship for international students entering UWinnipeg for the first time. For undergraduate applicants, the 2026-27 awards table lists a C$5,000 value with multiple term-based deadlines and a leadership-focused selection process. Applicants must complete admission first and then submit the scholarship web application with required supporting documents.",
+    contentSections: winnipegPresidentReaderSections("Bachelors"),
 
     country: "Canada",
     degreeLevel: "Bachelors",
@@ -6928,6 +7647,7 @@ const rawScholarships: Scholarship[] = [
       "Graduate entrance scholarship for international students beginning a University of Winnipeg graduate program.",
     summary:
       "The University of Winnipeg President's Scholarship for World Leaders (Graduate) supports international students entering a UWinnipeg graduate program for the first time. The official graduate scholarship page lists a C$5,000 value, leadership-based selection criteria, and a June 1 annual deadline. Qualifying year and Pre-Masters applicants are explicitly excluded on the official graduate scholarship page.",
+    contentSections: winnipegPresidentReaderSections("Masters"),
 
     country: "Canada",
     degreeLevel: "Masters",
@@ -7016,6 +7736,114 @@ const rawScholarships: Scholarship[] = [
       "Duke University's Karsh International Scholars Program supports selected international first-year undergraduate students with comprehensive funding.",
     summary:
       "The Karsh International Scholarship at Duke University is a merit-and-need based undergraduate award for international students entering Duke as first-year applicants. It is administered through Duke's admissions and financial aid processes rather than a separate external portal. For selected scholars, Duke publishes full tuition, room and board, mandatory fees, and additional support based on demonstrated need, plus funding opportunities for approved summer experiences.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "Duke University" },
+          { label: "Award", value: "Karsh International Scholars Program" },
+          { label: "Study level", value: "First-year undergraduate applicants" },
+          { label: "Applicant group", value: "International students with demonstrated financial need" },
+          { label: "Application route", value: "Duke undergraduate admission and financial aid process" },
+          { label: "Separate form", value: "No standalone public Karsh application form is listed" },
+          { label: "Core benefits", value: "Tuition, room and board, mandatory fees, demonstrated need, and three summers of funding" },
+          { label: "Selection style", value: "Highly competitive merit and need review" },
+        ],
+        paragraphs: [
+          "The Karsh International Scholarship is one of Duke University's most generous undergraduate awards for international students. Duke's official Karsh page says international applicants must have demonstrated financial need to be eligible, and describes coverage for tuition, room and board, mandatory fees, demonstrated need that exceeds those costs, and three summers of funding for research, unpaid internships, and other academic opportunities.",
+          "This is a real full-support opportunity for selected students, but it should not be treated like an open scholarship form that anyone can submit separately. Karsh consideration is connected to Duke first-year admission and financial aid review. The student must be a competitive Duke applicant and must submit financial aid documents correctly.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "A strong candidate is an international first-year applicant with exceptional academic preparation, demonstrated financial need, and evidence of potential for academic and global impact. Duke is one of the most selective universities in the United States, so applicants should be realistic: strong grades alone are not enough, and financial need alone is not enough.",
+          "The scholarship is best suited to students who would be serious Duke applicants even without the scholarship label. They should have a rigorous secondary school record, strong recommendations, thoughtful essays, meaningful extracurricular or community contribution, and a clear ability to thrive in a demanding liberal arts and research university environment.",
+          "It is not the right route for transfer applicants, applicants who already hold a bachelor's degree, U.S. citizens or dual U.S. citizens where the Karsh rules exclude them, or students who cannot submit required financial aid forms by the deadline. If the financial aid file is incomplete, the scholarship review can be damaged even if the admission application is strong.",
+        ],
+      },
+      {
+        title: "What the scholarship covers",
+        paragraphs: [
+          "Duke's official language is broad and unusually strong. For selected Karsh Scholars, Duke lists tuition, room and board, mandatory fees, demonstrated need beyond those costs, and three summers of funding. That means the award is not merely a tuition waiver. It is designed to make Duke financially possible for international students with demonstrated need.",
+          "The summer funding is a major feature. Duke describes three summers of funding for research, unpaid internships, and other opportunities that advance the student's academic career. This can matter as much as first-year aid because it helps students use summers for research, service, or career development instead of being forced to choose only paid work.",
+          "Students should still read the final financial aid offer carefully. Coverage is based on Duke's calculation of demonstrated need and university policy. Personal expenses, travel details, health insurance, visa costs, family contribution, currency changes, and timing of payments should be understood from official Duke aid documents, not guessed from a scholarship summary.",
+        ],
+      },
+      {
+        title: "Admissions and aid deadlines",
+        paragraphs: [
+          "The current data record lists Early Decision and Regular Decision admission deadlines alongside matching aid deadlines. Students should always verify the active cycle on Duke's official admissions and financial aid pages because dates can shift. The important point is that admission and aid timelines are both required.",
+          "A student applying Early Decision must understand that Duke's Early Decision process is binding if admitted under the policy. International students needing financial aid should be especially careful and should read Duke's policies before choosing Early Decision. Regular Decision may provide more flexibility for students comparing offers.",
+          "Financial aid documents can take time. CSS Profile, tax documents, income statements, business records, translations, noncustodial parent materials, or verification documents may be required depending on family circumstances. Start early, because missing aid documents can affect eligibility for need-based consideration.",
+        ],
+      },
+      {
+        title: "No separate public Karsh application",
+        paragraphs: [
+          "One common mistake is searching for a Karsh application form. Duke's official information presents Karsh as part of Duke-administered merit and financial aid consideration, not a separate external portal. Applicants should focus on a complete Duke first-year application and financial aid file.",
+          "This means the entire Duke application matters. Essays, school report, recommendations, activities, academic choices, testing policy where applicable, and financial aid documents all contribute to the overall picture. A student cannot compensate for a weak Duke application with a separate Karsh essay because there is no separate public route listed.",
+          "Applicants should use Duke's applicant portal checklist after submission. If Duke requests additional documents, respond quickly. Scholarship consideration at this level is too competitive for avoidable missing checklist items.",
+        ],
+      },
+      {
+        title: "Documents to prepare",
+        bullets: [
+          "Duke first-year application through the accepted admission platform.",
+          "Secondary school transcript and school report.",
+          "Counselor and teacher recommendations required by Duke.",
+          "Application essays and activity list.",
+          "English proficiency or testing materials if required by Duke policy.",
+          "CSS Profile and required international financial aid documents.",
+          "Family income, tax, business, asset, or verification documents requested through the aid process.",
+          "Passport or identity details needed for international processing.",
+        ],
+        paragraphs: [
+          "The financial aid file should be honest and complete. Demonstrated need is required for Karsh eligibility, and Duke's aid office evaluates financial circumstances through formal documents. Do not understate or hide assets, income, business ownership, or family circumstances. Inaccurate aid documents can create serious problems.",
+          "International applicants from countries with different tax systems should prepare explanations and translations where needed. If parents are self-employed, own a business, farm, or work informally, documentation may be more complicated. Start early and use Duke's instructions rather than third-party templates.",
+        ],
+      },
+      {
+        title: "How to strengthen the application",
+        paragraphs: [
+          "There is no guaranteed formula for Karsh selection, but the application should show academic depth, intellectual curiosity, contribution, and financial need. Duke is a highly selective university, and Karsh Scholars are expected to add to the academic and civic life of the university.",
+          "The essays should not beg for funding. They should help Duke understand the applicant's mind, values, choices, and potential. Strong essays often show how the student thinks, what problems they care about, how they have used opportunities, and what kind of community member they may become.",
+          "Activities should be described with impact and responsibility. A shorter list of meaningful commitments is stronger than a long list of shallow memberships. If the student has family responsibilities, work obligations, community service, research, creative work, or leadership in difficult circumstances, those details can help contextualize the application.",
+        ],
+      },
+      {
+        title: "Financial planning after selection",
+        paragraphs: [
+          "If selected, read the financial aid award and scholarship communication carefully. Confirm what is billed directly, what is covered as room and board, what summer funding requires, and what costs the student must pay before reimbursement or arrival. Even generous scholarships can have timing issues around flights, visa appointments, deposits, or personal setup costs.",
+          "International students should also understand U.S. visa rules, work restrictions, health insurance, tax forms, and travel documentation. Duke's international student office and financial aid office are the correct sources for post-award instructions.",
+          "Families should avoid making non-refundable travel or housing decisions until admission, aid, visa, and enrollment steps are clear. A full scholarship is life-changing, but the administrative steps still matter.",
+        ],
+      },
+      {
+        title: "Is Karsh worth targeting?",
+        paragraphs: [
+          "Karsh is worth targeting if Duke is already a serious academic fit and the student needs substantial financial aid. It is one of the rare U.S. undergraduate opportunities where an international student with demonstrated need can receive support that goes far beyond a small tuition discount.",
+          "It is not worth treating as a backup scholarship for a casual Duke application. Admission is extremely selective, and Karsh selection is even narrower. Students should build a balanced college list with other affordable options rather than relying on one elite scholarship outcome.",
+          "The best approach is to apply because Duke genuinely fits the student's academic and personal goals, then complete the aid process with care. If Karsh happens, it can transform the plan. If it does not, the student should still have realistic alternatives.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Looking for a separate Karsh application instead of completing Duke admission and aid correctly.",
+          "Applying without demonstrated financial need.",
+          "Missing CSS Profile or financial aid deadlines.",
+          "Assuming strong grades alone are enough for Duke or Karsh selection.",
+          "Submitting incomplete or unclear family financial documents.",
+          "Choosing Early Decision without understanding the binding policy and aid implications.",
+          "Treating unofficial scholarship blogs as deadline authority instead of Duke pages.",
+          "Ignoring summer funding rules and post-award conditions.",
+        ],
+        paragraphs: [
+          "A strong Karsh application is really a strong Duke application plus a complete financial aid file. The scholarship is generous because Duke is investing in international students with academic strength, demonstrated need, and potential for broad contribution. The safest strategy is accuracy, depth, and early completion.",
+        ],
+      },
+    ],
 
     country: "USA",
     degreeLevel: "Bachelors",
@@ -7108,6 +7936,120 @@ const rawScholarships: Scholarship[] = [
       "University of the Arts London (UAL) offers GBP 10,000 tuition-waiver scholarships for eligible international taught Master's applicants.",
     summary:
       "The UAL International Postgraduate GBP 10,000 Scholarship supports overseas students from low-income economies who are applying to taught Master's courses at the University of the Arts London. For 2026/27, UAL publishes multiple rounds and states that up to 288 awards are available. This scholarship is a tuition-fee reduction award, while a separate UAL/ISH scholarship may include accommodation support for eligible applicants.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "University of the Arts London" },
+          { label: "Award", value: "UAL International Postgraduate GBP 10,000 Scholarship" },
+          { label: "Value", value: "GBP 10,000 tuition fee waiver" },
+          { label: "Study level", value: "Taught master's course" },
+          { label: "Study mode", value: "Full-time or part-time, where eligible" },
+          { label: "Fee status", value: "Overseas fee payer" },
+          { label: "Application access", value: "Scholarship form appears in the UAL Applicant Portal after an eligible offer" },
+          { label: "Key warning", value: "This is not accommodation, travel, or full living-cost funding" },
+        ],
+        paragraphs: [
+          "The UAL International Postgraduate GBP 10,000 Scholarship is a tuition-fee waiver for eligible international students applying to taught master's courses at University of the Arts London. UAL's official postgraduate scholarship page describes it as a GBP 10,000 tuition fee waiver for a full-time or part-time taught master's course at one of UAL's colleges and institutes.",
+          "This should be presented clearly to students: it is a fee reduction, not a fully funded UK scholarship. It can make UAL more affordable, but students still need to plan for the remaining tuition balance, accommodation in London, food, travel, visa, immigration health surcharge, course materials, and personal costs.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "A strong applicant is an overseas-fee student from an eligible low-income economy who has, or can secure, an offer for an eligible taught master's course at UAL before the scholarship deadline. The scholarship is best for students who already have a serious creative, design, communication, fashion, performance, media, or arts-related study plan and need tuition support to make the offer realistic.",
+          "It is not the right fit for students who do not yet have a UAL offer close to the deadline, students applying for an ineligible course, home-fee students, or applicants who need full accommodation and living-cost support from this specific award. A separate UAL/ISH route may include accommodation support for eligible applicants, but that is not the same award.",
+          "Because UAL is a specialist arts university, the course fit matters. Applicants should choose a master's that matches their portfolio, academic background, creative direction, or professional plan rather than applying only because a scholarship exists.",
+        ],
+      },
+      {
+        title: "Offer-first timing",
+        paragraphs: [
+          "The most important application detail is that students need an offer for an eligible UAL taught master's course before they can apply for the scholarship. Once an applicant receives an offer, the UAL Applicant Portal's funding area can display scholarship forms for which the student may be eligible.",
+          "This timing can catch students out. If the scholarship deadline is June but the course application is submitted too late, the student may not receive an offer in time to access the scholarship form. UAL and third-party deadline summaries often advise applying for the course early enough for offer processing before the scholarship round closes.",
+          "The current record lists multiple 2026/27 rounds: March 27, 2026, June 26, 2026, and October 30, 2026 for January 2027 intake. Students should always verify the round that matches their intake and course because missing the correct round can make the award unavailable.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Hold an offer for an eligible UAL taught master's course.",
+          "Be assessed as an overseas fee payer.",
+          "Meet the nationality or low-income economy rules in the active scholarship criteria.",
+          "Apply through the UAL Applicant Portal funding section by the correct deadline.",
+          "Submit scholarship answers and evidence required by UAL.",
+          "Meet all course admission, deposit, visa, and enrollment conditions separately.",
+        ],
+        paragraphs: [
+          "Scholarship eligibility is not the same as course admission. A student can be admissible to UAL but not eligible for the scholarship, or eligible for the scholarship form but still not selected. Read the active UAL criteria line by line.",
+          "Students should also check whether previous UK postgraduate study, course type, online or distance status, part-time status, or other conditions affect eligibility. UAL's live scholarship page is the controlling source for these details.",
+        ],
+      },
+      {
+        title: "What the GBP 10,000 waiver changes",
+        paragraphs: [
+          "A GBP 10,000 waiver directly reduces tuition fees. That can be a major help, especially for creative postgraduate courses where international tuition can be high. However, the student still needs to confirm the course's total fee and calculate the remaining balance after the waiver.",
+          "London living costs are a separate issue. Rent, transport, food, materials, printing, software, equipment, exhibitions, visa, immigration health surcharge, and personal expenses can be significant. Creative courses can also involve project costs that are not obvious from tuition alone.",
+          "Before accepting, students should make a spreadsheet: total tuition, scholarship waiver, remaining tuition, deposit, visa/IHS, monthly rent, transport, food, materials, and emergency reserve. A tuition waiver helps only if the rest of the budget is still workable.",
+        ],
+      },
+      {
+        title: "Application process",
+        ordered: [
+          "Choose an eligible taught master's course at UAL.",
+          "Submit the course application early enough to receive an offer before the scholarship deadline.",
+          "Check your fee status and scholarship eligibility once an offer is received.",
+          "Log in to the UAL Applicant Portal and open the funding or my funding area.",
+          "Complete the GBP 10,000 scholarship application form shown for eligible applicants.",
+          "Submit all required statements and evidence before the relevant round deadline.",
+          "Monitor the portal and email for scholarship outcome, course conditions, deposit, CAS, and visa steps.",
+        ],
+        paragraphs: [
+          "Do not wait until the scholarship deadline to apply for the course. The scholarship application depends on the offer appearing first. If the offer arrives after the deadline, the student may have missed the round even if the course application was strong.",
+          "Applicants should keep copies of the course offer, scholarship submission, and any portal confirmation. If the funding form does not appear, contact UAL through official channels rather than guessing or using unofficial agents.",
+        ],
+      },
+      {
+        title: "Scholarship statement strategy",
+        paragraphs: [
+          "UAL scholarship statements should connect financial need, creative potential, course fit, and future impact. A strong answer does not only say the student cannot afford London. It explains why this course matters, what the student has already built, and how the award would change access to the opportunity.",
+          "For creative subjects, evidence can include portfolio direction, community projects, design practice, cultural work, research interests, professional goals, or work with underrepresented communities. The statement should be specific to UAL and the chosen course.",
+          "Avoid generic text that could be sent to any UK university. UAL has distinct colleges, disciplines, facilities, and creative cultures. The strongest applications show that the student understands the course and has a serious plan for using the learning.",
+        ],
+      },
+      {
+        title: "UAL GBP 10,000 versus UAL/ISH",
+        paragraphs: [
+          "Students often confuse UAL's GBP 10,000 tuition-waiver scholarship with the separate UAL/ISH International Postgraduate Scholarship. The GBP 10,000 award reduces tuition. The UAL/ISH route may include accommodation support for eligible applicants through International Students House, but it has different criteria and availability.",
+          "When planning, keep the routes separate. Do not assume that applying for one automatically enters you into the other. Check the UAL portal forms shown for your offer and read the criteria for each scholarship separately.",
+          "If accommodation support is essential, the student should specifically investigate UAL/ISH and other housing or living-cost routes. The GBP 10,000 waiver alone does not solve London rent.",
+        ],
+      },
+      {
+        title: "Should you apply this round?",
+        paragraphs: [
+          "Apply this round if you already have a UAL offer or are far enough through the course application that an offer can realistically arrive before the scholarship deadline. The scholarship form depends on eligibility in the applicant portal, so timing is not just a convenience; it controls access to the form.",
+          "If you are starting from zero close to the deadline, be realistic. A rushed course application may not produce an offer in time, and a rushed scholarship statement is rarely strong. In that situation, compare later intakes, the January round if relevant, or other funding routes rather than submitting weak work.",
+          "If you do apply, treat the scholarship as one part of a wider plan. Confirm the remaining tuition after the waiver, expected London living costs, visa/IHS costs, and whether any family or external support is available. A student who can explain the financial plan clearly and confidently is in a better position to accept the offer safely if selected.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Calling the GBP 10,000 award fully funded.",
+          "Applying for the course too late to receive an offer before the scholarship deadline.",
+          "Assuming every UAL master's course is eligible.",
+          "Ignoring overseas fee status and low-income economy criteria.",
+          "Confusing the GBP 10,000 tuition waiver with UAL/ISH accommodation support.",
+          "Submitting a generic scholarship statement with no course-specific fit.",
+          "Budgeting for London as if tuition is the only cost.",
+          "Missing CAS, visa, or deposit deadlines after a scholarship result.",
+        ],
+        paragraphs: [
+          "A strong UAL scholarship plan starts with the course offer, then the correct portal form, then a realistic budget. The award is valuable, but it is a tuition waiver. Students who understand that distinction make better decisions than those who chase a misleading fully funded label.",
+        ],
+      },
+    ],
 
     country: "United Kingdom",
     degreeLevel: "Masters",
