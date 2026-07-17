@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ScholarshipListItem } from "@/data/types";
 import { cleanDisplayText, toSegment } from "@/lib/helpers";
+import { isStillOpen } from "@/lib/scholarship-taxonomy";
 
 type Props = {
   scholarship: ScholarshipListItem;
@@ -17,6 +18,15 @@ export default function ScholarshipCard({ scholarship }: Props) {
   const countryHref = `/countries/${toSegment(scholarship.country)}`;
   const degreeHref = `/degrees/${toSegment(scholarship.degreeLevel)}`;
   const fundingHref = fundingPath(scholarship.fundingType);
+  const applicationMayBeOpen = isStillOpen(scholarship.deadline);
+  const updatedDate = new Date(scholarship.lastUpdated);
+  const formattedUpdatedDate = Number.isNaN(updatedDate.getTime())
+    ? scholarship.lastUpdated
+    : updatedDate.toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      });
 
   return (
     <article className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-gray-300 hover:bg-gray-50/50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5">
@@ -64,7 +74,7 @@ export default function ScholarshipCard({ scholarship }: Props) {
         </span>{" "}
         • Updated:{" "}
         <time dateTime={scholarship.lastUpdated}>
-          {scholarship.lastUpdated}
+          {formattedUpdatedDate}
         </time>
       </p>
 
@@ -81,7 +91,7 @@ export default function ScholarshipCard({ scholarship }: Props) {
           rel="noopener noreferrer"
           className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
         >
-          Apply
+          {applicationMayBeOpen ? "Apply" : "Official page"}
         </a>
       </div>
     </article>

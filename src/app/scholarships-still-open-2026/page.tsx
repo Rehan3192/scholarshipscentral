@@ -17,7 +17,7 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Scholarships Still Open 2026 | Scholarships Central",
+  title: "Scholarships Still Open 2026",
   description:
     "Browse scholarships still open in 2026, with direct paths into Europe, fully funded, UK, Germany, and Italy scholarship pages.",
   alternates: {
@@ -29,7 +29,7 @@ const STILL_OPEN_LINKS = [
   {
     href: "/italy-scholarships-still-open-2026",
     title: "Italy scholarships still open 2026",
-    description: "Go straight to the Italy-specific apply-now cluster when Italy is already on your shortlist.",
+    description: "Go straight to the Italy-specific open scholarship list when Italy is already on your shortlist.",
     badge: "Italy",
   },
   {
@@ -163,7 +163,7 @@ export default function ScholarshipsStillOpen2026Page() {
             {fullyFundedOpenCount}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Still-open scholarships that already match full-funding intent.
+            Still-open scholarships that already match full-funding preference.
           </p>
         </div>
       </section>

@@ -9,7 +9,7 @@ import {
 } from "@/components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Fully Funded Scholarships | Scholarships Central",
+  title: "Fully Funded Scholarships",
   description:
     "Find fully funded scholarships worldwide covering tuition fees, living expenses, and travel costs.",
   alternates: {

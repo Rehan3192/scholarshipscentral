@@ -17,7 +17,7 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Government Scholarships Still Open 2026 | Scholarships Central",
+  title: "Government Scholarships Still Open 2026",
   description:
     "Browse government scholarships still open in 2026, including public-funding routes in Europe and other live ministry-backed opportunities.",
   alternates: {
@@ -181,7 +181,7 @@ export default function GovernmentScholarshipsStillOpen2026Page() {
           Why use this still-open government scholarships page
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          This page combines two high-intent filters at once: government funding
+          This page combines two important filters at once: government funding
           and live deadlines. That makes it useful when you do not want to scan
           expired ministry-backed routes or mix them with general university awards.
         </p>
@@ -195,7 +195,7 @@ export default function GovernmentScholarshipsStillOpen2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            Government still-open cluster links
+            Government still-open related scholarship pages
           </h2>
           <p className="mb-0 text-sm text-gray-600">
             Use these next steps to narrow live public-funding routes by Europe, country, or funding level.

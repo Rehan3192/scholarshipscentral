@@ -16,7 +16,7 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Europe Scholarships 2026 | Scholarships Central",
+  title: "Europe Scholarships 2026",
   description:
     "Browse Europe scholarships for 2026, including still-open opportunities, fully funded routes, and country pages for Germany, Italy, the UK, and more.",
   alternates: {
@@ -181,7 +181,7 @@ export default function EuropeScholarships2026Page() {
             {fullyFundedEuropeCount}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Europe listings that already match full-funding intent.
+            Europe listings that already match full-funding preference.
           </p>
         </div>
       </section>

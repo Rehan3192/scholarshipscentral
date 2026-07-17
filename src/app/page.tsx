@@ -23,6 +23,7 @@ const BLOG_REVALIDATE_SECONDS = 5 * 60;
 const SHARED_BLOG_POSTS_PAGE_SIZE = 20;
 const HOMEPAGE_BLOG_POST_LIMIT = 3;
 const LATEST_SCHOLARSHIPS = [...scholarships]
+  .filter((scholarship) => isStillOpen(scholarship.deadline))
   .sort((a, b) => (b.lastUpdated ?? "").localeCompare(a.lastUpdated ?? ""))
   .slice(0, 6);
 const CLOSING_SOON_SCHOLARSHIPS = [...scholarships]
@@ -48,7 +49,7 @@ const FEATURED_COUNTRIES = TOP_COUNTRIES.slice(0, 3);
 const TRUST_SIGNALS = [
   "Official links only",
   "Eligibility-based matching",
-  "Updated regularly",
+  "Dates clearly labelled",
   "No signup required",
 ] as const;
 
@@ -81,8 +82,13 @@ export const metadata: Metadata = {
 };
 
 function formatDate(value: string) {
-  const iso = value.split("T")[0];
-  return iso || value;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return date.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
 }
 
 function formatShortDate(value: Date) {
@@ -242,7 +248,7 @@ export default function HomePage() {
                 href="/find-scholarships"
                 className="inline-flex items-center rounded-lg bg-gray-900 px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
               >
-                Find Scholarships for Me <span aria-hidden="true">&rarr;</span>
+                Find Scholarships for Me <span className="ml-1" aria-hidden="true">&rarr;</span>
               </Link>
               <Link
                 href="/scholarships"

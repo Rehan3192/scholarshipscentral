@@ -106,7 +106,7 @@ export default function RootLayout({
         <Navbar />
 
         {/* PAGE CONTENT */}
-        <main className="max-w-6xl mx-auto px-4 py-6 flex-1 w-full min-w-0">
+        <main className="mx-auto w-full min-w-0 max-w-6xl flex-1 overflow-x-hidden px-4 py-6">
           {children}
         </main>
 

@@ -206,8 +206,8 @@ export default function BlogArchiveView({
   const pagePath = buildBlogArchivePath(currentPage);
   const description =
     currentPage === 1
-      ? "Scholarship guides, hub pages, result updates, and application-focused articles from Scholarships Central."
-      : `Page ${currentPage} of scholarship guides, hub pages, result updates, and application-focused articles from Scholarships Central.`;
+      ? "Scholarship guides, result updates, and practical application articles from Scholarships Central."
+      : `Page ${currentPage} of scholarship guides, result updates, and practical application articles from Scholarships Central.`;
   const webPageTitle =
     currentPage === 1
       ? "Blog | Scholarships Central"
@@ -269,7 +269,7 @@ export default function BlogArchiveView({
             {pageHeading}
           </h1>
           <p className="mb-0 text-sm text-gray-600">
-            Scholarship guides, hub pages, and result updates in one place.
+            Scholarship guides, result updates, and application advice in one place.
           </p>
           <p className="mb-0 text-sm text-blue-700">
             Need result-date articles? Browse the{" "}

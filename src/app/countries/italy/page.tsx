@@ -16,9 +16,9 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Italy Scholarships 2026 | Scholarships Central",
+  title: "Italy Scholarships 2026",
   description:
-    "Browse Italy scholarships for 2026, including fully funded routes, Italy scholarships without IELTS, still-open deadlines, and university scholarship pages in one cluster.",
+    "Browse Italy scholarships for 2026, including fully funded routes, Italy scholarships without IELTS, still-open deadlines, and university scholarship pages in one place.",
   alternates: {
     canonical: "/countries/italy",
   },
@@ -40,7 +40,7 @@ const CLUSTER_LINKS = [
   {
     href: "/fully-funded-scholarships-in-italy-2026",
     title: "Fully funded scholarships in Italy",
-    description: "Use this when full cost coverage is your first filter inside the Italy cluster.",
+    description: "Use this when full cost coverage is your first filter for Italy.",
     badge: "Funding",
   },
   {
@@ -52,7 +52,7 @@ const CLUSTER_LINKS = [
   {
     href: "/fully-funded-scholarships-2026",
     title: "Fully funded scholarships 2026",
-    description: "Compare Italy routes against the full-funding pool before deciding.",
+    description: "Compare Italy routes against the full-funding options before deciding.",
     badge: "Funding",
   },
   {
@@ -174,7 +174,7 @@ export default function ItalyScholarships2026Page() {
             {fullyFundedCount}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Italy listings that already meet full-funding intent.
+            Italy listings that already meet full-funding preference.
           </p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
@@ -236,7 +236,7 @@ export default function ItalyScholarships2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            Italy cluster links
+            Italy related scholarship pages
           </h2>
           <p className="mb-0 text-sm text-gray-600">
             Use these to move from Italy intent into funding, language, and deadline filters.

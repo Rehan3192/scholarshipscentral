@@ -13,7 +13,7 @@ import BlogArchiveView, {
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Scholarship guides, hub pages, result updates, and application-focused articles from Scholarships Central.",
+    "Scholarship guides, result updates, and practical application articles from Scholarships Central.",
   alternates: {
     canonical: "/blog",
   },

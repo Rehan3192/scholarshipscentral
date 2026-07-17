@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Scholarships Central",
+  title: "Privacy Policy",
   description: "Learn how Scholarships Central handles analytics and contact data.",
   alternates: { canonical: "/privacy-policy" },
 };

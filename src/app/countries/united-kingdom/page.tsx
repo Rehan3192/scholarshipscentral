@@ -16,7 +16,7 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "UK Scholarships 2026 | Scholarships Central",
+  title: "UK Scholarships 2026",
   description:
     "Browse UK scholarships for 2026, including Chevening, Commonwealth, Gates Cambridge, Clarendon, fully funded routes, IELTS alternatives, and still-open deadlines.",
   alternates: {
@@ -40,7 +40,7 @@ const CLUSTER_LINKS = [
   {
     href: "/fully-funded-scholarships-in-uk-2026",
     title: "Fully funded scholarships in UK 2026",
-    description: "Use this when full cost coverage is your next filter inside the UK cluster.",
+    description: "Use this when full cost coverage is your next filter for the UK.",
     badge: "Funding",
   },
   {
@@ -167,7 +167,7 @@ export default function UkScholarships2026Page() {
             use rolling/current-cycle deadline language right now.
           </li>
           <li>
-            The UK cluster is strongest when you separate brand-driven awards
+            The UK scholarship options is strongest when you separate brand-driven awards
             from urgency-driven and language-flexible routes before applying.
           </li>
         </ul>
@@ -193,7 +193,7 @@ export default function UkScholarships2026Page() {
             {fullyFundedCount}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            UK listings that already satisfy full-funding intent.
+            UK listings that already satisfy full-funding preference.
           </p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
@@ -272,7 +272,7 @@ export default function UkScholarships2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            UK cluster links
+            UK related scholarship pages
           </h2>
           <p className="mb-0 text-sm text-gray-600">
             Use these paths to move from broad UK intent into funding, language,
@@ -331,7 +331,7 @@ export default function UkScholarships2026Page() {
           </h2>
           <p className="mb-0 text-sm text-gray-600">
             Compare flagship government awards, top-university scholarships, and
-            other UK routes in one cluster.
+            other UK routes in one place.
           </p>
         </div>
         <div className="grid gap-4">

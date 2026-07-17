@@ -16,7 +16,7 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Fully Funded Scholarships 2026 | Scholarships Central",
+  title: "Fully Funded Scholarships 2026",
   description:
     "Browse fully funded scholarships for 2026 and move into Europe, Asia, government-funded, and still-open scholarship routes from one page.",
   alternates: {
@@ -28,13 +28,13 @@ const HUB_LINKS = [
   {
     href: "/fully-funded-scholarships-in-uk-2026",
     title: "Fully funded scholarships in UK 2026",
-    description: "Use this if the UK is already on your shortlist and you want the country-level full-funding cluster first.",
+    description: "Use this if the UK is already on your shortlist and you want the country-level fully funded scholarship options first.",
     badge: "UK",
   },
   {
     href: "/fully-funded-scholarships-in-italy-2026",
     title: "Fully funded scholarships in Italy 2026",
-    description: "Use this if Italy is already on your shortlist and you want the country-level full-funding cluster first.",
+    description: "Use this if Italy is already on your shortlist and you want the country-level fully funded scholarship options first.",
     badge: "Italy",
   },
   {
@@ -46,7 +46,7 @@ const HUB_LINKS = [
   {
     href: "/fully-funded-scholarships-still-open-2026",
     title: "Fully funded scholarships still open 2026",
-    description: "Move into live deadlines after scanning the full-funding pool.",
+    description: "Move into live deadlines after scanning the full-funding options.",
     badge: "Open now",
   },
   {
@@ -76,7 +76,7 @@ const HUB_LINKS = [
   {
     href: "/government-scholarships-in-asia-2026",
     title: "Government scholarships in Asia",
-    description: "Use this when your next filter is Asia public-funding routes inside the full-funding pool.",
+    description: "Use this when your next filter is Asia public-funding routes inside the full-funding options.",
     badge: "Government",
   },
 ] as const;
@@ -90,7 +90,7 @@ const GOVERNMENT_ROUTE_LINKS = [
   {
     href: "/scholarships/romanian-government-scholarship-masters",
     title: "Romanian Government Scholarship (Masters)",
-    description: "Masters-level Romania route inside the current government scholarship cluster.",
+    description: "Masters-level Romania route inside the current government scholarship options.",
   },
   {
     href: "/scholarships/azerbaijan-government-scholarship",
@@ -161,7 +161,7 @@ export default function FullyFundedScholarships2026Page() {
           Fully funded scholarships 2026
         </h1>
         <p className="mb-0 text-sm text-gray-600">
-          Start with the full-funding pool, then branch into Europe hubs, Asia
+          Start with the full-funding options, then branch into Europe hubs, Asia
           country pages, government routes, and live deadlines without duplicating work.
         </p>
         <div className="flex flex-wrap items-center gap-3 text-sm">
@@ -199,7 +199,7 @@ export default function FullyFundedScholarships2026Page() {
             {europeCount}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Europe listings inside the full-funding pool.
+            Europe listings inside the full-funding options.
           </p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
@@ -220,14 +220,14 @@ export default function FullyFundedScholarships2026Page() {
           Why use this fully funded scholarships page
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          Every listing here already matches full-funding intent. Use it when you want
+          Every listing here already matches full-funding preference. Use it when you want
           tuition, stipend, travel, or accommodation support to be the first filter
           before you narrow by region or deadline.
         </p>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
           If you need current deadlines, start with the still-open fully funded
           section below. If you already know your destination, the region and
-          country links will get you from funding intent to a tighter shortlist faster.
+          country links will get you from funding preference to a tighter shortlist faster.
         </p>
       </section>
 
@@ -237,7 +237,7 @@ export default function FullyFundedScholarships2026Page() {
             Fully funded hub links
           </h2>
           <p className="mb-0 text-sm text-gray-600">
-            Use these paths to move from funding intent into region and topic clusters.
+            Use these paths to move from funding preference into region and topic groups.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

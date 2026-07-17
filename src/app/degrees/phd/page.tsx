@@ -6,7 +6,7 @@ import ScholarshipFilterBar from "@/components/scholarship/ScholarshipFilterBar"
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "PhD Scholarships | Scholarships Central",
+  title: "PhD Scholarships",
   description:
     "Explore fully funded and partially funded PhD scholarships for international students worldwide.",
   alternates: {

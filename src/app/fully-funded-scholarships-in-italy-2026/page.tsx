@@ -16,9 +16,9 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Fully Funded Scholarships in Italy 2026 | Scholarships Central",
+  title: "Fully Funded Scholarships in Italy 2026",
   description:
-    "Browse fully funded scholarships in Italy for 2026, compare the strongest Italy funding routes, and move between the Italy cluster, live deadlines, and language-flexible pages.",
+    "Browse fully funded scholarships in Italy for 2026, compare the strongest Italy funding routes, and move between the Italy scholarship options, live deadlines, and language-flexible pages.",
   alternates: {
     canonical: "/fully-funded-scholarships-in-italy-2026",
   },
@@ -28,7 +28,7 @@ const CLUSTER_LINKS = [
   {
     href: "/countries/italy",
     title: "Italy scholarships 2026",
-    description: "Return to the full Italy scholarship cluster if you also want partial-funding options.",
+    description: "Return to the full Italy scholarship list if you also want partial-funding options.",
     badge: "Parent",
   },
   {
@@ -188,7 +188,7 @@ export default function FullyFundedScholarshipsInItaly2026Page() {
           </p>
           <p className="mb-0 text-3xl font-bold text-gray-900">Italy x Funding</p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            This page supports both the Italy country cluster and the global fully funded hub.
+            This page connects Italy scholarships with the broader fully funded list.
           </p>
         </div>
       </section>
@@ -224,10 +224,10 @@ export default function FullyFundedScholarshipsInItaly2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            Funding cluster links
+            Funding related scholarship pages
           </h2>
           <p className="mb-0 text-sm text-gray-600">
-            Move between Italy, funding, urgency, and language sub-clusters without losing context.
+            Move between Italy, funding, urgency, and language related pages without losing context.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -281,7 +281,7 @@ export default function FullyFundedScholarshipsInItaly2026Page() {
           This page is better for applicants who need strong cost coverage first
           and are willing to work with a narrower Italy shortlist. If you are still
           open to partial scholarships, regional funding, or fee waivers, the broader
-          Italy cluster will be more useful.
+          Italy scholarship options will be more useful.
         </p>
       </section>
     </div>

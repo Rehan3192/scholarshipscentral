@@ -15,19 +15,6 @@ const trustSignals = [
   "Independent verification required",
 ];
 
-const contentPrinciples = [
-  "We review official scholarship pages, provider notices, and university or government sources before publishing summaries.",
-  "We prioritize the details that affect decision-making first: eligibility, funding scope, deadlines, document requirements, and application route.",
-  "We filter out vague promotional language and present realistic tradeoffs so users can decide whether a scholarship is worth deeper review.",
-];
-
-const nonServices = [
-  "We do not issue scholarships, admissions, visas, or funding decisions.",
-  "We do not process applications, sell guaranteed outcomes, or claim special access to providers.",
-  "We do not promise that a user will be shortlisted, admitted, or awarded a scholarship.",
-  "We do not replace the official scholarship page, provider instructions, or institutional policies.",
-];
-
 export const metadata: Metadata = {
   title: "About Scholarships Central",
   description:

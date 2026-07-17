@@ -15,7 +15,7 @@ import {
 const RESULTS_REVALIDATE_SECONDS = 60 * 30;
 
 export const metadata: Metadata = {
-  title: "Scholarship Result Articles | Scholarships Central",
+  title: "Scholarship Result Articles",
   description:
     "Browse scholarship result articles, expected announcement dates, checking methods, and official outcome updates.",
   alternates: {
@@ -24,8 +24,13 @@ export const metadata: Metadata = {
 };
 
 function formatDate(value: string) {
-  const iso = value.split("T")[0];
-  return iso || value;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return date.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
 }
 
 const guideLinks = [

@@ -42,7 +42,7 @@ export async function generateMetadata(
   }
 
   return {
-    title: `${label} Scholarships | Scholarships Central`,
+    title: `${label} Scholarships`,
     description: `Browse ${label} scholarships worldwide.`,
     alternates: {
       canonical: `/degrees/${degree.toLowerCase()}`,

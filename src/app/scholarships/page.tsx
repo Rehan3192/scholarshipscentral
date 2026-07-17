@@ -74,7 +74,7 @@ export async function generateMetadata({
   const hasQueryParams = Object.keys(params).length > 0;
 
   return {
-    title: "All Scholarships | Scholarships Central",
+    title: "All Scholarships",
     description:
       "Browse fully funded, partial, and international scholarships worldwide.",
     alternates: {
@@ -257,6 +257,20 @@ export default async function ScholarshipsPage({
       });
       blogPosts = blogResults.posts;
       totalBlogPosts = blogResults.totalPosts;
+
+      const normalizedTerms = normalizedQuery
+        .toLowerCase()
+        .split(/\s+/)
+        .filter(Boolean);
+      const titleMatches = blogPosts.filter((post) => {
+        const title = stripHtmlToText(post.title.rendered).toLowerCase();
+        return normalizedTerms.every((term) => title.includes(term));
+      });
+
+      if (titleMatches.length > 0) {
+        blogPosts = titleMatches;
+        totalBlogPosts = titleMatches.length;
+      }
     } catch {
       // Scholarship search remains available if WordPress is temporarily down.
     }
@@ -665,7 +679,7 @@ export default async function ScholarshipsPage({
 
       {normalizedQuery ? (
         <section
-          className="order-2 space-y-4"
+          className="order-5 space-y-4"
           aria-labelledby="article-search-results"
         >
           <div className="flex flex-wrap items-end justify-between gap-2">
@@ -677,7 +691,7 @@ export default async function ScholarshipsPage({
                 Articles
               </h2>
               <p className="mb-0 text-sm text-gray-600">
-                WordPress guides and updates matching “{normalizedQuery}”.
+                Guides and updates matching “{normalizedQuery}”.
               </p>
             </div>
             {totalBlogPosts > 0 ? (

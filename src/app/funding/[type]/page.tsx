@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${funding} Scholarships | Scholarships Central`,
+    title: `${funding} Scholarships`,
     description: `Browse ${funding.toLowerCase()} scholarships worldwide for international students.`,
     alternates: {
       canonical: `/funding/${type}`,

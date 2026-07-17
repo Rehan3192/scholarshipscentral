@@ -17,7 +17,7 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Europe Scholarships Without IELTS 2026 | Scholarships Central",
+  title: "Europe Scholarships Without IELTS 2026",
   description:
     "Browse Europe scholarships for 2026 that discuss IELTS alternatives, English-medium routes, or accepted language-proof flexibility.",
   alternates: {
@@ -41,7 +41,7 @@ const LANGUAGE_CLUSTER_LINKS = [
   {
     href: "/fully-funded-scholarships-2026",
     title: "Fully funded scholarships 2026",
-    description: "Move from language flexibility into the strongest funding pool.",
+    description: "Move from language flexibility into the strongest funding options.",
     badge: "Funding",
   },
   {
@@ -166,7 +166,7 @@ export default function EuropeScholarshipsWithoutIelts2026Page() {
             {countryCount}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Europe destinations currently represented in this language-flexible cluster.
+            Europe destinations currently represented in this language-flexible scholarship list.
           </p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
@@ -203,7 +203,7 @@ export default function EuropeScholarshipsWithoutIelts2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            Language-flexible cluster links
+            Language-flexible related scholarship pages
           </h2>
           <p className="mb-0 text-sm text-gray-600">
             Use these next steps to narrow by deadline, funding, or country once you have the language filter.

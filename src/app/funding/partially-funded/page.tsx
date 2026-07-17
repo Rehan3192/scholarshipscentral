@@ -9,7 +9,7 @@ import {
 } from "@/components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Partially Funded Scholarships | Scholarships Central",
+  title: "Partially Funded Scholarships",
   description:
     "Find partially funded scholarships worldwide with tuition support, stipends, or fee waivers.",
   alternates: {

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { BreadcrumbJsonLd } from "@/components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Contact | Scholarships Central",
+  title: "Contact",
   description:
     "Contact Scholarships Central for corrections, feedback, or scholarship listing updates.",
   alternates: { canonical: "/contact" },

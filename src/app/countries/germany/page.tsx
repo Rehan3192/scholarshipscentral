@@ -16,7 +16,7 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Germany Scholarships 2026 | Scholarships Central",
+  title: "Germany Scholarships 2026",
   description:
     "Browse Germany scholarships for 2026, including DAAD, Heinrich Böll, Konrad Adenauer, Friedrich Ebert, IELTS-flexible routes, and still-open deadlines.",
   alternates: {
@@ -34,7 +34,7 @@ const CLUSTER_LINKS = [
   {
     href: "/germany-scholarships-without-ielts-2026",
     title: "Germany scholarships without IELTS",
-    description: "Use this when language flexibility is your next filter inside the Germany cluster.",
+    description: "Use this when language flexibility is your next filter for Germany.",
     badge: "Language",
   },
   {
@@ -191,7 +191,7 @@ export default function GermanyScholarships2026Page() {
             {fullyFundedCount}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Germany listings that already satisfy full-funding intent.
+            Germany listings that already satisfy full-funding preference.
           </p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
@@ -260,7 +260,7 @@ export default function GermanyScholarships2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            Germany cluster links
+            Germany related scholarship pages
           </h2>
           <p className="mb-0 text-sm text-gray-600">
             Use these paths to move from broad Germany intent into funding,
@@ -319,7 +319,7 @@ export default function GermanyScholarships2026Page() {
           </h2>
           <p className="mb-0 text-sm text-gray-600">
             Compare DAAD routes, foundation scholarships, and other Germany
-            funding paths in one cluster.
+            funding paths in one place.
           </p>
         </div>
         <div className="grid gap-4">

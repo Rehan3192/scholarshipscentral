@@ -17,7 +17,7 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Government Scholarships in Europe 2026 | Scholarships Central",
+  title: "Government Scholarships in Europe 2026",
   description:
     "Browse government scholarships in Europe for 2026, including still-open public-funding routes and country pages for Germany, Romania, Hungary, and more.",
   alternates: {
@@ -152,7 +152,7 @@ export default function GovernmentScholarshipsInEurope2026Page() {
             {governmentScholarships.length}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Europe scholarship listings that match government or state-backed funding intent.
+            Europe scholarship listings that match government or state-backed funding preference.
           </p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
@@ -200,7 +200,7 @@ export default function GovernmentScholarshipsInEurope2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            Government scholarship cluster links
+            Government scholarship related scholarship pages
           </h2>
           <p className="mb-0 text-sm text-gray-600">
             Use these next steps to narrow public-funding routes by urgency or country.

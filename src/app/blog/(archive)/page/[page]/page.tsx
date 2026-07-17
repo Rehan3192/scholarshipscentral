@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `Blog - Page ${pageNumber}`,
-    description: `Page ${pageNumber} of scholarship guides, hub pages, result updates, and application-focused articles from Scholarships Central.`,
+    description: `Page ${pageNumber} of scholarship guides, result updates, and practical application articles from Scholarships Central.`,
     alternates: {
       canonical: buildBlogArchivePath(pageNumber),
     },

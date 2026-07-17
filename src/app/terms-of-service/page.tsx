@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Scholarships Central",
+  title: "Terms of Service",
   description:
     "Terms of Service for Scholarships Central. Informational-only directory with external links to official scholarship providers.",
   alternates: { canonical: "/terms-of-service" },

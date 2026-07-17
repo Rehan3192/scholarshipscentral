@@ -669,7 +669,7 @@ export function buildCountryHubLinks(country: Scholarship["country"]): InternalL
     cards.push({
       href: "/europe-scholarships-2026",
       title: "Europe scholarships 2026",
-      description: `Compare ${country} routes with the broader Europe scholarship cluster before narrowing your shortlist.`,
+      description: `Compare scholarships in ${country} with opportunities elsewhere in Europe before narrowing your shortlist.`,
     });
   }
 
@@ -682,7 +682,7 @@ export function buildCountryHubLinks(country: Scholarship["country"]): InternalL
     {
       href: "/scholarships-still-open-2026",
       title: "Scholarships still open 2026",
-      description: `Use this when you want active deadlines first, then return to the ${country} pool.`,
+      description: `Start with active deadlines, then browse all scholarships in ${country}.`,
     },
   );
 
@@ -696,7 +696,7 @@ export function buildScholarshipExplorationLinks(
     {
       href: `/countries/${toSegment(scholarship.country)}`,
       title: `Scholarships in ${scholarship.country}`,
-      description: `Compare this route with the wider ${scholarship.country} scholarship pool before you decide.`,
+      description: `Compare this opportunity with other scholarships in ${scholarship.country} before you decide.`,
     },
   ];
 
@@ -705,7 +705,7 @@ export function buildScholarshipExplorationLinks(
       href: "/europe-scholarships-2026",
       title: "Europe scholarships 2026",
       description:
-        "Zoom out from one destination and compare this scholarship with the broader Europe cluster.",
+        "Compare this scholarship with opportunities in other European destinations.",
     });
   }
 

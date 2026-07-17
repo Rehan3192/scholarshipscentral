@@ -50,7 +50,7 @@ export async function generateMetadata(
   }
 
   return {
-    title: `Scholarships in ${label} | Scholarships Central`,
+    title: `Scholarships in ${label}`,
     description: `Explore scholarships available in ${label}.`,
     alternates: {
       canonical: `/countries/${country}`,
@@ -134,8 +134,8 @@ export default async function CountryPage({ params }: Props) {
               Broaden your {label} shortlist
             </h2>
             <p className="mb-0 text-sm text-gray-700">
-              Use these hub pages to move from the {label} cluster into broader
-              scholarship pools without losing context.
+              Explore related scholarship pages to compare {label} with other
+              destinations and funding options.
             </p>
           </div>
 

@@ -16,7 +16,7 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Germany Scholarships Without IELTS 2026 | Scholarships Central",
+  title: "Germany Scholarships Without IELTS 2026",
   description:
     "Browse Germany scholarships for 2026 that discuss IELTS alternatives, English-medium routes, or accepted language-proof flexibility.",
   alternates: {
@@ -34,7 +34,7 @@ const GERMANY_LANGUAGE_LINKS = [
   {
     href: "/countries/germany",
     title: "Germany scholarships",
-    description: "Go back to the full Germany scholarship pool without the language filter.",
+    description: "Go back to the full Germany scholarship options without the language filter.",
     badge: "Country",
   },
   {
@@ -195,7 +195,7 @@ export default function GermanyScholarshipsWithoutIelts2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            Germany language cluster links
+            Germany language related scholarship pages
           </h2>
           <p className="mb-0 text-sm text-gray-600">
             Use these next steps to compare Germany language-flexible routes with Europe, funding, and government hubs.

@@ -17,7 +17,7 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Government Scholarships in Africa 2026 | Scholarships Central",
+  title: "Government Scholarships in Africa 2026",
   description:
     "Browse government scholarships in Africa for 2026, including still-open public-funding routes and country pages for South Africa, Egypt, Morocco, and more.",
   alternates: {
@@ -29,7 +29,7 @@ const AFRICA_GOVERNMENT_LINKS = [
   {
     href: "/government-scholarships-still-open-2026",
     title: "Government scholarships still open 2026",
-    description: "Use this when you want to narrow the public-funding pool by live deadlines first.",
+    description: "Use this when you want to narrow the public-funding options by live deadlines first.",
     badge: "Open now",
   },
   {
@@ -47,7 +47,7 @@ const AFRICA_GOVERNMENT_LINKS = [
   {
     href: "/countries/south-africa",
     title: "South Africa scholarships",
-    description: "Go deeper into South Africa scholarship routes if this public-funding pool fits your profile.",
+    description: "Go deeper into South Africa scholarship routes if this public-funding options fits your profile.",
     badge: "Country",
   },
   {
@@ -151,7 +151,7 @@ export default function GovernmentScholarshipsInAfrica2026Page() {
             {governmentScholarships.length}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Africa scholarship listings that match government or state-backed funding intent.
+            Africa scholarship listings that match government or state-backed funding preference.
           </p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
@@ -198,7 +198,7 @@ export default function GovernmentScholarshipsInAfrica2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            Africa government cluster links
+            Africa government related scholarship pages
           </h2>
           <p className="mb-0 text-sm text-gray-600">
             Use these next steps to narrow Africa public-funding routes by deadline, funding, or country.

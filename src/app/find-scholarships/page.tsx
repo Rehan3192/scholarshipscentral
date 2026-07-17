@@ -14,7 +14,7 @@ import FinderWizard from "./components/FinderWizard";
 import type { FinderOptions, FinderScholarship } from "./types";
 
 export const metadata: Metadata = {
-  title: "Find Scholarships for You | Scholarships Central",
+  title: "Find Scholarships for You",
   description:
     "Find scholarships that match your degree, country preference, funding needs, and study goals.",
   alternates: {
@@ -116,13 +116,13 @@ export default function FindScholarshipsPage() {
             <span className="rounded-full border border-blue-200 bg-blue-50 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide">Beta</span>
           </div>
           <h1 className="mb-0 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Find scholarships you should seriously consider applying for.
+            Find scholarships that match your profile.
           </h1>
           <p className="mt-4 mb-0 text-base text-gray-700">
             Answer a few questions about your degree, nationality, preferred
             destination, funding needs, English requirements, and study field.
-            The finder will rank scholarships using the current Scholarships
-            Central discovery data.
+            The finder ranks scholarships using the eligibility and funding
+            information currently available.
           </p>
           <p className="mt-3 mb-0 text-sm text-gray-600">
             Help us improve recommendations by exploring scholarships and reporting issues.
@@ -137,8 +137,8 @@ export default function FindScholarshipsPage() {
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
           This is a guided recommendation tool, not a keyword search. It compares
           your answers with structured scholarship data, then explains why each
-          scholarship appears as a strong match, a good match, or a route that
-          needs verification before you apply.
+          scholarship appears as a strong match, a good match, or an option
+          that needs verification before you apply.
         </p>
       </section>
 

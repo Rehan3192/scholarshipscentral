@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 type MenuId = "countries" | "degrees" | "funding";
@@ -254,7 +255,7 @@ export default function Navbar() {
             href="/"
             className="inline-flex items-center gap-2 text-base font-extrabold tracking-tight text-gray-900 sm:text-lg"
           >
-            <img
+            <Image
               src="/logo-mark.svg"
               alt=""
               aria-hidden="true"

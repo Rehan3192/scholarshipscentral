@@ -16,7 +16,7 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Fully Funded Scholarships in UK 2026 | Scholarships Central",
+  title: "Fully Funded Scholarships in UK 2026",
   description:
     "Browse fully funded scholarships in the UK for 2026, compare Chevening, Commonwealth, Gates Cambridge, and Clarendon, and move between UK funding, language, and urgency routes.",
   alternates: {
@@ -28,7 +28,7 @@ const CLUSTER_LINKS = [
   {
     href: "/countries/united-kingdom",
     title: "UK scholarships 2026",
-    description: "Return to the full UK cluster if you also want partially funded and university-led routes.",
+    description: "Return to the full UK scholarship list if you also want partially funded and university-led routes.",
     badge: "Parent",
   },
   {
@@ -167,7 +167,7 @@ export default function FullyFundedScholarshipsInUk2026Page() {
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">Cluster role</p>
           <p className="mb-0 text-3xl font-bold text-gray-900">UK x Funding</p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">This page supports both the UK cluster and the global fully funded hub.</p>
+          <p className="mt-2 mb-0 text-sm text-gray-600">This page supports both the UK scholarship options and the global fully funded hub.</p>
         </div>
       </section>
 
@@ -183,8 +183,8 @@ export default function FullyFundedScholarshipsInUk2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">Funding cluster links</h2>
-          <p className="mb-0 text-sm text-gray-600">Move between UK, funding, urgency, and language sub-clusters without losing context.</p>
+          <h2 className="mt-0 text-lg font-semibold text-gray-900">Funding related scholarship pages</h2>
+          <p className="mb-0 text-sm text-gray-600">Move between UK, funding, urgency, and language related pages without losing context.</p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {CLUSTER_LINKS.map((link) => (
@@ -213,7 +213,7 @@ export default function FullyFundedScholarshipsInUk2026Page() {
           The UK fully funded pool is not one uniform category. Chevening and Commonwealth behave like broad national scholarship brands, while Gates Cambridge and Clarendon are university-led and much tighter at the selection stage.
         </p>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          This matters because a route can be fully funded and still operate through a much narrower competition funnel. Use this page to compare those top-end routes first, then move back to the broader UK cluster if you want partially funded alternatives.
+          This matters because a route can be fully funded and still operate through a much narrower competition funnel. Use this page to compare those top-end routes first, then move back to the broader UK scholarship options if you want partially funded alternatives.
         </p>
       </section>
 

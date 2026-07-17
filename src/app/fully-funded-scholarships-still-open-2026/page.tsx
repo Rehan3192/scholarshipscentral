@@ -17,7 +17,7 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Fully Funded Scholarships Still Open 2026 | Scholarships Central",
+  title: "Fully Funded Scholarships Still Open 2026",
   description:
     "Browse fully funded scholarships still open in 2026, including Europe, government-funded, and country-specific routes with live deadlines.",
   alternates: {
@@ -29,7 +29,7 @@ const OPEN_FUNDING_LINKS = [
   {
     href: "/fully-funded-scholarships-2026",
     title: "Fully funded scholarships 2026",
-    description: "Return to the full funding pool once you finish narrowing by active deadlines.",
+    description: "Return to the full funding options once you finish narrowing by active deadlines.",
     badge: "Funding hub",
   },
   {
@@ -65,7 +65,7 @@ const OPEN_FUNDING_LINKS = [
   {
     href: "/countries/germany",
     title: "Germany scholarships",
-    description: "Good next step if you want Europe routes after scanning the live funding pool.",
+    description: "Good next step if you want Europe routes after scanning the live funding options.",
     badge: "Country",
   },
 ] as const;
@@ -165,7 +165,7 @@ export default function FullyFundedScholarshipsStillOpen2026Page() {
             {countryCount}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Destinations represented in the live full-funding pool.
+            Destinations represented in the live full-funding options.
           </p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
@@ -186,9 +186,9 @@ export default function FullyFundedScholarshipsStillOpen2026Page() {
           Why use this still-open fully funded page
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          This page combines two high-intent filters at once: full funding and
+          This page combines two important filters at once: full funding and
           live deadlines. That means every listing here already matches the strongest
-          funding intent and still looks actionable today.
+          funding preference and still looks actionable today.
         </p>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
           This is usually the fastest shortlist builder if you care most about
@@ -201,10 +201,10 @@ export default function FullyFundedScholarshipsStillOpen2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            Fully funded still-open cluster links
+            Fully funded still-open related scholarship pages
           </h2>
           <p className="mb-0 text-sm text-gray-600">
-            Use these next steps to narrow the live full-funding pool by region, country, or public-funding overlap.
+            Use these next steps to narrow the live full-funding options by region, country, or public-funding overlap.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

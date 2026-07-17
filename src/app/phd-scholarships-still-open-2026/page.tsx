@@ -16,7 +16,7 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "PhD Scholarships Still Open 2026 | Scholarships Central",
+  title: "PhD Scholarships Still Open 2026",
   description:
     "Browse PhD scholarships still open in 2026, including fully funded, government-backed, and region-specific doctoral routes with live deadlines.",
   alternates: {
@@ -180,7 +180,7 @@ export default function PhdScholarshipsStillOpen2026Page() {
           What this live PhD page gives you
         </h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
-          This page combines two high-intent filters at once: doctoral level and
+          This page combines two important filters at once: doctoral level and
           live deadlines. That means every listing here already matches PhD intent
           and still looks actionable today.
         </p>
@@ -193,7 +193,7 @@ export default function PhdScholarshipsStillOpen2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            PhD still-open cluster links
+            PhD still-open related scholarship pages
           </h2>
           <p className="mb-0 text-sm text-gray-600">
             Use these next steps to narrow the live PhD pool by funding type, government overlap, or region.

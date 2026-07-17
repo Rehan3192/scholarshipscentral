@@ -64,6 +64,20 @@ ol {
   border-radius: 0.75rem;
 }
 
+/* Long imported titles and metadata must never force a wider mobile layout. */
+main,
+main * {
+  min-width: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+li {
+  overflow-wrap: anywhere;
+}
+
 .wp-content {
   color: #374151; /* gray-700 */
   font-size: 1rem;

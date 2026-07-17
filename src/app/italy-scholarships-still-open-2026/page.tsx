@@ -17,9 +17,9 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Italy Scholarships Still Open 2026 | Scholarships Central",
+  title: "Italy Scholarships Still Open 2026",
   description:
-    "Browse Italy scholarships still open in 2026, prioritize routes currently accepting applications, and move between the Italy cluster, fully funded pages, and deadline-focused hub pages.",
+    "Browse Italy scholarships still open in 2026, prioritize routes currently accepting applications, and move between the Italy scholarship options, fully funded pages, and deadline-focused scholarship pages.",
   alternates: {
     canonical: "/italy-scholarships-still-open-2026",
   },
@@ -29,7 +29,7 @@ const CLUSTER_LINKS = [
   {
     href: "/countries/italy",
     title: "Italy scholarships 2026",
-    description: "Go back to the full Italy cluster if you want more options beyond the currently open pool.",
+    description: "Go back to the full Italy scholarship list if you want more options beyond the currently open pool.",
     badge: "Parent",
   },
   {
@@ -59,7 +59,7 @@ const CLUSTER_LINKS = [
   {
     href: "/fully-funded-scholarships-2026",
     title: "Fully funded scholarships 2026",
-    description: "Compare Italy against the full global funding pool before you commit.",
+    description: "Compare Italy against the full global funding options before you commit.",
     badge: "Funding",
   },
 ] as const;
@@ -188,7 +188,7 @@ export default function ItalyScholarshipsStillOpen2026Page() {
             {fullyFundedCount}
           </p>
           <p className="mt-2 mb-0 text-sm text-gray-600">
-            Still-open Italy routes that already match full-funding intent.
+            Still-open Italy routes that already match full-funding preference.
           </p>
         </div>
       </section>
@@ -224,10 +224,10 @@ export default function ItalyScholarshipsStillOpen2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            Italy urgency cluster links
+            Italy urgency related scholarship pages
           </h2>
           <p className="mb-0 text-sm text-gray-600">
-            Move between the Italy cluster, the deadline hub, and funding-qualified pages without losing context.
+            Move between the Italy scholarship options, the deadline hub, and funding-qualified pages without losing context.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

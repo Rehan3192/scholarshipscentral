@@ -16,7 +16,7 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "UK Scholarships Without IELTS 2026 | Scholarships Central",
+  title: "UK Scholarships Without IELTS 2026",
   description:
     "Browse UK scholarships for 2026 that discuss IELTS alternatives, English-medium routes, or accepted language-proof flexibility.",
   alternates: {
@@ -34,7 +34,7 @@ const UK_LANGUAGE_LINKS = [
   {
     href: "/countries/united-kingdom",
     title: "UK scholarships",
-    description: "Go back to the full UK scholarship pool without the language-flexibility filter.",
+    description: "Go back to the full UK scholarship options without the language-flexibility filter.",
     badge: "Country",
   },
   {
@@ -46,7 +46,7 @@ const UK_LANGUAGE_LINKS = [
   {
     href: "/fully-funded-scholarships-2026",
     title: "Fully funded scholarships 2026",
-    description: "Move from language flexibility into the stronger funding pool.",
+    description: "Move from language flexibility into the stronger funding options.",
     badge: "Funding",
   },
   {
@@ -191,7 +191,7 @@ export default function UkScholarshipsWithoutIelts2026Page() {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            UK language cluster links
+            UK language related scholarship pages
           </h2>
           <p className="mb-0 text-sm text-gray-600">
             Use these next steps to compare UK language-flexible routes with wider Europe or funding pages.

@@ -47,12 +47,12 @@ const COUNTRY_CLUSTER_PATHS = {
     {
       href: "/countries/italy",
       title: "Italy scholarships 2026",
-      description: "Return to the full Italy cluster for all Italy scholarship routes.",
+      description: "Return to the full Italy scholarship list for all Italy scholarship routes.",
     },
     {
       href: "/fully-funded-scholarships-in-italy-2026",
       title: "Fully funded scholarships in Italy 2026",
-      description: "Use this when stronger funding is the next filter inside the Italy cluster.",
+      description: "Use this when stronger funding is the next filter for Italy.",
     },
     {
       href: "/italy-scholarships-still-open-2026",
@@ -62,29 +62,29 @@ const COUNTRY_CLUSTER_PATHS = {
     {
       href: "/italy-scholarships-without-ielts-2026",
       title: "Italy scholarships without IELTS 2026",
-      description: "Use this when language flexibility matters inside the Italy cluster.",
+      description: "Use this when language flexibility matters for Italy.",
     },
   ],
   "United Kingdom": [
     {
       href: "/countries/united-kingdom",
       title: "UK scholarships 2026",
-      description: "Return to the full UK cluster before deciding which route deserves your effort.",
+      description: "Return to the full UK scholarship list before deciding which route deserves your effort.",
     },
     {
       href: "/fully-funded-scholarships-in-uk-2026",
       title: "Fully funded scholarships in UK 2026",
-      description: "Use this when full cost coverage is the next filter inside the UK cluster.",
+      description: "Use this when full cost coverage is the next filter for the UK.",
     },
     {
       href: "/uk-scholarships-without-ielts-2026",
       title: "UK scholarships without IELTS 2026",
-      description: "Use this when language flexibility is the next filter inside the UK cluster.",
+      description: "Use this when language flexibility is the next filter for the UK.",
     },
     {
       href: "/fully-funded-scholarships-2026",
       title: "Fully funded scholarships 2026",
-      description: "Use this when you want to compare UK routes against the full-funding pool.",
+      description: "Use this when you want to compare UK routes against the full-funding options.",
     },
     {
       href: "/scholarships-still-open-2026",
@@ -96,17 +96,17 @@ const COUNTRY_CLUSTER_PATHS = {
     {
       href: "/countries/germany",
       title: "Germany scholarships 2026",
-      description: "Return to the full Germany cluster before deciding which route deserves your effort.",
+      description: "Return to the full Germany scholarship list before deciding which route deserves your effort.",
     },
     {
       href: "/germany-scholarships-without-ielts-2026",
       title: "Germany scholarships without IELTS 2026",
-      description: "Use this when language flexibility is the next filter inside the Germany cluster.",
+      description: "Use this when language flexibility is the next filter for Germany.",
     },
     {
       href: "/fully-funded-scholarships-2026",
       title: "Fully funded scholarships 2026",
-      description: "Use this when you want to compare Germany routes against the full-funding pool.",
+      description: "Use this when you want to compare Germany routes against the full-funding options.",
     },
     {
       href: "/scholarships-still-open-2026",
@@ -180,10 +180,10 @@ const INTERNAL_CLUSTER_SUPPORT: Record<
     href: "/fully-funded-scholarships-in-uk-2026",
     anchorText: "fully funded scholarships in UK 2026",
     trailingCopy:
-      "before you decide whether Chevening is the right first-choice route inside the UK full-funding cluster.",
+      "before you decide whether Chevening is the right first-choice route inside the UK fully funded scholarship options.",
   },
   "commonwealth-scholarship": {
-    title: "Compare this with the wider UK funding pool",
+    title: "Compare this with the wider UK funding options",
     href: "/fully-funded-scholarships-in-uk-2026",
     anchorText: "UK fully funded scholarship options for 2026",
     trailingCopy:
@@ -197,18 +197,18 @@ const INTERNAL_CLUSTER_SUPPORT: Record<
       "before you narrow your shortlist to Cambridge-only routes.",
   },
   "uk-clarendon-scholarship": {
-    title: "Review the wider UK flagship funding pool",
+    title: "Review the wider UK flagship funding options",
     href: "/fully-funded-scholarships-in-uk-2026",
     anchorText: "full UK fully funded scholarship shortlist for 2026",
     trailingCopy:
-      "if you want to compare Clarendon with the rest of the UK flagship funding cluster.",
+      "if you want to compare Clarendon with other flagship UK funding options.",
   },
   "daad-postgraduate-scholarship-germany": {
     title: "Need the full Germany shortlist?",
     href: "/countries/germany",
     anchorText: "Germany scholarships 2026",
     trailingCopy:
-      "before you decide whether the DAAD postgraduate route is the right first-choice page inside the wider Germany cluster.",
+      "before you decide whether the DAAD postgraduate route is the right first-choice page inside the wider Germany scholarship options.",
   },
   "daad-epos-scholarship-masters": {
     title: "Compare this with the wider Germany pool",
@@ -225,7 +225,7 @@ const INTERNAL_CLUSTER_SUPPORT: Record<
       "before you narrow your shortlist to research-grant routes alone.",
   },
   "germany-heinrich-b-ll-scholarship": {
-    title: "Review the wider Germany funding cluster",
+    title: "Review more Germany funding options",
     href: "/countries/germany",
     anchorText: "full Germany scholarship shortlist for 2026",
     trailingCopy:
@@ -236,14 +236,14 @@ const INTERNAL_CLUSTER_SUPPORT: Record<
     href: "/countries/germany",
     anchorText: "Germany funded scholarship routes for 2026",
     trailingCopy:
-      "before you commit to one foundation-led route inside the Germany cluster.",
+      "before you commit to one foundation-led route for Germany.",
   },
   "germany-friedrich-ebert-stiftung-scholarship": {
     title: "Need the wider Germany route mix?",
     href: "/countries/germany",
     anchorText: "Germany scholarship shortlist for 2026",
     trailingCopy:
-      "if you want to compare Friedrich Ebert with the wider Germany scholarship pool first.",
+      "if you want to compare Friedrich Ebert with the wider Germany scholarship options first.",
   },
 };
 
@@ -688,7 +688,7 @@ export default async function ScholarshipPage({ params }: Props) {
           {countryClusterPaths.length > 0 ? (
             <SectionCard title={`More ${countryClusterLabel} scholarship paths`}>
               <p className="mb-4 text-sm text-gray-700">
-                Stay inside the {countryClusterLabel} cluster when you want more routes in the same destination before widening your search.
+                Compare more scholarships in {countryClusterLabel} before widening your destination search.
               </p>
               <div className="grid gap-3 sm:grid-cols-2">
                 {countryClusterPaths.map((path) => (

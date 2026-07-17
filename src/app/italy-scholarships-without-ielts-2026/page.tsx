@@ -16,7 +16,7 @@ import {
 } from "@/lib/scholarship-taxonomy";
 
 export const metadata: Metadata = {
-  title: "Italy Scholarships Without IELTS 2026 | Scholarships Central",
+  title: "Italy Scholarships Without IELTS 2026",
   description:
     "Browse Italy scholarships for 2026 that discuss IELTS alternatives, English-medium routes, or accepted language-proof flexibility.",
   alternates: {
@@ -34,7 +34,7 @@ const ITALY_LANGUAGE_LINKS = [
   {
     href: "/countries/italy",
     title: "Italy scholarships",
-    description: "Go back to the full Italy scholarship pool without the language filter.",
+    description: "Go back to the full Italy scholarship options without the language filter.",
     badge: "Country",
   },
   {
@@ -194,17 +194,17 @@ export default function ItalyScholarshipsWithoutIelts2026Page() {
           Italy universities often accept alternatives like MOI or internal language
           assessments, which makes this route more accessible for students who do not
           want to take IELTS. If you are exploring other countries, compare them on
-          their own cluster pages rather than mixing them into this Italy page.
+          their own scholarship pages rather than mixing them into this Italy page.
         </p>
       </section>
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="mt-0 text-lg font-semibold text-gray-900">
-            Italy language cluster links
+            Italy language related scholarship pages
           </h2>
           <p className="mb-0 text-sm text-gray-600">
-            Use these next steps to stay inside the Italy cluster or move back up to Europe when needed.
+            Use these next steps to stay for Italy or move back up to Europe when needed.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

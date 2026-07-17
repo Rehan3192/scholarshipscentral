@@ -7,7 +7,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/StructuredData";
 import { toSegment } from "@/lib/helpers";
 
 export const metadata: Metadata = {
-  title: "Scholarships by Degree | Scholarships Central",
+  title: "Scholarships by Degree",
   description:
     "Browse scholarships by degree level (Bachelors, Masters, PhD). We only link to official external application pages.",
   alternates: { canonical: "/degrees" },
