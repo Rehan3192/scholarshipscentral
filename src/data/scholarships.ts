@@ -137,6 +137,887 @@ function openDoorsReaderSections(track: OpenDoorsTrack): ScholarshipContentSecti
   ];
 }
 
+type CscLevel = "Bachelors" | "Masters" | "PhD";
+
+function cscReaderSections(level: CscLevel): ScholarshipContentSection[] {
+  const isBachelors = level === "Bachelors";
+  const isMasters = level === "Masters";
+  const degreeLabel = isBachelors ? "Bachelor's" : level;
+  const priorDegree = isBachelors ? "high-school diploma" : isMasters ? "Bachelor's degree" : "Master's degree";
+  const ageLimit = isBachelors ? "25" : isMasters ? "35" : "40";
+  const stipend = isBachelors ? "CNY 2,500" : isMasters ? "CNY 3,000" : "CNY 3,500";
+
+  return [
+    {
+      title: "Chinese Government Scholarship at a glance",
+      facts: [
+        { label: "Study level", value: `${degreeLabel} degree` },
+        { label: "2027 status", value: "Pre-open; deadlines will depend on the application route and institution" },
+        { label: "General education rule", value: `${priorDegree} or accepted equivalent` },
+        { label: "General age rule", value: `Usually under age ${ageLimit}` },
+        { label: "Standard full-scholarship stipend", value: `${stipend} per month` },
+        { label: "Main routes", value: "Type A through a dispatching authority; Type B through a designated university" },
+        { label: "Application system", value: "CSC Study in China information system" },
+        { label: "Final authority", value: "The matching 2027 call, university, dispatching authority, and CSC decision" },
+      ],
+      paragraphs: [
+        `The Chinese Government Scholarship is a group of programmes administered by the China Scholarship Council, not one universal competition with a single deadline. A ${degreeLabel} applicant must first identify the correct route, eligible country or university, programme, teaching language, agency number, and local deadline.`,
+        "Current university calls show that full awards normally include tuition, accommodation or the approved accommodation arrangement, a monthly stipend, and comprehensive medical insurance. Coverage, available majors, duration, nationality restrictions, and application steps vary by scholarship category and host institution.",
+      ],
+    },
+    {
+      title: "Type A, Type B, and programme-specific routes",
+      paragraphs: [
+        "Type A generally refers to applications submitted through a dispatching authority outside China, such as the government department, education ministry, scholarship agency, or Chinese embassy named for the applicant's country. The authority sets its own opening date, deadline, document process, available categories, and agency number. Applicants should not guess which embassy or ministry handles the route.",
+        "Type B generally refers to an application managed by a Chinese university. The applicant selects Type B in the CSC system and enters the five-digit agency number supplied by that university. The number and institution name are linked; an incorrect number sends the application to the wrong destination or prevents the intended university from processing it. Type B commonly permits only the university connected to that agency number in the submitted CSC form.",
+        "Universities may also participate in named routes such as the High-Level Postgraduate Program, Silk Road Program, or other bilateral and special projects. These can restrict nationality, academic level, major, or teaching language. A general CSC eligibility page cannot prove that a particular applicant can use a particular named route.",
+        "Many Type B calls require two submissions: one in the CSC information system and one in the university's international-student portal. Completing only one is a frequent reason an otherwise eligible application is never reviewed. Follow the host's sequence, category, agency number, and file checklist exactly.",
+      ],
+    },
+    {
+      title: "What a standard full scholarship covers",
+      bullets: [
+        "Tuition waiver for the approved programme and normal scholarship duration",
+        "On-campus accommodation or the accommodation arrangement specified by the host",
+        `${stipend} monthly living allowance under commonly published full-scholarship standards`,
+        "Comprehensive medical insurance for international students",
+        "Possible Chinese-language preparatory study when included in the award and programme route",
+      ],
+      paragraphs: [
+        "Airfare is not a universal benefit of every CSC award. Some bilateral or special programmes may include travel, but standard university Type B guides commonly list tuition, accommodation, stipend, and insurance without international flights. Applicants should not describe airfare as covered unless the exact call states it.",
+        "Accommodation can mean a university dormitory or, under some programmes, an approved subsidy when campus housing is unavailable. Room type, utilities, deposits, bedding, holiday arrangements, and off-campus permission differ. Obtain the host's written housing rules instead of assuming the scholarship pays any private apartment chosen by the student.",
+        `The ${stipend} stipend supports basic personal living costs and should not be treated as research funding or guaranteed savings. City costs vary, and students may initially pay for documents, visa appointments, travel, deposits, residence procedures, devices, local transport, and daily setup before normal payments begin.`,
+        "Scholarship continuation normally depends on registration, academic progress, annual review, conduct, and compliance with university and immigration rules. Funding belongs to the approved student, university, programme, language, and period; changes require formal permission and are not automatically portable.",
+      ],
+    },
+    {
+      title: `${degreeLabel} eligibility explained`,
+      paragraphs: [
+        `Applicants are generally required to be citizens of a country other than the People's Republic of China, hold a valid foreign ordinary passport where specified, and be in good physical and mental health. Nationality histories involving former Chinese citizenship, Chinese parents, birth in China, or recent naturalisation can trigger additional documentation under Chinese nationality and university rules.`,
+        `The common education and age standard is a ${priorDegree} and an age below ${ageLimit}. The exact date used to calculate age can differ by call, and academically excellent results are normally expected. Meeting the age and diploma minimum does not guarantee admission or a CSC nomination.`,
+        isBachelors
+          ? "Starting with the 2026/27 academic year, undergraduate applicants are required by current calls to take the China Scholastic Competency Assessment, or CSCA, and provide a valid score report. Required subjects and score expectations depend on the university and major. The 2027 applicant must use the official CSCA schedule and the host's instructions rather than a previous year's test date."
+          : `Applicants need a ${priorDegree} in a suitable field or an accepted equivalent. Universities can require particular prerequisite courses, grades, research experience, publications, professional preparation, or an entrance assessment in addition to the general CSC standard.`,
+        "Applicants normally cannot hold another Chinese government scholarship at the same time. Current students in China, previous scholarship recipients, and candidates applying for another degree at the same level may face route-specific restrictions. Declare current enrolment and funding accurately and read both CSC and university eligibility clauses.",
+      ],
+    },
+    {
+      title: "Choosing a university, major, and teaching language",
+      paragraphs: [
+        "Begin with the exact scholarship call, not a general ranking of Chinese universities. Confirm that the institution participates in the intended route for 2027 and that the level, major, and nationality are eligible. A university can offer a degree to self-funded students without offering CSC places for that degree.",
+        "Compare curriculum, prerequisites, teaching language, faculty, laboratories, accreditation, internship or research structure, location, climate, cost, and graduate outcomes. For regulated professions, verify recognition and licensing in the country where you plan to work. CSC selection cannot guarantee another regulator will recognise the qualification.",
+        "Chinese-taught programmes generally require the HSK level stated by the university. English-taught programmes may require IELTS, TOEFL, or accepted equivalent evidence, with exemptions defined by the host. There is no single CSC-wide HSK, IELTS, or TOEFL score that applies to every programme.",
+        "Do not select an English-taught major solely because the application system displays English as a preference. Check the current programme catalogue and scholarship annex. Some universities offer only selected majors in English, and special routes can exclude study of an applicant's native language or third-country language and literature.",
+        isBachelors
+          ? "For Bachelor's study, check CSCA subject combinations, high-school subject prerequisites, and whether the programme includes preparatory Chinese. Medicine, engineering, architecture, and other fields may use extra academic, health, portfolio, or licensing requirements."
+          : isMasters
+            ? "For Master's study, determine whether the programme is academic, professional, thesis-based, or course-based. Review methods training, supervisor arrangements, practical projects, and whether the degree supports your intended career or later doctoral study."
+            : "For PhD study, supervisor and research-environment fit are central. Read current publications, laboratory or data resources, doctoral regulations, coursework, milestones, publication expectations, and supervision practices before requesting a pre-admission document.",
+      ],
+    },
+    {
+      title: isBachelors ? "CSCA and undergraduate preparation" : "Study plan and research preparation",
+      paragraphs: isBachelors
+        ? [
+            "The CSCA is now a mandatory part of current undergraduate admission review under Chinese Government Scholarship calls. Register only through the official assessment channel, choose the subjects required by the intended universities and majors, and make sure results will be available by each host's deadline.",
+            "A university may publish a later date for submitting the score, but that exception belongs only to that call. Missing the stated score deadline can be treated as withdrawal or make the file incomplete. Retain the official report and ensure identity information matches the passport and scholarship applications.",
+            "Prepare from the official syllabus and sample information. Strong school grades do not replace a required CSCA result. At the same time, a test score does not replace the diploma, transcript, language evidence, or programme-specific admission review.",
+            "The study plan should explain the academic field, prior school preparation, reasons for the chosen Chinese programmes, language readiness, and realistic goals. Avoid generic descriptions of China's size or technology; connect programme content to specific interests and future contribution.",
+          ]
+        : [
+            `A ${degreeLabel} application commonly requires a study plan or research proposal. Follow the university's word count, language, and structure. Explain the academic problem or professional need, previous preparation, objectives, methods or learning plan, host fit, schedule, and expected contribution.`,
+            isMasters
+              ? "A Master's plan need not pretend to be a finished doctoral proposal. It should show a focused interest, understanding of the programme, readiness for advanced study, and a credible connection between the degree and future work. For thesis programmes, identify a feasible topic area and methods you want to develop."
+              : "A PhD proposal should define a research gap, focused questions or hypotheses, conceptual basis, methods, likely data, ethics, feasibility, work plan, and scholarly contribution. It must align with available supervision and resources rather than simply naming a globally important problem.",
+            "Use accurate citations and write original work. Fabricated references, copied proposals, ghostwriting, or material the applicant cannot defend can lead to rejection and academic-integrity consequences. Reviewer feedback can improve clarity, but ownership and factual verification remain with the applicant.",
+            isMasters
+              ? "Connect the programme to a realistic career plan. Explain which capabilities you lack, how the selected curriculum develops them, and how you expect to apply them after graduation."
+              : "Prepare to discuss feasibility with a prospective supervisor. Research costs, data access, laboratory capacity, authorship, fieldwork, and ethics approval should be considered before accepting, not discovered after enrolment.",
+          ],
+    },
+    {
+      title: "Pre-admission letters and supervisor contact",
+      paragraphs: [
+        "A pre-admission document can strengthen or be required for some routes, especially postgraduate applications, but its role differs. Under a bilateral Type A programme it may receive priority without guaranteeing the scholarship. Under a university route, the host may conduct its own pre-admission review before nominating candidates to CSC.",
+        isBachelors
+          ? "Undergraduate applicants should follow the university's stated pre-admission process and avoid emailing professors, who generally do not control Bachelor's placement. Contact the international admissions office using the published method when a pre-admission letter is required."
+          : "Contact a prospective supervisor only when the programme encourages or requires it. Send a concise, tailored message with your background, research interest, CV, and any proposal requested. Demonstrate genuine alignment with the person's recent work; mass emails and false claims of agreement damage credibility.",
+        "A professor's informal reply is not a scholarship award, university admission, or CSC decision. Confirm what document the host accepts, who is authorised to issue it, and whether a signature alone is sufficient. Do not pay an intermediary for a fabricated acceptance letter.",
+      ],
+    },
+    {
+      title: "Documents commonly required",
+      bullets: [
+        "CSC online application form using the correct programme category and agency number",
+        "Valid ordinary passport information page",
+        `${priorDegree} certificate or official expected-graduation evidence`,
+        "Complete academic transcripts and the required notarised translations",
+        isBachelors ? "Valid CSCA score report and required subject results" : "Two academic recommendation letters where required",
+        isBachelors ? "Study plan or personal statement" : "Study plan or research proposal",
+        "Accepted HSK, IELTS, TOEFL, or other language evidence where required",
+        "Pre-admission, supervisor, or university nomination document when required",
+        "Foreigner Physical Examination Form with all required tests, signature, seal, and validity",
+        "Non-criminal record certificate within the required validity period",
+        "CV, publications, portfolio, or programme-specific evidence where applicable",
+        "University's separate online application and fee evidence if that call requires it",
+      ],
+      paragraphs: [
+        "Requirements differ across routes. Type A applicants must follow their dispatching authority's checklist, while Type B applicants must follow both CSC and university instructions. A document accepted by one university may be rejected by another because certification, translation, format, or validity rules differ.",
+        "Expected graduates generally upload an official pre-graduation certificate and later provide the final diploma before registration. Admission and funding can be cancelled if the qualification is not completed. Names, dates, degree titles, and passport numbers must remain consistent across all systems.",
+        "The physical examination form is often valid for a limited period and can be rejected when the photo is unsealed, physician signature or hospital stamp is missing, required tests are incomplete, or the form is too old. Follow the current host instructions before paying for an examination.",
+        "The non-criminal record normally must be issued by the competent authority and fall within the stated validity period. Applicants should allow time for legalisation or certified translation if required. Never edit official documents or omit prior enrolment and funding information.",
+      ],
+    },
+    {
+      title: "Step-by-step application process",
+      ordered: [
+        "Identify a verified 2027 Type A, Type B, bilateral, Silk Road, or other eligible call for your country and study level.",
+        "Confirm the major, teaching language, education and age rules, tests, funding, deadline, and application destination.",
+        "For Type A, obtain the dispatching authority's agency number and instructions; for Type B, obtain the university's five-digit agency number.",
+        "Prepare academic records, language evidence, study or research plan, health and criminal-record documents, and route-specific materials.",
+        ...(isBachelors ? ["Register for the required CSCA subjects and secure a valid score report by the host's deadline."] : ["Arrange academic recommendations and any required supervisor or pre-admission review."]),
+        "Complete the CSC Study in China application using the correct category, agency number, level, major, and teaching language.",
+        "Complete the separate dispatching-authority or university portal submission when required and pay only an officially stated university application fee.",
+        "Retain both submission confirmations and monitor official email and portals for interview, correction, nomination, or result requests.",
+        "After final selection, verify the electronic or issued admission notice and visa study form, then follow host instructions for visa and registration.",
+      ],
+      paragraphs: [
+        "Deadlines are not universally January-April. Recent university calls have closed from December through May, while Type A authorities use country-specific windows. A candidate applying to several permitted routes needs a tracker for every deadline, time zone, portal, agency number, fee, and status.",
+        "Do not assume that submitting first guarantees priority, but avoid the final day. University pre-review, supervisor contact, CSCA, tests, notarisation, medical forms, and two-platform submission can take weeks. An incomplete early application is not stronger than a complete timely one.",
+      ],
+    },
+    {
+      title: "How selection and nomination work",
+      paragraphs: [
+        "In a university route, the institution reviews applications and nominates selected candidates to CSC. CSC or the responsible authorities then conduct final review and approval. A university recommendation, portal status, or supervisor acceptance does not equal final scholarship confirmation.",
+        "In a bilateral route, the dispatching authority screens or nominates candidates according to national procedures before the Chinese side completes placement and approval. Interviews, written tests, document verification, or a pre-admission request may occur locally.",
+        "Selection considers academic strength, programme fit, language, study or research quality, recommendations, host capacity, and route priorities. Country quotas and available scholarship places mean that meeting published minimums is never a guarantee.",
+        "Trust results only through the responsible authority, university, CSC system, or formal admission materials. Scholarship scams often use unofficial email accounts, payment demands, or fake award letters. Verify unexpected communications with the contact details published on the university's official domain.",
+      ],
+    },
+    {
+      title: "Visa, registration, and arrival planning",
+      paragraphs: [
+        "Successful candidates use the official admission notice and Visa Application Form for Study in China, such as the applicable JW form, to apply for the correct study visa through the responsible Chinese mission or visa centre. The scholarship does not remove the student's duty to meet immigration requirements.",
+        "Check whether the host provides electronic or paper admission documents and wait for instructions before booking travel. Name or passport changes after application can delay visa materials. Report any change immediately through the official channel.",
+        "Prepare funds for costs not paid before arrival, including flights when not covered, visa services, document legalisation, dormitory deposits, residence permit procedures, medical re-examination, bedding, meals, phone service, and transport. Ask when the first stipend is paid.",
+        "After arrival, complete university registration, accommodation, insurance, medical verification, and residence permit steps on time. Bring original diplomas, transcripts, examination records, physical form, criminal record, and other documents requested for verification. False or unverifiable material can cancel admission and scholarship status.",
+      ],
+    },
+    {
+      title: "Common CSC application mistakes",
+      bullets: [
+        "Searching for one CSC deadline instead of identifying the exact route and host call",
+        "Selecting Type A or Type B incorrectly",
+        "Entering the wrong agency number",
+        "Completing CSC but not the required university or dispatching-authority application",
+        "Assuming every university major participates in every scholarship route",
+        ...(isBachelors ? ["Missing the mandatory CSCA or taking the wrong subject combination"] : ["Sending generic supervisor emails or using an unauthorised acceptance letter"]),
+        "Using a language waiver or test score the host does not accept",
+        "Submitting incomplete examination, criminal-record, notarisation, or translation documents",
+        "Calling airfare universally covered when the exact award does not include it",
+        "Confusing university nomination or pre-admission with final CSC approval",
+        "Paying a scholarship agent or using a fake Campus China portal",
+        "Booking travel before formal admission and visa documents are verified",
+      ],
+    },
+    {
+      title: "Final 2027 application checklist",
+      ordered: [
+        "Confirm that the matching 2027 call is officially open.",
+        "Identify Type A, Type B, or the named programme and obtain the correct agency number.",
+        `Verify non-Chinese nationality, health, ${priorDegree}, under-${ageLimit} rule, and host-specific eligibility.`,
+        "Confirm that the university, major, teaching language, and scholarship category are available.",
+        ...(isBachelors ? ["Take the required CSCA subjects and obtain a valid score report."] : ["Prepare recommendations and complete required supervisor or pre-admission steps."]),
+        "Prepare passport, academic records, translations, study or research plan, language evidence, physical examination, criminal record, and other required files.",
+        "Submit through CSC and every additional official portal before its exact deadline.",
+        "Retain confirmations and distinguish pre-admission, nomination, final award, and visa stages.",
+        "Before accepting, verify tuition, stipend, accommodation, insurance, travel, research costs, programme duration, and continuation rules.",
+        "Use formal admission and visa documents before making irreversible travel or employment decisions.",
+      ],
+    },
+  ];
+}
+
+type MextLevel = "Bachelors" | "Masters" | "PhD";
+
+function mextReaderSections(level: MextLevel): ScholarshipContentSection[] {
+  const undergraduate = level === "Bachelors";
+  const masters = level === "Masters";
+  const label = undergraduate ? "Undergraduate" : level;
+  const allowance = undergraduate ? "¥117,000" : masters ? "¥144,000" : "¥145,000";
+  const prior = undergraduate ? "12 years of schooling or the recognised equivalent" : masters ? "eligibility for admission to a Japanese Master's course" : "eligibility for admission to the intended Japanese doctoral phase";
+
+  return [
+    {
+      title: `MEXT ${label} scholarship at a glance`,
+      facts: [
+        { label: "Main routes", value: "Embassy recommendation and limited university recommendation" },
+        { label: "2027 status", value: undergraduate ? "Check the Japanese diplomatic mission for the country-specific 2027 call" : "Official 2027 embassy research-student guidelines published" },
+        { label: "Monthly allowance", value: `${allowance} under the relevant current guideline, subject to fiscal revision` },
+        { label: "Education fees", value: "Entrance examination, matriculation, and tuition waived under stated conditions" },
+        { label: "Travel", value: "Specified economy airfare for eligible arrival and return journeys" },
+        { label: "Application fee", value: "No MEXT application fee" },
+        { label: "Application destination", value: "The responsible Japanese diplomatic mission or recommending university" },
+        { label: "Required preparation", value: prior },
+      ],
+      paragraphs: [
+        `The Japanese Government MEXT Scholarship is not one form sent directly to the ministry. A ${label} applicant normally follows either embassy recommendation through the Japanese embassy or consulate responsible for the country of nationality, or a university-recommendation opportunity offered by an approved Japanese institution with a quota.`,
+        "Country, field, document, examination, and deadline details can differ. MEXT states that the latest application guideline controls when a summary conflicts with it. Applicants should never mail an unsolicited application to MEXT in Japan.",
+      ],
+    },
+    {
+      title: "Embassy recommendation versus university recommendation",
+      paragraphs: [
+        "Embassy recommendation begins with recruitment and first screening by a Japanese diplomatic mission. The mission publishes the local deadline and submission method, checks documents, administers required written examinations, conducts interviews, and forwards successful candidates for later MEXT screening.",
+        "University recommendation begins with a Japanese university that has an approved recommendation quota or framework. Not every university can nominate students, and a professor's willingness to supervise does not create a quota. Eligibility, academic standard, scholarship duration, arrival term, and internal deadline belong to the host's call.",
+        undergraduate
+          ? "Embassy recommendation is the best-known undergraduate route and uses subject examinations before MEXT placement. Some university-recommendation undergraduate opportunities exist through restricted arrangements, but candidates must find a university call that expressly includes their level and programme."
+          : "Research students can use either route, but the processes differ. Under embassy recommendation, candidates request provisional acceptance only after passing first screening. Under university recommendation, the university conducts its own recruitment and nomination process from the beginning.",
+        "Do not submit simultaneous or conflicting MEXT applications when the guideline prohibits it. Declare any other Japanese government scholarship application and ask the embassy or university when two opportunities overlap.",
+      ],
+    },
+    {
+      title: "Scholarship benefits and costs not fully covered",
+      bullets: [
+        `${allowance} monthly allowance for the applicable student status`,
+        "Possible additional regional allowance of ¥2,000 or ¥3,000 in designated areas",
+        "Waiver of entrance examination, matriculation, and tuition fees under the guideline",
+        "Economy-class airline ticket to Japan on the route and schedule stipulated by MEXT",
+        "Eligible economy return ticket after completing the scholarship and returning within the specified period",
+      ],
+      paragraphs: [
+        "Monthly amounts may change with the Japanese government budget. Payments can be suspended during extended absence, poor progress, unauthorised status changes, or other guideline violations. Students must open the designated Japanese bank account after arrival for scholarship payments.",
+        "Airfare does not cover every travel expense. Students commonly pay domestic travel to the departure airport, airport taxes and fees, insurance, excess baggage, travel inside Japan, and costs created by personal route changes. Tickets may not be provided when arrival or return falls outside the specified conditions.",
+        "Housing is not automatically free. University international residences can have limited rooms and require rent, deposits, or advance expenses. Private housing is the student's responsibility. Dependants are not funded as part of an individual award, and MEXT advises that family housing can be difficult to secure.",
+        "The first payment may arrive one to one-and-a-half months after arrival. Official research-student guidance recommends bringing approximately US$2,000 for immediate costs. Every student should create an arrival budget for accommodation, food, transport, phone service, insurance procedures, and basic setup.",
+      ],
+    },
+    {
+      title: `${label} eligibility and academic background`,
+      paragraphs: [
+        "Applicants must hold the nationality accepted by the diplomatic mission and normally apply through the mission for that nationality. Japanese nationals are ineligible, while dual nationals involving Japanese nationality must meet the guideline's renunciation conditions by arrival.",
+        undergraduate
+          ? "Undergraduate applicants must meet the exact birth-date rule and have completed, or be certain to complete, the schooling required for Japanese university admission by the stated date. The embassy guideline, not a generic age summary, determines eligibility for the 2027 intake."
+          : "For 2027 research students, applicants must in principle have been born on or after April 2, 1992. Limited exceptions concern circumstances in the applicant's country, not personal finances, family circumstances, health, employment, or university situations.",
+        undergraduate
+          ? "Applicants choose from the fields and majors listed in the undergraduate guideline. Field changes are restricted, and some programmes require a longer course. Academic placement considers written examinations, school record, interview, language ability, and the availability of a suitable national university."
+          : `Applicants must satisfy ${prior}. The proposed field should be the same as or related to the subject studied previously and must be available for graduate research in Japan. Clinical training in medicine, dentistry, or welfare science requires the relevant Japanese licence.`,
+        "Applicants must be physically and mentally able to study in Japan, obtain the required Student visa and residence status, arrive during the designated period, and comply with exclusions concerning military status, overlapping scholarships, previous MEXT awards, current enrolment, and long-term activity outside Japan.",
+      ],
+    },
+    {
+      title: undergraduate ? "Fields, written examinations, and placement" : "Research plan and graduate-school fit",
+      paragraphs: undergraduate
+        ? [
+            "Embassy-recommended undergraduate candidates select Social Sciences and Humanities or Natural Sciences and then choose permitted courses and majors. Read the current table carefully because examination subjects and placement rules follow the selected course.",
+            "The official Study in Japan overview lists Japanese, English, and mathematics examinations for undergraduate candidates. Natural-science applicants also choose two science subjects from chemistry, physics, and biology according to the applicable course. Use official past questions to understand level and format.",
+            "Written screening is competitive and does not use one global pass mark published for every country. Prepare in the correct subject combination, practise timed papers, and continue Japanese study even if the intended field can later be studied partly in English.",
+            "MEXT normally determines university placement. Direct placement may be possible under specified conditions, but applicants should not assume they can freely choose any university. The selected major, examination performance, language, university capacity, and preparatory-education decision all affect placement.",
+            "Most embassy undergraduate awards include one preparatory year in Japanese and other subjects before the degree. Direct placement is exceptional and requires the language and admission conditions set by the university and MEXT.",
+          ]
+        : [
+            "The Field of Study and Research Plan is a central placement document. It should explain past and present study, the proposed research theme in Japan, the problem and scholarly context, questions, methods, expected results, schedule, and why Japanese supervision and resources are suitable.",
+            masters
+              ? "A Master's applicant should define a feasible project that demonstrates graduate readiness without pretending the thesis is already complete. Link prior coursework, thesis or professional experience to the methods and knowledge the Japanese programme can provide."
+              : "A doctoral applicant should identify an original and feasible contribution, engage critically with literature, specify data or experiments, address ethics and access, and show that the project fits the intended doctoral phase and available supervisors.",
+            "The research field normally must be the same as or related to previous university study. A major transition needs convincing evidence of prerequisite knowledge. Topics requiring long-term fieldwork or internship outside Japan conflict with stated eligibility when they prevent study in Japan for an extended period.",
+            "Write original, accurately cited work. Fabricated sources, copied proposals, and plans the applicant cannot defend can fail document review or interview. Feedback is useful, but the applicant must own the problem, methods, limitations, and feasibility.",
+          ],
+    },
+    {
+      title: "Language requirements and preparation",
+      paragraphs: [
+        undergraduate
+          ? "Embassy undergraduate screening includes Japanese and English examinations. Even candidates with limited Japanese should sit the required examination and prepare seriously. Most undergraduate instruction in Japan is in Japanese unless a direct-placement arrangement says otherwise."
+          : "Embassy research-student screening includes Japanese and English written examinations. The interview must show enough Japanese or English to communicate with the intended academic adviser, with stronger Japanese expected for fields requiring it.",
+        "There is no universal IELTS, TOEFL, or JLPT score that replaces all MEXT screening. A diplomatic mission or university may request a certificate, and host graduate admission may impose its own language test. Current embassy guidelines accept language certificates only under their stated recency and copy rules.",
+        undergraduate
+          ? "The preparatory year develops Japanese and other subjects needed for university. Failure to complete preparation or reach the required standard can prevent progression. Start before application rather than expecting one year to solve every academic-language gap."
+          : "Research students who need Japanese may receive six months of preparatory education before research or degree study. This is determined by the host and does not guarantee admission to a regular degree course. Graduate entrance requirements still apply.",
+      ],
+    },
+    {
+      title: "Application documents",
+      bullets: undergraduate
+        ? [
+            "Official 2027 application form and recent photograph",
+            "Academic transcripts for all relevant school years",
+            "Graduation certificate or official prospective-graduation certificate",
+            "Recommendation letter from the school principal or teacher",
+            "MEXT medical certificate completed by a physician",
+            "Language or other certificates only as instructed",
+            "Direct Placement Preference Form only when applicable",
+          ]
+        : [
+            "Official 2027 research-student application form",
+            "Placement Preference Application Form",
+            "Field of Study and Research Plan",
+            "Transcripts for every relevant undergraduate and graduate programme",
+            "Graduation or degree certificates, or prospective-graduation evidence",
+            "Recommendation from the president, dean, or academic adviser of the current or last university",
+            "Official MEXT medical certificate",
+            "Thesis abstracts when applicable",
+            "Recent Japanese or English language certificate when applicable",
+            "Employer recommendation when currently employed",
+            "Art or music work evidence when applicable",
+          ],
+      paragraphs: [
+        "Use the official 2027 forms and the diplomatic mission's local instructions. Required originals, copies, numbering, photographs, seals, signatures, and submission methods matter. Documents are generally not returned.",
+        "Documents must be in Japanese or English or include a translation into one of those languages. A translation does not replace the underlying official record. Transcripts should show all years, subjects, grades, and the grading scale; a degree certificate alone is not a transcript.",
+        "Expected graduates must prove that they will complete the qualifying education by the required date and later submit final evidence. Inconsistent names, dates, or degrees should be explained with official support rather than silently altered.",
+      ],
+    },
+    {
+      title: "Embassy first screening",
+      ordered: [
+        "Find the 2027 call on the Japanese embassy or consulate website responsible for your nationality.",
+        "Confirm that the scholarship category and intended field are recruited in that country.",
+        "Submit the exact forms and copies by the local deadline and method.",
+        undergraduate ? "Sit the required Japanese, English, mathematics, and applicable science examinations." : "Sit the Japanese and English language examinations.",
+        "Attend the embassy interview and bring or provide original evidence when requested.",
+        "Wait for the diplomatic mission's first-screening result; reasons are generally not disclosed.",
+      ],
+      paragraphs: [
+        "Passing document review, written examinations, or interview alone is not the final award. The diplomatic mission combines these stages for first screening, and successful files then proceed to MEXT's later screening and placement process.",
+        undergraduate
+          ? "Interviewers can examine motivation, field understanding, readiness for Japanese study, academic plans, adaptability, and intention to contribute to relations with Japan. Answers should be specific and consistent with the selected course."
+          : "The research interview assesses purpose, research clarity, knowledge of Japanese universities, and ability to communicate with an adviser. Be ready to explain the proposal's problem, method, feasibility, host fit, and future contribution concisely.",
+      ],
+    },
+    ...(!undergraduate
+      ? [{
+          title: "Provisional acceptance after first screening",
+          paragraphs: [
+            "Only after passing embassy first screening should a research-student applicant request provisional acceptance under the 2027 instructions. Candidates must contact university international-student divisions by the published Japan-time deadline rather than bypassing the process with premature mass emails.",
+            "The 2027 guideline permits up to three universities on the placement preference form but no more than two provisional-acceptance letters. Follow the required contact route and send the first-screening certificate, application, research plan, transcripts, degree documents, and other specified materials.",
+            "A letter strongly affects placement but is not the final scholarship. It may accept the applicant as a regular degree student or non-regular research student. The latter may need to pass a graduate entrance examination before entering the degree.",
+            "Submit the final placement form and university responses back to the diplomatic mission by its deadline. Do not list departments or supervisors that declined acceptance or were never properly contacted. MEXT makes final placement and may prioritise a national university because of budget conditions.",
+          ],
+        }]
+      : []),
+    {
+      title: undergraduate ? "Preparatory education and degree progression" : "Research-student status and degree progression",
+      paragraphs: undergraduate
+        ? [
+            "The standard embassy undergraduate pathway commonly includes one year of preparatory Japanese and academic subjects followed by the degree at a national university. The normal scholarship period is five years including preparation, or seven years for medicine, dentistry, veterinary medicine, and six-year pharmacy courses, subject to the current guideline.",
+            "Students must pass the required preparation and placement process. The university and major may differ from a personal first preference, and objections to MEXT placement are generally not accepted. Applicants should apply only if they are willing to accept this structure.",
+            "Scholarship extension for further study is not automatic. Outstanding students meeting MEXT criteria may later apply through the separate extension process, but an undergraduate award should not be advertised as guaranteed funding through Master's or PhD study.",
+          ]
+        : [
+            "Research Student is a MEXT category that can include regular Master's or doctoral students and non-regular research students. A successful candidate is not automatically enrolled in the degree named in an informal article; the provisional-acceptance letter and final placement determine initial status.",
+            "Non-regular students normally conduct research and prepare for graduate admission. They must pass the university entrance examination to become regular degree students. Scholarship extension into a degree requires a successful MEXT review and cannot be granted while the student remains indefinitely non-regular.",
+            masters
+              ? "A regular Master's course normally lasts two years. Progressing later to a doctorate requires admission and a separate approved extension; the initial Master's scholarship does not guarantee doctoral funding."
+              : "A doctoral course commonly lasts three years after a Master's, while certain medicine, dentistry, veterinary, and pharmacy doctorates commonly last four years and use different academic-background rules.",
+          ],
+    },
+    {
+      title: "Final screening, placement, and arrival",
+      paragraphs: [
+        "MEXT conducts later screening and placement after embassy first screening. A first-screening pass does not guarantee final selection. Applicants receive the official outcome through the diplomatic mission, not through agents or unofficial result lists.",
+        undergraduate
+          ? "MEXT decides preparatory institution and university placement according to the guideline. Direct placement requires the necessary language and university conditions."
+          : "Final research-student selection requires a university placement. Applicants are generally placed at an institution that issued provisional acceptance, but preference order may not be followed and an application can fail if no placement is secured.",
+        "Selected students must obtain a new Student visa and enter Japan with the required residence status. Arriving outside the stipulated period for personal reasons can cancel travel support or the award. Do not book independent travel before receiving instructions.",
+        "Upon arrival, complete university registration, housing, National Health Insurance, residence procedures, and the designated bank account. Bring original academic and medical records requested for verification and enough funds for the first weeks.",
+      ],
+    },
+    {
+      title: "Common MEXT application mistakes",
+      bullets: [
+        "Sending documents directly to MEXT instead of the responsible embassy or university",
+        "Using a deadline or form from another country or year",
+        "Confusing first screening, provisional acceptance, second screening, and final placement",
+        undergraduate ? "Preparing for the wrong written-examination subject combination" : "Contacting universities for provisional acceptance before passing first screening",
+        undergraduate ? "Assuming applicants freely select any university and major" : "Treating non-regular research-student status as confirmed degree admission",
+        "Submitting incomplete transcripts, translations, recommendations, photographs, or medical forms",
+        "Assuming limited Japanese is irrelevant because some research can be done in English",
+        "Calling housing free or ignoring the one-to-one-and-a-half-month wait for initial payment",
+        "Assuming airfare covers taxes, domestic transfers, baggage, or personal route changes",
+        "Applying simultaneously to conflicting MEXT categories or hiding other funding",
+        "Paying an agent for a free government process",
+        "Making irreversible travel or employment decisions before final placement",
+      ],
+    },
+    {
+      title: "Final 2027 checklist",
+      ordered: [
+        "Download the exact 2027 guideline and forms from MEXT or the responsible diplomatic mission.",
+        "Verify nationality, birth-date, education, health, arrival, visa, previous-award, and overlapping-application conditions.",
+        undergraduate ? "Choose an allowed field and prepare for the correct Japanese, English, mathematics, and science examinations." : "Prepare an original, specific, feasible Field of Study and Research Plan aligned with suitable Japanese universities.",
+        "Collect complete transcripts, degree or graduation evidence, recommendations, medical form, translations, and applicable certificates.",
+        "Submit to the correct embassy, consulate, or recommending university before its local deadline.",
+        "Complete every written test and interview required for first screening.",
+        ...(!undergraduate ? ["After passing first screening, request no more than the permitted provisional-acceptance letters by the Japan-time deadline."] : []),
+        "Distinguish each selection stage and trust only formal communication.",
+        "Before departure, confirm placement, student status, scholarship duration, housing, travel limits, visa, insurance, and initial cash needs.",
+        "Follow academic, residence, and scholarship rules throughout study; extension to a higher degree is never automatic.",
+      ],
+    },
+  ];
+}
+
+type FulbrightLevel = "Masters" | "PhD";
+
+function fulbrightReaderSections(level: FulbrightLevel): ScholarshipContentSection[] {
+  const masters = level === "Masters";
+  const degree = masters ? "Master's" : "PhD";
+
+  return [
+    {
+      title: "Fulbright Foreign Student Program at a glance",
+      facts: [
+        { label: "Study destination", value: "United States" },
+        { label: "Applicant", value: "Non-U.S. citizen applying through the home-country programme" },
+        { label: "Degree level", value: degree },
+        { label: "Global deadline", value: "None; every participating country sets its own schedule" },
+        { label: "Application authority", value: "Home-country Fulbright Commission/Foundation or U.S. Embassy" },
+        { label: "Placement", value: "IIE-placement or self-placement, determined by the country programme" },
+        { label: "Funding", value: "Country- and award-specific; verify the local call and grant terms" },
+        { label: "Official reach", value: "Operates in more than 160 countries with about 4,000 foreign students annually" },
+      ],
+      paragraphs: [
+        `The Fulbright Foreign Student Program enables graduate students, young professionals, and artists from abroad to study or conduct research in the United States. This ${degree} guide describes the common process, but it cannot replace the official instructions for the applicant's country.`,
+        "Country programmes differ widely in eligible degrees, fields, age or experience rules, tests, award length, benefits, placement, and return obligations. If a country is not listed on the official Foreign Fulbright application page, an applicant cannot use the global Foreign Student Program from that country.",
+      ],
+    },
+    {
+      title: "Start with the home-country call",
+      paragraphs: [
+        "Open the official Foreign Fulbright country selector and follow the link for the country of citizenship or programme eligibility. The resulting Fulbright Commission, Foundation, or U.S. Embassy page is the controlling source for the current cycle. Do not apply using another country's form simply because its deadline is later.",
+        "Record the programme name, opening and closing dates, time zone, eligible fields, required degree level, nomination process, benefit package, and contact details. Some countries recruit annually; others pause categories, restrict subjects, or offer only visiting research rather than a full degree.",
+        "The local office also determines whether university admission is managed through IIE placement or by the candidate. This choice changes when and how applicants select universities, send tests, pay fees, and communicate with institutions.",
+        "Use the official cycle year carefully. A call published in 2026 may fund study beginning in 2027 or later. Describe the opportunity by the intake named in that call rather than assuming the publication year equals the university start year.",
+      ],
+    },
+    {
+      title: "IIE-placement versus self-placement",
+      paragraphs: [
+        "Under IIE-placement, candidates submit the Fulbright application and supporting documents to the home-country office. IIE's placement team uses that file to apply to U.S. institutions, manages admission decisions, negotiates funding, and accepts or declines offers after a final placement decision. Candidates should not independently contact universities unless instructed.",
+        "Under self-placement, candidates apply directly to universities and manage each admission application, test report, deadline, fee, deposit, and document requirement. IIE is not involved in the university applications. The Fulbright office may still require approval of the final institution and award conditions.",
+        "Never assume that being named a Fulbright nominee guarantees admission to a first-choice university. Nomination, university admission, placement, funding approval, medical clearance, visa sponsorship, and final grant documents are separate stages.",
+        masters
+          ? "Master's candidates should compare course structure, duration, professional accreditation, internship or practicum rules, and whether a programme's costs fit the country award. An expensive programme may require university cost sharing or may be unavailable under the placement policy."
+          : "PhD candidates should compare supervisor fit, research resources, assistantship expectations, qualifying examinations, time to degree, and whether the country programme funds a complete doctorate or only a limited initial period. Fulbright grant length and doctoral programme length are not necessarily identical.",
+      ],
+    },
+    {
+      title: "Eligibility is country-specific",
+      paragraphs: [
+        "Applicants are generally non-U.S. citizens applying from a participating country and must meet that programme's citizenship or residency rule. Dual citizens, permanent residents, people already studying in the United States, and previous U.S. exchange participants should check exclusions and preference rules in the local call.",
+        masters
+          ? "A completed Bachelor's degree or recognised equivalent is normally required before U.S. graduate enrolment. The local programme can specify minimum grades, eligible graduation years, employment experience, subject priorities, or whether current final-year students may apply."
+          : "A PhD route normally requires the academic background needed for U.S. doctoral admission. Depending on the field and country call, this may be a Bachelor's degree, Master's degree, or specific research preparation. Never infer a universal Master's requirement from a third-party article.",
+        "English proficiency must satisfy both Fulbright and university expectations. A country office may arrange TOEFL testing for nominees, require a score at application, accept another test, or use an interview before requesting formal results. U.S. universities can impose higher minimums and component scores.",
+        "Fulbright seeks applicants who can succeed academically, represent their country constructively, engage with U.S. communities, and use the experience after the grant. Country programmes may evaluate leadership, public service, professional achievement, research potential, and a credible return or reintegration plan.",
+      ],
+    },
+    {
+      title: "What the scholarship may cover",
+      bullets: [
+        "Tuition and required university fees within the approved award and placement arrangement",
+        "Monthly maintenance or living support based on programme and location",
+        "International travel under the grant's stated rules",
+        "Accident and sickness health benefit coverage required for exchange participants",
+        "Visa sponsorship and programme administration",
+        "Books, settling-in, research, or other allowances where the country award provides them",
+      ],
+      paragraphs: [
+        "The Foreign Student Program website does not publish one universal package for every country. Some awards are described locally as fully funded, while others depend on university tuition waivers, cost sharing, assistantships, personal funds, or limits on expensive programmes. Publish only the benefits confirmed in the applicant's home-country call.",
+        "Health benefits are not the same as unlimited private medical insurance. Grantees should read coverage, exclusions, deductibles, emergency procedures, and requirements for dependants. Family members' travel, insurance, housing, and living costs are not automatically included in an individual award.",
+        "Funding can cover a shorter period than the U.S. degree. This is particularly important for doctorates. Confirm the number of funded years, renewal criteria, university support after Fulbright funding, summer coverage, and whether assistantship work is permitted under grant and visa rules.",
+        "Before accepting, obtain a written budget showing tuition, fees, stipend, travel, insurance, university contribution, and personal responsibility. Do not rely on the word Fulbright as proof that every cost at every university will be paid.",
+      ],
+    },
+    {
+      title: masters ? "Choosing a Master's programme" : "Choosing a PhD programme and supervisor",
+      paragraphs: masters
+        ? [
+            "Define the professional or academic problem the Master's must address, then compare programmes by curriculum rather than brand alone. Review required and optional courses, capstone or thesis, faculty expertise, practical projects, accreditation, internships, location, and graduate outcomes.",
+            "Choose universities that form a balanced and coherent list under the placement model. A programme should fit prior preparation and future goals. If changing fields, explain the bridge and demonstrate prerequisite skills rather than presenting the degree as a complete restart.",
+            "Professional licensing deserves early research. A U.S. degree in teaching, counselling, architecture, engineering, law, health, or another regulated area may not automatically qualify the graduate in the home country or U.S. jurisdiction.",
+            "Under IIE-placement, follow the placement team's university-list instructions and do not submit parallel applications without permission. Under self-placement, track every admission deadline and funding form separately from the Fulbright deadline.",
+          ]
+        : [
+            "Doctoral fit depends on research alignment, supervisory capacity, methods, laboratories or data, funding, coursework, and department culture. Read recent faculty work and doctoral handbooks rather than relying only on rankings.",
+            "U.S. PhD admission is often department-based, and applicants may not need a final supervisor commitment at application. Other programmes expect strong faculty alignment. Follow each department's instructions and avoid claiming an agreement based on an informal reply.",
+            "Ask how Fulbright funding interacts with university fellowships, research or teaching assistantships, health insurance, summer support, and later years. A complete doctorate commonly lasts longer than a standard grant period, so continued funding must be credible in writing.",
+            "A strong list includes departments capable of supporting the actual question and method. Famous institutions with no relevant adviser or data are poor choices, and one ambitious first choice without realistic alternatives creates placement risk.",
+          ],
+    },
+    {
+      title: masters ? "Writing the study objective" : "Writing the research objective",
+      paragraphs: [
+        masters
+          ? "The study objective should explain the field, specific learning needs, suitable programme features, and how the degree supports a realistic career contribution. It should not be a generic statement that U.S. universities are excellent."
+          : "The research objective should define a focused problem, literature gap, questions or hypotheses, conceptual basis, methods, likely data, feasibility, ethics, U.S. host fit, and expected scholarly contribution.",
+        "Connect the proposed study to prior education, employment, research, projects, or service using concrete evidence. Reviewers need to see readiness and progression, not a list of achievements copied from the CV.",
+        "Explain why study in the United States is academically necessary while showing how knowledge and relationships will be used after the grant. A plan based only on remaining in the United States conflicts with the exchange purpose and likely J-1 home-residence expectations.",
+        "Write original work and verify every programme or research claim. Paid essays, copied templates, invented citations, and AI-generated personal stories can create integrity concerns and interview inconsistencies. Editing assistance should preserve the applicant's authentic experiences and authorship.",
+      ],
+    },
+    {
+      title: "Personal statement and leadership evidence",
+      paragraphs: [
+        "The personal statement should explain the experiences, decisions, responsibilities, and values that shaped the applicant. It complements the study objective rather than repeating the same programme description.",
+        "Use specific examples of initiative, collaboration, resilience, ethical judgement, leadership, or community contribution. State the applicant's own action and the outcome without exaggerating individual control over team achievements.",
+        "Address unusual academic results, career changes, study gaps, or constraints briefly and factually when relevant. The goal is context and evidence of growth, not an excuse or a dramatic narrative disconnected from the record.",
+        "Fulbright is an educational and cultural exchange. Show readiness to engage beyond campus, learn from different perspectives, share the home country's culture thoughtfully, and maintain professional relationships after returning.",
+      ],
+    },
+    {
+      title: "Documents commonly requested",
+      bullets: [
+        "Country-specific online Fulbright application",
+        "Academic transcripts and degree or graduation evidence",
+        "Curriculum vitae or résumé",
+        "Study or research objective",
+        "Personal statement",
+        "Recommendation letters submitted under local instructions",
+        "TOEFL, IELTS, GRE, GMAT, or other test results when required",
+        "Passport or citizenship and identity evidence",
+        "Writing sample, portfolio, research proposal, publications, or professional evidence where required",
+        "University applications and financial documents under self-placement",
+      ],
+      paragraphs: [
+        "The local programme checklist controls. Some offices request unofficial scans initially and certified originals after nomination; others require sealed or translated records earlier. Follow formatting, word limits, referee submission, and translation rules exactly.",
+        "Transcripts should cover every required institution and show the grading scale. Do not invent a U.S. GPA conversion unless instructed. Explain degree names and grading using official documentation when reviewers may be unfamiliar with the system.",
+        "Choose referees who can evaluate the abilities relevant to graduate study and the proposed contribution. Give them the objectives, CV, deadline, and submission process early. A detailed evidence-based letter is stronger than a famous person's generic endorsement.",
+      ],
+    },
+    {
+      title: "Tests and university admission readiness",
+      paragraphs: [
+        "Testing policy varies by country and university. Some country programmes pay for or arrange tests after shortlisting; others require results during application. Do not book an expensive examination until checking which version, score date, and recipient process apply.",
+        "English minimums are eligibility floors. Graduate study requires reading, writing, presentations, teamwork, and, for assistantships, teaching or research communication. Use the preparation period to improve academic English even when a waiver is technically available.",
+        "GRE and GMAT requirements have changed at many U.S. institutions, but optional does not mean irrelevant in every case. Follow the placement team's instruction under IIE-placement and each university's current policy under self-placement.",
+        "Names and dates must match across test accounts, passport, Fulbright, and university systems. Arrange score reporting before deadlines and keep confirmation records.",
+      ],
+    },
+    {
+      title: "Selection and interview process",
+      ordered: [
+        "Confirm eligibility and submit the complete application through the home-country Fulbright office.",
+        "Pass administrative and technical screening for documents and country criteria.",
+        "Undergo academic or professional review according to the local selection procedure.",
+        "Complete an interview, test, or additional assessment if invited.",
+        "If nominated, follow test, medical, placement, and document instructions promptly.",
+        "Secure approved university admission under IIE-placement or self-placement.",
+        "Complete final Fulbright, funding, medical, and J-1 visa documentation before travel.",
+      ],
+      paragraphs: [
+        "Interview panels can ask about programme choice, academic readiness, leadership, research, career plan, cultural exchange, and return contribution. Prepare from the submitted application and answer with evidence rather than memorised slogans.",
+        "A principal or semifinalist notification is not necessarily a final grant. Selection may remain conditional on placement, funding, tests, medical clearance, and approval by responsible Fulbright authorities. Do not resign or make non-refundable commitments prematurely.",
+      ],
+    },
+    {
+      title: "J-1 visa and two-year home-residence requirement",
+      paragraphs: [
+        "Foreign Fulbright students generally participate under J-1 exchange-visitor sponsorship and must follow the sponsor's visa, travel, employment, academic, and reporting rules. University admission alone does not authorise travel.",
+        "Many government-funded J-1 participants are subject to the two-year home-country physical-presence requirement under U.S. immigration law. Applicants should read their documents and obtain qualified official guidance about how the rule applies; a scholarship article cannot decide an individual's immigration case.",
+        "The exchange purpose should align with a genuine plan to return and apply the experience. Career planning should consider reintegration, employers, professional licensing, research networks, and how collaboration can continue across countries.",
+        "Dependants use separate documentation and create additional costs. Confirm whether J-2 sponsorship is permitted, what financial evidence is required, and whether any grant support exists before making family plans.",
+      ],
+    },
+    {
+      title: "Common Fulbright application mistakes",
+      bullets: [
+        "Publishing or relying on one global deadline or benefit package",
+        "Applying through a country where the candidate is not eligible",
+        "Confusing IIE-placement and self-placement responsibilities",
+        "Applying independently to universities when the placement team forbids it",
+        "Assuming nomination guarantees admission, funding, visa clearance, or final selection",
+        "Choosing programmes by ranking without curriculum or research fit",
+        "Submitting generic objectives that do not connect prior evidence to future contribution",
+        "Using copied essays, invented achievements, or unverifiable research claims",
+        "Missing referee, transcript, translation, or official test-report requirements",
+        "Assuming a fully funded label covers every year or every family expense",
+        "Ignoring J-1 and home-residence implications",
+        "Paying an unofficial agent for access to a government exchange programme",
+      ],
+    },
+    {
+      title: "Final country-specific checklist",
+      ordered: [
+        "Open the official Foreign Fulbright country page and confirm the current call.",
+        `Verify that the ${degree} level, intended field, citizenship, residence, education, and experience are eligible.`,
+        "Record the exact local deadline, placement model, benefits, duration, tests, and return conditions.",
+        "Research academically suitable U.S. programmes within the placement policy.",
+        "Prepare transcripts, CV, original objectives, personal statement, recommendations, tests, and special evidence.",
+        "Submit through the home-country Fulbright Commission/Foundation or U.S. Embassy.",
+        "Prepare for interview using the exact application submitted.",
+        "If nominated, follow placement instructions and distinguish every conditional stage from the final grant.",
+        "Before accepting, verify tuition, stipend, insurance, travel, grant duration, later-year funding, dependants, and visa rules in writing.",
+        "Travel only after approved placement, grant documents, and J-1 sponsorship are complete.",
+      ],
+    },
+  ];
+}
+
+type KhalifaLevel = "Bachelors" | "Masters" | "PhD";
+
+function khalifaReaderSections(level: KhalifaLevel): ScholarshipContentSection[] {
+  const bachelors = level === "Bachelors";
+  const masters = level === "Masters";
+  const degree = bachelors ? "Bachelor's" : masters ? "Master's" : "PhD";
+  const admissionFocus = bachelors
+    ? "Grade 12 or equivalent secondary-school results, mathematics and science preparation, English evidence, and curriculum-specific admission requirements"
+    : masters
+      ? "a relevant bachelor's degree, graduate-admission CGPA, English evidence, programme prerequisites, and any UAE equivalency steps"
+      : "a relevant master's degree for the regular PhD route, or the published direct-PhD threshold, English evidence, research fit, and programme alignment";
+
+  return [
+    {
+      title: "Scholarship at a glance",
+      facts: [
+        { label: "University", value: "Khalifa University, Abu Dhabi" },
+        { label: "Study level", value: degree },
+        { label: "Scholarship style", value: "Admission-linked, tier-based scholarship support" },
+        { label: "Funding certainty", value: "Final tier and benefits are confirmed by Khalifa University" },
+        { label: "Academic focus", value: "Science, engineering, computing, technology, and research-intensive fields" },
+        { label: "Undergraduate tiers", value: "Full tuition through partial tuition or textbook-only support" },
+        { label: "Graduate tiers", value: "Benefits vary by tier, full-time status, citizenship, and scholarship route" },
+        { label: "Best first step", value: "Check the current KU admission and scholarship pages for the intended intake" },
+      ],
+      paragraphs: [
+        `The Khalifa University Scholarship for ${degree} applicants is not a separate universal cash award that every admitted student receives automatically. It is part of Khalifa University's admission and scholarship framework, where applicants are assessed for admission and then considered for a scholarship tier if they qualify. The exact offer matters more than the general scholarship headline.`,
+        bachelors
+          ? "For undergraduate students, KU publishes tiered scholarship support. Tier I covers full tuition and textbooks, while lower tiers provide partial tuition waivers or textbooks only. That means this route can be very valuable, but it should not be described as automatically fully funded for every admitted bachelor student."
+          : "For graduate students, KU publishes postgraduate scholarship routes with different tuition, stipend, accommodation, insurance, visa, flight, textbook, and research-conference benefits depending on tier and status. Applicants should read the official postgraduate scholarship page and the specific scholarship route rather than assuming every master's or PhD student receives the highest package.",
+      ],
+    },
+    {
+      title: "Who should consider Khalifa University",
+      paragraphs: [
+        `Khalifa University is strongest for applicants whose academic goals fit a research-intensive university in Abu Dhabi. A ${degree} applicant should be able to explain why KU's programmes, laboratories, faculty strengths, and UAE context make sense for the chosen field.`,
+        bachelors
+          ? "An undergraduate applicant should consider KU if they have strong school preparation in mathematics and science, can meet English requirements, and want a structured technology-focused university. The scholarship can reduce tuition substantially, but students still need to understand living costs, accommodation rules, visa steps, and whether the admission offer includes the tier they expected."
+          : masters
+            ? "A master's applicant should consider KU if the selected programme builds directly on the bachelor's background and leads to a realistic technical, research, or professional path. The scholarship can be attractive, but master's students should be especially careful with stipend assumptions because official benefits vary by scholarship tier and full-time eligibility."
+            : "A PhD applicant should consider KU if they have a defined research interest and can connect it to KU faculty, research centres, or strategic research areas. The best PhD applications are not generic requests for funding; they show that the applicant understands the research environment and can contribute to a project, lab, or academic group.",
+        "This scholarship is a poor fit for applicants who are applying only because the UAE sounds attractive, who do not meet the academic threshold, who need guaranteed full living-cost funding before admission, or who choose a programme without checking prerequisites. KU scholarships can be generous, but they are rule-based and competitive.",
+      ],
+    },
+    {
+      title: "Admission comes first",
+      paragraphs: [
+        `Scholarship consideration is tied to admission. For ${degree} applicants, the first question is whether the applicant can satisfy KU's admission rules: ${admissionFocus}. If the admission file is weak or incomplete, scholarship discussion becomes secondary.`,
+        bachelors
+          ? "Undergraduate applicants should read curriculum-specific requirements carefully. High-school systems are not evaluated in identical ways, and international students may need attestation, equivalency, or official examination evidence. English requirements such as IELTS Academic 6.0, TOEFL iBT 79, or accepted equivalent or exemption routes should be checked against the current admission page."
+          : "Graduate applicants should prepare transcripts, degree certificates, statement of purpose, referee details, CV, English-test evidence, and any programme-specific materials. Current records in this data set note TOEFL iBT 91 or IELTS Academic 6.5 for graduate admission, with exemption pathways subject to approval. Applicants with degrees from outside the UAE should also expect recognition or equivalency steps where required.",
+        level === "PhD"
+          ? "For PhD applicants, research alignment is critical. A strong GPA alone is rarely enough. The applicant should be able to name research areas, understand KU's faculty strengths, and explain how previous study or research experience supports the proposed doctoral direction. Direct PhD applicants need to be especially careful because the academic threshold is higher and the route is not a fallback for unprepared applicants."
+          : "Programme fit matters even when there is no separate scholarship essay. A student choosing a major or master's programme that does not match prior preparation will struggle to pass admission review and may also appear less competitive for scholarship support.",
+      ],
+    },
+    {
+      title: "What the benefits can include",
+      paragraphs: [
+        bachelors
+          ? "For undergraduate scholarships, the official KU undergraduate scholarship page lists tiers. Tier I includes full coverage of tuition fees and textbooks provided by the university. Tier II provides a 75 percent tuition waiver and textbooks. Tier III provides a 50 percent tuition waiver and textbooks. Tier IV provides a 25 percent tuition waiver and textbooks. Tier V provides textbooks only. This tier structure is why the safest wording is tier-based scholarship support, not guaranteed full funding."
+          : masters
+            ? "For master's students, official KU graduate scholarship information describes tier-based support that may include a tuition waiver up to full coverage, textbooks, university accommodation for eligible full-time students, medical insurance for full-time international students sponsored by KU, mobilization and demobilization flights for eligible full-time overseas international students, and visa-fee coverage. Some master's routes do not include a standard monthly stipend, so applicants must verify the actual tier and offer conditions."
+            : "For PhD students, official KU graduate scholarship information describes stronger support for high-caliber candidates in certain tiers, including tuition waiver, monthly stipend, textbooks, university accommodation for eligible full-time students, medical insurance for sponsored full-time international students, approved research-conference support, mobilization and demobilization flights, and visa-fee coverage. PhD stipend amounts and work or service expectations depend on the scholarship route and tier.",
+        "The offer letter is the key document. Students should not make financial decisions from a social media post or a general scholarship summary. Before accepting, check tuition liability after waiver, whether accommodation is included or only available, whether health insurance applies to your status, whether flights apply to your category, whether books are covered, whether visa fees are covered, and whether any university service or academic-progress conditions apply.",
+        "Applicants should also budget for costs that may sit outside the award: application documents, tests, attestation, courier fees, travel before approval, personal equipment, food beyond any stipend, local transport, deposits, personal medical costs, and emergency funds. Abu Dhabi can be expensive, so a partial tuition waiver may still leave a real financial gap.",
+      ],
+    },
+    {
+      title: "How scholarship tiers affect decision-making",
+      paragraphs: [
+        "Tier-based scholarships are different from yes-or-no scholarships. A student may be admitted with a partial waiver rather than the highest tier. That is still valuable, but the affordability calculation changes. Before accepting, compare the confirmed tuition waiver, expected living costs, accommodation status, travel costs, and personal resources.",
+        bachelors
+          ? "For bachelor's students, the difference between full tuition and a 25 percent waiver is enormous. Families should not assume that an admission offer equals a fully funded award. Ask what tier has been awarded, what tuition remains, whether the tier can change in later years, and what academic performance is required to keep support."
+          : "For graduate students, the distinction between full-time and part-time status can affect benefits. Accommodation, insurance, flights, and visa-fee coverage may be tied to full-time international status or sponsorship. Read the scholarship conditions carefully before assuming every line applies.",
+        "A careful applicant treats scholarship tier as part of the final offer review. It is normal to be excited about admission, but the financial terms decide whether the route is safe.",
+      ],
+    },
+    {
+      title: "Application process",
+      ordered: [
+        "Check the current Khalifa University admission page for the intended level and intake.",
+        "Confirm the application deadline, because deadlines can differ between undergraduate and postgraduate admission cycles.",
+        "Choose a programme that matches your academic background and career or research plan.",
+        "Prepare transcripts, certificates, English-test evidence, passport or identity documents, CV, statement of purpose, references, and any programme-specific materials.",
+        "Submit the online admission application before the deadline.",
+        "Complete any assessment, interview, attestation, equivalency, or document-verification steps requested by KU.",
+        "Review the admission and scholarship offer carefully, especially the scholarship tier and continuing conditions.",
+      ],
+      paragraphs: [
+        "The scholarship is not something applicants should chase separately from admission. A clean admission file, complete documents, and realistic programme choice are the foundation. Missing documents, unclear transcripts, or late English scores can weaken both admission and scholarship consideration.",
+        "Because deadlines and portals can change by intake, students should use KU's current admissions pages rather than relying on old deadline graphics. The existing record lists March 2, 2026 for Fall 2026 intake, but applicants should verify the current active cycle before planning.",
+      ],
+    },
+    {
+      title: "Documents to prepare early",
+      bullets: [
+        bachelors ? "Grade 12 or equivalent school records, final or predicted where accepted" : "Bachelor's and, for PhD applicants where required, master's transcripts and degree certificates",
+        "Passport or national identity document",
+        "English language evidence such as IELTS, TOEFL, EmSAT, or approved exemption documentation",
+        "Curriculum vitae for graduate applicants, and academic/activity evidence where relevant for undergraduate applicants",
+        "Statement of purpose or research statement where required by the programme",
+        "Recommendation or referee details where required",
+        "Attestation, equivalency, or recognition documents for international qualifications where required",
+        "Programme-specific materials such as portfolio, writing sample, research proposal, or interview preparation where applicable",
+      ],
+      paragraphs: [
+        "Applicants with international records should prepare for document verification. UAE institutions may require attestation, equivalency, or recognition steps, especially when final enrollment depends on official education documents. These processes can take time and should not be left until the final week.",
+        "Names, dates, degree titles, and grade scales should be consistent across every document. If a transcript uses a local grading system, include the grading scale or official explanation where allowed. A strong scholarship file is easy for an admissions reviewer to read.",
+      ],
+    },
+    {
+      title: "Academic progress and continuing eligibility",
+      paragraphs: [
+        "Scholarship support can depend on continued academic performance and compliance with university rules. Students should read the terms attached to their tier, including minimum GPA, credit-load expectations, full-time status, conduct rules, and whether the scholarship is reviewed each semester or academic year.",
+        bachelors
+          ? "Undergraduate students should be especially careful because a four-year programme creates long-term financial exposure. Ask what happens if GPA drops, if a student changes major, if the programme takes longer than expected, or if a student repeats courses. These details matter more than the headline tier."
+          : "Graduate students should ask how scholarship support interacts with assistantship duties, research obligations, conference support, internship rules, part-time work, thesis progress, and leave of absence. The offer may be generous, but it is still governed by university policy.",
+      ],
+    },
+    {
+      title: "Common mistakes to avoid",
+      bullets: [
+        "Calling every Khalifa University scholarship fully funded without checking the tier.",
+        "Assuming undergraduate students receive graduate PhD stipend benefits.",
+        "Applying to a programme that does not match prior academic preparation.",
+        "Ignoring English-test or exemption rules until the deadline.",
+        "Missing attestation, equivalency, or document-recognition steps.",
+        "Accepting an offer before calculating the remaining cost after scholarship tier.",
+        "Using outdated intake deadlines from old scholarship blogs.",
+        "For PhD applicants, writing a generic research statement with no clear KU research fit.",
+      ],
+      paragraphs: [
+        `A strong Khalifa University ${degree} application is specific. It shows that the applicant understands the programme, meets the admission standard, can document qualifications properly, and knows that the final scholarship tier controls the real funding package. That clarity protects students from overpromising themselves a benefit that has not yet been awarded.`,
+      ],
+    },
+  ];
+}
+
+type AzerbaijanLevel = "Bachelors" | "Masters" | "PhD";
+
+function azerbaijanReaderSections(level: AzerbaijanLevel): ScholarshipContentSection[] {
+  const bachelors = level === "Bachelors";
+  const masters = level === "Masters";
+  const degree = bachelors ? "Bachelor's" : masters ? "Master's" : "PhD";
+  const ageLimit = bachelors ? "below 35" : masters ? "below 40" : "below 45";
+  const durationNote = bachelors ? "undergraduate programme length" : masters ? "graduate programme length, often 1.5 to 2 years" : "doctoral programme length, usually longer and research-dependent";
+
+  return [
+    {
+      title: "Scholarship at a glance",
+      facts: [
+        { label: "Official name", value: "Heydar Aliyev International Education Grant Program" },
+        { label: "Study level", value: degree },
+        { label: "Annual awards", value: "The official 2026/2027 call states that 100 international students benefit annually" },
+        { label: "Eligible groups", value: "Citizens of eligible OIC, NAM, SIDS, and culturally or historically connected countries" },
+        { label: "First stage", value: "Nomination by relevant authorities in the applicant's own country" },
+        { label: "Second stage", value: "SIACAS application through the Azerbaijan education portal for nominated applicants" },
+        { label: "Age rule", value: `${degree} applicants must be ${ageLimit} as of September 15, 2026` },
+        { label: "Academic floor", value: "At least 70 out of 100, or equivalent, in previous studies" },
+      ],
+      paragraphs: [
+        `The Azerbaijan Government Scholarship in this data set is the Heydar Aliyev International Education Grant Program. For ${degree} applicants, the most important point is that this is not a direct apply-anytime university scholarship. It is a government scholarship with a nomination-first process followed by a second-stage online application in SIACAS.`,
+        "The official call describes the programme as a way to support human-capital development in partner countries and strengthen academic ties with Azerbaijan. That purpose explains why citizenship categories and nomination authorities matter so much. A student who is not nominated by the relevant authority in the first stage cannot simply bypass the system by applying directly to a university.",
+      ],
+    },
+    {
+      title: "Who should apply",
+      paragraphs: [
+        `A strong ${degree} applicant should first confirm that their country is included in the eligible groups named in the call. The official call refers to member states of the Organization of Islamic Cooperation, member states of the Non-Aligned Movement, Small Island Developing States, and countries sharing common cultural, ethnic, or historical ties with Azerbaijan. The exact eligible-country list should be checked in the current call or through the applicant's nominating authority.`,
+        bachelors
+          ? "Undergraduate applicants should apply only if their school results clearly meet the academic threshold, their intended field is available in Azerbaijan, and they can manage a multi-year study commitment away from home. The scholarship can be generous, but the long duration means living, academic progress, language, and registration rules matter for several years."
+          : masters
+            ? "Master's applicants should apply when the chosen programme is a logical next step after the bachelor's degree and when the applicant can explain why Azerbaijan is suitable for the field. A generic plan to study abroad is weaker than a clear postgraduate direction connected to previous study or work."
+            : "PhD applicants should apply only with a serious research direction and a realistic understanding of doctoral study. The strongest doctoral files usually show prior research preparation, a credible topic, and a match with Azerbaijani higher education institutions rather than just a desire for funded PhD study.",
+        "Applicants who are Azerbaijani citizens, or whose Azerbaijani citizenship has been terminated, are not eligible under the call. Applicants above the age limit, below the academic threshold, or unable to secure official nomination should not treat the second-stage portal as a workaround.",
+      ],
+    },
+    {
+      title: "The two-stage application process",
+      paragraphs: [
+        "The first stage is handled through the relevant authorities in the applicant's own country. The call describes first-stage submission to state authorities such as ministries or embassies during the published window. Those authorities review applicants and submit official nominations. This stage can vary by country, so applicants must follow local instructions, not only the Azerbaijan portal.",
+        "The second stage is for nominated applicants only. Nominated candidates register and submit the application through SIACAS, the Study in Azerbaijan Centralized Admission Service. The current records list the 2026/2027 first-stage deadline as April 15, 2026 at 6 PM Baku time and the SIACAS second-stage deadline as June 1, 2026 at 6 PM Baku time. Future cycles must be checked again because dates can change.",
+        "Nomination is not a final award. After SIACAS submission, the application still goes through programme selection, evaluation, final decision, notification, and enrollment steps. The selected applicant is confirmed only after completing final documentation and registration requirements in Azerbaijan.",
+      ],
+    },
+    {
+      title: "Funding package and limits",
+      paragraphs: [
+        "The 2026/2027 call lists a strong funding package: tuition fees, language preparatory study where applicable, one annual round-trip international economy-class ticket, monthly allowance, medical insurance allowance, and support for visa and temporary residence permit costs. The current data records the monthly allowance as 800 AZN for accommodation, living, and study materials for 10 months per year, excluding July and August, and medical insurance allowance as 200 AZN yearly.",
+        "Students should still budget carefully. The call also makes clear that expenses not included in the benefit list are not reimbursed. That can include document legalisation, translations, local transport, clothing, personal technology, extra travel, family costs, additional medical expenses, summer living costs, and personal emergencies. A scholarship can be fully funded in its official categories while still requiring sensible personal planning.",
+        `For ${degree} study, the scholarship duration should be understood against the ${durationNote}. If language preparatory study is required, the total time in Azerbaijan can be longer. Applicants should check whether their chosen programme is taught in Azerbaijani, English, Russian, Turkish, or another approved language and what proof of language proficiency is needed.`,
+      ],
+    },
+    {
+      title: "Choosing programmes in Azerbaijan",
+      paragraphs: [
+        "Nominated applicants can choose up to three specialties in Azerbaijani higher education institutions within the scholarship channel. Those choices should be treated seriously. A safe list balances the applicant's academic background, language ability, admission requirements, and future goals. Do not choose three programmes only by city or university reputation.",
+        bachelors
+          ? "Bachelor's applicants should check whether their school subjects prepare them for the intended major. Engineering, medicine-related tracks, information technology, economics, humanities, and arts routes can have different expectations. If a programme has language or subject prerequisites, those should be checked before ranking it."
+          : masters
+            ? "Master's applicants should make sure the chosen field follows logically from the undergraduate degree. A major subject switch can be possible in some systems, but it is risky if the university expects specific prior coursework. The motivation letter should explain why the master's is the right next step."
+            : "PhD applicants should think like researchers. Look for departments, supervisors, laboratories, and research themes that can actually support the topic. A doctoral application built only around a broad subject name is weaker than one connected to a real academic environment.",
+        "Programme choice also affects language. The call recognises language proficiency in the language of study, including English, Russian, Turkish, or Azerbaijani routes according to programme rules. Applicants should not assume that every programme is available in English or that a language certificate is unnecessary.",
+      ],
+    },
+    {
+      title: "Documents to prepare",
+      bullets: [
+        "Completed nomination form for the first stage.",
+        "Diplomas and academic transcripts from previous studies.",
+        "Medical certificate including HIV/AIDS and Hepatitis B/C tests.",
+        "Valid passport copy.",
+        "Curriculum vitae or resume.",
+        "Language proficiency proof where required by the chosen language or programme route.",
+        "Motivation letter explaining study goals and fit with Azerbaijan.",
+        "Local or international awards if available.",
+        "Any extra documents requested by the applicant's nominating authority.",
+      ],
+      paragraphs: [
+        "The document set must satisfy both stages. A local ministry or embassy may ask for documents in one format for nomination, while SIACAS may require uploads in another format for second-stage submission. Keep scanned copies, translations, and originals organized from the beginning.",
+        "Medical documents are not optional background paperwork. Because the official document list includes tests for HIV/AIDS and Hepatitis B/C, applicants should check where accepted medical certificates can be issued, how recent they must be, and whether translation or certification is needed.",
+      ],
+    },
+    {
+      title: "Selection and final registration",
+      paragraphs: [
+        "After nomination and SIACAS submission, final evaluation normally checks eligibility, academic readiness, programme fit, document completeness, and available places. A nominated applicant should not make non-refundable travel plans until the final result and enrollment instructions are issued.",
+        "The current data records an arrival requirement by September 30, 2026 for the 2026/2027 cycle. Arrival is not the same as being fully registered. Selected students still need to complete university registration, visa and residence procedures, and any language or preparatory-year placement. Missing these steps can create problems even after selection.",
+        "Applicants should monitor email and official portals closely after submission. Government scholarship timelines often move in stages, and delayed responses can cause avoidable issues with registration, travel, and visa documentation.",
+      ],
+    },
+    {
+      title: `${degree} applicant reality check`,
+      paragraphs: [
+        bachelors
+          ? "Bachelor's applicants should remember that the award may support a long undergraduate route, so the decision is bigger than winning the first-year place. Ask whether the field is available for your country, whether the language of instruction is realistic, how the preparatory year works if required, and what academic progress is needed to remain in good standing. A four-year funded route is excellent only if the student can stay academically and financially stable through the full period."
+          : masters
+            ? "Master's applicants should use the motivation letter to show progression from previous study into a focused graduate goal. The scholarship is not a blank cheque for any foreign master's degree; the file should make clear why the chosen Azerbaijani programme is a serious next step and how the degree fits future work, research, or public contribution."
+            : "PhD applicants should treat the programme search as a research-fit exercise. Before ranking specialties, identify whether Azerbaijani institutions have supervisors, laboratories, data access, or research groups that can support the topic. A doctoral application that only says fully funded PhD is weak; a file that explains topic, method, fit, and feasibility gives evaluators something concrete to trust.",
+        `For ${degree} applicants, the safest strategy is to prepare both a scholarship file and an admission file. The scholarship file proves eligibility, nomination, academic threshold, documents, and timeline compliance. The admission file proves that the chosen programme can actually accept the student. Both must work together.`,
+      ],
+    },
+    {
+      title: "Common mistakes to avoid",
+      bullets: [
+        "Trying to apply directly to SIACAS without first-stage official nomination.",
+        "Assuming nomination guarantees the final scholarship award.",
+        "Ignoring the age limit for the intended study level.",
+        "Submitting academic records below the 70 out of 100 equivalent threshold.",
+        "Choosing three specialties without checking language of instruction or academic prerequisites.",
+        "Forgetting that July and August are excluded from the monthly allowance period listed in the current data.",
+        "Treating annual flight support as unlimited travel.",
+        "Waiting too long to prepare medical certificates and passport documents.",
+        "Using unofficial agents instead of the official nomination and SIACAS route.",
+      ],
+      paragraphs: [
+        `A strong Azerbaijan Government Scholarship ${degree} application is organized around the real process: eligible country, official nomination, clean documents, SIACAS submission, realistic programme choices, and final registration in Azerbaijan. The funding is attractive, but the process is structured and timing-sensitive.`,
+      ],
+    },
+  ];
+}
+
 const rawScholarships: Scholarship[] = [
   {
     slug: "honjo-international-scholarship-2027-japan",
@@ -2442,549 +3323,1112 @@ const rawScholarships: Scholarship[] = [
 
   {
     slug: "turkiye-burslari-scholarship-phd",
-
-    title: "Turkiye Burslari Scholarship",
+    title: "Türkiye Scholarships 2027: PhD Application Guide",
+    seoTitle: "Türkiye Scholarships 2027 for PhD: Research Proposal and Eligibility",
+    metaDescription: "Prepare for Türkiye Scholarships 2027 PhD applications. Check the under-35 and 75% rules, 9,000 TL stipend, research proposal, written sample, programmes, and interview.",
     overview:
-      "Turkish government scholarship covering tuition accommodation and monthly stipend for international students.",
+      "Türkiye Scholarships provides full-time doctoral funding together with placement at a participating Turkish university. The general application period runs from 10 January to 20 February each year. The 2027 PhD cycle is currently pre-open, so applicants should wait for the official matching announcement before treating the dates or available programmes as final.",
+    introduction:
+      "The current PhD package includes university and department placement, tuition, accommodation, health insurance, a one-year Turkish-language course, one-time flight support at the beginning and after graduation, and a monthly stipend of 9,000 TL. Doctoral applicants must also upload a proposed research topic and a sample of research they have previously written.",
+    summary:
+      "Under the current general criteria, PhD applicants need at least 75% academic achievement, must be under age 35, and must hold or complete the required prior qualification before August. Selection considers academic preparation, research interests, programme preferences, letter of intent, career goals, social engagement, and a 15-30 minute interview. Graduate health-science programmes are not funded through this full-time competition.",
+    contentSections: [
+      {
+        title: "Türkiye Scholarships PhD 2027 at a glance",
+        facts: [
+          { label: "Current status", value: "Pre-open for 2027" },
+          { label: "Expected application period", value: "10 January-20 February 2027, subject to confirmation" },
+          { label: "Minimum academic achievement", value: "75% under current graduate criteria" },
+          { label: "Age criterion", value: "Under 35 for PhD programmes" },
+          { label: "Current monthly stipend", value: "9,000 TL" },
+          { label: "Research documents", value: "Proposed research topic plus previous written research sample" },
+          { label: "Placement", value: "University and department placement included" },
+          { label: "Application fee", value: "Free through official TBBS" },
+        ],
+        paragraphs: [
+          "Türkiye Scholarships is administered by the Presidency for Turks Abroad and Related Communities. Candidates submit one online scholarship application and select doctoral options made available to their profile in the Türkiye Scholarships Application System, or TBBS. Programme availability can depend on prior education, research field, tests, language evidence, and institutional rules.",
+          "The general calendar normally schedules evaluation in March and April, interviews from April to June, results in early August, initial procedures during August, and arrival in September. The 2027 announcement, candidate portal, and interview communication control the actual dates; old screenshots and unofficial calendars do not.",
+        ],
+      },
+      {
+        title: "What the doctoral scholarship covers",
+        bullets: [
+          "Placement at a participating Turkish university and doctoral department",
+          "Tuition-fee coverage for the placed PhD programme",
+          "Current monthly doctoral stipend of 9,000 TL",
+          "Accommodation under the programme's applicable arrangements",
+          "Health insurance",
+          "One year of Turkish-language education",
+          "One-time flight ticket at the beginning of education and after graduation",
+          "Academic, social, cultural, and alumni activities",
+        ],
+        paragraphs: [
+          "The package supports degree study and living, but it should not be confused with a guaranteed research grant for every project expense. Laboratory materials, specialist software, fieldwork, participant costs, data access, conferences, and publication fees depend on the host programme, supervisor, university, or separately approved support. Applicants should investigate research resources before ranking options.",
+          "The stipend is paid in Turkish lira, so old foreign-currency conversions are unreliable. Housing costs and personal spending differ by city. Budget separately for document preparation, visa appointments, deposits, equipment, local travel, and costs before normal payments begin.",
+          "Accommodation and flight provisions follow current scholarship arrangements. Do not assume private family housing, yearly return tickets, or funding for dependants. A doctoral applicant relocating with family should verify visas, insurance, schooling, childcare, housing, and the complete household budget independently.",
+        ],
+      },
+      {
+        title: "Eligibility requirements",
+        paragraphs: [
+          "The current programme lists citizens of all countries among eligible groups, while Turkish citizens and individuals who have lost Turkish citizenship are ineligible. Applicants with dual citizenship or a previous status in Türkiye should read the exact live criteria and declare information accurately.",
+          "PhD applicants must currently be under age 35. Confirm how age is calculated for 2027, especially if your birthday falls near the cut-off. A general phrase such as below 35 is not a substitute for the official date rule in the application system.",
+          "The minimum academic achievement for graduate candidates is 75%. This is an eligibility threshold, not a likely-selection score. A doctoral committee will also consider the quality and relevance of the Master's preparation, research capability, proposed topic, written work, programme fit, and future direction.",
+          "Applicants normally need a Master's degree or must be expected to graduate by the end of the current academic year before August. Selected PhD programmes may require a thesis-based Master's, particular disciplines, methods courses, publications, examination scores, or other research preparation beyond the general scholarship rule.",
+          "People currently enrolled in a Turkish university at the same PhD level for which they apply are ineligible under the general criteria. Candidates already in Türkiye, previously enrolled at another level, or holding Turkish institutional links should check the precise rule rather than assuming all prior study produces the same outcome.",
+        ],
+      },
+      {
+        title: "Graduate health sciences are excluded",
+        paragraphs: [
+          "The official full-time programme states that Türkiye Scholarships does not award graduate scholarships in health sciences. A PhD applicant should not use the undergraduate medicine, dentistry, and pharmacy threshold to infer that clinical or health-specialisation doctoral programmes are funded.",
+          "If a proposed field overlaps with health, biomedical science, public health, biotechnology, or another interdisciplinary area, check how the programme is classified and whether it appears in TBBS. Only the available doctoral options and official programme information can confirm eligibility.",
+          "A Turkish university may independently admit international students to a health-related doctorate, but availability at the university does not automatically make the programme eligible for Türkiye Scholarships. Scholarship and ordinary admission routes must not be mixed.",
+        ],
+      },
+      {
+        title: "Choosing a doctoral programme and research environment",
+        paragraphs: [
+          "Start with programmes offered in TBBS, then study the host department's current doctoral regulations and faculty. Compare research themes, supervisors, laboratories, centres, datasets, field sites, methods training, coursework, comprehensive examinations, publication expectations, teaching duties, and typical degree duration.",
+          "Programme preferences should be consistent with the proposed research direction. Expert evaluation explicitly considers consistency. Ranking unrelated doctorates because they are available can signal that the research purpose is not mature. Related departments can approach the same problem differently, but explain the shared logic.",
+          "Read recent publications from possible supervisors and research groups. Look for genuine intellectual and methodological alignment rather than a famous university name. A strong host should have the expertise, infrastructure, data access, and supervisory capacity needed for the project.",
+          "Follow the programme's stated supervisor-contact policy. Some selection processes expect prior contact or confirmation; others assign supervision after admission and may discourage informal commitments. Do not send mass emails or claim a supervisor has agreed when the response only expressed general interest.",
+          "Investigate recognition and career fit. Candidates planning academic employment, regulated research, or public-sector promotion should verify how the Turkish PhD will be evaluated in their intended country. Scholarship placement cannot guarantee external recognition or a particular academic appointment.",
+        ],
+      },
+      {
+        title: "How to develop the proposed research topic",
+        paragraphs: [
+          "The official application instructions require a proposal for a research topic. Treat it as evidence that you can define a meaningful, feasible doctoral problem, even if the final project will later change with supervision. Follow any structure or length visible in the 2027 TBBS form and selected programme.",
+          "Begin with a bounded problem and a clear research gap. Explain what is known, what remains uncertain, and why answering the question matters academically and practically. Avoid topics so broad that no method could address them within a doctorate.",
+          "State focused questions or hypotheses and connect them to an appropriate conceptual framework. Describe likely data, cases, participants, experiments, archives, models, or texts and the methods used to analyse them. A proposal should show methodological judgement, not only enthusiasm for a social challenge.",
+          "Address feasibility. Consider access permissions, ethics, language, safety, equipment, data quality, field travel, time, and budget. If the project depends on a particular laboratory or dataset, confirm that the proposed host can realistically support it.",
+          "Explain expected contribution without promising guaranteed impact. Distinguish the new knowledge the thesis could produce from the longer-term policy, technical, organisational, educational, or community uses of that knowledge. A credible pathway is stronger than a claim to solve a global problem alone.",
+          "Write and cite the proposal yourself. Fabricated references, copied text, ghostwritten work, or research claims you cannot defend can lead to rejection and later academic-integrity consequences. Feedback from a mentor can improve logic, but the applicant must retain authorship and understand every methodological choice.",
+        ],
+      },
+      {
+        title: "Choosing the required written research sample",
+        paragraphs: [
+          "PhD applicants must upload a written example of research they have already carried out. Suitable material may include a Master's thesis chapter, published or submitted paper, research report, conference paper, or substantial academic project, subject to the portal's format and length instructions.",
+          "Choose work that demonstrates independent reasoning, literature use, method, analysis, and clear writing. Relevance to the proposed field helps, but a rigorous sample in a related area can be better than a weak document with a matching title. If the piece is co-authored, identify your contribution honestly.",
+          "Do not remove citations or present collaborative work as solely yours. If using an excerpt, include enough introduction and method for reviewers to understand it and label omitted sections. Where translation is necessary, follow the application rule and preserve the meaning and references accurately.",
+          "Review the sample before upload for legibility, author name, title, dates, citation completeness, confidential data, and consistency with the CV and publication list. A writing sample can prompt detailed interview questions, so reread the full work and be prepared to explain decisions and limitations.",
+        ],
+      },
+      {
+        title: "Language requirements and Turkish preparation",
+        paragraphs: [
+          "Doctoral programmes may be taught in Turkish, English, or another stated language. Applicants must submit an internationally accepted result such as TOEFL or another named certificate when the university or programme requires it. Do not assume IELTS or a medium-of-instruction letter is accepted unless the programme says so.",
+          "Scholarship recipients without a C1 Turkish proficiency certificate must generally attend the one-year Turkish-language course and achieve C1 by the end of that academic year, including students placed in programmes taught in English or another language. Confirm current implementation in the award terms.",
+          "Turkish can be important for teaching, administration, participant interviews, archives, field research, professional networks, and daily life. Research plans involving local institutions or communities should account for the language level needed to conduct ethical and valid work.",
+        ],
+      },
+      {
+        title: "Documents required for a PhD application",
+        bullets: [
+          "Valid identity document, national ID card, or passport",
+          "Candidate photograph taken within the previous year",
+          "Master's diploma or official temporary or expected-graduation evidence",
+          "Master's and other required academic transcripts",
+          "National examination results where applicable",
+          "GRE, GMAT, or other international examination results when required",
+          "TOEFL, DELF, or other accepted language results when required",
+          "Proposal for a research topic",
+          "Written example of research already completed",
+          "Letter of intent and programme-preference explanations",
+          "CV, publications, projects, employment, and activity evidence where requested",
+          "Recommendations or programme-specific documents required by the live system",
+        ],
+        paragraphs: [
+          "The 2027 TBBS checklist is final. Upload complete, legible records and provide certified translations where required. Degree names, grades, institutions, dates, authorship, and research titles should remain consistent across the forms and files.",
+          "Do not invent a 100-point grade conversion. Enter results using the portal's instructions and include the issuing institution's scale when possible. Explain transfers, name differences, study gaps, or unusual grading factually where the form permits.",
+          "Academic outputs should be verifiable. Clearly distinguish peer-reviewed publications, accepted papers, manuscripts, conference abstracts, theses, reports, and works in progress. Inflating publication status can undermine the entire application.",
+        ],
+      },
+      {
+        title: "Writing the doctoral letter of intent",
+        paragraphs: [
+          "The letter should connect prior academic and professional development, the proposed research, the selected Turkish programmes, and a realistic career contribution. It complements the proposal rather than repeating its literature review.",
+          "Explain why doctoral training is necessary and why now is the right stage. Use evidence from the Master's thesis, research, employment, teaching, projects, or community activity to show preparation. State what you personally did and learned.",
+          "Demonstrate informed programme fit by referring to faculty expertise, methods, centres, facilities, datasets, or intellectual traditions relevant to the project. Avoid generic claims about Türkiye connecting East and West unless that context genuinely affects the research.",
+          "Describe short-, medium-, and long-term goals with plausible institutions, roles, collaborators, or beneficiaries. A career plan can include research, university teaching, public policy, industry innovation, civil society, or institutional capacity, but it should show how the PhD creates a necessary capability.",
+          "Use your own voice. Copied templates often fail to match the research sample and become obvious during interview. A polished application must still truthfully represent the candidate's experience, motivations, and English ability.",
+        ],
+      },
+      {
+        title: "TBBS application process",
+        ordered: [
+          "Wait for the official 2027 announcement and access only the official Türkiye Scholarships portal.",
+          "Confirm nationality, under-35 status, academic threshold, graduation timing, and same-level enrolment eligibility.",
+          "Enter identity, education, research, employment, publication, and activity information accurately.",
+          "Upload the required identity, photograph, diplomas, transcripts, examinations, language evidence, proposal, and written research sample.",
+          "Research doctoral programmes offered to your profile and rank only coherent, suitable options.",
+          "Complete original letter-of-intent and career responses tailored to doctoral study.",
+          "Review every programme name, date, grade, research title, citation, and file before submission.",
+          "Submit before the confirmed deadline and retain the complete application and confirmation.",
+          "Monitor TBBS and email for expert evaluation and interview communication.",
+        ],
+        paragraphs: [
+          "The official application is free. No consultant can guarantee scholarship selection or reserve a supervisor and placement. Keep portal credentials private and avoid payment requests, cloned websites, or unofficial application forms.",
+          "Start preparation months before January. A credible proposal and writing sample cannot be produced safely during the final week. Early preparation also allows time for language tests, academic records, translations, and referee communication.",
+        ],
+      },
+      {
+        title: "Doctoral evaluation and interview",
+        paragraphs: [
+          "Preliminary assessment checks minimum academic achievement, age, and required documents. Expert evaluation then considers academic status, previous qualifications, academic interests, career goals, consistency of preferences, letter content, and social activity before creating the interview shortlist.",
+          "Official interviews usually last 15 to 30 minutes and include document checking, the purpose of application, academic knowledge, career goals, closing questions, and an opportunity for the candidate to ask questions. Applicants must bring the requested documents and certificates from their latest completed education.",
+          "For a PhD candidate, preparation should include a concise explanation of the research problem, gap, questions, methods, feasibility, significance, and host fit. Be ready to discuss the submitted writing sample, Master's work, publications, limitations, research ethics, and how the project may change with supervision.",
+          "Review every selected programme and possible research environment. An applicant should explain why each preference is defensible and how it supports the same broad direction. Memorised praise without knowledge of faculty or methods is weak evidence of fit.",
+          "Answer critical questions as a researcher. Acknowledge uncertainty, explain trade-offs, and revise a position when evidence warrants it. Panels do not require a completed dissertation at application, but they need confidence in the candidate's ownership, preparation, integrity, and ability to learn.",
+        ],
+      },
+      {
+        title: "Full PhD scholarship versus short-term research scholarship",
+        paragraphs: [
+          "The full-time PhD scholarship funds a complete doctoral programme and includes placement, tuition, stipend, accommodation, insurance, Turkish study, and flight support. Türkiye Scholarships also advertises a separate short-term Research Scholarship for three to twelve months, including some PhD candidates at dissertation stage.",
+          "The short-term Research Scholarship has a different stipend, calendar, purpose, and benefits and generally covers only its stated monthly payment. It should not be described as equivalent to full doctoral funding. Apply under the category that matches the intended activity and current academic status.",
+          "Likewise, the one-year Success Scholarship for students already enrolled in Türkiye is a separate short-term programme with different eligibility and limited coverage. Do not combine benefit figures or dates from these schemes with the full-time PhD competition.",
+        ],
+      },
+      {
+        title: "After selection: research and relocation checks",
+        paragraphs: [
+          "Read the placement and award agreement before accepting. Confirm the university, department, supervisor process, teaching language, coursework, examinations, research facilities, degree duration, accommodation, stipend, insurance, and Turkish-language obligations.",
+          "Discuss research funding and feasibility with the programme. Determine which costs are covered by the department or project, how ethics approval works, whether data access is realistic, and what milestones control progression. The personal stipend should not be assumed to fund an expensive laboratory or international fieldwork plan.",
+          "Follow official visa and travel instructions. Do not make non-refundable bookings or resign from secure employment based only on an interview or informal message. Keep certified digital and paper copies of scholarship, placement, identity, degrees, research, health, and family records.",
+          "Understand continuation conditions. Progress reviews, Turkish proficiency, academic performance, attendance, research integrity, authorised leave, and programme changes can affect funding. Ask the scholarship and graduate school before changing supervision, topic, enrolment, employment, or travel plans.",
+        ],
+      },
+      {
+        title: "Common PhD application mistakes",
+        bullets: [
+          "Calling the 2027 cycle open before the official announcement",
+          "Applying without meeting the under-35, 75%, graduation, citizenship, or enrolment rules",
+          "Seeking a graduate health-science programme excluded from the full-time scheme",
+          "Confusing the full PhD award with the short-term Research or Success Scholarship",
+          "Submitting a broad topic with no research gap, method, data, or feasibility plan",
+          "Uploading a writing sample without identifying co-authorship or providing enough context",
+          "Using fabricated citations, copied text, ghostwriting, or research claims that cannot be defended",
+          "Ranking unrelated programmes or ignoring supervisor and infrastructure fit",
+          "Assuming Turkish preparation waives a programme's English requirement",
+          "Treating admission, research-cost funding, and scholarship placement as identical decisions",
+          "Paying an agent or sharing TBBS credentials",
+          "Making travel or employment commitments before formal results and instructions",
+        ],
+      },
+      {
+        title: "Final 2027 PhD checklist",
+        ordered: [
+          "Confirm the official 2027 application dates and current under-35, 75%, nationality, graduation, and enrolment criteria.",
+          "Verify that suitable non-health-science doctoral programmes appear in TBBS for your profile.",
+          "Research faculty, supervision, methods, facilities, language, recognition, and research-cost support.",
+          "Develop an original, cited, focused, and feasible proposed research topic.",
+          "Select a strong prior written research sample and state authorship accurately.",
+          "Prepare identity, photograph, Master's degree or graduation evidence, transcripts, tests, language results, CV, and supporting academic records.",
+          "Write an original letter linking preparation, coherent programme preferences, research, Türkiye, and career contribution.",
+          "Complete the free TBBS form yourself, verify every detail, and submit before the confirmed deadline.",
+          "Prepare to defend the proposal, writing sample, programme fit, and goals in a 15-30 minute interview.",
+          "Before accepting, verify placement, supervisor process, research resources, award terms, visa, family budget, Turkish course, and continuation rules.",
+        ],
+      },
+    ],
 
     country: "Turkey",
+    continent: "Asia",
     degreeLevel: "PhD",
     fundingType: "Fully Funded",
 
-    deadline: "February",
-    duration: "Degree duration + language year",
+    deadline: "Expected 10 January-20 February 2027; awaiting official cycle confirmation",
+    duration: "Normal PhD duration plus one year of Turkish-language study as applicable",
 
     eligibility: [
-      "International applicants",
-      "Meet age and academic requirements",
-      "Meet program-specific requirements",
+      "Meet the official international nationality and citizenship criteria",
+      "Be under age 35 under the confirmed 2027 rule",
+      "Normally achieve at least 75% in prior graduate study",
+      "Hold a Master's degree or graduate before August 2027",
+      "Submit suitable original research material and meet programme-specific rules",
     ],
 
     benefits: [
-      "Tuition coverage",
-      "Accommodation",
-      "Monthly stipend",
-      "Health insurance",
-      "Turkish language course",
+      "University and department placement with tuition coverage",
+      "Current PhD stipend of 9,000 TL per month",
+      "Accommodation and health insurance under programme rules",
+      "One year of Turkish-language education",
+      "One-time flight ticket at the beginning of study and after graduation",
     ],
 
     applicationProcess: [
-      "Review eligibility",
-      "Apply through the official online system",
-      "Submit required documents",
-      "Track results on the official site",
+      "Verify the 2027 criteria and research suitable doctoral programmes",
+      "Prepare the required research proposal and previous written research sample",
+      "Submit the free TBBS application during the confirmed window",
+      "Defend research preparation and programme fit if shortlisted for interview",
+      "Track placement and results only through official channels",
     ],
 
     documents: [
-      "Passport or national ID",
-      "Academic transcripts",
-      "Diploma or expected graduation proof",
-      "Photo",
-      "Test scores (if required)",
+      "Passport or accepted identity evidence and recent photograph",
+      "Master's diploma or official expected-graduation evidence",
+      "Complete graduate transcripts and required translations",
+      "Proposed research topic and previous written research example",
+      "Accepted examination, language, recommendation, and programme-specific evidence where required",
     ],
 
-    applyUrl: "https://www.turkiyeburslari.gov.tr",
+    applyUrl: "https://turkiyeburslari.gov.tr/fulltimeprograms",
     officialSource: "Presidency for Turks Abroad and Related Communities",
 
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "chinese-government-scholarship-bachelors",
-
-    title: "Chinese Government Scholarship (CSC)",
+    title: "Chinese Government Scholarship 2027: Bachelor's Guide",
+    seoTitle: "CSC Scholarship 2027 for Bachelor's: CSCA and Application Guide",
+    metaDescription: "Prepare for the Chinese Government Scholarship 2027 Bachelor's cycle. Learn Type A and B routes, CSCA, under-25 rule, CNY 2,500 stipend, documents, and deadlines.",
     overview:
-      "Scholarship funded by the Chinese government to attract international students to Chinese universities.",
+      "The Chinese Government Scholarship supports eligible international undergraduate students through several routes rather than one universal application. The 2027 cycle is pre-open. Applicants must identify a current Type A, Type B, bilateral, Silk Road, or other programme and follow its country- or university-specific deadline.",
+    introduction:
+      "Full awards commonly cover tuition, approved accommodation, comprehensive medical insurance, and a CNY 2,500 monthly undergraduate stipend. Applicants generally need a high-school diploma, must be under 25, and now need a valid China Scholastic Competency Assessment score for Bachelor's admission under current calls.",
+    summary:
+      "Do not apply from a generic January-April article. Type A normally goes through a home-country dispatching authority; Type B goes through a designated Chinese university using its five-digit agency number and often a second university portal. The 2027 host call determines available majors, CSCA subjects, language scores, documents, and deadline.",
+    contentSections: cscReaderSections("Bachelors"),
 
     country: "China",
+    continent: "Asia",
     degreeLevel: "Bachelors",
     fundingType: "Fully Funded",
 
-    deadline: "January-April",
-    duration: "Degree duration",
+    deadline: "Route- and university-specific; 2027 cycle currently pre-open",
+    duration: "Usually 4-5 years, with possible preparatory Chinese study depending on the programme",
 
     eligibility: [
-      "Non-Chinese citizens",
-      "Meet admission requirements of the host university",
-      "Meet health and other program requirements",
+      "Non-Chinese citizen in good physical and mental health",
+      "High-school diploma or accepted equivalent and normally under age 25",
+      "Valid CSCA score report with subjects required by the chosen major",
+      "Meet the university's academic, language, nationality, and programme requirements",
+      "Not hold conflicting Chinese government scholarship support",
     ],
 
     benefits: [
-      "Tuition coverage",
-      "Accommodation (program dependent)",
-      "Monthly stipend (program dependent)",
-      "Medical insurance",
+      "Tuition waiver for the approved programme",
+      "On-campus accommodation or the arrangement stated by the host",
+      "Standard full-scholarship stipend of CNY 2,500 per month",
+      "Comprehensive medical insurance",
     ],
 
     applicationProcess: [
-      "Select a university and program",
-      "Submit the CSC application online",
-      "Submit required documents",
-      "Track admission results through official channels",
+      "Identify the official 2027 Type A, Type B, or named programme route",
+      "Confirm the agency number, major, teaching language, CSCA subjects, and exact deadline",
+      "Submit through CSC and any required dispatching-authority or university portal",
+      "Wait for nomination and final CSC approval as separate stages",
     ],
 
     documents: [
-      "Passport",
-      "Academic transcripts",
-      "Study plan",
-      "Recommendation letters",
-      "Foreigner physical examination form (if required)",
+      "Passport, high-school diploma or expected-graduation proof, and transcripts",
+      "Valid CSCA score report",
+      "Study plan and accepted language evidence",
+      "Physical examination and non-criminal record in the required form and validity",
+      "Route- and university-specific application materials",
     ],
 
     applyUrl: "https://www.campuschina.org",
     officialSource: "China Scholarship Council",
 
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "chinese-government-scholarship-masters",
-
-    title: "Chinese Government Scholarship (CSC)",
+    title: "Chinese Government Scholarship 2027: Master's Guide",
+    seoTitle: "CSC Scholarship 2027 for Master's: Complete Application Guide",
+    metaDescription: "Prepare for the Chinese Government Scholarship 2027 Master's cycle. Understand Type A and B routes, under-35 rule, CNY 3,000 stipend, study plan, supervisors, and documents.",
     overview:
-      "Scholarship funded by the Chinese government to attract international students to Chinese universities.",
+      "The Chinese Government Scholarship funds eligible international Master's students through country, university, and named programme routes. The 2027 cycle is pre-open, with no single CSC deadline. Applicants must follow the current dispatching authority or designated university call that matches their nationality, degree, and subject.",
+    introduction:
+      "Full awards commonly include tuition, approved accommodation, comprehensive medical insurance, and a CNY 3,000 monthly stipend. Applicants generally need a Bachelor's degree, must be under 35, and must satisfy the selected university's programme, language, study-plan, recommendation, and pre-admission requirements.",
+    summary:
+      "Type A normally uses a home-country dispatching authority, while Type B uses a Chinese university and its linked five-digit agency number. Many Type B applications require submission in both the CSC system and university portal. University nomination or supervisor interest is not the final CSC scholarship decision.",
+    contentSections: cscReaderSections("Masters"),
 
     country: "China",
+    continent: "Asia",
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
 
-    deadline: "January-April",
-    duration: "Degree duration",
+    deadline: "Route- and university-specific; 2027 cycle currently pre-open",
+    duration: "Usually 2-3 years, with possible preparatory Chinese study depending on the programme",
 
     eligibility: [
-      "Non-Chinese citizens",
-      "Meet admission requirements of the host university",
-      "Meet health and other program requirements",
+      "Non-Chinese citizen in good physical and mental health",
+      "Bachelor's degree or accepted equivalent and normally under age 35",
+      "Strong academic record and suitable preparation for the selected Master's",
+      "Meet the host's HSK, IELTS, TOEFL, or other accepted language rule",
+      "Not hold conflicting Chinese government scholarship support",
     ],
 
     benefits: [
-      "Tuition coverage",
-      "Accommodation (program dependent)",
-      "Monthly stipend (program dependent)",
-      "Medical insurance",
+      "Tuition waiver for the approved programme",
+      "On-campus accommodation or the arrangement stated by the host",
+      "Standard full-scholarship stipend of CNY 3,000 per month",
+      "Comprehensive medical insurance",
     ],
 
     applicationProcess: [
-      "Select a university and program",
-      "Submit the CSC application online",
-      "Submit required documents",
-      "Track admission results through official channels",
+      "Identify the official 2027 Type A, Type B, or named programme route",
+      "Research the major, language, study-plan, recommendation, and pre-admission rules",
+      "Submit through CSC and every required official external portal",
+      "Distinguish university nomination from final CSC approval",
     ],
 
     documents: [
-      "Passport",
-      "Academic transcripts",
-      "Study plan",
-      "Recommendation letters",
-      "Foreigner physical examination form (if required)",
+      "Passport, Bachelor's degree or expected-graduation proof, and transcripts",
+      "Study plan or research interest statement and two recommendations where required",
+      "Accepted language test or approved exemption evidence",
+      "Physical examination and non-criminal record in the required form and validity",
+      "Pre-admission, supervisor, and university-specific materials where required",
     ],
 
     applyUrl: "https://www.campuschina.org",
     officialSource: "China Scholarship Council",
 
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "chinese-government-scholarship-phd",
-
-    title: "Chinese Government Scholarship (CSC)",
+    title: "Chinese Government Scholarship 2027: PhD Guide",
+    seoTitle: "CSC Scholarship 2027 for PhD: Proposal, Supervisor and Application",
+    metaDescription: "Prepare for the Chinese Government Scholarship 2027 PhD cycle. Learn Type A and B routes, under-40 rule, CNY 3,500 stipend, research proposal, supervisor fit, and documents.",
     overview:
-      "Scholarship funded by the Chinese government to attract international students to Chinese universities.",
+      "The Chinese Government Scholarship supports international doctoral candidates through bilateral, university, and special programme routes. The 2027 cycle is pre-open and has no universal deadline. Applicants must locate a participating PhD programme and follow its current research, supervisor, language, agency-number, and portal instructions.",
+    introduction:
+      "Full awards commonly include tuition, approved accommodation, comprehensive medical insurance, and a CNY 3,500 monthly doctoral stipend. Applicants generally need a Master's degree, must be under 40, and need a feasible research plan aligned with the host's supervisors, methods, facilities, and doctoral regulations.",
+    summary:
+      "Type A applications usually go through a dispatching authority, while Type B applications go through a designated university and often require both CSC and university submissions. A supervisor email, pre-admission letter, or university nomination can support the file but does not replace CSC's final approval.",
+    contentSections: cscReaderSections("PhD"),
 
     country: "China",
+    continent: "Asia",
     degreeLevel: "PhD",
     fundingType: "Fully Funded",
 
-    deadline: "January-April",
-    duration: "Degree duration",
+    deadline: "Route- and university-specific; 2027 cycle currently pre-open",
+    duration: "Usually 3-4 years, with possible preparatory Chinese study depending on the programme",
 
     eligibility: [
-      "Non-Chinese citizens",
-      "Meet admission requirements of the host university",
-      "Meet health and other program requirements",
+      "Non-Chinese citizen in good physical and mental health",
+      "Master's degree or accepted equivalent and normally under age 40",
+      "Strong academic and research record suited to the proposed doctorate",
+      "Feasible research proposal aligned with available supervision and resources",
+      "Meet the host's language and programme rules without conflicting scholarship support",
     ],
 
     benefits: [
-      "Tuition coverage",
-      "Accommodation (program dependent)",
-      "Monthly stipend (program dependent)",
-      "Medical insurance",
+      "Tuition waiver for the approved programme",
+      "On-campus accommodation or the arrangement stated by the host",
+      "Standard full-scholarship stipend of CNY 3,500 per month",
+      "Comprehensive medical insurance",
     ],
 
     applicationProcess: [
-      "Select a university and program",
-      "Submit the CSC application online",
-      "Submit required documents",
-      "Track admission results through official channels",
+      "Identify an official 2027 route and suitable doctoral host",
+      "Verify supervisor policy, research fit, agency number, language, and deadline",
+      "Submit complete CSC and university or dispatching-authority applications",
+      "Distinguish supervisor interest, pre-admission, nomination, and final CSC approval",
     ],
 
     documents: [
-      "Passport",
-      "Academic transcripts",
-      "Study plan",
-      "Recommendation letters",
-      "Foreigner physical examination form (if required)",
+      "Passport, Master's degree or expected-graduation proof, and transcripts",
+      "Original research proposal and two academic recommendations where required",
+      "Language evidence, CV, publications, and supervisor or pre-admission material",
+      "Physical examination and non-criminal record in the required form and validity",
+      "University- and route-specific application documents",
     ],
 
     applyUrl: "https://www.campuschina.org",
     officialSource: "China Scholarship Council",
 
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "mext-scholarship-bachelors",
-
-    title: "MEXT Scholarship",
-    overview:
-      "Japanese government scholarship supporting international students in top Japanese universities through embassy or university recommendation.",
-
+    title: "MEXT Scholarship 2027: Undergraduate Application Guide",
+    seoTitle: "MEXT Undergraduate Scholarship 2027: Exams and Application Guide",
+    metaDescription: "Prepare for the MEXT Undergraduate Scholarship 2027. Learn embassy application steps, written exams, fields, ¥117,000 allowance, placement, documents, and deadlines.",
+    overview: "The MEXT Undergraduate Scholarship supports eligible international students for preparatory education and a Bachelor's degree in Japan. Most applicants use embassy recommendation through the Japanese diplomatic mission for their country of nationality. The local mission controls the 2027 deadline, submission method, and first screening.",
+    introduction: "The standard award includes a ¥117,000 monthly allowance under the applicable guideline, waived university examination, matriculation and tuition fees, and specified economy airfare. Embassy candidates sit Japanese, English, mathematics and, for natural sciences, the required science examinations before MEXT placement.",
+    summary: "Applicants must use the exact 2027 undergraduate guideline and local embassy notice. Most follow a one-year preparatory course before placement at a Japanese national university. Direct placement is limited, university choice is not unrestricted, and scholarship extension into a later graduate degree is not guaranteed.",
+    contentSections: mextReaderSections("Bachelors"),
     country: "Japan",
+    continent: "Asia",
     degreeLevel: "Bachelors",
     fundingType: "Fully Funded",
-
-    deadline: "April-May",
-    duration: "Degree duration + language training",
-
+    deadline: "Country-specific 2027 embassy deadline; check the responsible Japanese diplomatic mission",
+    duration: "Usually 5 years including preparation; 7 years for specified six-year professional courses",
     eligibility: [
-      "Meet nationality and age requirements",
-      "Meet academic requirements for the selected track",
-      "Pass required screening steps",
+      "Meet the exact 2027 nationality and birth-date requirements",
+      "Complete the schooling required for Japanese university admission by the stated date",
+      "Choose an eligible field and pass embassy document, written, and interview screening",
+      "Obtain the required Student visa and arrive during the designated period",
     ],
-
     benefits: [
-      "Tuition coverage",
-      "Monthly allowance",
-      "Travel support (as applicable)",
-      "Language training (as applicable)",
+      "¥117,000 monthly allowance under the applicable current guideline",
+      "Waived entrance examination, matriculation, and tuition fees",
+      "Specified economy airfare to Japan and eligible return travel",
+      "Preparatory Japanese and academic education where applicable",
     ],
-
     applicationProcess: [
-      "Choose embassy or university recommendation track",
-      "Submit application and documents",
-      "Complete exams and interviews",
-      "Follow placement instructions",
+      "Download the official 2027 guideline and country-specific embassy notice",
+      "Submit forms and academic documents to the diplomatic mission",
+      "Complete the required subject examinations and interview",
+      "Wait for MEXT final selection, preparation, and university placement",
     ],
-
     documents: [
-      "Passport",
-      "Academic transcripts",
-      "Recommendation letters",
-      "Study plan or research plan (if required)",
-      "Health certificate (if required)",
+      "Official 2027 application form and photograph",
+      "School transcripts and graduation or prospective-graduation certificate",
+      "School recommendation letter and official MEXT medical certificate",
+      "Direct-placement and language materials only where applicable",
     ],
-
     applyUrl: "https://www.studyinjapan.go.jp",
     officialSource: "Ministry of Education Culture Sports Science and Technology (MEXT)",
-
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "mext-scholarship-masters",
-
-    title: "MEXT Scholarship",
-    overview:
-      "Japanese government scholarship supporting international students in top Japanese universities through embassy or university recommendation.",
-
+    title: "MEXT Scholarship 2027: Master's Research Student Guide",
+    seoTitle: "MEXT Master's Scholarship 2027: Research Plan and Application",
+    metaDescription: "Apply for the MEXT 2027 Master's route through the Research Students scholarship. Learn the ¥144,000 allowance, research plan, screening, provisional acceptance, and placement.",
+    overview: "Master's applicants use MEXT's Research Students scholarship category, which includes regular graduate students and non-regular research students preparing for degree admission. The official 2027 embassy guidelines are published, while each Japanese diplomatic mission sets its own local application deadline and first-screening schedule.",
+    introduction: "Regular Master's students receive ¥144,000 monthly under the 2027 guideline; preparatory and non-regular research students receive ¥143,000. MEXT waives stated university fees and provides specified airfare. Applicants need a strong Field of Study and Research Plan and, after passing first screening, should seek provisional acceptance from suitable universities.",
+    summary: "Passing embassy screening is not the final scholarship. Research applicants may list up to three universities and obtain no more than two provisional-acceptance letters under the 2027 guideline. MEXT later conducts second screening and placement. Non-regular status is not automatic Master's admission and requires later university entrance and approved scholarship extension.",
+    contentSections: mextReaderSections("Masters"),
     country: "Japan",
+    continent: "Asia",
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
-
-    deadline: "April-May",
-    duration: "Degree duration + language training",
-
+    deadline: "Country-specific; 2027 embassy calls opened around mid-April 2026",
+    duration: "Standard Master's period, with possible research-student and six-month preparatory phases",
     eligibility: [
-      "Meet nationality and age requirements",
-      "Meet academic requirements for the selected track",
-      "Pass required screening steps",
+      "Meet 2027 nationality rules and normally be born on or after April 2, 1992",
+      "Qualify for admission to a Japanese Master's or first-phase doctoral course",
+      "Propose research in the previous or a related academic field",
+      "Pass embassy screening and secure university placement",
     ],
-
     benefits: [
-      "Tuition coverage",
-      "Monthly allowance",
-      "Travel support (as applicable)",
-      "Language training (as applicable)",
+      "¥144,000 monthly for regular Master's students; ¥143,000 for non-regular or preparatory status",
+      "Waived entrance examination, matriculation, and tuition fees under stated conditions",
+      "Specified economy airfare to Japan and eligible return travel",
+      "Possible six-month Japanese preparation where necessary",
     ],
-
     applicationProcess: [
-      "Choose embassy or university recommendation track",
-      "Submit application and documents",
-      "Complete exams and interviews",
-      "Follow placement instructions",
+      "Submit the 2027 research-student forms to the responsible diplomatic mission",
+      "Pass document review, Japanese and English exams, and interview",
+      "Request provisional acceptance only after passing first screening",
+      "Submit preferences and await MEXT second screening and placement",
     ],
-
     documents: [
-      "Passport",
-      "Academic transcripts",
-      "Recommendation letters",
-      "Study plan or research plan (if required)",
-      "Health certificate (if required)",
+      "2027 application, placement preference, and research-plan forms",
+      "All university transcripts and degree or prospective-graduation certificates",
+      "Academic recommendation and employer recommendation where applicable",
+      "MEXT medical certificate, thesis abstracts, and applicable language evidence",
     ],
-
     applyUrl: "https://www.studyinjapan.go.jp",
     officialSource: "Ministry of Education Culture Sports Science and Technology (MEXT)",
-
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "mext-scholarship-phd",
-
-    title: "MEXT Scholarship",
-    overview:
-      "Japanese government scholarship supporting international students in top Japanese universities through embassy or university recommendation.",
-
+    title: "MEXT Scholarship 2027: PhD Research Student Guide",
+    seoTitle: "MEXT PhD Scholarship 2027: Proposal, Acceptance and Placement",
+    metaDescription: "Prepare for the MEXT PhD Scholarship 2027 through the Research Students route. Check the ¥145,000 allowance, proposal, embassy screening, acceptance letters, and placement.",
+    overview: "PhD applicants use MEXT's Research Students category for graduate study in Japan. The official 2027 embassy-recommendation guidelines are available, but deadlines and first-screening dates are set by the Japanese diplomatic mission responsible for the applicant's nationality.",
+    introduction: "Regular doctoral students receive ¥145,000 monthly under the 2027 guideline, with university fees waived under stated conditions and specified economy airfare. Applicants need a concrete original research plan aligned with Japanese supervisors and resources, and must pass document, language-examination, interview, provisional-acceptance, second-screening, and placement stages.",
+    summary: "A first-screening pass, professor email, or provisional-acceptance letter is not the final award. Under the 2027 embassy process, applicants may list up to three universities and obtain no more than two provisional-acceptance letters. MEXT makes final placement, and non-regular research status must not be presented as confirmed PhD admission.",
+    contentSections: mextReaderSections("PhD"),
     country: "Japan",
+    continent: "Asia",
     degreeLevel: "PhD",
     fundingType: "Fully Funded",
-
-    deadline: "April-May",
-    duration: "Degree duration + language training",
-
+    deadline: "Country-specific; 2027 embassy calls opened around mid-April 2026",
+    duration: "Usually 3 years for regular doctoral study or 4 years in specified professional fields, plus applicable preparation",
     eligibility: [
-      "Meet nationality and age requirements",
-      "Meet academic requirements for the selected track",
-      "Pass required screening steps",
+      "Meet 2027 nationality rules and normally be born on or after April 2, 1992",
+      "Meet admission requirements for the intended doctoral phase in Japan",
+      "Propose feasible original research related to previous university study",
+      "Pass embassy screening and secure university placement",
     ],
-
     benefits: [
-      "Tuition coverage",
-      "Monthly allowance",
-      "Travel support (as applicable)",
-      "Language training (as applicable)",
+      "¥145,000 monthly for regular doctoral students; ¥143,000 for non-regular or preparatory status",
+      "Waived entrance examination, matriculation, and tuition fees under stated conditions",
+      "Specified economy airfare to Japan and eligible return travel",
+      "Possible six-month Japanese preparation where necessary",
     ],
-
     applicationProcess: [
-      "Choose embassy or university recommendation track",
-      "Submit application and documents",
-      "Complete exams and interviews",
-      "Follow placement instructions",
+      "Submit official 2027 research forms through the responsible diplomatic mission",
+      "Defend language readiness and the research plan during first screening",
+      "Request provisional acceptance only after passing",
+      "Submit final preferences and await MEXT second screening and placement",
     ],
-
     documents: [
-      "Passport",
-      "Academic transcripts",
-      "Recommendation letters",
-      "Study plan or research plan (if required)",
-      "Health certificate (if required)",
+      "2027 application, placement preference, and research-plan forms",
+      "Undergraduate and graduate transcripts and degree certificates",
+      "Academic recommendation, thesis abstracts, and employer recommendation where applicable",
+      "Official MEXT medical certificate and applicable language or research evidence",
     ],
-
     applyUrl: "https://www.studyinjapan.go.jp",
     officialSource: "Ministry of Education Culture Sports Science and Technology (MEXT)",
-
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "fulbright-foreign-student-program-masters",
-
-    title: "Fulbright Foreign Student Program",
-    overview:
-      "Prestigious US government scholarship enabling international students to pursue graduate study in the United States.",
-
+    title: "Fulbright Foreign Student Program 2027: Master's Guide",
+    seoTitle: "Fulbright Foreign Student Program 2027: Master's Application Guide",
+    metaDescription: "Prepare for a Fulbright Foreign Student Master's application. Verify your country's deadline, eligibility, funding, IIE or self-placement model, essays, tests, and interview.",
+    overview: "The Fulbright Foreign Student Program enables eligible graduate students, young professionals, and artists from participating countries to pursue graduate study or research in the United States. There is no universal 2027 deadline, eligibility rule, or funding package: each home-country Fulbright Commission, Foundation, or U.S. Embassy administers its competition.",
+    introduction: "Applicants must begin with the official Foreign Fulbright country selector. The local call determines whether full Master's degrees are offered, which fields qualify, what costs are funded, and whether university admission uses IIE-placement or self-placement. Approximately 4,000 foreign students receive Fulbright scholarships annually across more than 160 countries.",
+    summary: "A Fulbright nomination is not automatically a university admission or final grant. Applicants need a coherent study objective, evidence-based personal statement, strong recommendations, appropriate tests, and an approved U.S. placement. Final participation commonly uses J-1 exchange status and may carry a two-year home-country physical-presence requirement.",
+    contentSections: fulbrightReaderSections("Masters"),
     country: "USA",
+    continent: "North America",
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
-
-    deadline: "Varies by country",
-    duration: "1-2 years",
-
+    deadline: "Country-specific; verify the current home-country Fulbright call",
+    duration: "Country award and approved Master's programme dependent",
     eligibility: [
-      "Citizen of a participating country",
-      "Meet academic requirements for graduate study",
-      "Meet English proficiency requirements",
+      "Eligible citizenship or residence under a participating home-country programme",
+      "Bachelor's degree or recognised equivalent by the required date",
+      "Meet country-specific field, academic, experience, and English requirements",
+      "Demonstrate a credible study objective, cultural-exchange readiness, and return contribution",
     ],
-
     benefits: [
-      "Tuition and fees (program dependent)",
-      "Monthly stipend",
-      "Health insurance",
-      "Travel support (as applicable)",
+      "Tuition, required fees, and university cost sharing as defined by the local award",
+      "Country- and placement-specific maintenance allowance",
+      "Accident and sickness health benefits under programme rules",
+      "Travel, books, settlement, or other allowances only where the local grant confirms them",
     ],
-
     applicationProcess: [
-      "Apply through your local Fulbright commission or embassy",
-      "Submit online application and documents",
-      "Complete interviews if required",
-      "Follow placement instructions",
+      "Open the official home-country Fulbright call and verify Master's availability",
+      "Submit the complete application to the named Commission, Foundation, or U.S. Embassy",
+      "Complete interview, testing, and nomination requirements",
+      "Follow the assigned IIE-placement or self-placement process through final grant approval",
     ],
-
     documents: [
-      "Academic transcripts",
-      "CV",
-      "Personal statements",
-      "Recommendation letters",
-      "Test scores (if required)",
+      "Academic transcripts, degree evidence, and CV or résumé",
+      "Original study objective and personal statement",
+      "Recommendation letters following country instructions",
+      "TOEFL, IELTS, GRE, GMAT, or programme-specific results where required",
+      "Identity, citizenship, portfolio, writing, or professional evidence required locally",
     ],
-
-    applyUrl: "https://foreign.fulbrightonline.org",
+    applyUrl: "https://foreign.fulbrightonline.org/about/foreign-student-program",
     officialSource: "U.S. Department of State",
-
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "fulbright-foreign-student-program-phd",
-
-    title: "Fulbright Foreign Student Program",
-    overview:
-      "Prestigious US government scholarship enabling international students to pursue graduate study in the United States.",
-
+    title: "Fulbright Foreign Student Program 2027: PhD Guide",
+    seoTitle: "Fulbright Foreign Student Program 2027: PhD Application Guide",
+    metaDescription: "Prepare for a Fulbright Foreign Student PhD application. Verify country eligibility, funding duration, research and supervisor fit, placement, tests, essays, and interview.",
+    overview: "The Fulbright Foreign Student Program allows eligible international graduate students and researchers from participating countries to study or conduct research in the United States. PhD availability, deadline, fields, grant length, and benefits vary by home-country programme; some countries do not fund full doctoral degrees.",
+    introduction: "Applicants must use the official Foreign Fulbright country selector and local Commission, Foundation, or U.S. Embassy instructions. A doctoral programme may last longer than the Fulbright grant, making written later-year university funding essential. Placement can be managed by IIE or by the candidate under a self-placement model.",
+    summary: "Strong PhD applications align a feasible research direction with suitable U.S. departments, supervisors, methods, and resources. Nomination, university admission, placement, funding, medical clearance, J-1 sponsorship, and final grant approval are separate. Applicants should plan for cultural exchange and a credible contribution after returning home.",
+    contentSections: fulbrightReaderSections("PhD"),
     country: "USA",
+    continent: "North America",
     degreeLevel: "PhD",
     fundingType: "Fully Funded",
-
-    deadline: "Varies by country",
-    duration: "1-2 years",
-
+    deadline: "Country-specific; verify whether the current home-country call funds PhD study",
+    duration: "Country grant and approved doctoral placement dependent; may be shorter than the complete PhD",
     eligibility: [
-      "Citizen of a participating country",
-      "Meet academic requirements for graduate study",
-      "Meet English proficiency requirements",
+      "Eligible citizenship or residence under a participating home-country programme",
+      "Academic background required for the approved U.S. doctoral route",
+      "Meet country-specific field, research, professional, and English requirements",
+      "Demonstrate strong research fit, exchange readiness, and a credible return contribution",
     ],
-
     benefits: [
-      "Tuition and fees (program dependent)",
-      "Monthly stipend",
-      "Health insurance",
-      "Travel support (as applicable)",
+      "Tuition and required fees within the approved country and placement arrangement",
+      "Country- and placement-specific living support",
+      "Accident and sickness health benefits under programme rules",
+      "Travel and other allowances only as confirmed by the home-country award",
     ],
-
     applicationProcess: [
-      "Apply through your local Fulbright commission or embassy",
-      "Submit online application and documents",
-      "Complete interviews if required",
-      "Follow placement instructions",
+      "Confirm that the home-country Fulbright call supports the intended doctoral route",
+      "Submit research, academic, personal, and recommendation materials locally",
+      "Complete interview, testing, nomination, and any research review",
+      "Secure approved placement and written funding for the grant and later doctoral years",
     ],
-
     documents: [
-      "Academic transcripts",
-      "CV",
-      "Personal statements",
-      "Recommendation letters",
-      "Test scores (if required)",
+      "All academic transcripts, degree evidence, and academic CV",
+      "Original research or study objective and personal statement",
+      "Academic recommendation letters",
+      "TOEFL, IELTS, GRE, or programme-specific results where required",
+      "Research proposal, writing sample, publications, portfolio, or supervisor evidence where required",
     ],
-
-    applyUrl: "https://foreign.fulbrightonline.org",
+    applyUrl: "https://foreign.fulbrightonline.org/about/foreign-student-program",
     officialSource: "U.S. Department of State",
-
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "daad-research-grants",
 
-    title: "DAAD Research Grants",
+    title: "DAAD Research Grants in Germany 2027: Complete Guide",
     overview:
-      "Funding for doctoral candidates conducting research in Germany.",
+      "DAAD funding for doctoral candidates and early postdoctoral researchers who want to complete a defined research project in Germany with an academic host.",
+
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "Programme", value: "DAAD Research Grants in Germany" },
+          { label: "Funding start", value: "The funded research stay must begin in 2027" },
+          { label: "Who it is for", value: "Doctoral candidates outside Germany and early postdoctoral researchers" },
+          { label: "Doctoral duration", value: "2 to 12 months" },
+          { label: "Postdoc duration", value: "2 to 6 months" },
+          { label: "Monthly award", value: "1,400 euros" },
+          { label: "Host requirement", value: "A German academic host must confirm the project and workplace" },
+          { label: "Application route", value: "Online through the DAAD portal when the country-specific call is open" },
+        ],
+        paragraphs: [
+          "The DAAD Research Grants programme is for a defined research stay in Germany. It is not a full doctoral scholarship, not a general master's scholarship, and not a route for completing an entire doctorate at a German university. The applicant already needs to be in a doctorate outside Germany, or must be an early postdoctoral researcher who has completed the doctorate within the official time limit.",
+          "This distinction matters because many students search for DAAD funding and assume every DAAD award covers a complete degree. This grant is narrower and more research-focused. The strongest applicant normally has a clear project, a suitable German host, a realistic work schedule, and evidence that the stay in Germany will improve the research rather than simply provide a change of location.",
+        ],
+      },
+      {
+        title: "Who should consider this grant",
+        paragraphs: [
+          "A doctoral candidate should consider this programme if the main doctorate is registered at a university or research institution outside Germany and the German stay will support a specific part of that doctorate. Examples could include archive work, laboratory work, access to a research group, field-specific training, collaboration with a German supervisor, or work with resources that are not available at the home institution.",
+          "An early postdoctoral researcher should consider it if the German stay has a focused academic purpose and can be completed within the shorter postdoc funding window. The official DAAD page limits postdoctoral eligibility to researchers up to four years after completing the doctorate. A postdoc application therefore needs to show not only a good idea, but also why this short stay is timely for the applicant's next research step.",
+          "This grant is usually not the right fit for applicants who want to enroll in a full German PhD, start a new degree, or fund long-term residence in Germany. DAAD states that applicants cannot use this programme if they are doing their entire doctorate at a German university. If the real goal is a full German PhD, the applicant should look for doctoral positions, university funding, supervisor-funded projects, or other DAAD programmes that match that purpose.",
+        ],
+      },
+      {
+        title: "Eligibility explained in plain language",
+        bullets: [
+          "Doctoral candidates should normally have started the doctorate no more than three years before the application deadline.",
+          "Postdoctoral researchers should normally have completed the doctorate no more than four years before the application deadline.",
+          "Applicants who have lived in Germany for longer than 15 months at the application deadline cannot be considered under this call.",
+          "Applicants from human medicine, veterinary medicine, and dentistry must check the additional DAAD regulations for those fields.",
+          "The research project must be carried out with a scientific supervisor or academic host in Germany.",
+          "The host institution must be a state or state-recognised university or a non-university research institute in Germany.",
+        ],
+        paragraphs: [
+          "The practical test is simple: can you explain exactly what you will do in Germany, where you will do it, who will supervise or host you, and how the work fits your doctoral or postdoctoral research? If the answer is vague, the application is not ready. DAAD selection gives weight to the quality of the research proposal, the choice of host institution, first contacts, feasibility, and the schedule.",
+          "Applicants should also be careful with the Germany-residence rule. A short conference visit or brief research trip is different from being resident in Germany, but anyone who has already spent significant time in Germany should check the official wording and local DAAD advice before investing weeks in the application. Eligibility rules are not cosmetic; incomplete or ineligible applications are not considered.",
+        ],
+      },
+      {
+        title: "What the funding covers",
+        paragraphs: [
+          "The core award is a monthly scholarship payment of 1,400 euros. DAAD also lists payments toward health, accident, and personal liability insurance cover. A travel allowance may be available, and an application is required if the funding period exceeds six months. For funding periods of more than six months, DAAD lists a research allowance of 460 euros.",
+          "Additional support can exist under specific conditions. After the start of funding, applicants may be able to request a rent subsidy or an allowance for accompanying family members, but DAAD limits those options to funding periods of more than six months and reviews them under the scholarship rules. Support related to disability or chronic illness can also be considered where justified costs are necessary for the project and not covered by a third party. DAAD also mentions green mobility support or carbon-offset reimbursement for air travel.",
+          "Language support is more limited than many applicants expect. DAAD lists language-related benefits only for funding periods of more than six months. These can include an online language course after the award letter, a German course in Germany before the project if DAAD decides it is necessary, an allowance for a personally chosen German course during the scholarship period, or reimbursement for a TestDaF or DSH test. Applicants with a shorter stay should not build their budget around language-course funding.",
+        ],
+      },
+      {
+        title: "Duration and timing",
+        paragraphs: [
+          "Doctoral candidates can request 2 to 12 months. Postdoctoral researchers can request 2 to 6 months. DAAD states that the funding period cannot be split within the funding period, that research work in different countries outside Germany is not eligible, and that the scholarship cannot be extended. This means the proposed dates need to match the project from the beginning.",
+          "Applicants should not choose the longest possible duration just because it looks more generous. The selection committee determines the final funding period during selection and considers the work schedule. A strong schedule explains what will happen before arrival, what will happen each month in Germany, what outputs are expected, and how the work continues after the stay. A six-month plan with clear milestones is stronger than a twelve-month plan that simply says literature review, analysis, and writing.",
+          "The official page says application deadlines are updated annually and are country-specific. The DAAD portal also opens only during the current application period, generally at least six weeks before the deadline. Because of that, applicants should use the DAAD scholarship database with their own country and status rather than relying on a date copied from another country, another year, or a social media post.",
+        ],
+      },
+      {
+        title: "How to build a strong German host connection",
+        paragraphs: [
+          "The host confirmation is not a formality. DAAD asks for confirmation from the academic host in Germany, and the confirmation must refer to the project and guarantee that the host institute will provide a workplace. A generic sentence saying a professor is willing to host you is weaker than a letter that shows the host understands the research question, method, data or facilities needed, and timing.",
+          "Start by identifying researchers whose current work genuinely overlaps with your project. Read recent papers, lab pages, research-group descriptions, and institute profiles. Then send a concise email with your research topic, current status, proposed DAAD grant duration, why that host is relevant, what you need from the institution, and a short CV. Do not send the same generic message to dozens of professors. German hosts can usually tell when the connection is shallow.",
+          "If the project involves laboratory work, human participants, sensitive data, field access, or safety-relevant research, discuss those details early. DAAD requires a declaration from the scientific supervisor in Germany on safety-relevant and ethical aspects of the research project. Waiting until the final week to raise ethics, safety, data access, or workplace needs can make the application impossible to complete on time.",
+        ],
+      },
+      {
+        title: "Research proposal: what reviewers need to see",
+        paragraphs: [
+          "DAAD lists a self-written proposal of up to 10 pages. The proposal should be detailed enough for a specialist committee to judge originality, relevance, feasibility, and fit with the German host. It should not read like a broad field essay. A useful proposal names the research problem, explains what is already known, identifies the gap, states the research questions or hypotheses, describes the method, explains why Germany is necessary or especially valuable, and gives a realistic work plan.",
+          "For doctoral candidates, the proposal should also show how the German stay fits into the overall doctorate in content and timing. Reviewers need to understand whether the stay is central to the dissertation or only loosely connected. If the stay is for data collection, specify what data. If it is for lab work, specify which methods or equipment. If it is for archival research, specify the archive and materials. If it is for collaboration, specify the research group and expected output.",
+          "For postdocs, the proposal should show independence and next-step potential. A postdoc file often becomes stronger when it explains how the German stay supports publications, a larger project, a future grant proposal, a new collaboration, or a clear academic transition. The proposal should be ambitious enough to matter, but small enough to complete during a short stay.",
+        ],
+      },
+      {
+        title: "Documents you should prepare early",
+        bullets: [
+          "Full curriculum vitae in tabular form, maximum three pages.",
+          "Publication list, maximum ten pages; mandatory for postdoctoral applicants.",
+          "Motivation letter of one to two pages explaining academic and personal reasons for the planned research project in Germany.",
+          "Self-written research proposal, maximum ten pages, discussed with the German academic adviser.",
+          "Time schedule for the planned research work.",
+          "Proof of admission or enrollment for doctoral studies, for doctoral candidates.",
+          "Confirmation from the academic host in Germany that refers to the project and confirms a workplace.",
+          "Declaration from the scientific supervisor in Germany on safety-relevant and ethical aspects of the project.",
+          "University degree certificates already obtained, including final grades.",
+          "Transcripts of records for undergraduate and postgraduate programmes.",
+          "One recent recommendation letter on the DAAD form from a university teacher or doctoral supervisor.",
+          "German or English translations for documents issued in another language.",
+        ],
+        paragraphs: [
+          "The recommendation letter deserves special attention because DAAD requires the DAAD form. The form can be generated in the portal during the application period, so applicants need to contact the recommender early and leave time for completion. A late recommendation is one of the easiest ways to lose an otherwise serious application.",
+          "Document consistency matters. Names, dates, degree titles, grades, enrollment status, and research topic should match across the CV, proposal, transcripts, certificates, host confirmation, and recommendation. If a degree certificate is not yet available, DAAD allows a provisional document at application stage, but the final document must be submitted before the scholarship start if awarded.",
+        ],
+      },
+      {
+        title: "Selection criteria and how to respond to them",
+        paragraphs: [
+          "DAAD says applications are reviewed by an independent selection committee of specialist scientists. The criteria include academic qualification, academic achievements, grade development, academic progress, language knowledge, and scholarly achievements such as publications, lectures, or conference papers where applicable. Applicants should present this evidence clearly instead of hiding it inside long paragraphs.",
+          "The second major criterion is the quality of the research project. This includes originality, topicality, relevance, preparation, choice of host institution, first contacts, feasibility, and consistency of the work schedule. In practice, this means the proposal, host letter, schedule, and motivation letter should tell the same story. If the proposal says the project needs a specific method but the host letter never mentions it, reviewers may doubt the fit.",
+          "The third criterion is applicant potential. DAAD considers career prospects, the significance of the project and stay in Germany for academic, professional, and personal development, motivation for Germany, German language skills if different from the working language, and non-study-related activities such as civic engagement. The motivation letter should therefore be more than praise for Germany. It should explain why this stay is the right next move for the applicant and for the research.",
+        ],
+      },
+      {
+        title: "Language requirements",
+        paragraphs: [
+          "The official DAAD page does not give one universal IELTS, TOEFL, or German-test score for every applicant under this research grant. Instead, language expectations depend on the working language of the research project, the host environment, and the applicant's field. A project conducted in English with an English-speaking research group may need different evidence from a project that depends on German archives, interviews, clinical communication, or German-language coursework.",
+          "Applicants should make language evidence practical. If the proposal depends on German-language sources, the application should show German ability. If the project will be conducted in English, the host confirmation, proposal, and CV should make that credible. Strong language evidence reduces risk for reviewers because it shows the applicant can actually complete the work during a short stay.",
+        ],
+      },
+      {
+        title: "Application process",
+        ordered: [
+          "Confirm your status and country in the DAAD scholarship database to see whether the programme is available to you.",
+          "Check the country-specific deadline and portal availability for the current cycle.",
+          "Identify a German host whose research environment fits your project.",
+          "Agree on the project scope, timing, workplace needs, and ethics or safety details with the host.",
+          "Prepare the proposal, work schedule, motivation letter, CV, certificates, transcripts, and translations.",
+          "Generate the DAAD recommendation form in the portal during the application period and give the recommender enough time.",
+          "Complete the online application in the DAAD portal and upload all required attachments.",
+          "Submit before the portal closes at midnight CET or CEST on the deadline day.",
+        ],
+        paragraphs: [
+          "DAAD warns applicants not to submit at the last moment because technical problems near the deadline can be fatal. The portal closes at 24:00 CET or CEST on the final application day. Incomplete applications cannot be considered, and applicants are responsible for ensuring the file is complete. Treat the final day as an emergency buffer, not as the working deadline.",
+          "The DAAD portal is also limited on mobile devices. Applicants should prepare and submit from a desktop computer, scan documents clearly, save uploads as PDFs where required, and check that translations are uploaded together with documents issued in the original language.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Applying as if this were a full PhD scholarship in Germany.",
+          "Using a generic host letter that does not mention the project or workplace.",
+          "Choosing a duration that does not match the research schedule.",
+          "Submitting a proposal that is broad, descriptive, or not clearly self-written.",
+          "Ignoring ethics, safety, data access, or laboratory requirements until the deadline week.",
+          "Assuming every country has the same deadline.",
+          "Forgetting that postdoctoral applicants need a publication list.",
+          "Waiting too long to request the DAAD recommendation form.",
+          "Submitting documents without required German or English translations.",
+          "Relying on copied deadlines or unofficial summaries instead of the DAAD database.",
+        ],
+        paragraphs: [
+          "The most damaging mistake is a weak fit between project and host. DAAD is not only funding a person; it is funding a research stay that should happen in a particular German research environment. If the project could happen anywhere with an internet connection, the application needs a sharper explanation of why Germany and why that host.",
+          "Another common mistake is overclaiming. Applicants should not describe tentative contact as formal supervision, unpaid conference abstracts as major publications, or a preliminary idea as a fully developed project. Strong applications are specific and honest. Reviewers are more likely to trust a realistic file than a dramatic one.",
+        ],
+      },
+      {
+        title: "Final application checklist",
+        bullets: [
+          "You are a doctoral candidate outside Germany or an eligible early postdoc.",
+          "You are not applying to fund an entire doctorate at a German university through this grant.",
+          "Your funding period begins in 2027 and fits the official duration limits.",
+          "You have checked your country-specific deadline in the DAAD database.",
+          "Your German host has confirmed project fit and workplace access.",
+          "Your proposal explains research question, method, originality, feasibility, Germany fit, and expected outputs.",
+          "Your schedule is realistic for the requested number of months.",
+          "Your documents, translations, recommendation, and host declarations are ready before the deadline.",
+          "You have checked any additional rules for medicine, veterinary medicine, or dentistry if relevant.",
+          "You are ready to submit through the DAAD portal before the final deadline day.",
+        ],
+        paragraphs: [
+          "A good DAAD Research Grants application should feel like a serious research plan, not a scholarship essay decorated with academic words. The file should make reviewers comfortable that the applicant is eligible, the project matters, the host is appropriate, the timeline is feasible, and the German stay will produce meaningful progress.",
+        ],
+      },
+    ],
 
     country: "Germany",
     degreeLevel: "PhD",
     fundingType: "Fully Funded",
 
     deadline: "Varies",
-    duration: "3–4 years",
+    duration: "Doctoral candidates: 2 to 12 months; postdocs: 2 to 6 months",
 
     eligibility: [
-      "Eligible nationalities: Citizens of partner countries listed on the official Manaaki eligibility list",
-      "Age: Must be at least 18 years old at the start of study; preference is given to applicants under 40",
-      "Residency: Must have lived in the home country for at least the last 2 years before applying (exceptions are defined in the official criteria)",
-      "Work experience: Postgraduate applicants usually need 1 year full-time or 2 years part-time relevant work experience",
-      "Return commitment: Must return to the home country for at least 2 years after completing study",
-      "Academic and English: Must meet the academic and English requirements of the chosen university/program (test scores are typically requested if shortlisted)",
+      "Doctoral candidates doing a doctorate at a university or research institution outside Germany",
+      "Early postdoctoral researchers up to 4 years after completing the doctorate",
+      "Doctoral candidates should normally have started the doctorate no more than 3 years before the application deadline",
+      "Applicants cannot use this grant to complete an entire doctorate at a German university",
+      "Applicants resident in Germany for longer than 15 months at the deadline cannot be considered",
+      "A research project must be agreed with a scientific supervisor or academic host in Germany",
     ],
 
     benefits: [
-      "Full tuition fees (100% of approved academic fees)",
-      "Living allowance: Approximately NZ$615 per week (paid fortnightly; amount can change by year)",
-      "Establishment allowance: One-time NZ$3,000 on arrival to help with setup costs",
-      "Travel: Return economy airfare and travel-related insurance",
-      "Medical insurance coverage while in New Zealand",
-      "Postgraduate support: Additional funding available for research and thesis costs (where applicable)",
-      "Reintegration allowance: NZ$1,000 upon return to the home country (as listed in official university guidance)",
-      "Tutoring support: Up to NZ$1,000 available if required (as listed in official university guidance)",
+      "Monthly scholarship payment of 1,400 euros",
+      "Payments toward health, accident, and personal liability insurance cover",
+      "Travel allowance according to DAAD rules; an application is required if the funding period exceeds 6 months",
+      "Research allowance of 460 euros for funding periods of more than 6 months",
+      "Possible rent subsidy and family allowance under specific conditions for funding periods of more than 6 months",
+      "Possible disability or chronic-illness support for justified additional costs not covered by a third party",
+      "Possible green mobility top-up or carbon-offset reimbursement",
+      "Language-course benefits only for funding periods of more than 6 months, where DAAD rules allow",
     ],
 
     applicationProcess: [
-      "Check your country eligibility and priority sectors on the official Manaaki website",
-      "Review eligibility criteria and complete the online eligibility questionnaire",
-      "Apply online through the Manaaki scholarship application portal during the official window",
-      "Upload academic transcripts including grading scale information",
-      "If shortlisted, provide verified English translations of transcripts and completion certificates",
-      "Wait for selection results and follow the preferred-candidate steps for university placement",
+      "Check the DAAD scholarship database using your country and applicant status",
+      "Confirm the country-specific deadline and portal opening period",
+      "Secure a German academic host and agree on project scope, timing, workplace access, and ethics or safety needs",
+      "Prepare the self-written research proposal, time schedule, motivation letter, CV, academic records, and translations",
+      "Request the DAAD recommendation form in the portal during the application period",
+      "Complete the online DAAD portal application and upload all required attachments before the deadline",
     ],
 
     documents: [
-      "Academic transcripts with grading scale information",
-      "Completion certificates or degree documents (if completed)",
-      "Verified English translations (if shortlisted and originals are not in English)",
-      "English language test results (if shortlisted and required by the institution)",
-      "Any additional documents requested in your country-specific application guidance",
+      "Full curriculum vitae in tabular form, maximum 3 pages",
+      "Publication list, maximum 10 pages; mandatory for postdoctoral applicants",
+      "Motivation letter of 1 to 2 pages",
+      "Self-written research proposal, maximum 10 pages",
+      "Time schedule for the planned research work",
+      "Proof of doctoral admission or enrollment for doctoral candidates",
+      "Confirmation from the academic host in Germany confirming the project and workplace",
+      "Scientific supervisor declaration on safety-relevant and ethical aspects",
+      "Degree certificates and transcripts with grades",
+      "One recent recommendation letter on the DAAD form",
+      "German or English translations where required",
     ],
 
-    applyUrl: "https://www.daad.de",
+    applyUrl: "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=57742121",
     officialSource: "DAAD",
 
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
     slug: "commonwealth-scholarship",
 
-    title: "Commonwealth Scholarship",
+    title: "Commonwealth Master's Scholarship 2026/27: Complete Guide",
     overview:
-      "UK-funded scholarship for students from Commonwealth countries.",
+      "A fully funded UK master's scholarship for eligible candidates from low and middle income Commonwealth countries who could not otherwise afford to study in the UK.",
+
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "Award", value: "Commonwealth Master's Scholarship" },
+          { label: "Funder", value: "UK Foreign, Commonwealth and Development Office through the CSC" },
+          { label: "Study level", value: "Full-time taught master's study" },
+          { label: "Host country", value: "United Kingdom" },
+          { label: "Academic year", value: "2026/27 applications are closed; next cycle dates should be checked on CSC" },
+          { label: "Application route", value: "CSC Central plus an approved nominator" },
+          { label: "Direct applications", value: "The CSC does not accept direct applications for this route" },
+          { label: "Main requirement", value: "Development impact and inability to afford UK study without the scholarship" },
+        ],
+        paragraphs: [
+          "The Commonwealth Master's Scholarship is one of the most important UK-funded awards for students from eligible low and middle income Commonwealth countries. It is designed for students who want to complete a full-time taught master's degree in the UK and then return home with skills that can contribute to sustainable development.",
+          "This is not a general scholarship for every Commonwealth citizen. The official CSC page lists eligible countries, requires permanent residence in an eligible country, and expects applicants to be unable to afford UK study without the award. It is also not a direct application to the CSC only. Applicants must use CSC Central and must also apply through an approved nominator, usually a national nominating agency or a selected NGO or charitable body.",
+        ],
+      },
+      {
+        title: "Who this scholarship is for",
+        paragraphs: [
+          "This scholarship is best suited to an applicant who already has a strong academic foundation, a clear reason for choosing a one-year taught master's course, and a credible plan for using the degree after returning home. The CSC is not simply buying a degree place; it is investing in people who can show potential to create development impact in their home country.",
+          "The official purpose is connected to sustainable development. That means a competitive applicant should be able to explain a real development problem, why their chosen subject matters, what skills or knowledge they need from the UK course, and what they plan to do after the award. A vague goal such as getting international exposure is not enough. The application needs a clear bridge between past experience, the proposed UK course, and future public value.",
+          "The scholarship is for full-time taught master's programmes only. The CSC states that it funds one-year taught master's programmes and does not fund MBA degrees under this route. It also funds one degree only and will not extend funding so the candidate can complete an additional or higher qualification beyond the selected award.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "You must be a citizen of, or have refugee status from, an eligible Commonwealth country, or be a British Protected Person.",
+          "You must be permanently resident in an eligible Commonwealth country.",
+          "You must be available to start academic studies in the UK at the start of the UK academic year for the relevant cycle.",
+          "For the 2026/27 cycle, the official page refers to study beginning in September or October 2026.",
+          "You must hold, by the stated start date, a first degree of at least upper second-class 2:1 honours standard, or a lower second-class degree plus a relevant postgraduate qualification, usually a master's degree.",
+          "You must be unable to afford to study in the UK without this scholarship.",
+          "You must provide all supporting documentation in the required format by the deadline.",
+        ],
+        paragraphs: [
+          "The CSC also states there is no age limit for CSC applications, although applicants should check whether their employer has leave-entitlement restrictions. This is useful for working professionals who worry they are automatically too old. Age alone is not the official barrier; eligibility, academic preparation, development impact, course fit, documents, and nomination are the important issues.",
+          "Applicants who already have master's-level study need to read the conditions carefully. The CSC has a preference for applicants who have already completed undergraduate degrees and would not normally fund a second master's degree. If someone applies for a second master's, they must justify why it is necessary. Applicants who have already studied at master's level in the UK are not considered eligible under the official guidance.",
+          "There is also a return expectation. Commonwealth Scholars commit to returning home after the scholarship to contribute to development in their home countries. Switching to a graduate or other visa route simply to remain in the UK is not permitted under the award conditions. Students who want the scholarship mainly as a migration pathway should not treat this as the right programme.",
+        ],
+      },
+      {
+        title: "Eligible countries and nominators",
+        paragraphs: [
+          "The CSC publishes the eligible country list on the official scholarship page. For the 2026/27 cycle, the list included many low and middle income Commonwealth countries, including Bangladesh, Ghana, India, Kenya, Malaysia, Nigeria, Pakistan, Rwanda, South Africa, Sri Lanka, Tanzania, Uganda, Zambia, and others. Some Small Island Developing States were treated under a time-limited programme note. Because eligible lists can change by cycle, applicants should check the CSC page for the current list before preparing an application.",
+          "Applying through the right nominator is just as important as being from an eligible country. The CSC page explains that there are two types of nominator for the Master's Scholarship programme: national nominating agencies and selected non-governmental organisations or charitable bodies. The national nominating agency is the main route for most applicants.",
+          "Each nominator can run its own selection process and may set extra criteria or earlier deadlines. This is where many applicants get caught. The CSC deadline is not always the only deadline that matters. Your nominating agency may require a separate form, internal documents, employer permissions, interviews, or an earlier submission. A complete CSC Central application can still fail if the applicant misses the nominator route.",
+        ],
+      },
+      {
+        title: "What the scholarship covers",
+        paragraphs: [
+          "The Commonwealth Master's Scholarship is fully funded in the normal student sense: approved tuition fees are covered by agreement between the CSC and the UK university, and Scholars are not liable to pay any part of the tuition fee. The award also includes approved airfare from the Scholar's home country to the UK and return at the end of the award. The CSC does not reimburse fares for dependants or journeys made before the award is confirmed.",
+          "The official financial assistance section lists a living allowance, called a stipend, at current levels of 1,452 pounds per month, or 1,781 pounds per month for Scholars at universities in the London metropolitan area. The award can also include a warm clothing allowance where applicable and a study travel grant toward study-related travel within the UK or overseas.",
+          "There is limited child allowance support in a specific family situation: if a Scholar has children and is widowed, divorced, or a single parent, the official page lists child allowance for the first child and for the second and third child under 16 if the children live with the Scholar at the same UK address. The CSC warns that family allowances are intended only as a contribution and that the real cost of supporting family members in the UK is likely to be higher.",
+          "Applicants with a disability can share their needs, and the CSC says a full assessment of needs and eligibility for additional financial support will be offered. This is important because students sometimes assume disability support is informal or discretionary only. The official page explicitly points to support and encourages applicants from diverse backgrounds.",
+        ],
+      },
+      {
+        title: "Courses and university choices",
+        paragraphs: [
+          "The award is tenable at approved UK universities or higher education institutions with which the CSC has a part-funding agreement for a specific programme of study. Applicants should not choose a course only because the university is famous. The course must fit the applicant's development goals, academic background, and future plan, and it must be one that can work within CSC placement rules.",
+          "The application asks candidates to list three universities and courses in order of preference and explain their reasons. The CSC warns that it will not change the university, course, or preference order of a provisionally selected candidate after selection unless exceptional information becomes available that could not have been foreseen. This makes the original course list very important.",
+          "Applicants should apply for admission to preferred universities in advance of the scholarship application where necessary. Many UK courses have strict admission deadlines. The CSC states that if an applicant is selected for a scholarship but has not applied and been accepted for a course, it may not be possible to proceed with the scholarship. Scholarship selection and university admission are connected, but they are not the same thing.",
+          "The best course choice is usually the one that solves an academic and professional problem. Ask whether the modules teach the skills you need, whether the dissertation or project option fits your plan, whether the programme accepts your background, whether the university is part of the CSC arrangement, and whether the course can be completed in the expected award period.",
+        ],
+      },
+      {
+        title: "Application process",
+        ordered: [
+          "Check the official CSC Commonwealth Master's Scholarship page for current cycle status, eligible countries, nominator information, and deadlines.",
+          "Identify the correct nominator for your country or route, usually the national nominating agency.",
+          "Read the nominator's own instructions because it may set extra criteria, documents, and earlier closing dates.",
+          "Research eligible UK courses and prepare three course preferences with clear reasons.",
+          "Prepare your development impact statement, personal statement, study plan, career plans, employment history, and referee details before opening the form.",
+          "Submit the CSC Central application and upload all required supporting documents in the required format.",
+          "Submit any separate nominator application or documents required by your nominating agency.",
+          "Monitor email carefully after submission, including spam and junk folders, because scholarship offers can be withdrawn if candidates do not respond in time.",
+        ],
+        paragraphs: [
+          "Applications to the CSC are made through CSC Central. The CSC does not accept applications or documents outside the online system for this route. The official page also notes that the form uses two-factor authentication and that applicants should prepare answers outside the system before adding them to the form. This is practical advice: long development-impact answers are easier to draft and edit in a separate document before pasting them into the portal.",
+          "The save function matters. The CSC warns that refreshing the browser window can exit the form and cause unsaved data to be lost, and that applications cannot be edited after submission. Applicants should treat submission as final and complete it early, because the online system can become busy near the deadline.",
+        ],
+      },
+      {
+        title: "Supporting documents",
+        bullets: [
+          "Proof of citizenship or refugee status in an eligible Commonwealth country, such as a valid passport or national ID showing photograph, date of birth, and country of citizenship.",
+          "Full transcripts for all higher education qualifications, including current transcripts for courses still being studied.",
+          "Certified translations if transcripts are not in English.",
+          "References from at least two individuals, uploaded as PDFs, signed and either on institutional letterhead or from an email clearly showing sender details.",
+          "Names and positions of three referees in the application form, including a current employer where applicable.",
+          "Any documents required separately by the national nominating agency or approved nominator.",
+        ],
+        paragraphs: [
+          "The CSC is strict about documents. If required documentation is missing by the closing date, the application will be considered ineligible. References must be uploaded to the application system by the deadline and are not accepted another way or after the deadline. This means applicants should not wait for referees to submit at the last minute.",
+          "Referees should be chosen carefully. The official page says referees should comment on the applicant's suitability for the scholarship, need for the subject of study in the UK, ability to grasp concepts, analytical reasoning, original thought, motivation, perseverance, strengths and weaknesses, and potential to impact development in the home country. A short generic reference is rarely helpful for a scholarship built around development impact.",
+        ],
+      },
+      {
+        title: "Development impact statement",
+        paragraphs: [
+          "The development impact statement is one of the heart pieces of the Commonwealth Master's application. The official form asks applicants to explain how the scholarship relates to development issues at global, national, and local level, and how those issues connect to the chosen CSC development theme and wider sector. This is where the applicant proves the course is not a random UK degree.",
+          "The second part asks how the applicant will apply new skills after the scholarship ends. A strong answer describes a realistic role, institution, community, policy area, research area, business sector, or public-service pathway. It does not need to promise to solve a whole national crisis alone. It should show a credible line from the master's programme to practical work after returning home.",
+          "The third part asks what will change in development terms, including outcomes, timeframe, and beneficiaries. This is where measurable thinking helps. Instead of saying the degree will improve education, health, governance, energy, agriculture, technology, or inclusion, explain who benefits, how they benefit, and what evidence could show progress over time.",
+          "The fourth part asks how impact could be measured and evidenced. This is often where weak applications become vague. Good measurement could include policy adoption, programme results, service improvements, research outputs, community outcomes, training delivered, institutional capacity, data systems improved, or other evidence linked to the applicant's field. The measure should fit the problem, not sound impressive in isolation.",
+        ],
+      },
+      {
+        title: "Selection criteria",
+        paragraphs: [
+          "The CSC lists three headline selection criteria: candidate merit, quality of the research proposal or plan, and potential impact on the development of the candidate's home country. For a taught master's scholarship, the phrase research proposal should be understood through the applicant's study plan, development statement, and proposed course rationale. The file needs to show academic ability, course fit, and development value together.",
+          "Candidate merit includes academic experience, but it should not be reduced to grades only. Academic consistency, relevant work, leadership, voluntary activity, professional experience, publications or prizes where relevant, and evidence of overcoming barriers can all strengthen the story. The application form asks for employment history, career plans, personal background, leadership, and voluntary activities because the CSC wants a rounded view of potential.",
+          "Potential impact is where many otherwise qualified applicants lose focus. The scholarship is not awarded simply because the applicant is talented or financially constrained. The applicant must explain why the UK course matters for development in the home country and why they are well placed to use it. Every major answer should quietly support that same argument.",
+        ],
+      },
+      {
+        title: "English test and admission notes",
+        paragraphs: [
+          "The CSC states that it does not require candidates to take an IELTS English language test. This does not mean every UK university will waive English requirements. University admission teams may still require English evidence depending on the applicant's country, prior education, and course rules. Applicants should check each course's English requirements directly with the university.",
+          "This distinction is important for planning. A candidate may be eligible for the scholarship but still need to satisfy university admission conditions. If an English test, transcript evidence, medium-of-instruction letter, or other document is needed by a university, it should be handled early enough that a provisional scholarship offer can move forward.",
+        ],
+      },
+      {
+        title: "Conditions after selection",
+        paragraphs: [
+          "A selected applicant is first provisionally selected, subject to the CSC agreeing terms of admission with the university. The formal Notification of Award comes later, and the Confirmation of Award is issued only when all conditions have been met. Candidates may also need to submit a Health and Disability Form before confirmation.",
+          "Scholars are expected to reside in the UK during the award and must seek CSC approval in advance for overseas travel. Paid employment during the award also requires CSC approval. The award can be terminated for unsatisfactory conduct, progress, attendance, or if registration is suspended or terminated by the university.",
+          "The CSC also makes clear that all Commonwealth Scholars commit to returning home following the end of the scholarship. The CSC cannot provide support letters or permission for Scholars to remain in or return to the UK after the award for work or postdoctoral study. Applicants should read these conditions before applying, because they are part of the award's purpose.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Applying only through CSC Central and forgetting the nominator route.",
+          "Missing an earlier national nominating agency deadline.",
+          "Choosing courses by university prestige instead of development fit.",
+          "Listing course preferences casually even though CSC normally will not change them after selection.",
+          "Submitting references that are unsigned, not on proper letterhead, or not uploaded by the deadline.",
+          "Writing a development impact statement that describes big problems but not the applicant's realistic role.",
+          "Assuming CSC does not require IELTS means the university will never require English evidence.",
+          "Applying for an MBA or an ineligible programme.",
+          "Treating the scholarship as a UK work or migration route instead of a return-and-contribute award.",
+        ],
+        paragraphs: [
+          "The strongest applications are not the longest or most emotional; they are the clearest. A reader should understand the applicant's country context, development problem, academic preparation, course choice, post-study plan, and expected beneficiaries without hunting through disconnected answers.",
+        ],
+      },
+      {
+        title: "Final checklist",
+        bullets: [
+          "Your country appears on the current CSC eligible country list for this scholarship.",
+          "You meet citizenship or refugee-status and permanent-residence requirements.",
+          "You meet the academic requirement or can clearly document the relevant postgraduate qualification route.",
+          "You cannot afford UK study without the scholarship.",
+          "You have identified the correct nominator and its deadline.",
+          "Your three UK course choices are eligible, realistic, and development-linked.",
+          "Your development impact statement has outcomes, timeframe, beneficiaries, and measurement evidence.",
+          "Your transcripts, citizenship proof, translations, and references are ready before the deadline.",
+          "You have checked university admission and English-language requirements separately.",
+          "You understand the return-home commitment and award conditions.",
+        ],
+        paragraphs: [
+          "A Commonwealth Master's application should read like a public-interest study plan. The student is asking for a fully funded year in the UK, so the file must show not only academic promise and financial need, but also a serious plan for using that year after returning home.",
+        ],
+      },
+    ],
 
     country: "United Kingdom",
     degreeLevel: "Masters",
     fundingType: "Fully Funded",
 
-    deadline: "December",
-    duration: "1 year",
+    deadline: "Applications for the 2026/27 academic year are closed; check the CSC page for the next cycle",
+    duration: "1 year full-time taught master's study",
 
     eligibility: [
-      "Manaaki New Zealand Scholarship eligible countries: Citizens of partner countries listed on the official Manaaki eligibility list",
-      "Age: Must be at least 18 years old at the start of study; preference is given to applicants under 40",
-      "Residency: Must have lived in the home country for at least the last 2 years before applying (exceptions are defined in the official criteria)",
-      "Manaaki New Zealand Scholarship requirements: Postgraduate applicants usually need 1 year full-time or 2 years part-time relevant work experience",
-      "Return commitment: Must return to the home country for at least 2 years after completing study",
-      "Academic and English: Must meet the academic and English requirements of the chosen university/program (test scores are typically requested if shortlisted)",
+      "Citizen of, refugee from, or British Protected Person connected to an eligible Commonwealth country",
+      "Permanently resident in an eligible Commonwealth country",
+      "Available to start UK academic studies at the start of the relevant academic year",
+      "First degree of at least upper second-class 2:1 honours standard, or lower second-class degree plus a relevant postgraduate qualification",
+      "Unable to afford to study in the UK without the scholarship",
+      "All required supporting documentation uploaded in the required format by the deadline",
+      "Must apply through CSC Central and an approved nominator; direct applications to CSC are not accepted",
     ],
 
     benefits: [
-      "Full tuition fees (100% of approved academic fees)",
-      "Living allowance: Approximately NZ$615 per week (paid fortnightly; amount can change by year)",
-      "Establishment allowance: One-time NZ$3,000 on arrival to help with setup costs",
-      "Travel: Return economy airfare and travel-related insurance",
-      "Medical insurance coverage while in New Zealand",
-      "Postgraduate support: Additional funding available for research and thesis costs (where applicable)",
-      "Reintegration allowance: NZ$1,000 upon return to the home country (as listed in official university guidance)",
-      "Tutoring support: Up to NZ$1,000 available if required (as listed in official university guidance)",
+      "Approved tuition fees covered by agreement between the CSC and the UK university",
+      "Approved airfare from the Scholar's home country to the UK and return at the end of the award",
+      "Monthly stipend at current levels of GBP 1,452, or GBP 1,781 for universities in the London metropolitan area",
+      "Warm clothing allowance where applicable",
+      "Study travel grant toward study-related travel within the UK or overseas",
+      "Child allowance in limited circumstances for eligible widowed, divorced, or single-parent Scholars",
+      "Disability needs assessment and possible additional support where eligible",
     ],
 
     applicationProcess: [
-      "Check your country eligibility and priority sectors on the official Manaaki website",
-      "Review eligibility criteria and complete the online eligibility questionnaire",
-      "Apply online through the Manaaki scholarship application portal during the official window",
-      "Upload academic transcripts including grading scale information",
-      "If shortlisted, provide verified English translations of transcripts and completion certificates",
-      "Wait for selection results and follow the preferred-candidate steps for university placement",
+      "Check current cycle status, eligible countries, and nominator information on the CSC website",
+      "Apply through the correct national nominating agency or approved NGO/charitable nominator",
+      "Complete the CSC Central online application before the CSC deadline",
+      "Upload required supporting documents and references in PDF format through CSC Central",
+      "Apply for preferred UK courses in time to meet university admission deadlines",
+      "Monitor email, including spam folders, for outcome and provisional selection instructions",
     ],
 
     documents: [
-      "Academic transcripts with grading scale information",
-      "Completion certificates or degree documents (if completed)",
-      "Verified English translations (if shortlisted and originals are not in English)",
-      "English language test results (if shortlisted and required by the institution)",
-      "Any additional documents requested in your country-specific application guidance",
+      "Valid passport or national ID showing photograph, date of birth, and country of citizenship",
+      "Full transcripts for all higher education qualifications, including current study where applicable",
+      "Certified English translations for transcripts not issued in English",
+      "References from at least two individuals, uploaded as signed PDFs or from traceable institutional email evidence",
+      "Details of three referees in the application form, including a current employer where applicable",
+      "Development impact statement, study plan, personal statement, career plans, and course preference explanations",
+      "Any additional documents required by the national nominating agency or approved nominator",
     ],
 
-    applyUrl: "https://cscuk.fcdo.gov.uk",
+    applyUrl: "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/",
     officialSource: "Commonwealth Scholarship Commission",
 
-    lastUpdated: "2026-02-06",
+    lastUpdated: "2026-07-17",
   },
 
   {
@@ -2995,6 +4439,152 @@ const rawScholarships: Scholarship[] = [
       "Long-term Australian Government scholarship for eligible applicants from participating countries to study in Australia.",
     summary:
       "Australia Awards Scholarships are funded by the Australian Government Department of Foreign Affairs and Trade (DFAT) to support applicants from participating countries. For this listing, the scholarship is presented for master's-level study in Australia, while the overall program can include other long-term study levels depending on country profiles. The award is designed to build development-relevant skills and typically covers major study costs for selected candidates.",
+
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "Programme", value: "Australia Awards Scholarships" },
+          { label: "Administrator", value: "Australian Government Department of Foreign Affairs and Trade" },
+          { label: "Main purpose", value: "Build skills and knowledge that contribute to development in partner countries" },
+          { label: "Study mode", value: "Full-time study in Australia" },
+          { label: "Institutions", value: "Participating Australian universities and TAFE institutions" },
+          { label: "2027 intake window", value: "1 February to 30 April 2026 for most participating countries" },
+          { label: "Return condition", value: "Scholars must leave Australia for at least two years after completing the award" },
+          { label: "Best first step", value: "Read your country profile before choosing courses or documents" },
+        ],
+        paragraphs: [
+          "Australia Awards Scholarships are long-term awards managed by DFAT. They are designed for people from developing countries, particularly in the Indo-Pacific region, who can use Australian study to strengthen development in their own countries. The programme is not simply a tuition discount; it is a government development scholarship tied to country priorities, leadership potential, and a return-home commitment.",
+          "For a master's applicant, the practical question is not just whether Australia sounds attractive. The question is whether your country participates, whether your chosen field appears in the country priorities, whether you meet the local eligibility rules, and whether you can explain how the qualification will help you contribute after returning home. Country profiles matter because Australia Awards is managed through bilateral and regional agreements, not one identical rulebook for every applicant.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "A strong Australia Awards applicant usually has a clear development problem in mind, a course that can genuinely build relevant skills, and a realistic plan to use those skills after returning home. The award is especially suitable for public-sector professionals, development workers, educators, health professionals, engineers, policy workers, environmental specialists, gender and inclusion practitioners, agriculture specialists, and other candidates whose work connects with their country's published priorities.",
+          "The scholarship can be a good fit for early or mid-career professionals who already understand the challenges in their sector. Work experience requirements vary by country, but many country programmes prefer applicants who can show practical experience and a credible return pathway. A fresh graduate may still be eligible in some countries, but the application must still prove development relevance rather than simply academic ambition.",
+          "It is not the right fit for every international student. If your country is not participating, if your preferred field is not supported by your country profile, if you want to stay permanently in Australia immediately after graduation, or if your goal is an unrelated private career move, this scholarship may be a poor match. The award condition requiring Scholars to leave Australia for at least two years after completion is central, not optional.",
+        ],
+      },
+      {
+        title: "What the scholarship covers",
+        paragraphs: [
+          "DFAT lists the standard benefits that generally apply. Full tuition fees are covered for the academic programme specified by the Australian institution. The scholarship also includes return air travel: a single return economy-class airfare to and from Australia by the most direct route. This is important because applicants should not assume multiple family flights, indirect personal travel, or travel before the award is confirmed will be reimbursed.",
+          "The establishment allowance is a once-only payment that contributes toward initial costs such as accommodation expenses, textbooks, and study materials. Scholars also receive a Contribution to Living Expenses, known as CLE, paid fortnightly at a rate determined by the department. This is living support, not unlimited spending money, so applicants should still understand local costs in the city where they may study.",
+          "Other standard supports include the Introductory Academic Program, which is compulsory before formal academic studies and helps Scholars understand living and studying in Australia. Overseas Student Health Cover is provided for the award holder for the duration of the award, covering basic medical costs with exceptions such as pre-existing conditions. Pre-course English may be available when DFAT or the programme deems it necessary. Supplementary academic support may also be available to help a Scholar succeed or enhance the academic experience.",
+          "For research awards, and for coursework master's programmes with a compulsory research component, fieldwork support may be available for eligible research students. DFAT describes this as one return economy-class airfare by the most direct route to the country of citizenship or within Australia, where fieldwork is compulsory. Applicants should not assume fieldwork funding exists for every course; it depends on award type and programme requirements.",
+        ],
+      },
+      {
+        title: "Eligibility and country profiles",
+        paragraphs: [
+          "The official DFAT page points applicants to participating countries, opening and closing dates, participating institutions, and country-specific information. That is the most important reading order. Start with your country profile, not with a general blog post or a university page. Country profiles can define eligible levels, priority fields, English expectations, work experience, public-sector requirements, documents, disability support routes, and application method.",
+          "This listing is written for master's-level applicants, but the wider Australia Awards programme can include undergraduate, postgraduate, and TAFE study depending on the country and year. A student from one country may see master's awards only, while another country may allow a different mix. That is why a generic statement such as Australia Awards covers bachelor's, master's, and PhD is not enough for a real applicant.",
+          "Core rules also include age, citizenship, residency, visa, relationship, military, and country-specific conditions. The record summary already notes that applicants usually must be at least 18 by the relevant start date and must satisfy Australian student visa requirements. Applicants must also meet admission rules for the chosen institution and programme. Scholarship eligibility cannot rescue an applicant from failing university admission requirements.",
+        ],
+      },
+      {
+        title: "The two-year return condition",
+        paragraphs: [
+          "The two-year return condition is one of the most serious parts of the award. DFAT states that applicants accepting an Australia Awards Scholarship must sign a contract with the Commonwealth of Australia declaring that they will comply with scholarship conditions, and Scholars are required to leave Australia for a minimum of two years after completing the scholarship. Failure to do so can result in a debt for the total accrued cost of the scholarship.",
+          "This condition changes how applicants should think about the award. Australia Awards is not designed as an immediate migration route. It is a development scholarship that expects graduates to return and contribute. A strong application should therefore make the return plan believable: where you may work, what problems you want to address, how the qualification helps, and what kind of contribution is realistic within your sector.",
+          "Students should also consider personal timing. If family responsibilities, employment obligations, long-term migration plans, or professional licensing goals make the return condition difficult, it is better to understand that before applying. The award is generous, but the contract is serious.",
+        ],
+      },
+      {
+        title: "How to choose a course",
+        paragraphs: [
+          "Course choice should begin with your country priorities. If your country profile emphasises climate resilience, public health, education, governance, agriculture, infrastructure, gender equality, disability inclusion, economic development, or another sector, your proposed course should connect clearly to that priority. Choosing a famous university with a weak course fit can make the application less convincing.",
+          "A good master's choice should answer four questions. First, does the programme accept your academic background? Second, does it teach skills you actually need for your planned development contribution? Third, does the course structure fit the scholarship period, including any preparatory training? Fourth, can you explain the choice in a way that a selection panel from your country will recognise as useful?",
+          "Applicants should read admission requirements carefully. Some Australian courses require specific undergraduate majors, professional registration, portfolio evidence, work experience, English scores, mathematics background, or prior research training. If a programme has strict prerequisites, apply only if you can meet them. Being selected for a scholarship is not enough if the university cannot admit you.",
+        ],
+      },
+      {
+        title: "Application process",
+        ordered: [
+          "Open the official Australia Awards website and find your country profile.",
+          "Confirm whether your country participates in the current intake and whether master's study is available.",
+          "Check the opening and closing dates for your country; for most 2027 intake awards, the listed window was 1 February to 30 April 2026.",
+          "Read priority fields, eligibility rules, required documents, English requirements, and any local instructions.",
+          "Choose eligible courses at participating Australian institutions and check admission requirements.",
+          "Prepare your development-focused answers, employment evidence, academic documents, references, English evidence, and any declarations required by your country profile.",
+          "Submit through OASIS or the application method listed for your country before the deadline.",
+          "Complete shortlisting, interview, English, placement, institution admission, visa, and mobilisation steps if selected.",
+        ],
+        paragraphs: [
+          "OASIS is the common online application system for many countries, but applicants should not assume it is the only route everywhere. Country profiles can specify different instructions or local portals. Follow the country page first because that is the version selection teams will use.",
+          "Applications and supporting documents received after the official closing date are normally not considered. Because upload systems can be slow near the deadline and documents may need certification or translation, serious applicants should work backward from the deadline by several weeks. The final day should be for checking, not writing the application for the first time.",
+        ],
+      },
+      {
+        title: "Documents to prepare",
+        bullets: [
+          "Proof of citizenship, such as passport or national identity document.",
+          "Academic transcripts and graduation certificates.",
+          "Certified translations where documents are not in the required language.",
+          "Curriculum vitae showing employment, leadership, and development-relevant experience.",
+          "Employer, referee, or recommendation documents where required by the country profile.",
+          "English language evidence, medium-of-instruction evidence, or testing plans where required.",
+          "Course preference details and evidence that the programmes are eligible and suitable.",
+          "Development-focused personal statements or application answers.",
+          "Any country-specific declarations, disability-support forms, public-sector approvals, or reintegration plans.",
+        ],
+        paragraphs: [
+          "Documents should prove the story told in the application. If you claim several years of sector experience, the CV and employment evidence should support it. If you choose a master's in public policy, health systems, education leadership, engineering, agriculture, or climate adaptation, the transcript and work history should make the pathway believable.",
+          "Translations and certified copies can take time. Applicants should not wait until the application portal opens to locate certificates or correct name differences across documents. A small inconsistency in spelling, date of birth, degree title, or employer name can create avoidable questions during compliance checks.",
+        ],
+      },
+      {
+        title: "Writing a strong development case",
+        paragraphs: [
+          "The most persuasive Australia Awards applications connect personal experience with national or regional priorities. Instead of saying that Australia has world-class education, explain the problem your country faces, the gap in your current skills, the course content that fills that gap, and the institution or community where you intend to use the learning after returning.",
+          "Good development writing is specific without pretending one person can fix everything. For example, a health applicant might focus on district-level service delivery, maternal health systems, health data, workforce training, or policy implementation. An education applicant might focus on curriculum, teacher development, inclusion, school leadership, or TVET quality. A climate applicant might focus on adaptation planning, water management, disaster risk, agriculture, energy transition, or coastal resilience.",
+          "Selectors need to see both ambition and credibility. If the plan is too small, the award may not look development-significant. If the plan is too grand, it may look unrealistic. The best middle ground is a practical, staged plan: what you will learn, where you will return, what role you are likely to hold, who benefits, and how progress can be measured.",
+        ],
+      },
+      {
+        title: "Interview and selection readiness",
+        paragraphs: [
+          "Shortlisted applicants may face interviews, English preparation, placement steps, or additional local assessments depending on the country. The interview is usually not a place to repeat generic praise for Australia. It is a place to show that you understand your sector, your course, your return obligations, and your plan.",
+          "Prepare to explain why your chosen Australian courses are suitable, why your home country needs the skills, how your work experience prepares you, what challenges you expect in Australia, and how you will handle the two-year return condition. If your application mentions leadership, inclusion, disability, gender, climate, governance, or community impact, be ready to give real examples.",
+          "Also prepare for practical questions. Selection teams may ask whether your employer supports your study leave, whether you can meet university admission and English requirements, how your family will manage during the award, and whether you understand the contract conditions. A polished dream is less useful than a realistic plan.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Applying without reading the country profile.",
+          "Choosing a course outside the published priority areas.",
+          "Assuming all participating countries have the same deadline or document rules.",
+          "Writing a personal statement about wanting to live in Australia instead of development impact at home.",
+          "Ignoring university admission prerequisites.",
+          "Waiting too long to prepare certified copies, translations, or English evidence.",
+          "Treating the two-year return condition as a small detail.",
+          "Submitting generic references that do not support leadership, development relevance, or professional readiness.",
+          "Choosing a programme because it is famous rather than because it matches your return plan.",
+        ],
+        paragraphs: [
+          "The biggest mistake is treating Australia Awards like an ordinary international student application. It is more structured than that. The scholarship exists to meet development needs in partner countries, so every part of the file should answer the same question: why should this person receive Australian Government funding to study this course and return with these skills?",
+        ],
+      },
+      {
+        title: "Final checklist",
+        bullets: [
+          "Your country is participating in the current intake.",
+          "Your country profile supports your degree level and field.",
+          "You meet citizenship, age, residency, visa, and country-specific requirements.",
+          "Your chosen courses are at participating Australian institutions and meet admission rules.",
+          "Your application explains a clear development problem and return-home contribution.",
+          "Your documents, translations, references, and English evidence are ready before the deadline.",
+          "You understand the financial benefits and what they do not cover.",
+          "You understand and accept the two-year return condition.",
+          "You can explain your plan clearly in an interview if shortlisted.",
+        ],
+        paragraphs: [
+          "A strong Australia Awards application should feel grounded: the applicant knows their country's priorities, has chosen courses carefully, understands the award conditions, and can show how Australian study will translate into work back home. That is the difference between a hopeful application and a serious one.",
+        ],
+      },
+    ],
 
     country: "Australia",
     degreeLevel: "Masters",
@@ -3148,6 +4738,68 @@ const rawScholarships: Scholarship[] = [
         paragraphs: [
           "Selection is usually a combination of rule fit, nomination compliance where required, document completeness, and university admission evaluation.",
           "Strong grades matter, but this scholarship is not judged on grades alone. Programme fit, valid documents, and correct procedural steps matter just as much because the process is centralized and structured.",
+        ],
+      },
+      {
+        title: "Application timeline for the 2026/2027 call",
+        paragraphs: [
+          "The official Stipendium Hungaricum application page sets out a staged process rather than one simple submission. For the 2026/2027 call, applicants were expected to find their chosen programmes in November and December 2025, contact the Sending Partner in December, register and upload documents in the online application system, and submit by 15 January 2026 at 2 p.m. Central European Time. Sending Partners then nominate applicants, and nominated applications are forwarded to the selected Hungarian institutions.",
+          "After nomination, universities contact applicants directly for entrance examinations from around mid-March until the end of May. The official page states that exam scores must be at least 56 out of 100 points for an application to be considered for the final list of scholarship awardees. Tempus Public Foundation then informs applicants of official results around the end of June or beginning of July. This means the January deadline is only the first major gate, not the end of the selection process.",
+        ],
+      },
+      {
+        title: "Choosing your two programme preferences",
+        paragraphs: [
+          "The online system allows applicants to browse many Hungarian universities and study programmes, but only two choices are allowed. Those two choices matter a lot because the official FAQ says applicants cannot edit priorities, add or remove courses, or change the order of priorities after the application deadline. Treat the programme list like a final application strategy, not a casual wish list.",
+          "Start with the eligible study fields for your sending country. Stipendium Hungaricum is based on educational cooperation agreements, so available study levels and fields differ from partner to partner. Some countries may support bachelor's study in many fields; others may restrict the eligible fields or levels. If your preferred subject is not supported for your country, choosing it in the portal will not make it eligible.",
+          "A good undergraduate choice should also be realistic for admission. Check the language of instruction, required secondary school subjects, entrance exam format, portfolio rules for arts programmes, health or medical requirements, and any university-specific documents. If two programmes both sound attractive, rank first the one that best fits your academic preparation and long-term plan rather than the one with the most famous university name.",
+        ],
+      },
+      {
+        title: "Sending Partner nomination",
+        paragraphs: [
+          "The Sending Partner step is a hard gate. The official application page says applications shall also be submitted to the responsible authority of the Sending Partner, and each Sending Partner may have different deadlines and requirements. The FAQ is even clearer: only nominated applicants can proceed with their applications. If your partner authority requires a separate form, interview, endorsement, or local deadline, the central portal alone is not enough.",
+          "This is why applicants should contact the Sending Partner early. In some countries the Sending Partner is a ministry; in others it may be a council, embassy, or another responsible authority. Ask what documents they require, whether they need hard copies, whether they rank applicants internally, whether their deadline is earlier than the central deadline, and whether they require any local eligibility such as field priority or public-sector status.",
+          "A student who ignores this step can lose the scholarship even with strong grades and a polished online application. The process is built around cooperation between Hungary and the partner country, so the Sending Partner is not optional background administration. It is part of selection.",
+        ],
+      },
+      {
+        title: "Documents and portal details",
+        paragraphs: [
+          "All applications must be submitted through the online application system of Tempus Public Foundation. The official FAQ also says the online registration and participation in admission examinations are free of charge, and applicants should not apply through unknown agencies or pay agents for guaranteed selection. This is a useful fraud warning because popular fully funded scholarships often attract unofficial intermediaries.",
+          "Required documents vary by study level and nationality, but bachelor's applicants should normally prepare identity evidence, secondary school transcripts, school completion certificate or expected graduation evidence, language proof where required by the programme, motivation letter, medical certificate if requested in the call, and any art portfolio or special institutional documents if relevant. If a passport is not ready at the initial application stage, the official FAQ says applicants may use a national ID and a signed declaration that they will obtain and upload a passport before the stated later date, but awarded students will need a valid passport to enter Hungary.",
+          "Document quality is not cosmetic. File names, scans, translations, names, dates, and programme choices should be consistent. If you are still in school, check how the call handles missing final certificates and whether later upload is allowed. The FAQ says some missing documents that were not available before the application deadline may be uploaded later, but applicants should not treat this as permission to submit a careless or incomplete file.",
+        ],
+      },
+      {
+        title: "Entrance exams and university evaluation",
+        paragraphs: [
+          "After the Sending Partner nomination stage, Hungarian universities evaluate nominated applicants. Depending on the programme, this may involve document review, written examination, oral interview, portfolio assessment, subject test, language check, or other admission steps. The official timeline places entrance exams between March and May, and applicants need at least 56 out of 100 points for the application to remain under consideration for the final award list.",
+          "Prepare for the exam as a university admission process, not as a scholarship interview only. Review the programme description, prerequisite subjects, language of instruction, sample questions if provided, and any faculty instructions. For bachelor's applicants, universities may test school-level preparation in the chosen field and the ability to study in English, Hungarian, or another programme language.",
+          "If you apply to two programmes, monitor communication from both institutions. Missed emails, unanswered interview invitations, or unclear document responses can damage the application. Use a professional email address, check spam folders, and keep copies of every upload and message.",
+        ],
+      },
+      {
+        title: "Scholarship holder obligations",
+        paragraphs: [
+          "Winning the scholarship creates obligations after arrival. The official application page highlights operational regulations, the scholarship agreement, and annexes that form part of the agreement. Scholarship holders should read these documents because academic progress, student status, institutional rules, and scholarship payments are tied to compliance.",
+          "One important rule is the credit minimum requirement. The official page notes that the host institution may terminate scholarship-holder status if the student does not obtain at least 18 credits on average across the last two semesters where student status was not interrupted. In plain language, the scholarship is not simply awarded once and forgotten. Students must keep making academic progress.",
+          "Another important rule is Hungarian language study. For full-time bachelor's, master's, and one-tier master's students beginning studies from the stated period, Hungarian as a foreign language and culture is compulsory for two semesters. The FAQ explains that these classes are provided by the host institution and are free of charge, but students who do not attend and pass can lose all or part of their monthly stipend. This is especially important for students choosing English-taught programmes who may wrongly assume they will never need to study Hungarian at all.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Choosing programmes before checking the eligible fields for your sending country.",
+          "Submitting only in the central portal while ignoring the Sending Partner's separate process.",
+          "Leaving the two programme choices casual even though priorities cannot be edited after the deadline.",
+          "Assuming no university admission is needed because admission exams happen after the January scholarship deadline.",
+          "Paying an agency for a process that the official FAQ says is free through the official system.",
+          "Missing emails from Hungarian universities during the March to May entrance-exam period.",
+          "Forgetting that full-time bachelor and master scholarship holders must complete Hungarian language and culture courses.",
+        ],
+        paragraphs: [
+          "The best way to approach Stipendium Hungaricum is to treat it as a sequence of gates: country eligibility, field eligibility, Sending Partner compliance, central portal submission, nomination, university admission, final award, visa, and enrollment. A student can fail at any gate, so the safest application is organized early and checked against the official call rather than built from memory or social media posts.",
         ],
       },
     ],
@@ -3329,6 +4981,59 @@ const rawScholarships: Scholarship[] = [
         paragraphs: [
           "This is usually a file-based competition where academic results, complete documentation, and exact compliance with the official rules matter more than vague motivation alone.",
           "Applicants with incomplete translations, weak document quality, or unrealistic programme choices often lose before the final placement stage.",
+        ],
+      },
+      {
+        title: "Official eligibility filters",
+        paragraphs: [
+          "The official Study in Romania scholarship platform describes this as the Ministry of Foreign Affairs scholarship programme for non-EU citizens. That non-EU condition is the first filter. Applicants who are citizens of EU member states, or who fall into categories excluded by the annual call, should not treat the scholarship as open simply because they are international students.",
+          "The official platform also states that only candidates with good education results are eligible, specifically an average for the last graduated school of at least 7 on the Romanian scoring system or the equivalent Good score. For a bachelor's applicant, that means secondary school results are not just a formality. If your school marks use another scale, the file should make the grading system understandable through transcripts, certificates, or explanations required by the platform.",
+          "The scholarship usually excludes Medicine, Dental Medicine, and Pharmacy. This matters because those fields are popular in Romania among international students. A student looking for a funded medical degree should not assume this MFA scholarship is the route unless the current official call explicitly changes the restriction.",
+        ],
+      },
+      {
+        title: "Language route and preparatory year",
+        paragraphs: [
+          "The Romanian Government Scholarship is strongly connected to study in Romanian. The standard route is Romanian-language study, and candidates who do not already know Romanian may receive a preparatory year before beginning the degree programme. That preparatory year is useful, but it also affects timing, planning, and expectations. A student applying for a three-year bachelor's programme may need to plan for the preparatory year as well if the language route requires it.",
+          "Applicants who already have Romanian-language knowledge may need to prove it according to the official rules or university requirements. Applicants who want English, French, or another language of instruction must verify whether the chosen programme, scholarship rules, and university placement actually allow that route. Do not rely on a general claim that Romania has English-taught programmes. A funded place under this scholarship depends on the official scholarship and university framework.",
+        ],
+      },
+      {
+        title: "What the funding does and does not solve",
+        paragraphs: [
+          "The scholarship normally covers tuition fees, financing for the Romanian preparatory year if required, a monthly allowance, and accommodation support through the Romanian system within the limits set by the programme. It is therefore a serious funding route for students who could not otherwise manage tuition and basic study costs.",
+          "However, applicants should not read fully funded as unlimited funding. International travel is not a standard universal benefit, and living costs beyond the allowance remain the student's responsibility. Accommodation support depends on student dormitory availability and the programme's subsidy rules. Visa costs, document legalisation, translations, winter clothing, local transport, personal technology, and emergency costs should be budgeted before accepting a place.",
+          "For bachelor's students, this is especially important because the total study period is long. A student may spend the preparatory year plus three or four academic years in Romania. Even with tuition covered and a monthly allowance, a realistic personal budget is part of a safe decision.",
+        ],
+      },
+      {
+        title: "Online application and documents",
+        paragraphs: [
+          "The official Study in Romania platform presents the process as account creation, scholarship application, result, and study in Romania. Applications are handled online through the official platform, and applicants should avoid agents or unofficial portals that claim guaranteed selection. The official route is the only route that should be trusted for the MFA scholarship.",
+          "Bachelor's applicants should prepare identity documents, secondary school records, completion evidence or expected-completion evidence, birth certificate where required, passport or national identity document, CV, medical certificate, translations, and any declarations required by the annual call. The exact file can change, so the current platform instructions should be treated as final.",
+          "Document quality can decide the application before academic comparison even begins. Scans should be readable, names should match across documents, translations should be complete, and the transcript should show the grading scale or allow evaluators to understand the result. If your school documents are not yet final, check whether the platform allows later completion and what provisional evidence is accepted.",
+        ],
+      },
+      {
+        title: "How to choose a bachelor's programme",
+        paragraphs: [
+          "Do not choose a programme only because it is in Bucharest, Cluj, Iasi, Timisoara, or another well-known student city. Start with field eligibility, language route, university availability, admission requirements, and whether your secondary-school background fits the programme. Engineering, computer science, economics, social sciences, humanities, agriculture, arts, and other areas can each have different expectations.",
+          "If the programme has mathematics, science, portfolio, language, or other prerequisites, make sure your school record supports them. The scholarship can place you only within a realistic admission framework. A mismatched choice can create problems later even if the scholarship file looks complete.",
+        ],
+      },
+      {
+        title: "Practical application strategy",
+        ordered: [
+          "Confirm that your citizenship and status fit the non-EU scholarship rules.",
+          "Check the annual call for excluded categories and excluded fields.",
+          "Verify that your last completed school result meets the minimum academic average rule.",
+          "Choose programmes that match your academic background and the scholarship language route.",
+          "Prepare documents, translations, medical evidence, and identity records early.",
+          "Submit through the official Study in Romania scholarship platform before the deadline.",
+          "Monitor the platform and email for results, university placement, visa, and enrollment instructions.",
+        ],
+        paragraphs: [
+          "A good bachelor's application is clean and realistic. It proves eligibility first, then academic strength, then programme fit. Students who try to make the scholarship fit an ineligible field or an unrealistic language route usually waste the application cycle.",
         ],
       },
     ],
@@ -3513,6 +5218,68 @@ const rawScholarships: Scholarship[] = [
           "At postgraduate level, alignment matters more than volume. A precise file and realistic study plan outperform a rushed application built only around the phrase fully funded.",
         ],
       },
+      {
+        title: "Official eligibility filters",
+        paragraphs: [
+          "The Romanian MFA scholarship is an annual programme for citizens from non-EU countries. Master's applicants should treat non-EU eligibility as the first gate, not as background text. If you are an EU citizen or fall into a category excluded by the annual call, the scholarship route is not the right one even if a Romanian university would otherwise admit you as an international student.",
+          "The official Study in Romania platform says candidates must have good education results, with an average for the last graduated school of at least 7 on the Romanian scale or the equivalent Good score. For master's applicants, the last graduated school is normally the bachelor's degree or equivalent prior higher education. If your transcript uses another grading system, make the scale clear and upload the documents required by the platform.",
+          "Medicine, Dental Medicine, and Pharmacy are normally excluded from the MFA scholarship. This is important for graduates who want clinical or health-profession degrees in Romania. Do not assume the scholarship can fund every postgraduate programme listed by a Romanian university.",
+        ],
+      },
+      {
+        title: "Romanian-language study and programme fit",
+        paragraphs: [
+          "The scholarship is built mainly around study in Romanian, and applicants who do not know Romanian may receive a preparatory year before the master's programme where the rules allow it. This can be useful, but it changes the total timeline. A two-year master's route may become a longer commitment if a preparatory year is required.",
+          "Applicants who already know Romanian should check how to prove language ability. Applicants searching for English-taught master's programmes should verify the official scholarship rules, the Study in Romania listing, and the university's admission page. English-taught availability at a university does not automatically mean it is available under the MFA scholarship.",
+          "At master's level, programme fit is more demanding than at undergraduate level. Your bachelor's background should support the master's field. A dramatic subject switch may be possible at some universities but risky for a scholarship file unless the programme explicitly accepts that background and your motivation explains the shift.",
+        ],
+      },
+      {
+        title: "Funding reality for master's applicants",
+        paragraphs: [
+          "The scholarship normally includes tuition coverage, support for a Romanian preparatory year where applicable, a monthly allowance, and accommodation support within the limits set by the programme. For a master's applicant, that can make Romania financially accessible compared with self-funded study in Europe.",
+          "The award does not remove every cost. Travel is not a universal benefit. Applicants should budget for document translation and legalisation, visa and residence procedures, arrival costs, local transport, books, personal equipment, winter clothing, food beyond the allowance, and any accommodation gap if dormitory conditions do not fully cover personal needs.",
+          "Because master's programmes are shorter than bachelor's programmes, applicants sometimes underestimate setup costs. The first months can be expensive even when tuition is covered. A sensible budget makes the difference between accepting the award confidently and arriving under financial stress.",
+        ],
+      },
+      {
+        title: "Documents and file quality",
+        paragraphs: [
+          "Master's applicants should prepare a passport or identity document, birth certificate where required, bachelor's diploma or completion certificate, full transcripts, CV, medical certificate, translations, and any programme-specific documents required by the annual call or host university. If the bachelor's diploma is not yet issued, check whether provisional completion evidence is accepted and what final upload deadline applies.",
+          "A master's application should make academic progression easy to read. Evaluators should be able to see what you studied, how you performed, how your grades map to the required standard, and why the Romanian programme is a logical next step. If transcripts list courses in a local language, translations must preserve course titles and grade information clearly.",
+          "Avoid uploading decorative motivation letters that say only Romania is beautiful or Europe is your dream. A stronger file explains the master's field, your academic preparation, your career or research direction, and why the chosen programme is realistic under the scholarship rules.",
+        ],
+      },
+      {
+        title: "Application process",
+        ordered: [
+          "Create an account on the official Study in Romania scholarship platform.",
+          "Confirm non-EU eligibility, excluded fields, academic average requirements, and the annual deadline.",
+          "Choose master's programmes that match your bachelor's background and language route.",
+          "Prepare diploma, transcript, translations, identity documents, medical evidence, CV, and any required declarations.",
+          "Submit the scholarship application online through the official platform.",
+          "Wait for scholarship evaluation, university placement, and official result instructions.",
+          "If selected, complete visa, residence, enrollment, and scholarship acceptance steps exactly as instructed.",
+        ],
+        paragraphs: [
+          "The application should be treated as a formal government file. That means no missing pages, no unclear scans, no unexplained grade scales, and no last-minute guesses about programme language. A careful file is not a guarantee of selection, but a careless file can end the application early.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Applying as an EU citizen or without confirming non-EU eligibility.",
+          "Choosing Medicine, Dental Medicine, Pharmacy, or another excluded route.",
+          "Assuming every Romanian master's programme is available in English under the scholarship.",
+          "Using an unrelated bachelor's degree without checking whether the master's programme accepts it.",
+          "Uploading transcripts without clear translation or grading-scale context.",
+          "Forgetting that travel and many arrival costs may remain the student's responsibility.",
+          "Treating the monthly allowance as enough for every personal cost.",
+        ],
+        paragraphs: [
+          "The strongest master's applications are precise. They show eligibility, academic readiness, a clean document file, and a programme choice that makes sense. That is much more convincing than a generic statement that the applicant wants a fully funded European degree.",
+        ],
+      },
     ],
     guideUrl: "/blog/romania-government-scholarship-2027",
     guideLabel: "Romania Government Scholarship guide",
@@ -3636,6 +5403,7 @@ const rawScholarships: Scholarship[] = [
       "Khalifa University offers tier-based undergraduate scholarship support in the UAE for eligible local and international applicants, with benefits that can include tuition coverage, textbooks, and selected student support services.",
     summary:
       "The Khalifa University Scholarship for Bachelor's study is offered by Khalifa University in Abu Dhabi, United Arab Emirates. It is a merit-based scholarship framework integrated into undergraduate admission, where eligible applicants are mapped to scholarship tiers. Depending on tier and student status, benefits can include full or partial tuition support and additional services, and final benefits are stated in the official admission offer.",
+    contentSections: khalifaReaderSections("Bachelors"),
     guideUrl:
       "https://www.scholarshipscentral.com/blog/khalifa-university-scholarship-2026-uae-application-guide",
     guideLabel: "Khalifa University Scholarship 2026 application guide",
@@ -3738,6 +5506,7 @@ const rawScholarships: Scholarship[] = [
       "Khalifa University offers graduate scholarship tiers for master's applicants in the UAE, with potential tuition waiver benefits and selected support for eligible full-time international students.",
     summary:
       "The Khalifa University Scholarship for master's study is offered through Khalifa University postgraduate admissions in Abu Dhabi, UAE. Scholarship decisions are made during admission and applicants are mapped to tiers based on academic merit and other factors. Published KU scholarship details state that benefits may include tuition waiver up to 100 percent and other support for eligible full-time international students, while availability is limited.",
+    contentSections: khalifaReaderSections("Masters"),
     guideUrl:
       "https://www.scholarshipscentral.com/blog/khalifa-university-scholarship-2026-uae-application-guide",
     guideLabel: "Khalifa University Scholarship 2026 application guide",
@@ -3840,6 +5609,7 @@ const rawScholarships: Scholarship[] = [
       "Khalifa University offers PhD scholarship tiers in the UAE with potential tuition waiver, competitive stipend, and full-time international student support based on scholarship tier and path.",
     summary:
       "The Khalifa University Scholarship for PhD study is managed through Khalifa University postgraduate admissions in Abu Dhabi, UAE. Applicants are evaluated for admission and scholarship tier as part of one process, with scholarship availability limited. Official KU scholarship information states that benefits may include tuition waiver up to 100 percent, competitive monthly stipend for high-caliber candidates, and additional support for eligible full-time international students.",
+    contentSections: khalifaReaderSections("PhD"),
     guideUrl:
       "https://www.scholarshipscentral.com/blog/khalifa-university-scholarship-2026-uae-application-guide",
     guideLabel: "Khalifa University Scholarship 2026 application guide",
@@ -3944,6 +5714,7 @@ const rawScholarships: Scholarship[] = [
       "The Heydar Aliyev International Education Grant Program is a fully funded Azerbaijan government scholarship for eligible international students nominated by their home-country authorities.",
     summary:
       "The Azerbaijan Government Scholarship (Heydar Aliyev International Education Grant Program) is offered by the Ministry of Foreign Affairs and the Ministry of Science and Education for selected international students in Azerbaijani universities. For 2026-2027, candidates must complete a two-stage process: first-stage nomination by relevant authorities in their own country, then second-stage submission in SIACAS. For Master's level, the scholarship is fully funded with tuition, annual flights, monthly allowance, medical insurance, and visa/registration support.",
+    contentSections: azerbaijanReaderSections("Masters"),
 
     country: "Azerbaijan",
     degreeLevel: "Masters",
@@ -4034,6 +5805,7 @@ const rawScholarships: Scholarship[] = [
       "Fully funded Azerbaijan government scholarship for eligible international undergraduate applicants through a nomination-first process.",
     summary:
       "The Azerbaijan Government Scholarship under the Heydar Aliyev International Education Grant Program supports nominated international students for undergraduate study in Azerbaijan. The process is two-stage: first-stage nomination by relevant authorities in the candidate's country, then SIACAS submission. For bachelor's level, coverage includes tuition, annual flights, monthly allowance, medical insurance, and visa/registration support under official call rules.",
+    contentSections: azerbaijanReaderSections("Bachelors"),
 
     country: "Azerbaijan",
     degreeLevel: "Bachelors",
@@ -4094,6 +5866,7 @@ const rawScholarships: Scholarship[] = [
       "Fully funded doctoral opportunity in Azerbaijan for nominated international candidates under the Heydar Aliyev grant program.",
     summary:
       "The Azerbaijan Government Scholarship for doctoral study is offered through the Heydar Aliyev International Education Grant Program. Applicants must first secure official nomination from state authorities in their own country, then complete SIACAS second-stage registration within the official window. For PhD level, benefits include tuition, annual flights, monthly stipend, medical insurance, and visa/registration support under the 2026-2027 call.",
+    contentSections: azerbaijanReaderSections("PhD"),
 
     country: "Azerbaijan",
     degreeLevel: "PhD",
@@ -4155,6 +5928,114 @@ const rawScholarships: Scholarship[] = [
 
     summary:
       "The Heinrich Böll Foundation Scholarship is a funded program offered by the Heinrich Böll Foundation for international students planning to pursue a master's degree at a recognized university in Germany. It supports applicants who combine strong academics with social or political engagement and provides a monthly stipend, possible allowances, and community support. The program aligns with the foundation's focus on environmental sustainability, democracy, human rights, and social justice.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "Foundation", value: "Heinrich Böll Foundation" },
+          { label: "Study level", value: "Master's study in Germany" },
+          { label: "Applicant group", value: "International students who completed their first degree abroad" },
+          { label: "Application timing", value: "Before starting the master's degree programme in Germany" },
+          { label: "Annual deadlines", value: "March 1 and September 1" },
+          { label: "Portal opening", value: "Usually around six weeks before each deadline" },
+          { label: "Language expectation", value: "German proof is required for international applicants, commonly at least B2 or equivalent" },
+          { label: "Selection focus", value: "Academic excellence, social/political engagement, and fit with foundation values" },
+        ],
+        paragraphs: [
+          "The Heinrich Böll Foundation Scholarship is a German political-foundation scholarship, not a simple tuition waiver. It supports students who combine academic strength with social engagement and an interest in democracy, human rights, ecology, sustainability, gender justice, and related public issues. For international master's applicants, the official foundation page says applicants who completed their first degree abroad can apply before starting a master's degree programme in Germany.",
+          "This point is important because timing can make or break the application. A student who is already far into a German master's may not fit the intended application stage. Applicants should confirm their category on the official foundation page before preparing documents, because rules differ for international students, EU applicants, students educated in Germany, and doctoral applicants.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "A strong applicant is not only a high-grade student. The foundation wants people who can show academic ability, public engagement, and a thoughtful connection to the foundation's values. Evidence might include community work, student politics, climate or environmental activity, human-rights work, journalism, civic education, gender-equality work, social initiatives, migration or inclusion projects, or other sustained engagement.",
+          "The scholarship is best suited to students who can explain why their master's degree in Germany connects with a wider social purpose. The subject does not have to be environmental science or politics, but the applicant should be able to show how their academic path and civic interests fit the foundation's understanding of responsibility and democratic engagement.",
+          "It is a poor fit for applicants who are applying only because Germany is affordable, who cannot document German proficiency, who have no real engagement beyond ordinary coursework, or who want a scholarship that is decided only by grades. Academic performance matters, but this foundation does not read applicants as grade sheets only.",
+        ],
+      },
+      {
+        title: "Eligibility and timing",
+        paragraphs: [
+          "International students who completed their first degree outside Germany can apply before starting a master's programme in Germany. The official foundation page also notes that priority is given to applicants from DAC countries who have not yet taken up residence in Germany at the time of application. Applicants should read this carefully if they are already living in Germany or if they are unsure how their country category is treated.",
+          "The annual deadlines are March 1 and September 1. The DAAD database entry for this scholarship also lists those dates and says the online application portal generally opens about six weeks before each deadline. Students should not wait for the portal opening to begin preparing, because language certificates, references, admission documents, and engagement proof can take much longer.",
+          "University admission is separate. The foundation can support master's study, but the applicant still needs a real programme at a recognised German university and must meet that programme's academic and language requirements. If the university programme is English-taught, the foundation's German-language requirement may still apply, so students should not assume English-medium admission removes the need for German proof.",
+        ],
+      },
+      {
+        title: "Funding and what it does not cover",
+        paragraphs: [
+          "The current data record lists a typical monthly stipend figure for international students and possible allowances, but applicants should verify the current funding table directly on the foundation site because rates and categories can change. Funding generally supports living costs during the standard study period, with renewal rules and possible additional allowances depending on applicant category.",
+          "The DAAD database notes that tuition-fee funding is not possible in Germany under this programme. That does not usually create a large tuition issue at many public German universities, but it still matters. Students may need to pay semester contributions, administrative fees, public transport semester tickets, deposits, insurance gaps, visa or residence costs, language courses, relocation expenses, and personal costs.",
+          "The foundation also offers non-financial support such as seminars, networking, mentoring, and a community of scholars. For the right applicant, this can be as important as the stipend. A student interested only in money may miss the point of the programme; a student who wants intellectual and civic exchange may find the foundation environment valuable.",
+        ],
+      },
+      {
+        title: "German language requirement",
+        paragraphs: [
+          "German proof is one of the most common stumbling blocks for international applicants. The existing record notes at least B2 or equivalent, and several official-adjacent references point applicants to the foundation's required German evidence. The safest advice is to check the active application sheet for your category and prepare a recognised certificate early.",
+          "Applicants sometimes assume that an English-taught master's programme means no German is needed. That may be true for university admission, but the scholarship foundation can still require German because scholars participate in a German foundation community, seminars, interviews, and civic life. If you cannot document German by the deadline, this scholarship may not be ready for you this cycle.",
+          "Language proof should be treated like a formal eligibility document. Do not rely on informal course attendance, self-assessment, or a teacher's casual note unless the current application rules explicitly accept it. Book testing early enough that results arrive before the portal closes.",
+        ],
+      },
+      {
+        title: "Documents to prepare",
+        bullets: [
+          "Online application form through the foundation portal.",
+          "Curriculum vitae showing education, work, engagement, and relevant responsibilities.",
+          "Academic transcripts and degree certificate from the first degree.",
+          "Proof of admission, application, or intended master's study route where required by the current call.",
+          "German language certificate meeting the foundation's category requirement.",
+          "Motivation statement explaining academic goals and fit with foundation values.",
+          "Evidence of social or political engagement, such as certificates, letters, project records, publications, or portfolios.",
+          "References or reports required by the active application information sheet.",
+          "Translations where original documents are not in an accepted language.",
+        ],
+        paragraphs: [
+          "The engagement evidence should be concrete. A line saying interested in sustainability is much weaker than evidence of organising a project, volunteering over time, publishing, participating in an initiative, taking responsibility in a student organisation, or supporting a community. The foundation needs enough detail to evaluate depth, duration, responsibility, and values.",
+          "The academic file should also be easy to read. If your grading system is unfamiliar, include official explanations where allowed. If your degree certificate is not yet issued, check whether provisional evidence is accepted. Do not upload blurred scans or mixed-language documents without required translation.",
+        ],
+      },
+      {
+        title: "Application process",
+        ordered: [
+          "Confirm your applicant category on the official Heinrich Böll Foundation scholarship page.",
+          "Check whether you must apply before starting the master's degree and whether your residence situation affects priority.",
+          "Choose or confirm a recognised master's programme in Germany.",
+          "Prepare German language proof, academic records, CV, motivation, references, and engagement evidence.",
+          "Register in the online portal when it opens about six weeks before the deadline.",
+          "Complete the application forms and upload all required documents before March 1 or September 1.",
+          "If shortlisted, follow the foundation's selection and interview instructions.",
+        ],
+        paragraphs: [
+          "The best preparation starts before the portal opens. Use the six-week portal window for final entry, upload, and checking, not for discovering that a language test or reference is missing. Treat the deadline as a hard closing point.",
+          "Applicants should also prepare for values-based questions. Selection can explore not only the degree plan but also political awareness, social responsibility, engagement history, and why the applicant wants to join this particular foundation community.",
+        ],
+      },
+      {
+        title: "Writing a strong motivation statement",
+        paragraphs: [
+          "A strong motivation statement connects three things: your academic path, your social or political engagement, and your future contribution. It should not be a generic Germany essay. Explain why the master's programme is the right academic step, what issue or field you care about, what you have already done, and how the foundation's values fit your development.",
+          "Avoid exaggerating activism or inventing impact. Selection readers can usually tell when engagement has been inflated. It is better to describe a smaller real role with honesty and reflection than to claim leadership of a movement you barely joined. Explain what you learned, what responsibility you held, and why it matters.",
+          "If your engagement is not obviously political, make the connection clear. Tutoring, community health, environmental education, open-source civic tech, inclusion work, student mentoring, local journalism, or rights awareness can all be relevant if explained through responsibility and public value.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Applying without German language proof or assuming English-taught admission removes the foundation language requirement.",
+          "Treating the scholarship as a grade-only award.",
+          "Submitting vague engagement claims without evidence.",
+          "Waiting for the portal to open before asking for references or booking a language exam.",
+          "Ignoring applicant-category rules, especially timing before starting the master's degree.",
+          "Writing a motivation statement that praises Germany but does not explain fit with the foundation.",
+          "Forgetting semester fees, insurance, housing deposits, and arrival costs when planning the budget.",
+        ],
+        paragraphs: [
+          "A strong Heinrich Böll application feels coherent: the grades are solid, the master's plan is realistic, the engagement is real, and the applicant understands the foundation's public values. If one of those pieces is missing, improve it before relying on the application.",
+        ],
+      },
+    ],
 
     guideUrl:
       "https://www.scholarshipscentral.com/blog/heinrich-boll-foundation-scholarship-2026-guide",
@@ -4244,6 +6125,139 @@ const rawScholarships: Scholarship[] = [
     title: "University of Calabria UnicalAdmission Scholarship",
     overview:
       "UnicalAdmission is the University of Calabria's early-admission call for non-EU students living abroad, with scholarship seats for two-year master's programs.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "University of Calabria" },
+          { label: "Call", value: "UnicalAdmission for extra-EU students living abroad" },
+          { label: "Study level", value: "Two-year master's degree" },
+          { label: "Host country", value: "Italy" },
+          { label: "Deadline", value: "March 30, 2026 at 11:59 PM Italy time for the listed call" },
+          { label: "Selection", value: "Qualifications review, with online interview where required" },
+          { label: "Main benefits", value: "Tuition waiver, accommodation, canteen services, and annual allowance for scholarship seats" },
+          { label: "Application route", value: "University of Calabria online admission portal" },
+        ],
+        paragraphs: [
+          "The University of Calabria UnicalAdmission Scholarship is an early-admission route for non-EU applicants living outside Italy who want to start a two-year master's degree at the University of Calabria. It is not a general Italy scholarship for every international student and not the same thing as a regional DSU scholarship. The key eligibility phrase is extra-EU students living abroad.",
+          "This matters because an applicant's residence and citizenship category can change the route. Students already living in Italy, EU citizens, and applicants who do not meet the master's admission requirements should not assume this call applies to them. The official call and portal should be checked before choosing programmes or paying any application fee.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "This opportunity is best for applicants who already hold, or are finishing, a bachelor's degree that is valid for master's admission in Italy and matches one of the eligible University of Calabria master's programmes. A strong applicant understands the academic field, can provide clean transcripts and degree evidence, and can handle an online selection process.",
+          "It is especially attractive for students who need more than a tuition waiver. Scholarship seats can include free or supported accommodation, canteen services, and an annual allowance, which makes the offer more practical than many partial scholarships. However, students should still calculate arrival costs, visa costs, local transport, personal expenses, and any costs not listed in the official benefits.",
+          "It is a poor fit for applicants who choose a programme randomly, do not meet academic prerequisites, are not extra-EU students living abroad, or cannot prepare documents before the deadline. It is also risky for students who assume every admitted applicant receives the scholarship package. Admission and scholarship-seat selection are not identical.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Applicant must be a non-EU citizen living abroad under the call rules.",
+          "Applicant must hold a bachelor's degree or equivalent valid for access to Italian master's study.",
+          "The selected master's programme must be included in the UnicalAdmission call.",
+          "The applicant must meet programme-specific academic requirements.",
+          "Documents must be uploaded through the university portal by the deadline.",
+          "An online interview may be required as part of selection.",
+        ],
+        paragraphs: [
+          "The academic requirement is not just possession of any bachelor's degree. Italian master's admission depends on whether the prior degree is comparable, whether the field is relevant, and whether the programme has specific prerequisites. Applicants should read the programme page before applying, not after selection.",
+          "Applicants should also prepare for document recognition later in the process. Italian universities may request degree certificates, transcripts, translations, legalisation or apostille, Declaration of Value, CIMEA statements, or other evidence depending on country and university instructions. A scholarship article cannot replace the university's document checklist.",
+        ],
+      },
+      {
+        title: "What the scholarship can cover",
+        paragraphs: [
+          "For scholarship seats, the current record lists tuition-fee waiver, free accommodation on campus where available, free canteen services, and an annual allowance around 3,600 euros. This combination can make the University of Calabria route financially realistic for students who cannot self-fund a full Italian master's degree.",
+          "The package should still be read carefully. Free accommodation may depend on availability and university rules. Canteen services reduce food costs but may not cover every meal or personal preference. The annual allowance is helpful but modest when spread across the year. Students should plan for visa application costs, travel to Italy, local transport, residence permit, health insurance if required, phone, clothing, documents, and emergency funds.",
+          "The scholarship also does not automatically solve academic or immigration requirements. A selected student still needs to complete pre-enrollment, visa, enrollment, and any final document checks. Do not book travel before official admission and visa instructions are clear.",
+        ],
+      },
+      {
+        title: "Choosing the right master's programme",
+        paragraphs: [
+          "The safest programme choice starts with academic fit. Review the course language, curriculum, admission prerequisites, required bachelor's background, credits, and any interview topics. If your bachelor's degree is in a different field, check whether the programme accepts that background before applying.",
+          "Students should also consider location and study environment. The University of Calabria has a campus-based model, and scholarship support may include accommodation and canteen services. That can be a real advantage for international students because it reduces the chaos of finding private housing immediately after arrival.",
+          "Do not choose only by scholarship availability. A two-year master's degree should support a credible career, research, or further-study plan. Selection committees are more likely to trust an applicant who can explain why the chosen programme follows from previous study and future goals.",
+        ],
+      },
+      {
+        title: "Application process",
+        ordered: [
+          "Read the official UnicalAdmission call for the relevant academic year.",
+          "Confirm that you are an extra-EU applicant living abroad.",
+          "Choose an eligible master's programme and check its academic prerequisites.",
+          "Create or access the university admission portal account.",
+          "Complete the online application and choose the correct competition or call.",
+          "Upload required academic, identity, language, and supporting documents.",
+          "Pay any required application fee through the official payment method before the deadline.",
+          "Complete any online interview or additional assessment if invited.",
+          "Wait for ranking, admission, scholarship-seat result, pre-enrollment, visa, and enrollment instructions.",
+        ],
+        paragraphs: [
+          "Applications should be submitted early. Portal payments, uploads, and document corrections can take time, especially close to the deadline. A student who waits until the last evening risks losing the chance because of a payment issue or missing file.",
+          "After a positive result, follow Italian pre-enrollment and visa instructions carefully. Scholarship selection is important, but students from outside the EU still need a valid route to enter and enroll in Italy.",
+        ],
+      },
+      {
+        title: "Documents to prepare",
+        bullets: [
+          "Passport or valid identity document.",
+          "Bachelor's degree certificate or expected graduation evidence if accepted by the call.",
+          "Academic transcript with exams, credits, and grades.",
+          "Curriculum vitae where required.",
+          "Language proof if required by the programme.",
+          "Syllabus or course descriptions if needed to assess academic prerequisites.",
+          "Translations, legalisation, apostille, Declaration of Value, or CIMEA documents if later requested.",
+          "Any programme-specific document listed in the call or portal.",
+        ],
+        paragraphs: [
+          "The transcript should make your academic preparation easy to assess. If course names are unclear, programme assessors may not understand whether you meet prerequisites. Keep syllabi or official course descriptions ready for technical fields.",
+          "Applicants should also ensure that names and dates match across passport, transcript, degree certificate, and portal profile. Small inconsistencies can slow later pre-enrollment and visa steps.",
+        ],
+      },
+      {
+        title: "Interview and selection readiness",
+        paragraphs: [
+          "Selection can include an interview, depending on the programme or call rules. Treat it as an academic-fit conversation, not only a scholarship interview. Be ready to explain your bachelor's background, why you chose the programme, what subjects you are prepared for, and how you will handle study in Italy.",
+          "If the programme is in English, prepare to discuss your academic interests clearly in English. If the programme uses Italian or another language requirement, make sure your language evidence and interview readiness match the course expectations.",
+          "A good interview answer is specific. Instead of saying you want to study in Europe, mention modules, skills, research areas, career plans, and how your previous coursework prepares you. The committee needs to know that you are not only seeking funding but can succeed in the programme.",
+        ],
+      },
+      {
+        title: "After selection: pre-enrollment, visa, and arrival planning",
+        paragraphs: [
+          "A scholarship-seat result is a major step, but it is not the final administrative step. Non-EU students usually need to complete Universitaly pre-enrollment, prepare visa documentation, show admission evidence, arrange travel, and complete final enrollment after arriving in Italy. The university and Italian diplomatic mission instructions should be followed exactly, because visa rules sit outside the scholarship selection itself.",
+          "Housing and canteen benefits can reduce the pressure of arrival, but students should still keep a cash buffer. First expenses can include visa appointment costs, document legalisation, travel to the nearest consulate, flight ticket, local transport from the airport, residence permit kit, passport photos, SIM card, bedding or household items, and meals before services are fully activated. A student who arrives with no emergency money can struggle even with a strong scholarship package.",
+          "Students should also plan academically for the first semester. Italian university systems may feel different from previous education systems, especially around exam scheduling, oral exams, credits, and independent study. Read the programme handbook, attend orientation, and ask early about course registration and exam rules. Keeping the scholarship safe depends not only on arriving, but on progressing successfully once the master's begins.",
+          "Finally, keep copies of every official document: admission letter, scholarship result, passport, visa, insurance, accommodation assignment, fiscal code, residence permit receipts, academic records, and payment confirmations. These documents are often needed more than once during enrollment and residence procedures.",
+        ],
+      },
+      {
+        title: "Is this scholarship worth your time?",
+        paragraphs: [
+          "It is worth applying if you clearly fit the extra-EU abroad category, have a bachelor's background that matches an eligible University of Calabria master's programme, and can submit a complete file before the March deadline. The scholarship package is unusually practical because it combines tuition relief with accommodation, food support, and a cash allowance rather than offering only a small fee discount.",
+          "It is probably not worth applying if your degree background does not match the programme, if you cannot produce documents in time, or if your plan depends on changing the call rules. Students with weak academic fit often spend energy on the scholarship label and not enough on admission reality. The better approach is to shortlist only programmes where you can explain your previous coursework, skills, and goals clearly.",
+          "For students comparing Italy options, UnicalAdmission should be seen as an early university-specific route. Regional DSU scholarships, university fee waivers, and other Italian opportunities may run on different calendars and rules. Applying to Unical does not replace checking those other options, but it can be a strong route for a student who wants a campus-based master's path with a defined scholarship package.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Applying even though you are not an extra-EU student living abroad.",
+          "Choosing a master's programme without checking academic prerequisites.",
+          "Assuming every admitted student receives the scholarship benefits.",
+          "Missing the official portal deadline or payment deadline.",
+          "Uploading unclear transcripts or documents without required translations.",
+          "Ignoring later Italian pre-enrollment, visa, and enrollment steps.",
+          "Budgeting as if the annual allowance covers every cost in Italy.",
+        ],
+        paragraphs: [
+          "A strong UnicalAdmission application is practical and clean. It proves the applicant fits the call, qualifies academically for the master's programme, submits complete documents, and understands that scholarship selection, admission, visa, and enrollment are connected but separate stages.",
+        ],
+      },
+    ],
 
     country: "Italy",
     degreeLevel: "Masters",
