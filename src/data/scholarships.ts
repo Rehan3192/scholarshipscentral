@@ -9509,6 +9509,142 @@ const rawScholarships: Scholarship[] = [
       "DIYA Pakistan Scholarship is a need-based support program for Pakistani students. Applications are submitted online and reviewed by DIYA Pakistan under Ihsan Trust rules.",
     summary:
       "The DIYA Pakistan Scholarship supports eligible Pakistani students with annual financial assistance routed through their institutes. It is offered by DIYA Pakistan (Ihsan Trust) and generally targets students who meet academic merit and need-based criteria. The process includes an online form, document email submission, and verification before yearly disbursement.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "Provider", value: "DIYA Pakistan / Ihsan Trust" },
+          { label: "Country", value: "Pakistan" },
+          { label: "Funding type", value: "Need-based partial financial assistance" },
+          { label: "Application mode", value: "Online form plus emailed documents" },
+          { label: "Academic requirement", value: "At least 60% marks at all levels" },
+          { label: "Deadline", value: "Rolling / no fixed public final date" },
+          { label: "Payment route", value: "Cheque sent through institute after approval" },
+        ],
+        paragraphs: [
+          "The DIYA Pakistan Scholarship is a need-based support programme for Pakistani students who are already studying and need help with education costs. It is not a large international award, and it is not a full-cost university scholarship. Its practical value is that it can reduce pressure on students and families through yearly assistance routed through the student's institute.",
+          "The official DIYA instructions focus on academic consistency, need, correct documents, CNIC tracking, and institute verification. Students should approach it like a verification-heavy local scholarship: complete the form carefully, send documents in the required way, and keep checking status rather than expecting instant approval.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "This scholarship is best for Pakistani students who have maintained at least 60% marks at all academic levels and are facing genuine financial difficulty. It is especially relevant for students in graduation-level and master's-level programmes where the official online application system is used.",
+          "Students already receiving more than PKR 25,000 per year from another organisation are not eligible under DIYA's public instructions. This matters because some students apply to several support programmes at once and forget to check conflict rules. If you already receive a major scholarship, verify eligibility before applying.",
+          "The scholarship is not suitable for every level. DIYA's instructions state that PhD and MPhil students are generally not eligible through this scholarship route, though direct MPhil after graduation may be treated differently under stated rules. Students at school or intermediate level should also read the official instructions carefully because the web-based online system is not for every education stage.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Applicant should be a Pakistani student.",
+          "At least 60% marks are required at Matric, Intermediate, and Graduation level where applicable.",
+          "Students receiving more than PKR 25,000 per year from another organisation are not eligible.",
+          "The applicant must provide valid CNIC or smart card details for tracking.",
+          "Documents must be emailed after online submission with the CNIC number in the subject line.",
+          "Renewal depends on updated result and fee documents for the next academic year.",
+        ],
+        paragraphs: [
+          "The 60% rule is one of the clearest filters. Students should calculate their marks honestly before applying. If the application asks for percentages and the student enters inflated or inconsistent numbers, verification can create problems later.",
+          "Need-based support also means financial information should be accurate. Students may need fee receipts, income details, family information, institute confirmation, or additional documents during review. The safest approach is to prepare a clean document folder before starting the online form.",
+        ],
+      },
+      {
+        title: "What the scholarship covers",
+        paragraphs: [
+          "DIYA support is generally partial educational assistance. It is not advertised as a universal full tuition package, monthly stipend, hostel allowance, laptop grant, or overseas scholarship. After approval, the scholarship cheque is typically sent to the student's institute, which may adjust it against fees or hand it over according to the process.",
+          "Because payment goes through the institute, students should keep their institute informed. If the institute has a scholarship office, accounts office, or head-of-institute verification process, ask how incoming cheques are handled. A student who understands the institute side of the process can avoid unnecessary delay after approval.",
+          "Students should still prepare a full education budget. Include tuition, transport, books, exam fees, hostel or rent if applicable, food, internet, and family contribution. DIYA can help, but it should not be the only plan if the student's total need is much higher.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Read the official DIYA general instructions before opening the form.",
+          "Gather academic records, CNIC details, fee receipt, institute information, and family/financial documents.",
+          "Complete the official online application form carefully.",
+          "Email scanned documents to the official application email with your CNIC number in the subject line.",
+          "Check the application status weekly on the DIYA website.",
+          "Respond to any verification request with accurate information.",
+          "After approval, coordinate with your institute for cheque receipt or fee adjustment.",
+        ],
+        paragraphs: [
+          "The application is not finished when the form is submitted. DIYA's instructions refer to sending scanned documents by email after the online form. If documents are missing, unclear, or sent with the wrong subject, review can be delayed.",
+          "The public instructions mention a review period of around 20 to 30 days in many cases, but students should treat this as an estimate. Verification can take longer if documents are incomplete, the institute is slow to confirm details, or the application volume is high.",
+        ],
+      },
+      {
+        title: "Document checklist",
+        bullets: [
+          "CNIC or smart card details.",
+          "Matric and Intermediate marks sheets.",
+          "Current degree transcripts or latest result.",
+          "Current institute fee receipt or challan.",
+          "Institute details and student enrollment information.",
+          "Income or family financial documents if requested.",
+          "Any attestation or verification form required by DIYA or the institute.",
+        ],
+        paragraphs: [
+          "Documents should be readable, complete, and consistent. Names, CNIC number, institute name, programme title, and marks should match across the application and attachments. Small mismatches can slow down verification.",
+          "Keep original documents safe because the institute or DIYA may need confirmation. Also keep copies of the submitted form, email, attachments, and any status messages. If you need to follow up later, having a record makes the process easier.",
+        ],
+      },
+      {
+        title: "Renewal and yearly support",
+        paragraphs: [
+          "DIYA support can continue yearly until course completion, subject to renewal requirements. Renewal is not automatic forever. Students typically need to send updated results and fee proof, and the support year runs according to the scholarship cycle.",
+          "A renewal student should not wait until fees become urgent. As soon as new results and fee receipts are available, prepare the renewal email with the CNIC number in the subject. Consistent tracking helps DIYA connect the new documents with the previous case.",
+          "Academic performance still matters. If a student falls below the required marks, stops studying, changes institute, or receives another large scholarship, eligibility may change. Always report changes honestly.",
+        ],
+      },
+      {
+        title: "How to decide if you should apply",
+        paragraphs: [
+          "Apply if you meet the 60% academic rule, are not already receiving more than the allowed scholarship amount, and can provide clear proof of current enrollment and fees. DIYA is most useful when the student has a real but limited funding gap and can show that support will help them continue education.",
+          "Do not apply casually with incomplete information. DIYA's instructions warn that incorrect information or a not-accepted status can affect future applications. If you are unsure about another scholarship, your marks, or your study level, read the official instructions first and ask your institute for guidance.",
+          "Students from families with irregular income should prepare extra explanation. For example, if the father or guardian is self-employed, unemployed, ill, retired, or supporting several children in education, the documents should make the situation understandable. Need-based review works better when the financial picture is clear.",
+        ],
+      },
+      {
+        title: "Follow-up after submission",
+        ordered: [
+          "Save the online application confirmation.",
+          "Save the email sent to DIYA with attachments.",
+          "Check application status weekly on the official website.",
+          "Respond quickly if DIYA requests clarification.",
+          "Ask your institute office whether any verification or cheque has arrived.",
+          "Keep fee receipts and results ready for renewal.",
+        ],
+        paragraphs: [
+          "Many students lose time after submission because they wait passively. DIYA specifically tells students to check status on the website. Make a weekly reminder and keep your CNIC number available for tracking.",
+          "If your institute receives a cheque, ask how it will be processed. Some institutes may adjust it against fees, while others may have a handover process. Knowing the local procedure helps you avoid confusion after approval.",
+        ],
+      },
+      {
+        title: "Final advice",
+        paragraphs: [
+          "Treat DIYA as a practical support route, not a prestige scholarship. The application succeeds when the student proves eligibility, need, enrollment, and document accuracy. If your case is genuine, careful paperwork matters more than fancy wording.",
+          "Before submitting, ask one simple question: if a reviewer opened my file, could they quickly understand who I am, where I study, what my marks are, what my fee need is, and why I am eligible? If the answer is yes, the application is much stronger.",
+          "If any answer feels unclear, fix the document or explanation before submitting rather than hoping verification will solve it later during review.",
+          "Clear files save time for the student, the institute, and the scholarship team.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Submitting the online form but forgetting to email scanned documents.",
+          "Using a wrong or inconsistent CNIC number.",
+          "Applying despite receiving more than the allowed amount from another organisation.",
+          "Entering marks below 60% or unclear academic information.",
+          "Sending blurry fee receipts or incomplete transcripts.",
+          "Checking status once and then ignoring the application.",
+          "Treating the scholarship as fully funded support.",
+        ],
+        paragraphs: [
+          "The strongest DIYA application is simple, honest, and complete. Students should focus on eligibility, correct documents, and weekly tracking rather than trying to make the application dramatic. This is a practical support programme, and practical accuracy matters most.",
+        ],
+      },
+    ],
 
     country: "Pakistan",
     degreeLevel: "Bachelors",
@@ -9598,6 +9734,126 @@ const rawScholarships: Scholarship[] = [
       "https://www.scholarshipscentral.com/blog/iowa-state-university-international-merit-scholarship-2026-application-guide",
     guideLabel:
       "Iowa State University International Merit Scholarship 2026 application guide",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "Iowa State University" },
+          { label: "Country", value: "United States" },
+          { label: "Level", value: "Undergraduate / Bachelor's" },
+          { label: "Eligible students", value: "International first-year and transfer applicants" },
+          { label: "Maximum first-year value", value: "Up to USD 40,000 total over 8 semesters" },
+          { label: "Maximum transfer value", value: "Up to USD 20,000 total over 5 semesters" },
+          { label: "Application route", value: "Admission plus OneApp scholarship application" },
+        ],
+        paragraphs: [
+          "The Iowa State University International Merit Scholarship is a partial undergraduate scholarship for international students. It is designed to reduce tuition and fee costs for strong first-year and transfer applicants, not to cover every cost of studying in the United States.",
+          "Iowa State describes these awards as merit scholarships based on academic excellence and a demonstrated record of accomplishments. The most important thing for students is to understand the two-step nature of the process: first secure admission, then complete the relevant scholarship application in OneApp where required.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "This scholarship is best for international undergraduate applicants who have strong grades and meaningful accomplishments beyond basic classroom performance. Iowa State mentions academic excellence and achievement in areas such as math and sciences, arts, extracurricular activity, community service, leadership, innovation, or entrepreneurship.",
+          "First-year students and transfer students can both be considered, but their award ranges and maximum duration differ. A first-year student may receive renewable support for up to eight semesters, while a transfer student may have a shorter maximum period. Students should read the track that matches their entry type.",
+          "It is not the right fit for graduate applicants, domestic students, or international students who need a full scholarship covering tuition, housing, meals, health insurance, travel, and personal expenses. Even at the highest award level, students still need a separate financial plan.",
+        ],
+      },
+      {
+        title: "Award levels explained",
+        paragraphs: [
+          "For first-year applicants, Iowa State lists two main International Merit Scholarship levels in this record: Award of Achievement and Award of Distinction. The Award of Achievement can be USD 5,000 to USD 10,000 per year, up to USD 40,000 total. The Award of Distinction can be USD 2,000 to USD 4,000 per year, up to USD 16,000 total.",
+          "For transfer applicants, the award ranges are smaller because the student enters with fewer semesters remaining. The transfer Award of Achievement can be USD 5,000 to USD 8,000 per year, up to USD 20,000 total. The transfer Award of Distinction can be USD 2,000 to USD 4,000 per year, up to USD 10,000 total.",
+          "These awards reduce cost, but they do not replace proof of funds for the remaining expenses. Students should calculate annual tuition and fees after the scholarship, then add housing, meals, books, health insurance, travel, visa costs, and personal expenses.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Applicant must be an international undergraduate student.",
+          "Applicant must be admitted to Iowa State as a first-year or transfer student.",
+          "Student must be assessed international tuition rates.",
+          "Transfer applicants need a qualifying cumulative GPA, listed in this record as equivalent to 3.0 on a 4.0 scale.",
+          "Students must complete the OneApp General Application and the relevant International Student Admissions Scholarship Application where required.",
+          "Scholarship renewal requires meeting GPA, credit, and international-status rules.",
+        ],
+        paragraphs: [
+          "Admission is the foundation. You cannot make a strong scholarship plan if the admission file is incomplete. Students should submit transcripts, test scores if used, English-language evidence if required, and all admission materials early enough to access scholarship steps.",
+          "The scholarship is competitive. Meeting minimum eligibility does not guarantee the highest award or any award. Iowa State reviews the whole profile, so grades, rigor, accomplishments, leadership, and diversity of experience can all matter.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Apply for undergraduate admission to Iowa State University as an international first-year or transfer student.",
+          "Receive and accept the admission offer by the official term deadline.",
+          "Log in to Iowa State's OneApp scholarship system.",
+          "Complete the OneApp General Application.",
+          "Open Opportunities > Recommended and complete the International Student Admissions Scholarship Application for your entry term.",
+          "Submit before the first-year or transfer scholarship deadline.",
+          "Monitor Iowa State communication for scholarship outcome and renewal rules.",
+        ],
+        paragraphs: [
+          "Do not assume that the admission application alone completes every scholarship step. Iowa State's official pages refer students to OneApp for scholarship applications. If OneApp shows a recommended international admissions scholarship application, complete it before the deadline.",
+          "Deadlines differ by student type and term. The record lists May 1 as the Fall 2026 first-year final deadline and June 30 as the Fall 2026 transfer final deadline. Priority deadlines may be earlier, so serious applicants should not wait for the final date.",
+        ],
+      },
+      {
+        title: "How to make the profile stronger",
+        paragraphs: [
+          "A strong scholarship profile is not only high grades. Iowa State highlights academic performance and accomplishments. Students should use the application to show evidence: science fairs, math competitions, art portfolios, debate, student government, volunteering, entrepreneurship, community projects, coding work, research exposure, sports leadership, or family/business responsibilities.",
+          "The strongest examples are specific. Instead of writing that you are a leader, describe what you led, who benefited, what changed, and how long you were involved. Instead of saying you love engineering, mention a project, class, competition, tool, or problem that proves the interest.",
+          "If SAT or ACT scores are optional or submitted, students should check how they interact with scholarship consideration for the current cycle. Iowa State pages note some automatic international excellence awards may use GPA and SAT/ACT scores, while this merit scholarship route uses broader review. Always follow the current official instructions.",
+        ],
+      },
+      {
+        title: "Renewal rules and budget planning",
+        paragraphs: [
+          "Winning the scholarship is only the first step. Renewal depends on maintaining minimum academic and enrollment conditions. This record lists a minimum 2.5 cumulative GPA, at least 12 credits per semester excluding summer, and continued international student classification. Students should verify the active renewal policy in the award letter.",
+          "A student who loses renewal can face a sudden cost increase. Build a budget that includes a backup plan for future years, especially if family income, exchange rates, or sponsorship support could change. Renewable scholarships are powerful, but they require academic consistency.",
+          "For the visa and enrollment process, calculate the cost after scholarship for one year and for the full degree. A USD 10,000 annual award is significant, but US undergraduate costs remain high. Include tuition, fees, housing, meals, health insurance, books, transportation, winter clothing, travel, and personal expenses.",
+        ],
+      },
+      {
+        title: "First-year versus transfer strategy",
+        paragraphs: [
+          "First-year applicants should use the scholarship application to show breadth: grades, school rigor, activities, leadership, service, and subject interest. If you have SAT or ACT scores that strengthen your profile, check current Iowa State guidance on whether and how to submit them. Do not submit weak optional material only because you think every file needs more documents.",
+          "Transfer applicants should focus on college-level evidence. Iowa State will care about cumulative college GPA, completed credits, course relevance, and whether the student can succeed after transferring into the selected major. A strong transfer application explains why Iowa State is the logical next step, not just a cheaper destination.",
+          "Both groups should accept admission by the required deadline. A scholarship offer can lose practical value if the student misses the offer-acceptance step or fails to complete housing, visa, and enrollment tasks on time.",
+        ],
+      },
+      {
+        title: "Checklist before submission",
+        ordered: [
+          "Confirm whether you are first-year or transfer for Iowa State's purposes.",
+          "Check the correct scholarship deadline for your term and student type.",
+          "Complete admission before relying on OneApp access.",
+          "Prepare accomplishments with evidence, not just titles.",
+          "Complete the OneApp General Application.",
+          "Submit the International Student Admissions Scholarship Application if recommended.",
+          "Save confirmation and watch email for award decisions.",
+        ],
+        paragraphs: [
+          "The checklist is simple, but it prevents the most expensive mistake: assuming that admission equals scholarship consideration. If OneApp asks for a separate scholarship application, complete it. If the recommended opportunity does not appear, contact Iowa State rather than waiting until the deadline passes.",
+          "After submitting, update your financial plan based on the actual award. The maximum advertised amount is not the same as your personal award. Use the official scholarship letter for visa and enrollment planning.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Thinking the scholarship is fully funded.",
+          "Missing OneApp after receiving admission.",
+          "Using the first-year deadline when you are actually a transfer applicant.",
+          "Ignoring priority deadlines.",
+          "Submitting a thin profile with grades only and no accomplishments.",
+          "Forgetting renewal GPA and credit requirements.",
+          "Budgeting only from the maximum award instead of the award actually offered.",
+        ],
+        paragraphs: [
+          "The best Iowa State applicant treats the scholarship as a competitive tuition reducer. Apply early, complete OneApp carefully, show both academic strength and real achievements, and build the financial plan around the official award amount rather than the maximum advertised range.",
+        ],
+      },
+    ],
 
     country: "USA",
     degreeLevel: "Bachelors",
@@ -9690,6 +9946,133 @@ const rawScholarships: Scholarship[] = [
     guideUrl:
       "https://www.scholarshipscentral.com/blog/knb-indonesian-government-scholarship",
     guideLabel: "KNB Indonesian Government Scholarship guide",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "Provider", value: "Government of Indonesia" },
+          { label: "Programme", value: "Kemitraan Negara Berkembang (KNB) Scholarship" },
+          { label: "Level", value: "Bachelor's" },
+          { label: "Eligible applicants", value: "Citizens of eligible developing countries" },
+          { label: "Study location", value: "Selected Indonesian universities" },
+          { label: "Duration", value: "BIPA language preparation plus up to 48 months bachelor's study" },
+          { label: "Application", value: "Official KNB portal with embassy-linked recommendation process" },
+        ],
+        paragraphs: [
+          "The KNB Scholarship is one of Indonesia's main government scholarship routes for students from developing countries. At bachelor's level, it gives international students a pathway to study at selected Indonesian universities with tuition support, living allowance, health insurance, travel support, and other components defined by the official call.",
+          "Students should treat KNB as a government scholarship with a formal process, not as a quick university discount. The application involves the official KNB portal, required documents, and embassy or consulate recommendation steps. The exact rules should always be checked on the active KNB portal before submission.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "The bachelor's route is best for secondary-school graduates from eligible developing countries who want a full undergraduate degree in Indonesia and are ready to adapt to a new academic, cultural, and language environment. It is especially relevant for students who want a long-term international study experience but cannot afford full overseas tuition and living costs.",
+          "Students should be comfortable with the fact that KNB includes an Indonesian language preparation stage, often referred to as BIPA. Even if the academic programme uses English or bilingual instruction in parts, living and studying in Indonesia requires openness to language learning.",
+          "This scholarship is not ideal for applicants who want to choose any country, any university, and any programme without restrictions. KNB placement depends on the official participating universities, available study programmes, selection results, and government rules for the cycle.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Applicant must be from an eligible developing country listed in the official call.",
+          "Applicant must apply for the bachelor's level, not master's or PhD under this record.",
+          "Secondary-school completion or equivalent is required.",
+          "Degree-specific age limits are published in the official requirements.",
+          "Language proficiency evidence is required according to the active KNB rules.",
+          "Embassy or consulate recommendation steps form part of the application flow.",
+        ],
+        paragraphs: [
+          "Eligibility can change by cycle, so students should avoid copying requirements from old PDFs or social media posts. The official KNB requirements page controls age limits, document formats, eligible countries, and language evidence for the active year.",
+          "The embassy recommendation process is important. Applicants should identify the Indonesian Embassy or Consulate responsible for their country and check whether it has local instructions, deadlines, or appointment requirements. Waiting until the final week can make this step difficult.",
+        ],
+      },
+      {
+        title: "What the scholarship covers",
+        paragraphs: [
+          "KNB is generally treated as a fully funded scholarship because it includes major study-cost components. The record lists tuition support for language preparation and regular academic study, monthly living allowance, research or book components, health insurance, and economy-class arrival and return airfare under official rules.",
+          "Even with a strong funding package, students should read exclusions carefully. Scholarship components may have limits, payment schedules, insurance terms, and rules for travel. Some expenses may need to be paid first and reimbursed later, or may not be covered at all.",
+          "Bachelor's students should also plan for long-term personal costs. Four years plus a language preparation period is a major commitment. Include clothing, phone, local transport, laptop, study materials, emergency costs, and visits home if not covered by the scholarship.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Read the official KNB announcement, offering letter, and requirements for the active cycle.",
+          "Confirm your country, age, education level, and language evidence fit the bachelor's criteria.",
+          "Contact or follow the Indonesian Embassy or Consulate process for recommendation where required.",
+          "Prepare passport, certificates, transcripts, CV, motivation letter, language proof, and other official documents.",
+          "Create an account on the official KNB portal.",
+          "Complete the online application and upload all required documents before the deadline.",
+          "Monitor the portal and email for administrative, academic, and final selection results.",
+        ],
+        paragraphs: [
+          "The official portal is the safest place to apply. Third-party guides can help explain the process, but they should not replace the KNB portal. Students should also avoid agents who promise guaranteed selection or ask for unofficial fees.",
+          "Because the application combines embassy-related steps and online submission, time management matters. Start with documents that take longest: passport, school certificates, transcripts, recommendation letters if required, medical or language documents if requested, and any legalization or translation steps.",
+        ],
+      },
+      {
+        title: "Choosing a bachelor's programme in Indonesia",
+        paragraphs: [
+          "Choosing the right programme is more important than choosing the most famous city or university name. Students should compare available majors, language of instruction, campus location, academic requirements, facilities, internship opportunities, and whether the subject connects to their long-term goals.",
+          "If you are applying for engineering, health, agriculture, computing, economics, education, social sciences, or arts, check whether the host university has a strong department in that field. A fully funded scholarship is valuable, but the degree still needs to be academically useful after graduation.",
+          "Bachelor's students should also think about adjustment. Studying abroad straight after secondary school can be exciting but demanding. Consider culture, food, climate, religious/community support, language learning, campus housing, and distance from family before ranking choices.",
+        ],
+      },
+      {
+        title: "Application statement strategy",
+        paragraphs: [
+          "A strong KNB motivation letter should explain why Indonesia, why the selected field, and why the applicant is ready for an international bachelor's programme. It should not only say that the applicant needs financial support. The reviewers need to see academic direction and maturity.",
+          "Use specific evidence from school, projects, competitions, community service, leadership, or personal learning. If you want to study civil engineering, explain what problem or project sparked that interest. If you want economics, show awareness of development, business, policy, or data questions. Specific motivation is more convincing than broad ambition.",
+          "Because KNB is aimed at developing-country partnership, applicants can also explain how the degree may help their community, country, or region. Keep this realistic. A focused plan to work in a sector, solve a local problem, or continue study is stronger than promising to change everything immediately.",
+        ],
+      },
+      {
+        title: "Preparing for life in Indonesia",
+        paragraphs: [
+          "A bachelor's KNB award is a long commitment, so preparation should go beyond the application. Students should research climate, food, local culture, campus rules, religious or community support, student housing, banking, mobile phone setup, and health services. Feeling prepared helps academic performance after arrival.",
+          "The BIPA language stage should be treated as part of the scholarship, not as a delay. Learning Indonesian can help students handle daily life, build friendships, understand campus administration, and participate more fully in the host community. Students who resist the language stage may struggle more than students who use it seriously.",
+          "Family planning also matters. Younger undergraduate students may be leaving home for the first time. Discuss communication routines, emergency contacts, travel expectations, and financial backup with family before departure. A fully funded scholarship reduces cost, but it does not remove the emotional adjustment of several years abroad.",
+        ],
+      },
+      {
+        title: "Final readiness checklist",
+        ordered: [
+          "Confirm your country appears in the official eligibility list.",
+          "Check the bachelor's age limit and education requirement.",
+          "Confirm passport validity for the full application and visa process.",
+          "Prepare translated or certified school documents if required.",
+          "Contact the Indonesian Embassy or Consulate early.",
+          "Choose programmes that match your academic goals.",
+          "Submit through the official portal and save all confirmations.",
+        ],
+        paragraphs: [
+          "The best applicants are calm because their documents are ready early. If you wait until March to begin passport, embassy, or transcript work, one missing document can collapse the whole application. Start with the official checklist and mark every item as complete before uploading.",
+          "If selected, read the award conditions carefully before accepting. Understand arrival timing, university placement, allowance rules, health insurance, academic progress requirements, and what happens if you change programme. A government scholarship is generous, but it also comes with responsibilities.",
+        ],
+      },
+      {
+        title: "Final advice",
+        paragraphs: [
+          "For bachelor's applicants, KNB can be life-changing because it supports an entire undergraduate pathway rather than a short exchange. That is also why the decision should be mature. You are not only applying for money; you are applying to live, study, and grow in Indonesia for several years.",
+          "A strong applicant shows readiness for that full journey. Choose the field carefully, prepare documents early, respect the embassy process, and write a motivation letter that proves you understand both the academic opportunity and the personal responsibility.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Relying on unofficial social-media deadlines instead of the KNB portal.",
+          "Ignoring embassy or consulate recommendation steps.",
+          "Uploading unclear scans or incomplete transcripts.",
+          "Choosing programmes without checking academic fit.",
+          "Assuming all costs are unlimited because the scholarship is fully funded.",
+          "Submitting a generic motivation letter.",
+          "Waiting until the final week to prepare passport, language evidence, or translations.",
+        ],
+        paragraphs: [
+          "A strong KNB bachelor's application is organized, honest, and specific. Confirm the official rules, prepare documents early, choose programmes carefully, and write like a student who understands both the opportunity and the responsibility of studying abroad for several years.",
+        ],
+      },
+    ],
 
     country: "Indonesia",
     degreeLevel: "Bachelors",
@@ -9781,6 +10164,151 @@ const rawScholarships: Scholarship[] = [
     guideUrl:
       "https://www.scholarshipscentral.com/blog/knb-indonesian-government-scholarship",
     guideLabel: "KNB Indonesian Government Scholarship guide",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "Provider", value: "Government of Indonesia" },
+          { label: "Programme", value: "KNB Scholarship" },
+          { label: "Level", value: "Master's" },
+          { label: "Eligible applicants", value: "Citizens of eligible developing countries" },
+          { label: "Duration", value: "BIPA language preparation plus up to 24 months master's study" },
+          { label: "Funding", value: "Tuition, living allowance, insurance, travel, and approved components under official rules" },
+          { label: "Application route", value: "KNB portal plus embassy or consulate recommendation process" },
+        ],
+        paragraphs: [
+          "The KNB Scholarship master's track supports international students from eligible developing countries to complete a master's degree at participating Indonesian universities. It is one of the more practical fully funded options for students who want a graduate degree in Asia with government-backed support.",
+          "The scholarship usually includes language preparation, tuition support, living allowance, health insurance, and travel support under official KNB policy. Students should still read the active call carefully because exact allowance amounts, covered costs, exclusions, and document rules can change by cycle.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "The master's route is best for applicants who already have a bachelor's degree, a clear graduate-study goal, and a reason to study in Indonesia. A strong applicant knows the field they want to enter, can explain how the selected programme builds on previous education, and is ready for academic work in a new cultural environment.",
+          "This is not a casual scholarship for students who simply want any free master's abroad. KNB involves government selection, host university placement, language preparation, and multi-year commitment. Applicants should be ready to follow official procedures and adapt to Indonesian academic life.",
+          "Students from development-focused fields, engineering, agriculture, education, health, social sciences, economics, computing, environmental studies, and public policy may find strong programme options, but the right choice depends on the official participating university list and programme availability for the cycle.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Applicant must be from an eligible developing country listed in the official KNB call.",
+          "Applicant must hold a relevant bachelor's degree or equivalent.",
+          "Applicant must meet the master's age limit published by KNB for the active cycle.",
+          "Language proficiency evidence must satisfy official requirements.",
+          "Embassy or consulate recommendation steps are part of the application route.",
+          "The selected programme and university must be available through KNB.",
+        ],
+        paragraphs: [
+          "The master's track has different requirements from bachelor's and PhD tracks. Do not copy the age limit, document list, or academic criteria from another level. The official requirements page is the only safe source for the active cycle.",
+          "Academic fit matters because master's programmes expect relevant prior preparation. A student applying for engineering, computing, public health, business, agriculture, or education should show that their bachelor's background and experience match the proposed programme.",
+        ],
+      },
+      {
+        title: "What the scholarship covers",
+        paragraphs: [
+          "KNB is generally described as fully funded because it covers the major study components. This record lists tuition support for the language and academic stages, monthly living allowance, book or research-related components, health insurance under provider terms, and economy-class arrival and return airfare.",
+          "Fully funded does not mean unlimited. Allowances have fixed amounts, insurance has policy limits, and travel rules follow government procedures. Students may still need personal money for passport renewal, document translation, local transport, extra medical costs, clothing, phone setup, laptop, or expenses before the first allowance arrives.",
+          "The master's duration is shorter than the bachelor's route but still includes adaptation time. If BIPA language preparation is required before academic study, students should understand how that affects the total timeline and graduation plan.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Read the current KNB master's requirements and offering letter.",
+          "Confirm country eligibility, age limit, degree background, and language proof.",
+          "Identify suitable participating universities and master's programmes.",
+          "Complete embassy or consulate recommendation steps where required.",
+          "Prepare passport, bachelor's certificate, transcripts, CV, motivation letter, recommendation documents, and language evidence.",
+          "Submit the online application through the official KNB portal before the deadline.",
+          "Monitor administrative, academic, and final selection updates.",
+        ],
+        paragraphs: [
+          "The online portal is only one part of the process. Applicants should not ignore embassy or consulate steps, because recommendation requirements can affect eligibility. Contact the relevant Indonesian mission early if local instructions are unclear.",
+          "Document quality matters. Graduate applications should have clear transcripts, accurate degree titles, consistent names, and a motivation statement that matches the chosen field. Weak or mismatched documents can damage a candidate even when basic eligibility is met.",
+        ],
+      },
+      {
+        title: "Choosing the right master's programme",
+        paragraphs: [
+          "Start with your career or research direction. A master's degree should deepen an existing academic path or help you move into a defined professional field. Do not choose a programme only because the university name looks attractive or because you think it has a higher chance of selection.",
+          "Compare curriculum, language of instruction, faculty expertise, campus location, internship or thesis requirements, and career outcomes. If you want to work in development, public policy, environmental management, agriculture, health, or technology, choose a programme that gives concrete skills in that area.",
+          "Students should also consider how the degree will be understood after returning home. A funded master's is valuable when it leads to employability, doctoral preparation, public-sector advancement, or community impact. Make that connection clear in your application.",
+        ],
+      },
+      {
+        title: "Motivation letter strategy",
+        paragraphs: [
+          "A strong motivation letter should connect past study, the selected master's programme, Indonesia, and future goals. It should not be a generic story about poverty or ambition. KNB reviewers need to see that the applicant has chosen the programme thoughtfully and can benefit from it.",
+          "Use specific examples: final-year project, professional experience, community work, research interest, policy issue, technical skill, or sector problem. Explain what you have already done and what the master's will help you do next.",
+          "Because KNB is linked to cooperation with developing countries, it is reasonable to mention how the degree may help your home country or region. Keep the claim realistic. A clear plan to work in a ministry, school, company, NGO, research centre, startup, or local project is stronger than broad promises.",
+        ],
+      },
+      {
+        title: "Budgeting and arrival planning",
+        paragraphs: [
+          "Even with full funding, students should prepare for early expenses. You may need money for passport renewal, document certification, language tests, local transport to the embassy, medical checks if required, visa-related steps, and personal items before any scholarship allowance begins. The scholarship reduces the study burden, but the application and arrival period can still cost money.",
+          "After arrival, monthly allowance timing matters. Students should bring enough emergency funds for the first weeks in case campus registration, bank account setup, or allowance processing takes time. Ask selected students or the host university about normal arrival procedures, but rely on official instructions for final planning.",
+          "Master's students should also think about research or thesis costs. Some costs may be covered by scholarship components, while others may need personal planning or department approval. If your thesis involves fieldwork, data, lab supplies, translation, or travel, ask early how those costs are handled.",
+        ],
+      },
+      {
+        title: "Readiness checklist",
+        ordered: [
+          "Confirm the active KNB master's age limit and eligible country list.",
+          "Prepare bachelor's transcript and degree certificate in the required format.",
+          "Check whether documents need translation, legalization, or notarization.",
+          "Prepare a CV focused on academic and professional relevance.",
+          "Draft a motivation letter tied to specific Indonesian programmes.",
+          "Complete embassy or consulate recommendation steps early.",
+          "Submit through the official portal and save confirmation evidence.",
+        ],
+        paragraphs: [
+          "This checklist keeps the process from becoming chaotic. KNB deadlines can feel far away until one document is missing. Start with the documents that depend on other people: recommendations, official transcripts, embassy steps, and language proof.",
+          "Before submitting, compare every uploaded file with the official checklist. File names, document language, scan clarity, and validity dates matter. A good application should be easy for reviewers to read and verify.",
+        ],
+      },
+      {
+        title: "Selection preparation",
+        paragraphs: [
+          "After submission, prepare as if an interview or additional academic review may happen. Be ready to explain your chosen programme, previous study, future goals, and why Indonesia is relevant. Do not memorize a script; understand your own application well enough to discuss it naturally.",
+          "If you listed multiple university or programme choices, know why each one appears in your application. Reviewers may notice if your choices look random. A good shortlist has a pattern: similar field, related career direction, or a clear academic progression.",
+          "Also prepare for practical questions about adaptation. You may be asked, directly or indirectly, whether you can live in Indonesia, learn the language, and complete the degree. Showing maturity about culture and language can strengthen the application because scholarship providers want students who will actually finish.",
+        ],
+      },
+      {
+        title: "After selection",
+        paragraphs: [
+          "If selected, read the award letter and university placement carefully before making travel decisions. Confirm the host university, programme, arrival timeline, language preparation, allowance rules, insurance, and airfare procedure. Do not assume every detail from another student's experience applies to your case.",
+          "Use the period before departure to prepare academically as well as logistically. Review core subjects from your bachelor's degree, learn basic Indonesian, contact the university if instructed, and organize documents for enrollment. Good preparation makes the first semester less stressful.",
+        ],
+      },
+      {
+        title: "Final advice",
+        paragraphs: [
+          "For master's applicants, KNB is strongest when the degree plan is focused. You should be able to explain your current field, the Indonesian programme you want, and the practical outcome after graduation in a few clear sentences.",
+          "If your motivation letter could be sent unchanged to five other countries, rewrite it. The application should show why Indonesia, why this programme, and why now. That specificity is what turns a funded opportunity into a credible graduate plan.",
+          "Before submitting, read the application like a reviewer: does every document support the same story? Your transcripts, CV, programme choices, and motivation letter should all point toward one coherent academic path.",
+          "If the file feels scattered, simplify it. A clear master's plan is easier to fund than a long list of unrelated interests, even when the student is talented.",
+          "Use the final review day for consistency checks, not for writing the whole application from scratch.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Using bachelor's or PhD requirements for a master's application.",
+          "Ignoring embassy recommendation steps.",
+          "Choosing a programme unrelated to your bachelor's background.",
+          "Submitting a vague motivation letter.",
+          "Assuming fully funded means every personal cost is covered.",
+          "Waiting too late for language evidence or document translation.",
+          "Relying on old KNB PDFs instead of the active portal.",
+        ],
+        paragraphs: [
+          "A strong KNB master's application is specific, organised, and realistic. Confirm the official rules, choose a programme that fits your background, prepare documents early, and write like a graduate student with a clear next step.",
+        ],
+      },
+    ],
 
     country: "Indonesia",
     degreeLevel: "Masters",
@@ -9842,6 +10370,151 @@ const rawScholarships: Scholarship[] = [
     guideUrl:
       "https://www.scholarshipscentral.com/blog/knb-indonesian-government-scholarship",
     guideLabel: "KNB Indonesian Government Scholarship guide",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "Provider", value: "Government of Indonesia" },
+          { label: "Programme", value: "KNB Scholarship" },
+          { label: "Level", value: "PhD / Doctoral" },
+          { label: "Eligible applicants", value: "Citizens of eligible developing countries" },
+          { label: "Duration", value: "BIPA language preparation plus up to 48 months doctoral study" },
+          { label: "Funding", value: "Tuition, monthly allowance, research/book components, insurance, and travel under official policy" },
+          { label: "Application route", value: "Official KNB portal plus embassy or consulate recommendation process" },
+        ],
+        paragraphs: [
+          "The KNB Scholarship PhD track supports eligible international doctoral applicants from developing countries who want to conduct advanced study in Indonesia. Compared with the bachelor's and master's routes, the PhD track requires stronger research readiness and a clearer academic direction.",
+          "Students should approach this as a doctoral funding opportunity, not just a general overseas scholarship. The application should show a realistic research idea, relevant master's-level preparation, and a strong match with available Indonesian universities and supervisors.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "This scholarship is best for applicants who already hold a relevant master's degree and can explain a doctoral research plan. A strong candidate knows the field, has some research or professional evidence, and can identify why Indonesia is a suitable setting for the proposed work.",
+          "It may be especially relevant for applicants in development, education, agriculture, engineering, environmental studies, public policy, health, social sciences, Islamic studies, economics, technology, and other fields represented by participating universities. The exact fit depends on the official university and programme list for the cycle.",
+          "It is not the right route for someone who has not decided on a research area or only wants any funded PhD abroad. Doctoral study is long and demanding. The scholarship can fund the opportunity, but it cannot replace research motivation, discipline, and supervisor fit.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Applicant must be from an eligible developing country under KNB rules.",
+          "Applicant must hold a relevant master's degree or equivalent.",
+          "The official PhD age limit applies for the active cycle.",
+          "Language proficiency evidence must meet official requirements.",
+          "A research proposal or study plan is required under this record's document list.",
+          "Embassy or consulate recommendation steps and online portal submission are required.",
+        ],
+        paragraphs: [
+          "The PhD route has a higher academic bar than the bachelor's or master's routes. A student should not rely only on good grades. The research proposal, academic references, previous thesis or publications, and match with the host university can all influence competitiveness.",
+          "Applicants should verify whether a supervisor contact, research proposal format, or university-specific requirement is needed for their chosen programme. The national KNB portal provides the main route, but host universities may still have academic expectations for doctoral admission.",
+        ],
+      },
+      {
+        title: "What the scholarship covers",
+        paragraphs: [
+          "The KNB PhD scholarship is treated as fully funded because it covers major doctoral study costs under official policy. This record lists tuition support, monthly living allowance, research or book support components, health insurance support, and arrival and return economy airfare.",
+          "Doctoral students should still budget carefully. Research can create extra costs: fieldwork, data collection, software, printing, conference travel, lab materials, translation, transcription, or travel inside Indonesia. Some of these may not be fully covered or may require prior approval.",
+          "The funded duration can include BIPA language preparation and up to 48 months of doctoral study. That is a long period, so students should understand continuation rules, academic progress expectations, and what happens if research takes longer than the funded period.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Read the current official KNB doctoral requirements.",
+          "Confirm country eligibility, PhD age limit, master's background, and language proof.",
+          "Identify participating universities that can support your research area.",
+          "Prepare a focused research proposal or study plan.",
+          "Complete embassy or consulate recommendation steps where required.",
+          "Upload all documents through the official KNB portal before the deadline.",
+          "Follow administrative, academic, and final selection updates from KNB and host institutions.",
+        ],
+        paragraphs: [
+          "The PhD application should begin with research fit. Before uploading documents, check whether the Indonesian universities available under KNB have departments, supervisors, or research groups related to your topic. A brilliant proposal can fail if no suitable supervision exists.",
+          "Applicants should also prepare for document verification. Doctoral records often include master's transcripts, thesis title, research experience, publications, CV, recommendations, and language proof. Keep all files clear, consistent, and in the format requested by the official call.",
+        ],
+      },
+      {
+        title: "Research proposal strategy",
+        paragraphs: [
+          "A strong proposal should be specific enough to show seriousness but realistic enough for a funded doctoral programme. It should identify the research problem, background, key questions, proposed method, expected contribution, and why Indonesia or the chosen university is a suitable research environment.",
+          "Avoid proposals that are too broad. A topic like improving education in developing countries is not enough. A stronger topic identifies a country, population, method, policy question, dataset, intervention, technology, or theoretical problem. Doctoral reviewers need to see that the project can actually be completed.",
+          "If your research connects to your home country, explain that link. KNB is connected to cooperation with developing countries, so a proposal with a clear development, institutional, scientific, or community relevance can be compelling when it remains academically rigorous.",
+        ],
+      },
+      {
+        title: "Supervisor and university fit",
+        paragraphs: [
+          "PhD success depends heavily on supervision. Students should look for faculty members, research centres, publications, or labs that match the proposal. Even if the official KNB process does not require early supervisor contact in every case, understanding supervisor fit helps you choose programmes wisely.",
+          "Read department pages, faculty profiles, and recent publications where available. If your topic needs laboratory access, field sites, datasets, or specialist equipment, check whether the host university can realistically support it. Funding alone does not solve a poor research match.",
+          "If contacting a potential supervisor is appropriate, keep the email concise: introduce yourself, mention your master's background, summarize the proposed topic, explain why their work is relevant, and attach a short CV or proposal if requested. Do not send mass emails with no personalization.",
+        ],
+      },
+      {
+        title: "Budgeting for doctoral research",
+        paragraphs: [
+          "A fully funded PhD still needs careful budgeting because research expenses vary widely. A desk-based project may have low direct costs, while fieldwork, lab work, surveys, interviews, data purchase, conference travel, transcription, translation, or specialist software can create extra expenses. Check what KNB covers and what requires university approval.",
+          "Living allowance timing also matters. Students may need upfront funds for arrival, housing setup, local transport, food, phone, clothing, and emergency needs before the first allowance is fully processed. Bring a modest buffer if possible, even when the scholarship is generous.",
+          "Doctoral students should also plan for the final year. Dissertation writing, printing, defense procedures, visa/residence extensions, and return travel can create pressure. Understand the funded duration and ask what happens if research takes longer than expected.",
+        ],
+      },
+      {
+        title: "PhD readiness checklist",
+        ordered: [
+          "Confirm the official PhD age limit and country eligibility for the active cycle.",
+          "Prepare master's certificate, transcripts, and thesis or research evidence.",
+          "Draft a focused research proposal with clear questions and method.",
+          "Identify Indonesian universities and faculty related to the topic.",
+          "Prepare academic recommendation documents early.",
+          "Complete embassy or consulate recommendation steps.",
+          "Submit the official portal application with clean, consistent files.",
+        ],
+        paragraphs: [
+          "The readiness checklist should be completed before the final deadline week. A PhD application is too complex to assemble overnight. The proposal needs revision, references need time, and university fit needs research.",
+          "If one part of the application is weak, fix it before submission. A strong CV cannot fully compensate for an unclear proposal, and a good proposal can be weakened by missing transcripts or inconsistent document names.",
+        ],
+      },
+      {
+        title: "Selection preparation",
+        paragraphs: [
+          "A doctoral applicant should be prepared to defend the research idea in simple terms. Practice explaining the problem, why it matters, what method you will use, what data or sources you need, and what contribution the project could make. If you cannot explain the idea clearly, reviewers may doubt that it is ready for PhD study.",
+          "Prepare evidence of research ability. This can include a master's thesis, publication, conference paper, research assistant work, professional reports, field experience, or advanced coursework. Even if the official form does not ask for every item, your CV and proposal should make your research readiness visible.",
+          "Think through risks in the project. What if data access is difficult? What if fieldwork takes longer? What if language affects interviews? A mature proposal does not pretend that research has no risks; it shows that the applicant understands them and has a sensible plan.",
+        ],
+      },
+      {
+        title: "After selection",
+        paragraphs: [
+          "If selected, use the pre-departure period to refine the research plan rather than relaxing completely. Read recent literature, improve the proposal, prepare questions for the supervisor or department, and clarify any fieldwork or ethics requirements that may affect the first year.",
+          "Also confirm the practical award terms: arrival date, university placement, BIPA language stage, stipend schedule, research support, insurance, residence process, and return-ticket rules. A doctoral student who understands the administrative side can focus more quickly on research after arrival.",
+        ],
+      },
+      {
+        title: "Final advice",
+        paragraphs: [
+          "For PhD applicants, the core question is simple: can a reviewer see that this research is worth funding, possible to supervise in Indonesia, and realistic within the scholarship period? If the answer is unclear, refine the proposal before applying.",
+          "KNB can open a serious doctoral pathway, but the scholarship should support a research plan that already makes sense. Build the application around academic fit, not only around the funding package.",
+          "Before submission, ask whether your proposal has a clear problem, feasible method, relevant host environment, and realistic timeline. If any part is vague, strengthen it before uploading the final file.",
+          "A funded PhD is not only an award; it is a research contract with years of responsibility. Apply when your project is ready enough to carry that responsibility.",
+          "A careful final revision can prevent small document problems from weakening an otherwise serious doctoral file.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Applying for PhD funding with an undeveloped research idea.",
+          "Using master's-level motivation language instead of doctoral research language.",
+          "Ignoring supervisor or department fit.",
+          "Assuming every research cost is automatically covered.",
+          "Uploading an overbroad or unrealistic proposal.",
+          "Missing embassy recommendation steps.",
+          "Relying on old KNB requirements for age, documents, or language proof.",
+        ],
+        paragraphs: [
+          "The strongest KNB PhD applicant looks ready for research, not just ready to study abroad. Build the application around a real research problem, a suitable Indonesian academic environment, and a practical plan for completing the doctorate within the funded period.",
+        ],
+      },
+    ],
 
     country: "Indonesia",
     degreeLevel: "PhD",
@@ -9900,6 +10573,135 @@ const rawScholarships: Scholarship[] = [
       "Hamad Bin Khalifa University (HBKU) offers graduate scholarships for Master's students in Qatar, combining tuition waivers and stipend support for selected international applicants.",
     summary:
       "The HBKU Master's Scholarship supports international students admitted to Master's programs at Hamad Bin Khalifa University in Qatar. Scholarship consideration happens during graduate admissions without a separate scholarship application. Funding includes program-based tuition waivers and, for selected international Master's students, a monthly stipend for up to 21 months, tied to full-time study and RA/TA commitments under HBKU scholarship guidelines.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "Hamad Bin Khalifa University" },
+          { label: "Country", value: "Qatar" },
+          { label: "Level", value: "Master's" },
+          { label: "Application", value: "Scholarship consideration through graduate admission" },
+          { label: "Typical stipend", value: "QAR 7,000/month for selected international master's students" },
+          { label: "Duration", value: "Up to 21 months for master's stipend support" },
+          { label: "Housing", value: "Not paid directly; students cover housing from stipend or personal funds" },
+        ],
+        paragraphs: [
+          "HBKU master's funding is attractive because selected international students can receive a tuition waiver and stipend support in Qatar. The important nuance is that coverage depends on programme, college, availability, and the official offer letter. It should not be described as one identical fully funded package for every master's applicant.",
+          "The scholarship is considered during graduate admission. There is no separate scholarship form for most applicants. That makes the admissions file extremely important: transcripts, statement of purpose, recommendations, CV, programme fit, and any required English evidence all influence whether the applicant is competitive.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "This opportunity is best for applicants who want a research-informed or professionally focused master's degree in Qatar and can show strong alignment with an HBKU programme. HBKU's colleges cover areas such as science and engineering, health and life sciences, Islamic studies, humanities and social sciences, public policy, and law, but scholarship terms vary across programmes.",
+          "It is especially relevant for students who are ready for full-time graduate study and, where awarded a stipend, can handle research assistant or teaching assistant responsibilities. The stipend is not simply pocket money; it is usually connected to university work expectations and good academic standing.",
+          "It is not ideal for applicants who need a guaranteed full package before applying or who are targeting programmes with no tuition waiver in the scholarship table. Students interested in LL.M. or MS Economics, for example, must verify the official table carefully because this record notes those routes as showing 0% waiver under HBKU guidance.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Applicant must be admitted to an eligible HBKU master's programme.",
+          "Scholarship consideration is part of the graduate admissions process.",
+          "Full-time enrollment is required for stipend eligibility.",
+          "Stipend support depends on funding availability and RA/TA approval.",
+          "Students working more than the allowed professional threshold may not qualify for stipend.",
+          "Scholarship continuation requires good academic standing and annual review.",
+        ],
+        paragraphs: [
+          "The first eligibility layer is admission. Students should not think of the scholarship as separate from the programme application. If the academic file is weak or incomplete, there may be no scholarship consideration worth discussing.",
+          "The second layer is programme-specific funding. HBKU publishes different tuition waiver percentages by college and programme category. Some STEM master's programmes may have stronger waiver support than some law or economics routes. Always confirm your exact programme, not just the university name.",
+        ],
+      },
+      {
+        title: "What the funding covers",
+        paragraphs: [
+          "For selected international master's students, the scholarship can include a monthly stipend of QAR 7,000 for up to 21 months, plus tuition waiver support depending on the programme. Some recipients may also receive one inbound ticket at programme start and one outbound ticket at graduation under official conditions.",
+          "Housing is not provided directly. This is one of the most important budgeting points. Students must pay for accommodation from the stipend or from personal funds. A scholarship that looks generous on paper can still feel tight if housing, food, transport, health costs, and personal expenses are not planned.",
+          "The exact funding package is confirmed in the offer letter. Do not build your budget only from a general table or online summary. Wait for the programme-specific admission and scholarship terms, then calculate the remaining tuition, housing, visa/residency costs, meals, local transport, books, and emergency savings.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Choose the HBKU master's programme that fits your academic background.",
+          "Check programme-specific admission requirements and scholarship coverage.",
+          "Prepare transcripts, degree proof, CV, statement of purpose, recommendations, and language evidence if required.",
+          "Submit the graduate admissions application before the international deadline.",
+          "Wait for admission and scholarship consideration through the same process.",
+          "If offered funding, review the waiver, stipend, RA/TA duties, travel support, and continuation rules.",
+          "Accept only after understanding the full cost and scholarship terms.",
+        ],
+        paragraphs: [
+          "Because there is no separate scholarship application, students sometimes underprepare the admission file. That is a mistake. The statement of purpose should explain why the selected HBKU programme fits the applicant's background, research or professional direction, and future goals.",
+          "Applicants should also check whether their programme has a different deadline from the general international graduate deadline. A missed programme deadline cannot be fixed by saying the scholarship deadline was unclear.",
+        ],
+      },
+      {
+        title: "Statement of purpose strategy",
+        paragraphs: [
+          "A strong HBKU statement should be programme-specific. Mention the field, courses, faculty or research areas where relevant, Qatar context if meaningful, and how the degree connects to your next step. Avoid writing a generic Gulf-region scholarship essay.",
+          "If you are applying to a research-heavy programme, discuss previous projects, thesis work, technical skills, publications, or research questions. If the programme is professional, focus on sector experience, policy interest, leadership, or skills you need to develop.",
+          "Because stipend support can involve RA or TA work, show that you can contribute academically. A student who can assist in research, teaching, lab work, data analysis, writing, or project coordination may look more ready for funded graduate study.",
+        ],
+      },
+      {
+        title: "Budgeting for Qatar",
+        paragraphs: [
+          "Qatar can be expensive, so students should calculate costs carefully. Housing is the major item because HBKU does not pay it directly under this record. Add food, transport, phone, health costs, visa or residence procedures, clothing, books, laptop, and personal expenses.",
+          "If the stipend is awarded, ask when payments begin. Arrival costs can come before the first stipend: deposit, first month's rent, transport from airport, groceries, and setup items. Bring a buffer if possible.",
+          "If only a tuition waiver is awarded and no stipend is offered, the budget changes completely. In that case, students must confirm how they will cover living costs for the full programme.",
+        ],
+      },
+      {
+        title: "Before accepting an HBKU offer",
+        ordered: [
+          "Confirm the exact tuition waiver percentage for your programme.",
+          "Check whether you received stipend support, not only admission.",
+          "Read RA/TA work requirements and weekly hour expectations.",
+          "Calculate housing and living costs in Qatar.",
+          "Ask when stipend payments begin and how travel support is handled.",
+          "Confirm continuation rules and annual review requirements.",
+          "Keep the official offer letter as the final funding evidence.",
+        ],
+        paragraphs: [
+          "This checklist protects students from one of the biggest HBKU misunderstandings: assuming every admission offer includes every funding component. The admission letter, scholarship table, and official funding terms need to be read together.",
+          "If something is unclear, ask before accepting. A polite email about waiver percentage, stipend duration, housing responsibility, or RA/TA requirements is better than discovering a gap after arriving in Qatar.",
+        ],
+      },
+      {
+        title: "After acceptance",
+        paragraphs: [
+          "After accepting, keep scholarship compliance in mind from day one. Funded students should understand GPA expectations, assistantship hours, advisor or supervisor reporting, visa/residence requirements, and any limits on outside work. A scholarship is not only money; it is a set of conditions.",
+          "Plan arrival carefully. Confirm housing options, transport, banking, health requirements, and orientation dates before booking travel. A smooth first month helps students settle into coursework and assistantship duties without unnecessary financial stress.",
+        ],
+      },
+      {
+        title: "Final advice",
+        paragraphs: [
+          "HBKU can be an excellent choice when programme fit and funding terms line up. The strongest applicants do not chase the scholarship in general; they choose the right programme and make the admissions file strong enough for funding consideration.",
+          "Before you submit, check whether your statement, CV, references, and transcripts all support the same story. HBKU should be able to see why you belong in that specific master's programme and what you can contribute as a funded student.",
+          "If the funding offer is partial, make the decision from confirmed costs, not hope.",
+          "A careful applicant compares the scholarship table, the admission offer, and the personal budget before saying yes to enrollment.",
+          "That simple comparison prevents most unpleasant funding surprises.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Calling every HBKU master's offer fully funded.",
+          "Ignoring programme-specific waiver percentages.",
+          "Assuming housing is separately provided.",
+          "Submitting a generic statement of purpose.",
+          "Forgetting RA/TA work expectations for stipend support.",
+          "Applying to a programme with 0% waiver and expecting a tuition scholarship.",
+          "Accepting before reading the official offer letter.",
+        ],
+        paragraphs: [
+          "The safest HBKU strategy is to apply to the right programme, build a strong admission file, and treat the official offer letter as the final funding source. HBKU can be generous, but the details matter more than the headline.",
+        ],
+      },
+    ],
 
     country: "Qatar",
     degreeLevel: "Masters",
@@ -9991,6 +10793,145 @@ const rawScholarships: Scholarship[] = [
       "National Yang Ming Chiao Tung University (NYCU) offers scholarship support for international Master's students through tuition awards and monthly stipends in Taiwan.",
     summary:
       "The NYCU International Student Scholarship for Master's study is handled through NYCU's international admissions process. Incoming students apply for scholarship consideration together with their degree application. NYCU states that monthly stipends and tuition awards may be granted together or separately, and scholarship continuation depends on academic performance and annual review.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "National Yang Ming Chiao Tung University" },
+          { label: "Country", value: "Taiwan" },
+          { label: "Level", value: "Master's" },
+          { label: "Application", value: "Requested inside international degree application" },
+          { label: "Award type", value: "Tuition award and/or monthly stipend" },
+          { label: "Maximum duration", value: "Up to 2 years for master's students" },
+          { label: "Renewal benchmark", value: "Graduate GPA 3.5 for renewal applications" },
+        ],
+        paragraphs: [
+          "The NYCU International Student Scholarship supports international master's students through tuition awards, monthly stipend support, or a combination of both. It is handled through the international admissions process for incoming students, so applicants should request scholarship consideration while applying for the degree.",
+          "The award should be described carefully. NYCU states that tuition awards and monthly stipends may be granted together or separately. That means one student may receive a strong package while another receives only partial support. The official admission and scholarship notification is the final source for the student's actual package.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "This scholarship is best for international applicants who want a master's degree in Taiwan and can show strong academic fit with an NYCU programme. NYCU is known for strengths in technology, engineering, science, medicine, management, and interdisciplinary fields, but applicants should choose based on the exact department and curriculum.",
+          "It is especially useful for students who are open to Taiwan as a study destination and understand that scholarship renewal depends on academic performance. The maximum duration for master's scholarship support is limited, so students should plan to progress steadily.",
+          "It is not ideal for students who need a guaranteed full scholarship before applying. Since the tuition award and stipend can be awarded separately, applicants should prepare a budget for different outcomes.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Applicant must be an international student applying to an NYCU degree programme.",
+          "Scholarship request is made with the international admission application.",
+          "Students receiving Taiwan government scholarships or grants are not eligible for this internal scholarship category.",
+          "Current-student renewal has a graduate GPA benchmark listed as 3.5.",
+          "The master's maximum scholarship duration is generally 2 years.",
+          "The selected department may have separate language or document requirements.",
+        ],
+        paragraphs: [
+          "New applicants should not confuse the current-student renewal window with the admissions cycle. NYCU's scholarship page may list periods for current students, while incoming international students request scholarship consideration during the degree-seeking application.",
+          "The funding conflict rule is important. If you receive a Taiwan government scholarship or grant, you may not be eligible for this internal NYCU scholarship category. Do not plan to stack awards unless the official rules clearly allow it.",
+        ],
+      },
+      {
+        title: "What the scholarship may cover",
+        paragraphs: [
+          "NYCU scholarship support can include a tuition award, such as a tuition waiver or tuition charged at the local-student rate, and monthly stipend support. The two components may be granted together or separately, so students should wait for the official result before calculating final affordability.",
+          "A tuition award can reduce the biggest university cost, while a stipend can help with rent, food, transport, insurance, books, and personal expenses. However, Taiwan living costs still vary by city, housing type, and lifestyle. Students should build a budget with and without stipend support.",
+          "The award is normally reviewed annually. A student who performs poorly may risk renewal. Master's applicants should plan for consistent coursework, research progress, advisor communication, and department requirements from the first semester.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Open NYCU's international degree-seeking application system during the correct cycle.",
+          "Choose the master's programme and check department-specific requirements.",
+          "Prepare passport, degree certificate, transcripts, study plan, recommendations, and language evidence.",
+          "Request scholarship consideration inside the admission application.",
+          "Submit before the deadline for the intended intake.",
+          "Wait for admission and scholarship result notices.",
+          "If awarded, review whether the package includes tuition support, stipend, or both.",
+        ],
+        paragraphs: [
+          "The scholarship request is embedded in the admissions workflow, so students should not look for a separate public scholarship-only form for new applicants. Complete the degree application carefully and select scholarship consideration where the system asks.",
+          "Department requirements can differ. Some programmes may require specific language proof, portfolio, research plan, interview, or additional documents. Always check the department page alongside the international admissions page.",
+        ],
+      },
+      {
+        title: "Study plan strategy",
+        paragraphs: [
+          "A strong NYCU master's study plan should explain why the chosen department fits your academic background and future goals. Mention relevant coursework, projects, work experience, research interests, technical skills, or professional direction. Avoid generic statements about Taiwan or technology without linking them to the programme.",
+          "If you are applying to an engineering, computing, biomedical, management, or science programme, show evidence of preparation. This can include programming languages, lab experience, final-year project, publications, internships, design work, competitions, or professional responsibilities.",
+          "Scholarship reviewers want to see that the student can succeed after arrival. A clear study plan, realistic goals, and strong academic evidence make the scholarship request more convincing.",
+        ],
+      },
+      {
+        title: "Budgeting and renewal planning",
+        paragraphs: [
+          "Before accepting, calculate costs under three scenarios: tuition award only, stipend only, and both tuition award plus stipend. This prevents disappointment if the final package is partial. Include tuition, housing, food, insurance, transport, phone, books, laptop, visa/residence costs, and emergency savings.",
+          "Renewal depends on academic performance and review. The record lists a graduate GPA benchmark of 3.5 for renewal applications. Students should understand grading expectations early and ask the department how research progress affects scholarship continuation.",
+          "Taiwan can be affordable compared with some destinations, but arrival costs still exist. Prepare money for housing deposit, first-month rent, local transport, SIM card, bedding, food, and registration-related expenses before any stipend schedule becomes stable.",
+        ],
+      },
+      {
+        title: "After admission",
+        paragraphs: [
+          "If admitted, compare the scholarship result with your original budget before accepting. Check whether you received tuition support, stipend support, both, or neither. A partial award can still be useful, but only if the remaining cost is realistic.",
+          "Use the months before arrival to prepare academically. Review prerequisite subjects, contact the department if instructed, read about advisor or lab expectations, and improve Mandarin basics if possible. NYCU requires international scholarship students to take Mandarin courses under stated rules, so language preparation is practical.",
+          "Also prepare for annual review from the first semester. Keep grades high, communicate with your advisor, and understand department expectations. A master's scholarship can be lost or reduced if the student treats renewal as automatic.",
+        ],
+      },
+      {
+        title: "Application quality checklist",
+        ordered: [
+          "Confirm the department accepts international master's applicants for your intake.",
+          "Check whether the programme is taught in English, Chinese, or both.",
+          "Prepare a study plan specific to the department.",
+          "Use recommendation letters that discuss academic ability and research or project readiness.",
+          "Make sure transcripts clearly show grading scale and completed coursework.",
+          "Request scholarship consideration inside the application system.",
+          "Save the admission and scholarship result notice for visa and budgeting decisions.",
+        ],
+        paragraphs: [
+          "This checklist matters because NYCU applications are department-sensitive. A student can look strong in general but weak for a specific programme if the study plan ignores the department's actual focus.",
+          "Recommendation letters should support the same story as the study plan. If the applicant claims to want semiconductor engineering, data science, biomedical research, or management analytics, the recommenders should ideally confirm preparation in that direction.",
+          "Language of instruction should be checked early. Even when a programme is accessible to international students, individual courses, lab meetings, or administrative communication may involve Mandarin. Basic language preparation can make the transition easier.",
+        ],
+      },
+      {
+        title: "Choosing NYCU versus other Taiwan options",
+        paragraphs: [
+          "Taiwan has several strong universities, so applicants should compare NYCU with other institutions by department strength rather than only ranking. NYCU may be especially attractive for technology, engineering, life sciences, medicine-related fields, and interdisciplinary research connected to Taiwan's innovation economy.",
+          "If another Taiwanese university has a better supervisor, lab, or programme fit, that may be a better choice even if NYCU's name looks stronger in a general list. Scholarship success and academic success both depend on fit.",
+          "A good applicant can explain why NYCU is not random. The application should show that the student understands the university's strengths and how those strengths connect to the intended master's pathway.",
+        ],
+      },
+      {
+        title: "Final advice",
+        paragraphs: [
+          "NYCU is a strong option when the department fit is real and the scholarship package makes Taiwan affordable. Do not apply only because Taiwan is cheaper than some countries. Apply because the programme, faculty, and academic direction make sense.",
+          "A clear study plan is the centre of the application. If it explains your background, chosen programme, and next step without sounding generic, the scholarship request becomes much stronger.",
+          "If the final award is partial, revise the budget before accepting the seat.",
+          "The safest decision is based on the written award notice, not the maximum package mentioned online in summaries.",
+          "Keep that notice with your visa and enrollment documents.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Assuming stipend and tuition waiver are always awarded together.",
+          "Missing the scholarship request inside the admission application.",
+          "Confusing current-student renewal dates with incoming admissions deadlines.",
+          "Ignoring department-specific requirements.",
+          "Planning to combine NYCU funding with Taiwan government funding without checking rules.",
+          "Underestimating the GPA needed for renewal.",
+          "Accepting before reading the actual scholarship notification.",
+        ],
+        paragraphs: [
+          "The best NYCU master's applicant treats the scholarship as part of a serious degree application. Choose the department carefully, request funding correctly, and plan finances around the exact package NYCU offers.",
+        ],
+      },
+    ],
 
     country: "Taiwan",
     degreeLevel: "Masters",
@@ -10076,6 +11017,154 @@ const rawScholarships: Scholarship[] = [
       "NYCU provides scholarship support for international PhD students through tuition awards and stipend pathways, with award terms defined by university scholarship regulations.",
     summary:
       "The NYCU International Student Scholarship for PhD study is offered via NYCU's international admissions route in Taiwan. Incoming PhD applicants request scholarship consideration inside the admission application. NYCU notes that monthly stipend and tuition award can be awarded together or separately, and also publishes an Elite PhD Scholarship track with specific committee-based selection.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "National Yang Ming Chiao Tung University" },
+          { label: "Country", value: "Taiwan" },
+          { label: "Level", value: "PhD" },
+          { label: "Application", value: "Requested with international doctoral admission" },
+          { label: "Award type", value: "Tuition award and/or monthly stipend" },
+          { label: "Maximum duration", value: "Up to 5 years for PhD students" },
+          { label: "Elite PhD example", value: "NT$33,000 monthly stipend plus tuition waiver for 2 years, where selected" },
+        ],
+        paragraphs: [
+          "The NYCU International Student Scholarship for PhD applicants supports doctoral study in Taiwan through tuition awards, monthly stipends, or both. Incoming doctoral applicants request scholarship consideration as part of the international admission application.",
+          "NYCU also publishes an Elite PhD Scholarship track, with selection recommended by colleges and reviewed by committee. Students should not assume every PhD applicant receives the elite package. The official result notice determines whether the student receives standard internal support, elite support, partial support, or no scholarship.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "This opportunity is best for international doctoral applicants who have a clear research direction and a strong match with an NYCU department, laboratory, or supervisor. NYCU is particularly attractive for fields connected to engineering, semiconductors, information technology, biomedical science, medicine, management, and interdisciplinary research.",
+          "A strong PhD applicant should be able to explain the research problem, previous preparation, proposed method, and why NYCU is a suitable host. Scholarship funding is helpful, but doctoral selection depends heavily on academic and research fit.",
+          "It is not ideal for students who only want a funded place but have no research plan or supervisor direction. A PhD is a long commitment, and the maximum scholarship duration does not replace the need for steady progress.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Applicant must be an international student applying to an NYCU doctoral programme.",
+          "Scholarship consideration is requested inside the admission application.",
+          "Recipients of Taiwan government scholarships or grants are excluded from this internal category.",
+          "Graduate renewal applications use a GPA benchmark listed as 3.5.",
+          "PhD scholarship duration is generally limited to a maximum of 5 years.",
+          "Elite PhD awards are recommended by colleges and reviewed by committee.",
+        ],
+        paragraphs: [
+          "Doctoral eligibility is not only about nationality and prior degree. The department must believe the applicant can succeed in a specific research area. This means the research plan, master's background, recommendations, and supervisor fit are all important.",
+          "Students should also read the funding-conflict rule carefully. If another Taiwan government scholarship funds the student, NYCU's internal scholarship category may not apply. Do not assume two Taiwan funding sources can be combined.",
+        ],
+      },
+      {
+        title: "What the scholarship may cover",
+        paragraphs: [
+          "NYCU support can include tuition award options, such as tuition waiver or local-student tuition rate, and monthly stipend support. The components may be awarded together or separately. For elite doctoral cases, NYCU's scholarship information gives an example of NT$33,000 monthly stipend and tuition waiver for two years.",
+          "PhD students should budget beyond tuition and stipend. Research work may require conference travel, software, lab materials, fieldwork, publication fees, printing, translation, or equipment. Some costs may be covered by lab, advisor, department, or scholarship rules, while others may not be.",
+          "Because doctoral study can last several years, renewal and continuity matter. The maximum scholarship duration is not a guarantee of automatic support without academic progress. Students should understand GPA, research milestones, advisor expectations, and annual review rules.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Choose an NYCU PhD programme that matches your research area.",
+          "Review department requirements and potential supervisor/lab fit.",
+          "Prepare master's degree evidence, transcripts, research plan, CV, recommendations, and language evidence.",
+          "Apply through the international degree-seeking admission system.",
+          "Request scholarship consideration inside the application.",
+          "Submit before the relevant intake deadline.",
+          "Review admission and scholarship results carefully before accepting.",
+        ],
+        paragraphs: [
+          "The scholarship request is part of the doctoral admission process, so students should prepare a strong academic file rather than looking for a separate scholarship shortcut. The research plan and recommendation letters are especially important.",
+          "If a department recommends students for elite doctoral support, that decision is not fully controlled by the applicant. The applicant's job is to make the file strong enough for the department and committee to justify the award.",
+        ],
+      },
+      {
+        title: "Research plan strategy",
+        paragraphs: [
+          "A strong NYCU PhD research plan should state the research problem, why it matters, what has already been studied, what gap remains, and how the applicant proposes to investigate it. It should be focused enough for a doctoral project, not a broad wish list.",
+          "Applicants in technical fields should mention methods, tools, datasets, lab techniques, algorithms, experiments, or theoretical frameworks where relevant. Applicants in biomedical or interdisciplinary areas should show awareness of ethics, data, equipment, and collaboration needs.",
+          "The plan should connect to NYCU. Mention department strengths, supervisor interests, lab facilities, research groups, or Taiwan's industry/research ecosystem where appropriate. A proposal that could be sent unchanged to any university is weaker.",
+        ],
+      },
+      {
+        title: "Supervisor fit and lab readiness",
+        paragraphs: [
+          "Before applying, review potential supervisors and labs. Read recent publications, project pages, and department profiles. A doctoral scholarship is much stronger when the applicant can show that NYCU has the right academic environment for the project.",
+          "If contacting a supervisor is appropriate, write a concise and respectful email. Include your background, proposed topic, why their work is relevant, and attach a short CV or research summary if requested. Avoid mass emails that do not mention the professor's work.",
+          "Lab readiness also includes practical skills. If the PhD requires coding, wet-lab techniques, statistics, design tools, clinical knowledge, or hardware experience, make that visible in the CV and research plan. Scholarships often follow confidence in the student's ability to contribute.",
+        ],
+      },
+      {
+        title: "Budgeting and renewal planning",
+        paragraphs: [
+          "Before accepting, calculate the budget under different scholarship outcomes: tuition support only, stipend only, standard stipend plus tuition award, or elite PhD support if offered. Include rent, food, insurance, transport, research costs, phone, books, laptop, visa/residence procedures, and emergency funds.",
+          "A PhD student should also plan for years three to five. If an elite award covers two years, ask how support works afterward. If the general scholarship can continue up to five years, understand the renewal rules and academic expectations.",
+          "Taiwan can be a strong research destination, especially in technology and science fields, but doctoral life still requires financial discipline. Long-term funding clarity is more important than first-year excitement.",
+        ],
+      },
+      {
+        title: "After admission",
+        paragraphs: [
+          "If admitted, review the scholarship result in detail. Confirm whether the package is a standard tuition/stipend award, an Elite PhD award, or partial support. Ask how renewal works after the first award period, especially if the offer mentions two-year elite funding.",
+          "Before arrival, refine your research plan and read recent work from the lab or department. Doctoral students who arrive with a clearer literature base can start conversations with supervisors more effectively and avoid losing the first semester to orientation alone.",
+          "Also prepare for Mandarin course expectations, campus administration, housing, and residence procedures. Research success depends on academic work, but daily-life stability makes that work possible.",
+        ],
+      },
+      {
+        title: "Application quality checklist",
+        ordered: [
+          "Identify the department and research group that match your proposal.",
+          "Read recent publications from potential supervisors.",
+          "Write a research plan with problem, method, expected contribution, and timeline.",
+          "Prepare recommendation letters from academics who know your research ability.",
+          "Show master's thesis, publications, projects, or technical skills where relevant.",
+          "Request scholarship consideration in the admission system.",
+          "Clarify long-term funding if the award is initially limited to two years.",
+        ],
+        paragraphs: [
+          "A PhD application is judged differently from a master's application. The department needs confidence that the applicant can conduct original work. A beautiful motivation statement cannot replace evidence of research ability.",
+          "The research plan should also be feasible in the NYCU environment. If the project needs a specific dataset, lab, patient group, equipment, industry partner, or supervisor expertise, the application should show that NYCU can support it.",
+          "References are powerful when they are specific. A letter saying the student is hardworking is useful, but a letter explaining research independence, methods, writing ability, or lab contribution is much stronger for doctoral funding.",
+        ],
+      },
+      {
+        title: "Choosing NYCU for doctoral study",
+        paragraphs: [
+          "Choose NYCU if the research environment genuinely matches your project. Taiwan's technology and biomedical ecosystems can be a major advantage, but only when the department, supervisor, and facilities align with the proposed work.",
+          "If you are comparing PhD offers, look beyond stipend amount. Compare supervision quality, publication culture, lab funding, language environment, coursework, industry connections, conference support, and what happens after the initial scholarship period.",
+          "The best doctoral decision is the one where funding, supervision, and research direction all support each other. If one of those three is weak, ask more questions before committing.",
+        ],
+      },
+      {
+        title: "Final advice",
+        paragraphs: [
+          "NYCU PhD funding is most valuable when it supports a well-matched research project. Do not depend on the scholarship label alone. Build the application around the problem you want to solve, the supervisor or department fit, and the reason Taiwan is the right research environment.",
+          "If your proposal, CV, and recommendations all point toward the same research direction, the application feels serious. If they feel disconnected, revise before submitting.",
+          "Before accepting, ask how support works after the first award period and what academic milestones are expected for renewal. Clarity now prevents serious stress later.",
+          "A PhD offer should be accepted only when supervision, funding, and research direction are all clear enough to trust for multiple years.",
+          "That clarity is part of responsible doctoral planning.",
+          "If any answer remains uncertain, ask the department before making the final commitment to the doctoral programme abroad.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Assuming every PhD applicant receives the Elite PhD Scholarship.",
+          "Submitting a vague research plan.",
+          "Ignoring supervisor or lab fit.",
+          "Confusing tuition award with full living-cost support.",
+          "Trying to stack Taiwan government funding with NYCU internal funding without checking rules.",
+          "Forgetting renewal GPA and annual review expectations.",
+          "Accepting without understanding support after the first two years.",
+        ],
+        paragraphs: [
+          "A strong NYCU PhD application is built around research fit. Use the scholarship request to support a serious doctoral plan, not as a substitute for one.",
+        ],
+      },
+    ],
 
     country: "Taiwan",
     degreeLevel: "PhD",
@@ -10130,6 +11219,159 @@ const rawScholarships: Scholarship[] = [
     title: "UAEU Graduate Research Assistantship (Master's)",
     overview:
       "The UAEU Graduate Research Assistantship is a paid research role for UAEU Master's students, funded by a supervisor's research project and administered through the College of Graduate Studies.",
+    summary:
+      "The UAEU Graduate Research Assistantship is a supervisor-funded research role for master's students at United Arab Emirates University. It is not a universal admission scholarship; it depends on active research projects, supervisor approval, student eligibility, GPA, and available grant funding. Successful students receive a monthly stipend while contributing to an approved research project.",
+    contentSections: [
+      {
+        title: "Assistantship at a glance",
+        facts: [
+          { label: "University", value: "United Arab Emirates University" },
+          { label: "Level", value: "Master's" },
+          { label: "Funding type", value: "Research assistantship stipend" },
+          { label: "Availability", value: "Depends on funded supervisor projects" },
+          { label: "Minimum GPA", value: "3.0/4.0" },
+          { label: "Duration", value: "Up to 2 years, depending on project and performance" },
+          { label: "Deadline", value: "Rolling / year-round subject to funding" },
+        ],
+        paragraphs: [
+          "The UAEU Graduate Research Assistantship is different from a standard scholarship. It is a paid research role connected to an approved project and supervisor funding. The student receives a stipend because they contribute to research work, not simply because they were admitted to a master's programme.",
+          "This distinction matters for applicants. Admission to UAEU is necessary, but it does not automatically create an assistantship. Students need the right academic background, a GPA that meets the requirement, no conflicting employment or sponsorship, and a supervisor or project with available funds.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "This assistantship is best for master's students who want research experience alongside graduate study. It is especially useful for students planning a thesis, research career, PhD pathway, laboratory work, technical fieldwork, data analysis, engineering research, health science, agriculture, sustainability, computing, or other project-based academic work.",
+          "It is not ideal for students who only want general financial aid and have no interest in research duties. A research assistantship usually comes with expectations: data collection, experiments, literature review, analysis, reporting, lab work, project coordination, or support for the supervisor's grant.",
+          "Students should also be honest about time. Master's coursework can be demanding, and assistantship duties add responsibility. A strong candidate can balance academic progress with research tasks without letting either side collapse.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Applicant must be an active UAEU master's student or admitted into a UAEU master's programme.",
+          "Minimum cumulative GPA is listed as 3.0 on a 4.0 scale.",
+          "Student should not have other financial sponsorship or current employment during the assistantship.",
+          "The student must meet programme admission and English requirements where applicable.",
+          "Assistantship availability depends on supervisor-funded research projects.",
+          "Continuation depends on performance, project duration, and funding availability.",
+        ],
+        paragraphs: [
+          "The GPA rule is a baseline, not a guarantee. A student with 3.0 may be eligible, but supervisors will still choose assistants who fit the project. Skills, reliability, research interest, availability, and coursework background can influence selection.",
+          "The no-employment and no-other-sponsorship rule should be checked carefully. If you are already funded or working, ask UAEU or the college how that affects eligibility before accepting an assistantship.",
+        ],
+      },
+      {
+        title: "What the assistantship covers",
+        paragraphs: [
+          "The main benefit is a monthly stipend. The amount can vary by project budget and appointment type, so applicants should not assume one fixed amount for every department. The stipend is tied to the research role and may continue only while project funding and performance conditions are satisfied.",
+          "This is not automatically a full scholarship covering tuition, housing, travel, health insurance, family costs, or every university expense. Students should ask what costs remain their responsibility and build a budget for tuition balance, accommodation, transport, food, books, visa or residence costs, and emergency savings.",
+          "The professional benefit can be as important as the money. Research assistantships can help students build methods, publications, lab experience, data skills, supervisor relationships, and PhD readiness. For a research-focused master's student, that experience may be valuable long after the stipend ends.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Apply to and secure admission in a UAEU master's programme.",
+          "Identify faculty members or research groups related to your field.",
+          "Check whether a supervisor has a funded research assistant position.",
+          "Prepare a CV, transcripts, research interests, and proof of UAEU status.",
+          "Discuss the assistantship with the supervisor or college according to UAEU procedure.",
+          "Complete the assistantship request and eligibility review.",
+          "If approved, complete appointment or onboarding steps before starting work.",
+        ],
+        paragraphs: [
+          "The most important step is supervisor fit. A student should not wait passively for a generic assistantship to appear. Review faculty profiles, research centres, lab pages, recent publications, and project announcements. Then approach relevant supervisors professionally.",
+          "A good message to a supervisor should be short and specific: introduce your programme, research interests, relevant skills, GPA if strong, and why their project fits your background. Attach a concise CV if appropriate. Avoid mass emails with no link to the professor's work.",
+        ],
+      },
+      {
+        title: "How to become a stronger candidate",
+        paragraphs: [
+          "Build evidence of research ability. This can include a bachelor's thesis, final-year project, lab skills, coding, statistics, survey design, fieldwork, writing samples, publications, internships, or professional technical work. Supervisors want assistants who can contribute, not only students who need funding.",
+          "Be clear about availability. If the project requires lab hours, field visits, data cleaning, weekly meetings, or strict timelines, the supervisor needs confidence that you can commit. Do not overpromise if your coursework schedule is already overloaded.",
+          "Ask practical questions before accepting: expected weekly hours, tasks, stipend amount, payment timing, project duration, renewal conditions, supervisor expectations, and whether the assistantship affects tuition or only provides stipend support.",
+        ],
+      },
+      {
+        title: "How to find a supervisor-funded project",
+        paragraphs: [
+          "Start with the department rather than the scholarship page. Look at faculty profiles, research centres, funded projects, laboratory pages, and recent publications. A research assistantship exists because a project needs work done, so the student must fit a real research need.",
+          "Make a shortlist of supervisors whose work overlaps with your skills. For example, if you have experience in machine learning, water resources, materials, public health, agriculture, education, or renewable energy, search for UAEU faculty working in those areas. The closer the fit, the easier it is for a supervisor to imagine you contributing.",
+          "When you write to a supervisor, be concise. Mention your master's programme, GPA or academic strength, relevant skills, the project area you noticed, and your availability. Do not start by asking for money. Start by showing that you understand the research and can help.",
+        ],
+      },
+      {
+        title: "Questions to ask before accepting",
+        bullets: [
+          "What is the monthly stipend amount and payment schedule?",
+          "How many hours per week are expected?",
+          "What tasks will I perform?",
+          "How long is the project funded?",
+          "Can the assistantship be renewed?",
+          "Does the role affect tuition or only provide a stipend?",
+          "Who supervises daily work and performance review?",
+        ],
+        paragraphs: [
+          "These questions are not rude; they are responsible. A research assistantship is a work-linked funding arrangement. Both the student and supervisor should understand expectations before the appointment begins.",
+          "If the assistantship requires heavy lab or fieldwork during exam periods, discuss scheduling early. A good supervisor will want the student to succeed academically as well as contribute to the project. Clear expectations prevent conflict later.",
+        ],
+      },
+      {
+        title: "Balancing coursework and research",
+        paragraphs: [
+          "Master's students should protect academic progress. If the assistantship helps build thesis work, the overlap can be excellent. If the project is unrelated and time-consuming, the student needs to decide whether the stipend is worth the workload.",
+          "Create a weekly schedule for classes, assignments, research tasks, meetings, and rest. Research assistantships can become stressful when students treat them as flexible side work but supervisors expect steady output. Time planning is part of professionalism.",
+          "Keep records of tasks completed, datasets handled, lab hours, reports, and skills learned. These records can help with performance review, CV building, future PhD applications, and recommendation letters.",
+        ],
+      },
+      {
+        title: "Why this assistantship can matter for your career",
+        paragraphs: [
+          "A research assistantship can turn a master's degree from coursework-only study into evidence of real research contribution. That matters if you later apply for a PhD, research job, lab role, technical position, or academic recommendation. Employers and doctoral committees often value proof that a student can work on a project with deadlines and supervision.",
+          "The assistantship can also help students understand whether research life actually suits them. Some students discover that they enjoy data, experiments, writing, and problem solving. Others discover that they prefer industry practice. Both outcomes are useful because they make the next career decision clearer.",
+          "If possible, ask whether the project could lead to a conference poster, report, publication, thesis topic, or technical skill. Do not demand authorship or outcomes that are not earned, but understand what learning opportunities the project can realistically provide.",
+        ],
+      },
+      {
+        title: "Red flags to clarify early",
+        paragraphs: [
+          "Clarify any assistantship where the tasks are vague, hours are unclear, stipend amount is not stated, or renewal depends on undefined expectations. Most issues can be solved through communication, but students should not accept a role they do not understand.",
+          "Also clarify whether the project timeline matches your degree timeline. If the grant ends before your thesis work is complete, you need to know whether another funding source or project continuation is possible. If the project requires work during summer or breaks, ask how that affects your plans.",
+          "A good assistantship should support both the project and the student. If the workload threatens academic progress, raise the issue early with the supervisor or college instead of waiting until grades suffer.",
+        ],
+      },
+      {
+        title: "After appointment",
+        paragraphs: [
+          "Once appointed, treat the assistantship like a professional research role. Attend meetings, meet deadlines, document your work, ask questions early, and communicate if coursework conflicts with project tasks. Reliability is often what turns a short appointment into a strong recommendation.",
+          "Use the role to build a research portfolio. Keep track of methods learned, software used, datasets handled, lab procedures, reports written, and any outputs produced. These details will help when applying for PhD programmes, research jobs, or technical roles after graduation.",
+          "At the end of each semester, review whether the assistantship still supports your academic goals. If it is helping your thesis, skills, and finances, continue if funding allows. If it is creating serious conflict, discuss adjustments before the problem damages your degree progress.",
+        ],
+      },
+      {
+        title: "Final advice",
+        paragraphs: [
+          "The UAEU Graduate Research Assistantship is most valuable when the student wants both funding and research experience. If you only need money, it may feel like extra pressure. If you want research growth, it can become one of the strongest parts of the master's experience.",
+          "Before committing, make sure the project, supervisor, stipend, workload, and academic plan fit together. A clear fit can support your degree; a poor fit can make the master's harder than it needs to be.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Treating the assistantship as automatic financial aid.",
+          "Applying without identifying a relevant supervisor or project.",
+          "Ignoring the GPA and no-employment rules.",
+          "Accepting without understanding weekly work expectations.",
+          "Assuming the stipend covers tuition and housing.",
+          "Sending generic emails to many faculty members.",
+          "Letting assistantship duties damage coursework progress.",
+        ],
+        paragraphs: [
+          "The best UAEU assistantship candidate thinks like a junior researcher. Show fit with the project, ask clear questions, and make sure the stipend and workload match your academic plan.",
+        ],
+      },
+    ],
 
     country: "United Arab Emirates",
     degreeLevel: "Masters",
@@ -10182,6 +11424,149 @@ const rawScholarships: Scholarship[] = [
       "The NL Scholarship is a one-time grant of EUR 5,000 for non-EEA international students starting a full-time Master's degree at participating Dutch institutions. It supports first-year study costs and does not cover full tuition.",
     summary:
       "NL Scholarship 2026-2027: EUR 5,000 one-time grant for non-EEA international students admitted to a full-time Master's at participating Dutch universities or universities of applied sciences. Apply through the institution; deadlines vary.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "Country", value: "Netherlands" },
+          { label: "Award", value: "NL Scholarship, formerly Holland Scholarship" },
+          { label: "Level", value: "Bachelor's and master's; this record focuses on master's" },
+          { label: "Value", value: "EUR 5,000 one-time grant" },
+          { label: "Eligible students", value: "Non-EEA international applicants" },
+          { label: "Application", value: "Through participating Dutch institution" },
+          { label: "Duration", value: "First study year only" },
+        ],
+        paragraphs: [
+          "The NL Scholarship is a one-time EUR 5,000 grant for non-EEA international students who want to study at participating Dutch higher education institutions. It is funded by the Dutch Ministry of Education, Culture and Science together with participating universities and universities of applied sciences.",
+          "The most important point is that this is not a full scholarship. It helps with first-year costs but does not cover full tuition, living expenses, housing, visa costs, insurance, travel, or the full duration of a master's degree. Students should treat it as a useful contribution, not a complete funding solution.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "This scholarship is best for non-EEA students who already have a strong reason to study a full-time master's programme in the Netherlands and can fund the remaining cost. It is useful when EUR 5,000 meaningfully reduces the first-year gap but does not need to be the only funding source.",
+          "It is not ideal for students who require a fully funded package or who have already earned a degree from an educational institution in the Netherlands. The official eligibility rule excludes students with a Dutch degree.",
+          "Applicants should also be flexible. Not every Dutch institution participates, and each participating institution sets its own application process, eligible programmes, deadline, and selection criteria. The scholarship name is national, but the application is local to the university.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Applicant must be from outside the European Economic Area.",
+          "Applicant must apply for a full-time bachelor's or master's programme at a participating Dutch institution.",
+          "This record focuses on master's applicants.",
+          "Applicant must meet the admission requirements of the chosen institution.",
+          "Applicant must not have a degree from an educational institution in the Netherlands.",
+          "Institution-specific scholarship requirements and deadlines apply.",
+        ],
+        paragraphs: [
+          "The non-EEA rule should be checked against the official definition. Students from EU, Iceland, Liechtenstein, and Norway are generally inside the EEA and are not the target group for this scholarship. UK and other non-EEA statuses should be checked according to the institution's current guidance.",
+          "The participating-institution rule is equally important. You do not apply to one central national portal and then choose a university. You apply through the university or university of applied sciences that offers the NL Scholarship for your programme.",
+        ],
+      },
+      {
+        title: "What EUR 5,000 really covers",
+        paragraphs: [
+          "EUR 5,000 can be helpful, but Dutch international tuition and living costs are much higher than that for most students. The grant is paid once in the first study year. It does not renew automatically for the second year and should not be treated as a yearly stipend.",
+          "Use the grant in your budget as a first-year reduction. Calculate tuition, housing, deposit, food, transport, insurance, residence permit fees, books, laptop, clothing, and emergency savings. Then subtract EUR 5,000 and see whether the remaining amount is realistic.",
+          "Students should also check when the grant is paid. If it arrives after arrival or after enrollment, you may still need upfront money for visa/residence procedures, housing deposit, travel, and first-month costs.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Choose a participating Dutch institution and full-time master's programme.",
+          "Check that the institution offers the NL Scholarship for your programme and intake.",
+          "Apply for admission according to the institution's process.",
+          "Follow the institution's NL Scholarship instructions and deadline.",
+          "Submit required documents such as motivation letter, transcripts, CV, and admission details.",
+          "Wait for the institution's scholarship decision.",
+          "Use the official award notice to update your visa and budget plan.",
+        ],
+        paragraphs: [
+          "Deadlines vary by institution. Some close around May 1, while others may use different dates. Do not rely on a general national deadline. The university page is the controlling source for your application.",
+          "Because the award is competitive and partial, the motivation letter should show why the Dutch programme fits your goals and why the scholarship matters. Avoid generic text about wanting to study in Europe.",
+        ],
+      },
+      {
+        title: "Choosing a participating institution",
+        paragraphs: [
+          "The Netherlands has research universities and universities of applied sciences. Research universities may suit students aiming for academic, research, or theory-heavy programmes. Universities of applied sciences may suit students who want practice-oriented training and industry-focused learning.",
+          "The NL Scholarship can be available at both types, but the best choice depends on your programme goals. Compare curriculum, internship options, language of instruction, city cost, career services, and whether the master's is one year or two years.",
+          "If two institutions offer the same scholarship, choose based on programme fit and total cost rather than the scholarship alone. EUR 5,000 has different impact depending on tuition level and city living costs.",
+        ],
+      },
+      {
+        title: "How to make the application stronger",
+        paragraphs: [
+          "A strong NL Scholarship application should explain why the chosen Dutch programme is academically and professionally right for you. Do not write only that the Netherlands is modern or internationally respected. Mention the curriculum, specialization, teaching style, research group, internship route, or career connection that makes the programme a fit.",
+          "Use evidence from your background. This can include grades, thesis work, professional experience, internships, projects, leadership, volunteering, publications, competitions, or relevant skills. The scholarship is partial, but institutions still want to support students who are likely to succeed.",
+          "If the institution asks for motivation, connect the EUR 5,000 grant to a realistic funding plan. Explain that the scholarship helps close a gap, but do not pretend it covers everything. A mature financial explanation can sound more credible than a dramatic claim with no numbers.",
+        ],
+      },
+      {
+        title: "Budgeting for the Netherlands",
+        paragraphs: [
+          "The Netherlands requires careful budgeting because housing can be difficult and expensive in many student cities. Start looking at housing early, but use official university advice and avoid scams. Never send large deposits through unsafe channels or to unverified landlords.",
+          "Add residence permit costs, insurance, municipal registration, transport, food, books, laptop, winter clothing, and emergency savings. If your master's is two years, remember that the NL Scholarship is one-time only. You need a second-year plan from the beginning.",
+          "Students should also compare tuition fees by institution. Some programmes are much more expensive than others, and the same EUR 5,000 grant will stretch differently depending on the total fee and city cost.",
+        ],
+      },
+      {
+        title: "Timeline checklist",
+        ordered: [
+          "Shortlist participating institutions.",
+          "Check each institution's eligible master's programmes.",
+          "Confirm the institution's NL Scholarship deadline.",
+          "Prepare admission documents and scholarship statement together.",
+          "Submit admission early enough for scholarship consideration.",
+          "Save scholarship submission confirmation.",
+          "After decision, update the full first-year and second-year budget.",
+        ],
+        paragraphs: [
+          "This timeline prevents a common mistake: finding the scholarship after the institution deadline has already passed. Because deadlines vary, build a table with each university, programme, admission deadline, scholarship deadline, documents, and result date.",
+          "If one institution's deadline has passed, another may still be open. The NL Scholarship is decentralized, so do not abandon the Netherlands plan until you have checked several participating institutions.",
+        ],
+      },
+      {
+        title: "How to compare offers",
+        paragraphs: [
+          "If you receive more than one Dutch offer, compare the total package. Look at tuition after any scholarship, city housing cost, programme length, internship possibilities, graduate outcomes, visa/residence support, and whether you can realistically fund the second year if the programme lasts longer than one year.",
+          "A university with a lower tuition fee and no NL Scholarship may sometimes be cheaper than a higher-fee university with the grant. Do the math before choosing. Scholarship headlines can distract students from the actual total cost.",
+          "Also compare academic fit. The cheapest option is not always best if the programme does not match your goals. The strongest choice balances affordability, course quality, career value, and personal readiness.",
+        ],
+      },
+      {
+        title: "After winning the scholarship",
+        paragraphs: [
+          "If selected, ask when and how the EUR 5,000 will be paid. Some institutions may apply it to tuition, while others may pay it under their own schedule. The payment method affects how much money you need upfront.",
+          "Keep the award letter with your admission and visa documents. If the scholarship reduces the funds you need to show or pay, use only the official institution letter as evidence. Do not rely on a website summary for financial proof.",
+          "If you are not selected, ask whether your admission remains valid and whether other institutional scholarships, payment plans, or external funding options exist. A rejection from NL Scholarship does not automatically mean the Dutch study plan is impossible, but it does mean the budget must be recalculated honestly.",
+        ],
+      },
+      {
+        title: "Final advice",
+        paragraphs: [
+          "The NL Scholarship is useful when it fits inside a realistic plan. It is not meant to remove every cost, but it can make a strong Dutch master's application more affordable.",
+          "Apply only through the official institution process, write a programme-specific motivation, and budget beyond the headline EUR 5,000. That is the difference between winning a grant and actually being able to use it.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Calling the NL Scholarship fully funded.",
+          "Applying through the wrong place instead of the institution.",
+          "Assuming every Dutch university participates.",
+          "Ignoring institution-specific deadlines.",
+          "Forgetting the no-prior-Dutch-degree rule.",
+          "Budgeting as if the EUR 5,000 repeats every year.",
+          "Submitting a generic motivation letter.",
+        ],
+        paragraphs: [
+          "The NL Scholarship is best used as part of a wider funding plan. Choose the right programme, confirm the institution's rules, and build a budget that works even after the one-time grant is applied.",
+        ],
+      },
+    ],
 
     country: "Netherlands",
     degreeLevel: "Masters",
@@ -10283,6 +11668,88 @@ const rawScholarships: Scholarship[] = [
       "The University of Turin Scholarships 2026 landscape for international master's students is built around two main funding routes: Talents 4 UniTo and EDISU Piemonte. Talents 4 UniTo is the university's merit-based scholarship for eligible English-taught postgraduate programs, while EDISU Piemonte is the regional right-to-study support system based on financial status and accommodation rules.",
     summary:
       "University of Turin Scholarships 2026: Talents 4 UniTo offers 40 two-year scholarships worth EUR 20,000 gross total, while EDISU Piemonte provides regional scholarship and accommodation support for eligible master's students in Italy.",
+    contentSections: [
+      {
+        title: "Scholarship routes at a glance",
+        facts: [
+          { label: "University", value: "University of Turin" },
+          { label: "Country", value: "Italy" },
+          { label: "Level", value: "Master's" },
+          { label: "Main route 1", value: "Talents 4 UniTo merit scholarship" },
+          { label: "Main route 2", value: "EDISU Piemonte regional support" },
+          { label: "Talents value", value: "EUR 20,000 gross total over two years" },
+          { label: "EDISU focus", value: "Right-to-study scholarship and accommodation support" },
+        ],
+        paragraphs: [
+          "The University of Turin funding picture is best understood as two separate routes. Talents 4 UniTo is a university merit scholarship for selected international students in eligible English-taught postgraduate programmes. EDISU Piemonte is the regional right-to-study system based mainly on financial and accommodation rules.",
+          "Students should not mix these routes into one imaginary full scholarship. Talents 4 UniTo is limited and merit-based. EDISU can be more realistic for many students, but it requires detailed financial documents and follows regional deadlines. The best strategy depends on timing, programme, nationality, visa status, and document readiness.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "Talents 4 UniTo is best for strong international master's applicants who are applying to an eligible English-taught postgraduate degree and can submit a complete Apply@UniTo file before the deadline. Since the award is limited to 40 scholarships in this record, students should treat it as competitive.",
+          "EDISU Piemonte is best for students who can document family income, assets, bank balances, household composition, and other economic-status details according to Italian regional rules. It may be especially important if the Talents deadline has passed or if the student's main need is accommodation and regional study support.",
+          "Students should apply only after checking their exact programme. Some University of Turin master's programmes may have restricted admission, specific language rules, or document-authenticity requirements. A scholarship plan cannot fix an incomplete admission file.",
+        ],
+      },
+      {
+        title: "Talents 4 UniTo explained",
+        paragraphs: [
+          "Talents 4 UniTo is a merit scholarship linked to eligible English-taught postgraduate programmes. This record lists 40 two-year scholarships worth EUR 20,000 gross total, paid as EUR 10,000 gross per year. The word gross matters because taxes or deductions may affect the net amount received.",
+          "The scholarship is not simply a cost-of-living guarantee. Students should calculate tuition, housing, food, local transport, health insurance or registration costs, visa expenses, travel, and first-month setup costs. EUR 10,000 gross per year can help significantly, but Turin still requires a realistic budget.",
+          "Because the 2026 Talents deadline has already closed in this record, students arriving later in the cycle should not waste time chasing a closed call. Instead, they should focus on admission, Universitaly if needed, and EDISU preparation for the next regional call.",
+        ],
+      },
+      {
+        title: "EDISU Piemonte explained",
+        paragraphs: [
+          "EDISU Piemonte is a regional support route rather than a university merit prize. It can include scholarship support and accommodation service, but eligibility depends on financial documentation and regional rules. For many international students in Italy, EDISU-style funding is realistic but paperwork-heavy.",
+          "The document burden is serious. Students may need family composition, annual income, bank balances, real-estate documents, translations, legalization or Apostille, and sometimes country-specific declarations. These documents can take weeks or months to prepare, especially outside Europe.",
+          "Accommodation support also has special rules. If both scholarship and housing are assigned, part of the benefit may be absorbed through the bed fee rather than paid fully as cash. Students should read the notice carefully before assuming every euro will arrive in their bank account.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Choose up to two eligible University of Turin postgraduate programmes through Apply@UniTo.",
+          "Check language, admission, and document-authenticity requirements for each programme.",
+          "Submit the University of Turin application before the relevant admission deadline.",
+          "If Talents 4 UniTo is open and you are eligible, complete the scholarship route through Apply@UniTo.",
+          "If you are a non-EU visa applicant, complete Universitaly pre-enrolment by the official deadline.",
+          "Prepare EDISU Piemonte financial documents early.",
+          "Apply for EDISU when the regional notice opens.",
+        ],
+        paragraphs: [
+          "The University of Turin process has several tracks that can overlap. Apply@UniTo controls admission for applicants with foreign qualifications. Universitaly is a separate pre-enrolment step for many non-EU visa applicants. EDISU is a regional financial-aid system. Missing one track can damage the whole plan.",
+          "Document authenticity can also matter. The University of Turin may accept different verification methods such as legalization, Apostille, CIMEA, or recognized digital systems depending on country and document type. Check early because academic verification and financial verification are different tasks.",
+        ],
+      },
+      {
+        title: "Budgeting for Turin",
+        paragraphs: [
+          "Turin can be more affordable than Milan or Rome, but students still need a full budget. Include rent, deposit, food, transport, health coverage, residence permit, phone, books, winter clothing, laptop, and emergency funds. If relying on EDISU, remember that results and payments may not arrive before every early cost.",
+          "If you receive Talents 4 UniTo, calculate the net usable amount and payment timing. If you receive EDISU accommodation, calculate whether the housing benefit reduces cash payments. If you receive neither, decide whether personal funds can cover the year.",
+          "The safest budget includes a first-month reserve. International students often need money before scholarship payments stabilize: travel, SIM card, first groceries, rent deposit, residence permit kit, and local transport.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Thinking Talents 4 UniTo and EDISU are the same scholarship.",
+          "Missing the Talents deadline and still treating it as open.",
+          "Ignoring Universitaly pre-enrolment for non-EU visa applicants.",
+          "Preparing EDISU financial documents too late.",
+          "Forgetting translations, legalization, Apostille, or verification requirements.",
+          "Assuming accommodation support is paid fully as cash.",
+          "Applying to more programmes than Apply@UniTo allows.",
+        ],
+        paragraphs: [
+          "The best Turin strategy is practical: secure admission, respect visa steps, and prepare EDISU documents early. If Talents is open, compete for it; if it is closed, do not let that stop the whole Italy plan.",
+          "A student who understands the difference between university merit funding and regional right-to-study funding will make better decisions and avoid deadline panic.",
+        ],
+      },
+    ],
 
     country: "Italy",
     continent: "Europe",
@@ -10423,6 +11890,127 @@ const rawScholarships: Scholarship[] = [
       "The Goldsmiths Sanctuary Scholarship 2026 is one of the few UK scholarships that covers tuition, living support, and accommodation, but it is limited to applicants with refugee status or an active asylum claim in the UK. For eligible undergraduate students, this is a rare support package that reduces both study costs and day-to-day financial pressure.",
     summary:
       "Goldsmiths Sanctuary Scholarship 2026 for undergraduate students: up to 2 awards covering full tuition fees, a GBP 8,825 allowance, and accommodation support up to GBP 200 per week, with applications closing on May 25, 2026.",
+    contentSections: [
+      {
+        title: "Scholarship at a glance",
+        facts: [
+          { label: "University", value: "Goldsmiths, University of London" },
+          { label: "Level", value: "Undergraduate" },
+          { label: "Awards", value: "Up to 2 undergraduate awards" },
+          { label: "Tuition", value: "Full tuition fee waiver" },
+          { label: "Living support", value: "GBP 8,825 allowance" },
+          { label: "Accommodation", value: "Up to GBP 200/week for a single study bedroom in Goldsmiths halls" },
+          { label: "Deadline", value: "May 25, 2026 at midnight BST" },
+        ],
+        paragraphs: [
+          "The Goldsmiths Sanctuary Scholarship is a targeted high-support scholarship for undergraduate applicants with refugee status in the UK or an active asylum claim in the UK. It is not a general international student scholarship. Its purpose is to help students who face serious barriers to higher education because of forced displacement or asylum status.",
+          "The undergraduate package is unusually strong because it combines full tuition fee waiver, living allowance, and accommodation support. For eligible students, it can remove several of the largest barriers to studying in London. However, there are only up to two undergraduate awards, so the application should be prepared carefully.",
+        ],
+      },
+      {
+        title: "Who should apply",
+        paragraphs: [
+          "This scholarship is best for students who meet the immigration-status rules and hold an offer for an eligible in-person undergraduate degree at Goldsmiths. It is especially important for students who would otherwise struggle to access university because tuition, rent, and living costs are too high.",
+          "The scholarship is not for general international applicants, students applying only for online degrees, or students who do not have permission to study in the UK. If you are on Immigration Bail, you must check whether your conditions allow study before relying on this route.",
+          "Ukrainian applicants seeking refuge in the UK under the special Home Office arrangement are also mentioned in the record as considered by Goldsmiths. Applicants in any complex immigration situation should use official Goldsmiths guidance and, where needed, qualified advice.",
+        ],
+      },
+      {
+        title: "Eligibility explained",
+        bullets: [
+          "Applicant must have refugee status in the UK or an active asylum application in the UK.",
+          "Applicant must hold an offer for an in-person undergraduate degree at Goldsmiths.",
+          "Online degrees are not eligible.",
+          "Applicant must be eligible to study in the UK.",
+          "If on Immigration Bail, study conditions must permit study.",
+          "Applicants must submit supporting documents through the official process.",
+        ],
+        paragraphs: [
+          "The immigration-status rule is the central gate. Do not apply unless you can provide documentation showing the status Goldsmiths requires. If the evidence is unclear, gather it early and ask the university what documentation is acceptable.",
+          "The offer requirement is also important. Students should not wait for the scholarship form before applying to the undergraduate degree. The Goldsmiths offer is part of the scholarship eligibility, so admission planning and scholarship planning must happen together.",
+        ],
+      },
+      {
+        title: "What the scholarship covers",
+        paragraphs: [
+          "The scholarship covers full tuition fees for each year of study. That removes the largest academic cost and makes the award much stronger than tuition-discount scholarships. It also includes a GBP 8,825 allowance, which helps with living costs.",
+          "Accommodation support is included for a single study bedroom in Goldsmiths halls of residence up to GBP 200 per week. This is valuable because London rent can be one of the biggest barriers for students. However, students must submit a separate accommodation application and mention the Sanctuary Scholarship in the accommodation notes section.",
+          "Students should still budget for costs outside the package: food above allowance, transport, clothing, course materials, phone, health or wellbeing needs, personal items, and emergency expenses. A fully funded package can be strong while still requiring careful money management.",
+        ],
+      },
+      {
+        title: "How to apply",
+        ordered: [
+          "Apply for an eligible in-person undergraduate degree at Goldsmiths.",
+          "Secure a Goldsmiths offer of study.",
+          "Prepare refugee-status or asylum-application evidence.",
+          "Upload supporting documents to MyGoldsmiths as instructed.",
+          "Complete the Sanctuary Scholarship application form after applications open.",
+          "Submit a separate accommodation application if you want housing support.",
+          "Submit the scholarship application by May 25, 2026 at midnight BST.",
+        ],
+        paragraphs: [
+          "The scholarship application depends on the degree offer. Start with the course application early enough to receive an offer and gather evidence before the scholarship deadline. Waiting until May to begin the degree application could leave too little time.",
+          "The accommodation step is separate. Students who want to use the accommodation support should not assume the scholarship application automatically reserves housing. Follow Goldsmiths accommodation instructions and include the scholarship note as required.",
+        ],
+      },
+      {
+        title: "How to write stronger answers",
+        paragraphs: [
+          "Goldsmiths notes that content and relevance matter more than polished writing style alone. That is important. Applicants should answer directly, explain their circumstances clearly, and connect the scholarship to their ability to study, participate, and succeed.",
+          "A strong answer may explain education disruption, barriers faced, current support needs, academic motivation, why the chosen Goldsmiths course matters, and how the student hopes to use the degree. It does not need to sound like a perfect essay. It needs to be honest, relevant, and complete.",
+          "If writing about difficult experiences, include only what is necessary for the scholarship question. Applicants should not feel forced to overshare trauma. Focus on how the scholarship would remove barriers and help the student continue education safely and realistically.",
+        ],
+      },
+      {
+        title: "Practical preparation checklist",
+        ordered: [
+          "Confirm your immigration-status evidence is current and readable.",
+          "Check study permission if your status includes conditions.",
+          "Apply for the undergraduate course early.",
+          "Save your Goldsmiths offer letter.",
+          "Prepare scholarship answers before the final week.",
+          "Submit the accommodation application separately if needed.",
+          "Keep copies of every form, upload, and confirmation email.",
+        ],
+        paragraphs: [
+          "This checklist matters because the scholarship is high value and limited. A missing document, late course offer, or forgotten accommodation application can create avoidable stress. Prepare the practical parts before focusing on wording polish.",
+          "If you have a support worker, school adviser, charity contact, or trusted teacher, ask them to help review the checklist. They do not need to write the application for you, but they can help ensure evidence and deadlines are not missed.",
+        ],
+      },
+      {
+        title: "How to approach sensitive evidence",
+        paragraphs: [
+          "This scholarship asks for evidence connected to refugee status or asylum. That can feel personal and stressful. Applicants should provide the documents required by Goldsmiths, but they do not need to turn the application into a traumatic life story unless a question specifically asks for context.",
+          "When writing answers, focus on barriers to education, current study goals, support needs, and how the scholarship would make attendance possible. Clear and relevant answers are stronger than over-polished writing that avoids the real question.",
+          "If you are unsure whether a document is safe or sufficient to upload, ask Goldsmiths through official channels or seek help from a trusted adviser. Do not upload unrelated sensitive documents just because you feel more evidence must be better.",
+        ],
+      },
+      {
+        title: "After selection",
+        paragraphs: [
+          "If selected, review how the tuition waiver, allowance, and accommodation support will be administered. Ask when living support is paid, how accommodation charges are handled, and whether any costs must be paid before support begins.",
+          "If not selected, ask the university or support services what other help may be available. Because the scholarship has only a small number of awards, unsuccessful applicants may still need advice on fee status, hardship support, charities, or alternative routes.",
+          "For selected students, the first year is not only about funding. It is also about settling into university safely. Use academic support, wellbeing services, advisers, and student communities early rather than waiting until a problem becomes urgent.",
+        ],
+      },
+      {
+        title: "Common mistakes to avoid",
+        bullets: [
+          "Applying without a Goldsmiths undergraduate offer.",
+          "Assuming general international students are eligible.",
+          "Applying for an online degree.",
+          "Forgetting to check study permission under Immigration Bail conditions.",
+          "Missing the separate accommodation application.",
+          "Uploading unclear immigration-status evidence.",
+          "Writing answers that do not address the scholarship questions directly.",
+        ],
+        paragraphs: [
+          "The best Goldsmiths Sanctuary application is clear, timely, and evidence-based. If you are eligible, this scholarship is worth prioritizing early because the support package is unusually strong for undergraduate study in London.",
+          "Because only a small number of awards are available, applicants should treat every document and answer as important.",
+        ],
+      },
+    ],
 
     country: "United Kingdom",
     continent: "Europe",
