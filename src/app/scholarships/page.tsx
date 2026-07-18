@@ -223,6 +223,87 @@ function ActiveFilterChip({
   );
 }
 
+function ArticleSearchResults({
+  normalizedQuery,
+  blogPosts,
+  totalBlogPosts,
+}: {
+  normalizedQuery: string;
+  blogPosts: WordPressPostListItem[];
+  totalBlogPosts: number;
+}) {
+  return (
+    <section
+      className="space-y-4"
+      aria-labelledby="article-search-results"
+    >
+      <div className="flex flex-wrap items-end justify-between gap-2">
+        <div>
+          <h2
+            id="article-search-results"
+            className="mt-0 text-2xl font-semibold text-gray-900"
+          >
+            Articles
+          </h2>
+          <p className="mb-0 text-sm text-gray-600">
+            Guides and updates matching “{normalizedQuery}”.
+          </p>
+        </div>
+        {totalBlogPosts > 0 ? (
+          <p className="mb-0 text-sm text-gray-600">
+            {totalBlogPosts} article{totalBlogPosts === 1 ? "" : "s"}
+          </p>
+        ) : null}
+      </div>
+
+      {blogPosts.length > 0 ? (
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {blogPosts.map((post) => {
+            const title = stripHtmlToText(post.title.rendered);
+            const excerpt =
+              stripHtmlToText(post.excerpt.rendered) ||
+              "Read the complete article for scholarship details.";
+            const postDate = formatPostDate(post.date);
+
+            return (
+              <article
+                key={post.id}
+                className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
+              >
+                {postDate ? (
+                  <p className="mb-0 text-xs font-semibold text-gray-500">
+                    {postDate}
+                  </p>
+                ) : null}
+                <h3 className="mt-2 text-lg font-semibold text-gray-900">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                  >
+                    {title}
+                  </Link>
+                </h3>
+                <p className="mt-2 text-sm text-gray-700">{excerpt}</p>
+                <Link
+                  href={`/blog/${post.slug}`}
+                  aria-label={`Read ${title}`}
+                  className="mt-3 inline-flex items-center text-sm font-semibold text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                >
+                  Read article <span aria-hidden="true">&rarr;</span>
+                </Link>
+              </article>
+            );
+          })}
+        </div>
+      ) : (
+        <div className="rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-700">
+          No articles match this search.
+        </div>
+      )}
+    </section>
+  );
+}
+
 export default async function ScholarshipsPage({
   searchParams,
 }: ScholarshipsPageProps) {
@@ -314,6 +395,8 @@ export default async function ScholarshipsPage({
     degree !== "All" ||
     funding !== "All" ||
     sort !== DEFAULT_SORT;
+  const shouldShowArticlesInResultsColumn =
+    normalizedQuery !== "" && sorted.length === 0 && blogPosts.length > 0;
 
   const topItems =
     pageItems.length > 0
@@ -530,6 +613,9 @@ export default async function ScholarshipsPage({
               </h2>
               <p className="mb-0 text-sm text-gray-600">
                 {sorted.length} scholarship{sorted.length === 1 ? "" : "s"}
+                {normalizedQuery && totalBlogPosts > 0
+                  ? ` · ${totalBlogPosts} article${totalBlogPosts === 1 ? "" : "s"}`
+                  : ""}
               </p>
             </div>
           </div>
@@ -610,18 +696,29 @@ export default async function ScholarshipsPage({
           ) : null}
 
           {sorted.length === 0 ? (
-            <div className="rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-700">
-              <p className="mb-3">
-                No scholarship records match these filters
-                {blogPosts.length > 0 ? "; matching articles appear below." : "."}
-              </p>
-              <Link
-                href="/scholarships"
-                className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
-              >
-                Clear filters
-              </Link>
-            </div>
+            <>
+              <div className="rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-700">
+                <p className="mb-3">
+                  {blogPosts.length > 0
+                    ? `No scholarship records match “${normalizedQuery}”, but we found ${totalBlogPosts} matching article${totalBlogPosts === 1 ? "" : "s"}.`
+                    : "No scholarships or articles match these filters."}
+                </p>
+                <Link
+                  href="/scholarships"
+                  className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+                >
+                  Clear filters
+                </Link>
+              </div>
+
+              {shouldShowArticlesInResultsColumn ? (
+                <ArticleSearchResults
+                  normalizedQuery={normalizedQuery}
+                  blogPosts={blogPosts}
+                  totalBlogPosts={totalBlogPosts}
+                />
+              ) : null}
+            </>
           ) : (
             <div className="space-y-4">
               <div className="grid gap-4">
@@ -677,75 +774,14 @@ export default async function ScholarshipsPage({
         </section>
       </div>
 
-      {normalizedQuery ? (
-        <section
-          className="order-5 space-y-4"
-          aria-labelledby="article-search-results"
-        >
-          <div className="flex flex-wrap items-end justify-between gap-2">
-            <div>
-              <h2
-                id="article-search-results"
-                className="mt-0 text-2xl font-semibold text-gray-900"
-              >
-                Articles
-              </h2>
-              <p className="mb-0 text-sm text-gray-600">
-                Guides and updates matching “{normalizedQuery}”.
-              </p>
-            </div>
-            {totalBlogPosts > 0 ? (
-              <p className="mb-0 text-sm text-gray-600">
-                {totalBlogPosts} article{totalBlogPosts === 1 ? "" : "s"}
-              </p>
-            ) : null}
-          </div>
-
-          {blogPosts.length > 0 ? (
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {blogPosts.map((post) => {
-                const title = stripHtmlToText(post.title.rendered);
-                const excerpt =
-                  stripHtmlToText(post.excerpt.rendered) ||
-                  "Read the complete article for scholarship details.";
-                const postDate = formatPostDate(post.date);
-
-                return (
-                  <article
-                    key={post.id}
-                    className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
-                  >
-                    {postDate ? (
-                      <p className="mb-0 text-xs font-semibold text-gray-500">
-                        {postDate}
-                      </p>
-                    ) : null}
-                    <h3 className="mt-2 text-lg font-semibold text-gray-900">
-                      <Link
-                        href={`/blog/${post.slug}`}
-                        className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-                      >
-                        {title}
-                      </Link>
-                    </h3>
-                    <p className="mt-2 text-sm text-gray-700">{excerpt}</p>
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      aria-label={`Read ${title}`}
-                      className="mt-3 inline-flex items-center text-sm font-semibold text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-                    >
-                      Read article <span aria-hidden="true">&rarr;</span>
-                    </Link>
-                  </article>
-                );
-              })}
-            </div>
-          ) : (
-            <div className="rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-700">
-              No articles match this search.
-            </div>
-          )}
-        </section>
+      {normalizedQuery && !shouldShowArticlesInResultsColumn ? (
+        <div className="order-5">
+          <ArticleSearchResults
+            normalizedQuery={normalizedQuery}
+            blogPosts={blogPosts}
+            totalBlogPosts={totalBlogPosts}
+          />
+        </div>
       ) : null}
     </div>
   );
