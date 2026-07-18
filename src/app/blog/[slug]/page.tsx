@@ -19,6 +19,7 @@ import { getBlogContentWithInternalLinks } from "@/lib/internal-linking";
 
 type Props = {
   params: Promise<{ slug: string }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 };
 
 const BLOG_REVALIDATE_SECONDS = 5 * 60;
@@ -60,6 +61,40 @@ function splitAfterIntroduction(html: string) {
     introduction: html.slice(0, splitIndex),
     remainder: html.slice(splitIndex),
   };
+}
+
+function getFirstSearchValue(value: string | string[] | undefined) {
+  if (Array.isArray(value)) return value[0] ?? "";
+  return value ?? "";
+}
+
+function stripTags(value: string) {
+  return value.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+}
+
+function addSearchMatchAnchor(html: string, query: string) {
+  const terms = query
+    .trim()
+    .toLowerCase()
+    .split(/\s+/)
+    .filter(Boolean);
+
+  if (terms.length === 0) return html;
+
+  const blockPattern = /<(h2|h3|h4|p|li)\b[^>]*>[\s\S]*?<\/\1>/gi;
+
+  for (const match of html.matchAll(blockPattern)) {
+    if (match.index === undefined) continue;
+
+    const text = stripTags(match[0]).toLowerCase();
+    const isMatch = terms.every((term) => text.includes(term));
+
+    if (!isMatch) continue;
+
+    return `${html.slice(0, match.index)}<span id="search-match" class="block scroll-mt-28" aria-hidden="true"></span>${html.slice(match.index)}`;
+  }
+
+  return html;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -109,8 +144,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function BlogPostPage({ params }: Props) {
+export default async function BlogPostPage({ params, searchParams }: Props) {
   const { slug } = await params;
+  const resolvedSearchParams = (await searchParams) ?? {};
   if (!isWordPressConfigured()) notFound();
 
   const post = await getCachedWordPressPostBySlug(slug);
@@ -119,9 +155,13 @@ export default async function BlogPostPage({ params }: Props) {
   const title = stripHtmlToText(post.title.rendered);
   const published = formatDate(post.date);
   const modified = formatDate(post.modified);
-  const contentWithInternalLinks = getBlogContentWithInternalLinks(
-    post.slug,
-    post.content.rendered,
+  const highlightQuery = getFirstSearchValue(resolvedSearchParams.highlight);
+  const contentWithInternalLinks = addSearchMatchAnchor(
+    getBlogContentWithInternalLinks(
+      post.slug,
+      post.content.rendered,
+    ),
+    highlightQuery,
   );
   const articleContent = splitAfterIntroduction(contentWithInternalLinks);
   const finderContext = detectScholarshipFinderContext({

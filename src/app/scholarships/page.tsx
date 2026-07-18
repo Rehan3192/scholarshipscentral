@@ -223,6 +223,11 @@ function ActiveFilterChip({
   );
 }
 
+function buildBlogSearchResultHref(slug: string, normalizedQuery: string) {
+  const params = new URLSearchParams({ highlight: normalizedQuery });
+  return `/blog/${slug}?${params.toString()}#search-match`;
+}
+
 function ArticleSearchResults({
   normalizedQuery,
   blogPosts,
@@ -264,6 +269,7 @@ function ArticleSearchResults({
               stripHtmlToText(post.excerpt.rendered) ||
               "Read the complete article for scholarship details.";
             const postDate = formatPostDate(post.date);
+            const href = buildBlogSearchResultHref(post.slug, normalizedQuery);
 
             return (
               <article
@@ -277,7 +283,7 @@ function ArticleSearchResults({
                 ) : null}
                 <h3 className="mt-2 text-lg font-semibold text-gray-900">
                   <Link
-                    href={`/blog/${post.slug}`}
+                    href={href}
                     className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
                   >
                     {title}
@@ -285,11 +291,11 @@ function ArticleSearchResults({
                 </h3>
                 <p className="mt-2 text-sm text-gray-700">{excerpt}</p>
                 <Link
-                  href={`/blog/${post.slug}`}
+                  href={href}
                   aria-label={`Read ${title}`}
                   className="mt-3 inline-flex items-center text-sm font-semibold text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
                 >
-                  Read article <span aria-hidden="true">&rarr;</span>
+                  Jump to match <span aria-hidden="true">&rarr;</span>
                 </Link>
               </article>
             );
