@@ -70,7 +70,7 @@ export default function ScholarshipFinderCTA(props: Props) {
   return (
     <aside
       aria-labelledby="scholarship-finder-cta-heading"
-      className="my-8 rounded-2xl border border-blue-200 bg-blue-50 p-5 text-slate-900 sm:p-6"
+      className="my-8 rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/60 p-5 text-slate-900 shadow-sm sm:p-6"
     >
       <p className="m-0 text-xs font-bold uppercase tracking-wide text-blue-700">
         <span aria-hidden="true">✨ </span>

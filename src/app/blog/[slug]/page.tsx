@@ -185,7 +185,7 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
         dateModified={post.modified}
       />
 
-      <header className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <header className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <p className="mb-0 text-xs font-semibold uppercase tracking-wide text-blue-700">
           Scholarship guide
         </p>
@@ -198,7 +198,7 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
         </h1>
       </header>
 
-      <article className="wp-article rounded-2xl border border-slate-200 bg-white p-6 text-base text-slate-700 shadow-sm sm:p-8">
+      <article className="wp-article rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-base text-slate-700 shadow-sm sm:p-8">
         <div
           className="wp-content space-y-4"
           dangerouslySetInnerHTML={{ __html: articleContent.introduction }}

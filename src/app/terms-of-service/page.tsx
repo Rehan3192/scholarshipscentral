@@ -29,7 +29,7 @@ export default function TermsOfServicePage() {
         </p>
       </header>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Informational-only
         </h2>
@@ -41,7 +41,7 @@ export default function TermsOfServicePage() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Accuracy and deadlines
         </h2>
@@ -54,7 +54,7 @@ export default function TermsOfServicePage() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">
           External links
         </h2>
@@ -66,7 +66,7 @@ export default function TermsOfServicePage() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Limitation of liability
         </h2>
@@ -78,7 +78,7 @@ export default function TermsOfServicePage() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Governing law
         </h2>
@@ -88,7 +88,7 @@ export default function TermsOfServicePage() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Contact
         </h2>

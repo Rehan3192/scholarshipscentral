@@ -85,7 +85,7 @@ function ArchivePagination({
   return (
     <nav
       aria-label="Blog pagination"
-      className="rounded-2xl border border-slate-200 bg-white px-4 py-4 shadow-sm sm:px-5"
+      className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 px-4 py-4 shadow-sm sm:px-5"
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="mb-0 text-sm text-slate-600">
@@ -285,7 +285,7 @@ export default function BlogArchiveView({
         {currentPage === 1 ? <FeaturedPagesSection /> : null}
 
         {!configured ? (
-          <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+          <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm sm:p-8">
             <h2 className="mt-0 text-lg font-semibold text-slate-900">
               Blog temporarily unavailable
             </h2>
@@ -307,7 +307,7 @@ export default function BlogArchiveView({
             </p>
           </section>
         ) : posts.length === 0 ? (
-          <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+          <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm sm:p-8">
             <h2 className="mt-0 text-lg font-semibold text-slate-900">
               No blog posts yet
             </h2>
@@ -341,7 +341,7 @@ export default function BlogArchiveView({
                 return (
                   <article
                     key={post.id}
-                    className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-transform duration-200 motion-reduce:transition-none hover:-translate-y-0.5"
+                    className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm transition-transform duration-200 motion-reduce:transition-none hover:-translate-y-0.5"
                   >
                     <div className="text-xs font-semibold text-slate-500">
                       {formatDate(post.date)}

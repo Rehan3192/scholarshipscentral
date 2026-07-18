@@ -50,7 +50,7 @@ export default function PhDScholarshipsPage() {
       </header>
 
       {filtered.length === 0 ? (
-        <div className="rounded-xl border border-slate-200 bg-white p-6 text-sm text-slate-700">
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700">
           <p className="mb-3">No scholarships listed here yet.</p>
           <Link
             href="/scholarships"

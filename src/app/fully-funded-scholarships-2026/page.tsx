@@ -180,7 +180,7 @@ export default function FullyFundedScholarships2026Page() {
       </header>
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Fully funded coverage
           </p>
@@ -191,7 +191,7 @@ export default function FullyFundedScholarships2026Page() {
             Fully funded scholarships across {countryCount} countries in the directory.
           </p>
         </div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Europe fully funded
           </p>
@@ -202,7 +202,7 @@ export default function FullyFundedScholarships2026Page() {
             Europe listings inside the full-funding options.
           </p>
         </div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm sm:col-span-2 xl:col-span-1">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Still open now
           </p>
@@ -215,7 +215,7 @@ export default function FullyFundedScholarships2026Page() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Why use this fully funded scholarships page
         </h2>
@@ -247,7 +247,7 @@ export default function FullyFundedScholarships2026Page() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Country shortcut: UK
         </h2>
@@ -260,7 +260,7 @@ export default function FullyFundedScholarships2026Page() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Country shortcut: Italy
         </h2>

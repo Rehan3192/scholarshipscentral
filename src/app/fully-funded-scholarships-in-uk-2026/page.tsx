@@ -135,7 +135,7 @@ export default function FullyFundedScholarshipsInUk2026Page() {
         </div>
       </header>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Fully funded scholarships in UK 2026 quick summary
         </h2>
@@ -149,29 +149,29 @@ export default function FullyFundedScholarshipsInUk2026Page() {
       </section>
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">Fully funded UK routes</p>
           <p className="mb-0 text-3xl font-bold text-slate-900">{ukFullyFundedScholarships.length}</p>
           <p className="mt-2 mb-0 text-sm text-slate-600">UK listings in the directory that already match fully funded intent.</p>
         </div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">Still open now</p>
           <p className="mb-0 text-3xl font-bold text-slate-900">{stillOpenScholarships.length}</p>
           <p className="mt-2 mb-0 text-sm text-slate-600">Routes with active or rolling deadlines right now.</p>
         </div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">Language-flexible</p>
           <p className="mb-0 text-3xl font-bold text-slate-900">{languageFlexibleCount}</p>
           <p className="mt-2 mb-0 text-sm text-slate-600">Fully funded UK routes that also mention accepted English-proof flexibility.</p>
         </div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">Cluster role</p>
           <p className="mb-0 text-3xl font-bold text-slate-900">UK x Funding</p>
           <p className="mt-2 mb-0 text-sm text-slate-600">This page supports both the UK scholarship options and the global fully funded hub.</p>
         </div>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">Where to find more UK options</h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Use <Link href="/countries/united-kingdom" className="font-medium text-blue-700 hover:underline">UK scholarships 2026</Link> for the full UK list. Use <Link href="/fully-funded-scholarships-2026" className="font-medium text-blue-700 hover:underline">fully funded scholarships 2026</Link> for global comparisons.
@@ -207,7 +207,7 @@ export default function FullyFundedScholarshipsInUk2026Page() {
         </section>
       ) : null}
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">Funding types and competition</h2>
         <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           The UK fully funded pool is not one uniform category. Chevening and Commonwealth behave like broad national scholarship brands, while Gates Cambridge and Clarendon are university-led and much tighter at the selection stage.

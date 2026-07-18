@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/StructuredData";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Scholarships Central for corrections, feedback, or scholarship listing updates.",
+    "Contact Scholarships Central for corrections, feedback, or scholarship listing updates. We are not a scholarship provider or admissions office.",
   alternates: { canonical: "/contact" },
 };
 
@@ -25,11 +25,12 @@ export default function ContactPage() {
         </h1>
         <p className="mb-0 text-sm text-slate-600">
           For corrections, feedback, or listing updates, reach us using the
-          details below.
+          details below. Please do not send requests for scholarship seats,
+          admission placement, supervisor approval, or direct selection.
         </p>
       </header>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Contact details
         </h2>
@@ -71,12 +72,28 @@ export default function ContactPage() {
 
         <p className="mt-6 mb-0 text-xs text-slate-500">
           Note: Scholarships Central is information-only. We do not accept
-          applications. For application questions, always contact the official
-          scholarship provider.
+          applications, provide funded seats, arrange supervisors, or influence
+          scholarship decisions. For application questions, always contact the
+          official scholarship provider.
         </p>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-amber-200 bg-amber-50/70 p-6 text-sm text-amber-950 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
+          Before you contact us
+        </h2>
+        <p className="mt-4">
+          Muhammad Rehan is not a scholarship provider, professor, admissions
+          officer, or university representative. We cannot take you into any
+          scholarship, reserve a seat, nominate you, or approve your admission.
+        </p>
+        <p className="mb-0">
+          Use this contact page for corrections, missing official links,
+          outdated deadlines, or website feedback only.
+        </p>
+      </section>
+
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">
           What to include in your message
         </h2>

@@ -255,7 +255,7 @@ function SectionCard({
   children: React.ReactNode;
 }) {
   return (
-    <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+    <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
       <h2 className="mt-0 text-xl font-semibold text-slate-900">{title}</h2>
       <div className="mt-4">{children}</div>
     </section>
@@ -695,7 +695,7 @@ export default async function ScholarshipPage({ params }: Props) {
                   <Link
                     key={path.href}
                     href={path.href}
-                    className="rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-700 transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50"
+                    className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-4 text-sm text-slate-700 transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50"
                   >
                     <div className="font-semibold text-slate-900">{path.title}</div>
                     <div className="mt-2">{path.description}</div>
@@ -750,7 +750,7 @@ export default async function ScholarshipPage({ params }: Props) {
         </div>
 
         <aside className="space-y-4 lg:sticky lg:top-6 lg:self-start">
-          <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm">
             <h2 className="mt-0 text-base font-semibold text-slate-900">
               Apply safely
             </h2>
@@ -791,7 +791,7 @@ export default async function ScholarshipPage({ params }: Props) {
             </p>
           </section>
 
-          <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm">
             <h2 className="mt-0 text-base font-semibold text-slate-900">
               Key facts
             </h2>
@@ -862,7 +862,7 @@ export default async function ScholarshipPage({ params }: Props) {
         </aside>
       </div>
 
-      <div className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+      <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm sm:p-8">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Ready to apply?
         </h2>

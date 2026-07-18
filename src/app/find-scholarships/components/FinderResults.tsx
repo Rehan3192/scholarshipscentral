@@ -81,7 +81,7 @@ export default function FinderResults({
         />
       </div>
 
-      <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+      <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm">
         <h3 className="m-0 text-base font-semibold text-slate-900">What the recommendation labels mean</h3>
         <dl className="mt-3 grid gap-3 text-sm sm:grid-cols-2">
           {levels.map((level) => (

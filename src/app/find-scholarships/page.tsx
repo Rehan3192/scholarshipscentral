@@ -103,7 +103,7 @@ export default function FindScholarshipsPage() {
         description="Find scholarships that match your degree, country preference, funding needs, and study goals."
       />
 
-      <header className="space-y-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <header className="space-y-5 rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <Breadcrumbs
           items={[
             { label: "Home", href: "/" },
@@ -130,7 +130,7 @@ export default function FindScholarshipsPage() {
         </div>
       </header>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="m-0 text-2xl font-semibold text-slate-900">
           How the finder works
         </h2>
@@ -144,7 +144,7 @@ export default function FindScholarshipsPage() {
 
       <FinderWizard scholarships={finderScholarships} options={finderOptions} />
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="m-0 text-2xl font-semibold text-slate-900">
           Scholarship finder FAQ
         </h2>
@@ -208,7 +208,7 @@ export default function FindScholarshipsPage() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="m-0 text-2xl font-semibold text-slate-900">
           Related guides
         </h2>

@@ -108,7 +108,7 @@ export default async function ScholarshipResults2026Page() {
         <ItemListJsonLd pagePath="/scholarship-results-2026" items={itemList} />
       ) : null}
 
-      <header className="space-y-3 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <header className="space-y-3 rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <div className="inline-flex w-fit items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-800">
           Results hub
         </div>
@@ -172,7 +172,7 @@ export default async function ScholarshipResults2026Page() {
               "Read the full result article for official timing details.";
 
             return (
-              <article key={post.id} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-transform duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md">
+              <article key={post.id} className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm transition-transform duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-800">
                     Results
@@ -206,7 +206,7 @@ export default async function ScholarshipResults2026Page() {
         <h2 className="mt-0 text-xl font-semibold text-slate-900">Explore more</h2>
         <div className="grid gap-3 sm:grid-cols-3">
           {guideLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">
+            <Link key={link.href} href={link.href} className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-4 shadow-sm hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">
               <span className="block font-semibold text-slate-900">{link.title}</span>
               <span className="mt-1 block text-sm text-slate-600">{link.description}</span>
             </Link>

@@ -130,7 +130,7 @@ export default function CscScholarship2027ResultsPage() {
       />
       <FaqJsonLd items={faqs} />
 
-      <header className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <header className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wide">
           <span className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-amber-900">
             Result status: Expected
@@ -179,7 +179,7 @@ export default function CscScholarship2027ResultsPage() {
         </dl>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-2xl font-semibold text-slate-900">Are CSC Scholarship 2027 results out?</h2>
         <p className="mt-4 mb-0 leading-7 text-slate-700">
           <strong>No official nationwide CSC Scholarship 2027 result release has been confirmed.</strong> As of July 17, 2026, the 2027 result cycle is still in the future. No university notification should be presented as a complete national release because universities, embassies, and other dispatching authorities can communicate on different schedules.
@@ -189,7 +189,7 @@ export default function CscScholarship2027ResultsPage() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-2xl font-semibold text-slate-900">CSC Scholarship 2027 result timeline</h2>
         <ol className="mt-5 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-4">
           {["Application submitted", "University or dispatching-authority review", "CSC review and approval process", "Result notification", "Admission package", "Visa preparation", "Travel and registration"].map((step, index) => (
@@ -199,12 +199,12 @@ export default function CscScholarship2027ResultsPage() {
       </section>
 
       <section className="grid gap-4 lg:grid-cols-3">
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><h2 className="mt-0 text-xl font-semibold text-slate-900">Type A: embassy or dispatching-authority track</h2><p className="mt-3 mb-0 text-sm leading-6 text-slate-700">The authority that accepted or nominated the application normally controls communication. Monitor its website, email, and applicant instructions. Local review calendars and document delivery can make Type A dates vary by country.</p></div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><h2 className="mt-0 text-xl font-semibold text-slate-900">Type B: university track</h2><p className="mt-3 mb-0 text-sm leading-6 text-slate-700">A university may issue pre-admission, nomination, or internal selection information before final scholarship confirmation. Treat a university recommendation as provisional until the responsible authority provides the final result and admission documents.</p></div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><h2 className="mt-0 text-xl font-semibold text-slate-900">Type C: other designated routes</h2><p className="mt-3 mb-0 text-sm leading-6 text-slate-700">Type C can refer to other application channels identified in a specific programme notice. Follow it only when the official call explicitly gives a Type C agency number and notification process.</p></div>
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm"><h2 className="mt-0 text-xl font-semibold text-slate-900">Type A: embassy or dispatching-authority track</h2><p className="mt-3 mb-0 text-sm leading-6 text-slate-700">The authority that accepted or nominated the application normally controls communication. Monitor its website, email, and applicant instructions. Local review calendars and document delivery can make Type A dates vary by country.</p></div>
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm"><h2 className="mt-0 text-xl font-semibold text-slate-900">Type B: university track</h2><p className="mt-3 mb-0 text-sm leading-6 text-slate-700">A university may issue pre-admission, nomination, or internal selection information before final scholarship confirmation. Treat a university recommendation as provisional until the responsible authority provides the final result and admission documents.</p></div>
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm"><h2 className="mt-0 text-xl font-semibold text-slate-900">Type C: other designated routes</h2><p className="mt-3 mb-0 text-sm leading-6 text-slate-700">Type C can refer to other application channels identified in a specific programme notice. Follow it only when the official call explicitly gives a Type C agency number and notification process.</p></div>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-2xl font-semibold text-slate-900">How to check your CSC Scholarship result</h2>
         <div className="mt-5 grid gap-4 sm:grid-cols-2">
           {[
@@ -218,14 +218,14 @@ export default function CscScholarship2027ResultsPage() {
         </div>
       </section>
 
-      <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <section className="overflow-hidden rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 shadow-sm">
         <div className="p-6 pb-3 sm:px-8"><h2 className="mt-0 text-2xl font-semibold text-slate-900">CSC result status meanings</h2><p className="mt-2 mb-0 text-sm text-slate-600">These are practical interpretations, not a guarantee that every portal or authority uses identical labels.</p></div>
         <div className="overflow-x-auto"><table className="w-full min-w-[640px] text-left text-sm"><thead className="bg-slate-50 text-slate-700"><tr><th className="px-6 py-3 font-semibold sm:px-8">Status</th><th className="px-6 py-3 font-semibold">What it generally means</th></tr></thead><tbody className="divide-y divide-slate-200">{statusRows.map(([status, meaning]) => <tr key={status}><th scope="row" className="px-6 py-3 font-semibold text-slate-900 sm:px-8">{status}</th><td className="px-6 py-3 text-slate-700">{meaning}</td></tr>)}</tbody></table></div>
       </section>
 
       <section className="grid gap-4 lg:grid-cols-2">
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><h2 className="mt-0 text-2xl font-semibold text-slate-900">What happens after selection?</h2><ol className="mt-4 mb-0 list-decimal space-y-2 pl-5 text-sm leading-6 text-slate-700"><li>Confirm that the notice is final and check the scholarship coverage.</li><li>Receive or download the admission notice and route-specific documents.</li><li>Prepare the visa application form, including JW201 or JW202 when issued and applicable.</li><li>Complete the required physical examination and visa process.</li><li>Follow the university&apos;s registration, accommodation, and arrival instructions.</li><li>Travel to China only after the visa and admission arrangements are confirmed.</li></ol></div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><h2 className="mt-0 text-2xl font-semibold text-slate-900">Documents commonly needed after selection</h2><ul className="mt-4 mb-0 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-700"><li>Valid passport</li><li>Official admission or scholarship notice</li><li>Visa application documents supplied for the case</li><li>Foreigner physical examination documentation when required</li><li>Original or authenticated degree certificates and transcripts</li><li>Police clearance if requested by the university or visa authority</li><li>Passport photographs meeting the stated specifications</li></ul><p className="mt-4 mb-0 text-sm font-medium text-slate-800">Use the final university and visa instructions as the controlling checklist.</p></div>
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm"><h2 className="mt-0 text-2xl font-semibold text-slate-900">What happens after selection?</h2><ol className="mt-4 mb-0 list-decimal space-y-2 pl-5 text-sm leading-6 text-slate-700"><li>Confirm that the notice is final and check the scholarship coverage.</li><li>Receive or download the admission notice and route-specific documents.</li><li>Prepare the visa application form, including JW201 or JW202 when issued and applicable.</li><li>Complete the required physical examination and visa process.</li><li>Follow the university&apos;s registration, accommodation, and arrival instructions.</li><li>Travel to China only after the visa and admission arrangements are confirmed.</li></ol></div>
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm"><h2 className="mt-0 text-2xl font-semibold text-slate-900">Documents commonly needed after selection</h2><ul className="mt-4 mb-0 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-700"><li>Valid passport</li><li>Official admission or scholarship notice</li><li>Visa application documents supplied for the case</li><li>Foreigner physical examination documentation when required</li><li>Original or authenticated degree certificates and transcripts</li><li>Police clearance if requested by the university or visa authority</li><li>Passport photographs meeting the stated specifications</li></ul><p className="mt-4 mb-0 text-sm font-medium text-slate-800">Use the final university and visa instructions as the controlling checklist.</p></div>
       </section>
 
       <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
@@ -235,17 +235,17 @@ export default function CscScholarship2027ResultsPage() {
         <ul className="mt-3 mb-0 grid gap-2 text-sm text-slate-700 sm:grid-cols-2"><li>Additional document or identity verification</li><li>CSC approval still pending</li><li>University nomination processing</li><li>Embassy or dispatching-authority scheduling</li><li>Public holidays and administrative closures</li><li>Missing or inconsistent documents</li></ul>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-2xl font-semibold text-slate-900">Frequently asked questions</h2>
         <div className="mt-5 space-y-5">{faqs.map((faq) => <div key={faq.question}><h3 className="m-0 text-base font-semibold text-slate-900">{faq.question}</h3><p className="mt-2 mb-0 text-sm leading-6 text-slate-700">{faq.answer}</p></div>)}</div>
       </section>
 
       <section className="grid gap-4 lg:grid-cols-2">
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><h2 className="mt-0 text-2xl font-semibold text-slate-900">Official resources</h2><ul className="mt-4 mb-0 space-y-3 text-sm"><li><a href="https://www.campuschina.org/" target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-700 hover:underline">Campus China / China Scholarship Council ↗</a></li><li><a href="https://studyinchina.csc.edu.cn/" target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-700 hover:underline">CSC application system ↗</a></li><li><a href="https://www.studyinchina.edu.cn/" target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-700 hover:underline">Study in China portal ↗</a></li><li><span className="font-semibold text-slate-900">Your university:</span> use its official international admissions website.</li><li><span className="font-semibold text-slate-900">Your embassy or dispatching authority:</span> use the exact office named in the Type A call.</li></ul></div>
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm"><h2 className="mt-0 text-2xl font-semibold text-slate-900">Official resources</h2><ul className="mt-4 mb-0 space-y-3 text-sm"><li><a href="https://www.campuschina.org/" target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-700 hover:underline">Campus China / China Scholarship Council ↗</a></li><li><a href="https://studyinchina.csc.edu.cn/" target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-700 hover:underline">CSC application system ↗</a></li><li><a href="https://www.studyinchina.edu.cn/" target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-700 hover:underline">Study in China portal ↗</a></li><li><span className="font-semibold text-slate-900">Your university:</span> use its official international admissions website.</li><li><span className="font-semibold text-slate-900">Your embassy or dispatching authority:</span> use the exact office named in the Type A call.</li></ul></div>
         <div className="rounded-2xl border border-blue-200 bg-blue-50 p-6"><h2 className="mt-0 text-2xl font-semibold text-slate-900">Key takeaways</h2><ul className="mt-4 mb-0 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-700"><li>CSC Scholarship 2027 results are not currently released.</li><li>July–August 2027 is an expected monitoring period, not an official universal promise.</li><li>Type A and Type B use different notification paths.</li><li>Pre-admission or recommendation does not necessarily equal final CSC approval.</li><li>Rely on CSC, your university, embassy, or dispatching authority—not social-media rumors.</li></ul></div>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-2xl font-semibold text-slate-900">Related resources</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">{relatedLinks.map((item) => <Link key={item.href} href={item.href} className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm font-semibold text-slate-900 hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">{item.label} <span aria-hidden="true">→</span></Link>)}</div>
       </section>

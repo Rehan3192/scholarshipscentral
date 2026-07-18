@@ -200,7 +200,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
 
   return (
     <div className="grid gap-6 lg:grid-cols-[280px_1fr]">
-      <aside className="h-fit rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+      <aside className="h-fit rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm">
         <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Filter scholarships
         </h2>
@@ -347,7 +347,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
         </div>
 
         {hasActiveFilters ? (
-          <div className="flex flex-wrap items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm">
+          <div className="flex flex-wrap items-center gap-2 rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 px-4 py-3 text-sm shadow-sm">
             <span className="font-medium text-slate-700">Active filters:</span>
 
             {query.trim() ? (
@@ -431,7 +431,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
         ) : null}
 
         {sorted.length === 0 ? (
-          <div className="rounded-xl border border-slate-200 bg-white p-6 text-sm text-slate-700">
+          <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm">
             <p className="mb-3">
               No scholarships match these filters.
             </p>
@@ -451,7 +451,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
               ))}
             </div>
 
-            <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700">
+            <div className="flex flex-wrap items-center justify-between gap-3 rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 px-4 py-3 text-sm text-slate-700 shadow-sm">
               <span>
                 Page {currentPage} of {totalPages}
               </span>

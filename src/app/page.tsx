@@ -162,7 +162,7 @@ async function getHomepageBlogPosts(): Promise<WordPressPostListItem[]> {
 
 function SectionFallback({ label }: { label: string }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-700 shadow-sm">
+    <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 text-sm text-slate-700 shadow-sm">
       <p className="m-0">{label}</p>
     </div>
   );
@@ -218,7 +218,7 @@ async function LatestBlogSection() {
                 <Link
                   key={post.id}
                   href={`/blog/${post.slug}`}
-                  className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                  className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
                 >
                   <div className="text-xs font-semibold text-slate-500">
                     {formatDate(post.date)}
@@ -406,7 +406,7 @@ export default function HomePage() {
             <Link
               key={s.slug}
               href={`/scholarships/${s.slug}`}
-              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+              className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
             >
               <div className="text-base font-semibold text-slate-900">
                 {s.title}
@@ -487,7 +487,7 @@ export default function HomePage() {
         <div className="grid gap-4 sm:grid-cols-3">
           <Link
             href="/degrees/bachelors"
-            className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
           >
             <div className="font-semibold text-slate-900">
               Bachelors
@@ -499,7 +499,7 @@ export default function HomePage() {
 
           <Link
             href="/degrees/masters"
-            className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
           >
             <div className="font-semibold text-slate-900">
               Masters
@@ -511,7 +511,7 @@ export default function HomePage() {
 
           <Link
             href="/degrees/phd"
-            className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
           >
             <div className="font-semibold text-slate-900">
               PhD
@@ -539,7 +539,7 @@ export default function HomePage() {
           width={1200}
           height={420}
           sizes="(min-width: 1152px) 1120px, calc(100vw - 32px)"
-          className="h-auto w-full rounded-2xl border border-slate-200 bg-white"
+          className="h-auto w-full rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40"
         />
 
         <div className="grid gap-4 sm:grid-cols-3">
@@ -547,7 +547,7 @@ export default function HomePage() {
             <Link
               key={country.country}
               href={country.href}
-              className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+              className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
             >
               <div className="font-semibold text-slate-900">
                 {country.country === "United Kingdom" ? "UK" : country.country}
@@ -560,7 +560,7 @@ export default function HomePage() {
         </div>
 
         {TOP_COUNTRIES.length > 0 ? (
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <h3 className="m-0 text-base font-semibold text-slate-900">
                 Popular destinations
@@ -626,7 +626,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-2 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div className="flex flex-wrap gap-2 rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm">
           {POPULAR_SEARCHES.map((item) => (
             <Link
               key={item.href}
@@ -652,7 +652,7 @@ export default function HomePage() {
         <div className="grid gap-4 sm:grid-cols-2">
           <Link
             href="/funding/fully-funded"
-            className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
           >
             <div className="font-semibold text-slate-900">
               Fully funded
@@ -664,7 +664,7 @@ export default function HomePage() {
 
           <Link
             href="/funding/partially-funded"
-            className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
           >
             <div className="font-semibold text-slate-900">
               Partially funded
@@ -676,7 +676,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8 content-visibility-auto">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8 content-visibility-auto">
         <h2 className="mt-0 text-xl font-semibold text-slate-900">
           Explore more
         </h2>

@@ -128,7 +128,7 @@ export default async function CountryPage({ params }: Props) {
       </header>
 
       {hubLinks.length > 0 ? (
-        <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
           <div className="space-y-2">
             <h2 className="mt-0 text-xl font-semibold text-slate-900">
               Broaden your {label} shortlist
@@ -156,7 +156,7 @@ export default async function CountryPage({ params }: Props) {
       ) : null}
 
       {filtered.length === 0 ? (
-        <div className="rounded-xl border border-slate-200 bg-white p-6 text-sm text-slate-700">
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700">
           <p className="mb-3">No scholarships listed here yet.</p>
           <Link
             href="/scholarships"

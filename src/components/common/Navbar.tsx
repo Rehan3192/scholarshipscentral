@@ -103,7 +103,7 @@ function NavDropdown({
           aria-label={`${label} menu`}
           aria-hidden={!isOpen}
           className={[
-            "origin-top rounded-xl border border-slate-200 bg-white p-2 shadow-lg transition duration-200 motion-reduce:transition-none",
+            "origin-top rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-2 shadow-lg transition duration-200 motion-reduce:transition-none",
             isOpen
               ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
               : "opacity-0 scale-95 translate-y-1 pointer-events-none",

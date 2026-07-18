@@ -46,7 +46,7 @@ export default function ScholarshipHeader({ scholarship, guideLink }: Props) {
         ]}
       />
 
-      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h1 className="text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
           {cleanDisplayText(scholarship.title)}
         </h1>

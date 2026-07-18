@@ -140,7 +140,7 @@ export default function FinderWizard({ scholarships, options }: Props) {
   return (
     <div className="space-y-6">
       <section
-        className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6"
+        className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm sm:p-6"
         aria-labelledby="finder-wizard-heading"
       >
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -272,7 +272,7 @@ export default function FinderWizard({ scholarships, options }: Props) {
           profileStrength={profileStrength}
         />
       ) : (
-        <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-label="Finder completion status">
+        <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm sm:p-6" aria-label="Finder completion status">
           <p className="m-0 font-semibold text-slate-900">
             <span aria-hidden="true">🎓 </span>
             Complete the next steps to receive personalized scholarship recommendations.

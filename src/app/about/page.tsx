@@ -11,6 +11,7 @@ const lastReviewed = "April 21, 2026";
 
 const trustSignals = [
   "Official-source based",
+  "Not a scholarship provider",
   "No scholarship guarantees",
   "Independent verification required",
 ];
@@ -40,7 +41,7 @@ export default function AboutPage() {
       />
 
       {/* Header */}
-      <header className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <header className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <div className="space-y-4">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-700">
             About Scholarships Central
@@ -76,7 +77,7 @@ export default function AboutPage() {
       </header>
 
       {/* About Founder */}
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="text-lg font-semibold text-slate-900 mb-4">
           About the Founder
         </h2>
@@ -132,8 +133,41 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+        <h2 className="text-lg font-semibold text-slate-900">
+          Founder achievements and experience
+        </h2>
+        <p className="mt-4">
+          Rehan built Scholarships Central from research to publishing,
+          including the website, structured scholarship data, SEO content, and
+          scholarship discovery tools. The platform reflects his experience in
+          combining software engineering, search-focused content, and practical
+          student guidance.
+        </p>
+        <ul className="mt-4 list-disc space-y-2 pl-5">
+          <li>
+            Built and manages Scholarships Central independently, including
+            design, development, content systems, and technical SEO.
+          </li>
+          <li>
+            Researches scholarship opportunities from official sources and
+            turns them into structured guides students can compare quickly.
+          </li>
+          <li>
+            Developed the Scholarship Finder to help students narrow options by
+            degree, nationality, country preference, funding need, and English
+            requirement.
+          </li>
+          <li>
+            Has experience creating and growing content platforms with a focus
+            on useful search experiences, readable pages, and practical
+            information architecture.
+          </li>
+        </ul>
+      </section>
+
       {/* Who We Are */}
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm sm:p-8">
         <h2 className="text-lg font-semibold text-slate-900">Who We Are</h2>
         <p className="mt-4">
           Scholarships Central is an independent scholarship discovery and
@@ -145,10 +179,32 @@ export default function AboutPage() {
           We are not a university, embassy, scholarship board, admissions
           office, or application processor. We publish informational content only.
         </p>
+        <p>
+          Please do not contact us asking for a scholarship seat, admission
+          placement, supervisor approval, professor recommendation, or direct
+          selection into any program. Scholarships Central cannot admit students,
+          nominate applicants, influence selection committees, or reserve seats.
+        </p>
+      </section>
+
+      <section className="rounded-3xl border border-amber-200 bg-amber-50/70 p-6 text-sm text-amber-950 shadow-sm sm:p-8">
+        <h2 className="text-lg font-semibold text-slate-900">
+          Important: We cannot provide seats or scholarships
+        </h2>
+        <p className="mt-4">
+          Scholarships Central is run as an independent information website.
+          Muhammad Rehan is not a scholarship provider, professor, university
+          representative, embassy officer, or admissions decision-maker.
+        </p>
+        <p>
+          For applications, supervisor approval, admission decisions, funded
+          seats, or eligibility rulings, contact the official university or
+          scholarship provider listed in the relevant guide.
+        </p>
       </section>
 
       {/* Internal Linking Boost */}
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm sm:p-8">
         <h2 className="text-lg font-semibold text-slate-900">
           Start Exploring Scholarships
         </h2>
@@ -173,7 +229,7 @@ export default function AboutPage() {
       </section>
 
       {/* Contact */}
-      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm sm:p-8">
         <h2 className="text-lg font-semibold text-slate-900">
           Contact / Responsibility Statement
         </h2>

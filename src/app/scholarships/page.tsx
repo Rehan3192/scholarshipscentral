@@ -328,7 +328,7 @@ function ArticleSearchResults({
             return (
               <article
                 key={post.id}
-                className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+                className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm"
               >
                 {postDate ? (
                   <p className="mb-0 text-xs font-semibold text-slate-500">
@@ -356,7 +356,7 @@ function ArticleSearchResults({
           })}
         </div>
       ) : (
-        <div className="rounded-xl border border-slate-200 bg-white p-6 text-sm text-slate-700">
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700">
           No articles match this search.
         </div>
       )}
@@ -485,7 +485,7 @@ export default async function ScholarshipsPage({
         </div>
       </header>
 
-      <section className="order-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+      <section className="order-3 rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-4 shadow-sm sm:p-5">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="mt-0 text-base font-semibold text-slate-900">
             Quick filters
@@ -531,7 +531,7 @@ export default async function ScholarshipsPage({
       </section>
 
       <div className="order-4 grid gap-6 lg:grid-cols-[280px_1fr]">
-        <aside className="h-fit rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <aside className="h-fit rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm">
           <h2 className="mt-0 text-lg font-semibold text-slate-900">
             Filter scholarships
           </h2>
@@ -668,7 +668,7 @@ export default async function ScholarshipsPage({
           </div>
 
           {hasActiveFilters ? (
-            <div className="flex flex-wrap items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm">
+            <div className="flex flex-wrap items-center gap-2 rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 px-4 py-3 text-sm">
               <span className="font-medium text-slate-700">Active filters:</span>
 
               {query.trim() ? (
@@ -744,7 +744,7 @@ export default async function ScholarshipsPage({
 
           {sorted.length === 0 ? (
             <>
-              <div className="rounded-xl border border-slate-200 bg-white p-6 text-sm text-slate-700">
+              <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700">
                 <p className="mb-3">
                   {blogPosts.length > 0
                     ? `No scholarship records match “${normalizedQuery}”, but we found ${totalBlogPosts} matching article${totalBlogPosts === 1 ? "" : "s"}.`
@@ -774,7 +774,7 @@ export default async function ScholarshipsPage({
                 ))}
               </div>
 
-              <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700">
+              <div className="flex flex-wrap items-center justify-between gap-3 rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 px-4 py-3 text-sm text-slate-700">
                 <span>
                   Page {currentPage} of {totalPages}
                 </span>

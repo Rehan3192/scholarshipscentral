@@ -23,7 +23,7 @@ export default function RecommendationCard({
   const scholarship = recommendation.scholarship;
 
   return (
-    <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <article className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div className="min-w-0">
           <h3 className="m-0 text-lg font-semibold leading-snug text-slate-900">

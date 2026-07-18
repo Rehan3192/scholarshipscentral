@@ -61,7 +61,7 @@ export default function DegreesPage() {
       </header>
 
       {items.length === 0 ? (
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm">
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 text-sm text-slate-700 shadow-sm">
           <p className="mb-0">No degree pages available yet.</p>
         </div>
       ) : (
@@ -70,7 +70,7 @@ export default function DegreesPage() {
             <Link
               key={d.degree}
               href={d.href}
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+              className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
             >
               <div className="flex items-center justify-between gap-3">
                 <div className="text-lg font-semibold text-slate-900">
