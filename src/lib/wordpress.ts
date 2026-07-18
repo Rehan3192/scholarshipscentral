@@ -19,6 +19,7 @@ export type WordPressPostListItem = {
   slug: string;
   title: WordPressRenderedField;
   excerpt: WordPressRenderedField;
+  content?: WordPressRenderedField;
   date: string;
   modified: string;
 };
@@ -177,12 +178,14 @@ export async function getWordPressPostsPage({
   page = 1,
   revalidateSeconds,
   search,
+  includeContent = false,
   signal,
 }: {
   perPage?: number;
   page?: number;
   revalidateSeconds?: number;
   search?: string;
+  includeContent?: boolean;
   signal?: AbortSignal;
 } = {}): Promise<WordPressPostsPage> {
   const normalizedPerPage = Math.min(Math.max(perPage, 1), 100);
@@ -194,7 +197,9 @@ export async function getWordPressPostsPage({
       per_page: normalizedPerPage,
       page: normalizedPage,
       status: "publish",
-      _fields: "id,slug,title,excerpt,date,modified",
+      _fields: includeContent
+        ? "id,slug,title,excerpt,content,date,modified"
+        : "id,slug,title,excerpt,date,modified",
       search: search?.trim() || undefined,
     },
   });

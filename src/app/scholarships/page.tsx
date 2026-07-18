@@ -22,7 +22,7 @@ type SortKey = "updated" | "deadline" | "title";
 
 const DEFAULT_SORT: SortKey = "updated";
 const PAGE_SIZE = 10;
-const BLOG_SEARCH_LIMIT = 12;
+const BLOG_SEARCH_LIMIT = 50;
 
 function formatPostDate(value: string) {
   const date = new Date(value);
@@ -228,6 +228,60 @@ function buildBlogSearchResultHref(slug: string, normalizedQuery: string) {
   return `/blog/${slug}?${params.toString()}#search-match`;
 }
 
+function normalizeSearchText(value: string) {
+  return stripHtmlToText(value)
+    .replaceAll(/[-_]/g, " ")
+    .toLowerCase();
+}
+
+function getArticleSearchRank(post: WordPressPostListItem, query: string) {
+  const normalizedQuery = query.toLowerCase();
+  const terms = normalizedQuery.split(/\s+/).filter(Boolean);
+  const title = normalizeSearchText(post.title.rendered);
+  const excerpt = normalizeSearchText(post.excerpt.rendered);
+  const content = normalizeSearchText(post.content?.rendered ?? "");
+  const slug = post.slug.replaceAll(/[-_]/g, " ").toLowerCase();
+
+  let score = 0;
+
+  if (title.includes(normalizedQuery)) score += 1200;
+  if (excerpt.includes(normalizedQuery)) score += 700;
+  if (content.includes(normalizedQuery)) score += 350;
+  if (slug.includes(normalizedQuery)) score += 250;
+
+  for (const term of terms) {
+    if (title.includes(term)) score += 120;
+    if (excerpt.includes(term)) score += 70;
+    if (content.includes(term)) score += 30;
+    if (slug.includes(term)) score += 25;
+  }
+
+  if (terms.length > 0 && terms.every((term) => title.includes(term))) {
+    score += 500;
+  }
+  if (terms.length > 0 && terms.every((term) => excerpt.includes(term))) {
+    score += 250;
+  }
+  if (terms.length > 0 && terms.every((term) => content.includes(term))) {
+    score += 100;
+  }
+
+  return score;
+}
+
+function sortArticleSearchResults(
+  posts: WordPressPostListItem[],
+  query: string,
+) {
+  return [...posts].sort((left, right) => {
+    const rankDiff =
+      getArticleSearchRank(right, query) - getArticleSearchRank(left, query);
+    if (rankDiff !== 0) return rankDiff;
+
+    return right.date.localeCompare(left.date);
+  });
+}
+
 function ArticleSearchResults({
   normalizedQuery,
   blogPosts,
@@ -341,23 +395,10 @@ export default async function ScholarshipsPage({
         search: normalizedQuery,
         perPage: BLOG_SEARCH_LIMIT,
         revalidateSeconds: 60 * 5,
+        includeContent: true,
       });
-      blogPosts = blogResults.posts;
+      blogPosts = sortArticleSearchResults(blogResults.posts, normalizedQuery);
       totalBlogPosts = blogResults.totalPosts;
-
-      const normalizedTerms = normalizedQuery
-        .toLowerCase()
-        .split(/\s+/)
-        .filter(Boolean);
-      const titleMatches = blogPosts.filter((post) => {
-        const title = stripHtmlToText(post.title.rendered).toLowerCase();
-        return normalizedTerms.every((term) => title.includes(term));
-      });
-
-      if (titleMatches.length > 0) {
-        blogPosts = titleMatches;
-        totalBlogPosts = titleMatches.length;
-      }
     } catch {
       // Scholarship search remains available if WordPress is temporarily down.
     }
