@@ -45,6 +45,20 @@ const TOP_COUNTRIES = Array.from(COUNTRY_COUNTS.entries())
     href: `/countries/${toSegment(country)}`,
   }));
 const FEATURED_COUNTRIES = TOP_COUNTRIES.slice(0, 3);
+const OPEN_SCHOLARSHIP_COUNT = scholarships.filter((scholarship) =>
+  isStillOpen(scholarship.deadline),
+).length;
+const FULLY_FUNDED_COUNT = scholarships.filter(
+  (scholarship) => scholarship.fundingType === "Fully Funded",
+).length;
+const COUNTRY_TOTAL = COUNTRY_COUNTS.size;
+
+const HERO_STATS = [
+  { value: `${scholarships.length}`, label: "detailed scholarship guides" },
+  { value: `${OPEN_SCHOLARSHIP_COUNT}`, label: "open or expected opportunities" },
+  { value: `${COUNTRY_TOTAL}+`, label: "countries covered" },
+  { value: `${FULLY_FUNDED_COUNT}`, label: "fully funded listings" },
+] as const;
 
 const TRUST_SIGNALS = [
   "Official links only",
@@ -59,6 +73,13 @@ const POPULAR_SEARCHES = [
   { label: "Masters scholarships", href: "/degrees/masters" },
   { label: "Government scholarships", href: "/government-scholarships-still-open-2026" },
   { label: "Scholarships still open", href: "/scholarships-still-open-2026" },
+] as const;
+
+const HERO_QUICK_LINKS = [
+  { label: "Fully funded", href: "/funding/fully-funded" },
+  { label: "Without IELTS", href: "/europe-scholarships-without-ielts-2026" },
+  { label: "Masters", href: "/degrees/masters" },
+  { label: "Closing soon", href: "/scholarships-still-open-2026" },
 ] as const;
 
 export const metadata: Metadata = {
@@ -226,21 +247,21 @@ async function LatestBlogSection() {
 export default function HomePage() {
   return (
     <div className="py-8 space-y-9">
-      <header className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+      <header className="overflow-hidden rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-emerald-50 p-6 shadow-sm sm:p-8">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
           <div>
-            <p className="text-sm font-medium text-blue-700">
-              Scholarships Central
+            <p className="inline-flex rounded-full border border-blue-200 bg-white/80 px-3 py-1 text-xs font-bold uppercase tracking-wide text-blue-800">
+              Scholarships Central • Personalized scholarship search
             </p>
 
-            <h1 className="mt-3 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-              Find scholarships that match your profile.
+            <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl">
+              Stop guessing. Find scholarships you&apos;re actually eligible for.
             </h1>
 
-            <p className="mt-4 max-w-2xl text-lg text-gray-700">
-              Get personalized recommendations based on your degree,
-              nationality, preferred destination, funding needs, and English
-              requirements.
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-700">
+              Search verified scholarship guides, compare deadlines, and use the
+              Finder to get recommendations based on your degree, nationality,
+              destination, funding needs, and IELTS preference.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -261,6 +282,34 @@ export default function HomePage() {
             <p className="mt-3 mb-0 text-sm font-medium text-gray-600">
               No signup required. Takes less than two minutes.
             </p>
+
+            <div className="mt-6 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
+              {HERO_STATS.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-2xl border border-white/80 bg-white/75 p-3 shadow-sm"
+                >
+                  <div className="text-2xl font-bold text-gray-950">
+                    {stat.value}
+                  </div>
+                  <div className="mt-1 text-xs font-semibold leading-5 text-gray-600">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-2" aria-label="Popular scholarship paths">
+              {HERO_QUICK_LINKS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="inline-flex items-center rounded-full border border-blue-200 bg-white/80 px-3 py-1.5 text-sm font-semibold text-blue-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
 
             <form
               action="/scholarships"
@@ -291,7 +340,7 @@ export default function HomePage() {
             </form>
           </div>
 
-          <aside className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
+          <aside className="rounded-3xl border border-white/80 bg-white/85 p-5 shadow-sm">
             <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
               Personalized Finder
             </p>
@@ -311,14 +360,30 @@ export default function HomePage() {
               Answer six quick questions and receive ranked recommendations
               with clear match reasons and details to verify before applying.
             </p>
+            {CLOSING_SOON_SCHOLARSHIPS[0] ? (
+              <Link
+                href={`/scholarships/${CLOSING_SOON_SCHOLARSHIPS[0].slug}`}
+                className="mt-4 block rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm transition-colors duration-200 motion-reduce:transition-none hover:bg-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2"
+              >
+                <span className="font-semibold text-amber-950">
+                  Closing soon:
+                </span>{" "}
+                <span className="font-medium text-gray-900">
+                  {CLOSING_SOON_SCHOLARSHIPS[0].title}
+                </span>
+                <span className="mt-1 block text-xs font-semibold text-amber-900">
+                  {shortDeadlineLabel(CLOSING_SOON_SCHOLARSHIPS[0].deadline)}
+                </span>
+              </Link>
+            ) : null}
           </aside>
         </div>
 
-        <div className="mt-6 grid gap-3 border-t border-gray-200 pt-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 grid gap-3 border-t border-blue-100 pt-5 sm:grid-cols-2 lg:grid-cols-4">
           {TRUST_SIGNALS.map((signal) => (
             <div
               key={signal}
-              className="rounded-xl border border-emerald-200 bg-emerald-50/60 px-3 py-2 text-sm font-semibold text-emerald-900"
+              className="rounded-xl border border-emerald-200 bg-white/75 px-3 py-2 text-sm font-semibold text-emerald-900"
             >
               {signal}
             </div>
