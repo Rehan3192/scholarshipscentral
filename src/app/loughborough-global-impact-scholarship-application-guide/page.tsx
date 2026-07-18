@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function LoughboroughGlobalImpactScholarshipApplicationGuidePage() {
   return (
-    <article className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+    <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
       <h1>Loughborough Global Impact Scholarship 2026 – Application Guide</h1>
 
       <h2>What is the origin of the Loughborough Global Impact Scholarship?</h2>

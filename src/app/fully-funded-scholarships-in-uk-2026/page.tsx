@@ -111,10 +111,10 @@ export default function FullyFundedScholarshipsInUk2026Page() {
       />
 
       <header className="space-y-3">
-        <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
           Fully funded scholarships in UK 2026
         </h1>
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           Use this page when full cost coverage is your first filter and you want
           to remove partially funded UK routes from the shortlist. The UK has
           elite fully funded routes, but the pool is smaller, more competitive,
@@ -124,22 +124,22 @@ export default function FullyFundedScholarshipsInUk2026Page() {
           <Link href="/countries/united-kingdom" className="font-medium text-blue-700 hover:underline">
             Back to UK scholarships 2026
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link href="/fully-funded-scholarships-2026" className="font-medium text-blue-700 hover:underline">
             Compare all fully funded scholarships
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link href="/uk-scholarships-without-ielts-2026" className="font-medium text-blue-700 hover:underline">
             {languageFlexibleCount} UK routes with language flexibility
           </Link>
         </div>
       </header>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Fully funded scholarships in UK 2026 quick summary
         </h2>
-        <ul className="mt-4 ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700">
+        <ul className="mt-4 ml-0 list-disc space-y-2 pl-5 text-sm text-slate-700">
           <li>Start with Chevening, Commonwealth, Gates Cambridge, and Clarendon.</li>
           <li>{ukFullyFundedScholarships.length} UK listings already match fully funded intent.</li>
           <li>{stillOpenScholarships.length} fully funded UK routes currently look active or use rolling/current-cycle deadline language.</li>
@@ -149,42 +149,42 @@ export default function FullyFundedScholarshipsInUk2026Page() {
       </section>
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">Fully funded UK routes</p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">{ukFullyFundedScholarships.length}</p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">UK listings in the directory that already match fully funded intent.</p>
+          <p className="mb-0 text-3xl font-bold text-slate-900">{ukFullyFundedScholarships.length}</p>
+          <p className="mt-2 mb-0 text-sm text-slate-600">UK listings in the directory that already match fully funded intent.</p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">Still open now</p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">{stillOpenScholarships.length}</p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">Routes with active or rolling deadlines right now.</p>
+          <p className="mb-0 text-3xl font-bold text-slate-900">{stillOpenScholarships.length}</p>
+          <p className="mt-2 mb-0 text-sm text-slate-600">Routes with active or rolling deadlines right now.</p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">Language-flexible</p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">{languageFlexibleCount}</p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">Fully funded UK routes that also mention accepted English-proof flexibility.</p>
+          <p className="mb-0 text-3xl font-bold text-slate-900">{languageFlexibleCount}</p>
+          <p className="mt-2 mb-0 text-sm text-slate-600">Fully funded UK routes that also mention accepted English-proof flexibility.</p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">Cluster role</p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">UK x Funding</p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">This page supports both the UK scholarship options and the global fully funded hub.</p>
+          <p className="mb-0 text-3xl font-bold text-slate-900">UK x Funding</p>
+          <p className="mt-2 mb-0 text-sm text-slate-600">This page supports both the UK scholarship options and the global fully funded hub.</p>
         </div>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">Where to find more UK options</h2>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">Where to find more UK options</h2>
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Use <Link href="/countries/united-kingdom" className="font-medium text-blue-700 hover:underline">UK scholarships 2026</Link> for the full UK list. Use <Link href="/fully-funded-scholarships-2026" className="font-medium text-blue-700 hover:underline">fully funded scholarships 2026</Link> for global comparisons.
         </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Use <Link href="/scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">scholarships still open 2026</Link> for UK routes still accepting applications, or <Link href="/uk-scholarships-without-ielts-2026" className="font-medium text-blue-700 hover:underline">UK scholarships without IELTS</Link> if language flexibility matters too.
         </p>
       </section>
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">Funding related scholarship pages</h2>
-          <p className="mb-0 text-sm text-gray-600">Move between UK, funding, urgency, and language related pages without losing context.</p>
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">Funding related scholarship pages</h2>
+          <p className="mb-0 text-sm text-slate-600">Move between UK, funding, urgency, and language related pages without losing context.</p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {CLUSTER_LINKS.map((link) => (
@@ -196,8 +196,8 @@ export default function FullyFundedScholarshipsInUk2026Page() {
       {featuredScholarships.length > 0 ? (
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">Strongest fully funded UK routes first</h2>
-            <p className="mb-0 text-sm text-gray-600">Start here if you want the core UK full-funding shortlist before branching into article pages.</p>
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">Strongest fully funded UK routes first</h2>
+            <p className="mb-0 text-sm text-slate-600">Start here if you want the core UK full-funding shortlist before branching into article pages.</p>
           </div>
           <div className="grid gap-4">
             {featuredScholarships.map((scholarship) => (
@@ -207,12 +207,12 @@ export default function FullyFundedScholarshipsInUk2026Page() {
         </section>
       ) : null}
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">Funding types and competition</h2>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">Funding types and competition</h2>
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           The UK fully funded pool is not one uniform category. Chevening and Commonwealth behave like broad national scholarship brands, while Gates Cambridge and Clarendon are university-led and much tighter at the selection stage.
         </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           This matters because a route can be fully funded and still operate through a much narrower competition funnel. Use this page to compare those top-end routes first, then move back to the broader UK scholarship options if you want partially funded alternatives.
         </p>
       </section>
@@ -220,8 +220,8 @@ export default function FullyFundedScholarshipsInUk2026Page() {
       {stillOpenScholarships.length > 0 ? (
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">Still-open fully funded scholarships in the UK</h2>
-            <p className="mb-0 text-sm text-gray-600">Use this shortlist if you need to apply soon and want to stay inside the UK.</p>
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">Still-open fully funded scholarships in the UK</h2>
+            <p className="mb-0 text-sm text-slate-600">Use this shortlist if you need to apply soon and want to stay inside the UK.</p>
           </div>
           <div className="grid gap-4">
             {stillOpenScholarships.map((scholarship) => (

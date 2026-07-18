@@ -128,10 +128,10 @@ export default function EuropeScholarships2026Page() {
       <ItemListJsonLd pagePath="/europe-scholarships-2026" items={items} />
 
       <header className="space-y-3">
-        <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
           Europe scholarships 2026
         </h1>
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           Browse Europe scholarships in one place, then move into still-open,
           fully funded, and country-level pages without starting over.
         </p>
@@ -139,11 +139,11 @@ export default function EuropeScholarships2026Page() {
           <Link href="/scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">
             {stillOpenCount} Europe scholarships still open
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link href="/fully-funded-scholarships-2026" className="font-medium text-blue-700 hover:underline">
             Fully funded scholarships hub
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link href="/countries" className="font-medium text-blue-700 hover:underline">
             Country pages
           </Link>
@@ -151,51 +151,51 @@ export default function EuropeScholarships2026Page() {
       </header>
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Europe coverage
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {europeScholarships.length}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Europe scholarships across {countryCount} countries in the live directory.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Still open
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {stillOpenCount}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Europe scholarships with active or rolling deadlines right now.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Fully funded
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {fullyFundedEuropeCount}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Europe listings that already match full-funding preference.
           </p>
         </div>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Why use this Europe scholarships page
         </h2>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Start here when you want the full Europe pool, then move into still-open,
           fully funded, or country-level pages once you know how narrow your search
           needs to be.
         </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           If you are trying to apply soon, check the still-open Europe routes
           first. If you care more about cost coverage, jump straight into the
           fully funded hub before coming back to the full Europe list.
@@ -204,10 +204,10 @@ export default function EuropeScholarships2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             Europe hub links
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             Use these paths to move from broad Europe intent to narrower pages.
           </p>
         </div>
@@ -221,10 +221,10 @@ export default function EuropeScholarships2026Page() {
       {stillOpenEuropeScholarships.length > 0 ? (
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">
               Europe scholarships still open
             </h2>
-            <p className="mb-0 text-sm text-gray-600">
+            <p className="mb-0 text-sm text-slate-600">
               Start here if you want live deadlines before scanning the full Europe list.
             </p>
           </div>
@@ -238,10 +238,10 @@ export default function EuropeScholarships2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             Europe scholarship pages with language-flexible routes
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             Use these pages when you need Europe scholarship options that discuss
             alternative English-proof routes instead of relying on one test only.
           </p>
@@ -255,10 +255,10 @@ export default function EuropeScholarships2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             All Europe scholarships
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             {europeScholarships.length} scholarship{europeScholarships.length === 1 ? "" : "s"}
           </p>
         </div>

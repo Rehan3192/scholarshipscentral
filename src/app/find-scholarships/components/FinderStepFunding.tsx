@@ -16,7 +16,7 @@ type Props = {
 export default function FinderStepFunding({ value, onChange }: Props) {
   return (
     <fieldset className="space-y-4">
-      <legend id="finder-funding-heading" tabIndex={-1} className="text-xl font-semibold text-gray-900 focus:outline-none">
+      <legend id="finder-funding-heading" tabIndex={-1} className="text-xl font-semibold text-slate-900 focus:outline-none">
         Funding preference
       </legend>
       <div className="grid gap-3 sm:grid-cols-3">
@@ -26,8 +26,8 @@ export default function FinderStepFunding({ value, onChange }: Props) {
             className={[
               "flex cursor-pointer items-center gap-3 rounded-xl border p-4 text-sm font-semibold",
               value === option.value
-                ? "border-gray-900 bg-gray-900 text-white"
-                : "border-gray-200 bg-white text-gray-900 hover:bg-gray-50",
+                ? "border-slate-900 bg-slate-900 text-white"
+                : "border-slate-200 bg-white text-slate-900 hover:bg-slate-50",
             ].join(" ")}
           >
             <input

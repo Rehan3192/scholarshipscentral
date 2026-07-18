@@ -32,8 +32,8 @@ function Pill({
       className={[
         "inline-flex items-center rounded-full px-3 py-1.5 text-sm font-semibold transition-colors duration-200 motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2",
         active
-          ? "bg-gray-900 text-white hover:bg-gray-800"
-          : "border border-gray-300 bg-white text-gray-900 hover:bg-gray-50",
+          ? "bg-slate-900 text-white hover:bg-slate-800"
+          : "border border-slate-300 bg-white text-slate-900 hover:bg-slate-50",
       ].join(" ")}
     >
       {label}
@@ -68,16 +68,16 @@ export default function QuickFilters() {
   };
 
   return (
-    <section className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
+    <section className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-        <h2 className="mt-0 text-base font-semibold text-gray-900">
+        <h2 className="mt-0 text-base font-semibold text-slate-900">
           Quick filters
         </h2>
         <Link
           href="/scholarships"
           className={[
             "text-sm font-medium hover:underline",
-            isAnyActive ? "text-blue-700" : "text-gray-400",
+            isAnyActive ? "text-blue-700" : "text-slate-400",
           ].join(" ")}
         >
           Clear filters

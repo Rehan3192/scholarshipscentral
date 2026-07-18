@@ -130,10 +130,10 @@ export default function ItalyScholarships2026Page() {
       <ItemListJsonLd pagePath="/countries/italy" items={items} />
 
       <header className="space-y-3">
-        <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
           Italy scholarships 2026
         </h1>
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           Italy is one of the stronger Europe destinations for 2026 because the
           scholarship mix is broad: university merit awards, regional funding,
           and a smaller set of fully funded routes. The tradeoff is that many
@@ -143,11 +143,11 @@ export default function ItalyScholarships2026Page() {
           <Link href="/europe-scholarships-2026" className="font-medium text-blue-700 hover:underline">
             Back to Europe hub
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link href="/italy-scholarships-without-ielts-2026" className="font-medium text-blue-700 hover:underline">
             {languageFlexibleCount} Italy routes with IELTS alternatives
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link href="/fully-funded-scholarships-2026" className="font-medium text-blue-700 hover:underline">
             Compare fully funded options
           </Link>
@@ -155,57 +155,57 @@ export default function ItalyScholarships2026Page() {
       </header>
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Italy coverage
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {italyScholarships.length}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Italy scholarship listings currently in the directory.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Fully funded
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {fullyFundedCount}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Italy listings that already meet full-funding preference.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Still open now
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {stillOpenScholarships.length}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Italy scholarships with active or rolling deadlines.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Master&apos;s-heavy
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {mastersCount}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Italy listings currently aligned with master&apos;s-level intent.
           </p>
         </div>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Where to go next
         </h2>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Use{" "}
           <Link href="/italy-scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">
             Italy scholarships still open 2026
@@ -220,7 +220,7 @@ export default function ItalyScholarships2026Page() {
           </Link>
           {" "}for global comparisons.
         </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Use{" "}
           <Link href="/italy-scholarships-without-ielts-2026" className="font-medium text-blue-700 hover:underline">
             Italy scholarships without IELTS
@@ -235,10 +235,10 @@ export default function ItalyScholarships2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             Italy related scholarship pages
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             Use these to move from Italy intent into funding, language, and deadline filters.
           </p>
         </div>
@@ -252,10 +252,10 @@ export default function ItalyScholarships2026Page() {
       {featuredScholarships.length > 0 ? (
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">
               Start here if you want the strongest Italy routes first
             </h2>
-            <p className="mb-0 text-sm text-gray-600">
+            <p className="mb-0 text-sm text-slate-600">
               These are the best first-click pages for major Italy scholarship intent.
             </p>
           </div>
@@ -270,10 +270,10 @@ export default function ItalyScholarships2026Page() {
       {stillOpenScholarships.length > 0 ? (
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">
               Italy scholarships still open
             </h2>
-            <p className="mb-0 text-sm text-gray-600">
+            <p className="mb-0 text-sm text-slate-600">
               Use this shortlist if application timing is more important than destination branding.
             </p>
           </div>
@@ -287,10 +287,10 @@ export default function ItalyScholarships2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             All Italy scholarships in the directory
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             Compare university merit awards, regional aid, and fully funded Italy routes in one place.
           </p>
         </div>

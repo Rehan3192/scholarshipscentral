@@ -88,10 +88,10 @@ export default async function FundingPage({ params }: PageProps) {
       <ItemListJsonLd pagePath={`/funding/${type}`} items={topItems} />
 
       <header className="space-y-2">
-        <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
           {funding} Scholarships
         </h1>
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           Browse {funding.toLowerCase()} scholarships worldwide. We only link to
           official external application pages.
         </p>
@@ -102,7 +102,7 @@ export default async function FundingPage({ params }: PageProps) {
           >
             All scholarships
           </Link>
-          <span className="text-gray-400">•</span>
+          <span className="text-slate-400">•</span>
           <Link
             href={`/funding/${otherType}`}
             className="font-medium text-blue-700 hover:underline"
@@ -113,7 +113,7 @@ export default async function FundingPage({ params }: PageProps) {
       </header>
 
       <Suspense
-        fallback={<p className="text-sm text-gray-600">Loading scholarships...</p>}
+        fallback={<p className="text-sm text-slate-600">Loading scholarships...</p>}
       >
         <ScholarshipFilters scholarships={listing} />
       </Suspense>

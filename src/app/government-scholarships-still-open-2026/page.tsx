@@ -109,10 +109,10 @@ export default function GovernmentScholarshipsStillOpen2026Page() {
       />
 
       <header className="space-y-3">
-        <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
           Government scholarships still open 2026
         </h1>
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           Use this page when you want government or public-funding scholarship
           routes that still look active today.
         </p>
@@ -123,14 +123,14 @@ export default function GovernmentScholarshipsStillOpen2026Page() {
           >
             {europeCount} Europe government routes open
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link
             href="/fully-funded-scholarships-2026"
             className="font-medium text-blue-700 hover:underline"
           >
             {fullyFundedCount} fully funded public routes open
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link
             href="/scholarships-still-open-2026"
             className="font-medium text-blue-700 hover:underline"
@@ -141,51 +141,51 @@ export default function GovernmentScholarshipsStillOpen2026Page() {
       </header>
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Open government routes
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {openGovernmentScholarships.length}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Government or ministry-backed scholarships that still look active now.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Countries covered
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {countryCount}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Destinations represented in the live government deadline pool.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Europe share
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {europeCount}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Open public-funding routes currently tied to Europe.
           </p>
         </div>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Why use this still-open government scholarships page
         </h2>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           This page combines two important filters at once: government funding
           and live deadlines. That makes it useful when you do not want to scan
           expired ministry-backed routes or mix them with general university awards.
         </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Government scholarships can still be more complex than university-led
           routes, so use this page to shortlist active options first, then read the
           official call carefully for nomination rules, embassy processing, or central portals.
@@ -194,10 +194,10 @@ export default function GovernmentScholarshipsStillOpen2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             Government still-open related scholarship pages
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             Use these next steps to narrow live public-funding routes by Europe, country, or funding level.
           </p>
         </div>
@@ -210,10 +210,10 @@ export default function GovernmentScholarshipsStillOpen2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             All government scholarships still open
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             {openGovernmentScholarships.length} scholarship
             {openGovernmentScholarships.length === 1 ? "" : "s"}
           </p>

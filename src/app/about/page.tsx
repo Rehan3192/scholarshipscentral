@@ -40,17 +40,17 @@ export default function AboutPage() {
       />
 
       {/* Header */}
-      <header className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+      <header className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
         <div className="space-y-4">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-700">
             About Scholarships Central
           </p>
 
-          <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+          <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
             Scholarship information built for clearer decisions
           </h1>
 
-          <p className="max-w-3xl text-sm text-gray-600 sm:text-base">
+          <p className="max-w-3xl text-sm text-slate-600 sm:text-base">
             Scholarships Central is an information-only scholarship platform
             focused on fully funded and partial scholarships worldwide.
             We publish source-based scholarship content for students who
@@ -69,15 +69,15 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-slate-500">
             Last reviewed: {lastReviewed}
           </p>
         </div>
       </header>
 
       {/* About Founder */}
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="text-lg font-semibold text-slate-900 mb-4">
           About the Founder
         </h2>
 
@@ -88,12 +88,12 @@ export default function AboutPage() {
               alt="Muhammad Rehan - Founder of Scholarships Central"
               width={120}
               height={120}
-              className="rounded-full object-cover border border-gray-200"
+              className="rounded-full object-cover border border-slate-200"
               priority
             />
           </div>
 
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-slate-700">
             <p>
               Muhammad Rehan is the founder of Scholarships Central and a
               Computer Engineering student at COMSATS University Islamabad.
@@ -117,7 +117,7 @@ export default function AboutPage() {
               without misleading claims or unnecessary complexity.
             </p>
 
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-slate-500">
               LinkedIn:{" "}
               <a
                 href="https://linkedin.com/in/muhammad-rehan"
@@ -133,8 +133,8 @@ export default function AboutPage() {
       </section>
 
       {/* Who We Are */}
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="text-lg font-semibold text-gray-900">Who We Are</h2>
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+        <h2 className="text-lg font-semibold text-slate-900">Who We Are</h2>
         <p className="mt-4">
           Scholarships Central is an independent scholarship discovery and
           content platform. Our role is to research, organize, and explain
@@ -148,8 +148,8 @@ export default function AboutPage() {
       </section>
 
       {/* Internal Linking Boost */}
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+        <h2 className="text-lg font-semibold text-slate-900">
           Start Exploring Scholarships
         </h2>
 
@@ -173,8 +173,8 @@ export default function AboutPage() {
       </section>
 
       {/* Contact */}
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+        <h2 className="text-lg font-semibold text-slate-900">
           Contact / Responsibility Statement
         </h2>
 

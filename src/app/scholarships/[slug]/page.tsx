@@ -255,8 +255,8 @@ function SectionCard({
   children: React.ReactNode;
 }) {
   return (
-    <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-      <h2 className="mt-0 text-xl font-semibold text-gray-900">{title}</h2>
+    <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <h2 className="mt-0 text-xl font-semibold text-slate-900">{title}</h2>
       <div className="mt-4">{children}</div>
     </section>
   );
@@ -287,17 +287,17 @@ function renderKeyValueOrList(items: string[]) {
   if (keyValues.length >= 2) {
     return (
       <div className="space-y-4">
-        <dl className="grid gap-3 text-sm text-gray-700 sm:grid-cols-2">
+        <dl className="grid gap-3 text-sm text-slate-700 sm:grid-cols-2">
           {keyValues.map((kv) => (
             <div key={`${kv.key}:${kv.value}`} className="space-y-1">
-              <dt className="font-medium text-gray-600">{kv.key}</dt>
-              <dd className="font-semibold text-gray-900">{kv.value}</dd>
+              <dt className="font-medium text-slate-600">{kv.key}</dt>
+              <dd className="font-semibold text-slate-900">{kv.value}</dd>
             </div>
           ))}
         </dl>
 
         {rest.length > 0 ? (
-          <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700">
+          <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-slate-700">
             {rest.map((item) => (
               <li key={item}>{item}</li>
             ))}
@@ -308,7 +308,7 @@ function renderKeyValueOrList(items: string[]) {
   }
 
   return (
-    <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700">
+    <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-slate-700">
       {items.map((item) => (
         <li key={item}>{item}</li>
       ))}
@@ -519,7 +519,7 @@ export default async function ScholarshipPage({ params }: Props) {
         <div className="space-y-6">
           {scholarship.introduction ? (
             <SectionCard title="Introduction">
-              <p className="mb-0 text-sm text-gray-700 break-words">
+              <p className="mb-0 text-sm text-slate-700 break-words">
                 {cleanDisplayText(scholarship.introduction)}
               </p>
             </SectionCard>
@@ -527,7 +527,7 @@ export default async function ScholarshipPage({ params }: Props) {
 
           {scholarship.summary ? (
             <SectionCard title="Quick summary">
-              <p className="mb-0 text-sm text-gray-700 break-words">
+              <p className="mb-0 text-sm text-slate-700 break-words">
                 {cleanDisplayText(scholarship.summary)}
               </p>
             </SectionCard>
@@ -535,13 +535,13 @@ export default async function ScholarshipPage({ params }: Props) {
 
           {contentSections.map((section) => (
             <SectionCard key={section.title} title={section.title}>
-              <div className="space-y-4 text-sm text-gray-700">
+              <div className="space-y-4 text-sm text-slate-700">
                 {section.facts.length > 0 ? (
                   <dl className="grid gap-3 sm:grid-cols-2">
                     {section.facts.map((fact) => (
                       <div key={`${fact.label}:${fact.value}`} className="space-y-1">
-                        <dt className="font-medium text-gray-600">{fact.label}</dt>
-                        <dd className="font-semibold text-gray-900">{fact.value}</dd>
+                        <dt className="font-medium text-slate-600">{fact.label}</dt>
+                        <dd className="font-semibold text-slate-900">{fact.value}</dd>
                       </div>
                     ))}
                   </dl>
@@ -576,7 +576,7 @@ export default async function ScholarshipPage({ params }: Props) {
             {eligibility.length > 0 ? (
               renderKeyValueOrList(eligibility)
             ) : (
-              <p className="mb-0 text-sm text-gray-700">
+              <p className="mb-0 text-sm text-slate-700">
                 See the official website for eligibility requirements.
               </p>
             )}
@@ -586,7 +586,7 @@ export default async function ScholarshipPage({ params }: Props) {
             {benefits.length > 0 ? (
               renderKeyValueOrList(benefits)
             ) : (
-              <p className="mb-0 text-sm text-gray-700">
+              <p className="mb-0 text-sm text-slate-700">
                 See the official website for funding and benefits details.
               </p>
             )}
@@ -594,13 +594,13 @@ export default async function ScholarshipPage({ params }: Props) {
 
           <SectionCard title="Application process">
             {applicationProcess.length > 0 ? (
-              <ol className="ml-0 list-decimal space-y-2 pl-5 text-sm text-gray-700 break-words">
+              <ol className="ml-0 list-decimal space-y-2 pl-5 text-sm text-slate-700 break-words">
                 {applicationProcess.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ol>
             ) : (
-              <p className="mb-0 text-sm text-gray-700">
+              <p className="mb-0 text-sm text-slate-700">
                 Apply via the official website (see the official source link).
               </p>
             )}
@@ -608,13 +608,13 @@ export default async function ScholarshipPage({ params }: Props) {
 
           <SectionCard title="Required documents">
             {documents.length > 0 ? (
-              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700 break-words">
+              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-slate-700 break-words">
                 {documents.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
             ) : (
-              <p className="mb-0 text-sm text-gray-700">
+              <p className="mb-0 text-sm text-slate-700">
                 See the official website for required documents.
               </p>
             )}
@@ -622,7 +622,7 @@ export default async function ScholarshipPage({ params }: Props) {
 
           {selectionCriteria.length > 0 ? (
             <SectionCard title="Selection criteria">
-              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700 break-words">
+              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-slate-700 break-words">
                 {selectionCriteria.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -632,7 +632,7 @@ export default async function ScholarshipPage({ params }: Props) {
 
           {tips.length > 0 ? (
             <SectionCard title="Tips to win">
-              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700 break-words">
+              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-slate-700 break-words">
                 {tips.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -642,7 +642,7 @@ export default async function ScholarshipPage({ params }: Props) {
 
           {goodToKnow.length > 0 ? (
             <SectionCard title="Good to know">
-              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700 break-words">
+              <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-slate-700 break-words">
                 {goodToKnow.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -652,16 +652,16 @@ export default async function ScholarshipPage({ params }: Props) {
 
           {faqs.length > 0 ? (
             <SectionCard title="FAQ">
-              <div className="rounded-xl border border-gray-200 divide-y divide-gray-200">
+              <div className="rounded-xl border border-slate-200 divide-y divide-slate-200">
                 {faqs.map((f) => (
                   <details
                     key={`${f.question}::${f.answer}`}
-                    className="group bg-white p-4 open:bg-gray-50"
+                    className="group bg-white p-4 open:bg-slate-50"
                   >
-                    <summary className="cursor-pointer list-none text-sm font-semibold text-gray-900">
+                    <summary className="cursor-pointer list-none text-sm font-semibold text-slate-900">
                       {f.question}
                     </summary>
-                    <p className="mt-3 mb-0 break-words text-sm text-gray-700">
+                    <p className="mt-3 mb-0 break-words text-sm text-slate-700">
                       {f.answer}
                     </p>
                   </details>
@@ -672,7 +672,7 @@ export default async function ScholarshipPage({ params }: Props) {
 
           {internalClusterSupport ? (
             <SectionCard title={internalClusterSupport.title}>
-              <p className="mb-0 text-sm text-gray-700">
+              <p className="mb-0 text-sm text-slate-700">
                 If this scholarship is on your shortlist, review{" "}
                 <Link
                   href={internalClusterSupport.href}
@@ -687,7 +687,7 @@ export default async function ScholarshipPage({ params }: Props) {
 
           {countryClusterPaths.length > 0 ? (
             <SectionCard title={`More ${countryClusterLabel} scholarship paths`}>
-              <p className="mb-4 text-sm text-gray-700">
+              <p className="mb-4 text-sm text-slate-700">
                 Compare more scholarships in {countryClusterLabel} before widening your destination search.
               </p>
               <div className="grid gap-3 sm:grid-cols-2">
@@ -695,9 +695,9 @@ export default async function ScholarshipPage({ params }: Props) {
                   <Link
                     key={path.href}
                     href={path.href}
-                    className="rounded-xl border border-gray-200 bg-white p-4 text-sm text-gray-700 transition-colors duration-200 motion-reduce:transition-none hover:border-gray-300 hover:bg-gray-50"
+                    className="rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-700 transition-colors duration-200 motion-reduce:transition-none hover:border-slate-300 hover:bg-slate-50"
                   >
-                    <div className="font-semibold text-gray-900">{path.title}</div>
+                    <div className="font-semibold text-slate-900">{path.title}</div>
                     <div className="mt-2">{path.description}</div>
                   </Link>
                 ))}
@@ -707,11 +707,11 @@ export default async function ScholarshipPage({ params }: Props) {
 
           {broaderLinks.length > 0 ? (
             <SectionCard title="Broaden this shortlist">
-              <p className="mb-4 text-sm text-gray-700">
+              <p className="mb-4 text-sm text-slate-700">
                 Use these routes to move from one scholarship page into the
                 wider country and hub structure before you make a final choice.
               </p>
-              <div className="space-y-3 text-sm text-gray-700">
+              <div className="space-y-3 text-sm text-slate-700">
                 {broaderLinks.map((link) => (
                   <p
                     key={link.href}
@@ -730,7 +730,7 @@ export default async function ScholarshipPage({ params }: Props) {
           {related.length > 0 ? (
             <section className="space-y-4">
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <h2 className="mt-0 text-lg font-semibold text-gray-900">
+                <h2 className="mt-0 text-lg font-semibold text-slate-900">
                   Related scholarships
                 </h2>
                 <Link
@@ -750,11 +750,11 @@ export default async function ScholarshipPage({ params }: Props) {
         </div>
 
         <aside className="space-y-4 lg:sticky lg:top-6 lg:self-start">
-          <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-            <h2 className="mt-0 text-base font-semibold text-gray-900">
+          <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 className="mt-0 text-base font-semibold text-slate-900">
               Apply safely
             </h2>
-            <p className="mt-2 break-words text-sm text-gray-700">
+            <p className="mt-2 break-words text-sm text-slate-700">
               Scholarships Central does not accept applications. Apply only on the
               official provider website.
             </p>
@@ -763,7 +763,7 @@ export default async function ScholarshipPage({ params }: Props) {
               href={scholarship.applyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex w-full items-center justify-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+              className="mt-4 inline-flex w-full items-center justify-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
             >
               Apply on official website &rarr;
             </a>
@@ -771,7 +771,7 @@ export default async function ScholarshipPage({ params }: Props) {
             {scholarship.guideUrl ? (
               <a
                 href={scholarship.guideUrl}
-                className="mt-3 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-center text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 break-words"
+                className="mt-3 inline-flex w-full items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-center text-sm font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 break-words"
               >
                 Read: {cleanDisplayText(scholarship.guideLabel ?? "Application guide")}
               </a>
@@ -781,24 +781,24 @@ export default async function ScholarshipPage({ params }: Props) {
               href={scholarship.applyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-center text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 break-words"
+              className="mt-3 inline-flex w-full items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-center text-sm font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 break-words"
             >
               Official source: {cleanDisplayText(scholarship.officialSource)}
             </a>
 
-            <p className="mt-3 mb-0 text-xs text-gray-500">
+            <p className="mt-3 mb-0 text-xs text-slate-500">
               Last updated: {scholarship.lastUpdated}
             </p>
           </section>
 
-          <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-            <h2 className="mt-0 text-base font-semibold text-gray-900">
+          <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 className="mt-0 text-base font-semibold text-slate-900">
               Key facts
             </h2>
-            <dl className="mt-4 grid gap-3 text-sm text-gray-700">
+            <dl className="mt-4 grid gap-3 text-sm text-slate-700">
               <div className="flex items-start justify-between gap-3">
-                <dt className="font-medium text-gray-600">Country</dt>
-                <dd className="break-words text-right font-semibold text-gray-900">
+                <dt className="font-medium text-slate-600">Country</dt>
+                <dd className="break-words text-right font-semibold text-slate-900">
                   <Link
                     href={`/countries/${toSegment(scholarship.country)}`}
                     className="text-blue-700 hover:underline"
@@ -808,8 +808,8 @@ export default async function ScholarshipPage({ params }: Props) {
                 </dd>
               </div>
               <div className="flex items-start justify-between gap-3">
-                <dt className="font-medium text-gray-600">Degree</dt>
-                <dd className="break-words text-right font-semibold text-gray-900">
+                <dt className="font-medium text-slate-600">Degree</dt>
+                <dd className="break-words text-right font-semibold text-slate-900">
                   <Link
                     href={`/degrees/${toSegment(scholarship.degreeLevel)}`}
                     className="text-blue-700 hover:underline"
@@ -819,20 +819,20 @@ export default async function ScholarshipPage({ params }: Props) {
                 </dd>
               </div>
               <div className="flex items-start justify-between gap-3">
-                <dt className="font-medium text-gray-600">Funding</dt>
-                <dd className="break-words text-right font-semibold text-gray-900">
+                <dt className="font-medium text-slate-600">Funding</dt>
+                <dd className="break-words text-right font-semibold text-slate-900">
                   {scholarship.fundingType}
                 </dd>
               </div>
               <div className="flex items-start justify-between gap-3">
-                <dt className="font-medium text-gray-600">Deadline</dt>
-                <dd className="break-words text-right font-semibold text-gray-900">
+                <dt className="font-medium text-slate-600">Deadline</dt>
+                <dd className="break-words text-right font-semibold text-slate-900">
                   {cleanDisplayText(scholarship.deadline)}
                 </dd>
               </div>
               <div className="flex items-start justify-between gap-3">
-                <dt className="font-medium text-gray-600">Duration</dt>
-                <dd className="break-words text-right font-semibold text-gray-900">
+                <dt className="font-medium text-slate-600">Duration</dt>
+                <dd className="break-words text-right font-semibold text-slate-900">
                   {cleanDisplayText(scholarship.duration)}
                 </dd>
               </div>
@@ -841,19 +841,19 @@ export default async function ScholarshipPage({ params }: Props) {
             <div className="mt-5 flex flex-wrap gap-2">
               <Link
                 href="/scholarships"
-                className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
               >
                 Browse all
               </Link>
               <Link
                 href="/find-scholarships"
-                className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
               >
                 Find my matches
               </Link>
               <Link
                 href={`/funding/${scholarship.fundingType === "Fully Funded" ? "fully-funded" : "partially-funded"}`}
-                className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
               >
                 Similar funding
               </Link>
@@ -862,8 +862,8 @@ export default async function ScholarshipPage({ params }: Props) {
         </aside>
       </div>
 
-      <div className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <div className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Ready to apply?
         </h2>
         <p className="mt-2 mb-4">
@@ -875,7 +875,7 @@ export default async function ScholarshipPage({ params }: Props) {
           href={scholarship.applyUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+          className="inline-flex items-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
         >
           Go to official application page &rarr;
         </a>

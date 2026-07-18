@@ -107,10 +107,10 @@ export default function GermanyScholarships2026Page() {
       <ItemListJsonLd pagePath="/countries/germany" items={items} />
 
       <header className="space-y-3">
-        <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
           Germany scholarships 2026
         </h1>
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           Use this page when you need to decide whether Germany is the right
           scholarship target for 2026. Germany is strongest when your shortlist
           starts with DAAD and major foundation routes such as Heinrich Böll,
@@ -125,14 +125,14 @@ export default function GermanyScholarships2026Page() {
           >
             Back to Europe hub
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link
             href="/germany-scholarships-without-ielts-2026"
             className="font-medium text-blue-700 hover:underline"
           >
             {languageFlexibleCount} Germany routes with IELTS alternatives
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link
             href="/scholarships-still-open-2026"
             className="font-medium text-blue-700 hover:underline"
@@ -142,11 +142,11 @@ export default function GermanyScholarships2026Page() {
         </div>
       </header>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Germany scholarships 2026 quick summary
         </h2>
-        <ul className="mt-4 ml-0 list-disc space-y-2 pl-5 text-sm text-gray-700">
+        <ul className="mt-4 ml-0 list-disc space-y-2 pl-5 text-sm text-slate-700">
           <li>
             Start with DAAD Postgraduate, DAAD EPOS, DAAD Research Grants,
             Heinrich Böll, Konrad Adenauer, and Friedrich Ebert if you want the
@@ -172,57 +172,57 @@ export default function GermanyScholarships2026Page() {
       </section>
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Germany coverage
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {germanyScholarships.length}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Germany scholarship listings currently in the directory.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Fully funded
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {fullyFundedCount}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Germany listings that already satisfy full-funding preference.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Still open now
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {stillOpenScholarships.length}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Germany routes currently accepting applications or using rolling deadlines.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Masters-heavy
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {mastersCount}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Germany listings currently aligned with master&apos;s-level intent.
           </p>
         </div>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Choose the right Germany path next
         </h2>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Use{" "}
           <Link
             href="/fully-funded-scholarships-2026"
@@ -233,7 +233,7 @@ export default function GermanyScholarships2026Page() {
           if your first filter is full cost coverage and you only want Germany
           routes that can survive that comparison.
         </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Use{" "}
           <Link
             href="/germany-scholarships-without-ielts-2026"
@@ -244,7 +244,7 @@ export default function GermanyScholarships2026Page() {
           if language flexibility matters more than whether the route is DAAD- or
           foundation-led.
         </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Use{" "}
           <Link
             href="/scholarships-still-open-2026"
@@ -259,10 +259,10 @@ export default function GermanyScholarships2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             Germany related scholarship pages
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             Use these paths to move from broad Germany intent into funding,
             language, and urgency filters without leaving the Germany silo.
           </p>
@@ -277,10 +277,10 @@ export default function GermanyScholarships2026Page() {
       {featuredScholarships.length > 0 ? (
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">
               Start with these flagship Germany scholarships
             </h2>
-            <p className="mb-0 text-sm text-gray-600">
+            <p className="mb-0 text-sm text-slate-600">
               These are the first Germany routes to compare when you want DAAD
               strength, foundation funding, and decision value on one page.
             </p>
@@ -296,10 +296,10 @@ export default function GermanyScholarships2026Page() {
       {stillOpenScholarships.length > 0 ? (
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">
               Germany scholarships still open
             </h2>
-            <p className="mb-0 text-sm text-gray-600">
+            <p className="mb-0 text-sm text-slate-600">
               Use this shortlist if application timing is more important than
               long-cycle Germany research.
             </p>
@@ -314,10 +314,10 @@ export default function GermanyScholarships2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             All Germany scholarships in the directory
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             Compare DAAD routes, foundation scholarships, and other Germany
             funding paths in one place.
           </p>

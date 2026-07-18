@@ -20,24 +20,24 @@ export default function ContactPage() {
       />
 
       <header className="space-y-2">
-        <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
           Contact
         </h1>
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           For corrections, feedback, or listing updates, reach us using the
           details below.
         </p>
       </header>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Contact details
         </h2>
 
-        <dl className="mt-5 grid gap-4 text-sm text-gray-700 sm:grid-cols-2">
+        <dl className="mt-5 grid gap-4 text-sm text-slate-700 sm:grid-cols-2">
           <div className="space-y-1">
-            <dt className="font-medium text-gray-600">Email</dt>
-            <dd className="font-semibold text-gray-900">
+            <dt className="font-medium text-slate-600">Email</dt>
+            <dd className="font-semibold text-slate-900">
               <a
                 href="mailto:support@scholarshipscentral.com"
                 className="text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
@@ -48,8 +48,8 @@ export default function ContactPage() {
           </div>
 
           <div className="space-y-1">
-            <dt className="font-medium text-gray-600">WhatsApp</dt>
-            <dd className="font-semibold text-gray-900">
+            <dt className="font-medium text-slate-600">WhatsApp</dt>
+            <dd className="font-semibold text-slate-900">
               <a
                 href="https://wa.me/923182234605"
                 target="_blank"
@@ -58,7 +58,7 @@ export default function ContactPage() {
               >
                 +92 318 2234605
               </a>
-              <span className="mx-2 text-gray-300">•</span>
+              <span className="mx-2 text-slate-300">•</span>
               <a
                 href="tel:+923182234605"
                 className="text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
@@ -69,15 +69,15 @@ export default function ContactPage() {
           </div>
         </dl>
 
-        <p className="mt-6 mb-0 text-xs text-gray-500">
+        <p className="mt-6 mb-0 text-xs text-slate-500">
           Note: Scholarships Central is information-only. We do not accept
           applications. For application questions, always contact the official
           scholarship provider.
         </p>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           What to include in your message
         </h2>
         <ul className="mt-4 ml-0 list-disc space-y-2 pl-5">

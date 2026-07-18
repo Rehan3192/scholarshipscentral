@@ -32,7 +32,7 @@ function ChevronDownIcon({ className }: { className?: string }) {
 }
 
 const pillClassName =
-  "inline-flex items-center rounded-full border border-gray-300 bg-white px-2.5 py-1 text-[0.95rem] font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:px-3 sm:py-1.5";
+  "inline-flex items-center rounded-full border border-slate-300 bg-white px-2.5 py-1 text-[0.95rem] font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:px-3 sm:py-1.5";
 
 function NavDropdown({
   id,
@@ -86,7 +86,7 @@ function NavDropdown({
         <span>{label}</span>
         <ChevronDownIcon
           className={[
-            "size-4 text-gray-500 transition-transform duration-200 motion-reduce:transition-none",
+            "size-4 text-slate-500 transition-transform duration-200 motion-reduce:transition-none",
             isOpen ? "rotate-180" : "rotate-0",
           ].join(" ")}
         />
@@ -103,7 +103,7 @@ function NavDropdown({
           aria-label={`${label} menu`}
           aria-hidden={!isOpen}
           className={[
-            "origin-top rounded-xl border border-gray-200 bg-white p-2 shadow-lg transition duration-200 motion-reduce:transition-none",
+            "origin-top rounded-xl border border-slate-200 bg-white p-2 shadow-lg transition duration-200 motion-reduce:transition-none",
             isOpen
               ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
               : "opacity-0 scale-95 translate-y-1 pointer-events-none",
@@ -118,11 +118,11 @@ function NavDropdown({
                 setOpenMenu(null);
                 onNavigate?.();
               }}
-              className="block rounded-lg px-3 py-2 text-sm text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+              className="block rounded-lg px-3 py-2 text-sm text-slate-900 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
             >
               <span className="font-semibold">{item.label}</span>
               {item.description ? (
-                <span className="mt-0.5 block text-xs font-medium text-gray-600">
+                <span className="mt-0.5 block text-xs font-medium text-slate-600">
                   {item.description}
                 </span>
               ) : null}
@@ -253,7 +253,7 @@ export default function Navbar() {
     <header
       ref={navRef}
       className={[
-        "sticky top-0 z-50 border-b border-gray-200 bg-white",
+        "sticky top-0 z-50 border-b border-slate-200 bg-white",
         "transition-transform duration-200 motion-reduce:transition-none",
         isHidden ? "-translate-y-full pointer-events-none" : "translate-y-0",
       ].join(" ")}
@@ -266,7 +266,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between gap-3">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-base font-extrabold tracking-tight text-gray-900 sm:text-lg"
+              className="inline-flex items-center gap-2 text-base font-extrabold tracking-tight text-slate-900 sm:text-lg"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <Image
@@ -283,7 +283,7 @@ export default function Navbar() {
             <button
               ref={mobileMenuButtonRef}
               type="button"
-              className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:hidden"
+              className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:hidden"
               aria-expanded={isMobileMenuOpen}
               aria-controls="primary-navigation-links"
               onClick={() => {
@@ -304,16 +304,16 @@ export default function Navbar() {
             <label htmlFor="nav-search" className="sr-only">
               Search scholarships and articles
             </label>
-            <div className="flex w-full items-center gap-1.5 rounded-xl border border-gray-300 bg-white p-0.5 focus-within:ring-2 focus-within:ring-blue-600 focus-within:ring-offset-2 sm:w-auto sm:gap-2 sm:p-1">
+            <div className="flex w-full items-center gap-1.5 rounded-xl border border-slate-300 bg-white p-0.5 focus-within:ring-2 focus-within:ring-blue-600 focus-within:ring-offset-2 sm:w-auto sm:gap-2 sm:p-1">
               <input
                 id="nav-search"
                 name="q"
                 placeholder="Search scholarships and articles..."
-                className="w-full bg-transparent px-2.5 py-1.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none sm:w-72 sm:px-3 sm:py-2"
+                className="w-full bg-transparent px-2.5 py-1.5 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none sm:w-72 sm:px-3 sm:py-2"
               />
               <button
                 type="submit"
-                className="inline-flex shrink-0 items-center rounded-lg bg-gray-900 px-3 py-1.5 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 sm:py-2"
+                className="inline-flex shrink-0 items-center rounded-lg bg-slate-900 px-3 py-1.5 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 sm:py-2"
               >
                 Search
               </button>
@@ -324,7 +324,7 @@ export default function Navbar() {
         <div
           id="primary-navigation-links"
           className={[
-            "mt-2 flex-wrap items-center gap-1.5 text-sm text-gray-700 sm:mt-3 sm:flex sm:gap-2",
+            "mt-2 flex-wrap items-center gap-1.5 text-sm text-slate-700 sm:mt-3 sm:flex sm:gap-2",
             isMobileMenuOpen ? "flex" : "hidden",
           ].join(" ")}
         >

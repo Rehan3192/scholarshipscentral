@@ -200,11 +200,11 @@ export default function ScholarshipFilters({ scholarships }: Props) {
 
   return (
     <div className="grid gap-6 lg:grid-cols-[280px_1fr]">
-      <aside className="h-fit rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <aside className="h-fit rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Filter scholarships
         </h2>
-        <p className="mt-1 text-sm text-gray-600">
+        <p className="mt-1 text-sm text-slate-600">
           Narrow results by country, degree level, or funding type.
         </p>
 
@@ -212,7 +212,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
           <div className="space-y-1">
             <label
               htmlFor="filter-q"
-              className="text-sm font-medium text-gray-700"
+              className="text-sm font-medium text-slate-700"
             >
               Search
             </label>
@@ -225,14 +225,14 @@ export default function ScholarshipFilters({ scholarships }: Props) {
                 setPage(1);
               }}
               placeholder="Title, provider, keyword..."
-              className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
           </div>
 
           <div className="space-y-1">
             <label
               htmlFor="filter-country"
-              className="text-sm font-medium text-gray-700"
+              className="text-sm font-medium text-slate-700"
             >
               Country
             </label>
@@ -244,7 +244,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
                 setCountry(e.target.value);
                 setPage(1);
               }}
-              className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
             >
               {uniqueCountries.map((c) => (
                 <option key={c} value={c}>
@@ -257,7 +257,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
           <div className="space-y-1">
             <label
               htmlFor="filter-degree"
-              className="text-sm font-medium text-gray-700"
+              className="text-sm font-medium text-slate-700"
             >
               Degree level
             </label>
@@ -269,7 +269,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
                 setDegree(e.target.value);
                 setPage(1);
               }}
-              className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
             >
               {uniqueDegrees.map((d) => (
                 <option key={d} value={d}>
@@ -282,7 +282,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
           <div className="space-y-1">
             <label
               htmlFor="filter-funding"
-              className="text-sm font-medium text-gray-700"
+              className="text-sm font-medium text-slate-700"
             >
               Funding type
             </label>
@@ -294,7 +294,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
                 setFunding(e.target.value);
                 setPage(1);
               }}
-              className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
             >
               {uniqueFunding.map((f) => (
                 <option key={f} value={f}>
@@ -307,7 +307,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
           <button
             type="button"
             onClick={resetFilters}
-            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
           >
             Reset filters
           </button>
@@ -317,16 +317,16 @@ export default function ScholarshipFilters({ scholarships }: Props) {
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <div className="space-y-0.5">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">
               Results
             </h2>
-            <p className="mb-0 text-sm text-gray-600">
+            <p className="mb-0 text-sm text-slate-600">
               {sorted.length} scholarship{sorted.length === 1 ? "" : "s"}
             </p>
           </div>
 
           <div className="flex items-center gap-2">
-            <label htmlFor="sort" className="text-sm text-gray-600">
+            <label htmlFor="sort" className="text-sm text-slate-600">
               Sort
             </label>
             <select
@@ -337,7 +337,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
                 setSort(e.target.value as SortKey);
                 setPage(1);
               }}
-              className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
             >
               <option value="updated">Recently updated</option>
               <option value="deadline">Upcoming deadline</option>
@@ -347,8 +347,8 @@ export default function ScholarshipFilters({ scholarships }: Props) {
         </div>
 
         {hasActiveFilters ? (
-          <div className="flex flex-wrap items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm">
-            <span className="font-medium text-gray-700">Active filters:</span>
+          <div className="flex flex-wrap items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm">
+            <span className="font-medium text-slate-700">Active filters:</span>
 
             {query.trim() ? (
               <button
@@ -357,7 +357,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
                   setQuery("");
                   setPage(1);
                 }}
-                className="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-gray-50 px-3 py-1.5 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
               >
                 Search: {query.trim()}
                 <span aria-hidden="true">×</span>
@@ -371,7 +371,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
                   setCountry("All");
                   setPage(1);
                 }}
-                className="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-gray-50 px-3 py-1.5 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
               >
                 Country: {country}
                 <span aria-hidden="true">×</span>
@@ -385,7 +385,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
                   setDegree("All");
                   setPage(1);
                 }}
-                className="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-gray-50 px-3 py-1.5 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
               >
                 Degree: {degree}
                 <span aria-hidden="true">×</span>
@@ -399,7 +399,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
                   setFunding("All");
                   setPage(1);
                 }}
-                className="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-gray-50 px-3 py-1.5 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
               >
                 Funding: {funding}
                 <span aria-hidden="true">×</span>
@@ -413,7 +413,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
                   setSort(DEFAULT_SORT);
                   setPage(1);
                 }}
-                className="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-gray-50 px-3 py-1.5 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
               >
                 Sort: {sort === "deadline" ? "Upcoming deadline" : "Title (A-Z)"}
                 <span aria-hidden="true">×</span>
@@ -423,7 +423,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
             <button
               type="button"
               onClick={resetFilters}
-              className="ml-auto inline-flex items-center rounded-lg bg-gray-900 px-3 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+              className="ml-auto inline-flex items-center rounded-lg bg-slate-900 px-3 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
             >
               Clear all
             </button>
@@ -431,14 +431,14 @@ export default function ScholarshipFilters({ scholarships }: Props) {
         ) : null}
 
         {sorted.length === 0 ? (
-          <div className="rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-700">
+          <div className="rounded-xl border border-slate-200 bg-white p-6 text-sm text-slate-700">
             <p className="mb-3">
               No scholarships match these filters.
             </p>
             <button
               type="button"
               onClick={resetFilters}
-              className="rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+              className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
             >
               Clear filters
             </button>
@@ -451,7 +451,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
               ))}
             </div>
 
-            <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700">
+            <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700">
               <span>
                 Page {currentPage} of {totalPages}
               </span>
@@ -461,7 +461,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
                   type="button"
                   onClick={() => setPage((p) => Math.max(1, p - 1))}
                   disabled={currentPage <= 1}
-                  className="rounded-lg border border-gray-300 bg-white px-3 py-2 font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="rounded-lg border border-slate-300 bg-white px-3 py-2 font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   Previous
                 </button>
@@ -469,7 +469,7 @@ export default function ScholarshipFilters({ scholarships }: Props) {
                   type="button"
                   onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                   disabled={currentPage >= totalPages}
-                  className="rounded-lg border border-gray-300 bg-white px-3 py-2 font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="rounded-lg border border-slate-300 bg-white px-3 py-2 font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   Next
                 </button>

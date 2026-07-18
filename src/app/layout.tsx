@@ -96,7 +96,7 @@ export default function RootLayout({
         ) : null}
       </head>
 
-      <body className="min-h-screen bg-gray-50 text-gray-900 flex flex-col overflow-x-clip">
+      <body className="min-h-screen bg-slate-50 text-slate-900 flex flex-col overflow-x-clip">
         <OrganizationJsonLd />
         <WebSiteJsonLd />
 

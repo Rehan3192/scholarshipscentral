@@ -157,10 +157,10 @@ export default function FullyFundedScholarships2026Page() {
       <ItemListJsonLd pagePath="/fully-funded-scholarships-2026" items={items} />
 
       <header className="space-y-3">
-        <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
           Fully funded scholarships 2026
         </h1>
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           Start with the full-funding options, then branch into Europe hubs, Asia
           country pages, government routes, and live deadlines without duplicating work.
         </p>
@@ -168,11 +168,11 @@ export default function FullyFundedScholarships2026Page() {
           <Link href="/europe-scholarships-2026" className="font-medium text-blue-700 hover:underline">
             {europeCount} fully funded Europe listings
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link href="/scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">
             {stillOpenCount} fully funded listings still open
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link href="/funding/fully-funded" className="font-medium text-blue-700 hover:underline">
             Existing funding taxonomy
           </Link>
@@ -180,51 +180,51 @@ export default function FullyFundedScholarships2026Page() {
       </header>
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Fully funded coverage
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {fullyFundedScholarships.length}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Fully funded scholarships across {countryCount} countries in the directory.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Europe fully funded
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {europeCount}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Europe listings inside the full-funding options.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Still open now
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {stillOpenCount}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Fully funded listings with live or rolling deadlines.
           </p>
         </div>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Why use this fully funded scholarships page
         </h2>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Every listing here already matches full-funding preference. Use it when you want
           tuition, stipend, travel, or accommodation support to be the first filter
           before you narrow by region or deadline.
         </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           If you need current deadlines, start with the still-open fully funded
           section below. If you already know your destination, the region and
           country links will get you from funding preference to a tighter shortlist faster.
@@ -233,10 +233,10 @@ export default function FullyFundedScholarships2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             Fully funded hub links
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             Use these paths to move from funding preference into region and topic groups.
           </p>
         </div>
@@ -247,11 +247,11 @@ export default function FullyFundedScholarships2026Page() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Country shortcut: UK
         </h2>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           If the UK is already on your shortlist, go straight to{" "}
           <Link href="/fully-funded-scholarships-in-uk-2026" className="font-medium text-blue-700 hover:underline">
             fully funded scholarships in UK 2026
@@ -260,11 +260,11 @@ export default function FullyFundedScholarships2026Page() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Country shortcut: Italy
         </h2>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           If Italy is already on your shortlist, go straight to{" "}
           <Link href="/fully-funded-scholarships-in-italy-2026" className="font-medium text-blue-700 hover:underline">
             fully funded scholarships in Italy 2026
@@ -276,10 +276,10 @@ export default function FullyFundedScholarships2026Page() {
       {stillOpenFullyFundedScholarships.length > 0 ? (
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">
               Still-open fully funded scholarships
             </h2>
-            <p className="mb-0 text-sm text-gray-600">
+            <p className="mb-0 text-sm text-slate-600">
               Start here if you want the strongest funding packages with live deadlines.
             </p>
           </div>
@@ -293,10 +293,10 @@ export default function FullyFundedScholarships2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             Government-funded routes
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             These scholarship pages help you jump from fully funded intent into live government-backed routes.
           </p>
         </div>
@@ -309,10 +309,10 @@ export default function FullyFundedScholarships2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             Language-flexible scholarship pages
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             Use these pages when you also need routes that discuss alternative English-proof paths.
           </p>
         </div>
@@ -325,10 +325,10 @@ export default function FullyFundedScholarships2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             All fully funded scholarships
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             {fullyFundedScholarships.length} scholarship{fullyFundedScholarships.length === 1 ? "" : "s"}
           </p>
         </div>

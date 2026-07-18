@@ -85,10 +85,10 @@ function ArchivePagination({
   return (
     <nav
       aria-label="Blog pagination"
-      className="rounded-2xl border border-gray-200 bg-white px-4 py-4 shadow-sm sm:px-5"
+      className="rounded-2xl border border-slate-200 bg-white px-4 py-4 shadow-sm sm:px-5"
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           Page {currentPage} of {totalPages}
         </p>
 
@@ -98,7 +98,7 @@ function ArchivePagination({
             rel="prev"
             aria-disabled={currentPage <= 1}
             className={[
-              "inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2",
+              "inline-flex items-center rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2",
               currentPage <= 1 ? "pointer-events-none opacity-50" : "",
             ].join(" ")}
           >
@@ -115,8 +115,8 @@ function ArchivePagination({
                   className={[
                     "inline-flex min-w-10 items-center justify-center rounded-lg border px-3 py-2 text-sm font-semibold transition-colors duration-200 motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2",
                     token === currentPage
-                      ? "border-gray-900 bg-gray-900 text-white"
-                      : "border-gray-300 bg-white text-gray-900 hover:bg-gray-50",
+                      ? "border-slate-900 bg-slate-900 text-white"
+                      : "border-slate-300 bg-white text-slate-900 hover:bg-slate-50",
                   ].join(" ")}
                 >
                   {token}
@@ -124,7 +124,7 @@ function ArchivePagination({
               ) : (
                 <span
                   key={token}
-                  className="inline-flex min-w-10 items-center justify-center px-1 text-sm font-semibold text-gray-400"
+                  className="inline-flex min-w-10 items-center justify-center px-1 text-sm font-semibold text-slate-400"
                 >
                   ...
                 </span>
@@ -137,7 +137,7 @@ function ArchivePagination({
             rel="next"
             aria-disabled={currentPage >= totalPages}
             className={[
-              "inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2",
+              "inline-flex items-center rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2",
               currentPage >= totalPages ? "pointer-events-none opacity-50" : "",
             ].join(" ")}
           >
@@ -153,10 +153,10 @@ function FeaturedPagesSection() {
   return (
     <section className="space-y-4">
       <div className="space-y-1">
-        <h2 className="mt-0 text-2xl font-semibold text-gray-900">
+        <h2 className="mt-0 text-2xl font-semibold text-slate-900">
           Featured scholarship pages
         </h2>
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           Start with these key pages when you want the fastest path into major scholarship topics.
         </p>
       </div>
@@ -174,12 +174,12 @@ function FeaturedPagesSection() {
                 {page.label}
               </span>
             </div>
-            <h3 className="mt-3 text-lg font-semibold text-gray-900">
+            <h3 className="mt-3 text-lg font-semibold text-slate-900">
               <Link href={page.href} className="hover:underline group-hover:text-blue-800">
                 {page.title}
               </Link>
             </h3>
-            <p className="mt-2 line-clamp-3 text-sm text-gray-700">
+            <p className="mt-2 line-clamp-3 text-sm text-slate-700">
               {page.description}
             </p>
             <Link
@@ -265,10 +265,10 @@ export default function BlogArchiveView({
           </div>
         ) : null}
         <div className="space-y-2">
-          <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+          <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
             {pageHeading}
           </h1>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             Scholarship guides, result updates, and application advice in one place.
           </p>
           <p className="mb-0 text-sm text-blue-700">
@@ -285,8 +285,8 @@ export default function BlogArchiveView({
         {currentPage === 1 ? <FeaturedPagesSection /> : null}
 
         {!configured ? (
-          <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">
               Blog temporarily unavailable
             </h2>
             <p className="mt-2 mb-0">
@@ -294,21 +294,21 @@ export default function BlogArchiveView({
             </p>
           </section>
         ) : loadError ? (
-          <section className="rounded-2xl border border-red-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <section className="rounded-2xl border border-red-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">
               Blog temporarily unavailable
             </h2>
             <p className="mt-2 mb-0">
               Some scholarship pages are still available, but we couldn&apos;t load
               blog posts right now. Please try again in a moment.
             </p>
-            <p className="mt-3 mb-0 text-xs text-gray-500">
+            <p className="mt-3 mb-0 text-xs text-slate-500">
               Error: {loadError}
             </p>
           </section>
         ) : posts.length === 0 ? (
-          <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">
               No blog posts yet
             </h2>
             <p className="mt-2 mb-0">
@@ -319,14 +319,14 @@ export default function BlogArchiveView({
           <section className="space-y-4">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
               <div className="space-y-1">
-                <h2 className="mt-0 text-2xl font-semibold text-gray-900">
+                <h2 className="mt-0 text-2xl font-semibold text-slate-900">
                   {currentPage === 1 ? "Latest posts" : "Archive posts"}
                 </h2>
-                <p className="mb-0 text-sm text-gray-600">
+                <p className="mb-0 text-sm text-slate-600">
                   Scholarship news, guides, and application-focused blog posts.
                 </p>
               </div>
-              <p className="mb-0 text-sm text-gray-600">
+              <p className="mb-0 text-sm text-slate-600">
                 Showing {rangeStart}-{rangeEnd} of {Math.max(totalPosts, posts.length)} posts
               </p>
             </div>
@@ -341,12 +341,12 @@ export default function BlogArchiveView({
                 return (
                   <article
                     key={post.id}
-                    className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-transform duration-200 motion-reduce:transition-none hover:-translate-y-0.5"
+                    className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-transform duration-200 motion-reduce:transition-none hover:-translate-y-0.5"
                   >
-                    <div className="text-xs font-semibold text-gray-500">
+                    <div className="text-xs font-semibold text-slate-500">
                       {formatDate(post.date)}
                     </div>
-                    <h3 className="mt-2 text-lg font-semibold text-gray-900">
+                    <h3 className="mt-2 text-lg font-semibold text-slate-900">
                       <Link
                         href={`/blog/${post.slug}`}
                         className="hover:underline"
@@ -354,7 +354,7 @@ export default function BlogArchiveView({
                         {title}
                       </Link>
                     </h3>
-                    <p className="mt-2 text-sm text-gray-700">{excerpt}</p>
+                    <p className="mt-2 text-sm text-slate-700">{excerpt}</p>
                     <Link
                       href={`/blog/${post.slug}`}
                       className="mt-3 inline-flex items-center text-sm font-semibold text-blue-700 hover:underline"

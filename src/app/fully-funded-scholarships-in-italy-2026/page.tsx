@@ -124,10 +124,10 @@ export default function FullyFundedScholarshipsInItaly2026Page() {
       />
 
       <header className="space-y-3">
-        <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
           Fully funded scholarships in Italy 2026
         </h1>
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           If full cost coverage is your first filter, this is the right Italy page
           to start with. Italy has a broader pool of partial scholarships than fully
           funded ones, so this page is designed to remove that noise and send you
@@ -137,11 +137,11 @@ export default function FullyFundedScholarshipsInItaly2026Page() {
           <Link href="/countries/italy" className="font-medium text-blue-700 hover:underline">
             Back to Italy scholarships 2026
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link href="/fully-funded-scholarships-2026" className="font-medium text-blue-700 hover:underline">
             Compare all fully funded scholarships
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link href="/italy-scholarships-without-ielts-2026" className="font-medium text-blue-700 hover:underline">
             {languageFlexibleCount} Italy routes with language flexibility
           </Link>
@@ -149,55 +149,55 @@ export default function FullyFundedScholarshipsInItaly2026Page() {
       </header>
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Fully funded Italy routes
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {italyFullyFundedScholarships.length}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Italy scholarship listings in the directory that already match fully funded intent.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Still open now
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {stillOpenScholarships.length}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Routes with active or rolling deadlines right now.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Language-flexible
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {languageFlexibleCount}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Italy fully funded routes that also mention IELTS alternatives or accepted proof flexibility.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Cluster role
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">Italy x Funding</p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-3xl font-bold text-slate-900">Italy x Funding</p>
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             This page connects Italy scholarships with the broader fully funded list.
           </p>
         </div>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Where to find more Italy options
         </h2>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Use{" "}
           <Link href="/countries/italy" className="font-medium text-blue-700 hover:underline">
             Italy scholarships 2026
@@ -208,7 +208,7 @@ export default function FullyFundedScholarshipsInItaly2026Page() {
           </Link>
           {" "}for global comparisons.
         </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Use{" "}
           <Link href="/italy-scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">
             Italy scholarships still open 2026
@@ -223,10 +223,10 @@ export default function FullyFundedScholarshipsInItaly2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             Funding related scholarship pages
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             Move between Italy, funding, urgency, and language related pages without losing context.
           </p>
         </div>
@@ -240,10 +240,10 @@ export default function FullyFundedScholarshipsInItaly2026Page() {
       {featuredScholarships.length > 0 ? (
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">
               Strongest fully funded Italy routes first
             </h2>
-            <p className="mb-0 text-sm text-gray-600">
+            <p className="mb-0 text-sm text-slate-600">
               Start here if you want the core Italy full-funding shortlist before branching into article pages.
             </p>
           </div>
@@ -258,10 +258,10 @@ export default function FullyFundedScholarshipsInItaly2026Page() {
       {stillOpenScholarships.length > 0 ? (
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">
               Still-open fully funded scholarships in Italy
             </h2>
-            <p className="mb-0 text-sm text-gray-600">
+            <p className="mb-0 text-sm text-slate-600">
               Use this shortlist if you need to apply soon and want to stay inside Italy.
             </p>
           </div>
@@ -273,11 +273,11 @@ export default function FullyFundedScholarshipsInItaly2026Page() {
         </section>
       ) : null}
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Who should use this page
         </h2>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           This page is better for applicants who need strong cost coverage first
           and are willing to work with a narrower Italy shortlist. If you are still
           open to partial scholarships, regional funding, or fee waivers, the broader

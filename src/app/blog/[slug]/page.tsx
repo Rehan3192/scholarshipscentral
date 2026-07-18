@@ -185,20 +185,20 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
         dateModified={post.modified}
       />
 
-      <header className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+      <header className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
         <p className="mb-0 text-xs font-semibold uppercase tracking-wide text-blue-700">
           Scholarship guide
         </p>
-        <p className="mt-2 mb-0 text-xs font-semibold text-gray-500">
+        <p className="mt-2 mb-0 text-xs font-semibold text-slate-500">
           Published {published}
           {modified && modified !== published ? ` | Updated ${modified}` : ""}
         </p>
-        <h1 className="mt-3 mb-0 max-w-4xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h1 className="mt-3 mb-0 max-w-4xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
           {title}
         </h1>
       </header>
 
-      <article className="wp-article rounded-2xl border border-gray-200 bg-white p-6 text-base text-gray-700 shadow-sm sm:p-8">
+      <article className="wp-article rounded-2xl border border-slate-200 bg-white p-6 text-base text-slate-700 shadow-sm sm:p-8">
         <div
           className="wp-content space-y-4"
           dangerouslySetInnerHTML={{ __html: articleContent.introduction }}
@@ -215,13 +215,13 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
       <div className="flex flex-wrap gap-3">
         <Link
           href="/blog"
-          className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+          className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
         >
           Back to Blog
         </Link>
         <Link
           href="/scholarships"
-          className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+          className="inline-flex items-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
         >
           Browse Scholarships
         </Link>

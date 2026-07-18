@@ -140,15 +140,15 @@ export default function FinderWizard({ scholarships, options }: Props) {
   return (
     <div className="space-y-6">
       <section
-        className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6"
+        className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6"
         aria-labelledby="finder-wizard-heading"
       >
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h2 id="finder-wizard-heading" className="m-0 text-2xl font-semibold text-gray-900">
+            <h2 id="finder-wizard-heading" className="m-0 text-2xl font-semibold text-slate-900">
               Find Your Scholarship
             </h2>
-            <p className="mt-1 text-sm text-gray-600">
+            <p className="mt-1 text-sm text-slate-600">
               Step {step + 1} of {STEP_LABELS.length}: {STEP_LABELS[step]}
             </p>
           </div>
@@ -159,7 +159,7 @@ export default function FinderWizard({ scholarships, options }: Props) {
                 aria-current={index === step ? "step" : undefined}
                 className={[
                   "h-2.5 w-8 rounded-full",
-                  index <= step || isComplete ? "bg-gray-900" : "bg-gray-200",
+                  index <= step || isComplete ? "bg-slate-900" : "bg-slate-200",
                 ].join(" ")}
               >
                 <span className="sr-only">{label}</span>
@@ -225,7 +225,7 @@ export default function FinderWizard({ scholarships, options }: Props) {
             type="button"
             onClick={() => setStep((current) => Math.max(0, current - 1))}
             disabled={step === 0}
-            className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+            className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
           >
             Previous
           </button>
@@ -233,7 +233,7 @@ export default function FinderWizard({ scholarships, options }: Props) {
             <button
               type="button"
               onClick={handleReset}
-              className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+              className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
             >
               Reset
             </button>
@@ -242,7 +242,7 @@ export default function FinderWizard({ scholarships, options }: Props) {
                 type="button"
                 onClick={goToNextStep}
                 disabled={!canContinue}
-                className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+                className="inline-flex items-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
               >
                 Next
               </button>
@@ -251,7 +251,7 @@ export default function FinderWizard({ scholarships, options }: Props) {
                 type="button"
                 onClick={finishFinder}
                 disabled={!canFinish}
-                className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+                className="inline-flex items-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
               >
                 Show My Recommendations
               </button>
@@ -272,20 +272,20 @@ export default function FinderWizard({ scholarships, options }: Props) {
           profileStrength={profileStrength}
         />
       ) : (
-        <section className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6" aria-label="Finder completion status">
-          <p className="m-0 font-semibold text-gray-900">
+        <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-label="Finder completion status">
+          <p className="m-0 font-semibold text-slate-900">
             <span aria-hidden="true">🎓 </span>
             Complete the next steps to receive personalized scholarship recommendations.
           </p>
           <div className="mt-4" aria-label={`${step + 1} of ${STEP_LABELS.length} steps reached`}>
-            <p className="mb-2 text-sm font-medium text-gray-700">Progress:</p>
+            <p className="mb-2 text-sm font-medium text-slate-700">Progress:</p>
             <div className="flex gap-2" aria-hidden="true">
               {STEP_LABELS.map((label, index) => (
                 <span
                   key={label}
                   className={[
                     "h-4 w-4 rounded-sm border",
-                    index < step ? "border-gray-900 bg-gray-900" : "border-gray-400 bg-white",
+                    index < step ? "border-slate-900 bg-slate-900" : "border-slate-400 bg-white",
                   ].join(" ")}
                 />
               ))}

@@ -20,16 +20,16 @@ export default function PrivacyPolicyPage() {
       />
 
       <header className="space-y-2">
-        <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
           Privacy Policy
         </h1>
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           Last updated: February 8, 2026
         </p>
       </header>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Overview
         </h2>
         <p className="mt-4">
@@ -44,21 +44,21 @@ export default function PrivacyPolicyPage() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Owner and contact
         </h2>
-        <dl className="mt-5 grid gap-4 text-sm text-gray-700 sm:grid-cols-2">
+        <dl className="mt-5 grid gap-4 text-sm text-slate-700 sm:grid-cols-2">
           <div className="space-y-1">
-            <dt className="font-medium text-gray-600">Owner / operator</dt>
-            <dd className="font-semibold text-gray-900">
+            <dt className="font-medium text-slate-600">Owner / operator</dt>
+            <dd className="font-semibold text-slate-900">
               Scholarships Central
             </dd>
           </div>
 
           <div className="space-y-1">
-            <dt className="font-medium text-gray-600">Email</dt>
-            <dd className="font-semibold text-gray-900">
+            <dt className="font-medium text-slate-600">Email</dt>
+            <dd className="font-semibold text-slate-900">
               <a
                 href="mailto:support@scholarshipscentral.com"
                 className="text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
@@ -69,8 +69,8 @@ export default function PrivacyPolicyPage() {
           </div>
 
           <div className="space-y-1">
-            <dt className="font-medium text-gray-600">WhatsApp</dt>
-            <dd className="font-semibold text-gray-900">
+            <dt className="font-medium text-slate-600">WhatsApp</dt>
+            <dd className="font-semibold text-slate-900">
               <a
                 href="https://wa.me/923182234605"
                 target="_blank"
@@ -83,8 +83,8 @@ export default function PrivacyPolicyPage() {
           </div>
 
           <div className="space-y-1">
-            <dt className="font-medium text-gray-600">More</dt>
-            <dd className="font-semibold text-gray-900">
+            <dt className="font-medium text-slate-600">More</dt>
+            <dd className="font-semibold text-slate-900">
               <Link href="/contact" className="text-blue-700 hover:underline">
                 Contact page
               </Link>
@@ -93,8 +93,8 @@ export default function PrivacyPolicyPage() {
         </dl>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Analytics (Google Analytics 4)
         </h2>
         <p className="mt-4">
@@ -110,8 +110,8 @@ export default function PrivacyPolicyPage() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Contact information
         </h2>
         <p className="mt-4">
@@ -128,8 +128,8 @@ export default function PrivacyPolicyPage() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           External links
         </h2>
         <p className="mt-4 mb-0">
@@ -140,8 +140,8 @@ export default function PrivacyPolicyPage() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-700 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Changes to this policy
         </h2>
         <p className="mt-4 mb-0">

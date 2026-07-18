@@ -114,10 +114,10 @@ export default function EuropeScholarshipsWithoutIelts2026Page() {
       />
 
       <header className="space-y-3">
-        <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
           Europe scholarships without IELTS 2026
         </h1>
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           Use this page when you want Europe scholarship routes that mention
           IELTS alternatives, English-medium instruction, or other accepted
           language-proof flexibility.
@@ -129,14 +129,14 @@ export default function EuropeScholarshipsWithoutIelts2026Page() {
           >
             {stillOpenLanguageFlexibleScholarships.length} language-flexible routes still open
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link
             href="/fully-funded-scholarships-2026"
             className="font-medium text-blue-700 hover:underline"
           >
             {fullyFundedCount} fully funded options
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link
             href="/europe-scholarships-2026"
             className="font-medium text-blue-700 hover:underline"
@@ -147,52 +147,52 @@ export default function EuropeScholarshipsWithoutIelts2026Page() {
       </header>
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             IELTS-alternative routes
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {languageFlexibleScholarships.length}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Europe listings where official guidance discusses language-proof flexibility.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Countries covered
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {countryCount}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Europe destinations currently represented in this language-flexible scholarship list.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Still open now
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {stillOpenLanguageFlexibleScholarships.length}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Language-flexible Europe scholarships with live or rolling deadlines.
           </p>
         </div>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           What “without IELTS” means on this page
         </h2>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           On this site, “without IELTS” does not mean “without English proof.”
           It means the official scholarship or admission guidance discusses some
           kind of flexibility, such as English-medium instruction, accepted alternatives,
           exemptions, or a statement that IELTS is not the only route.
         </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           That distinction matters because some Europe scholarships are flexible
           at the admission stage but still require formal proof later. Use this
           page to build a shortlist quickly, then always confirm the exact language
@@ -202,10 +202,10 @@ export default function EuropeScholarshipsWithoutIelts2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             Language-flexible related scholarship pages
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             Use these next steps to narrow by deadline, funding, or country once you have the language filter.
           </p>
         </div>
@@ -219,10 +219,10 @@ export default function EuropeScholarshipsWithoutIelts2026Page() {
       {stillOpenLanguageFlexibleScholarships.length > 0 ? (
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">
               Europe scholarships without IELTS still open
             </h2>
-            <p className="mb-0 text-sm text-gray-600">
+            <p className="mb-0 text-sm text-slate-600">
               Start here if you need language-flexible routes that are still active now.
             </p>
           </div>
@@ -236,10 +236,10 @@ export default function EuropeScholarshipsWithoutIelts2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             All Europe scholarships with IELTS alternatives
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             {languageFlexibleScholarships.length} scholarship
             {languageFlexibleScholarships.length === 1 ? "" : "s"}
           </p>

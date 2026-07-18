@@ -107,10 +107,10 @@ export default function ItalyScholarshipsWithoutIelts2026Page() {
       />
 
       <header className="space-y-3">
-        <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
           Italy scholarships without IELTS 2026
         </h1>
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           Use this page when you want Italy scholarship routes that mention IELTS
           alternatives, English-medium instruction, or other accepted language-proof flexibility.
         </p>
@@ -121,14 +121,14 @@ export default function ItalyScholarshipsWithoutIelts2026Page() {
           >
             {stillOpenScholarships.length} Italy routes still open
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link
             href="/fully-funded-scholarships-2026"
             className="font-medium text-blue-700 hover:underline"
           >
             {fullyFundedCount} fully funded options
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link
             href="/countries/italy"
             className="font-medium text-blue-700 hover:underline"
@@ -139,58 +139,58 @@ export default function ItalyScholarshipsWithoutIelts2026Page() {
       </header>
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Italy language-flexible routes
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {italyLanguageFlexibleScholarships.length}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Italy scholarships where the official guidance discusses language-proof flexibility.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Still open now
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {stillOpenScholarships.length}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Italy listings with active or rolling deadlines right now.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:col-span-2 xl:col-span-1">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Masters-heavy pool
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {mastersCount}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Italy language-flexible routes currently indexed at masters level.
           </p>
         </div>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           What this Italy page means by &quot;without IELTS&quot;
         </h2>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           On this page, &quot;without IELTS&quot; does not mean there is no language proof at all.
           It means the scholarship or linked admission guidance discusses accepted
           alternatives, English-medium study history, exemptions, or another route
           besides IELTS alone.
         </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           This is especially relevant in Italy because some routes separate pre-admission,
           scholarship ranking, and final enrolment. Use this page to shortlist the right
           opportunities first, then confirm the exact language rule on the official source
           before applying.
         </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Italy universities often accept alternatives like MOI or internal language
           assessments, which makes this route more accessible for students who do not
           want to take IELTS. If you are exploring other countries, compare them on
@@ -200,10 +200,10 @@ export default function ItalyScholarshipsWithoutIelts2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             Italy language related scholarship pages
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             Use these next steps to stay for Italy or move back up to Europe when needed.
           </p>
         </div>
@@ -217,10 +217,10 @@ export default function ItalyScholarshipsWithoutIelts2026Page() {
       {stillOpenScholarships.length > 0 ? (
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">
               Italy scholarships without IELTS still open
             </h2>
-            <p className="mb-0 text-sm text-gray-600">
+            <p className="mb-0 text-sm text-slate-600">
               Start here if you need Italy language-flexible routes with current deadlines.
             </p>
           </div>
@@ -234,10 +234,10 @@ export default function ItalyScholarshipsWithoutIelts2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             All Italy scholarships with IELTS alternatives
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             {italyLanguageFlexibleScholarships.length} scholarship
             {italyLanguageFlexibleScholarships.length === 1 ? "" : "s"}
           </p>

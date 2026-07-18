@@ -108,15 +108,15 @@ export default async function ScholarshipResults2026Page() {
         <ItemListJsonLd pagePath="/scholarship-results-2026" items={itemList} />
       ) : null}
 
-      <header className="space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+      <header className="space-y-3 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
         <div className="inline-flex w-fit items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-800">
           Results hub
         </div>
         <div className="space-y-2">
-          <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+          <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
             Scholarship Result Articles
           </h1>
-          <p className="mb-0 max-w-3xl text-sm text-gray-700 sm:text-base">
+          <p className="mb-0 max-w-3xl text-sm text-slate-700 sm:text-base">
             Browse dedicated result guides, expected announcement dates, checking
             methods, and official outcome updates by scholarship.
           </p>
@@ -130,14 +130,14 @@ export default async function ScholarshipResults2026Page() {
       <section className="space-y-4">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h2 className="mt-0 text-2xl font-semibold text-gray-900">
+            <h2 className="mt-0 text-2xl font-semibold text-slate-900">
               Latest result articles
             </h2>
-            <p className="mb-0 text-sm text-gray-600">
+            <p className="mb-0 text-sm text-slate-600">
               Open a card to read the complete result guide.
             </p>
           </div>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             {posts.length + 1} article{posts.length === 0 ? "" : "s"}
           </p>
         </div>
@@ -148,16 +148,16 @@ export default async function ScholarshipResults2026Page() {
               <span className="inline-flex items-center rounded-full bg-amber-100 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-amber-900">
                 {featuredResultArticle.status}
               </span>
-              <span className="text-xs font-semibold text-gray-500">
+              <span className="text-xs font-semibold text-slate-500">
                 {formatDate(featuredResultArticle.date)}
               </span>
             </div>
-            <h3 className="mt-3 text-lg font-semibold text-gray-900">
+            <h3 className="mt-3 text-lg font-semibold text-slate-900">
               <Link href={featuredResultArticle.href} className="hover:underline">
                 {featuredResultArticle.title}
               </Link>
             </h3>
-            <p className="mt-2 line-clamp-4 text-sm text-gray-700">
+            <p className="mt-2 line-clamp-4 text-sm text-slate-700">
               {featuredResultArticle.excerpt}
             </p>
             <Link href={featuredResultArticle.href} className="mt-4 inline-flex items-center text-sm font-semibold text-blue-700 hover:underline">
@@ -172,21 +172,21 @@ export default async function ScholarshipResults2026Page() {
               "Read the full result article for official timing details.";
 
             return (
-              <article key={post.id} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-transform duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md">
+              <article key={post.id} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-transform duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-800">
                     Results
                   </span>
-                  <span className="text-xs font-semibold text-gray-500">
+                  <span className="text-xs font-semibold text-slate-500">
                     {formatDate(post.date)}
                   </span>
                 </div>
-                <h3 className="mt-3 text-lg font-semibold text-gray-900">
+                <h3 className="mt-3 text-lg font-semibold text-slate-900">
                   <Link href={`/blog/${post.slug}`} className="hover:underline">
                     {title}
                   </Link>
                 </h3>
-                <p className="mt-2 line-clamp-4 text-sm text-gray-700">{excerpt}</p>
+                <p className="mt-2 line-clamp-4 text-sm text-slate-700">{excerpt}</p>
                 <Link href={`/blog/${post.slug}`} className="mt-4 inline-flex items-center text-sm font-semibold text-blue-700 hover:underline">
                   Open result article &rarr;
                 </Link>
@@ -203,12 +203,12 @@ export default async function ScholarshipResults2026Page() {
       ) : null}
 
       <section className="space-y-3">
-        <h2 className="mt-0 text-xl font-semibold text-gray-900">Explore more</h2>
+        <h2 className="mt-0 text-xl font-semibold text-slate-900">Explore more</h2>
         <div className="grid gap-3 sm:grid-cols-3">
           {guideLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">
-              <span className="block font-semibold text-gray-900">{link.title}</span>
-              <span className="mt-1 block text-sm text-gray-600">{link.description}</span>
+            <Link key={link.href} href={link.href} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">
+              <span className="block font-semibold text-slate-900">{link.title}</span>
+              <span className="mt-1 block text-sm text-slate-600">{link.description}</span>
             </Link>
           ))}
         </div>

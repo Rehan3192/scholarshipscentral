@@ -103,7 +103,7 @@ export default function FindScholarshipsPage() {
         description="Find scholarships that match your degree, country preference, funding needs, and study goals."
       />
 
-      <header className="space-y-5 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+      <header className="space-y-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
         <Breadcrumbs
           items={[
             { label: "Home", href: "/" },
@@ -115,26 +115,26 @@ export default function FindScholarshipsPage() {
             <span>Guided scholarship recommendations</span>
             <span className="rounded-full border border-blue-200 bg-blue-50 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide">Beta</span>
           </div>
-          <h1 className="mb-0 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h1 className="mb-0 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Find scholarships that match your profile.
           </h1>
-          <p className="mt-4 mb-0 text-base text-gray-700">
+          <p className="mt-4 mb-0 text-base text-slate-700">
             Answer a few questions about your degree, nationality, preferred
             destination, funding needs, English requirements, and study field.
             The finder ranks scholarships using the eligibility and funding
             information currently available.
           </p>
-          <p className="mt-3 mb-0 text-sm text-gray-600">
+          <p className="mt-3 mb-0 text-sm text-slate-600">
             Help us improve recommendations by exploring scholarships and reporting issues.
           </p>
         </div>
       </header>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="m-0 text-2xl font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="m-0 text-2xl font-semibold text-slate-900">
           How the finder works
         </h2>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           This is a guided recommendation tool, not a keyword search. It compares
           your answers with structured scholarship data, then explains why each
           scholarship appears as a strong match, a good match, or an option
@@ -144,11 +144,11 @@ export default function FindScholarshipsPage() {
 
       <FinderWizard scholarships={finderScholarships} options={finderOptions} />
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="m-0 text-2xl font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="m-0 text-2xl font-semibold text-slate-900">
           Scholarship finder FAQ
         </h2>
-        <div className="mt-4 divide-y divide-gray-200 rounded-xl border border-gray-200">
+        <div className="mt-4 divide-y divide-slate-200 rounded-xl border border-slate-200">
           {[
             {
               question: "Are these guaranteed recommendations?",
@@ -166,11 +166,11 @@ export default function FindScholarshipsPage() {
                 "No. Scholarships Central is information-only and links you to official external application pages.",
             },
           ].map((item) => (
-            <details key={item.question} className="p-4 open:bg-gray-50">
-              <summary className="cursor-pointer list-none text-sm font-semibold text-gray-900">
+            <details key={item.question} className="p-4 open:bg-slate-50">
+              <summary className="cursor-pointer list-none text-sm font-semibold text-slate-900">
                 {item.question}
               </summary>
-              <p className="mt-3 mb-0 text-sm text-gray-700">{item.answer}</p>
+              <p className="mt-3 mb-0 text-sm text-slate-700">{item.answer}</p>
             </details>
           ))}
         </div>
@@ -178,10 +178,10 @@ export default function FindScholarshipsPage() {
 
       <section className="space-y-4">
         <div>
-          <h2 className="m-0 text-2xl font-semibold text-gray-900">
+          <h2 className="m-0 text-2xl font-semibold text-slate-900">
             Continue exploring
           </h2>
-          <p className="mt-1 mb-0 text-sm text-gray-600">
+          <p className="mt-1 mb-0 text-sm text-slate-600">
             Use these pages when you want to browse manually by deadline,
             funding type, or destination.
           </p>
@@ -208,8 +208,8 @@ export default function FindScholarshipsPage() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="m-0 text-2xl font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="m-0 text-2xl font-semibold text-slate-900">
           Related guides
         </h2>
         <div className="mt-4 flex flex-wrap gap-3 text-sm">

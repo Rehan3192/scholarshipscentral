@@ -16,7 +16,7 @@ export default function Breadcrumbs({ items }: Props) {
 
   return (
     <nav aria-label="Breadcrumb">
-      <ol className="flex min-w-0 flex-wrap gap-1 text-sm text-gray-600">
+      <ol className="flex min-w-0 flex-wrap gap-1 text-sm text-slate-600">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
 
@@ -35,7 +35,7 @@ export default function Breadcrumbs({ items }: Props) {
               ) : (
                 <span
                   aria-current="page"
-                  className="min-w-0 break-words font-medium text-gray-800"
+                  className="min-w-0 break-words font-medium text-slate-800"
                 >
                   {item.label}
                 </span>

@@ -123,10 +123,10 @@ export default function ItalyScholarshipsStillOpen2026Page() {
       <ItemListJsonLd pagePath="/italy-scholarships-still-open-2026" items={items} />
 
       <header className="space-y-3">
-        <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
           Italy scholarships still open 2026
         </h1>
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           This page is built for action, not browsing. If you want Italy routes
           currently open, still accepting applications, or using rolling 2026
           calls, start here and work from the deadlines approaching first.
@@ -135,11 +135,11 @@ export default function ItalyScholarshipsStillOpen2026Page() {
           <Link href="/scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">
             Back to scholarships still open 2026
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link href="/countries/italy" className="font-medium text-blue-700 hover:underline">
             Return to Italy scholarships 2026
           </Link>
-          <span className="text-gray-400">&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <Link href="/fully-funded-scholarships-in-italy-2026" className="font-medium text-blue-700 hover:underline">
             Compare Italy fully funded routes
           </Link>
@@ -147,57 +147,57 @@ export default function ItalyScholarshipsStillOpen2026Page() {
       </header>
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Currently open
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {italyOpenScholarships.length}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Italy scholarships still accepting applications in the current 2026 cycle.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Deadlines approaching
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {Math.max(italyOpenScholarships.length - rollingCount, 0)}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Italy routes where timing matters more than long-term comparison.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Rolling or variable
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {rollingCount}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Italy routes using rolling or call-based timing language right now.
           </p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
             Fully funded among them
           </p>
-          <p className="mb-0 text-3xl font-bold text-gray-900">
+          <p className="mb-0 text-3xl font-bold text-slate-900">
             {fullyFundedCount}
           </p>
-          <p className="mt-2 mb-0 text-sm text-gray-600">
+          <p className="mt-2 mb-0 text-sm text-slate-600">
             Still-open Italy routes that already match full-funding preference.
           </p>
         </div>
       </section>
 
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-        <h2 className="mt-0 text-lg font-semibold text-gray-900">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-lg font-semibold text-slate-900">
           Where to find more Italy options
         </h2>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Use{" "}
           <Link href="/countries/italy" className="font-medium text-blue-700 hover:underline">
             Italy scholarships 2026
@@ -208,7 +208,7 @@ export default function ItalyScholarshipsStillOpen2026Page() {
           </Link>
           {" "}to compare current deadlines across countries.
         </p>
-        <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+        <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
           Use{" "}
           <Link href="/fully-funded-scholarships-in-italy-2026" className="font-medium text-blue-700 hover:underline">
             fully funded scholarships in Italy 2026
@@ -223,10 +223,10 @@ export default function ItalyScholarshipsStillOpen2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             Italy urgency related scholarship pages
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             Move between the Italy scholarship options, the deadline hub, and funding-qualified pages without losing context.
           </p>
         </div>
@@ -240,10 +240,10 @@ export default function ItalyScholarshipsStillOpen2026Page() {
       {applyFirstScholarships.length > 0 ? (
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h2 className="mt-0 text-lg font-semibold text-gray-900">
+            <h2 className="mt-0 text-lg font-semibold text-slate-900">
               Apply-first Italy opportunities
             </h2>
-            <p className="mb-0 text-sm text-gray-600">
+            <p className="mb-0 text-sm text-slate-600">
               Start with these routes if you want the strongest Italy pages currently open or deadlines approaching.
             </p>
           </div>
@@ -256,11 +256,11 @@ export default function ItalyScholarshipsStillOpen2026Page() {
       ) : null}
 
       {languageFlexibleCount > 0 ? (
-        <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+        <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             If you also need language flexibility
           </h2>
-          <p className="mt-3 mb-0 text-sm leading-7 text-gray-700">
+          <p className="mt-3 mb-0 text-sm leading-7 text-slate-700">
             Right now, {languageFlexibleCount} Italy routes in the still-open pool
             also discuss language-proof flexibility. Use{" "}
             <Link href="/italy-scholarships-without-ielts-2026" className="font-medium text-blue-700 hover:underline">
@@ -273,10 +273,10 @@ export default function ItalyScholarshipsStillOpen2026Page() {
 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             All Italy scholarships still accepting applications
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             {italyOpenScholarships.length} scholarship{italyOpenScholarships.length === 1 ? "" : "s"}
           </p>
         </div>

@@ -196,8 +196,8 @@ function QuickFilterPill({
       className={[
         "inline-flex items-center rounded-full px-3 py-1.5 text-sm font-semibold transition-colors duration-200 motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2",
         active
-          ? "bg-gray-900 text-white hover:bg-gray-800"
-          : "border border-gray-300 bg-white text-gray-900 hover:bg-gray-50",
+          ? "bg-slate-900 text-white hover:bg-slate-800"
+          : "border border-slate-300 bg-white text-slate-900 hover:bg-slate-50",
       ].join(" ")}
     >
       {label}
@@ -215,7 +215,7 @@ function ActiveFilterChip({
   return (
     <Link
       href={href}
-      className="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-gray-50 px-3 py-1.5 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+      className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
     >
       {label}
       <span aria-hidden="true">×</span>
@@ -300,16 +300,16 @@ function ArticleSearchResults({
         <div>
           <h2
             id="article-search-results"
-            className="mt-0 text-2xl font-semibold text-gray-900"
+            className="mt-0 text-2xl font-semibold text-slate-900"
           >
             Articles
           </h2>
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             Guides and updates matching “{normalizedQuery}”.
           </p>
         </div>
         {totalBlogPosts > 0 ? (
-          <p className="mb-0 text-sm text-gray-600">
+          <p className="mb-0 text-sm text-slate-600">
             {totalBlogPosts} article{totalBlogPosts === 1 ? "" : "s"}
           </p>
         ) : null}
@@ -328,14 +328,14 @@ function ArticleSearchResults({
             return (
               <article
                 key={post.id}
-                className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
+                className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
               >
                 {postDate ? (
-                  <p className="mb-0 text-xs font-semibold text-gray-500">
+                  <p className="mb-0 text-xs font-semibold text-slate-500">
                     {postDate}
                   </p>
                 ) : null}
-                <h3 className="mt-2 text-lg font-semibold text-gray-900">
+                <h3 className="mt-2 text-lg font-semibold text-slate-900">
                   <Link
                     href={href}
                     className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
@@ -343,7 +343,7 @@ function ArticleSearchResults({
                     {title}
                   </Link>
                 </h3>
-                <p className="mt-2 text-sm text-gray-700">{excerpt}</p>
+                <p className="mt-2 text-sm text-slate-700">{excerpt}</p>
                 <Link
                   href={href}
                   aria-label={`Read ${title}`}
@@ -356,7 +356,7 @@ function ArticleSearchResults({
           })}
         </div>
       ) : (
-        <div className="rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-700">
+        <div className="rounded-xl border border-slate-200 bg-white p-6 text-sm text-slate-700">
           No articles match this search.
         </div>
       )}
@@ -463,10 +463,10 @@ export default async function ScholarshipsPage({
       <ItemListJsonLd pagePath="/scholarships" items={topItems} />
 
       <header className="order-1 space-y-2">
-        <h1 className="mb-0 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
           All Scholarships
         </h1>
-        <p className="mb-0 text-sm text-gray-600">
+        <p className="mb-0 text-sm text-slate-600">
           Filter by country, degree level, and funding type. We only link to
           official external application pages.
         </p>
@@ -474,27 +474,27 @@ export default async function ScholarshipsPage({
           <Link href="/scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">
             Scholarships still open 2026
           </Link>
-          <span className="text-gray-400">•</span>
+          <span className="text-slate-400">•</span>
           <Link href="/europe-scholarships-2026" className="font-medium text-blue-700 hover:underline">
             Europe scholarships 2026
           </Link>
-          <span className="text-gray-400">•</span>
+          <span className="text-slate-400">•</span>
           <Link href="/fully-funded-scholarships-2026" className="font-medium text-blue-700 hover:underline">
             Fully funded scholarships 2026
           </Link>
         </div>
       </header>
 
-      <section className="order-3 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
+      <section className="order-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="mt-0 text-base font-semibold text-gray-900">
+          <h2 className="mt-0 text-base font-semibold text-slate-900">
             Quick filters
           </h2>
           <Link
             href="/scholarships"
             className={[
               "text-sm font-medium hover:underline",
-              hasActiveFilters ? "text-blue-700" : "text-gray-400",
+              hasActiveFilters ? "text-blue-700" : "text-slate-400",
             ].join(" ")}
           >
             Clear filters
@@ -531,17 +531,17 @@ export default async function ScholarshipsPage({
       </section>
 
       <div className="order-4 grid gap-6 lg:grid-cols-[280px_1fr]">
-        <aside className="h-fit rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-          <h2 className="mt-0 text-lg font-semibold text-gray-900">
+        <aside className="h-fit rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <h2 className="mt-0 text-lg font-semibold text-slate-900">
             Filter scholarships
           </h2>
-          <p className="mt-1 text-sm text-gray-600">
+          <p className="mt-1 text-sm text-slate-600">
             Narrow results by country, degree level, or funding type.
           </p>
 
           <form method="get" action="/scholarships" className="mt-5 space-y-4">
             <div className="space-y-1">
-              <label htmlFor="filter-q" className="text-sm font-medium text-gray-700">
+              <label htmlFor="filter-q" className="text-sm font-medium text-slate-700">
                 Search
               </label>
               <input
@@ -549,14 +549,14 @@ export default async function ScholarshipsPage({
                 name="q"
                 defaultValue={query}
                 placeholder="Title, provider, keyword..."
-                className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600"
               />
             </div>
 
             <div className="space-y-1">
               <label
                 htmlFor="filter-country"
-                className="text-sm font-medium text-gray-700"
+                className="text-sm font-medium text-slate-700"
               >
                 Country
               </label>
@@ -564,7 +564,7 @@ export default async function ScholarshipsPage({
                 id="filter-country"
                 name="country"
                 defaultValue={country}
-                className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
               >
                 <option value="All">All</option>
                 {COUNTRIES.map((item) => (
@@ -578,7 +578,7 @@ export default async function ScholarshipsPage({
             <div className="space-y-1">
               <label
                 htmlFor="filter-degree"
-                className="text-sm font-medium text-gray-700"
+                className="text-sm font-medium text-slate-700"
               >
                 Degree level
               </label>
@@ -586,7 +586,7 @@ export default async function ScholarshipsPage({
                 id="filter-degree"
                 name="degree"
                 defaultValue={degree}
-                className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
               >
                 <option value="All">All</option>
                 {DEGREE_LEVELS.map((item) => (
@@ -600,7 +600,7 @@ export default async function ScholarshipsPage({
             <div className="space-y-1">
               <label
                 htmlFor="filter-funding"
-                className="text-sm font-medium text-gray-700"
+                className="text-sm font-medium text-slate-700"
               >
                 Funding type
               </label>
@@ -608,7 +608,7 @@ export default async function ScholarshipsPage({
                 id="filter-funding"
                 name="funding"
                 defaultValue={funding}
-                className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
               >
                 <option value="All">All</option>
                 {FUNDING_TYPES.map((item) => (
@@ -620,14 +620,14 @@ export default async function ScholarshipsPage({
             </div>
 
             <div className="space-y-1">
-              <label htmlFor="sort" className="text-sm font-medium text-gray-700">
+              <label htmlFor="sort" className="text-sm font-medium text-slate-700">
                 Sort
               </label>
               <select
                 id="sort"
                 name="sort"
                 defaultValue={sort}
-                className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
               >
                 <option value="updated">Recently updated</option>
                 <option value="deadline">Upcoming deadline</option>
@@ -638,13 +638,13 @@ export default async function ScholarshipsPage({
             <div className="flex flex-wrap gap-2">
               <button
                 type="submit"
-                className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+                className="inline-flex items-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
               >
                 Apply filters
               </button>
               <Link
                 href="/scholarships"
-                className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
               >
                 Reset filters
               </Link>
@@ -655,10 +655,10 @@ export default async function ScholarshipsPage({
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <div className="space-y-0.5">
-              <h2 className="mt-0 text-lg font-semibold text-gray-900">
+              <h2 className="mt-0 text-lg font-semibold text-slate-900">
                 Results
               </h2>
-              <p className="mb-0 text-sm text-gray-600">
+              <p className="mb-0 text-sm text-slate-600">
                 {sorted.length} scholarship{sorted.length === 1 ? "" : "s"}
                 {normalizedQuery && totalBlogPosts > 0
                   ? ` · ${totalBlogPosts} article${totalBlogPosts === 1 ? "" : "s"}`
@@ -668,8 +668,8 @@ export default async function ScholarshipsPage({
           </div>
 
           {hasActiveFilters ? (
-            <div className="flex flex-wrap items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm">
-              <span className="font-medium text-gray-700">Active filters:</span>
+            <div className="flex flex-wrap items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm">
+              <span className="font-medium text-slate-700">Active filters:</span>
 
               {query.trim() ? (
                 <ActiveFilterChip
@@ -735,7 +735,7 @@ export default async function ScholarshipsPage({
 
               <Link
                 href="/scholarships"
-                className="ml-auto inline-flex items-center rounded-lg bg-gray-900 px-3 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+                className="ml-auto inline-flex items-center rounded-lg bg-slate-900 px-3 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
               >
                 Clear all
               </Link>
@@ -744,7 +744,7 @@ export default async function ScholarshipsPage({
 
           {sorted.length === 0 ? (
             <>
-              <div className="rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-700">
+              <div className="rounded-xl border border-slate-200 bg-white p-6 text-sm text-slate-700">
                 <p className="mb-3">
                   {blogPosts.length > 0
                     ? `No scholarship records match “${normalizedQuery}”, but we found ${totalBlogPosts} matching article${totalBlogPosts === 1 ? "" : "s"}.`
@@ -752,7 +752,7 @@ export default async function ScholarshipsPage({
                 </p>
                 <Link
                   href="/scholarships"
-                  className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+                  className="inline-flex items-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
                 >
                   Clear filters
                 </Link>
@@ -774,7 +774,7 @@ export default async function ScholarshipsPage({
                 ))}
               </div>
 
-              <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700">
+              <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700">
                 <span>
                   Page {currentPage} of {totalPages}
                 </span>
@@ -791,7 +791,7 @@ export default async function ScholarshipsPage({
                     })}
                     aria-disabled={currentPage <= 1}
                     className={[
-                      "rounded-lg border border-gray-300 bg-white px-3 py-2 font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50",
+                      "rounded-lg border border-slate-300 bg-white px-3 py-2 font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50",
                       currentPage <= 1 ? "pointer-events-none opacity-50" : "",
                     ].join(" ")}
                   >
@@ -808,7 +808,7 @@ export default async function ScholarshipsPage({
                     })}
                     aria-disabled={currentPage >= totalPages}
                     className={[
-                      "rounded-lg border border-gray-300 bg-white px-3 py-2 font-semibold text-gray-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-50",
+                      "rounded-lg border border-slate-300 bg-white px-3 py-2 font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50",
                       currentPage >= totalPages ? "pointer-events-none opacity-50" : "",
                     ].join(" ")}
                   >

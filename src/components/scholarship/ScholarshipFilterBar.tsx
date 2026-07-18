@@ -28,8 +28,8 @@ function PillLink({
     "inline-flex items-center rounded-full px-3 py-1.5 text-sm font-semibold transition-colors duration-200 motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2";
   const styles =
     variant === "primary"
-      ? "bg-gray-900 text-white hover:bg-gray-800"
-      : "border border-gray-300 bg-white text-gray-900 hover:bg-gray-50";
+      ? "bg-slate-900 text-white hover:bg-slate-800"
+      : "border border-slate-300 bg-white text-slate-900 hover:bg-slate-50";
 
   return (
     <Link href={href} className={`${base} ${styles}`}>

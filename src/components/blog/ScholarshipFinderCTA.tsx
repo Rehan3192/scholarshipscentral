@@ -70,7 +70,7 @@ export default function ScholarshipFinderCTA(props: Props) {
   return (
     <aside
       aria-labelledby="scholarship-finder-cta-heading"
-      className="my-8 rounded-2xl border border-blue-200 bg-blue-50 p-5 text-gray-900 sm:p-6"
+      className="my-8 rounded-2xl border border-blue-200 bg-blue-50 p-5 text-slate-900 sm:p-6"
     >
       <p className="m-0 text-xs font-bold uppercase tracking-wide text-blue-700">
         <span aria-hidden="true">✨ </span>
@@ -78,15 +78,15 @@ export default function ScholarshipFinderCTA(props: Props) {
       </p>
       <h2
         id="scholarship-finder-cta-heading"
-        className="mt-2 mb-0 text-xl font-semibold text-gray-900 sm:text-2xl"
+        className="mt-2 mb-0 text-xl font-semibold text-slate-900 sm:text-2xl"
       >
         Find Scholarships That Match Your Profile
       </h2>
-      <p className="mt-3 mb-0 max-w-3xl text-sm leading-6 text-gray-700">
+      <p className="mt-3 mb-0 max-w-3xl text-sm leading-6 text-slate-700">
         Answer a few questions and instantly discover scholarships that match
         your degree, funding needs, destination, and study goals.
       </p>
-      <ul className="mt-4 mb-0 grid gap-2 text-sm text-gray-700 sm:grid-cols-3">
+      <ul className="mt-4 mb-0 grid gap-2 text-sm text-slate-700 sm:grid-cols-3">
         <li><span aria-hidden="true" className="font-semibold text-emerald-700">✓</span> Personalized recommendations</li>
         <li><span aria-hidden="true" className="font-semibold text-emerald-700">✓</span> Fully funded opportunities</li>
         <li><span aria-hidden="true" className="font-semibold text-emerald-700">✓</span> Takes less than 2 minutes</li>
@@ -95,11 +95,11 @@ export default function ScholarshipFinderCTA(props: Props) {
         <Link
           href={buildFinderHref(props)}
           aria-label="Find scholarships that match your profile"
-          className="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+          className="inline-flex items-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
         >
           Find Scholarships &rarr;
         </Link>
-        <span className="text-xs font-medium text-gray-600">No signup required.</span>
+        <span className="text-xs font-medium text-slate-600">No signup required.</span>
       </div>
     </aside>
   );

@@ -52,7 +52,7 @@ export default function FinderResults({
 
   return (
     <section className="space-y-5" aria-labelledby="finder-results-heading">
-      <div className="grid gap-5 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-gray-900 sm:grid-cols-[minmax(0,1fr)_220px] sm:items-center">
+      <div className="grid gap-5 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-slate-900 sm:grid-cols-[minmax(0,1fr)_220px] sm:items-center">
         <div>
           <h2 id="finder-results-heading" className="m-0 text-xl font-semibold">
             <span aria-hidden="true">🎉 </span>
@@ -81,29 +81,29 @@ export default function FinderResults({
         />
       </div>
 
-      <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
-        <h3 className="m-0 text-base font-semibold text-gray-900">What the recommendation labels mean</h3>
+      <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <h3 className="m-0 text-base font-semibold text-slate-900">What the recommendation labels mean</h3>
         <dl className="mt-3 grid gap-3 text-sm sm:grid-cols-2">
           {levels.map((level) => (
             <div key={level}>
-              <dt className="font-semibold text-gray-900">{level}</dt>
-              <dd className="mt-1 text-gray-600">{LABEL_DESCRIPTIONS[level]}</dd>
+              <dt className="font-semibold text-slate-900">{level}</dt>
+              <dd className="mt-1 text-slate-600">{LABEL_DESCRIPTIONS[level]}</dd>
             </div>
           ))}
         </dl>
       </div>
 
-      <aside className="rounded-2xl border border-blue-200 bg-blue-50 p-5 text-sm leading-6 text-gray-800" aria-label="Recommendation trust notice">
+      <aside className="rounded-2xl border border-blue-200 bg-blue-50 p-5 text-sm leading-6 text-slate-800" aria-label="Recommendation trust notice">
         <p className="m-0">Recommendations are generated using scholarship eligibility, funding, destination preferences and currently available structured data.</p>
         <p className="mt-2 mb-0 font-medium">Always verify final eligibility on the official scholarship website before applying.</p>
       </aside>
 
       <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h3 className="m-0 text-2xl font-semibold text-gray-900">
+          <h3 className="m-0 text-2xl font-semibold text-slate-900">
             Recommendations
           </h3>
-          <p className="mt-1 text-sm text-gray-600">
+          <p className="mt-1 text-sm text-slate-600">
             Showing {recommendations.length} of {totalRecommendations} scholarship matches.
           </p>
         </div>
