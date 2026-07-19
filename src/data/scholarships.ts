@@ -1258,6 +1258,391 @@ function winnipegPresidentReaderSections(level: WinnipegLevel): ScholarshipConte
 
 const rawScholarships: Scholarship[] = [
   {
+    slug: "rhodes-scholarship-2027-usa",
+    title: "32 Rhodes Scholarships for U.S. Students: Fully Funded Oxford Study in 2027",
+    seoTitle: "Rhodes Scholarship 2027 USA: Funding, GPA and Deadline",
+    metaDescription:
+      "Thirty-two Rhodes Scholarships are open for U.S. applicants. Check Oxford funding, eligible degrees, GPA guidance, documents, interviews and the October 7 deadline.",
+    keywords: [
+      "Rhodes Scholarship 2027 USA",
+      "Rhodes Scholarship United States",
+      "Oxford fully funded scholarship",
+      "Rhodes Scholarship GPA",
+      "Rhodes Scholarship deadline 2026",
+      "Rhodes Scholarship U.S. applicants",
+    ],
+    overview:
+      "The Rhodes Scholarship 2027 U.S. competition is open for U.S. citizens, lawful permanent residents, and eligible DACA recipients. Thirty-two scholarships are available across 16 regional districts for full-time postgraduate study at the University of Oxford beginning in October 2027.",
+    introduction:
+      "The Rhodes Scholarship 2027 is now open for students and recent graduates applying through the United States. It provides funding for eligible full-time postgraduate study at the University of Oxford in the United Kingdom. This guide explains what the scholarship pays for, which Oxford degrees are covered, who qualifies, the GPA applicants are expected to have, the documents and references required, and what happens during the final in-person interview.",
+    summary:
+      "Open for the U.S. competition from July 1 to October 7, 2026, at 11:59 p.m. Eastern Time. The route offers 32 fully funded Oxford postgraduate scholarships, with two scholars selected from each of 16 U.S. districts. Last officially checked: July 19, 2026.",
+    country: "United Kingdom",
+    continent: "Europe",
+    degreeLevel: "Masters",
+    fundingType: "Fully Funded",
+    tags: [
+      "United Kingdom",
+      "USA",
+      "Oxford",
+      "Rhodes Scholarship",
+      "Masters",
+      "PhD",
+      "Fully funded",
+      "Open",
+      "October deadline",
+    ],
+    deadline: "October 7, 2026, 11:59 p.m. Eastern Time",
+    duration:
+      "Normally two years, with longer support possible for approved routes such as some DPhil programs",
+    eligibility: [
+      "Applicant group: U.S. citizens, lawful permanent residents, and applicants with active DACA status",
+      "Age route 1: Applicants aged 18-23 on October 1, 2026",
+      "Age route 2: Applicants under 27 on October 1, 2026, who completed the first undergraduate degree on or after October 1, 2025",
+      "Education: Undergraduate degree completed by July 2027",
+      "Academic benchmark: GPA of 3.70/4.00 or higher, without rounding, is the published competitive benchmark",
+      "Oxford admission: Applicants must later meet the admission requirements of the proposed Oxford course",
+      "Constituency: Applicants cannot apply through multiple Rhodes constituencies or districts at the same time",
+      "Important: Studying in the United States does not automatically make an international student eligible for the U.S. Rhodes competition",
+    ],
+    benefits: [
+      "Oxford University course fees for the approved program",
+      "Annual living stipend; the latest published 2025-26 figure is £20,400 per year or £1,700 per month, which should not be treated as the confirmed 2027 rate",
+      "Oxford application fee after Rhodes selection",
+      "Student visa fee and Immigration Health Surcharge",
+      "Two economy-class flights",
+      "Settling-in allowance",
+      "Certain visa-renewal costs when moving to a second approved course",
+      "Important: The stipend is intended for the scholar's own expenses and is not designed to support a partner or dependents",
+    ],
+    applicationProcess: [
+      "Confirm eligibility for the U.S. Rhodes constituency.",
+      "Determine the correct U.S. district based on study, bachelor's degree, or legal residence rules.",
+      "Contact your university fellowship or scholarship office immediately to ask for its internal Rhodes endorsement deadline.",
+      "Complete the university endorsement process before the campus deadline.",
+      "Research eligible full-time Oxford postgraduate courses and create a credible study plan.",
+      "Register five to eight referees and give them the official referee guidance.",
+      "Prepare transcript, CV, identification, academic statement, personal statement, and status documents.",
+      "Submit the Rhodes application online before October 7, 2026, at 11:59 p.m. Eastern Time.",
+      "Ensure references and institutional endorsement are submitted by the required deadline.",
+      "Attend the district reception and in-person interview if shortlisted.",
+      "If selected, apply separately to Oxford and satisfy the chosen course's admission requirements.",
+    ],
+    documents: [
+      "Passport, birth certificate, or government-issued identification",
+      "Green card for lawful permanent residents",
+      "Current DACA approval and employment authorization evidence for DACA applicants",
+      "Official university transcripts and academic history",
+      "Proposed Oxford course choices",
+      "Official English translations when documents are not in English",
+      "Institutional endorsement from the applicant's college or university",
+      "CV of no more than two U.S. letter-size pages",
+      "Separate head-and-shoulders color photograph",
+      "Academic statement of up to 450 words",
+      "Personal statement of up to 1,000 words",
+      "Five to eight references, with at least four normally from academics who taught and graded the applicant",
+    ],
+    selectionCriteria: [
+      "Academic excellence and strong intellectual ability",
+      "Energy to use talents fully through sustained accomplishment beyond the classroom",
+      "Truth, courage, devotion to duty, sympathy for and protection of the weak, kindliness, unselfishness, and fellowship",
+      "Moral force of character and instincts to lead and take an interest in others",
+      "Coherent Oxford course rationale and evidence that the applicant can contribute to the Rhodes community",
+    ],
+    tips: [
+      "Do not wait until the national deadline. Many universities set internal endorsement deadlines weeks earlier.",
+      "Treat 3.70/4.00 as the published competitive GPA benchmark. Applicants below it need institutional support for a formal exception request.",
+      "Do not assume Rhodes selection guarantees Oxford admission. Scholarship selection and Oxford admission are separate.",
+      "Use referees who know your work well. A detailed letter from a close academic mentor is stronger than a generic letter from a famous person.",
+      "Keep the personal statement in your own voice. Current Rhodes instructions restrict outside editing of the personal statement.",
+      "Check course exclusions and duration rules before building a study plan.",
+    ],
+    goodToKnow: [
+      "The U.S. competition has 16 regional districts, and each district selects two scholars.",
+      "For the 2027 U.S. competition, district receptions and interviews are scheduled for November 13-14, 2026.",
+      "The final stage is in person and includes a social-engagement event and oral interview; no candidate can be selected without an interview.",
+      "Interviewees are generally expected to cover their own travel expenses.",
+      "The Rhodes route is not a general 'international students in the U.S.' route. It is for U.S. citizens, lawful permanent residents, and eligible DACA recipients unless another constituency route applies.",
+    ],
+    contentSections: [
+      {
+        title: "Rhodes Scholarship 2027 at a glance",
+        facts: [
+          { label: "Scholarship", value: "Rhodes Scholarship 2027" },
+          { label: "Host university", value: "University of Oxford" },
+          { label: "Study country", value: "United Kingdom" },
+          {
+            label: "Applicant group",
+            value: "U.S. citizens, lawful permanent residents, and eligible DACA recipients",
+          },
+          { label: "Degree level", value: "Full-time postgraduate study" },
+          { label: "Number of U.S. awards", value: "32" },
+          { label: "Funding type", value: "Fully funded" },
+          { label: "Application fee", value: "No Rhodes application fee" },
+          { label: "Applications opened", value: "July 1, 2026" },
+          { label: "Deadline", value: "October 7, 2026, 11:59 p.m. ET" },
+          { label: "Oxford entry", value: "October 2027" },
+          { label: "Application mode", value: "Online" },
+          { label: "Final interview", value: "In person" },
+          { label: "Last officially checked", value: "July 19, 2026" },
+        ],
+        paragraphs: [
+          "This page is specifically for the U.S. Rhodes Scholarship competition. Rhodes eligibility, deadlines, and documents differ by constituency, so a generic worldwide article can mislead readers. Applicants from Pakistan, India, Canada, Australia, or other constituencies should use their own official Rhodes route rather than assuming the U.S. rules apply.",
+          "The Rhodes Scholarship is administered by the Rhodes Trust and supports selected scholars for full-time postgraduate study at the University of Oxford. For the United States, 32 awards are available, with two scholars selected through each of 16 regional districts.",
+        ],
+      },
+      {
+        title: "Where the Rhodes Scholarship is offered",
+        paragraphs: [
+          "The scholarship is administered by the Rhodes Trust, while study takes place at the University of Oxford in the United Kingdom. The U.S. competition covers the 50 states, the District of Columbia, and U.S. territories listed by Rhodes, including Puerto Rico, the U.S. Virgin Islands, American Samoa, Guam, and the Northern Mariana Islands.",
+          "The U.S. route is divided into 16 selection districts. District placement can depend on where the applicant studied, received a bachelor's degree, or legally resides. Applicants cannot apply through more than one Rhodes district or constituency at the same time, so the correct district must be confirmed before submission.",
+        ],
+        bullets: [
+          "Districts 1-4 include parts of New England, New York, New Jersey, and Pennsylvania.",
+          "Districts 5-8 include Delaware, Maryland/DC, the Southeast, Oklahoma, and Texas.",
+          "Districts 9-12 include parts of the Midwest, Virginia, West Virginia, Arkansas, Iowa, Kansas, Missouri, and Tennessee.",
+          "Districts 13-16 include much of the Mountain West, Pacific states, Hawaii, American Samoa, Guam, and the Northern Mariana Islands.",
+        ],
+      },
+      {
+        title: "Is the Rhodes Scholarship fully funded?",
+        paragraphs: [
+          "Yes, the Rhodes Scholarship is a fully funded postgraduate scholarship, but students should understand exactly what that means. Rhodes covers Oxford University course fees, a living stipend, the Oxford application fee after selection, student visa fee, Immigration Health Surcharge, two economy-class flights, a settling-in allowance, and some visa-renewal costs when moving to a second approved course.",
+          "The latest officially published stipend figure is £20,400 per year, or £1,700 per month, for 2025-26. Because that figure belongs to the 2025-26 year, applicants should not treat it as the guaranteed 2027 amount. Rhodes may revise stipend rates for later years.",
+          "The stipend is intended for the scholar's own living expenses. It is not designed to support a spouse, partner, children, or other dependents. Applicants with family responsibilities should prepare a separate realistic budget before accepting any award.",
+        ],
+      },
+      {
+        title: "Which degree levels and Oxford courses are funded?",
+        paragraphs: [
+          "The Rhodes Scholarship is for postgraduate study only. It does not fund bachelor's degrees. Eligible plans can include master's degrees, MPhil programs, DPhil programs, Oxford's term for a PhD, two approved consecutive one-year master's programs, or certain approved combinations of postgraduate degrees.",
+          "A single one-year course by itself is generally not enough for a standard Rhodes study plan, although two consecutive eligible one-year courses may be proposed. Rhodes normally expects a coherent plan covering at least two years of study.",
+          "Most full-time Oxford postgraduate courses can be considered, but important exclusions exist. Rhodes generally does not cover part-time study, PGCert or PGDip programs, the DClinPsych, or graduate-entry medicine. Applicants should check the official Rhodes course conditions and the Oxford course directory before choosing a first and second course.",
+          "Winning Rhodes does not automatically admit someone to Oxford. Scholarship selection and Oxford admission are separate. A selected Rhodes candidate still applies to Oxford and must satisfy the chosen department's academic and language requirements.",
+        ],
+        bullets: [
+          "Common areas include humanities, social sciences, law, public policy, business, economics, computer science, engineering, environmental studies, medical sciences, life sciences, education, mathematics, and physical sciences.",
+          "Course research should cover degree type, duration, department, minimum academic requirement, English-language level, research proposal rules, written work, and the official Oxford course page.",
+        ],
+      },
+      {
+        title: "U.S. eligibility self-check",
+        paragraphs: [
+          "The U.S. Rhodes Scholarship is not automatically open to every international student studying in America. Applicants must satisfy the U.S. citizenship, lawful permanent-residence, or active DACA condition unless they are formally eligible through another Rhodes constituency or inter-jurisdictional consideration.",
+          "The applicant must be a U.S. citizen, a lawful permanent resident, or a person with active DACA status. They must also meet one of the age routes: aged 18-23 on October 1, 2026, or under 27 on October 1, 2026, with the first undergraduate degree completed on or after October 1, 2025.",
+          "Applicants must complete an undergraduate degree by July 2027 and must be academically ready for the Oxford course they propose. The Rhodes eligibility check is only the first step; the Oxford department still controls course admission after selection.",
+        ],
+      },
+      {
+        title: "What GPA is required?",
+        paragraphs: [
+          "The published competitive benchmark for U.S. applicants is a GPA of 3.70/4.00 or higher, without rounding. This is one of the most searched Rhodes questions because students want to know whether the application is realistic before asking for institutional endorsement.",
+          "A careful way to explain the rule is this: a 3.70 GPA is the published competitive benchmark. Exceptional applicants below it require institutional support for a formal exception. Applicants below 3.70 are not automatically treated as normal applicants; a university president or another designated senior administrator must submit an exception request. For the 2027 U.S. competition, such requests should arrive by September 15, 2026.",
+          "Candidates must also meet the academic requirements of the chosen Oxford course. A high GPA does not replace course prerequisites, writing samples, research fit, language requirements, or departmental review.",
+        ],
+      },
+      {
+        title: "IELTS, GRE, English tests, and course-specific requirements",
+        paragraphs: [
+          "The official U.S. Rhodes process does not list a separate Rhodes written examination, aptitude test, or online screening test. The decisive final stage is the district interview process, not a hidden written exam.",
+          "Applicants whose first language is not English must be ready to meet Oxford's higher-level English-language requirement. However, English-language evidence is not normally uploaded as part of the initial Rhodes application. It becomes relevant when the selected candidate applies to Oxford or when a specific course requires proof.",
+          "Individual Oxford programs can request extra materials. Depending on the course, applicants may need written work, a research proposal, portfolio, professional experience, subject prerequisites, English-language scores, or departmental interviews. Always separate Rhodes requirements from Oxford course requirements.",
+        ],
+      },
+      {
+        title: "Documents required",
+        paragraphs: [
+          "The Rhodes application is document-heavy because it combines eligibility, institutional endorsement, academic planning, leadership evidence, and references. Students should begin early enough to give their university and referees time to complete their parts.",
+          "A critical rule concerns the personal statement. The Rhodes personal statement must represent the applicant's own voice. Current instructions state that it cannot be edited by other people. This matters for applicants using consultants, friends, or generative AI tools: help with planning is not the same as outside rewriting.",
+        ],
+        bullets: [
+          "Identity/status evidence: passport, birth certificate, government ID, green card, or current DACA approval and employment authorization evidence",
+          "Academic evidence: official transcripts, academic history, proposed Oxford course choices, and translations when needed",
+          "Application materials: institutional endorsement, two-page CV, head-and-shoulders color photograph, 450-word academic statement, 1,000-word personal statement, and five to eight references",
+          "References: at least four referees should normally be academics who formally taught and graded the applicant, and at least one should address character, leadership, service, or extracurricular involvement",
+        ],
+      },
+      {
+        title: "Institutional endorsement requirement",
+        paragraphs: [
+          "U.S. applicants must obtain endorsement from their college or university. This is separate from recommendation letters and is one of the biggest practical barriers in the U.S. Rhodes process.",
+          "Many universities impose an internal campus deadline that is considerably earlier than the official October 7 Rhodes deadline. A student who waits until October may already be too late for endorsement. Contact the university fellowship or scholarship office immediately and ask for the internal Rhodes endorsement deadline.",
+          "Graduates should normally contact the fellowship office of the institution that awarded their bachelor's degree. If the applicant has attended multiple institutions, the official Rhodes and campus guidance should be checked carefully before deciding where endorsement should come from.",
+        ],
+      },
+      {
+        title: "Selection process and interview format",
+        paragraphs: [
+          "The process begins with document review. Committees assess eligibility, completeness, academic achievement, leadership, service, character, course rationale, references, and endorsement. Regional committees then longlist and shortlist candidates for district interviews.",
+          "For the 2027 U.S. competition, district receptions and interviews are scheduled for November 13-14, 2026. The final stage is an oral interview conducted in person and accompanied by a social-engagement event. It is not a faceless screening test and is not listed as a separate written examination.",
+          "Candidates must attend the required district activities in person, and current U.S. guidance says interviewees are generally expected to cover their own travel expenses. No candidate can be selected without an interview.",
+        ],
+      },
+      {
+        title: "Problems applicants commonly face",
+        bullets: [
+          "Missing the university's internal endorsement deadline even though the national deadline has not passed",
+          "Choosing the wrong constituency or district",
+          "Assuming Rhodes guarantees Oxford admission",
+          "Writing a weak course plan that does not explain a coherent two-year Oxford route",
+          "Registering too few references or choosing famous referees who barely know the applicant",
+          "Uploading unnecessary certificates, testimonials, or links unless requested",
+          "Treating the personal statement like a professional essay-editing exercise instead of authentic personal work",
+          "Being unable to attend the in-person interview dates",
+          "Assuming a fully funded scholarship covers dependents",
+          "Planning to defer the award even though the 2027 award is for October 2027 entry and cannot ordinarily be moved forward or deferred",
+        ],
+      },
+      {
+        title: "Complete application timeline",
+        facts: [
+          { label: "Applications open", value: "July 1, 2026" },
+          { label: "GPA exception request recommended by", value: "September 15, 2026" },
+          { label: "Rhodes application deadline", value: "October 7, 2026" },
+          { label: "Reference and endorsement deadline", value: "October 7, 2026" },
+          { label: "District interviews", value: "November 13-14, 2026" },
+          { label: "Winners announced", value: "After district interviews" },
+          { label: "Oxford application", value: "After Rhodes selection" },
+          { label: "Studies begin", value: "October 2027" },
+        ],
+      },
+      {
+        title: "Official source links",
+        bullets: [
+          "Rhodes U.S. application page: https://www.rhodeshouse.ox.ac.uk/scholarships/applications/united-states/",
+          "U.S. eligibility criteria: https://www.rhodeshouse.ox.ac.uk/scholarships/applications/united-states/eligibilitycriteria/",
+          "Rhodes FAQs and funding guidance: https://www.rhodeshouse.ox.ac.uk/scholarships/faqs/",
+          "U.S. guidance for applicants: https://www.rhodeshouse.ox.ac.uk/office-of-the-american-secretary/application-overview/us-guidance-for-applicants/",
+          "Selection criteria: https://www.rhodeshouse.ox.ac.uk/scholarships/selection-criteria/",
+          "Oxford course search: https://www.ox.ac.uk/admissions/graduate/courses/courses-a-z-listing",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Is the Rhodes Scholarship fully funded?",
+        answer:
+          "Yes. It covers Oxford course fees, a living stipend, visa-related costs listed by Rhodes, two economy flights, and a settling-in allowance. The stipend is for the scholar and should not be assumed to support dependents.",
+      },
+      {
+        question: "Can international students in the United States apply?",
+        answer:
+          "Studying in the United States is not enough by itself. The U.S. competition is for U.S. citizens, lawful permanent residents, and eligible DACA recipients unless another Rhodes constituency or inter-jurisdictional route applies.",
+      },
+      {
+        question: "Can green-card holders apply?",
+        answer:
+          "Yes, lawful permanent residents can be eligible for the U.S. Rhodes competition if they meet the other requirements.",
+      },
+      {
+        question: "Can DACA recipients apply?",
+        answer:
+          "Yes, applicants with active DACA status are listed in the U.S. eligibility route, provided they meet the remaining requirements.",
+      },
+      {
+        question: "Is a 3.70 GPA compulsory?",
+        answer:
+          "A 3.70/4.00 GPA without rounding is the published competitive benchmark. Applicants below it need institutional support for a formal exception request.",
+      },
+      {
+        question: "Can I apply with a GPA below 3.70?",
+        answer:
+          "Possibly, but not as a normal case. A university president or designated senior administrator must support an exception request, and for 2027 such requests should arrive by September 15, 2026.",
+      },
+      {
+        question: "Is IELTS required?",
+        answer:
+          "Rhodes does not require English-language evidence in the initial U.S. application, but Oxford courses can require applicants whose first language is not English to meet higher-level English requirements.",
+      },
+      {
+        question: "Is there a written examination?",
+        answer:
+          "The official U.S. process does not list a separate Rhodes written examination. Selection is based on the application, endorsement, references, committee review, and final in-person interview process.",
+      },
+      {
+        question: "Is the interview online or in person?",
+        answer:
+          "For the 2027 U.S. competition, the district reception and interviews are scheduled in person on November 13-14, 2026.",
+      },
+      {
+        question: "Can I apply without university endorsement?",
+        answer:
+          "U.S. applicants need institutional endorsement. Many universities set internal deadlines earlier than the official Rhodes deadline.",
+      },
+      {
+        question: "How many references are required?",
+        answer:
+          "Applicants need five to eight references. At least four should normally be academic referees who taught and graded the applicant.",
+      },
+      {
+        question: "Can I study for an MBA, master's or DPhil?",
+        answer:
+          "Rhodes supports many full-time Oxford postgraduate routes, including master's, MPhil, DPhil, and approved combinations. Applicants must check whether the specific course is covered.",
+      },
+      {
+        question: "Does winning Rhodes guarantee admission to Oxford?",
+        answer:
+          "No. Rhodes selection and Oxford admission are separate. A selected scholar must still apply to Oxford and satisfy the chosen course requirements.",
+      },
+      {
+        question: "Can the award be deferred?",
+        answer:
+          "The 2027 award is for October 2027 entry and cannot ordinarily be moved forward or deferred. Applicants should plan for that intake.",
+      },
+      {
+        question: "Does funding cover a spouse or children?",
+        answer:
+          "No. Rhodes states the stipend is intended for the scholar's expenses and is not designed to support dependents.",
+      },
+      {
+        question: "Can I apply to more than one district?",
+        answer:
+          "No. Applicants cannot submit simultaneous Rhodes applications through multiple U.S. districts or constituencies.",
+      },
+    ],
+    relatedScholarships: [
+      "chevening-scholarship",
+      "uk-ucl-global-masters-scholarship",
+      "uk-ual-international-postgraduate-10000-scholarship",
+    ],
+    categoryLinks: [
+      "/countries/united-kingdom",
+      "/degrees/masters",
+      "/degrees/phd",
+      "/funding/fully-funded",
+      "/scholarships-still-open-2026",
+    ],
+    applyUrl:
+      "https://www.rhodeshouse.ox.ac.uk/scholarships/applications/united-states/",
+    officialSource: "Rhodes Trust",
+    lastUpdated: "2026-07-19",
+    discovery: {
+      hostCountries: ["United Kingdom"],
+      degreeLevels: ["Masters", "PhD"],
+      status: "Open",
+      deadlineDate: "2026-10-07",
+      deadlineConfidence: "Exact",
+      tuitionCoverage: "Full",
+      fundingLevel: "Full",
+      stipendAvailable: true,
+      travelSupport: true,
+      accommodationSupport: "Unknown",
+      eligibleNationalities: [
+        "USA",
+        "U.S. lawful permanent residents",
+        "Eligible DACA recipients",
+      ],
+      ieltsRequired: "Unknown",
+      alternativeProofAccepted: "Unknown",
+      mediumOfInstructionAccepted: "Unknown",
+      fieldsOfStudy: ["All fields"],
+      studyMode: ["On Campus"],
+      applicationMethod: "Provider Portal",
+      priorityScore: 95,
+      dataQuality: "Verified",
+    },
+  },
+  {
     slug: "honjo-international-scholarship-2027-japan",
     title: "Honjo International Scholarship 2027 in Japan",
     seoTitle: "Honjo International Scholarship 2027: Pre-Open",
