@@ -12,7 +12,7 @@ import {
 import { getSiteUrl, isVercelProduction } from "@/lib/site";
 
 const GA_MEASUREMENT_ID = "G-YMEB4WNX7G";
-const ADSENSE_CLIENT_ID = "ca-pub-2098848132009421";
+const ADSENSE_CLIENT_ID = "ca-pub-3953310326159878";
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
