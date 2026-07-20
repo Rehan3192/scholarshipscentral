@@ -32,7 +32,7 @@ function ChevronDownIcon({ className }: { className?: string }) {
 }
 
 const pillClassName =
-  "inline-flex items-center rounded-full border border-blue-100 bg-white/80 px-2.5 py-1 text-[0.95rem] font-semibold text-slate-800 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-blue-200 hover:bg-blue-50/70 hover:text-slate-950 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:px-3 sm:py-1.5";
+  "inline-flex items-center rounded-full border border-blue-200/80 bg-white/85 px-2.5 py-1 text-[0.95rem] font-semibold text-slate-800 shadow-sm shadow-blue-950/[0.04] transition-colors duration-200 motion-reduce:transition-none hover:border-blue-300 hover:bg-blue-50/80 hover:text-slate-950 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:px-3 sm:py-1.5";
 
 function NavDropdown({
   id,
@@ -103,7 +103,7 @@ function NavDropdown({
           aria-label={`${label} menu`}
           aria-hidden={!isOpen}
           className={[
-            "origin-top rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-2 shadow-lg transition duration-200 motion-reduce:transition-none",
+            "origin-top rounded-3xl border border-blue-200/80 bg-gradient-to-br from-white via-white to-blue-50/70 p-2 shadow-2xl shadow-blue-950/10 backdrop-blur-xl transition duration-200 motion-reduce:transition-none",
             isOpen
               ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
               : "opacity-0 scale-95 translate-y-1 pointer-events-none",
@@ -253,7 +253,7 @@ export default function Navbar() {
     <header
       ref={navRef}
       className={[
-        "sticky top-0 z-50 border-b border-blue-100/80 bg-white/85 shadow-sm shadow-blue-950/[0.03] backdrop-blur-xl",
+        "sticky top-0 z-50 border-b border-blue-100/80 bg-white/75 shadow-sm shadow-blue-950/[0.04] backdrop-blur-2xl",
         "transition-transform duration-200 motion-reduce:transition-none",
         isHidden ? "-translate-y-full pointer-events-none" : "translate-y-0",
       ].join(" ")}
@@ -262,7 +262,7 @@ export default function Navbar() {
         className="mx-auto max-w-6xl px-3 py-2 sm:px-4 sm:py-3"
         aria-label="Primary"
       >
-        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/60 p-2 shadow-sm sm:p-3">
+        <div className="rounded-3xl border border-blue-200/80 bg-gradient-to-br from-white via-blue-50/60 to-emerald-50/50 p-2 shadow-xl shadow-blue-950/[0.08] ring-1 ring-white/70 sm:p-3">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
           <div className="flex items-center justify-between gap-3">
             <Link
@@ -270,7 +270,7 @@ export default function Navbar() {
               className="inline-flex items-center gap-2 rounded-2xl px-1 text-base font-extrabold tracking-tight text-slate-950 transition-colors hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:text-lg"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-blue-700 shadow-sm shadow-blue-700/20">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-700 to-blue-950 shadow-lg shadow-blue-700/25 ring-1 ring-white/60">
                 <Image
                   src="/logo-mark.svg"
                   alt=""
@@ -280,13 +280,18 @@ export default function Navbar() {
                   className="h-6 w-6 rounded-md"
                 />
               </span>
-              <span>Scholarships Central</span>
+              <span className="leading-tight">
+                Scholarships Central
+                <span className="hidden text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-700 sm:block">
+                  Official-source scholarship guides
+                </span>
+              </span>
             </Link>
 
             <button
               ref={mobileMenuButtonRef}
               type="button"
-              className="inline-flex items-center rounded-full border border-blue-100 bg-white/85 px-3 py-1.5 text-sm font-semibold text-slate-900 shadow-sm transition-colors hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:hidden"
+              className="inline-flex items-center rounded-full border border-blue-200 bg-white/90 px-3 py-1.5 text-sm font-semibold text-slate-900 shadow-sm transition-colors hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:hidden"
               aria-expanded={isMobileMenuOpen}
               aria-controls="primary-navigation-links"
               onClick={() => {
@@ -307,7 +312,7 @@ export default function Navbar() {
             <label htmlFor="nav-search" className="sr-only">
               Search scholarships and articles
             </label>
-            <div className="flex w-full items-center gap-1.5 rounded-xl border border-slate-300 bg-white p-0.5 focus-within:ring-2 focus-within:ring-blue-600 focus-within:ring-offset-2 sm:w-auto sm:gap-2 sm:p-1">
+            <div className="flex w-full items-center gap-1.5 rounded-2xl border border-blue-200 bg-white/95 p-0.5 shadow-inner shadow-blue-950/[0.04] focus-within:ring-2 focus-within:ring-blue-600 focus-within:ring-offset-2 sm:w-auto sm:gap-2 sm:p-1">
               <input
                 id="nav-search"
                 name="q"
@@ -316,7 +321,7 @@ export default function Navbar() {
               />
               <button
                 type="submit"
-                className="inline-flex shrink-0 items-center rounded-lg bg-slate-950 px-3 py-1.5 text-sm font-semibold text-white shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 sm:py-2"
+                className="inline-flex shrink-0 items-center rounded-xl bg-slate-950 px-3 py-1.5 text-sm font-semibold text-white shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 sm:py-2"
               >
                 Search
               </button>
