@@ -19,12 +19,17 @@ main {
 }
 
 main :where(article, section, aside, div, a)[class*="rounded-3xl"][class*="border"] {
+  border-color: rgb(147 197 253 / 0.9); /* blue-300 */
   box-shadow:
     0 1px 1px rgb(15 23 42 / 0.04),
     0 10px 24px rgb(15 23 42 / 0.07),
     0 24px 70px rgb(37 99 235 / 0.06);
   transform: translateZ(0);
   transform-style: preserve-3d;
+}
+
+main :where(article, section, aside, div, a)[class*="rounded-2xl"][class*="border"] {
+  border-color: rgb(147 197 253 / 0.9); /* blue-300 */
 }
 
 main :where(a, article)[class*="rounded-3xl"][class*="border"],
