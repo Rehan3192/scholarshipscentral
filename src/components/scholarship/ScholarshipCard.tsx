@@ -29,11 +29,21 @@ export default function ScholarshipCard({ scholarship }: Props) {
       });
 
   return (
-    <article className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-blue-200 hover:shadow-md motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5">
+    <article className="group rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/50 p-5 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-blue-200 hover:shadow-lg motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5">
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        <span className="inline-flex rounded-full border border-blue-200 bg-blue-50 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-800">
+          Scholarship guide
+        </span>
+        {applicationMayBeOpen ? (
+          <span className="inline-flex rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-emerald-800">
+            Open / expected
+          </span>
+        ) : null}
+      </div>
       <h3 className="text-base font-semibold leading-snug text-slate-900 sm:text-lg">
         <Link
           href={href}
-          className="rounded-sm text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+          className="rounded-sm text-slate-950 hover:text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
         >
           {cleanDisplayText(scholarship.title)}
         </Link>
@@ -72,7 +82,8 @@ export default function ScholarshipCard({ scholarship }: Props) {
         <span className="font-medium text-slate-700">
           {cleanDisplayText(scholarship.officialSource)}
         </span>{" "}
-        • Updated:{" "}
+        <span className="mx-1 text-slate-300">•</span>
+        Updated:{" "}
         <time dateTime={scholarship.lastUpdated}>
           {formattedUpdatedDate}
         </time>
@@ -83,7 +94,7 @@ export default function ScholarshipCard({ scholarship }: Props) {
           href={href}
           className="inline-flex items-center rounded-lg bg-slate-900 px-3 py-2 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
         >
-          Details
+          View guide
         </Link>
         <a
           href={scholarship.applyUrl}
@@ -91,7 +102,7 @@ export default function ScholarshipCard({ scholarship }: Props) {
           rel="noopener noreferrer"
           className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
         >
-          {applicationMayBeOpen ? "Apply" : "Official page"}
+          {applicationMayBeOpen ? "Official application" : "Official page"}
         </a>
       </div>
     </article>

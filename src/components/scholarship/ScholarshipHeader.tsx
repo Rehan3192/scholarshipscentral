@@ -46,7 +46,15 @@ export default function ScholarshipHeader({ scholarship, guideLink }: Props) {
         ]}
       />
 
-      <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
+      <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/50 p-6 shadow-sm sm:p-8">
+        <div className="mb-4 flex flex-wrap items-center gap-2">
+          <span className="inline-flex rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-blue-800">
+            Scholarship guide
+          </span>
+          <span className="inline-flex rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-emerald-800">
+            Official-source based
+          </span>
+        </div>
         <h1 className="text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
           {cleanDisplayText(scholarship.title)}
         </h1>
@@ -99,7 +107,8 @@ export default function ScholarshipHeader({ scholarship, guideLink }: Props) {
           <span className="font-medium text-slate-700">
             {cleanDisplayText(scholarship.officialSource)}
           </span>{" "}
-          • Last updated:{" "}
+          <span className="mx-1 text-slate-300">•</span>
+          Last updated:{" "}
           <time dateTime={scholarship.lastUpdated}>
             {scholarship.lastUpdated}
           </time>

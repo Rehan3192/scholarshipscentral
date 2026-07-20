@@ -164,7 +164,7 @@ function FeaturedPagesSection() {
         {FEATURED_HUB_PAGES.map((page) => (
           <article
             key={page.slug}
-            className="group rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50/60 to-white p-5 shadow-sm transition-all duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md"
+            className="group rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/50 p-5 shadow-sm transition-all duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-lg"
           >
             <div className="flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-800">
@@ -258,18 +258,24 @@ export default function BlogArchiveView({
         <ItemListJsonLd pagePath={pagePath} items={itemListItems} />
       ) : null}
 
-      <header className="space-y-3">
+      <header className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/50 p-6 shadow-sm sm:p-8">
         {currentPage > 1 ? (
           <div className="inline-flex w-fit items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-800">
             Archive page {currentPage} of {totalPages}
           </div>
-        ) : null}
-        <div className="space-y-2">
-          <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
+        ) : (
+          <div className="inline-flex w-fit rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-blue-800">
+            Scholarship guides and updates
+          </div>
+        )}
+        <div className="mt-4 space-y-2">
+          <h1 className="mb-0 text-3xl font-bold text-slate-950 sm:text-4xl">
             {pageHeading}
           </h1>
-          <p className="mb-0 text-sm text-slate-600">
-            Scholarship guides, result updates, and application advice in one place.
+          <p className="mb-0 max-w-3xl text-sm leading-6 text-slate-700 sm:text-base">
+            Scholarship guides, result updates, and practical application
+            explainers for students who want clear next steps before they click
+            through to official pages.
           </p>
           <p className="mb-0 text-sm text-blue-700">
             Need result-date articles? Browse the{" "}
@@ -341,7 +347,7 @@ export default function BlogArchiveView({
                 return (
                   <article
                     key={post.id}
-                    className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm transition-transform duration-200 motion-reduce:transition-none hover:-translate-y-0.5"
+                    className="group rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/50 p-5 shadow-sm transition-all duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-lg"
                   >
                     <div className="text-xs font-semibold text-slate-500">
                       {formatDate(post.date)}
@@ -349,7 +355,7 @@ export default function BlogArchiveView({
                     <h3 className="mt-2 text-lg font-semibold text-slate-900">
                       <Link
                         href={`/blog/${post.slug}`}
-                        className="hover:underline"
+                        className="hover:text-blue-700 hover:underline"
                       >
                         {title}
                       </Link>
@@ -357,7 +363,7 @@ export default function BlogArchiveView({
                     <p className="mt-2 text-sm text-slate-700">{excerpt}</p>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="mt-3 inline-flex items-center text-sm font-semibold text-blue-700 hover:underline"
+                      className="mt-3 inline-flex items-center text-sm font-semibold text-blue-700 hover:text-blue-800 hover:underline"
                     >
                       Read more &rarr;
                     </Link>

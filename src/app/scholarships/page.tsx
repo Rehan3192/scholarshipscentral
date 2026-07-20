@@ -462,15 +462,19 @@ export default async function ScholarshipsPage({
       />
       <ItemListJsonLd pagePath="/scholarships" items={topItems} />
 
-      <header className="order-1 space-y-2">
-        <h1 className="mb-0 text-3xl font-bold text-slate-900 sm:text-4xl">
+      <header className="order-1 rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/50 p-6 shadow-sm sm:p-8">
+        <div className="inline-flex rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-blue-800">
+          Verified scholarship directory
+        </div>
+        <h1 className="mt-4 mb-0 text-3xl font-bold text-slate-950 sm:text-4xl">
           All Scholarships
         </h1>
-        <p className="mb-0 text-sm text-slate-600">
-          Filter by country, degree level, and funding type. We only link to
-          official external application pages.
+        <p className="mt-3 mb-0 max-w-3xl text-sm leading-6 text-slate-700 sm:text-base">
+          Search source-based scholarship guides, then filter by country,
+          degree level, funding type, and deadline. Each listing points students
+          back to the official provider before they apply.
         </p>
-        <div className="flex flex-wrap items-center gap-3 pt-2 text-sm">
+        <div className="flex flex-wrap items-center gap-3 pt-4 text-sm">
           <Link href="/scholarships-still-open-2026" className="font-medium text-blue-700 hover:underline">
             Scholarships still open 2026
           </Link>
@@ -485,11 +489,14 @@ export default async function ScholarshipsPage({
         </div>
       </header>
 
-      <section className="order-3 rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-4 shadow-sm sm:p-5">
+      <section className="order-3 rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/50 p-4 shadow-sm sm:p-5">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="mt-0 text-base font-semibold text-slate-900">
             Quick filters
           </h2>
+          <p className="mb-0 text-sm text-slate-600">
+            Start with common student searches, then refine from the sidebar.
+          </p>
           <Link
             href="/scholarships"
             className={[
@@ -531,7 +538,7 @@ export default async function ScholarshipsPage({
       </section>
 
       <div className="order-4 grid gap-6 lg:grid-cols-[280px_1fr]">
-        <aside className="h-fit rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm">
+        <aside className="h-fit rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/50 p-5 shadow-sm">
           <h2 className="mt-0 text-lg font-semibold text-slate-900">
             Filter scholarships
           </h2>
@@ -655,7 +662,7 @@ export default async function ScholarshipsPage({
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <div className="space-y-0.5">
-              <h2 className="mt-0 text-lg font-semibold text-slate-900">
+              <h2 className="mt-0 text-2xl font-semibold text-slate-950">
                 Results
               </h2>
               <p className="mb-0 text-sm text-slate-600">
@@ -833,4 +840,3 @@ export default async function ScholarshipsPage({
     </div>
   );
 }
-
