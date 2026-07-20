@@ -32,7 +32,10 @@ function ChevronDownIcon({ className }: { className?: string }) {
 }
 
 const pillClassName =
-  "inline-flex items-center rounded-full border border-slate-300 bg-white px-2.5 py-1 text-[0.95rem] font-semibold text-slate-900 transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:px-3 sm:py-1.5";
+  "inline-flex items-center rounded-full border border-blue-100 bg-white/80 px-2.5 py-1 text-[0.95rem] font-semibold text-slate-800 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-blue-200 hover:bg-blue-50/70 hover:text-slate-950 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:px-3 sm:py-1.5";
+
+const featuredPillClassName =
+  "inline-flex items-center rounded-full border border-blue-700 bg-blue-700 px-2.5 py-1 text-[0.95rem] font-semibold text-white shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-blue-800 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:px-3 sm:py-1.5";
 
 function NavDropdown({
   id,
@@ -118,7 +121,7 @@ function NavDropdown({
                 setOpenMenu(null);
                 onNavigate?.();
               }}
-              className="block rounded-lg px-3 py-2 text-sm text-slate-900 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+              className="block rounded-2xl px-3 py-2 text-sm text-slate-900 transition-colors hover:bg-blue-50/70 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
             >
               <span className="font-semibold">{item.label}</span>
               {item.description ? (
@@ -253,37 +256,40 @@ export default function Navbar() {
     <header
       ref={navRef}
       className={[
-        "sticky top-0 z-50 border-b border-slate-200 bg-white",
+        "sticky top-0 z-50 border-b border-blue-100/80 bg-white/85 shadow-sm shadow-blue-950/[0.03] backdrop-blur-xl",
         "transition-transform duration-200 motion-reduce:transition-none",
         isHidden ? "-translate-y-full pointer-events-none" : "translate-y-0",
       ].join(" ")}
     >
       <nav
-        className="mx-auto max-w-6xl px-4 py-2 sm:py-3"
+        className="mx-auto max-w-6xl px-3 py-2 sm:px-4 sm:py-3"
         aria-label="Primary"
       >
+        <div className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/60 p-2 shadow-sm sm:p-3">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
           <div className="flex items-center justify-between gap-3">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-base font-extrabold tracking-tight text-slate-900 sm:text-lg"
+              className="inline-flex items-center gap-2 rounded-2xl px-1 text-base font-extrabold tracking-tight text-slate-950 transition-colors hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:text-lg"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <Image
-                src="/logo-mark.svg"
-                alt=""
-                aria-hidden="true"
-                width={24}
-                height={24}
-                className="h-6 w-6 rounded-md"
-              />
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-blue-700 shadow-sm shadow-blue-700/20">
+                <Image
+                  src="/logo-mark.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width={24}
+                  height={24}
+                  className="h-6 w-6 rounded-md"
+                />
+              </span>
               <span>Scholarships Central</span>
             </Link>
 
             <button
               ref={mobileMenuButtonRef}
               type="button"
-              className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:hidden"
+              className="inline-flex items-center rounded-full border border-blue-100 bg-white/85 px-3 py-1.5 text-sm font-semibold text-slate-900 shadow-sm transition-colors hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:hidden"
               aria-expanded={isMobileMenuOpen}
               aria-controls="primary-navigation-links"
               onClick={() => {
@@ -309,11 +315,11 @@ export default function Navbar() {
                 id="nav-search"
                 name="q"
                 placeholder="Search scholarships and articles..."
-                className="w-full bg-transparent px-2.5 py-1.5 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none sm:w-72 sm:px-3 sm:py-2"
+                className="w-full bg-transparent px-2.5 py-1.5 text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none sm:w-72 sm:px-3 sm:py-2"
               />
               <button
                 type="submit"
-                className="inline-flex shrink-0 items-center rounded-lg bg-slate-900 px-3 py-1.5 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 sm:py-2"
+                className="inline-flex shrink-0 items-center rounded-lg bg-slate-950 px-3 py-1.5 text-sm font-semibold text-white shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 sm:py-2"
               >
                 Search
               </button>
@@ -337,7 +343,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/find-scholarships"
-            className={pillClassName}
+            className={featuredPillClassName}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Finder
@@ -422,6 +428,7 @@ export default function Navbar() {
           >
             Contact
           </Link>
+        </div>
         </div>
       </nav>
     </header>
