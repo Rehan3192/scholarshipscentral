@@ -393,9 +393,14 @@ export default function HomePage() {
 
       <section className="space-y-3 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="text-2xl font-semibold text-slate-900">
-            Latest updates
-          </h2>
+          <div>
+            <h2 className="text-2xl font-semibold text-slate-900">
+              Latest updates
+            </h2>
+            <p className="mt-1 mb-0 text-sm text-slate-600">
+              Open a scholarship card to see eligibility, funding, documents, deadlines, and the official application source.
+            </p>
+          </div>
           <Link href="/scholarships" className="text-sm font-medium text-blue-700 hover:underline">
             Browse all
           </Link>
@@ -439,9 +444,14 @@ export default function HomePage() {
       {CLOSING_SOON_SCHOLARSHIPS.length > 0 ? (
         <section className="space-y-3 content-visibility-auto">
           <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
-            <h2 className="text-2xl font-semibold text-slate-900">
-              Closing soon
-            </h2>
+            <div>
+              <h2 className="text-2xl font-semibold text-slate-900">
+                Closing soon
+              </h2>
+              <p className="mt-1 mb-0 text-sm text-slate-600">
+                Click these if you want deadlines that may need faster action before you build a longer shortlist.
+              </p>
+            </div>
             <Link href="/scholarships-still-open-2026" className="text-sm font-medium text-blue-700 hover:underline">
               View still-open scholarships
             </Link>
@@ -476,12 +486,14 @@ export default function HomePage() {
 
       <section className="space-y-3 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="text-2xl font-semibold text-slate-900">
-            Browse by degree
-          </h2>
-          <p className="text-sm text-slate-600">
-            Start with your current or target program level.
-          </p>
+          <div>
+            <h2 className="text-2xl font-semibold text-slate-900">
+              Browse by degree
+            </h2>
+            <p className="mt-1 mb-0 text-sm text-slate-600">
+              Choose your study level to see scholarships filtered for bachelor’s, master’s, or doctoral applicants.
+            </p>
+          </div>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-3">
@@ -525,9 +537,14 @@ export default function HomePage() {
 
       <section className="space-y-3 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="text-2xl font-semibold text-slate-900">
-            Browse by country
-          </h2>
+          <div>
+            <h2 className="text-2xl font-semibold text-slate-900">
+              Browse by country
+            </h2>
+            <p className="mt-1 mb-0 text-sm text-slate-600">
+              Pick a destination to compare scholarships available for that country, including funding type and degree level.
+            </p>
+          </div>
           <Link href="/countries" className="text-sm font-medium text-blue-700 hover:underline">
             View all countries
           </Link>
@@ -566,7 +583,7 @@ export default function HomePage() {
                 Popular destinations
               </h3>
               <span className="text-sm text-slate-600">
-                Based on current listings
+                Click a country to see its current scholarship listings.
               </span>
             </div>
 
@@ -590,9 +607,14 @@ export default function HomePage() {
 
       <section className="space-y-3 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="text-2xl font-semibold text-slate-900">
-            Featured scholarship hubs
-          </h2>
+          <div>
+            <h2 className="text-2xl font-semibold text-slate-900">
+              Featured scholarship hubs
+            </h2>
+            <p className="mt-1 mb-0 text-sm text-slate-600">
+              Use these shortcuts when you want grouped pages for fully funded, still-open, region-specific, or without-IELTS searches.
+            </p>
+          </div>
           <Link href="/scholarship-results-2026" className="text-sm font-medium text-blue-700 hover:underline">
             Scholarship results 2026
           </Link>
@@ -603,9 +625,14 @@ export default function HomePage() {
 
       <section className="space-y-3 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="text-2xl font-semibold text-slate-900">
-            Latest guides
-          </h2>
+          <div>
+            <h2 className="text-2xl font-semibold text-slate-900">
+              Latest guides
+            </h2>
+            <p className="mt-1 mb-0 text-sm text-slate-600">
+              Read article-style guides for application steps, result updates, scholarship lists, and practical explanations.
+            </p>
+          </div>
           <Link href="/blog" className="text-sm font-medium text-blue-700 hover:underline">
             View all posts
           </Link>
@@ -618,12 +645,14 @@ export default function HomePage() {
 
       <section className="space-y-3 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="text-2xl font-semibold text-slate-900">
-            Popular searches
-          </h2>
-          <p className="text-sm text-slate-600">
-            Common starting points for 2026 applications.
-          </p>
+          <div>
+            <h2 className="text-2xl font-semibold text-slate-900">
+              Popular searches
+            </h2>
+            <p className="mt-1 mb-0 text-sm text-slate-600">
+              Tap a search shortcut to jump straight into common scholarship topics students look for first.
+            </p>
+          </div>
         </div>
 
         <div className="flex flex-wrap gap-2 rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-5 shadow-sm">
@@ -641,12 +670,14 @@ export default function HomePage() {
 
       <section className="space-y-3 content-visibility-auto">
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="text-2xl font-semibold text-slate-900">
-            Browse by funding type
-          </h2>
-          <p className="text-sm text-slate-600">
-            Filter by full or partial funding coverage.
-          </p>
+          <div>
+            <h2 className="text-2xl font-semibold text-slate-900">
+              Browse by funding type
+            </h2>
+            <p className="mt-1 mb-0 text-sm text-slate-600">
+              Choose full funding when you need stronger cost coverage, or partial funding when smaller awards still fit your plan.
+            </p>
+          </div>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
