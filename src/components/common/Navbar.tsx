@@ -34,9 +34,6 @@ function ChevronDownIcon({ className }: { className?: string }) {
 const pillClassName =
   "inline-flex items-center rounded-full border border-blue-100 bg-white/80 px-2.5 py-1 text-[0.95rem] font-semibold text-slate-800 shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-blue-200 hover:bg-blue-50/70 hover:text-slate-950 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:px-3 sm:py-1.5";
 
-const featuredPillClassName =
-  "inline-flex items-center rounded-full border border-blue-700 bg-blue-700 px-2.5 py-1 text-[0.95rem] font-semibold text-white shadow-sm transition-colors duration-200 motion-reduce:transition-none hover:border-blue-800 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 sm:px-3 sm:py-1.5";
-
 function NavDropdown({
   id,
   label,
@@ -343,7 +340,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/find-scholarships"
-            className={featuredPillClassName}
+            className={pillClassName}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Finder

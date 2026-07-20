@@ -267,7 +267,7 @@ export default function HomePage() {
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <Link
                 href="/find-scholarships"
-                className="inline-flex items-center rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
+                className="finder-cta-button inline-flex items-center rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 motion-reduce:transition-none hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
               >
                 Find Scholarships for Me <span className="ml-1" aria-hidden="true">&rarr;</span>
               </Link>
@@ -340,7 +340,7 @@ export default function HomePage() {
             </form>
           </div>
 
-          <aside className="rounded-3xl border border-white/80 bg-white/85 p-5 shadow-sm">
+          <aside className="finder-card-spotlight rounded-3xl border border-white/80 bg-white/85 p-5 shadow-sm">
             <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
               Personalized Finder
             </p>
