@@ -22,6 +22,7 @@ type Props = {
 
 const CANONICAL_ROUTE_OVERRIDES: Record<string, string> = {
   "marshall-scholarship-2027": "/marshall-scholarship-2027",
+  "fulbright-us-student-program-2027-2028": "/fulbright-us-student-program-2027-2028",
 };
 
 export const dynamicParams = false;
@@ -846,10 +847,12 @@ export default async function ScholarshipPage({ params }: Props) {
             <h2 className="mt-0 text-base font-semibold text-slate-900">
               Key facts
             </h2>
-            <dl className="mt-4 grid gap-3 text-sm text-slate-700">
-              <div className="flex items-start justify-between gap-3">
-                <dt className="font-medium text-slate-600">Country</dt>
-                <dd className="break-words text-right font-semibold text-slate-900">
+            <dl className="mt-4 grid gap-4 text-sm text-slate-700">
+              <div className="rounded-2xl border border-blue-100 bg-white/70 p-3">
+                <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                  Country
+                </dt>
+                <dd className="mt-1 break-words font-semibold text-slate-900">
                   <Link
                     href={`/countries/${toSegment(scholarship.country)}`}
                     className="text-blue-700 hover:underline"
@@ -858,9 +861,11 @@ export default async function ScholarshipPage({ params }: Props) {
                   </Link>
                 </dd>
               </div>
-              <div className="flex items-start justify-between gap-3">
-                <dt className="font-medium text-slate-600">Degree</dt>
-                <dd className="break-words text-right font-semibold text-slate-900">
+              <div className="rounded-2xl border border-blue-100 bg-white/70 p-3">
+                <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                  Degree
+                </dt>
+                <dd className="mt-1 break-words font-semibold text-slate-900">
                   <Link
                     href={`/degrees/${toSegment(scholarship.degreeLevel)}`}
                     className="text-blue-700 hover:underline"
@@ -869,21 +874,27 @@ export default async function ScholarshipPage({ params }: Props) {
                   </Link>
                 </dd>
               </div>
-              <div className="flex items-start justify-between gap-3">
-                <dt className="font-medium text-slate-600">Funding</dt>
-                <dd className="break-words text-right font-semibold text-slate-900">
+              <div className="rounded-2xl border border-blue-100 bg-white/70 p-3">
+                <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                  Funding
+                </dt>
+                <dd className="mt-1 break-words font-semibold text-slate-900">
                   {scholarship.fundingType}
                 </dd>
               </div>
-              <div className="flex items-start justify-between gap-3">
-                <dt className="font-medium text-slate-600">Deadline</dt>
-                <dd className="break-words text-right font-semibold text-slate-900">
+              <div className="rounded-2xl border border-blue-100 bg-white/70 p-3">
+                <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                  Deadline
+                </dt>
+                <dd className="mt-1 break-words font-semibold leading-6 text-slate-900">
                   {cleanDisplayText(scholarship.deadline)}
                 </dd>
               </div>
-              <div className="flex items-start justify-between gap-3">
-                <dt className="font-medium text-slate-600">Duration</dt>
-                <dd className="break-words text-right font-semibold text-slate-900">
+              <div className="rounded-2xl border border-blue-100 bg-white/70 p-3">
+                <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                  Duration
+                </dt>
+                <dd className="mt-1 break-words font-semibold leading-6 text-slate-900">
                   {cleanDisplayText(scholarship.duration)}
                 </dd>
               </div>

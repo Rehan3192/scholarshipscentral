@@ -41,7 +41,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     STATIC_LAST_MODIFIED,
   );
   const scholarshipPages = scholarships
-    .filter((s) => s.slug !== "marshall-scholarship-2027")
+    .filter(
+      (s) =>
+        s.slug !== "marshall-scholarship-2027" &&
+        s.slug !== "fulbright-us-student-program-2027-2028",
+    )
     .map((s) => ({
       url: `${siteUrl}/scholarships/${s.slug}`,
       lastModified: isoDateOrNow(s.lastUpdated),
@@ -195,6 +199,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${siteUrl}/marshall-scholarship-2027`,
+      lastModified: new Date("2026-07-21T00:00:00Z"),
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${siteUrl}/fulbright-us-student-program-2027-2028`,
       lastModified: new Date("2026-07-21T00:00:00Z"),
       changeFrequency: "weekly" as const,
       priority: 0.85,
