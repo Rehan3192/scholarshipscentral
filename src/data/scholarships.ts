@@ -1258,6 +1258,369 @@ function winnipegPresidentReaderSections(level: WinnipegLevel): ScholarshipConte
 
 const rawScholarships: Scholarship[] = [
   {
+    slug: "marshall-scholarship-2027",
+    title: "Marshall Scholarship 2027 for Americans: Funding, Eligibility and How to Apply",
+    seoTitle: "Marshall Scholarship 2027: Deadline, GPA and Application Guide",
+    metaDescription:
+      "Apply for the Marshall Scholarship 2027 to study in the UK. Check funding, eligibility, GPA, regions, requirements, application steps and the official deadline.",
+    keywords: [
+      "Marshall Scholarship 2027",
+      "Marshall Scholarship 2027 deadline",
+      "Marshall Scholarship 2027 application",
+      "Marshall Scholarship eligibility",
+      "Marshall Scholarship requirements",
+      "Marshall Scholarship regions",
+      "Marshall Scholarship GPA",
+      "Marshall Scholarship application deadline",
+    ],
+    overview:
+      "The Marshall Scholarship 2027 funds eligible U.S. citizens for postgraduate study at universities across the United Kingdom. The 2027 competition uses institutional endorsement, regional review, a minimum 3.7 undergraduate GPA without rounding, and official applicant and institutional deadlines in September and October 2026.",
+    introduction:
+      "The Marshall Scholarship 2027 provides funding for eligible U.S. citizens to pursue postgraduate study at universities across the United Kingdom. Unlike awards limited to one institution, Marshall Scholars can select from eligible UK universities and graduate programmes. This guide explains what the scholarship pays for, who qualifies, the GPA and degree rules, study routes, regional application rules, required documents, selection process, application deadline, and official links readers should verify before applying.",
+    summary:
+      "Officially checked on July 21, 2026. The 2027 Marshall competition opened on May 29, 2026. Applicants and recommenders must submit by September 29, 2026 at 5:00 p.m. in the time zone of the endorsing institution. Endorsing institutions must submit by October 1, 2026 at 5:00 p.m. in the time zone of the endorsing institution.",
+    country: "United Kingdom",
+    continent: "Europe",
+    degreeLevel: "Masters",
+    fundingType: "Fully Funded",
+    tags: [
+      "United Kingdom",
+      "USA",
+      "Marshall Scholarship 2027",
+      "Masters",
+      "PhD",
+      "Fully funded",
+      "Open",
+      "September deadline",
+      "October deadline",
+    ],
+    deadline:
+      "Applicants and recommenders: September 29, 2026, 5:00 p.m. in the endorsing institution's time zone; institutional endorsement: October 1, 2026, 5:00 p.m. in the endorsing institution's time zone",
+    duration:
+      "One academic year, two academic years, or up to three years for approved doctoral study depending on the Marshall pathway",
+    eligibility: [
+      "Citizenship: Applicants must be citizens of the United States at the time of application.",
+      "Undergraduate degree: Applicants must hold their first undergraduate degree from an accredited four-year college or university in the United States by the time they take up the scholarship in September 2027.",
+      "Graduation window: For awards tenable from October 2027, applicants must have graduated from their first undergraduate college or university after April 2024.",
+      "GPA: Applicants must have an undergraduate GPA of not less than 3.7 on a 4.0 scale at the time of application. Rounded GPAs are not accepted.",
+      "Previous UK study: Applicants must not have studied for or hold a degree or degree-equivalent qualification from a UK university, and must not have undertaken GCSE or A-Level qualifications in the UK.",
+      "Permanent residents: U.S. permanent residents who are not U.S. citizens are not eligible under the official citizenship rule.",
+      "Dual citizens: Dual citizens may be eligible if they hold a U.S. passport and meet the U.S. undergraduate degree and other eligibility rules.",
+      "Endorsement: The online application must be endorsed and submitted by the applicant's eligible U.S. undergraduate institution or approved endorsing institution.",
+    ],
+    benefits: [
+      "University fees for the approved Marshall-funded course or route.",
+      "Monthly maintenance stipend: £1,529 outside London and £1,781 in London under the 2027 rules.",
+      "Book grant, thesis grant, research support, and daily travel grants where applicable.",
+      "Economy travel between the United States and the United Kingdom at the start and end of scholarship tenure.",
+      "Payment of visa fees and access to the UK National Health Service.",
+      "Additional allowances to support ambassadorial engagement during scholarship tenure.",
+      "Possible dependent-spouse contribution where applicable; verify family-cost planning directly with the official programme.",
+    ],
+    applicationProcess: [
+      "Read the official 2027 rules and eligibility page before drafting essays.",
+      "Confirm that you are a U.S. citizen and that your undergraduate degree, graduation date, previous UK study history, and undergraduate GPA meet the official rules.",
+      "Contact your undergraduate university fellowship office as early as possible. Campus endorsement is required, and the internal campus deadline may be much earlier than the national deadline.",
+      "Choose either the one-year Marshall pathway or the two-year pathway. Do not apply for both.",
+      "Research UK universities and courses using official university course pages, because admission rules are separate from Marshall selection.",
+      "Choose recommenders early and tell them the official September 29, 2026 recommender deadline.",
+      "Prepare written statements, course choices, transcripts, citizenship evidence, recommendation requests, and any advisor-required campus materials.",
+      "Submit the online application through the Marshall system to your endorsing institution before the applicant deadline.",
+      "The endorsing institution submits the final application to the relevant regional committee by the official institutional deadline.",
+      "If selected, complete UK university admission applications. A Marshall award does not guarantee admission to the chosen UK university or programme.",
+    ],
+    documents: [
+      "Proof of U.S. citizenship or passport information as required by the official application system.",
+      "Undergraduate transcript showing the undergraduate GPA used for eligibility.",
+      "Course selections and academic rationale for the proposed UK study route.",
+      "Personal statement and required Marshall written statements. Use the current official statement guidance for word limits rather than older templates.",
+      "Leadership evidence showing responsibility, initiative, contribution, and impact.",
+      "Ambassadorial statement or evidence showing likely contribution to UK-U.S. understanding.",
+      "Post-scholarship plans explaining why the proposed course matters after the scholarship.",
+      "Recommendation letters requested through the official system.",
+      "Institutional endorsement letter added by the endorsing institution.",
+    ],
+    selectionCriteria: [
+      "Academic merit: strong academic record, intellectual seriousness, and a realistic course plan.",
+      "Leadership potential: evidence of initiative, responsibility, influence, service, or original contribution rather than titles alone.",
+      "Ambassadorial potential: ability to contribute to improved understanding between the United States and the United Kingdom.",
+      "Course rationale: selectors expect a specific, coherent, and realistic academic programme.",
+    ],
+    tips: [
+      "Do not wait for the national deadline. Ask your university fellowship office for its internal Marshall deadline first.",
+      "Do not round a GPA up to 3.7. The official eligibility page states rounded GPAs are not accepted.",
+      "Do not treat UK university admission as automatic. Marshall selection and university admission are separate decisions.",
+      "Do not choose a UK course only because it is famous. Explain why the specific UK programme, faculty, structure, and location fit your goals.",
+      "Do not write generic leadership claims. Use short evidence: problem, action, result, and what changed.",
+      "Do not apply through more than one region or apply for both scholarship pathways. The official rules say this can lead to automatic disqualification.",
+    ],
+    goodToKnow: [
+      "Official application page: https://www.marshallscholarship.org/apply/",
+      "Official eligibility page: https://www.marshallscholarship.org/apply/eligibility/",
+      "Official regional committees page: https://www.marshallscholarship.org/apply/information/regional-committees/",
+      "Official FAQ page: https://www.marshallscholarship.org/apply/faqs/",
+      "Official 2027 rules PDF: https://www.marshallscholarship.org/wp-content/uploads/2026/05/2027-Rules-for-Marshall-Scholarship-Candidates_final.pdf",
+      "Last verified against official Marshall sources on July 21, 2026.",
+    ],
+    contentSections: [
+      {
+        title: "Marshall Scholarship 2027 at a glance",
+        facts: [
+          { label: "Scholarship name", value: "Marshall Scholarship 2027" },
+          { label: "Study destination", value: "United Kingdom" },
+          { label: "Host universities", value: "Eligible UK universities" },
+          { label: "Eligible applicants", value: "U.S. citizens" },
+          { label: "Degree level", value: "Postgraduate study" },
+          { label: "Funding type", value: "Fully funded" },
+          { label: "Awards available", value: "Up to 50 scholarships annually" },
+          { label: "Minimum GPA", value: "3.7 undergraduate GPA on a 4.0 scale; rounded GPAs are not accepted" },
+          { label: "Application method", value: "Online application with institutional endorsement" },
+          { label: "Applicant deadline", value: "September 29, 2026, 5:00 p.m. in the endorsing institution's time zone" },
+          { label: "Institution deadline", value: "October 1, 2026, 5:00 p.m. in the endorsing institution's time zone" },
+          { label: "Regional review", value: "Eight Marshall regional centres in the United States" },
+          { label: "Official website", value: "marshallscholarship.org" },
+          { label: "Last verified", value: "July 21, 2026" },
+        ],
+        paragraphs: [
+          "Thinking about completing a fully funded graduate degree in the United Kingdom? The Marshall Scholarship supports eligible Americans at UK universities, but its GPA, endorsement, pathway, and regional rules make early preparation essential.",
+          "Use this table first. If any item makes you ineligible, confirm directly with your campus fellowship office and the official Marshall website before investing time in essays.",
+        ],
+      },
+      {
+        title: "What is the Marshall Scholarship?",
+        paragraphs: [
+          "The Marshall Scholarship is a postgraduate scholarship for eligible U.S. citizens to study in the United Kingdom. It is administered by the Marshall Aid Commemoration Commission and supports academic excellence, leadership, and stronger UK-U.S. understanding.",
+          "Unlike an award limited to one university, Marshall applicants build a study plan around eligible UK postgraduate courses. The process is separate from UK university admission and normally moves through institutional endorsement, regional review, shortlisting, and interview selection.",
+        ],
+      },
+      {
+        title: "Where is the scholarship offered?",
+        bullets: [
+          "Country: United Kingdom.",
+          "Possible study locations: England, Scotland, Wales, and Northern Ireland, depending on the eligible UK university and course.",
+          "Oxford and Cambridge: Courses may be possible when they meet Marshall and university rules, but applicants must verify course restrictions and university admission deadlines.",
+          "University admission: Selection for the scholarship does not guarantee admission to a UK university.",
+          "Course timing: Some UK programmes, including some Oxford, Cambridge, and specialist institution courses, can have early admission deadlines between October and January.",
+        ],
+        paragraphs: [
+          "If your plan depends on a specific lab, supervisor, professional route, or early university deadline, confirm the course directly on the official university page before submitting the Marshall application.",
+        ],
+      },
+      {
+        title: "How much is the Marshall Scholarship worth?",
+        paragraphs: [
+          "The Marshall Scholarship is fully funded, but applicants should avoid quoting an unofficial total value. The final value depends on course fees, city, duration, and personal circumstances.",
+          "The 2027 rules list approved university fees, a monthly maintenance stipend, economy travel to and from the United States, visa/NHS costs, and several grants or allowances. The monthly stipend is listed as £1,529 outside London and £1,781 in London.",
+          "Dependent-spouse support may apply where applicable, but students with dependents should not assume the award covers full family costs. Verify this directly with the official programme before making financial plans.",
+        ],
+        bullets: [
+          "Check whether the course is in London or outside London because the stipend differs.",
+          "Remember that U.S. tax treatment may differ from UK tax treatment.",
+        ],
+      },
+      {
+        title: "Which degree levels are funded?",
+        facts: [
+          { label: "One-year master's", value: "One master's degree lasting at least 10 months" },
+          { label: "Two one-year master's degrees", value: "Two consecutive one-year master's degrees at the same or different universities" },
+          { label: "Two-year master's", value: "One two-year master's degree at one university" },
+          { label: "Direct PhD/DPhil", value: "Typically three years in the UK, with three years of guaranteed funding subject to academic progress" },
+          { label: "Master's to PhD/DPhil", value: "One-year master's followed by doctoral study; two years guaranteed and third year may be discretionary" },
+        ],
+        paragraphs: [
+          "Marshall pathways matter because applicants may apply for only one pathway. Applying for multiple pathways can lead to automatic disqualification. Choose the route that fits the academic plan and course rules, not merely the route that sounds most prestigious.",
+          "Undergraduate degrees are not funded. The 2027 rules also exclude several course types, including second BA/BSc degrees, postgraduate diplomas or certificates, part-time degrees, distance-learning degrees, supervised research that does not lead to a degree, and some professional or restricted programmes.",
+        ],
+      },
+      {
+        title: "Marshall Scholarship eligibility",
+        paragraphs: [
+          "Use this section as a self-check before drafting essays. If one core rule is not satisfied, the rest of the application will not fix the eligibility problem.",
+        ],
+        bullets: [
+          "Nationality: You must be a U.S. citizen when applying. Permanent residence alone is not enough.",
+          "Undergraduate institution: You must hold your first undergraduate degree from an accredited four-year college or university in the United States by the time the scholarship begins.",
+          "Graduation date: For the 2027 competition, you must have graduated from your first undergraduate college or university after April 2024.",
+          "Academic performance: Your undergraduate GPA must be at least 3.7 on a 4.0 scale, and rounded GPAs are not accepted.",
+          "Previous UK study: You must not have studied for or already hold a degree or degree-equivalent qualification from a UK university.",
+          "Endorsement: You need institutional endorsement. A strong personal application cannot bypass the endorsement requirement.",
+        ],
+      },
+      {
+        title: "Is there a Marshall Scholarship age limit?",
+        paragraphs: [
+          "The official FAQ says there is no age restriction. The practical limit is the graduation-date rule: 2027 applicants must have graduated from their first undergraduate degree after April 2024.",
+          "Mature applicants are not excluded by age alone, but they still need to meet citizenship, U.S. undergraduate degree, GPA, previous UK study, and endorsement rules.",
+        ],
+      },
+      {
+        title: "What GPA do you need for the Marshall Scholarship?",
+        paragraphs: [
+          "You need an undergraduate GPA of at least 3.7 on a 4.0 scale at the time of application. The official eligibility page says rounded GPAs are not accepted, and the FAQ explains that a graduate GPA cannot replace an undergraduate GPA below 3.7.",
+          "The GPA rule is only the eligibility floor. Selection also depends on academic merit, leadership, ambassadorial potential, course rationale, recommendations, endorsement, and interview performance.",
+        ],
+        bullets: [
+          "Do not round 3.69 to 3.7.",
+          "Do not assume a graduate GPA fixes an undergraduate GPA below 3.7.",
+          "Do not assume meeting the GPA rule means the UK course will admit you.",
+        ],
+      },
+      {
+        title: "Marshall Scholarship regions",
+        paragraphs: [
+          "Marshall Scholarship regions matter because applications are reviewed by regional centres in the United States. The official application page says candidates may apply in one region only: either the region of permanent home address or ordinary place of residence/employment, or the region in which they are studying.",
+          "Any candidate applying in more than one region is automatically disqualified. The application form gives eligible region options, and the applicant must select one for submission through the endorsing institution.",
+        ],
+        facts: [
+          { label: "Atlanta", value: "Southeast states, Puerto Rico and Virgin Islands" },
+          { label: "Boston", value: "New England states except Fairfield County, Connecticut" },
+          { label: "Chicago", value: "Midwest region" },
+          { label: "Houston", value: "Arkansas, Colorado, Louisiana, New Mexico, Oklahoma and Texas" },
+          { label: "Los Angeles", value: "Arizona, Guam, Hawaii, Nevada, Southern California and Utah" },
+          { label: "New York", value: "Fairfield County Connecticut, New Jersey, New York and Pennsylvania" },
+          { label: "San Francisco", value: "Alaska, Northern California, Pacific Northwest, Mountain states listed by Marshall" },
+          { label: "Washington DC", value: "Delaware, DC, Maryland, Virginia and West Virginia" },
+        ],
+      },
+      {
+        title: "How to complete the Marshall Scholarship 2027 application",
+        ordered: [
+          "Confirm eligibility against the official 2027 rules.",
+          "Contact the university fellowship office and ask for the internal Marshall deadline.",
+          "Read the official rules, statement guidance, regional page, and FAQ.",
+          "Select one pathway: one-year or two-year route.",
+          "Research UK universities and courses using official university pages.",
+          "Choose recommenders who can provide evidence, not only praise.",
+          "Draft statements around academic purpose, leadership, ambassadorial potential, and future plans.",
+          "Upload documents and request recommendations in the system.",
+          "Submit the application to the endorsing institution before the applicant deadline.",
+          "Allow the institution to review, endorse, and submit the final file.",
+          "Prepare for shortlisting and regional interview if selected.",
+          "After selection, complete UK university admission steps quickly and exactly.",
+        ],
+        paragraphs: [
+          "The Marshall Scholarship 2027 application is not a one-night form. The official national deadline is important, but your campus deadline may be earlier. Treat the campus fellowship office as the first practical checkpoint.",
+        ],
+      },
+      {
+        title: "Marshall Scholarship 2027 deadline",
+        facts: [
+          { label: "Application opened", value: "May 29, 2026 at 1:00 p.m. BST" },
+          { label: "University internal deadline", value: "Varies by institution and may be earlier than the national deadline" },
+          { label: "Applicant submission", value: "September 29, 2026 at 5:00 p.m. in the endorsing institution's time zone" },
+          { label: "Recommender deadline", value: "September 29, 2026 at 5:00 p.m. in the endorsing institution's time zone" },
+          { label: "Institutional endorsement", value: "October 1, 2026 at 5:00 p.m. in the endorsing institution's time zone" },
+          { label: "Shortlist notice", value: "Early to mid-November according to the official how-to-apply page" },
+          { label: "Final selection", value: "Announced shortly after interviews" },
+          { label: "UK university applications", value: "Programme-specific; some deadlines may fall before scholarship confirmation" },
+          { label: "Study begins", value: "September or October 2027 depending on route and university calendar" },
+        ],
+        paragraphs: [
+          "The most important warning is that the Marshall Scholarship application deadline is not the only deadline. Your university may require a complete campus application weeks earlier so it can decide whether to endorse you.",
+          "After the applicant deadline, the official application page says no changes can be made. Applicants should therefore finish essays, course choices, transcripts, and recommendation requests before the final day rather than relying on last-minute corrections.",
+        ],
+      },
+      {
+        title: "Marshall Scholarship rules and restrictions",
+        bullets: [
+          "Apply in one region only.",
+          "Apply for either the one-year or two-year scholarship pathway, not both.",
+          "Do not apply for multiple pathways.",
+          "The application must be endorsed by an eligible endorsing institution.",
+          "No endorsing institution may submit more than 24 applications overall.",
+          "Previous UK degree or degree-equivalent study can make an applicant ineligible.",
+          "Second undergraduate degrees, postgraduate diplomas/certificates, distance-learning degrees, part-time degrees, and some professional or restricted degrees are not funded.",
+          "Requests to change courses after selection may not be accepted under the official FAQ guidance.",
+          "All awards remain subject to the selected scholar receiving an offer from a UK university.",
+          "Continuation to a third year depends on pathway and academic-progress rules; some third-year funding is guaranteed for direct PhD/DPhil routes, while other third-year support may be discretionary.",
+        ],
+      },
+      {
+        title: "Are IELTS, GRE or other tests required?",
+        paragraphs: [
+          "The Marshall Scholarship itself does not operate like a standardized written exam. The main scholarship process is application, endorsement, regional review, shortlisting, and interview. Testing questions usually come from UK university admission requirements, not from the scholarship alone.",
+          "Individual UK programmes may require GRE, GMAT, written work, portfolio, research proposal, department interview, or English-language documentation. U.S.-educated applicants may often be exempt from English-language tests, but that decision belongs to the university and course.",
+          "Do not assume that because Marshall does not require a test, the university course also does not require one. Check the official programme page for every course listed in your Marshall application.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How hard is it to get the Marshall Scholarship?",
+        answer:
+          "It is highly competitive. Applicants must meet strict eligibility rules and then compete on academic merit, leadership potential, ambassadorial potential, course rationale, recommendations, endorsement, and interview performance.",
+      },
+      {
+        question: "What GPA do you need for the Marshall Scholarship?",
+        answer:
+          "The official minimum is a 3.7 undergraduate GPA on a 4.0 scale at the time of application. Rounded GPAs are not accepted, and graduate GPA cannot replace an undergraduate GPA below the minimum.",
+      },
+      {
+        question: "What is the Marshall Scholarship?",
+        answer:
+          "The Marshall Scholarship is a fully funded postgraduate scholarship for eligible U.S. citizens to study at universities in the United Kingdom. It supports academic excellence, leadership, and UK-U.S. understanding.",
+      },
+      {
+        question: "How much is the Marshall Scholarship?",
+        answer:
+          "It covers approved university fees, living support, travel, visa/NHS costs, and several grants or allowances. The 2027 rules list monthly stipend figures, but total value varies by course, university, duration, and location.",
+      },
+      {
+        question: "Is there a Marshall Scholarship age limit?",
+        answer:
+          "The official FAQ says there is no age restriction, but 2027 applicants must have graduated from their first undergraduate degree after April 2024.",
+      },
+      {
+        question: "Can international students apply?",
+        answer:
+          "The Marshall Scholarship is for eligible U.S. citizens. U.S. permanent residents who are not U.S. citizens are not eligible under the official citizenship rule.",
+      },
+      {
+        question: "Can I apply without university endorsement?",
+        answer:
+          "No. The application must be submitted through and endorsed by the eligible endorsing institution.",
+      },
+    ],
+    relatedScholarships: [
+      "rhodes-scholarship-2027-usa",
+      "chevening-scholarship",
+      "commonwealth-scholarship",
+      "uk-gates-cambridge-scholarship",
+    ],
+    categoryLinks: [
+      "/countries/united-kingdom",
+      "/fully-funded-scholarships-in-uk-2026",
+      "/degrees/masters",
+      "/degrees/phd",
+      "/scholarships-still-open-2026",
+      "/find-scholarships",
+    ],
+    applyUrl: "https://www.marshallscholarship.org/apply/",
+    officialSource: "Marshall Scholarships",
+    lastUpdated: "2026-07-21",
+    discovery: {
+      hostCountries: ["United Kingdom"],
+      degreeLevels: ["Masters", "PhD"],
+      status: "Open",
+      deadlineDate: "2026-09-29",
+      deadlineConfidence: "Exact",
+      tuitionCoverage: "Full",
+      fundingLevel: "Full",
+      stipendAvailable: true,
+      travelSupport: true,
+      accommodationSupport: "Unknown",
+      eligibleNationalities: ["USA"],
+      ieltsRequired: "Unknown",
+      alternativeProofAccepted: "Unknown",
+      mediumOfInstructionAccepted: "Unknown",
+      fieldsOfStudy: ["All fields"],
+      studyMode: ["On Campus"],
+      applicationMethod: "Provider Portal",
+      priorityScore: 96,
+      dataQuality: "Verified",
+    },
+  },
+  {
     slug: "rhodes-scholarship-2027-usa",
     title: "32 Rhodes Scholarships for U.S. Students: Fully Funded Oxford Study in 2027",
     seoTitle: "Rhodes Scholarship 2027 USA: Funding, GPA and Deadline",

@@ -20,6 +20,10 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+const CANONICAL_ROUTE_OVERRIDES: Record<string, string> = {
+  "marshall-scholarship-2027": "/marshall-scholarship-2027",
+};
+
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
@@ -322,6 +326,49 @@ function cleanTextItems(items?: string[]) {
     .filter((item) => item.length > 0 && item.toUpperCase() !== "TODO");
 }
 
+function renderLinkedText(text: string) {
+  const parts = text.split(/(https?:\/\/[^\s]+|\/[A-Za-z0-9][^\s]*)/g);
+
+  return parts.map((part, index) => {
+    if (!part) return null;
+
+    const trailing = part.match(/[),.;:]+$/)?.[0] ?? "";
+    const href = trailing ? part.slice(0, -trailing.length) : part;
+
+    if (href.startsWith("https://") || href.startsWith("http://")) {
+      return (
+        <span key={`${part}-${index}`}>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+          >
+            {href}
+          </a>
+          {trailing}
+        </span>
+      );
+    }
+
+    if (href.startsWith("/")) {
+      return (
+        <span key={`${part}-${index}`}>
+          <Link
+            href={href}
+            className="font-semibold text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+          >
+            {href}
+          </Link>
+          {trailing}
+        </span>
+      );
+    }
+
+    return <span key={`${part}-${index}`}>{part}</span>;
+  });
+}
+
 function cleanContentSections(sections?: ScholarshipContentSection[]): CleanContentSection[] {
   return (sections ?? [])
     .map((section) => {
@@ -429,17 +476,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? scholarship.metaDescription.trim()
       : scholarship.overview;
 
+  const canonicalPath =
+    CANONICAL_ROUTE_OVERRIDES[scholarship.slug] ??
+    `/scholarships/${scholarship.slug}`;
+
   return {
     title: metaTitle,
     description: metaDescription,
     keywords: scholarship.keywords,
     alternates: {
-      canonical: `/scholarships/${scholarship.slug}`,
+      canonical: canonicalPath,
     },
     openGraph: {
       title: metaTitle,
       description: metaDescription,
-      url: `/scholarships/${scholarship.slug}`,
+      url: canonicalPath,
       siteName: "Scholarships Central",
       type: "article",
     },
@@ -549,14 +600,14 @@ export default async function ScholarshipPage({ params }: Props) {
 
                 {section.paragraphs.map((paragraph) => (
                   <p key={paragraph} className="mb-0 break-words">
-                    {paragraph}
+                    {renderLinkedText(paragraph)}
                   </p>
                 ))}
 
                 {section.bullets.length > 0 ? (
                   <ul className="ml-0 list-disc space-y-2 pl-5 break-words">
                     {section.bullets.map((item) => (
-                      <li key={item}>{item}</li>
+                      <li key={item}>{renderLinkedText(item)}</li>
                     ))}
                   </ul>
                 ) : null}
@@ -564,7 +615,7 @@ export default async function ScholarshipPage({ params }: Props) {
                 {section.ordered.length > 0 ? (
                   <ol className="ml-0 list-decimal space-y-2 pl-5 break-words">
                     {section.ordered.map((item) => (
-                      <li key={item}>{item}</li>
+                      <li key={item}>{renderLinkedText(item)}</li>
                     ))}
                   </ol>
                 ) : null}
@@ -596,7 +647,7 @@ export default async function ScholarshipPage({ params }: Props) {
             {applicationProcess.length > 0 ? (
               <ol className="ml-0 list-decimal space-y-2 pl-5 text-sm text-slate-700 break-words">
                 {applicationProcess.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item}>{renderLinkedText(item)}</li>
                 ))}
               </ol>
             ) : (
@@ -610,7 +661,7 @@ export default async function ScholarshipPage({ params }: Props) {
             {documents.length > 0 ? (
               <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-slate-700 break-words">
                 {documents.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item}>{renderLinkedText(item)}</li>
                 ))}
               </ul>
             ) : (
@@ -624,7 +675,7 @@ export default async function ScholarshipPage({ params }: Props) {
             <SectionCard title="Selection criteria">
               <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-slate-700 break-words">
                 {selectionCriteria.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item}>{renderLinkedText(item)}</li>
                 ))}
               </ul>
             </SectionCard>
@@ -634,7 +685,7 @@ export default async function ScholarshipPage({ params }: Props) {
             <SectionCard title="Tips to win">
               <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-slate-700 break-words">
                 {tips.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item}>{renderLinkedText(item)}</li>
                 ))}
               </ul>
             </SectionCard>
@@ -644,7 +695,7 @@ export default async function ScholarshipPage({ params }: Props) {
             <SectionCard title="Good to know">
               <ul className="ml-0 list-disc space-y-2 pl-5 text-sm text-slate-700 break-words">
                 {goodToKnow.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item}>{renderLinkedText(item)}</li>
                 ))}
               </ul>
             </SectionCard>

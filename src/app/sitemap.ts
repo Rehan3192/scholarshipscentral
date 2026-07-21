@@ -40,12 +40,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     (latest, scholarship) => maxDate(latest, isoDateOrNow(scholarship.lastUpdated)),
     STATIC_LAST_MODIFIED,
   );
-  const scholarshipPages = scholarships.map((s) => ({
-    url: `${siteUrl}/scholarships/${s.slug}`,
-    lastModified: isoDateOrNow(s.lastUpdated),
-    changeFrequency: "weekly" as const,
-    priority: 0.8,
-  }));
+  const scholarshipPages = scholarships
+    .filter((s) => s.slug !== "marshall-scholarship-2027")
+    .map((s) => ({
+      url: `${siteUrl}/scholarships/${s.slug}`,
+      lastModified: isoDateOrNow(s.lastUpdated),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    }));
 
   const uniqueCountries = Array.from(new Set(scholarships.map((s) => s.country))).sort(
     (a, b) => a.localeCompare(b)
@@ -190,6 +192,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date("2026-07-17T00:00:00Z"),
       changeFrequency: "weekly" as const,
       priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/marshall-scholarship-2027`,
+      lastModified: new Date("2026-07-21T00:00:00Z"),
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
     },
     {
       url: `${siteUrl}/countries`,
