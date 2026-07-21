@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 type MenuId = "countries" | "degrees" | "funding";
@@ -26,6 +25,37 @@ function ChevronDownIcon({ className }: { className?: string }) {
         fillRule="evenodd"
         d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.7a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08Z"
         clipRule="evenodd"
+      />
+    </svg>
+  );
+}
+
+function LogoMarkIcon() {
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      aria-hidden="true"
+      className="h-6 w-6 rounded-md"
+    >
+      <defs>
+        <linearGradient id="logo-mark-bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#1d4ed8" />
+          <stop offset="100%" stopColor="#0f172a" />
+        </linearGradient>
+      </defs>
+      <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#logo-mark-bg)" />
+      <path d="M32 15 10 25.8 32 36.5 54 25.8 32 15Z" fill="#fff" />
+      <path
+        d="M19 31.5v7.1c0 1.6 5.7 4.9 13 4.9s13-3.3 13-4.9v-7.1l-13 6.2-13-6.2Z"
+        fill="#fff"
+        opacity=".95"
+      />
+      <circle cx="53" cy="33.8" r="2.2" fill="#fff" />
+      <path
+        d="M53 35.6v8.2"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );
@@ -144,10 +174,6 @@ export default function Navbar() {
 
   const [canHoverOpen, setCanHoverOpen] = useState(false);
 
-  const [isHidden, setIsHidden] = useState(false);
-  const lastScrollYRef = useRef(0);
-  const rafPendingRef = useRef(false);
-
   useEffect(() => {
     openMenuRef.current = openMenu;
   }, [openMenu]);
@@ -215,48 +241,10 @@ export default function Navbar() {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [isMobileMenuOpen, openMenu]);
 
-  // Hide on scroll down, show on scroll up.
-  useEffect(() => {
-    lastScrollYRef.current = window.scrollY;
-
-    const onScroll = () => {
-      if (rafPendingRef.current) return;
-      rafPendingRef.current = true;
-
-      window.requestAnimationFrame(() => {
-        const y = window.scrollY;
-        const last = lastScrollYRef.current;
-        const delta = y - last;
-
-        const threshold = 12;
-        const atTop = y <= 8;
-
-        if (atTop) {
-          setIsHidden(false);
-        } else if (delta > threshold) {
-          setIsHidden(true);
-          if (openMenuRef.current) setOpenMenu(null);
-        } else if (delta < -threshold) {
-          setIsHidden(false);
-        }
-
-        lastScrollYRef.current = y;
-        rafPendingRef.current = false;
-      });
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
     <header
       ref={navRef}
-      className={[
-        "sticky top-0 z-50 border-b border-blue-100/80 bg-white/75 shadow-sm shadow-blue-950/[0.04] backdrop-blur-2xl",
-        "transition-transform duration-200 motion-reduce:transition-none",
-        isHidden ? "-translate-y-full pointer-events-none" : "translate-y-0",
-      ].join(" ")}
+      className="sticky top-0 z-50 border-b border-blue-100/80 bg-white/75 shadow-sm shadow-blue-950/[0.04] backdrop-blur-2xl"
     >
       <nav
         className="mx-auto max-w-6xl px-3 py-2 sm:px-4 sm:py-3"
@@ -271,14 +259,7 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-700 to-blue-950 shadow-lg shadow-blue-700/25 ring-1 ring-white/60">
-                <Image
-                  src="/logo-mark.svg"
-                  alt=""
-                  aria-hidden="true"
-                  width={24}
-                  height={24}
-                  className="h-6 w-6 rounded-md"
-                />
+                <LogoMarkIcon />
               </span>
               <span className="leading-tight">
                 Scholarships Central
