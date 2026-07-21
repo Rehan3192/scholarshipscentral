@@ -23,6 +23,7 @@ type Props = {
 const CANONICAL_ROUTE_OVERRIDES: Record<string, string> = {
   "marshall-scholarship-2027": "/marshall-scholarship-2027",
   "fulbright-us-student-program-2027-2028": "/fulbright-us-student-program-2027-2028",
+  "fulbright-study-research-awards-2027-2028": "/fulbright-study-research-awards-2027-2028",
 };
 
 export const dynamicParams = false;
