@@ -591,9 +591,16 @@ export default async function ScholarshipPage({ params }: Props) {
                 {section.facts.length > 0 ? (
                   <dl className="grid gap-3 sm:grid-cols-2">
                     {section.facts.map((fact) => (
-                      <div key={`${fact.label}:${fact.value}`} className="space-y-1">
-                        <dt className="font-medium text-slate-600">{fact.label}</dt>
-                        <dd className="font-semibold text-slate-900">{fact.value}</dd>
+                      <div
+                        key={`${fact.label}:${fact.value}`}
+                        className="rounded-2xl border border-blue-200 bg-white/80 p-4 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition duration-200 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-[0_16px_36px_rgba(37,99,235,0.12)]"
+                      >
+                        <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-blue-700">
+                          {fact.label}
+                        </dt>
+                        <dd className="mt-2 text-sm font-semibold leading-relaxed text-slate-950 break-words">
+                          {renderLinkedText(fact.value)}
+                        </dd>
                       </div>
                     ))}
                   </dl>
