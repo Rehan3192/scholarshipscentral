@@ -9,14 +9,14 @@ import {
 
 const PAGE_PATH = "/csc-scholarship-2027-results";
 const PUBLISHED_DATE = "2026-07-17";
-const LAST_UPDATED = "2026-07-17";
+const LAST_UPDATED = "2026-07-22";
 const TITLE =
-  "CSC Scholarship 2027 Results: Expected Date, How to Check Type A & Type B Status";
+  "CSC Scholarship 2027 Results: Schedule, Deadline, Type A & Type B Status";
 const DESCRIPTION =
-  "Check the expected CSC Scholarship 2027 result period, Type A and Type B notification routes, status meanings, and what to do after selection.";
+  "Check the CSC Scholarship 2027 schedule, expected result period, application deadline context, Type A and Type B notification routes, portal status meanings, and next steps.";
 
 export const metadata: Metadata = {
-  title: "CSC Scholarship 2027 Results: Dates & Status",
+  title: "CSC Scholarship 2027 Results, Schedule & Deadline",
   description: DESCRIPTION,
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     modifiedTime: LAST_UPDATED,
   },
   twitter: {
-    title: "CSC Scholarship 2027 Results: Dates & Status",
+    title: "CSC Scholarship 2027 Results, Schedule & Deadline",
     description: DESCRIPTION,
   },
 };
@@ -37,7 +37,22 @@ const faqs = [
   {
     question: "Are CSC Scholarship 2027 results announced?",
     answer:
-      "No official nationwide CSC Scholarship 2027 result release has been confirmed as of July 17, 2026. The 2027 selection cycle is still ahead, so applicants should treat any current result claim as unverified unless it comes from CSC, their university, embassy, or dispatching authority.",
+      "No official nationwide CSC Scholarship 2027 result release has been confirmed as of July 22, 2026. The 2027 result cycle is still ahead, so applicants should treat any current result claim as unverified unless it comes from CSC, their university, embassy, or dispatching authority.",
+  },
+  {
+    question: "What is the CSC 2027 schedule?",
+    answer:
+      "The CSC 2027 schedule depends on the application route, university, embassy, or dispatching authority. Applicants should normally track the opening period, application deadline, review stage, CSC approval, result notification, admission package, visa preparation, and registration in China.",
+  },
+  {
+    question: "When will CSC Scholarship open for 2027?",
+    answer:
+      "The exact CSC Scholarship 2027 opening date must be verified through Campus China, the CSC application system, the chosen university, or the relevant embassy or dispatching authority. Dates can vary by route and institution.",
+  },
+  {
+    question: "What is the CSC Scholarship 2027 deadline?",
+    answer:
+      "There is no single deadline for every CSC Scholarship 2027 applicant. Type A deadlines are set by embassies or dispatching authorities, while Type B deadlines are usually set by Chinese universities.",
   },
   {
     question: "When are CSC Type A results expected?",
@@ -143,12 +158,12 @@ export default function CscScholarship2027ResultsPage() {
           {TITLE}
         </h1>
         <p className="mt-4 mb-0 max-w-3xl text-base leading-7 text-slate-700">
-          Track the expected Chinese Government Scholarship result period, learn
-          where Type A and Type B decisions appear, and prepare for the steps
-          that follow a confirmed selection.
+          Track the CSC 2027 schedule, expected Chinese Government Scholarship
+          result period, Type A and Type B notification routes, CSC application
+          portal checks, and what to do after a confirmed selection.
         </p>
         <dl className="mt-5 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-4">
-          <div><dt className="font-semibold text-slate-500">Last updated</dt><dd className="mt-1 text-slate-900"><time dateTime={LAST_UPDATED}>July 17, 2026</time></dd></div>
+          <div><dt className="font-semibold text-slate-500">Last updated</dt><dd className="mt-1 text-slate-900"><time dateTime={LAST_UPDATED}>July 22, 2026</time></dd></div>
           <div><dt className="font-semibold text-slate-500">Country</dt><dd className="mt-1 text-slate-900">China</dd></div>
           <div><dt className="font-semibold text-slate-500">Degree levels</dt><dd className="mt-1 text-slate-900">Bachelor&apos;s, Master&apos;s, PhD</dd></div>
           <div><dt className="font-semibold text-slate-500">Reading time</dt><dd className="mt-1 text-slate-900">10 minutes</dd></div>
@@ -180,9 +195,41 @@ export default function CscScholarship2027ResultsPage() {
       </section>
 
       <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
+        <h2 className="mt-0 text-2xl font-semibold text-slate-900">CSC 2027 schedule and application deadline</h2>
+        <p className="mt-4 mb-0 leading-7 text-slate-700">
+          Applicants searching for the CSC 2027 schedule should not expect one
+          single calendar for every country and university. Type A applicants
+          follow the Chinese embassy or dispatching-authority schedule. Type B
+          applicants follow the selected Chinese university schedule. The CSC
+          Scholarship 2027 deadline can therefore be earlier or later depending
+          on the route that accepts your file.
+        </p>
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <h3 className="m-0 text-base font-semibold text-slate-900">When will CSC Scholarship open for 2027?</h3>
+            <p className="mt-2 mb-0 text-sm leading-6 text-slate-700">
+              Check Campus China, the CSC central portal, your target
+              university, and your embassy or dispatching authority. The opening
+              date is route-specific, so do not rely on a social-media date
+              unless the official accepting authority confirms it.
+            </p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <h3 className="m-0 text-base font-semibold text-slate-900">Where is the CSC application 2027 deadline?</h3>
+            <p className="mt-2 mb-0 text-sm leading-6 text-slate-700">
+              Type A deadlines normally come from the embassy or dispatching
+              authority. Type B deadlines normally come from the Chinese
+              university. The CSC application system should be checked together
+              with those official route notices.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-2xl font-semibold text-slate-900">Are CSC Scholarship 2027 results out?</h2>
         <p className="mt-4 mb-0 leading-7 text-slate-700">
-          <strong>No official nationwide CSC Scholarship 2027 result release has been confirmed.</strong> As of July 17, 2026, the 2027 result cycle is still in the future. No university notification should be presented as a complete national release because universities, embassies, and other dispatching authorities can communicate on different schedules.
+          <strong>No official nationwide CSC Scholarship 2027 result release has been confirmed.</strong> As of July 22, 2026, the 2027 result cycle is still in the future. No university notification should be presented as a complete national release because universities, embassies, and other dispatching authorities can communicate on different schedules.
         </p>
         <p className="mt-4 mb-0 leading-7 text-slate-700">
           July–August 2027 is the period applicants should provisionally monitor most closely, but it is an editorial estimate rather than a date announced for every route. This page should be updated when identifiable universities, embassies, or CSC publish confirmations.
@@ -191,8 +238,13 @@ export default function CscScholarship2027ResultsPage() {
 
       <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-white to-blue-50/40 p-6 shadow-sm sm:p-8">
         <h2 className="mt-0 text-2xl font-semibold text-slate-900">CSC Scholarship 2027 result timeline</h2>
+        <p className="mt-3 mb-0 text-sm leading-6 text-slate-700">
+          This timeline is a reader checklist for the CSC 2027 schedule. Use it
+          together with the deadline and result notice from your university,
+          embassy, dispatching authority, or CSC application portal.
+        </p>
         <ol className="mt-5 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-4">
-          {["Application submitted", "University or dispatching-authority review", "CSC review and approval process", "Result notification", "Admission package", "Visa preparation", "Travel and registration"].map((step, index) => (
+          {["Call opens", "CSC application 2027 deadline", "University or dispatching-authority review", "CSC review and approval process", "Result notification", "Admission package", "Visa preparation", "Travel and registration"].map((step, index) => (
             <li key={step} className="rounded-xl border border-slate-200 bg-slate-50 p-4"><span className="block text-xs font-bold text-blue-700">STEP {index + 1}</span><span className="mt-1 block font-semibold text-slate-900">{step}</span></li>
           ))}
         </ol>
@@ -209,7 +261,7 @@ export default function CscScholarship2027ResultsPage() {
         <div className="mt-5 grid gap-4 sm:grid-cols-2">
           {[
             ["1. University email and admissions system", "Check the inbox and spam folder associated with your application. Type B applicants should also check the university's international admissions system and official notices."],
-            ["2. CSC application portal", "Sign in through the official application system and review any available application update. Portal wording may differ by route and should be read together with formal notices."],
+            ["2. CSC central portal / application system", "Sign in through the official CSC application system and review any available update. Portal wording may differ by route and should be read together with formal university or embassy notices."],
             ["3. Chinese embassy or dispatching authority", "Type A applicants should follow the organization that received their documents. It may publish a list, email selected applicants, or provide another official checking method."],
             ["4. University international office", "If the published result window has passed, send one concise enquiry containing your name, application number, programme, and application route."],
           ].map(([heading, text]) => (
@@ -251,7 +303,7 @@ export default function CscScholarship2027ResultsPage() {
       </section>
 
       <footer className="rounded-2xl border border-slate-200 bg-slate-50 p-5 text-sm text-slate-600">
-        <p className="m-0"><strong className="text-slate-900">Editorial note:</strong> Published <time dateTime={PUBLISHED_DATE}>July 17, 2026</time>; last reviewed <time dateTime={LAST_UPDATED}>July 17, 2026</time>. Sources reviewed: Campus China, the CSC application system, and Study in China. This page separates confirmed information from editorial timing estimates and should be updated as official 2027 announcements appear.</p>
+        <p className="m-0"><strong className="text-slate-900">Editorial note:</strong> Published <time dateTime={PUBLISHED_DATE}>July 17, 2026</time>; last reviewed <time dateTime={LAST_UPDATED}>July 22, 2026</time>. Sources reviewed: Campus China, the CSC application system, and Study in China. This page separates confirmed information from editorial timing estimates and should be updated as official 2027 announcements appear.</p>
       </footer>
     </article>
   );
