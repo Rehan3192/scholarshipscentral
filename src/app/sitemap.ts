@@ -47,7 +47,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         s.slug !== "fulbright-us-student-program-2027-2028" &&
         s.slug !== "fulbright-study-research-awards-2027-2028" &&
         s.slug !== "fulbright-english-teaching-assistant-awards-2027-2028" &&
-        s.slug !== "fulbright-application-documents-essay-limits-2027-2028",
+        s.slug !== "fulbright-application-documents-essay-limits-2027-2028" &&
+        s.slug !== "fulbright-countries-without-language-requirement-2027-2028",
     )
     .map((s) => ({
       url: `${siteUrl}/scholarships/${s.slug}`,
@@ -227,6 +228,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${siteUrl}/fulbright-application-documents-essay-limits-2027-2028`,
       lastModified: new Date("2026-07-21T00:00:00Z"),
+      changeFrequency: "weekly" as const,
+      priority: 0.78,
+    },
+    {
+      url: `${siteUrl}/fulbright-countries-without-language-requirement-2027-2028`,
+      lastModified: new Date("2026-07-22T00:00:00Z"),
       changeFrequency: "weekly" as const,
       priority: 0.78,
     },
