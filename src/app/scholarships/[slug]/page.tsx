@@ -33,6 +33,7 @@ const CANONICAL_ROUTE_OVERRIDES: Record<string, string> = {
   "paul-daisy-soros-fellowship-2027": "/paul-daisy-soros-fellowship-2027",
   "paul-daisy-soros-fellowship-eligibility-new-american-2027": "/paul-daisy-soros-fellowship-eligibility-new-american-2027",
   "paul-daisy-soros-fellowship-funding-2027": "/paul-daisy-soros-fellowship-funding-2027",
+  "paul-daisy-soros-fellowship-essays-2027": "/paul-daisy-soros-fellowship-essays-2027",
 };
 
 export const dynamicParams = false;
