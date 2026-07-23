@@ -31,6 +31,7 @@ const CANONICAL_ROUTE_OVERRIDES: Record<string, string> = {
   "fulbright-stipend-benefits-by-country-2027-2028": "/fulbright-stipend-benefits-by-country-2027-2028",
   "fulbright-acceptance-rates-by-country-2027-2028": "/fulbright-acceptance-rates-by-country-2027-2028",
   "paul-daisy-soros-fellowship-2027": "/paul-daisy-soros-fellowship-2027",
+  "paul-daisy-soros-fellowship-eligibility-new-american-2027": "/paul-daisy-soros-fellowship-eligibility-new-american-2027",
 };
 
 export const dynamicParams = false;

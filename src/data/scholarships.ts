@@ -5247,11 +5247,13 @@ const rawScholarships: Scholarship[] = [
       },
     ],
     relatedScholarships: [
+      "paul-daisy-soros-fellowship-eligibility-new-american-2027",
       "fulbright-us-student-program-2027-2028",
       "rhodes-scholarship-2027-usa",
       "marshall-scholarship-2027",
     ],
     categoryLinks: [
+      "/paul-daisy-soros-fellowship-eligibility-new-american-2027",
       "/countries/usa",
       "/degrees/masters",
       "/degrees/phd",
@@ -5280,6 +5282,432 @@ const rawScholarships: Scholarship[] = [
       studyMode: ["On Campus", "Online"],
       applicationMethod: "Provider Portal",
       priorityScore: 94,
+      dataQuality: "Verified",
+    },
+  },
+  {
+    slug: "paul-daisy-soros-fellowship-eligibility-new-american-2027",
+    title: "Paul & Daisy Soros Fellowship Eligibility: Who Qualifies as a New American?",
+    seoTitle: "Paul & Daisy Soros Fellowship Eligibility 2027: New American Guide",
+    metaDescription:
+      "Check Paul & Daisy Soros Fellowship eligibility for 2027, including New American rules, immigrants, children of immigrants, DACA, age and graduate-study timing.",
+    keywords: [
+      "Paul & Daisy Soros Fellowship eligibility",
+      "Paul and Daisy Soros New American eligibility",
+      "who qualifies as a New American",
+      "Soros Fellowship DACA eligibility",
+      "Soros Fellowship green card holder",
+      "Soros Fellowship children of immigrants",
+      "Soros Fellowship age limit",
+      "Soros Fellowship current graduate students",
+    ],
+    overview:
+      "Paul & Daisy Soros Fellowship eligibility depends on three big questions: whether you qualify as a New American, whether you are 30 or younger on the deadline date, and whether your graduate or professional program timing fits the official rules.",
+    introduction:
+      "Paul & Daisy Soros Fellowship eligibility can feel confusing because the award is not simply for any graduate student in the United States. It is for New Americans: immigrants and children of immigrants who meet specific official rules, are 30 or younger on the application deadline, and are pursuing eligible full-time graduate or professional study in the United States. This guide explains naturalized citizens, green-card holders, refugees, asylees, DACA recipients, children of immigrants, dual citizens, current international students, age limits and current graduate-student timing in plain language.",
+    summary:
+      "Officially checked on July 23, 2026. The Paul & Daisy Soros Fellowship 2027 deadline is October 29, 2026 at 2:00 p.m. Eastern Time, and applicants must satisfy New American, age, degree-program and study-timing rules.",
+    country: "USA",
+    continent: "North America",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+    tags: [
+      "USA",
+      "Paul & Daisy Soros Fellowship Eligibility",
+      "New Americans",
+      "Immigrants",
+      "Children of Immigrants",
+      "DACA",
+      "Green Card",
+      "Refugees",
+      "Graduate School",
+      "Open",
+    ],
+    deadline: "October 29, 2026, 2:00 p.m. Eastern Time",
+    duration: "Up to two academic years",
+    eligibility: [
+      "Applicants must qualify as New Americans under the official immigrant or child-of-immigrants definition.",
+      "Applicants must be 30 years old or younger on October 29, 2026.",
+      "Applicants must pursue eligible full-time graduate or professional study at an accredited institution in the United States.",
+      "Applicants may apply before graduate admission or during the first or second year of the degree for which they seek funding.",
+      "Applicants generally cannot have started the third year of the funded degree by the application deadline.",
+    ],
+    benefits: [
+      "Clarifies whether an applicant should spend time on the full Paul & Daisy Soros Fellowship 2027 application.",
+      "Explains the New American definition in reader-friendly language.",
+      "Separates immigration-background eligibility from age and graduate-study timing.",
+      "Links back to the main Soros Fellowship 2027 funding and application guide.",
+    ],
+    applicationProcess: [
+      "Start with New American eligibility.",
+      "Check age on the exact deadline date.",
+      "Confirm the graduate or professional degree is eligible.",
+      "Confirm whether your current year of study is still eligible.",
+      "Read the official eligibility page before drafting essays.",
+      "Use the main Soros Fellowship guide for documents, funding and deadline details.",
+    ],
+    documents: [
+      "Official eligibility documentation if requested later.",
+      "Immigration-status evidence where applicable.",
+      "Parent-background documentation where applicable.",
+      "Educational records showing U.S. high school and college pathway where applicable.",
+      "Graduate-program information.",
+      "Transcripts.",
+      "Online fellowship application.",
+    ],
+    contentSections: [
+      {
+        title: "Paul & Daisy Soros Fellowship eligibility at a glance",
+        facts: [
+          { label: "Main eligibility identity", value: "New American" },
+          { label: "Who this usually means", value: "Immigrants and children of immigrants" },
+          { label: "Maximum age", value: "30 on October 29, 2026" },
+          { label: "Degree level", value: "Graduate and professional study" },
+          { label: "Study country", value: "United States" },
+          { label: "Study load", value: "Full-time" },
+          { label: "Application deadline", value: "October 29, 2026" },
+          { label: "Deadline time", value: "2:00 p.m. Eastern Time" },
+          { label: "Main guide", value: "/paul-daisy-soros-fellowship-2027" },
+          { label: "Last verified", value: "July 23, 2026" },
+        ],
+        paragraphs: [
+          "The Paul & Daisy Soros Fellowship eligibility rules should be checked before essays, recommendations or graduate-program lists. The award is generous, but it is not open to every graduate student. You must fit the New American definition, meet the age rule, and plan eligible full-time graduate or professional study in the United States. If one of those three parts fails, the funding amount and application strategy no longer matter.",
+        ],
+      },
+      {
+        title: "The three eligibility questions to answer first",
+        paragraphs: [
+          "Start with three questions. First, do you qualify as a New American? Second, will you be 30 or younger on October 29, 2026? Third, are you applying for or already enrolled in an eligible graduate or professional degree at the correct stage? This order prevents wasted work. Many applicants start by polishing essays, but the official eligibility test comes before storytelling.",
+        ],
+        bullets: [
+          "New American eligibility: immigrant or child of immigrants under the official definition.",
+          "Age eligibility: 30 or younger on the deadline date.",
+          "Academic eligibility: eligible full-time graduate or professional study in the United States.",
+          "Timing eligibility: not too far along in the specific degree for which you seek funding.",
+        ],
+      },
+      {
+        title: "Who qualifies as a New American?",
+        paragraphs: [
+          "A New American is not a casual label in this fellowship. It is an official eligibility category. In broad terms, applicants qualify either as immigrants to the United States or as children of immigrants. The official page gives detailed pathways, and applicants with complex family or immigration backgrounds should read that page carefully. The important reader-friendly point is this: the fellowship is designed for people whose lives are directly shaped by immigration to the United States, not for every U.S. student with distant immigrant ancestry.",
+          "The New American definition matters because it is the most distinctive part of the fellowship. The award is not mainly sorting applicants by major, university or GPA. It is asking whether the applicant's background and future contribution fit the fellowship's purpose. But purpose does not replace proof. You still need to satisfy the official rule.",
+        ],
+      },
+      {
+        title: "Naturalized U.S. citizens",
+        paragraphs: [
+          "Naturalized U.S. citizens can generally fall within the immigrant applicant pathway when they meet the rest of the fellowship rules. Naturalization is often one of the clearest New American routes because the applicant was born outside the United States and later became a U.S. citizen. That said, applicants should still check the full official eligibility language, because New American status is only one part of the application. Age, graduate-degree timing and full-time U.S. study must also be satisfied.",
+        ],
+        bullets: [
+          "Check your citizenship and immigration history.",
+          "Confirm you are 30 or younger on the deadline date.",
+          "Confirm your graduate or professional program is eligible.",
+          "Keep documentation ready in case finalist verification requests it.",
+        ],
+      },
+      {
+        title: "Green-card holders",
+        paragraphs: [
+          "Green-card holders may qualify through the immigrant applicant pathway. For many permanent residents, the bigger questions are not whether they are immigrants, but whether they meet age and graduate-study timing rules. A green card alone does not make an ineligible degree eligible, and it does not override the age limit. Treat permanent-resident status as one important piece of the puzzle, not the whole puzzle.",
+        ],
+        bullets: [
+          "Green-card holders should verify their immigrant eligibility on the official page.",
+          "The fellowship is for eligible U.S. graduate or professional programs.",
+          "Applicants should not confuse permanent-resident eligibility with international-student eligibility.",
+          "Current graduate students still need to check first-year, second-year and third-year timing.",
+        ],
+      },
+      {
+        title: "Refugees and asylees",
+        paragraphs: [
+          "Refugees and asylees are specifically important audiences for this fellowship because the award recognizes New American experiences broadly, not only one immigration category. If you are a refugee or asylee pursuing graduate or professional study in the United States, the official eligibility page should be your starting point. The application should later explain your story with care, but eligibility comes first.",
+        ],
+        bullets: [
+          "Verify the official status pathway.",
+          "Confirm age on October 29, 2026.",
+          "Check whether the intended graduate degree is full-time and accredited.",
+          "Prepare documentation early, especially if records are difficult to obtain.",
+        ],
+      },
+      {
+        title: "DACA recipients",
+        paragraphs: [
+          "DACA recipients may qualify when they satisfy the program's official U.S. education pathway. The key point is that DACA status by itself should not be read casually from a blog summary. The official eligibility page explains the pathway, including U.S. high-school and college education conditions. If you are a DACA recipient, read the official rule slowly before deciding whether to apply.",
+          "This guide avoids saying every DACA recipient automatically qualifies, because that would be irresponsible. A reader needs the truth: DACA applicants can be eligible when the official pathway is satisfied, and they should verify the education history requirement before investing in essays and recommendation letters.",
+        ],
+        bullets: [
+          "Check the official DACA-related pathway.",
+          "Confirm U.S. high-school and college education history if required.",
+          "Confirm age and graduate-study timing.",
+          "Do not rely only on social media summaries.",
+        ],
+      },
+      {
+        title: "Applicants born outside the United States",
+        paragraphs: [
+          "Applicants born outside the United States may qualify as immigrant applicants, but the exact status pathway matters. Being born abroad is not enough by itself if the applicant does not meet the official immigration-background rule. Applicants should identify which official category describes them and then check the remaining rules. This is especially important for current international students, dual citizens, and applicants whose parents' citizenship situation is unusual.",
+        ],
+        bullets: [
+          "Identify your current status or pathway.",
+          "Check whether the official eligibility page recognizes that pathway.",
+          "Confirm whether your intended graduate program is in the United States.",
+          "Separate fellowship eligibility from university admission eligibility.",
+        ],
+      },
+      {
+        title: "Children of two immigrant parents",
+        paragraphs: [
+          "Applicants born in the United States may qualify as children of immigrants when both birth parents were born abroad as non-U.S. citizens and were not eligible for U.S. citizenship when the applicant was born. This is one of the most common reader questions because many U.S.-born students are unsure whether being the child of immigrants is enough. The answer depends on the official parent-background rule, not only on family identity.",
+        ],
+        bullets: [
+          "Check each birth parent's country of birth.",
+          "Check whether each birth parent was a U.S. citizen when you were born.",
+          "Check whether either parent was eligible for U.S. citizenship when you were born.",
+          "If the facts are complicated, read the official page before assuming eligibility.",
+        ],
+      },
+      {
+        title: "Children of one immigrant parent",
+        paragraphs: [
+          "Some applicants were raised by one immigrant birth parent while the second birth parent was not part of their upbringing. The official rules include a pathway for this kind of situation, but the details matter. Do not reduce the rule to 'one immigrant parent is enough' without reading the official wording. The page is trying to recognize real family structures while still keeping a clear eligibility standard.",
+        ],
+        bullets: [
+          "Read the official one-parent pathway carefully.",
+          "Do not assume every one-immigrant-parent case qualifies.",
+          "Be prepared to explain upbringing facts if finalist verification asks.",
+          "Keep the essay human, but keep eligibility documentation factual.",
+        ],
+      },
+      {
+        title: "Dual citizens",
+        paragraphs: [
+          "Dual citizenship can make applicants nervous because it does not always fit cleanly into simple scholarship summaries. The main question is not merely whether you hold two passports. The key question is whether your immigration or parent-background facts satisfy the official New American definition. A naturalized U.S. citizen who also holds another citizenship may be different from a U.S.-born applicant with dual citizenship at birth. Read the official pathway that fits your facts.",
+        ],
+        bullets: [
+          "Do not treat dual citizenship as automatically eligible or automatically ineligible.",
+          "Identify whether you are applying as an immigrant or child of immigrants.",
+          "Check citizenship facts at birth if you were born in the United States.",
+          "Use official eligibility language, not guesswork.",
+        ],
+      },
+      {
+        title: "Current international students",
+        paragraphs: [
+          "Current international students should be especially careful. Studying in the United States does not automatically make someone eligible for the Paul & Daisy Soros Fellowship. The fellowship is for New Americans under the official definition, and international student status alone may not satisfy that definition. Some applicants who studied in the United States may qualify through a specific education pathway, but others may not. This is exactly why the official eligibility page should be checked before drafting.",
+        ],
+        bullets: [
+          "Being enrolled in a U.S. university is not the same as being New American eligible.",
+          "Check whether your immigration or education pathway is officially recognized.",
+          "Confirm that the fellowship can support the specific graduate program you plan to attend.",
+          "If you are unsure, use the official contact route rather than relying on forums.",
+        ],
+      },
+      {
+        title: "Age limit for the 2027 fellowship",
+        paragraphs: [
+          "Applicants must be 30 years old or younger on October 29, 2026. A simple way to think about it is this: you are age-eligible if you have not turned 31 by the deadline date. The program says there is no minimum age and no exceptions to the maximum-age condition. That makes the age rule unusually clear compared with the New American definition.",
+        ],
+        bullets: [
+          "Deadline date: October 29, 2026.",
+          "Deadline time: 2:00 p.m. Eastern Time.",
+          "Maximum age: 30 on the deadline date.",
+          "No exception to the maximum-age condition.",
+          "No minimum age listed.",
+        ],
+      },
+      {
+        title: "Graduate-study timing: who can apply?",
+        paragraphs: [
+          "The fellowship can support applicants who are applying to graduate school, waiting on admission, or already in the early years of the degree for which they want funding. This is a major advantage because applicants do not need final graduate-school admission before submitting the fellowship application. But there is a limit: applicants generally cannot have started the third year of the specific degree program for which they seek support by the application deadline.",
+        ],
+        facts: [
+          { label: "Undergraduate senior", value: "Eligible if entering eligible graduate study" },
+          { label: "Applying for a master's", value: "Normally eligible" },
+          { label: "Applying for a PhD", value: "Normally eligible" },
+          { label: "First-year graduate student", value: "Normally eligible" },
+          { label: "Second-year graduate student", value: "Potentially eligible" },
+          { label: "Third-year PhD student", value: "Usually ineligible for that degree" },
+          { label: "Already has a master's", value: "May apply for another eligible degree" },
+          { label: "Taking a gap year", value: "Potentially eligible if other rules are met" },
+          { label: "Enrolled part-time", value: "Must plan eligible full-time study" },
+        ],
+      },
+      {
+        title: "Eligible degree programs",
+        paragraphs: [
+          "The fellowship supports eligible full-time graduate and professional degrees at accredited institutions in the United States. It is intentionally broad by field and degree type. That breadth is useful, but it can also create confusion. The degree must still be a qualifying graduate or professional program, not a casual course, certificate or non-accredited option.",
+        ],
+        bullets: [
+          "Master's degrees",
+          "PhD programs",
+          "MD programs",
+          "JD programs",
+          "MBA programs",
+          "MFA programs",
+          "MPH and other public-health degrees",
+          "Dual and joint graduate degrees when official timing rules are satisfied",
+          "Accredited online graduate programs when they meet official requirements",
+        ],
+      },
+      {
+        title: "Ineligible programs",
+        paragraphs: [
+          "Some programs do not qualify even if they are valuable. This distinction matters because applicants may be academically strong but still ineligible if the program type is wrong. Always verify your degree structure, accreditation and study load.",
+        ],
+        bullets: [
+          "Certificate programs",
+          "Post-baccalaureate programs",
+          "Executive graduate programs",
+          "Graduate programs outside the United States",
+          "Programs that are not fully accredited",
+          "Certain combined bachelor's/master's programs where both degrees are awarded simultaneously",
+          "Programs that do not involve full-time graduate or professional study during the fellowship year",
+        ],
+      },
+      {
+        title: "Applying before graduate-school admission",
+        paragraphs: [
+          "Applicants do not need graduate-school admission before applying for the fellowship. This is important because many applicants will submit fellowship materials while also applying to master's, PhD, law, medical, business or other professional programs. The fellowship application and university admission process are separate. You can be a serious fellowship applicant before you know where you will ultimately enroll.",
+        ],
+        bullets: [
+          "List intended graduate or professional programs honestly.",
+          "Do not pretend admission is final if it is not.",
+          "Track each university deadline separately.",
+          "Remember that fellowship selection does not replace admission to an eligible program.",
+        ],
+      },
+      {
+        title: "How eligibility affects your essays",
+        paragraphs: [
+          "Eligibility is not the same as essay strength, but it shapes the essays. Once you know you qualify, the application must still explain your New American experience with specificity and maturity. Do not simply write, 'I am the child of immigrants, therefore I deserve funding.' The fellowship is looking for contribution, promise and a meaningful connection between background and future work. The eligibility facts open the door; the essays show why you belong in the room.",
+        ],
+        bullets: [
+          "Use eligibility facts accurately.",
+          "Do not exaggerate immigration details.",
+          "Connect background to values, choices and contribution.",
+          "Avoid repeating the resume in narrative form.",
+          "Show how graduate study helps you serve your field or community more seriously.",
+        ],
+      },
+      {
+        title: "Common eligibility mistakes",
+        paragraphs: [
+          "Most eligibility mistakes come from assuming the rule is simpler than it is. Some applicants think any immigrant heritage qualifies. Others think studying in the United States is enough. Others ignore the third-year graduate-study rule or forget that the age limit is measured on the deadline date. Slow checking is boring, but it protects weeks of work.",
+        ],
+        bullets: [
+          "Assuming distant immigrant ancestry is enough.",
+          "Assuming one immigrant parent always qualifies without reading the official rule.",
+          "Assuming DACA eligibility without checking the education pathway.",
+          "Assuming current international-student status is enough.",
+          "Ignoring the age rule until after essays are drafted.",
+          "Applying for a certificate or executive program that is not eligible.",
+          "Starting the third year of the funded degree before checking timing rules.",
+        ],
+      },
+      {
+        title: "What to do if your case is complicated",
+        paragraphs: [
+          "If your family, citizenship or education history is complicated, do not force it into a simple category because a blog post sounded confident. Read the official eligibility page, write down the exact facts of your case, and use the official contact route if needed. The goal is not to talk yourself into applying at any cost. The goal is to know whether you are eligible early enough to make a smart decision.",
+        ],
+        bullets: [
+          "Write your facts in chronological order.",
+          "Separate birth facts, parent facts, immigration facts and education facts.",
+          "Check the exact official pathway that matches those facts.",
+          "Ask the program directly if the official page does not answer your situation.",
+          "Do not wait until the deadline week for an eligibility question.",
+        ],
+      },
+      {
+        title: "Quick eligibility checklist",
+        paragraphs: [
+          "Use this checklist before moving to the full application. If you cannot answer yes or clearly verify the answer, pause and check the official page. This fellowship is worth the effort, but only if the foundation is correct.",
+        ],
+        bullets: [
+          "I qualify as a New American under the official definition.",
+          "I will be 30 or younger on October 29, 2026.",
+          "I am applying for eligible full-time graduate or professional study in the United States.",
+          "My program is accredited and not an excluded certificate, post-baccalaureate or executive route.",
+          "I have not started the third year of the funded degree by the deadline.",
+          "I understand that graduate-school admission and fellowship selection are separate.",
+          "I can document my eligibility if I become a finalist.",
+        ],
+      },
+      {
+        title: "Official links to verify",
+        bullets: [
+          "Eligibility requirements: https://pdsoros.org/eligibility/",
+          "Application process: https://pdsoros.org/application-process/",
+          "Financial support: https://pdsoros.org/fellowship-financial-support/",
+          "Main Soros Fellowship guide on Scholarships Central: /paul-daisy-soros-fellowship-2027",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Who qualifies as a New American for the Paul & Daisy Soros Fellowship?",
+        answer:
+          "Applicants generally qualify as immigrants to the United States or children of immigrants under the official rules. The details depend on immigration status, parent background and specific pathways listed on the official eligibility page.",
+      },
+      {
+        question: "Can DACA recipients apply for the Soros Fellowship?",
+        answer:
+          "DACA recipients may qualify when they satisfy the program's official U.S. education pathway. They should verify the exact requirements on the official eligibility page.",
+      },
+      {
+        question: "Can green-card holders apply?",
+        answer:
+          "Green-card holders may qualify through the immigrant applicant pathway, but they must also meet age, degree, full-time study and graduate-year timing rules.",
+      },
+      {
+        question: "What is the age limit for the 2027 Soros Fellowship?",
+        answer:
+          "Applicants must be 30 years old or younger on October 29, 2026, the application deadline. The program states that no exceptions are granted to the maximum-age rule.",
+      },
+      {
+        question: "Can current graduate students apply?",
+        answer:
+          "Yes, first-year and second-year graduate students may be eligible, but applicants generally cannot have started the third year of the specific degree for which they seek funding by the deadline.",
+      },
+      {
+        question: "Do international students automatically qualify?",
+        answer:
+          "No. Studying in the United States does not automatically satisfy New American eligibility. Applicants must match one of the official immigrant, child-of-immigrants or education-related pathways.",
+      },
+    ],
+    relatedScholarships: [
+      "paul-daisy-soros-fellowship-2027",
+      "fulbright-us-student-program-2027-2028",
+      "rhodes-scholarship-2027-usa",
+    ],
+    categoryLinks: [
+      "/paul-daisy-soros-fellowship-2027",
+      "/countries/usa",
+      "/degrees/masters",
+      "/degrees/phd",
+      "/find-scholarships",
+    ],
+    applyUrl: "https://pdsoros.org/eligibility/",
+    officialSource: "Paul & Daisy Soros Fellowships for New Americans",
+    lastUpdated: "2026-07-23",
+    discovery: {
+      hostCountries: ["USA"],
+      degreeLevels: ["Masters", "PhD"],
+      status: "Open",
+      deadlineDate: "2026-10-29",
+      deadlineConfidence: "Exact",
+      tuitionCoverage: "Partial",
+      fundingLevel: "High",
+      stipendAvailable: true,
+      travelSupport: false,
+      accommodationSupport: "Unknown",
+      eligibleNationalities: ["USA"],
+      ieltsRequired: false,
+      alternativeProofAccepted: "Unknown",
+      mediumOfInstructionAccepted: "Unknown",
+      fieldsOfStudy: ["All fields"],
+      studyMode: ["On Campus", "Online"],
+      applicationMethod: "Provider Portal",
+      priorityScore: 93,
       dataQuality: "Verified",
     },
   },
