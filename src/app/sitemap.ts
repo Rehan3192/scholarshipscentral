@@ -49,7 +49,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         s.slug !== "fulbright-english-teaching-assistant-awards-2027-2028" &&
         s.slug !== "fulbright-application-documents-essay-limits-2027-2028" &&
         s.slug !== "fulbright-countries-without-language-requirement-2027-2028" &&
-        s.slug !== "fulbright-graduate-degree-funding-2027-2028",
+        s.slug !== "fulbright-graduate-degree-funding-2027-2028" &&
+        s.slug !== "fulbright-stipend-benefits-by-country-2027-2028" &&
+        s.slug !== "fulbright-acceptance-rates-by-country-2027-2028",
     )
     .map((s) => ({
       url: `${siteUrl}/scholarships/${s.slug}`,
@@ -240,6 +242,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${siteUrl}/fulbright-graduate-degree-funding-2027-2028`,
+      lastModified: new Date("2026-07-23T00:00:00Z"),
+      changeFrequency: "weekly" as const,
+      priority: 0.78,
+    },
+    {
+      url: `${siteUrl}/fulbright-stipend-benefits-by-country-2027-2028`,
+      lastModified: new Date("2026-07-23T00:00:00Z"),
+      changeFrequency: "weekly" as const,
+      priority: 0.78,
+    },
+    {
+      url: `${siteUrl}/fulbright-acceptance-rates-by-country-2027-2028`,
       lastModified: new Date("2026-07-23T00:00:00Z"),
       changeFrequency: "weekly" as const,
       priority: 0.78,

@@ -28,6 +28,8 @@ const CANONICAL_ROUTE_OVERRIDES: Record<string, string> = {
   "fulbright-application-documents-essay-limits-2027-2028": "/fulbright-application-documents-essay-limits-2027-2028",
   "fulbright-countries-without-language-requirement-2027-2028": "/fulbright-countries-without-language-requirement-2027-2028",
   "fulbright-graduate-degree-funding-2027-2028": "/fulbright-graduate-degree-funding-2027-2028",
+  "fulbright-stipend-benefits-by-country-2027-2028": "/fulbright-stipend-benefits-by-country-2027-2028",
+  "fulbright-acceptance-rates-by-country-2027-2028": "/fulbright-acceptance-rates-by-country-2027-2028",
 };
 
 export const dynamicParams = false;

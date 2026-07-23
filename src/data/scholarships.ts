@@ -1723,6 +1723,8 @@ const rawScholarships: Scholarship[] = [
       "Detailed documents and essay limits guide on Scholarships Central: /fulbright-application-documents-essay-limits-2027-2028",
       "Detailed language-requirement guide on Scholarships Central: /fulbright-countries-without-language-requirement-2027-2028",
       "Detailed graduate-degree funding guide on Scholarships Central: /fulbright-graduate-degree-funding-2027-2028",
+      "Detailed stipend and benefits guide on Scholarships Central: /fulbright-stipend-benefits-by-country-2027-2028",
+      "Detailed acceptance-rate and competitiveness guide on Scholarships Central: /fulbright-acceptance-rates-by-country-2027-2028",
       "Official eligibility page: https://us.fulbrightonline.org/about/eligibility",
       "Official award types page: https://us.fulbrightonline.org/applicants/types-of-awards",
       "Official award benefits page: https://us.fulbrightonline.org/about/award-benefits",
@@ -4027,6 +4029,746 @@ const rawScholarships: Scholarship[] = [
       studyMode: ["On Campus"],
       applicationMethod: "Provider Portal",
       priorityScore: 92,
+      dataQuality: "Verified",
+    },
+  },
+  {
+    slug: "fulbright-stipend-benefits-by-country-2027-2028",
+    title: "Fulbright Stipend and Benefits by Country 2027-2028: What Funding Can Cover",
+    seoTitle: "Fulbright Stipend and Benefits by Country 2027-2028 Guide",
+    metaDescription:
+      "Understand Fulbright stipend and benefits by country for 2027-2028. Learn what is usually included, what varies, and how to verify funding on official award pages.",
+    keywords: [
+      "Fulbright stipend and benefits by country 2027-2028",
+      "Fulbright stipend 2027-2028",
+      "Fulbright benefits by country",
+      "Fulbright award benefits",
+      "Fulbright living stipend",
+      "Fulbright tuition coverage",
+      "Fulbright travel allowance",
+      "Fulbright U.S. Student Program funding",
+    ],
+    overview:
+      "The Fulbright stipend and benefits by country 2027-2028 are not one single global package. Fulbright explains that grants generally include accident and sickness health benefits, a 24/7 support line, twelve months of non-competitive eligibility after service, and a stipend broadly based on the host country's cost of living. Some awards may also include international travel, orientation, enrichment activities, tuition, book or research allowances, language study, or other country-specific support.",
+    introduction:
+      "The Fulbright stipend and benefits by country 2027-2028 matter because two awards with the same Fulbright name can feel very different financially. One country may describe a monthly maintenance allowance, another may mention tuition support, another may focus on research expenses, and another may require applicants to confirm outside admission or extra funds. This guide explains what Fulbright benefits commonly include, what changes by country, how to read an award page without misunderstanding it, and what questions to answer before you commit to a Study/Research, graduate degree, creative project, or English Teaching Assistant route.",
+    summary:
+      "Officially checked on July 23, 2026. Fulbright benefits vary by country and award. Applicants should use the official Fulbright Award Search and exact country page to verify stipend, tuition, travel, health benefits, dependents, language training, research allowances, and university costs before applying.",
+    country: "Multiple Countries",
+    continent: "Multiple Continents",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+    tags: [
+      "Fulbright stipend and benefits by country 2027-2028",
+      "Fulbright Scholarship 2027-2028",
+      "Multiple Countries",
+      "USA",
+      "Study Abroad",
+      "Masters",
+      "Research",
+      "English Teaching Assistant",
+      "Open",
+      "October deadline",
+    ],
+    deadline: "October 6, 2026, 5:00 p.m. Eastern Time",
+    duration: "Country- and award-specific during the 2027-2028 grant year",
+    eligibility: [
+      "Applicants must first meet Fulbright U.S. Student Program eligibility, including U.S. citizenship or U.S. nationality by the national deadline.",
+      "The stipend and benefit package depends on the selected country, award type, host institution, and grant activity.",
+      "Applicants should verify whether the award is Study/Research, English Teaching Assistant, graduate degree, creative project, or another country-specific route.",
+      "Applicants should check whether university admission, affiliation, language proficiency, or a host invitation is required before relying on the funding package.",
+    ],
+    benefits: [
+      "Living stipend or maintenance allowance broadly based on the host country's cost of living.",
+      "Accident and sickness health benefits during the grant period.",
+      "24/7 support line during the grant.",
+      "Twelve months of federal non-competitive eligibility after Fulbright service.",
+      "Country- and award-specific extras may include international transportation, orientation, enrichment activities, tuition support, book allowance, research allowance, language study, or other local benefits.",
+      "Applicants must verify the exact country page because Fulbright does not provide one identical stipend, tuition, or travel package for every award.",
+    ],
+    applicationProcess: [
+      "Open the official Fulbright Award Search.",
+      "Select the exact country and award type you are considering.",
+      "Read the award benefits, grant length, host affiliation, tuition, and language sections together.",
+      "Compare the Fulbright benefits with host-country living costs and university costs.",
+      "Confirm whether tuition is included, partially included, waived, capped, or not included.",
+      "Check whether the award requires separate admission, a host affiliation letter, or proof of extra funds.",
+      "Build a personal budget before submitting the Fulbright application.",
+    ],
+    documents: [
+      "Online Fulbright application.",
+      "Statement of Grant Purpose or ETA Statement of Grant Purpose, depending on award type.",
+      "Personal Statement.",
+      "Transcripts.",
+      "Recommendations.",
+      "Language evaluation if required by the country or award.",
+      "Affiliation letter if required or strongly recommended.",
+      "Portfolio or supplementary materials for some creative and field-specific awards.",
+      "Separate university documents if the award involves degree admission.",
+    ],
+    contentSections: [
+      {
+        title: "Fulbright stipend and benefits by country 2027-2028 at a glance",
+        paragraphs: [
+          "The most important thing to understand about Fulbright stipend and benefits by country 2027-2028 is that Fulbright is a program framework, not one identical scholarship package copied across every destination. The name is global, but the money is local. The stipend is shaped around the host country, the grant length, the award type, and sometimes the cost structure of a specific university or placement. That is why a serious applicant should never ask only, 'How much does Fulbright pay?' The better question is: 'What does this exact country award cover, and what will I still need to pay myself?'",
+        ],
+        bullets: [
+          "Fulbright states that stipend support is broadly based on the host country's cost of living.",
+          "Core benefits can include accident and sickness health benefits, support services, and non-competitive eligibility after the grant.",
+          "Some awards may include travel, tuition, book or research allowances, language study, orientation, and enrichment activities.",
+          "Benefits are country- and award-specific, so applicants must verify the exact official award page.",
+        ],
+      },
+      {
+        title: "What Fulbright benefits usually mean",
+        paragraphs: [
+          "Fulbright benefits usually combine direct support, program support, and sometimes educational cost support. Direct support is the money or allowance that helps you live in the host country. Program support includes the systems around the award, such as health benefits and assistance during the grant. Educational cost support may include tuition, research funds, books, language training, or other allowances, but this part varies heavily. A Fulbright award can be generous and still not cover every possible expense. The difference matters because a student who is going for graduate study has different costs from a student doing independent research or teaching English.",
+        ],
+        bullets: [
+          "Living stipend: helps with normal living costs during the grant period.",
+          "Health benefit: Fulbright provides accident and sickness health benefits, but this should not be treated as a full replacement for every possible insurance need.",
+          "Travel support: some awards may include round-trip international transportation, but applicants must verify this on the exact country page.",
+          "Tuition support: some graduate-degree awards may include full, partial, waived, or capped tuition support.",
+          "Research or book allowance: some awards may provide extra support for approved academic or project needs.",
+          "Language study: some awards may include or require language preparation, depending on country rules.",
+        ],
+      },
+      {
+        title: "Why benefits vary by country",
+        paragraphs: [
+          "Benefits vary by country because living costs, university costs, local partnerships, grant length, and award design vary by country. A Fulbright grant in one country may be built around university enrollment. Another may be designed for independent research with a local affiliation. Another may be an English Teaching Assistant placement with teaching responsibilities and community engagement. The host country also affects housing costs, transportation, visa costs, language preparation, and whether students can reasonably live on the standard maintenance allowance. This is why Fulbright tells applicants to read award-specific information instead of assuming one global number.",
+        ],
+        bullets: [
+          "Countries have different rent, food, transportation, and health-related costs.",
+          "Some universities charge tuition; others may waive or reduce it for Fulbright grantees.",
+          "Some awards are shorter or longer than others.",
+          "Some projects require research travel, fieldwork, lab access, or materials.",
+          "Some host countries require extra documentation, deposits, visa fees, or proof of funds.",
+        ],
+      },
+      {
+        title: "How to verify Fulbright stipend and benefits by country",
+        paragraphs: [
+          "Use this order every time. First, open the official Fulbright Award Search. Second, choose the exact country. Third, choose the exact award type. Fourth, read the award benefits section together with eligibility, grant length, language requirements, affiliation requirements, and application components. Fifth, if the award involves graduate study, open the host university page and check tuition separately. This method prevents the most common mistake: reading a general Fulbright benefits page and assuming it fully answers your personal country budget.",
+        ],
+        bullets: [
+          "Start with the official Award Search, not a social media summary.",
+          "Read the country page, not only the central Fulbright overview.",
+          "Check whether the award is Study/Research, ETA, graduate degree, creative, or field-specific.",
+          "Look for words such as stipend, maintenance allowance, tuition, travel, research allowance, books, housing, orientation, dependents, and language training.",
+          "Save the official page link and date checked in your application notes.",
+        ],
+      },
+      {
+        title: "Stipend does not always mean full cost of attendance",
+        paragraphs: [
+          "A stipend is usually meant to support reasonable living costs during the grant. It should not automatically be read as a full cost-of-attendance package. For graduate-degree applicants, this distinction is especially important. You may need to separate living costs from tuition, university fees, health insurance requirements, visa costs, housing deposits, local transportation, winter clothing, research equipment, and personal travel. A stipend can make a country affordable, but the official award page and university page must be read together before you decide whether the route is financially safe.",
+        ],
+        bullets: [
+          "Do not assume stipend means tuition is paid.",
+          "Do not assume tuition support means all living costs are covered.",
+          "Do not assume travel support includes every domestic trip or research trip.",
+          "Do not assume health benefits cover every medical situation.",
+          "Do not assume dependents are funded unless the country page clearly says so.",
+        ],
+      },
+      {
+        title: "Country-by-country benefit checklist",
+        paragraphs: [
+          "Instead of relying on a fixed country table that may become stale, use this checklist for every country you compare. It gives you a practical way to evaluate Fulbright stipend and benefits by country 2027-2028 without guessing. Create one row per country in your own spreadsheet and fill only what the official page confirms. If something is not mentioned, mark it as 'not confirmed' rather than assuming it exists.",
+        ],
+        bullets: [
+          "Country and exact award name",
+          "Grant length and expected start month",
+          "Monthly stipend or maintenance allowance if listed",
+          "Whether round-trip international travel is included",
+          "Whether tuition is included, waived, capped, partial, or not mentioned",
+          "Whether book, research, or project allowances are included",
+          "Whether language study is required or funded",
+          "Whether orientation or enrichment activities are mentioned",
+          "Whether affiliation or separate admission is required",
+          "Whether dependents are mentioned",
+          "Last date you verified the official page",
+        ],
+      },
+      {
+        title: "How to compare two countries fairly",
+        paragraphs: [
+          "A higher stipend is not automatically a better deal if the country has higher rent, higher tuition, or expensive transportation. A lower stipend may be comfortable in a country with lower living costs or subsidized housing. To compare two Fulbright countries fairly, compare the whole package. Look at monthly support, tuition exposure, grant length, required location, research expenses, visa costs, and whether the award structure matches your academic goal. The best funded award is not always the award with the biggest headline number. The best award is the one that supports the work you can actually complete.",
+        ],
+        bullets: [
+          "Compare stipend against local rent and food costs.",
+          "Compare tuition separately from living allowance.",
+          "Check if your project requires travel outside the host city.",
+          "Check if the university calendar fits the Fulbright grant period.",
+          "Check if language preparation adds time or cost.",
+          "Check whether your field requires supplies, lab fees, software, archives, or fieldwork.",
+        ],
+      },
+      {
+        title: "Benefits for Study/Research applicants",
+        paragraphs: [
+          "Study/Research applicants should read benefit details with their project plan in mind. If you are doing independent research, the key questions are whether the stipend supports your research location, whether you need a host affiliation, and whether there is any research allowance. If you are applying for graduate study, the key questions are tuition, university admission, program length, and whether the grant length matches the degree. If you are applying for a creative project, you may need to check whether materials, studio access, travel, or portfolio-related costs are your responsibility.",
+        ],
+        bullets: [
+          "Research applicants should check affiliation and project costs.",
+          "Graduate study applicants should check tuition and admission separately.",
+          "Creative applicants should check materials, performance, studio, or portfolio requirements.",
+          "All Study/Research applicants should verify whether language ability affects eligibility or placement.",
+        ],
+      },
+      {
+        title: "Benefits for English Teaching Assistant applicants",
+        paragraphs: [
+          "ETA benefits should be read differently from graduate study benefits. The ETA route is built around English teaching assistance and cultural exchange, not full-time degree enrollment. The main financial questions are where you may be placed, how long the grant lasts, whether housing guidance or orientation is provided, whether local travel is expected, and whether the stipend is suitable for the placement region. ETA applicants should also check teaching hours, side-project expectations, language requirements, and placement flexibility. A good ETA budget is not only about money; it is about whether the placement conditions fit your daily life.",
+        ],
+        bullets: [
+          "Check grant length and expected placement type.",
+          "Check whether local orientation or enrichment is mentioned.",
+          "Check whether the stipend is designed for the placement region.",
+          "Check whether you may need personal funds before the first payment arrives.",
+          "Check whether local transport, housing deposits, or teaching materials create extra costs.",
+        ],
+      },
+      {
+        title: "Tuition, fees, and university costs",
+        paragraphs: [
+          "Tuition is the most dangerous area to misunderstand. Some Fulbright awards may include tuition support, but the amount and structure can differ by country and university. Some pages may mention full tuition, partial tuition, a tuition waiver, a host-university partnership, or a maximum contribution. Other pages may not mention tuition at all. If a country award involves degree study, always verify the host university's tuition page, program fees, deposits, and whether international students pay extra charges. Do not submit an application assuming tuition is covered unless the official country award page clearly supports that assumption.",
+        ],
+        bullets: [
+          "Full tuition means the page should clearly say full coverage or equivalent wording.",
+          "Partial tuition means you may still need a major funding plan.",
+          "Waived tuition means the university may reduce or remove tuition, but fees can still exist.",
+          "Capped tuition means Fulbright or the partner may pay only up to a limit.",
+          "No tuition wording means you must verify before treating the route as affordable.",
+        ],
+      },
+      {
+        title: "Travel, arrival costs, and first-month cash",
+        paragraphs: [
+          "Even when an award includes travel support, applicants should think about timing. You may need money before reimbursements, before stipend payments begin, or before local banking is set up. Arrival costs can include visa fees, health checks, flights to the departure airport, baggage, temporary housing, rent deposits, SIM cards, local transport, and meals. Fulbright may provide support, but the timing and details can vary. A strong applicant does not wait until selection to think about cash flow. Build a simple first-month budget while you are choosing countries.",
+        ],
+        bullets: [
+          "Check if international transportation is included.",
+          "Check whether travel is prepaid, reimbursed, or handled another way.",
+          "Estimate visa and document costs.",
+          "Estimate housing deposit and first month's rent.",
+          "Plan for local transport and temporary accommodation.",
+          "Keep emergency savings separate from expected stipend support.",
+        ],
+      },
+      {
+        title: "Health benefits and insurance caution",
+        paragraphs: [
+          "Fulbright describes accident and sickness health benefits as part of the award package. Applicants should still read the details carefully and avoid assuming it works like every private insurance plan. Host countries, universities, and visa offices may have their own health insurance rules. Some universities may require enrollment in a local student health plan. Some countries may require extra coverage. Health support is valuable, but it is not a reason to skip reading visa, university, and country-specific requirements.",
+        ],
+        bullets: [
+          "Confirm what Fulbright provides during the grant period.",
+          "Check whether the host university requires additional insurance.",
+          "Check visa health coverage requirements.",
+          "Check medication availability and documentation rules if you rely on regular prescriptions.",
+          "Keep emergency medical and travel documents organized before departure.",
+        ],
+      },
+      {
+        title: "Dependents and family support",
+        paragraphs: [
+          "Applicants with spouses, partners, or children need to be especially careful. Some Fulbright country pages may mention dependent-related support, while others may not. Do not assume family travel, housing, school costs, childcare, health coverage, or visa costs are covered. If dependents are part of your plan, read the country page, university page, and visa rules with that question in mind. If the official page is unclear, ask the Fulbright contact through the proper channel before making family decisions.",
+        ],
+        bullets: [
+          "Check whether dependents are allowed or supported.",
+          "Check visa rules for family members.",
+          "Estimate housing for a family, not only single-student housing.",
+          "Check school, childcare, and health coverage costs.",
+          "Do not rely on unofficial forum answers for dependent funding.",
+        ],
+      },
+      {
+        title: "A practical budget template",
+        paragraphs: [
+          "Before finalizing a country choice, write a rough monthly and one-time budget. It does not need to be perfect. It needs to reveal obvious gaps. A simple budget can stop you from choosing an award that looks prestigious but creates financial stress. Use the official Fulbright page for confirmed benefits and use university or reliable local sources for costs. If you cannot verify an item, mark it as unknown.",
+        ],
+        bullets: [
+          "Monthly rent or housing contribution",
+          "Food and groceries",
+          "Local transportation",
+          "Phone and internet",
+          "Health-related costs not clearly covered",
+          "University tuition and fees",
+          "Books, materials, lab, archive, or project costs",
+          "Visa, residence permit, and document costs",
+          "Arrival housing deposit and first-month expenses",
+          "Emergency reserve",
+        ],
+      },
+      {
+        title: "Common mistakes when reading Fulbright benefits",
+        paragraphs: [
+          "Most funding mistakes happen because applicants read too quickly. They see the Fulbright name and assume full funding. They see stipend and assume all costs are covered. They see a university name and assume admission is automatic. They see a general benefits page and forget to open the country page. The safest approach is slow and boring: verify each benefit, write down what is confirmed, and separate confirmed funding from hoped-for funding.",
+        ],
+        bullets: [
+          "Assuming all Fulbright awards are fully funded in the same way.",
+          "Ignoring tuition because a stipend is mentioned.",
+          "Comparing stipend amounts without comparing living costs.",
+          "Forgetting that university admission may be separate.",
+          "Missing language or affiliation requirements that affect eligibility.",
+          "Treating old blog posts or social media screenshots as current official information.",
+        ],
+      },
+      {
+        title: "Who this guide is best for",
+        paragraphs: [
+          "This guide is best for applicants who already know they are interested in Fulbright but feel confused about money. It is especially useful for students comparing countries, graduate applicants worried about tuition, research applicants estimating project costs, ETA applicants thinking about daily living, and families checking dependent questions. If you are still choosing between Study/Research and ETA, read the route guides first. If you already know your route, use this guide to build a country-by-country funding comparison.",
+        ],
+        bullets: [
+          "Use /fulbright-us-student-program-2027-2028 for the central Fulbright hub.",
+          "Use /fulbright-study-research-awards-2027-2028 for research, graduate study, and creative projects.",
+          "Use /fulbright-english-teaching-assistant-awards-2027-2028 for ETA planning.",
+          "Use /fulbright-graduate-degree-funding-2027-2028 if your main concern is master's or degree funding.",
+          "Use /fulbright-application-documents-essay-limits-2027-2028 when preparing essays and forms.",
+        ],
+      },
+      {
+        title: "Official links to verify",
+        bullets: [
+          "Fulbright Award Search: https://us.fulbrightonline.org/applicants/award-search",
+          "Official award benefits page: https://us.fulbrightonline.org/about/award-benefits",
+          "Study/Research Awards: https://us.fulbrightonline.org/applicants/types-of-awards/study-research",
+          "English Teaching Assistant Awards: https://us.fulbrightonline.org/applicants/types-of-awards/english-teaching-assistant-awards",
+          "Application components: https://us.fulbrightonline.org/applicants/application-components",
+          "Eligibility: https://us.fulbrightonline.org/about/eligibility",
+          "Main Fulbright hub: /fulbright-us-student-program-2027-2028",
+          "Graduate degree funding guide: /fulbright-graduate-degree-funding-2027-2028",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much is the Fulbright stipend by country for 2027-2028?",
+        answer:
+          "Fulbright stipend amounts are country- and award-specific. Applicants should use the official Fulbright Award Search and exact country page because the program does not use one identical stipend amount for every destination.",
+      },
+      {
+        question: "Does Fulbright cover tuition?",
+        answer:
+          "Sometimes, but not always. Some awards may include full tuition, partial tuition, a waiver, capped support, or no tuition support. Degree applicants must verify the country award page and host university page.",
+      },
+      {
+        question: "Does Fulbright include travel benefits?",
+        answer:
+          "Some awards may include round-trip international transportation or travel-related support, but applicants must confirm this on the exact country and award page.",
+      },
+      {
+        question: "Are Fulbright health benefits included?",
+        answer:
+          "Fulbright describes accident and sickness health benefits as part of the award package. Applicants should still check whether the host university or visa office requires additional coverage.",
+      },
+      {
+        question: "Can I compare Fulbright benefits across countries?",
+        answer:
+          "Yes. Compare stipend, living costs, tuition exposure, grant length, travel support, language costs, and project expenses together. A higher stipend is not always better if the destination has higher costs.",
+      },
+    ],
+    relatedScholarships: [
+      "fulbright-us-student-program-2027-2028",
+      "fulbright-study-research-awards-2027-2028",
+      "fulbright-english-teaching-assistant-awards-2027-2028",
+      "fulbright-graduate-degree-funding-2027-2028",
+      "fulbright-application-documents-essay-limits-2027-2028",
+    ],
+    categoryLinks: [
+      "/fulbright-us-student-program-2027-2028",
+      "/fulbright-study-research-awards-2027-2028",
+      "/fulbright-english-teaching-assistant-awards-2027-2028",
+      "/fulbright-graduate-degree-funding-2027-2028",
+      "/fulbright-application-documents-essay-limits-2027-2028",
+      "/find-scholarships",
+    ],
+    applyUrl: "https://us.fulbrightonline.org/applicants/award-search",
+    officialSource: "Fulbright U.S. Student Program",
+    lastUpdated: "2026-07-23",
+    discovery: {
+      hostCountries: ["Multiple Countries"],
+      degreeLevels: ["Bachelors", "Masters", "PhD"],
+      status: "Open",
+      deadlineDate: "2026-10-06",
+      deadlineConfidence: "Exact",
+      tuitionCoverage: "Partial",
+      fundingLevel: "High",
+      stipendAvailable: true,
+      travelSupport: "Unknown",
+      accommodationSupport: "Unknown",
+      eligibleNationalities: ["USA"],
+      ieltsRequired: "Unknown",
+      alternativeProofAccepted: "Unknown",
+      mediumOfInstructionAccepted: "Unknown",
+      fieldsOfStudy: ["All fields"],
+      studyMode: ["On Campus"],
+      applicationMethod: "Provider Portal",
+      priorityScore: 91,
+      dataQuality: "Verified",
+    },
+  },
+  {
+    slug: "fulbright-acceptance-rates-by-country-2027-2028",
+    title: "Fulbright Acceptance Rates by Country 2027-2028: How to Judge Competition",
+    seoTitle: "Fulbright Acceptance Rates by Country 2027-2028 Guide",
+    metaDescription:
+      "Learn how to estimate Fulbright acceptance rates by country for 2027-2028 using official statistics, award counts, applicant demand, and country-specific competition signals.",
+    keywords: [
+      "Fulbright acceptance rates by country 2027-2028",
+      "Fulbright acceptance rate",
+      "Fulbright competition by country",
+      "Fulbright statistics",
+      "Fulbright award rate",
+      "Fulbright U.S. Student Program competitiveness",
+      "Fulbright semi finalist statistics",
+      "Fulbright country competition",
+    ],
+    overview:
+      "Fulbright acceptance rates by country 2027-2028 are best understood as country-specific competition signals, not one fixed global percentage. Fulbright publishes official statistics and selection information, but applicants still need to compare award type, country demand, available grants, language rules, affiliation requirements, and fit with the host country before judging competitiveness.",
+    introduction:
+      "Many applicants search for Fulbright acceptance rates by country 2027-2028 because they want a simple answer: which country is easiest, which country is hardest, and where do I have the best chance? The honest answer is more careful. Fulbright competition depends on country, award type, applicant pool, grant count, field fit, language expectations, university admission, and host-country review. This guide explains how to use official statistics, how to estimate competition responsibly, which signals matter more than a raw percentage, and how to choose a country without turning the application into a guessing game.",
+    summary:
+      "Officially checked on July 23, 2026. Fulbright competitiveness should be verified through official Fulbright statistics, the Award Search, and each country page. Applicants should not rely on old forum numbers or unsourced acceptance-rate tables.",
+    country: "Multiple Countries",
+    continent: "Multiple Continents",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+    tags: [
+      "Fulbright acceptance rates by country 2027-2028",
+      "Fulbright Scholarship 2027-2028",
+      "Multiple Countries",
+      "USA",
+      "Study Abroad",
+      "Research",
+      "English Teaching Assistant",
+      "Masters",
+      "Open",
+      "October deadline",
+    ],
+    deadline: "October 6, 2026, 5:00 p.m. Eastern Time",
+    duration: "Country- and award-specific during the 2027-2028 grant year",
+    eligibility: [
+      "Applicants must meet Fulbright U.S. Student Program eligibility before competition statistics matter.",
+      "Applicants must choose one eligible country and one award route for the cycle.",
+      "Country competitiveness depends on applicant demand, available awards, language expectations, field fit, host-country priorities, and award type.",
+      "Applicants should use official Fulbright statistics and country pages rather than unsourced acceptance-rate claims.",
+    ],
+    benefits: [
+      "Helps applicants compare country competitiveness more responsibly.",
+      "Shows how to use official Fulbright data without overclaiming exact future acceptance rates.",
+      "Explains why a lower-demand country is not automatically easier if your project fit is weak.",
+      "Connects acceptance-rate research with country choice, award type, documents, and funding verification.",
+    ],
+    applicationProcess: [
+      "Confirm you are eligible for the Fulbright U.S. Student Program.",
+      "Decide whether your route is Study/Research, English Teaching Assistant, graduate study, or creative work.",
+      "Use the official Award Search to shortlist countries that actually fit your project.",
+      "Check Fulbright statistics for applicant and award patterns where official data is available.",
+      "Compare country rules, language requirements, affiliation expectations, and number of available awards.",
+      "Choose the country where your proposal is strongest, not only where the guessed rate looks highest.",
+      "Use statistics as a decision aid, not as a substitute for project fit.",
+    ],
+    documents: [
+      "Online Fulbright application.",
+      "Statement of Grant Purpose or ETA Statement of Grant Purpose.",
+      "Personal Statement.",
+      "Transcripts.",
+      "Recommendations.",
+      "Language evaluation if required.",
+      "Affiliation letter if required or recommended.",
+      "Country-specific supplementary materials if required.",
+    ],
+    contentSections: [
+      {
+        title: "Fulbright acceptance rates by country 2027-2028 at a glance",
+        facts: [
+          { label: "Main question", value: "How competitive is each Fulbright country?" },
+          { label: "Best official starting point", value: "Fulbright statistics and Award Search" },
+          { label: "Most important caution", value: "No single global acceptance rate predicts your personal result" },
+          { label: "Key comparison", value: "Applicants, available awards, award type, language, and fit" },
+          { label: "Applies to", value: "Study/Research, ETA, graduate study, and creative awards" },
+          { label: "National deadline", value: "October 6, 2026, 5:00 p.m. Eastern Time" },
+          { label: "Last verified", value: "July 23, 2026" },
+        ],
+        paragraphs: [
+          "Fulbright acceptance rates by country 2027-2028 should be treated as a planning tool, not a promise. A country with fewer applicants can still be hard if it has only one award or strict language rules. A country with many applicants can still be realistic if it has many grants and your project fits unusually well. The real question is not only 'What is the acceptance rate?' It is 'Does my profile, project, language level, host plan, and award type fit this country better than the alternatives?'",
+        ],
+      },
+      {
+        title: "Why there is no simple universal Fulbright acceptance-rate answer",
+        paragraphs: [
+          "Fulbright is not one scholarship contest with identical conditions everywhere. It is a country-by-country and award-by-award competition. Applicants are reviewed through U.S. screening and host-country processes, and each country has its own award design. Some countries offer Study/Research awards, some offer ETA awards, some support graduate enrollment, and some have field, language, or affiliation expectations that narrow the applicant pool. Because of that, a single acceptance-rate number can hide the real difficulty of the award.",
+        ],
+        bullets: [
+          "The number of applicants changes each cycle.",
+          "The number of available awards can change by country and route.",
+          "Study/Research and ETA competitions are not identical.",
+          "Language requirements can reduce or reshape the applicant pool.",
+          "Host-country priorities can affect final selection.",
+          "Graduate-degree awards may also depend on university admission.",
+        ],
+      },
+      {
+        title: "How to calculate a rough award rate when official counts are available",
+        paragraphs: [
+          "If official statistics show applicants and awards for a route, you can calculate a rough award rate by dividing awards by applicants. For example, if a country had 20 awards and 200 applicants, the rough award rate would be 10 percent. But this number is only a past-cycle signal. It does not tell you the quality of applicants, field distribution, language strength, project fit, affiliation quality, or whether the next cycle will have the same award count. Use the calculation to understand pressure, then return to the official country page.",
+        ],
+        bullets: [
+          "Formula: awards divided by applicants, multiplied by 100.",
+          "Use only official or clearly sourced applicant and award counts.",
+          "Do not mix Study/Research and ETA numbers unless the source clearly combines them.",
+          "Do not treat a previous-cycle rate as a guarantee for 2027-2028.",
+          "Write down the source and year of the statistic before using it in your decision.",
+        ],
+      },
+      {
+        title: "Country competitiveness signals that matter more than a raw percentage",
+        paragraphs: [
+          "A raw percentage is tempting because it feels objective. But Fulbright selection is not a lottery. Strong fit can matter more than choosing the country with the cleanest-looking rate. If your project requires archives in Germany, choosing a different country only because it seems less competitive may weaken the proposal. If your teaching experience and language background fit a specific ETA country, a higher applicant count may not be a reason to avoid it. Read the numbers, then judge fit.",
+        ],
+        bullets: [
+          "Does your project clearly need this country?",
+          "Does your field match the award description?",
+          "Can you meet the language expectations?",
+          "Can you secure an affiliation if needed?",
+          "Does the country support your degree or project type?",
+          "Can your recommenders speak directly to the country and project fit?",
+          "Can you explain why this country is not interchangeable?",
+        ],
+      },
+      {
+        title: "Study/Research acceptance-rate logic",
+        paragraphs: [
+          "Study/Research competitiveness is usually shaped by project quality, host-country fit, academic preparation, language readiness, affiliation strength, and the number of awards. Applicants should not compare only country names. A research project with a strong host adviser, clear method, realistic timeline, and country-specific reason can be stronger than a vague project aimed at a supposedly easier country. For graduate-degree Study/Research awards, the applicant must also consider university admission and tuition rules.",
+        ],
+        bullets: [
+          "A strong country reason matters more than a generic desire to study abroad.",
+          "Affiliation can be a major competitiveness signal where required or recommended.",
+          "Language ability can make a proposal more credible in some countries.",
+          "Degree applicants should check whether admission is separate from Fulbright selection.",
+          "Creative applicants should verify portfolio and host expectations.",
+        ],
+      },
+      {
+        title: "ETA acceptance-rate logic",
+        paragraphs: [
+          "English Teaching Assistant competitiveness is different from Study/Research competitiveness. ETA applicants are judged on teaching potential, cultural exchange, adaptability, communication, and fit with the host country. A country with many ETA applicants may still be realistic if it has many placements. A country with fewer applicants may still be selective if it has very few positions or specific language and placement expectations. Applicants should read the ETA country description before deciding whether the country is a real match.",
+        ],
+        bullets: [
+          "Check how many ETA placements are offered if the official page provides that context.",
+          "Read teaching duties, age group, placement type, and side-project expectations.",
+          "Check language expectations even if the award is English teaching.",
+          "Show evidence of teaching, tutoring, mentoring, or community work.",
+          "Explain why you can adapt to the host country, not only why you want travel experience.",
+        ],
+      },
+      {
+        title: "How language requirements affect acceptance rates",
+        paragraphs: [
+          "Language requirements can change the competitive field. Some applicants avoid countries with language expectations, which can reduce applicant volume. But if you do not meet the language requirement, the lower applicant volume does not help you. Other countries may not require advanced language ability, which can attract more applicants. The practical lesson is simple: language rules should be used as a fit filter first and a competitiveness signal second.",
+        ],
+        bullets: [
+          "If language is required and you meet it, that can strengthen your fit.",
+          "If language is required and you do not meet it, the country may not be realistic.",
+          "If language is recommended, show how you will function responsibly in the host context.",
+          "If no foreign language is required, expect broader applicant interest.",
+          "Use /fulbright-countries-without-language-requirement-2027-2028 for language-planning guidance.",
+        ],
+      },
+      {
+        title: "How available award count changes the picture",
+        paragraphs: [
+          "A country with a high number of applicants is not automatically impossible if it also offers many awards. A country with a low number of applicants is not automatically easy if it offers only one or two awards. This is why applicants should look for both sides of the equation: demand and supply. Applicant count tells you demand. Award count tells you available space. Your application quality decides whether you belong near the top of that pool.",
+        ],
+        bullets: [
+          "High applicants plus high award count may still be a reasonable competition.",
+          "Low applicants plus very low award count can still be very selective.",
+          "Small countries can have small numbers that swing heavily year to year.",
+          "Large ETA programs may have a different competition shape from small research awards.",
+          "Do not compare countries unless you know the award type being compared.",
+        ],
+      },
+      {
+        title: "How field and project topic affect country choice",
+        paragraphs: [
+          "Fulbright country choice should be intellectually defensible. If your project is about public health policy in one country, archival materials in another, or language education in a specific classroom context, the country must make sense. Choosing a country mainly because of an acceptance-rate rumor can produce a weak Statement of Grant Purpose. Readers can usually tell when the country is bolted onto the project rather than built into it.",
+        ],
+        bullets: [
+          "Choose a country where the project question genuinely belongs.",
+          "Connect your method to institutions, archives, communities, labs, schools, or mentors in that country.",
+          "Avoid vague claims such as 'this country has a rich culture' without project-specific detail.",
+          "Use official country descriptions to understand what the award supports.",
+          "Make the country logic visible in the first half of your proposal.",
+        ],
+      },
+      {
+        title: "A practical country comparison worksheet",
+        paragraphs: [
+          "Use a simple worksheet before choosing your final country. The worksheet should not be designed to hunt for the easiest country. It should help you find the strongest overlap between fit and feasibility. Fill one row per country and keep your evidence clean. If you cannot verify a statistic, mark it as unknown instead of copying an unsourced number.",
+        ],
+        bullets: [
+          "Country name and award type",
+          "Official award page link",
+          "Estimated applicant count if official statistics show it",
+          "Estimated award count if official statistics show it",
+          "Rough award rate if both numbers are available",
+          "Language requirement",
+          "Affiliation requirement",
+          "Degree or field restrictions",
+          "Funding and stipend notes",
+          "Your project-fit score from 1 to 5",
+          "Main weakness you must fix before applying",
+        ],
+      },
+      {
+        title: "How not to use acceptance-rate data",
+        paragraphs: [
+          "Acceptance-rate data becomes harmful when it pushes applicants into poor-fit decisions. Do not choose a country only because someone online said it has a higher success rate. Do not abandon a strong country fit because the competition looks scary. Do not compare a research award in one country with an ETA award in another as if they are the same contest. And do not treat old statistics as current if the award count, country conditions, or program design has changed.",
+        ],
+        bullets: [
+          "Do not use old forum posts as official data.",
+          "Do not assume a country is easy because it is less famous.",
+          "Do not ignore language, affiliation, or degree rules.",
+          "Do not choose a country that weakens your project logic.",
+          "Do not quote uncertain acceptance rates inside your application essays.",
+        ],
+      },
+      {
+        title: "What a strong applicant can control",
+        paragraphs: [
+          "You cannot control how many people apply to your country. You can control whether your country choice makes sense, whether your proposal is specific, whether your timeline is realistic, whether your recommenders understand the project, and whether your documents answer the selection criteria. Fulbright selection is competitive, but a disciplined application turns uncertainty into a manageable process.",
+        ],
+        bullets: [
+          "Choose a country that your project genuinely needs.",
+          "Read every country requirement before drafting.",
+          "Build a realistic grant timeline.",
+          "Secure a strong affiliation where required or recommended.",
+          "Show cultural adaptability and preparation.",
+          "Ask recommenders to discuss the exact project, not only your general intelligence.",
+          "Revise early enough to meet campus and national deadlines.",
+        ],
+      },
+      {
+        title: "How to turn statistics into a final country decision",
+        paragraphs: [
+          "After you collect statistics, do not let the spreadsheet make the decision alone. Put the numbers beside your actual application strength. A practical final decision can use three columns: fit, feasibility, and competition. Fit asks whether the country is necessary for your project or teaching goals. Feasibility asks whether you can meet language, affiliation, degree, funding, and document rules. Competition asks whether the applicant-to-award pattern looks manageable. The safest country choice usually sits where all three columns are acceptable, not where one column looks perfect.",
+          "This is especially important for applicants who feel pressure to choose the 'easiest' country. An easy-looking country with weak fit can create a forgettable application. A competitive country with excellent fit can still be worth the effort. If two countries both fit well, then statistics can help you choose the more realistic option. If only one country truly fits your project, focus your energy on making that application stronger instead of chasing a rate.",
+        ],
+        bullets: [
+          "Score project fit before looking at competitiveness.",
+          "Remove countries where you cannot meet official requirements.",
+          "Use statistics only after eligibility and fit are clear.",
+          "Prefer a strong, specific proposal over a vague low-competition guess.",
+          "If two options are equally strong, choose the one with better feasibility and clearer funding.",
+        ],
+      },
+      {
+        title: "When a lower-competition country may be a smart choice",
+        paragraphs: [
+          "A lower-competition country may be a smart choice only when it is also a strong academic, teaching, creative, or professional fit. If your language skills, background, research question, or teaching experience align well with a less obvious country, that can be a thoughtful strategy. The point is not to chase an easy win. The point is to notice countries where your profile may be unusually relevant and where fewer applicants may be looking.",
+        ],
+        bullets: [
+          "Your project has a clear country-specific reason.",
+          "You meet or exceed the language expectations.",
+          "You can identify a realistic host institution or placement context.",
+          "The award type supports your actual goal.",
+          "You can explain the choice without sounding opportunistic.",
+        ],
+      },
+      {
+        title: "When a highly competitive country may still be worth it",
+        paragraphs: [
+          "A highly competitive country may still be worth choosing if it is the country where your application is strongest. Some applicants have deep language preparation, strong academic reasons, existing contacts, fieldwork experience, or a project that clearly belongs in a popular destination. Avoiding that country purely because the applicant pool is large can make the application weaker. Competition matters, but fit matters more.",
+        ],
+        bullets: [
+          "Your project cannot be done as well elsewhere.",
+          "You have unusually strong preparation for that country.",
+          "You have a credible affiliation or placement logic.",
+          "Your field or teaching experience matches the award's priorities.",
+          "You are willing to submit the strongest possible application even if the odds are uncertain.",
+        ],
+      },
+      {
+        title: "Official links to verify",
+        bullets: [
+          "Fulbright statistics: https://us.fulbrightonline.org/statistics",
+          "Study/Research and ETA statistics: https://us.fulbrightonline.org/statistics/study-research-eta-statistics",
+          "Award Search: https://us.fulbrightonline.org/applicants/award-search",
+          "Competition and selection: https://us.fulbrightonline.org/applicants/competition-selection",
+          "Factors in selection: https://us.fulbrightonline.org/factors-in-selection",
+          "Eligibility: https://us.fulbrightonline.org/about/eligibility",
+          "Main Fulbright hub: /fulbright-us-student-program-2027-2028",
+          "Study/Research guide: /fulbright-study-research-awards-2027-2028",
+          "ETA guide: /fulbright-english-teaching-assistant-awards-2027-2028",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the Fulbright acceptance rate by country for 2027-2028?",
+        answer:
+          "There is no single reliable future acceptance-rate table for every country. Applicants should use official Fulbright statistics, applicant counts, award counts, and exact country pages to estimate competitiveness responsibly.",
+      },
+      {
+        question: "Which Fulbright country is easiest to win?",
+        answer:
+          "The better question is which country best fits your project and profile. A country that looks less competitive can still be a poor choice if your project, language level, or affiliation plan does not fit.",
+      },
+      {
+        question: "Are ETA awards easier than Study/Research awards?",
+        answer:
+          "Not necessarily. ETA and Study/Research awards are evaluated differently. ETA depends on teaching and cultural exchange fit, while Study/Research depends on project, host-country, academic, and affiliation strength.",
+      },
+      {
+        question: "Can I calculate a Fulbright country award rate?",
+        answer:
+          "If official applicant and award counts are available, you can divide awards by applicants for a rough past-cycle rate. Treat it as context, not a prediction.",
+      },
+      {
+        question: "Should I choose a country based on acceptance rate?",
+        answer:
+          "No. Use competitiveness as one factor, but choose the country where your proposal is strongest, eligible, realistic, and clearly connected to the host country.",
+      },
+    ],
+    relatedScholarships: [
+      "fulbright-us-student-program-2027-2028",
+      "fulbright-study-research-awards-2027-2028",
+      "fulbright-english-teaching-assistant-awards-2027-2028",
+      "fulbright-countries-without-language-requirement-2027-2028",
+      "fulbright-stipend-benefits-by-country-2027-2028",
+    ],
+    categoryLinks: [
+      "/fulbright-us-student-program-2027-2028",
+      "/fulbright-study-research-awards-2027-2028",
+      "/fulbright-english-teaching-assistant-awards-2027-2028",
+      "/fulbright-countries-without-language-requirement-2027-2028",
+      "/fulbright-stipend-benefits-by-country-2027-2028",
+      "/find-scholarships",
+    ],
+    applyUrl: "https://us.fulbrightonline.org/applicants/award-search",
+    officialSource: "Fulbright U.S. Student Program",
+    lastUpdated: "2026-07-23",
+    discovery: {
+      hostCountries: ["Multiple Countries"],
+      degreeLevels: ["Bachelors", "Masters", "PhD"],
+      status: "Open",
+      deadlineDate: "2026-10-06",
+      deadlineConfidence: "Exact",
+      tuitionCoverage: "Partial",
+      fundingLevel: "High",
+      stipendAvailable: true,
+      travelSupport: "Unknown",
+      accommodationSupport: "Unknown",
+      eligibleNationalities: ["USA"],
+      ieltsRequired: "Unknown",
+      alternativeProofAccepted: "Unknown",
+      mediumOfInstructionAccepted: "Unknown",
+      fieldsOfStudy: ["All fields"],
+      studyMode: ["On Campus"],
+      applicationMethod: "Provider Portal",
+      priorityScore: 90,
       dataQuality: "Verified",
     },
   },
