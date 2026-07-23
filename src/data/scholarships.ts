@@ -5248,12 +5248,14 @@ const rawScholarships: Scholarship[] = [
     ],
     relatedScholarships: [
       "paul-daisy-soros-fellowship-eligibility-new-american-2027",
+      "paul-daisy-soros-fellowship-funding-2027",
       "fulbright-us-student-program-2027-2028",
       "rhodes-scholarship-2027-usa",
       "marshall-scholarship-2027",
     ],
     categoryLinks: [
       "/paul-daisy-soros-fellowship-eligibility-new-american-2027",
+      "/paul-daisy-soros-fellowship-funding-2027",
       "/countries/usa",
       "/degrees/masters",
       "/degrees/phd",
@@ -5708,6 +5710,402 @@ const rawScholarships: Scholarship[] = [
       studyMode: ["On Campus", "Online"],
       applicationMethod: "Provider Portal",
       priorityScore: 93,
+      dataQuality: "Verified",
+    },
+  },
+  {
+    slug: "paul-daisy-soros-fellowship-funding-2027",
+    title: "How Much Does the Paul & Daisy Soros Fellowship Pay?",
+    seoTitle: "Paul & Daisy Soros Fellowship Funding 2027: $90,000 Breakdown",
+    metaDescription:
+      "See how Paul & Daisy Soros Fellowship funding works in 2027, including $40,000 tuition support, $50,000 stipend support, limits and uncovered costs.",
+    keywords: [
+      "Paul & Daisy Soros Fellowship funding",
+      "how much does the Paul Daisy Soros Fellowship pay",
+      "Paul Daisy Soros Fellowship stipend",
+      "Paul Daisy Soros tuition support",
+      "Soros Fellowship $90000",
+      "Soros Fellowship fully funded",
+      "Paul Daisy Soros benefits",
+      "graduate fellowship for New Americans funding",
+    ],
+    overview:
+      "The Paul & Daisy Soros Fellowship can provide up to $90,000 over two academic years, split between up to $40,000 in tuition support and up to $50,000 in stipend support. The award is generous, but 'up to $90,000' does not mean every Fellow receives the same amount or that every graduate-school cost is covered.",
+    introduction:
+      "The Paul & Daisy Soros Fellowship funding package is one of the biggest reasons New American graduate students should pay attention to the 2027 competition. Thirty Fellows can receive up to $90,000 over two academic years for eligible graduate or professional study in the United States. But the funding has rules: tuition support and stipend support are separate, the tuition portion has a 50% limit, health insurance costs are not covered by PD Soros tuition support, and other awards can affect how the final package works. This guide explains the money clearly before applicants build a graduate-school budget around it.",
+    summary:
+      "Officially checked on July 23, 2026. The 2027 fellowship can provide up to $90,000 total: up to $40,000 in tuition support paid to the university and up to $50,000 in stipend support paid directly to the Fellow.",
+    country: "USA",
+    continent: "North America",
+    degreeLevel: "Masters",
+    fundingType: "Partially Funded",
+    tags: [
+      "USA",
+      "Paul & Daisy Soros Fellowship Funding",
+      "New Americans",
+      "Graduate School",
+      "Tuition Support",
+      "Stipend",
+      "Masters",
+      "PhD",
+      "Professional Degrees",
+      "Open",
+    ],
+    deadline: "October 29, 2026, 2:00 p.m. Eastern Time",
+    duration: "Up to two academic years",
+    eligibility: [
+      "Applicants must qualify as New Americans under the official rules.",
+      "Applicants must be 30 or younger on October 29, 2026.",
+      "Funding supports eligible full-time graduate or professional study in the United States.",
+      "The final award can depend on tuition costs, eligible fees and other scholarships or institutional support.",
+    ],
+    benefits: [
+      "Up to $90,000 total over two academic years.",
+      "Up to $40,000 in tuition support.",
+      "Up to $50,000 in stipend support.",
+      "Tuition support is paid to the university.",
+      "Stipend support is paid directly to the Fellow.",
+      "The application is free.",
+    ],
+    applicationProcess: [
+      "Confirm eligibility using the official rules.",
+      "Check the tuition and fee structure of each intended graduate program.",
+      "Estimate how much of the PD Soros tuition support could apply.",
+      "Estimate living costs and how the stipend would fit your budget.",
+      "Check whether other scholarships, assistantships or institutional awards may affect the final package.",
+      "Use the main Soros Fellowship guide to prepare the full application.",
+    ],
+    documents: [
+      "Online application.",
+      "Proposed graduate-program information.",
+      "Transcripts.",
+      "Resume or CV.",
+      "Two essays.",
+      "Recommendation letters.",
+      "Standardized-test results if required by the intended program.",
+      "Financial details may be coordinated later with the graduate institution after selection.",
+    ],
+    contentSections: [
+      {
+        title: "Paul & Daisy Soros Fellowship funding at a glance",
+        facts: [
+          { label: "Maximum total award", value: "Up to $90,000" },
+          { label: "Tuition support", value: "Up to $40,000 total" },
+          { label: "Annual tuition support", value: "Up to $20,000 per academic year" },
+          { label: "Stipend support", value: "Up to $50,000 total" },
+          { label: "Annual stipend support", value: "Up to $25,000 per academic year" },
+          { label: "Funding period", value: "Two academic years" },
+          { label: "Tuition payment", value: "Paid to the university" },
+          { label: "Stipend payment", value: "Paid directly to the Fellow" },
+          { label: "Health insurance", value: "Not covered by PD Soros tuition support" },
+          { label: "Application fee", value: "Free" },
+          { label: "Main guide", value: "/paul-daisy-soros-fellowship-2027" },
+          { label: "Last verified", value: "July 23, 2026" },
+        ],
+        paragraphs: [
+          "The Paul & Daisy Soros Fellowship funding headline is simple: up to $90,000 over two academic years. The real budget question is more detailed. The award is divided into tuition support and stipend support, and each part works differently. Tuition support helps with eligible tuition and fees and is paid to the university. Stipend support helps the Fellow with living and academic expenses and is paid directly to the Fellow. Applicants should understand both parts before calling the award fully funded.",
+        ],
+      },
+      {
+        title: "The $90,000 maximum explained",
+        paragraphs: [
+          "The maximum combined award is up to $90,000. That number comes from up to $40,000 in tuition support plus up to $50,000 in stipend support over two academic years. The phrase 'up to' matters. A Fellow's actual benefit may be lower if tuition is lower, if other support changes the tuition need, or if the program's cost structure does not require the full maximum. The award is substantial, but it should be read as a maximum benefit, not a guaranteed cash amount for every Fellow.",
+        ],
+        bullets: [
+          "Maximum tuition support: $40,000 over two academic years.",
+          "Maximum stipend support: $50,000 over two academic years.",
+          "Maximum combined support: $90,000.",
+          "Funding is normally tied to the Fellow's eligible graduate or professional study.",
+          "The exact value can depend on tuition, fees and other funding.",
+        ],
+      },
+      {
+        title: "Tuition support versus stipend support",
+        paragraphs: [
+          "Tuition support and stipend support should not be mixed together in your planning. Tuition support is designed for eligible tuition and fees and is paid to the university. Stipend support is paid directly to the Fellow and can help with living costs and graduate-school expenses. If a student treats the whole $90,000 as personal cash, the budget will be wrong. If a student treats the whole $90,000 as tuition coverage, the budget will also be wrong.",
+        ],
+        bullets: [
+          "Tuition support helps pay the institution.",
+          "Stipend support goes to the Fellow.",
+          "The two categories have separate maximums.",
+          "A lower tuition bill does not automatically turn unused tuition support into extra stipend.",
+          "A high-cost degree may still require additional funding beyond the fellowship.",
+        ],
+      },
+      {
+        title: "How the tuition support works",
+        paragraphs: [
+          "The fellowship can provide up to $20,000 per academic year in tuition support, with a two-year maximum of $40,000. The official financial-support page explains that tuition support is generally limited to 50% of tuition and eligible fees. This is especially important for expensive professional degrees. If a program charges very high tuition, the fellowship is helpful, but it may not erase the full tuition bill.",
+          "Applicants should compare this rule with each university's actual tuition and fee page. A low-cost public graduate program, a funded PhD, a tuition-waiver package, a law school scholarship, or a medical-school aid package can all interact differently with PD Soros funding. The safest approach is to ask: what is my tuition before other aid, what does the university already cover, and what portion could PD Soros reasonably support?",
+        ],
+        bullets: [
+          "Annual tuition maximum: up to $20,000.",
+          "Two-year tuition maximum: up to $40,000.",
+          "Tuition support is generally limited to 50% of tuition and eligible fees.",
+          "Tuition support is paid directly to the university.",
+          "Health insurance costs are not covered by PD Soros tuition support.",
+        ],
+      },
+      {
+        title: "How the stipend support works",
+        paragraphs: [
+          "The fellowship can provide up to $25,000 per academic year in stipend support, with a two-year maximum of $50,000. The stipend is paid directly to the Fellow. This is the part applicants often think about for rent, food, transportation, books, supplies, professional expenses, relocation costs or other personal graduate-school needs. But the stipend is still limited. In high-cost cities, $25,000 per year may reduce pressure without covering every living expense.",
+        ],
+        bullets: [
+          "Annual stipend maximum: up to $25,000.",
+          "Two-year stipend maximum: up to $50,000.",
+          "The stipend is paid directly to the Fellow.",
+          "The stipend should be budgeted separately from tuition support.",
+          "Living costs vary widely by city, degree type and personal situation.",
+        ],
+      },
+      {
+        title: "Does every Fellow receive exactly $90,000?",
+        paragraphs: [
+          "No. The official language is 'up to $90,000.' That means $90,000 is the maximum possible combined support, not a flat amount automatically given to every Fellow in the same way. A Fellow's package can be shaped by tuition costs, eligible fees, institutional aid, other scholarships and the structure of the graduate program. This is not a weakness in the fellowship; it is how many high-value awards coordinate with university funding.",
+        ],
+        bullets: [
+          "A Fellow in a low-tuition program may not need the full tuition maximum.",
+          "A Fellow with large institutional tuition support may receive a different final package.",
+          "A Fellow in an expensive professional program may still need additional funding.",
+          "The stipend and tuition portions are not the same type of support.",
+          "Applicants should avoid telling themselves the fellowship is a guaranteed $90,000 check.",
+        ],
+      },
+      {
+        title: "Is the Paul & Daisy Soros Fellowship fully funded?",
+        paragraphs: [
+          "The fellowship is high-value and can be life-changing, but calling it fully funded without explanation can mislead readers. It offers up to $90,000 over two academic years, which is excellent support. But many U.S. graduate and professional programs cost more than that when tuition, living costs, health insurance, fees, books, relocation and personal expenses are combined. A better phrase is: the fellowship provides major partial funding that may fully cover some students' needs when combined with university support, but it does not automatically cover every cost for every Fellow.",
+        ],
+        bullets: [
+          "It can be close to full support for some low-cost or already-funded programs.",
+          "It may be partial support for expensive MD, JD, MBA or private graduate programs.",
+          "It does not automatically cover all tuition, housing, health insurance or family costs.",
+          "Applicants should build a full cost-of-attendance budget before relying on the award.",
+        ],
+      },
+      {
+        title: "How other scholarships or university aid can affect the award",
+        paragraphs: [
+          "Many strong applicants will also receive university scholarships, assistantships, tuition waivers, grants or external awards. Those sources can affect the final funding picture. For example, if a university already covers full tuition, the PD Soros tuition component may not function the same way as it would for a student paying high tuition out of pocket. If a Fellow has several funding sources, coordination with the university financial-aid or graduate-funding office becomes important.",
+        ],
+        bullets: [
+          "Ask how institutional tuition awards interact with external fellowships.",
+          "Ask whether assistantship stipends can be combined with fellowship stipends.",
+          "Ask whether university policy reduces institutional aid when outside awards arrive.",
+          "Ask whether fees, health insurance or other charges remain after tuition support.",
+          "Keep award letters and university aid notices organized.",
+        ],
+      },
+      {
+        title: "Does the funding cover health insurance?",
+        paragraphs: [
+          "The official financial-support page states that health insurance costs are not covered by PD Soros tuition support. This point deserves its own section because U.S. graduate students often face separate university health-plan charges. A university may require health insurance even when tuition is funded. Applicants should check whether their graduate program charges mandatory health fees, insurance premiums or health-service fees and whether any separate university aid covers those costs.",
+        ],
+        bullets: [
+          "Do not assume health insurance is included in tuition support.",
+          "Check the university health-plan cost.",
+          "Check whether health fees are mandatory.",
+          "Ask whether any institutional fellowship covers health insurance separately.",
+          "Budget for health costs before choosing an expensive program.",
+        ],
+      },
+      {
+        title: "Does the funding cover housing and living costs?",
+        paragraphs: [
+          "The stipend can help with housing and living costs, but the fellowship does not publish a separate housing guarantee. A student in a lower-cost city may stretch the stipend further than a student in New York, Boston, San Francisco, Los Angeles or Washington, D.C. Professional students may also have different schedules and limits on outside work. The right question is not 'Does PD Soros cover housing?' but 'How much of my living budget can the stipend realistically cover in my city?'",
+        ],
+        bullets: [
+          "Estimate rent before and after utilities.",
+          "Estimate food, transportation and phone costs.",
+          "Include relocation and moving expenses.",
+          "Include books, equipment, supplies and exam costs.",
+          "Include emergency savings if possible.",
+        ],
+      },
+      {
+        title: "Does the funding cover dependents?",
+        paragraphs: [
+          "Applicants with spouses, partners, children or other family obligations should not assume the fellowship adds a dependent allowance. The stipend can help the Fellow, but family housing, childcare, health insurance, school costs and additional living expenses can change the budget dramatically. If dependents are part of your plan, speak with the graduate institution about family housing, health insurance and financial-aid coordination.",
+        ],
+        bullets: [
+          "Estimate family housing separately from single-student housing.",
+          "Check childcare and school costs if relevant.",
+          "Check health insurance rules for dependents.",
+          "Ask the university whether family support or emergency grants exist.",
+          "Do not build a family budget around the headline $90,000 alone.",
+        ],
+      },
+      {
+        title: "Tax considerations",
+        paragraphs: [
+          "Scholarship and fellowship tax treatment can depend on how funds are used, the student's program, the institution and current tax rules. This guide cannot give tax advice. Applicants and Fellows should read IRS guidance, speak with the university financial office and consult a qualified tax professional when needed. The important planning point is simple: do not assume every dollar is tax-free without checking.",
+        ],
+        bullets: [
+          "Ask the university how fellowship funds are reported.",
+          "Separate tuition payments from stipend payments in your records.",
+          "Keep receipts for qualified education expenses where relevant.",
+          "Check federal and state tax implications.",
+          "Consult a qualified tax professional for personal advice.",
+        ],
+      },
+      {
+        title: "Funding for expensive degrees such as MD, JD and MBA",
+        paragraphs: [
+          "The Paul & Daisy Soros Fellowship is especially attractive to applicants pursuing high-cost professional degrees, but those applicants should be realistic. MD, JD and MBA programs can carry tuition and living costs far above $90,000 over two years. The fellowship can reduce debt and signal national recognition, but it may need to be combined with institutional scholarships, loans, savings, assistantships or other support. That does not make the award less valuable. It means applicants should plan like adults, not like advertisements.",
+        ],
+        bullets: [
+          "Medical students should check tuition, fees, health insurance, equipment and exam costs.",
+          "Law students should compare tuition, bar-related expenses and summer income assumptions.",
+          "MBA students should check tuition, fees, required travel, internship timing and living costs.",
+          "Dual-degree students should verify how funding applies across degree timelines.",
+          "Ask each school how outside fellowships affect institutional aid.",
+        ],
+      },
+      {
+        title: "Funding for PhD students",
+        paragraphs: [
+          "Many PhD students already receive university funding packages that include tuition remission, stipend support, health benefits or assistantships. For them, PD Soros funding may interact with an existing package rather than replace a full tuition bill. A PhD applicant should ask the graduate program how external fellowships affect department funding, teaching obligations, summer support, health insurance and research expenses.",
+        ],
+        bullets: [
+          "Check whether the PhD already includes tuition remission.",
+          "Check whether accepting an external fellowship changes assistantship duties.",
+          "Ask whether the stipend supplements or replaces department funding.",
+          "Check summer support and research-travel funding separately.",
+          "Ask whether health insurance remains covered.",
+        ],
+      },
+      {
+        title: "Funding for master's and professional master's students",
+        paragraphs: [
+          "Master's students often face less guaranteed funding than PhD students, so the fellowship can be especially meaningful. A two-year master's student could use the award to reduce tuition exposure and living-cost pressure. But master's programs vary widely. Some are low-cost public programs, some are expensive private programs, and some offer partial scholarships. Applicants should compare the fellowship with the net cost after university aid.",
+        ],
+        bullets: [
+          "Calculate tuition for the full degree, not only the first semester.",
+          "Check whether the program is one year, two years or longer.",
+          "Ask whether merit aid can combine with PD Soros funding.",
+          "Estimate living costs in the city where the program is located.",
+          "Check whether internships or practicum work affect your budget.",
+        ],
+      },
+      {
+        title: "What expenses may still remain?",
+        paragraphs: [
+          "Even with a major fellowship, a Fellow may still face uncovered costs. These can include tuition above the PD Soros limit, fees not treated as eligible tuition support, health insurance, housing beyond stipend capacity, relocation, dependent costs, equipment, travel, exam fees, professional licenses, conference travel and personal expenses. Applicants should not see this list as discouraging. It is a practical budget map.",
+        ],
+        bullets: [
+          "Tuition above the fellowship's applicable support.",
+          "Mandatory fees not fully covered.",
+          "Health insurance costs.",
+          "Rent and utilities above stipend capacity.",
+          "Relocation and moving expenses.",
+          "Books, equipment, software and supplies.",
+          "Licensing, board, bar, exam or certification costs.",
+          "Family and dependent expenses.",
+          "Emergency expenses.",
+        ],
+      },
+      {
+        title: "How to build a Soros Fellowship budget",
+        paragraphs: [
+          "A smart budget separates confirmed support from hoped-for support. Start with the university's official cost of attendance. Then list tuition, fees, health insurance, rent, food, transport, books, supplies and personal expenses. Next, add confirmed university scholarships, assistantships or grants. Finally, model the PD Soros maximum and a lower-award scenario. If the plan works only when every possible dollar appears, the plan may be too fragile.",
+        ],
+        bullets: [
+          "Use official university cost pages.",
+          "Separate tuition from living costs.",
+          "Include health insurance as its own line.",
+          "Model two years, not one semester.",
+          "Include other scholarships and assistantships.",
+          "Create a conservative version of the budget.",
+          "Ask financial-aid offices about outside-fellowship coordination.",
+        ],
+      },
+      {
+        title: "How funding affects school choice",
+        paragraphs: [
+          "The fellowship can change the way applicants compare graduate programs, but it should not make every expensive program feel automatically affordable. A higher-ranked program with heavy debt may not be better than a strong program with better net funding. Applicants should compare academic fit, career outcomes, location, funding, debt and support systems together. Prestige without a budget can become pressure.",
+        ],
+        bullets: [
+          "Compare net cost after all aid.",
+          "Ask whether the program's outcomes justify remaining cost.",
+          "Check whether the city is financially realistic.",
+          "Consider debt load after the fellowship.",
+          "Do not choose a program only because the headline fellowship makes it feel possible.",
+        ],
+      },
+      {
+        title: "Official links to verify",
+        bullets: [
+          "Financial support: https://pdsoros.org/fellowship-financial-support/",
+          "Application process: https://pdsoros.org/application-process/",
+          "Eligibility requirements: https://pdsoros.org/eligibility/",
+          "Main Soros Fellowship guide on Scholarships Central: /paul-daisy-soros-fellowship-2027",
+          "Eligibility guide on Scholarships Central: /paul-daisy-soros-fellowship-eligibility-new-american-2027",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does the Paul & Daisy Soros Fellowship pay?",
+        answer:
+          "The fellowship can provide up to $90,000 over two academic years, including up to $40,000 in tuition support and up to $50,000 in stipend support.",
+      },
+      {
+        question: "Does every Fellow receive $90,000?",
+        answer:
+          "No. The official wording is up to $90,000. Actual support can depend on tuition costs, eligible fees, institutional aid and other funding.",
+      },
+      {
+        question: "Is the Paul & Daisy Soros Fellowship fully funded?",
+        answer:
+          "It is a major high-value fellowship, but it does not automatically cover every cost for every Fellow. Expensive degrees may still require additional funding.",
+      },
+      {
+        question: "Does PD Soros pay health insurance?",
+        answer:
+          "The official financial-support page states that health insurance costs are not covered by PD Soros tuition support. Applicants should check university health-plan costs separately.",
+      },
+      {
+        question: "Who receives the stipend payment?",
+        answer:
+          "The stipend is paid directly to the Fellow. Tuition support is paid to the university.",
+      },
+    ],
+    relatedScholarships: [
+      "paul-daisy-soros-fellowship-2027",
+      "paul-daisy-soros-fellowship-eligibility-new-american-2027",
+      "fulbright-us-student-program-2027-2028",
+    ],
+    categoryLinks: [
+      "/paul-daisy-soros-fellowship-2027",
+      "/paul-daisy-soros-fellowship-eligibility-new-american-2027",
+      "/countries/usa",
+      "/degrees/masters",
+      "/degrees/phd",
+      "/find-scholarships",
+    ],
+    applyUrl: "https://pdsoros.org/fellowship-financial-support/",
+    officialSource: "Paul & Daisy Soros Fellowships for New Americans",
+    lastUpdated: "2026-07-23",
+    discovery: {
+      hostCountries: ["USA"],
+      degreeLevels: ["Masters", "PhD"],
+      status: "Open",
+      deadlineDate: "2026-10-29",
+      deadlineConfidence: "Exact",
+      tuitionCoverage: "Partial",
+      fundingLevel: "High",
+      stipendAvailable: true,
+      travelSupport: false,
+      accommodationSupport: "Unknown",
+      eligibleNationalities: ["USA"],
+      ieltsRequired: false,
+      alternativeProofAccepted: "Unknown",
+      mediumOfInstructionAccepted: "Unknown",
+      fieldsOfStudy: ["All fields"],
+      studyMode: ["On Campus", "Online"],
+      applicationMethod: "Provider Portal",
+      priorityScore: 92,
       dataQuality: "Verified",
     },
   },

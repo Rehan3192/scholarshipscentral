@@ -53,7 +53,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         s.slug !== "fulbright-stipend-benefits-by-country-2027-2028" &&
         s.slug !== "fulbright-acceptance-rates-by-country-2027-2028" &&
         s.slug !== "paul-daisy-soros-fellowship-2027" &&
-        s.slug !== "paul-daisy-soros-fellowship-eligibility-new-american-2027",
+        s.slug !== "paul-daisy-soros-fellowship-eligibility-new-american-2027" &&
+        s.slug !== "paul-daisy-soros-fellowship-funding-2027",
     )
     .map((s) => ({
       url: `${siteUrl}/scholarships/${s.slug}`,
@@ -268,6 +269,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${siteUrl}/paul-daisy-soros-fellowship-eligibility-new-american-2027`,
+      lastModified: new Date("2026-07-23T00:00:00Z"),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/paul-daisy-soros-fellowship-funding-2027`,
       lastModified: new Date("2026-07-23T00:00:00Z"),
       changeFrequency: "weekly" as const,
       priority: 0.8,
